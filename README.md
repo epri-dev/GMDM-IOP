@@ -1,2 +1,2 @@
-# UCA-GMDM
-Official Grid Model Data Management (GMDM) profile repository for EPRI's Vendor Forum P2 project.
+# GMDM-IOP
+Official Grid Model Data Management (GMDM) profile repository for EPRI's Vendor Forum Phase 2 project.
