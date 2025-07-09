@@ -1,0 +1,63 @@
+@prefix msg:     <http://langdale.com.au/2005/Message#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix uml:     <http://langdale.com.au/2005/UML#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix project:  <http://cimtoole.langdale.com.au/2009/project/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tool:    <http://cimtoole.langdale.com.au/2009/setting#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+
+project:
+      tool:merge_shadow_extensions
+              "true" ;
+      tool:merged_schema_path
+              "" ;
+      tool:self_heal_on_import
+              "true" .
+
+<http://cimtoole.langdale.com.au/2009/project/Profiles/Asset.owl>
+      tool:profile_envelope
+              "Profile" ;
+      tool:profile_namespace
+              "http://www.ucaiug.org/profile#" .
+
+<http://cimtoole.langdale.com.au/2009/project/Profiles/CIM18Global.owl>
+      tool:profile_envelope
+              "Profile" ;
+      tool:profile_namespace
+              "http://www.ucaiug.org/profile#" .
+
+<http://cimtoole.langdale.com.au/2009/project/Profiles/DiagramLayout.owl>
+      tool:profile_envelope
+              "Profile" ;
+      tool:profile_namespace
+              "http://www.ucaiug.org/profile#" .
+
+<http://cimtoole.langdale.com.au/2009/project/Profiles/GeographicalLocation.owl>
+      tool:profile_envelope
+              "Profile" ;
+      tool:profile_namespace
+              "http://www.ucaiug.org/profile#" .
+
+<http://cimtoole.langdale.com.au/2009/project/Profiles/MarketNode.owl>
+      tool:profile_envelope
+              "Profile" ;
+      tool:profile_namespace
+              "http://www.ucaiug.org/profile#" .
+
+<http://cimtoole.langdale.com.au/2009/project/Profiles/UnbalancedConnectivity.owl>
+      tool:profile_envelope
+              "Profile" ;
+      tool:profile_namespace
+              "http://www.ucaiug.org/profile#" .
+
+<http://cimtoole.langdale.com.au/2009/project/Profiles/UnbalancedElectrical.owl>
+      tool:profile_envelope
+              "Profile" ;
+      tool:profile_namespace
+              "http://www.ucaiug.org/profile#" .
+
+<http://cimtoole.langdale.com.au/2009/project/Schema/CIM_Grid18v15_Enterprise14v04_Market04v18_GMDM_v0.9.eap>
+      tool:schema_namespace
+              "http://cim.ucaiug.io/ns#" .

@@ -1,0 +1,244 @@
+@startuml
+top to bottom direction
+hide empty methods
+
+' Here we adjust the horizontal spacing for better spatial rendering (the PlantUML default is ~20)
+skinparam nodesep 20
+' Here we adjust the vertical spacing for better spatial rendering (the PlantUML default is ~30)
+skinparam ranksep 30
+
+skinparam BackgroundColor #FFFFFF
+skinparam shadowing false
+skinparam RoundCorner 5
+skinparam BorderColor #454645
+skinparam ArrowColor #454645
+skinparam FontColor #000000
+
+skinparam class {
+  ' Concrete classes style definition
+  BackgroundColor #FFFFE0
+  FontColor #000000
+  AttributeFontColor #000000
+  StereotypeFontColor #000000
+  HeaderFontColor #000000
+  BorderColor #454645
+  BorderThickness 1
+  
+  ' Abstract classes style definition
+  BackgroundColor<<abstract>> #D3D3D3
+  FontColor<<abstract>> #000000
+  AttributeFontColor<<abstract>> #000000
+  StereotypeFontColor<<abstract>> #000000
+  HeaderFontColor<<abstract>> #000000
+  BorderColor<<abstract>> #454645
+  BorderThickness<<abstract>> 1
+  
+  ' Enumerations style definition
+  BackgroundColor<<enumeration>> #90EE90
+  FontColor<<enumeration>> #000000
+  AttributeFontColor<<enumeration>> #000000
+  StereotypeFontColor<<enumeration>> #000000
+  HeaderFontColor <<enumeration>> #000000
+  BorderColor<<enumeration>> #454645
+  BorderThickness<<enumeration>> 1
+  
+  ' CIMDatatypes style definition
+  BackgroundColor<<CIMDatatype>> #FFEBCD
+  FontColor<<CIMDatatype>> #000000
+  AttributeFontColor<<CIMDatatype>> #000000
+  StereotypeFontColor<<CIMDatatype>> #000000
+  HeaderFontColor<<CIMDatatype>> #000000
+  BorderColor<<CIMDatatype>> #454645
+  BorderThickness<<CIMDatatype>> 1
+  
+  ' Compound classes style definition
+  BackgroundColor<<Compound>> #FFEBCD
+  FontColor<<Compound>> #000000
+  AttributeFontColor<<Compound>> #000000
+  StereotypeFontColor<<Compound>> #000000
+  HeaderFontColor<<Compound>> #000000
+  BorderColor<<Compound>> #454645
+  BorderThickness<<Compound>> 1
+  
+  ' Primitive classes style definition
+  BackgroundColor<<Primitive>> #E6E6FF
+  FontColor<<Primitive>> #000000
+  AttributeFontColor<<Primitive>> #000000
+  StereotypeFontColor<<Primitive>> #000000
+  HeaderFontColor<<Primitive>> #000000
+  BorderColor<<Primitive>> #454645
+  BorderThickness<<Primitive>> 1
+  
+  ' Errors classes style definition
+  BackgroundColor<<error>> #FFC0CB
+  FontColor<<error>> #000000
+  AttributeFontColor<<error>> #000000
+  StereotypeFontColor<<error>> #000000
+  HeaderFontColor<<error>> #000000
+  BorderColor<<error>> #454645
+  BorderThickness<<error>> 1
+}
+skinparam shadowing true
+
+hide <<abstract>> stereotype
+hide <<error>> stereotype
+
+
+skinparam note {
+  BorderColor #454645
+  BorderThickness 1.5
+  FontSize 14
+  Font Bold
+  FontColor #000000
+}
+' Add a note towards the upper left corner of the diagram
+note as AssetNote #lightyellow
+   Profile: Asset
+   Namespace: http://www.ucaiug.org/gmdm/asset#
+end note
+
+' AssetInfo inherits from IdentifiedObject
+abstract class AssetInfo  <<abstract>> {
+}
+
+IdentifiedObject <|-- AssetInfo
+
+' ConductingAssetInfo inherits from AssetInfo
+abstract class ConductingAssetInfo  <<abstract>> {
+   +ratedVoltage : Voltage [0..1]
+}
+
+AssetInfo <|-- ConductingAssetInfo
+
+' Equipment inherits from PowerSystemResource
+abstract class Equipment  <<abstract>> {
+}
+
+PowerSystemResource <|-- Equipment
+
+' IdentifiedObject inherits from Identity
+abstract class IdentifiedObject  <<abstract>> {
+   +description : string [0..1]
+   +name : string [0..1]
+}
+
+Identity <|-- IdentifiedObject
+
+' Identity
+abstract class Identity  <<abstract>> {
+   +identifier : string [1]
+}
+
+
+' NoLoadTest inherits from TransformerTest
+class NoLoadTest   {
+   +energisedEndVoltage : Voltage [0..1]
+   +excitingCurrent : PerCent [0..1]
+   +excitingCurrentZero : PerCent [0..1]
+   +loss : KiloActivePower [0..1]
+   +lossZero : KiloActivePower [0..1]
+}
+
+TransformerTest <|-- NoLoadTest
+NoLoadTest "+EnergisedEndNoLoadTests 0..*" --> "+EnergisedEnd 1" TransformerEndInfo
+
+' Enumeration OrderedPhaseCodeKind
+enum OrderedPhaseCodeKind <<gmdm>><<enumeration>>  {
+   A
+   AB
+   ABC
+   ABCN
+   ABN
+   AC
+   ACB
+   ACBN
+   ACN
+   AN
+   B
+   BA
+   BAC
+   BACN
+   BAN
+   BC
+   BCA
+   BCAN
+   BCN
+   BN
+   [Remaining 33 literals hidden]
+}
+
+' Enumeration PhaseCountKind
+enum PhaseCountKind <<enumeration>><<Attribute>>  {
+   other
+   singlePhase
+   threePhase
+}
+
+' PowerSystemResource inherits from IdentifiedObject
+abstract class PowerSystemResource  <<abstract>> {
+}
+
+IdentifiedObject <|-- PowerSystemResource
+
+' ShortCircuitTest inherits from TransformerTest
+class ShortCircuitTest   {
+   +energisedEndStep : integer [0..1]
+   +groundedEndStep : integer [0..1]
+   +leakageImpedance : Impedance [0..1]
+   +leakageImpedanceZero : Impedance [0..1]
+   +loss : KiloActivePower [0..1]
+   +lossZero : KiloActivePower [0..1]
+}
+
+TransformerTest <|-- ShortCircuitTest
+ShortCircuitTest "+EnergisedEndShortCircuitTests 0..*" --> "+EnergisedEnd 1" TransformerEndInfo
+ShortCircuitTest "+GroundedEndShortCircuitTests 0..*" --> "+GroundedEnds 1..*" TransformerEndInfo
+
+' TransformerEndInfo inherits from ConductingAssetInfo
+class TransformerEndInfo   {
+   +connectionKind : WindingConnection [0..1]
+   +emergencyS : ApparentPower [0..1]
+   +endNumber : integer [1]
+   +insulationU : Voltage [0..1]
+   +phaseAngleClock : integer [0..1]
+   +r : Resistance [0..1]
+   +ratedS : ApparentPower [0..1]
+   +shortTermS : ApparentPower [0..1]
+}
+
+ConductingAssetInfo <|-- TransformerEndInfo
+TransformerEndInfo "+TransformerEndInfos 0..*" --> "+TransformerTankInfo 0..1" TransformerTankInfo
+
+' TransformerTank inherits from Equipment
+class TransformerTank <<Description>>  {
+}
+
+Equipment <|-- TransformerTank
+TransformerTank "+TransformerTanks 0..*" --> "+TransformerTankInfo 0..1" TransformerTankInfo
+
+' TransformerTankInfo inherits from AssetInfo
+class TransformerTankInfo   {
+}
+
+AssetInfo <|-- TransformerTankInfo
+
+' TransformerTest inherits from IdentifiedObject
+abstract class TransformerTest  <<abstract>> {
+   +basePower : ApparentPower [1]
+   +temperature : Temperature [1]
+}
+
+IdentifiedObject <|-- TransformerTest
+
+' Enumeration WindingConnection
+enum WindingConnection <<enumeration>><<Attribute>>  {
+   A
+   D
+   I
+   Y
+   Yn
+   Z
+   Zn
+}
+
+@enduml

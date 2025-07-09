@@ -1,0 +1,576 @@
+
+== DiagramLayout Profile Specification
+
+// Settings:
+:doctype: inline
+:reproducible:
+:icons: font
+:sectnums:
+:sectnumlevels: 4
+:xrefstyle: short
+
+Profile namespace: http://www.ucaiug.org/gmdm/diagram_layout#
+
+.DiagramLayout Profile
+plantuml::./Profiles/DiagramLayout.rdfs-t2b.puml[format=svg, align=center]
+
+
+=== Concrete Classes
+
+[[DiagramLayout-Diagram]]
+==== Diagram
+
+Inheritance path = <<DiagramLayout-IdentifiedObject,IdentifiedObject>> => <<DiagramLayout-Identity,Identity>>
+
+:Diagram:
+The diagram being exchanged. The coordinate system is a standard Cartesian coordinate system and the orientation attribute defines the orientation. The initial view related attributes can be used to specify an initial view with the x,y coordinates of the diagonal points.
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|orientation (enumeration)
+|0..1
+|<<DiagramLayout-OrientationKind,OrientationKind>>
+|
+Coordinate system orientation of the diagram. A positive orientation gives standard "right-hand" orientation, with negative orientation indicating a "left-hand" orientation. For 2D diagrams, a positive orientation will result in X values increasing from left to right and Y values increasing from bottom to top. A negative orientation gives the "left-hand" orientation (favoured by computer graphics displays) with X values increasing from left to right and Y values increasing from top to bottom.
+
+|x1InitialView
+|0..1
+|<<DiagramLayout-Float,Float>>
+|
+X coordinate of the first corner of the initial view.
+
+|x2InitialView
+|0..1
+|<<DiagramLayout-Float,Float>>
+|
+X coordinate of the second corner of the initial view.
+
+|y1InitialView
+|0..1
+|<<DiagramLayout-Float,Float>>
+|
+Y coordinate of the first corner of the initial view.
+
+|y2InitialView
+|0..1
+|<<DiagramLayout-Float,Float>>
+|
+Y coordinate of the second corner of the initial view.
+
+|DiagramStyle
+|0..1
+|<<DiagramLayout-DiagramStyle,DiagramStyle>>
+|
+A Diagram may have a DiagramStyle.
+
+|===
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|description
+|0..1
+|<<DiagramLayout-String,String>>
+|see <<DiagramLayout-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<DiagramLayout-String,String>>
+|see <<DiagramLayout-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<DiagramLayout-String,String>>
+|see <<DiagramLayout-Identity,Identity>>
+|===
+:!Diagram:
+
+[[DiagramLayout-DiagramObject]]
+==== DiagramObject
+
+Inheritance path = <<DiagramLayout-IdentifiedObject,IdentifiedObject>> => <<DiagramLayout-Identity,Identity>>
+
+:DiagramObject:
+An object that defines one or more points in a given space. This object can be associated with anything that specializes IdentifiedObject. For single line diagrams such objects typically include such items as analog values, breakers, disconnectors, power transformers, and transmission lines.
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|drawingOrder
+|0..1
+|<<DiagramLayout-Integer,Integer>>
+|
+The drawing order of this element. The higher the number, the later the element is drawn in sequence. This is used to ensure that elements that overlap are rendered in the correct order.
+
+|isPolygon
+|0..1
+|<<DiagramLayout-Boolean,Boolean>>
+|
+Defines whether or not the diagram objects points define the boundaries of a polygon or the routing of a polyline. If this value is true then a receiving application should consider the first and last points to be connected.
+
+|offsetX
+|0..1
+|<<DiagramLayout-Float,Float>>
+|
+The offset in the X direction. This is used for defining the offset from centre for rendering an icon (the default is that a single point specifies the centre of the icon).
+
+The offset is in per-unit with 0 indicating there is no offset from the horizontal centre of the icon. -0.5 indicates it is offset by 50% to the left and 0.5 indicates an offset of 50% to the right.
+
+|offsetY
+|0..1
+|<<DiagramLayout-Float,Float>>
+|
+The offset in the Y direction. This is used for defining the offset from centre for rendering an icon (the default is that a single point specifies the centre of the icon).
+
+The offset is in per-unit with 0 indicating there is no offset from the vertical centre of the icon. The offset direction is dependent on the orientation of the diagram, with -0.5 and 0.5 indicating an offset of +/- 50% on the vertical axis.
+
+|rotation
+|0..1
+|<<DiagramLayout-AngleDegrees,AngleDegrees>>
+|
+Sets the angle of rotation of the diagram object. Zero degrees is pointing to the top of the diagram. Rotation is clockwise. DiagramObject.rotation=0 has the following meaning: The connection point of an element which has one terminal is pointing to the top side of the diagram. The connection point "From side" of an element which has more than one terminal is pointing to the top side of the diagram.
+
+DiagramObject.rotation=90 has the following meaning: The connection point of an element which has one terminal is pointing to the right hand side of the diagram. The connection point "From side" of an element which has more than one terminal is pointing to the right hand side of the diagram.
+
+|Diagram
+|1..1
+|<<DiagramLayout-Diagram,Diagram>>
+|
+A diagram object is part of a diagram.
+
+|DiagramObjectStyle
+|1..1
+|<<DiagramLayout-DiagramObjectStyle,DiagramObjectStyle>>
+|
+A diagram object has a style associated that provides a reference for the style used in the originating system.
+
+|===
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|description
+|0..1
+|<<DiagramLayout-String,String>>
+|see <<DiagramLayout-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<DiagramLayout-String,String>>
+|see <<DiagramLayout-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<DiagramLayout-String,String>>
+|see <<DiagramLayout-Identity,Identity>>
+|===
+:!DiagramObject:
+
+[[DiagramLayout-DiagramObjectGluePoint]]
+==== DiagramObjectGluePoint
+
+Inheritance path = <<DiagramLayout-Identity,Identity>>
+
+:DiagramObjectGluePoint:
+This is used for grouping diagram object points from different diagram objects that are considered to be glued together in a diagram even if they are not at the exact same coordinates.
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|DiagramObjectPoints
+|1..*
+|<<DiagramLayout-DiagramObjectPoint,DiagramObjectPoint>>
+|
+A diagram object glue point is associated with 2 or more object points that are considered to be 'glued' together.
+
+|===
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|identifier
+|1..1
+|<<DiagramLayout-String,String>>
+|see <<DiagramLayout-Identity,Identity>>
+|===
+:!DiagramObjectGluePoint:
+
+[[DiagramLayout-DiagramObjectPoint]]
+==== DiagramObjectPoint
+
+Inheritance path = <<DiagramLayout-Identity,Identity>>
+
+:DiagramObjectPoint:
+A point in a given space defined by 3 coordinates and associated to a diagram object. The coordinates may be positive or negative as the origin does not have to be in the corner of a diagram.
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|sequenceNumber
+|0..1
+|<<DiagramLayout-Integer,Integer>>
+|
+The sequence position of the point, used for defining the order of points for diagram objects acting as a polyline or polygon with more than one point. The attribute shall be a positive value.
+
+|xPosition
+|1..1
+|<<DiagramLayout-Float,Float>>
+|
+The X coordinate of this point.
+
+|yPosition
+|1..1
+|<<DiagramLayout-Float,Float>>
+|
+The Y coordinate of this point.
+
+|zPosition
+|0..1
+|<<DiagramLayout-Float,Float>>
+|
+The Z coordinate of this point.
+
+|DiagramObject
+|1..1
+|<<DiagramLayout-DiagramObject,DiagramObject>>
+|
+The diagram object with which the points are associated.
+
+|===
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|identifier
+|1..1
+|<<DiagramLayout-String,String>>
+|see <<DiagramLayout-Identity,Identity>>
+|===
+:!DiagramObjectPoint:
+
+[[DiagramLayout-DiagramObjectStyle]]
+==== DiagramObjectStyle
+
+Inheritance path = <<DiagramLayout-IdentifiedObject,IdentifiedObject>> => <<DiagramLayout-Identity,Identity>>
+
+:DiagramObjectStyle:
+A reference to a style used by the originating system for a diagram object. A diagram object style describes information such as line thickness, shape such as circle or rectangle etc, and colour.
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|description
+|0..1
+|<<DiagramLayout-String,String>>
+|see <<DiagramLayout-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<DiagramLayout-String,String>>
+|see <<DiagramLayout-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<DiagramLayout-String,String>>
+|see <<DiagramLayout-Identity,Identity>>
+|===
+:!DiagramObjectStyle:
+
+[[DiagramLayout-DiagramStyle]]
+==== DiagramStyle
+
+Inheritance path = <<DiagramLayout-IdentifiedObject,IdentifiedObject>> => <<DiagramLayout-Identity,Identity>>
+
+:DiagramStyle:
+The diagram style refers to a style used by the originating system for a diagram. A diagram style describes information such as schematic, geographic, etc.
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|description
+|0..1
+|<<DiagramLayout-String,String>>
+|see <<DiagramLayout-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<DiagramLayout-String,String>>
+|see <<DiagramLayout-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<DiagramLayout-String,String>>
+|see <<DiagramLayout-Identity,Identity>>
+|===
+:!DiagramStyle:
+
+[[DiagramLayout-TextDiagramObject]]
+==== TextDiagramObject
+
+Inheritance path = <<DiagramLayout-DiagramObject,DiagramObject>> => <<DiagramLayout-IdentifiedObject,IdentifiedObject>> => <<DiagramLayout-Identity,Identity>>
+
+:TextDiagramObject:
+A diagram object for placing free-text or text derived from an associated domain object.
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|text
+|1..1
+|<<DiagramLayout-String,String>>
+|
+The text that is displayed by this text diagram object.
+
+|===
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|drawingOrder
+|0..1
+|<<DiagramLayout-Integer,Integer>>
+|see <<DiagramLayout-DiagramObject,DiagramObject>>
+|isPolygon
+|0..1
+|<<DiagramLayout-Boolean,Boolean>>
+|see <<DiagramLayout-DiagramObject,DiagramObject>>
+|offsetX
+|0..1
+|<<DiagramLayout-Float,Float>>
+|see <<DiagramLayout-DiagramObject,DiagramObject>>
+|offsetY
+|0..1
+|<<DiagramLayout-Float,Float>>
+|see <<DiagramLayout-DiagramObject,DiagramObject>>
+|rotation
+|0..1
+|<<DiagramLayout-AngleDegrees,AngleDegrees>>
+|see <<DiagramLayout-DiagramObject,DiagramObject>>
+|Diagram
+|1..1
+|<<DiagramLayout-Diagram,Diagram>>
+|see <<DiagramLayout-DiagramObject,DiagramObject>>
+|DiagramObjectStyle
+|1..1
+|<<DiagramLayout-DiagramObjectStyle,DiagramObjectStyle>>
+|see <<DiagramLayout-DiagramObject,DiagramObject>>
+|description
+|0..1
+|<<DiagramLayout-String,String>>
+|see <<DiagramLayout-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<DiagramLayout-String,String>>
+|see <<DiagramLayout-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<DiagramLayout-String,String>>
+|see <<DiagramLayout-Identity,Identity>>
+|===
+:!TextDiagramObject:
+
+[[DiagramLayout-VisibilityLayer]]
+==== VisibilityLayer
+
+Inheritance path = <<DiagramLayout-IdentifiedObject,IdentifiedObject>> => <<DiagramLayout-Identity,Identity>>
+
+:VisibilityLayer:
+Layers are typically used for grouping diagram objects according to themes and scales. Themes are used to display or hide certain information (e.g., lakes, borders), while scales are used for hiding or displaying information depending on the current zoom level (hide text when it is too small to be read, or when it exceeds the screen size). This is also called de-cluttering.
+
+CIM based graphics exchange supports an m:n relationship between diagram objects and layers. The importing system shall convert an m:n case into an appropriate 1:n representation if the importing system does not support m:n.
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|drawingOrder
+|0..1
+|<<DiagramLayout-Integer,Integer>>
+|
+The drawing order for this layer. The higher the number, the later the layer and the objects within it are rendered.
+
+|VisibleObjects
+|0..*
+|<<DiagramLayout-DiagramObject,DiagramObject>>
+|
+A visibility layer can contain one or more diagram objects.
+
+|===
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|description
+|0..1
+|<<DiagramLayout-String,String>>
+|see <<DiagramLayout-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<DiagramLayout-String,String>>
+|see <<DiagramLayout-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<DiagramLayout-String,String>>
+|see <<DiagramLayout-Identity,Identity>>
+|===
+:!VisibilityLayer:
+
+
+=== Abstract Classes
+
+[[DiagramLayout-IdentifiedObject]]
+==== IdentifiedObject
+
+Inheritance path = <<DiagramLayout-Identity,Identity>>
+
+:IdentifiedObject:
+This is a class that provides common identification for all classes needing identification and naming attributes.
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|description
+|0..1
+|<<DiagramLayout-String,String>>
+|
+The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.
+
+|name
+|0..1
+|<<DiagramLayout-String,String>>
+|
+The name is any free human readable and possibly non unique text naming the object.
+
+|===
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|identifier
+|1..1
+|<<DiagramLayout-String,String>>
+|see <<DiagramLayout-Identity,Identity>>
+|===
+:!IdentifiedObject:
+
+[[DiagramLayout-Identity]]
+==== Identity
+
+
+:Identity:
+,
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|identifier
+|1..1
+|<<DiagramLayout-String,String>>
+|
+A universally unique object identifier. Used to uniquely identify persistent objects between CIM messages.
+
+|===
+:!Identity:
+
+
+=== Enumerations
+
+[[DiagramLayout-OrientationKind]]
+==== OrientationKind
+
+The orientation of the coordinate system with respect to top, left, and the coordinate number system.
+
+
+[%header,width="100%",cols="25%,75%a"]
+|===
+|name |description
+
+|negative
+|
+For 2D diagrams, a negative orientation gives the left-hand orientation (favoured by computer graphics displays) with X values increasing from left to right and Y values increasing from top to bottom. This is also known as a left hand orientation.
+
+
+|positive
+|
+For 2D diagrams, a positive orientation will result in X values increasing from left to right and Y values increasing from bottom to top. This is also known as a right hand orientation.
+
+|===
+
+=== Datatypes
+
+[[DiagramLayout-AngleDegrees]]
+==== AngleDegrees
+
+Measurement of angle in degrees.
+
+
+XSD type: float
+
+
+=== Primitive Types
+
+[[DiagramLayout-Boolean]]
+==== Boolean
+
+A type with the value space "true" and "false".http://langdale.com.au/2005/UML#primitive
+
+XSD type: boolean
+
+[[DiagramLayout-Float]]
+==== Float
+
+A floating point number. The range is unspecified and not limited.http://langdale.com.au/2005/UML#primitive
+
+XSD type: float
+
+[[DiagramLayout-Integer]]
+==== Integer
+
+An integer number. The range is unspecified and not limited.http://langdale.com.au/2005/UML#primitive
+
+XSD type: integer
+
+[[DiagramLayout-String]]
+==== String
+
+A string consisting of a sequence of characters. The character encoding is UTF-8. The string length is unspecified and unlimited.http://langdale.com.au/2005/UML#primitive
+
+XSD type: string
+
+

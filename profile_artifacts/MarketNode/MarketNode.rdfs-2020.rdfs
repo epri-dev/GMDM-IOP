@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+	Copyright 2025 UCAIug
+
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+
+	https://www.apache.org/licenses/LICENSE-2.0
+
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+-->
+<rdf:RDF xmlns:cims="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:uml="http://iec.ch/TC57/NonStandard/UML#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+         xml:base="http://cim.ucaiug.io/ns">
+   <rdf:Description rdf:about="#ConnectivityNode">
+      <cims:belongsToCategory rdf:resource="#Package_Core"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
+      <cims:stereotype>Description</cims:stereotype>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Connectivity nodes are points where terminals of AC conducting equipment are connected together with zero impedance.</rdfs:comment>
+      <rdfs:label xml:lang="en">ConnectivityNode</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#IdentifiedObject"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#ConnectivityNode.IndividualPnode">
+      <cims:AssociationUsed>No</cims:AssociationUsed>
+      <cims:inverseRoleName rdf:resource="#IndividualPnode.ConnectivityNode"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:domain rdf:resource="#ConnectivityNode"/>
+      <rdfs:label xml:lang="en">IndividualPnode</rdfs:label>
+      <rdfs:range rdf:resource="#IndividualPnode"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#IdentifiedObject">
+      <cims:belongsToCategory rdf:resource="#Package_Core"/>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is a class that provides common identification for all classes needing identification and naming attributes.</rdfs:comment>
+      <rdfs:label xml:lang="en">IdentifiedObject</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#Identity"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#IdentifiedObject.description">
+      <cims:dataType rdf:resource="#String"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</rdfs:comment>
+      <rdfs:domain rdf:resource="#IdentifiedObject"/>
+      <rdfs:label xml:lang="en">description</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#IdentifiedObject.name">
+      <cims:dataType rdf:resource="#String"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The name is any free human readable and possibly non unique text naming the object.</rdfs:comment>
+      <rdfs:domain rdf:resource="#IdentifiedObject"/>
+      <rdfs:label xml:lang="en">name</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Identity">
+      <cims:belongsToCategory rdf:resource="#Package_Compatible_Unit"/>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">,</rdfs:comment>
+      <rdfs:label xml:lang="en">Identity</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Identity.identifier">
+      <cims:dataType rdf:resource="#String"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A universally unique object identifier. Used to uniquely identify persistent objects between CIM messages.</rdfs:comment>
+      <rdfs:domain rdf:resource="#Identity"/>
+      <rdfs:label xml:lang="en">identifier</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#IndividualPnode">
+      <cims:belongsToCategory rdf:resource="#Package_ReferenceData"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Individual pricing node based on Pnode.</rdfs:comment>
+      <rdfs:label xml:lang="en">IndividualPnode</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#Pnode"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#IndividualPnode.ConnectivityNode">
+      <cims:AssociationUsed>Yes</cims:AssociationUsed>
+      <cims:inverseRoleName rdf:resource="#ConnectivityNode.IndividualPnode"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..1"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:domain rdf:resource="#IndividualPnode"/>
+      <rdfs:label xml:lang="en">ConnectivityNode</rdfs:label>
+      <rdfs:range rdf:resource="#ConnectivityNode"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_Base">
+      <cims:belongsToCategory rdf:resource="#Package_Grid"/>
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Content of the base CIM. The information in the entire clause "Common Information Model Base Package" is reproduced from the UML with the permission of UCAIug.</rdfs:comment>
+      <rdfs:label xml:lang="en">Base</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_CIM">
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Top package for CIM.</rdfs:comment>
+      <rdfs:label xml:lang="en">CIM</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_Compatible_Unit">
+      <cims:belongsToCategory rdf:resource="#Package_InfDesign"/>
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:label xml:lang="en">Compatible Unit</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_Core">
+      <cims:belongsToCategory rdf:resource="#Package_Base"/>
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Contains the core PowerSystemResource and ConductingEquipment entities shared by all applications plus common collections of those entities. Not all applications require all the Core entities.  This package does not depend on any other package except the Domain package, but most of the other packages have associations and generalizations that depend on it.</rdfs:comment>
+      <rdfs:label xml:lang="en">Core</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_DetailedModelDescription">
+      <cims:belongsToCategory rdf:resource="#Package_Dynamics"/>
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This clause packages classes needed to describe a model for dynamics simulations. This approach enables parties to exchange user defined model description expressed as mathematical expressions. It can also be used to describe standard models. Different profiles that use this information model shall make a choice of language used to describe the equations. The model enables creation of two separate profiles:
+1) a profile to describe the detailed model configuration, and
+2) a profile to enable an exchange of parameters of the model described using profile defined in  1).</rdfs:comment>
+      <rdfs:label xml:lang="en">DetailedModelDescription</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_Dynamics">
+      <cims:belongsToCategory rdf:resource="#Package_Grid"/>
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The CIM dynamic model definitions reflect the most common IEEE or, in the case of wind models, IEC, representations of models as well as models included in some of the transient stability software widely used by utilities.
+These dynamic models are intended to ensure interoperability between different vendors� software products currently in use by electric utility energy companies, utilities, Transmission System Operators (TSOs), Regional Transmission Organizations (RTOs), and Independent System Operators (ISOs).  It is important to note that each vendor is free to select its own internal implementation of these models.  Differences in vendor results, as long as they are within accepted engineering practice, caused by different internal representations, are acceptable.
+Unless explicitly stated otherwise, the following modelling conventions are followed:
+- limited integrators are of the non-windup type;
+- it shall be possible to enter a time constant of zero (where it makes sense).
+The information in the entire clause "Common Information Model Dynamics package" is reproduced from the UML with the permission of UCAIug.</rdfs:comment>
+      <rdfs:label xml:lang="en">Dynamics</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_Enterprise">
+      <cims:belongsToCategory rdf:resource="#Package_CIM"/>
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The 61968 UML subpackages of the CIM are developed and maintained by a CIM User Group task force.
+Currently, normative parts of the model support the needs of information exchange defined in the profiles for outage management, asset management, work management, customer support, metering, and DER.</rdfs:comment>
+      <rdfs:label xml:lang="en">Enterprise</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_Grid">
+      <cims:belongsToCategory rdf:resource="#Package_CIM"/>
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This top package includes the CIM model related to the grid.</rdfs:comment>
+      <rdfs:label xml:lang="en">Grid</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_InfDesign">
+      <cims:belongsToCategory rdf:resource="#Package_InfEnterprise"/>
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:label xml:lang="en">InfDesign</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_InfEnterprise">
+      <cims:belongsToCategory rdf:resource="#Package_Enterprise"/>
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This package and its subpackages contain informative (unstable) elements of the model, expected to evolve a lot or to be removed, and not published as IEC document yet. Some portions of it will be reworked and moved to normative packages as the need arises, and some portions may be removed.
+WG14 does not generate documentation for this informative portion of the model.</rdfs:comment>
+      <rdfs:label xml:lang="en">InfEnterprise</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_Market">
+      <cims:belongsToCategory rdf:resource="#Package_CIM"/>
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Market subpackages of the CIM are developed, standardized and maintained by the UCA community including its working groups and task forces.</rdfs:comment>
+      <rdfs:label xml:lang="en">Market</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_MarketOperations">
+      <cims:belongsToCategory rdf:resource="#Package_Market"/>
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This package contains all core CIM Market Extensions required for market operations systems.</rdfs:comment>
+      <rdfs:label xml:lang="en">MarketOperations</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_ReferenceData">
+      <cims:belongsToCategory rdf:resource="#Package_MarketOperations"/>
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Market static reference data.</rdfs:comment>
+      <rdfs:label xml:lang="en">ReferenceData</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Pnode">
+      <cims:belongsToCategory rdf:resource="#Package_ReferenceData"/>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pricing node is directly associated with a connectivity node.  It is a pricing location for which market participants submit their bids, offers, buy/sell CRRs, and settle.</rdfs:comment>
+      <rdfs:label xml:lang="en">Pnode</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#IdentifiedObject"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#String">
+      <cims:belongsToCategory rdf:resource="#Package_DetailedModelDescription"/>
+      <cims:stereotype>Primitive</cims:stereotype>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A string consisting of a sequence of characters. The character encoding is UTF-8. The string length is unspecified and unlimited.</rdfs:comment>
+      <rdfs:label xml:lang="en">String</rdfs:label>
+   </rdf:Description>
+</rdf:RDF>
