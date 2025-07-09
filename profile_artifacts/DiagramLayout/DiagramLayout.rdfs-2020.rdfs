@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+	Copyright 2025 UCAIug
+
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+
+	https://www.apache.org/licenses/LICENSE-2.0
+
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+-->
+<rdf:RDF xmlns:cims="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:uml="http://iec.ch/TC57/NonStandard/UML#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+         xml:base="http://cim.ucaiug.io/ns">
+   <rdf:Description rdf:about="#AngleDegrees">
+      <cims:belongsToCategory rdf:resource="#Package_Domain"/>
+      <cims:stereotype>CIMDatatype</cims:stereotype>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Measurement of angle in degrees.</rdfs:comment>
+      <rdfs:label xml:lang="en">AngleDegrees</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#AngleDegrees.multiplier">
+      <cims:isFixed rdf:datatype="http://www.w3.org/2001/XMLSchema#string">none</cims:isFixed>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+      <rdfs:domain rdf:resource="#AngleDegrees"/>
+      <rdfs:label xml:lang="en">multiplier</rdfs:label>
+      <rdfs:range rdf:resource="http://iec.ch/TC57/CIM100#UnitMultiplier"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#AngleDegrees.unit">
+      <cims:isFixed rdf:datatype="http://www.w3.org/2001/XMLSchema#string">deg</cims:isFixed>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+      <rdfs:domain rdf:resource="#AngleDegrees"/>
+      <rdfs:label xml:lang="en">unit</rdfs:label>
+      <rdfs:range rdf:resource="http://iec.ch/TC57/CIM100#UnitSymbol"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#AngleDegrees.value">
+      <cims:dataType rdf:resource="http://iec.ch/TC57/CIM100#Float"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+      <rdfs:domain rdf:resource="#AngleDegrees"/>
+      <rdfs:label xml:lang="en">value</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Boolean">
+      <cims:belongsToCategory rdf:resource="#Package_Domain"/>
+      <cims:stereotype>Primitive</cims:stereotype>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type with the value space "true" and "false".</rdfs:comment>
+      <rdfs:label xml:lang="en">Boolean</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Diagram">
+      <cims:belongsToCategory rdf:resource="#Package_DiagramLayout"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The diagram being exchanged. The coordinate system is a standard Cartesian coordinate system and the orientation attribute defines the orientation. The initial view related attributes can be used to specify an initial view with the x,y coordinates of the diagonal points.</rdfs:comment>
+      <rdfs:label xml:lang="en">Diagram</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#IdentifiedObject"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Diagram.DiagramElements">
+      <cims:AssociationUsed>No</cims:AssociationUsed>
+      <cims:inverseRoleName rdf:resource="#DiagramObject.Diagram"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..n"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A diagram is made up of multiple diagram objects.</rdfs:comment>
+      <rdfs:domain rdf:resource="#Diagram"/>
+      <rdfs:label xml:lang="en">DiagramElements</rdfs:label>
+      <rdfs:range rdf:resource="#DiagramObject"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Diagram.DiagramStyle">
+      <cims:AssociationUsed>Yes</cims:AssociationUsed>
+      <cims:inverseRoleName rdf:resource="#DiagramStyle.Diagram"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Diagram may have a DiagramStyle.</rdfs:comment>
+      <rdfs:domain rdf:resource="#Diagram"/>
+      <rdfs:label xml:lang="en">DiagramStyle</rdfs:label>
+      <rdfs:range rdf:resource="#DiagramStyle"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Diagram.orientation">
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coordinate system orientation of the diagram. A positive orientation gives standard "right-hand" orientation, with negative orientation indicating a "left-hand" orientation. For 2D diagrams, a positive orientation will result in X values increasing from left to right and Y values increasing from bottom to top. A negative orientation gives the "left-hand" orientation (favoured by computer graphics displays) with X values increasing from left to right and Y values increasing from top to bottom.</rdfs:comment>
+      <rdfs:domain rdf:resource="#Diagram"/>
+      <rdfs:label xml:lang="en">orientation</rdfs:label>
+      <rdfs:range rdf:resource="#OrientationKind"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Diagram.x1InitialView">
+      <cims:dataType rdf:resource="#Float"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">X coordinate of the first corner of the initial view.</rdfs:comment>
+      <rdfs:domain rdf:resource="#Diagram"/>
+      <rdfs:label xml:lang="en">x1InitialView</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Diagram.x2InitialView">
+      <cims:dataType rdf:resource="#Float"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">X coordinate of the second corner of the initial view.</rdfs:comment>
+      <rdfs:domain rdf:resource="#Diagram"/>
+      <rdfs:label xml:lang="en">x2InitialView</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Diagram.y1InitialView">
+      <cims:dataType rdf:resource="#Float"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Y coordinate of the first corner of the initial view.</rdfs:comment>
+      <rdfs:domain rdf:resource="#Diagram"/>
+      <rdfs:label xml:lang="en">y1InitialView</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Diagram.y2InitialView">
+      <cims:dataType rdf:resource="#Float"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Y coordinate of the second corner of the initial view.</rdfs:comment>
+      <rdfs:domain rdf:resource="#Diagram"/>
+      <rdfs:label xml:lang="en">y2InitialView</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#DiagramObject">
+      <cims:belongsToCategory rdf:resource="#Package_DiagramLayout"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An object that defines one or more points in a given space. This object can be associated with anything that specializes IdentifiedObject. For single line diagrams such objects typically include such items as analog values, breakers, disconnectors, power transformers, and transmission lines.</rdfs:comment>
+      <rdfs:label xml:lang="en">DiagramObject</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#IdentifiedObject"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#DiagramObject.Diagram">
+      <cims:AssociationUsed>Yes</cims:AssociationUsed>
+      <cims:inverseRoleName rdf:resource="#Diagram.DiagramElements"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..1"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A diagram object is part of a diagram.</rdfs:comment>
+      <rdfs:domain rdf:resource="#DiagramObject"/>
+      <rdfs:label xml:lang="en">Diagram</rdfs:label>
+      <rdfs:range rdf:resource="#Diagram"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#DiagramObject.DiagramObjectPoints">
+      <cims:AssociationUsed>No</cims:AssociationUsed>
+      <cims:inverseRoleName rdf:resource="#DiagramObjectPoint.DiagramObject"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..n"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A diagram object can have 0 or more points to reflect its layout position, routing (for polylines) or boundary (for polygons).</rdfs:comment>
+      <rdfs:domain rdf:resource="#DiagramObject"/>
+      <rdfs:label xml:lang="en">DiagramObjectPoints</rdfs:label>
+      <rdfs:range rdf:resource="#DiagramObjectPoint"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#DiagramObject.DiagramObjectStyle">
+      <cims:AssociationUsed>Yes</cims:AssociationUsed>
+      <cims:inverseRoleName rdf:resource="#DiagramObjectStyle.StyledObjects"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..1"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A diagram object has a style associated that provides a reference for the style used in the originating system.</rdfs:comment>
+      <rdfs:domain rdf:resource="#DiagramObject"/>
+      <rdfs:label xml:lang="en">DiagramObjectStyle</rdfs:label>
+      <rdfs:range rdf:resource="#DiagramObjectStyle"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#DiagramObject.VisibilityLayers">
+      <cims:AssociationUsed>No</cims:AssociationUsed>
+      <cims:inverseRoleName rdf:resource="#VisibilityLayer.VisibleObjects"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..n"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A diagram object can be part of multiple visibility layers.</rdfs:comment>
+      <rdfs:domain rdf:resource="#DiagramObject"/>
+      <rdfs:label xml:lang="en">VisibilityLayers</rdfs:label>
+      <rdfs:range rdf:resource="#VisibilityLayer"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#DiagramObject.drawingOrder">
+      <cims:dataType rdf:resource="#Integer"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The drawing order of this element. The higher the number, the later the element is drawn in sequence. This is used to ensure that elements that overlap are rendered in the correct order.</rdfs:comment>
+      <rdfs:domain rdf:resource="#DiagramObject"/>
+      <rdfs:label xml:lang="en">drawingOrder</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#DiagramObject.isPolygon">
+      <cims:dataType rdf:resource="#Boolean"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Defines whether or not the diagram objects points define the boundaries of a polygon or the routing of a polyline. If this value is true then a receiving application should consider the first and last points to be connected.</rdfs:comment>
+      <rdfs:domain rdf:resource="#DiagramObject"/>
+      <rdfs:label xml:lang="en">isPolygon</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#DiagramObject.offsetX">
+      <cims:dataType rdf:resource="#Float"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The offset in the X direction. This is used for defining the offset from centre for rendering an icon (the default is that a single point specifies the centre of the icon).
+The offset is in per-unit with 0 indicating there is no offset from the horizontal centre of the icon.  -0.5 indicates it is offset by 50% to the left and 0.5 indicates an offset of 50% to the right.</rdfs:comment>
+      <rdfs:domain rdf:resource="#DiagramObject"/>
+      <rdfs:label xml:lang="en">offsetX</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#DiagramObject.offsetY">
+      <cims:dataType rdf:resource="#Float"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The offset in the Y direction. This is used for defining the offset from centre for rendering an icon (the default is that a single point specifies the centre of the icon).
+The offset is in per-unit with 0 indicating there is no offset from the vertical centre of the icon.  The offset direction is dependent on the orientation of the diagram, with -0.5 and 0.5 indicating an offset of +/- 50% on the vertical axis.</rdfs:comment>
+      <rdfs:domain rdf:resource="#DiagramObject"/>
+      <rdfs:label xml:lang="en">offsetY</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#DiagramObject.rotation">
+      <cims:dataType rdf:resource="#AngleDegrees"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sets the angle of rotation of the diagram object.  Zero degrees is pointing to the top of the diagram.  Rotation is clockwise.  DiagramObject.rotation=0 has the following meaning: The connection point of an element which has one terminal is pointing to the top side of the diagram. The connection point "From side" of an element which has more than one terminal is pointing to the top side of the diagram.
+DiagramObject.rotation=90 has the following meaning: The connection point of an element which has one terminal is pointing to the right hand side of the diagram. The connection point "From side" of an element which has more than one terminal is pointing to the right hand side of the diagram.</rdfs:comment>
+      <rdfs:domain rdf:resource="#DiagramObject"/>
+      <rdfs:label xml:lang="en">rotation</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#DiagramObjectGluePoint">
+      <cims:belongsToCategory rdf:resource="#Package_DiagramLayout"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is used for grouping diagram object points from different diagram objects that are considered to be glued together in a diagram even if they are not at the exact same coordinates.</rdfs:comment>
+      <rdfs:label xml:lang="en">DiagramObjectGluePoint</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#Identity"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#DiagramObjectGluePoint.DiagramObjectPoints">
+      <cims:AssociationUsed>Yes</cims:AssociationUsed>
+      <cims:inverseRoleName rdf:resource="#DiagramObjectPoint.DiagramObjectGluePoint"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..n"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A diagram object glue point is associated with 2 or more object points that are considered to be 'glued' together.</rdfs:comment>
+      <rdfs:domain rdf:resource="#DiagramObjectGluePoint"/>
+      <rdfs:label xml:lang="en">DiagramObjectPoints</rdfs:label>
+      <rdfs:range rdf:resource="#DiagramObjectPoint"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#DiagramObjectPoint">
+      <cims:belongsToCategory rdf:resource="#Package_DiagramLayout"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A point in a given space defined by 3 coordinates and associated to a diagram object.  The coordinates may be positive or negative as the origin does not have to be in the corner of a diagram.</rdfs:comment>
+      <rdfs:label xml:lang="en">DiagramObjectPoint</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#Identity"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#DiagramObjectPoint.DiagramObject">
+      <cims:AssociationUsed>Yes</cims:AssociationUsed>
+      <cims:inverseRoleName rdf:resource="#DiagramObject.DiagramObjectPoints"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..1"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The diagram object with which the points are associated.</rdfs:comment>
+      <rdfs:domain rdf:resource="#DiagramObjectPoint"/>
+      <rdfs:label xml:lang="en">DiagramObject</rdfs:label>
+      <rdfs:range rdf:resource="#DiagramObject"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#DiagramObjectPoint.DiagramObjectGluePoint">
+      <cims:AssociationUsed>No</cims:AssociationUsed>
+      <cims:inverseRoleName rdf:resource="#DiagramObjectGluePoint.DiagramObjectPoints"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The 'glue' point to which this point is associated.</rdfs:comment>
+      <rdfs:domain rdf:resource="#DiagramObjectPoint"/>
+      <rdfs:label xml:lang="en">DiagramObjectGluePoint</rdfs:label>
+      <rdfs:range rdf:resource="#DiagramObjectGluePoint"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#DiagramObjectPoint.sequenceNumber">
+      <cims:dataType rdf:resource="#Integer"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The sequence position of the point, used for defining the order of points for diagram objects acting as a polyline or polygon with more than one point. The attribute shall be a positive value.</rdfs:comment>
+      <rdfs:domain rdf:resource="#DiagramObjectPoint"/>
+      <rdfs:label xml:lang="en">sequenceNumber</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#DiagramObjectPoint.xPosition">
+      <cims:dataType rdf:resource="#Float"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..1"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The X coordinate of this point.</rdfs:comment>
+      <rdfs:domain rdf:resource="#DiagramObjectPoint"/>
+      <rdfs:label xml:lang="en">xPosition</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#DiagramObjectPoint.yPosition">
+      <cims:dataType rdf:resource="#Float"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..1"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Y coordinate of this point.</rdfs:comment>
+      <rdfs:domain rdf:resource="#DiagramObjectPoint"/>
+      <rdfs:label xml:lang="en">yPosition</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#DiagramObjectPoint.zPosition">
+      <cims:dataType rdf:resource="#Float"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Z coordinate of this point.</rdfs:comment>
+      <rdfs:domain rdf:resource="#DiagramObjectPoint"/>
+      <rdfs:label xml:lang="en">zPosition</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#DiagramObjectStyle">
+      <cims:belongsToCategory rdf:resource="#Package_DiagramLayout"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A reference to a style used by the originating system for a diagram object.  A diagram object style describes information such as line thickness, shape such as circle or rectangle etc, and colour.</rdfs:comment>
+      <rdfs:label xml:lang="en">DiagramObjectStyle</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#IdentifiedObject"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#DiagramObjectStyle.StyledObjects">
+      <cims:AssociationUsed>No</cims:AssociationUsed>
+      <cims:inverseRoleName rdf:resource="#DiagramObject.DiagramObjectStyle"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..n"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A style can be assigned to multiple diagram objects.</rdfs:comment>
+      <rdfs:domain rdf:resource="#DiagramObjectStyle"/>
+      <rdfs:label xml:lang="en">StyledObjects</rdfs:label>
+      <rdfs:range rdf:resource="#DiagramObject"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#DiagramStyle">
+      <cims:belongsToCategory rdf:resource="#Package_DiagramLayout"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The diagram style refers to a style used by the originating system for a diagram.  A diagram style describes information such as schematic, geographic, etc.</rdfs:comment>
+      <rdfs:label xml:lang="en">DiagramStyle</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#IdentifiedObject"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#DiagramStyle.Diagram">
+      <cims:AssociationUsed>No</cims:AssociationUsed>
+      <cims:inverseRoleName rdf:resource="#Diagram.DiagramStyle"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..n"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A DiagramStyle can be used by many Diagrams.</rdfs:comment>
+      <rdfs:domain rdf:resource="#DiagramStyle"/>
+      <rdfs:label xml:lang="en">Diagram</rdfs:label>
+      <rdfs:range rdf:resource="#Diagram"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Float">
+      <cims:belongsToCategory rdf:resource="#Package_Domain"/>
+      <cims:stereotype>Primitive</cims:stereotype>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A floating point number. The range is unspecified and not limited.</rdfs:comment>
+      <rdfs:label xml:lang="en">Float</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#IdentifiedObject">
+      <cims:belongsToCategory rdf:resource="#Package_Core"/>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is a class that provides common identification for all classes needing identification and naming attributes.</rdfs:comment>
+      <rdfs:label xml:lang="en">IdentifiedObject</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#Identity"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#IdentifiedObject.description">
+      <cims:dataType rdf:resource="#String"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</rdfs:comment>
+      <rdfs:domain rdf:resource="#IdentifiedObject"/>
+      <rdfs:label xml:lang="en">description</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#IdentifiedObject.name">
+      <cims:dataType rdf:resource="#String"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The name is any free human readable and possibly non unique text naming the object.</rdfs:comment>
+      <rdfs:domain rdf:resource="#IdentifiedObject"/>
+      <rdfs:label xml:lang="en">name</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Identity">
+      <cims:belongsToCategory rdf:resource="#Package_Compatible_Unit"/>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">,</rdfs:comment>
+      <rdfs:label xml:lang="en">Identity</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Identity.identifier">
+      <cims:dataType rdf:resource="#String"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..1"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A universally unique object identifier. Used to uniquely identify persistent objects between CIM messages.</rdfs:comment>
+      <rdfs:domain rdf:resource="#Identity"/>
+      <rdfs:label xml:lang="en">identifier</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Integer">
+      <cims:belongsToCategory rdf:resource="#Package_Domain"/>
+      <cims:stereotype>Primitive</cims:stereotype>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An integer number. The range is unspecified and not limited.</rdfs:comment>
+      <rdfs:label xml:lang="en">Integer</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#OrientationKind">
+      <cims:belongsToCategory rdf:resource="#Package_DiagramLayout"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#enumeration"/>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The orientation of the coordinate system with respect to top, left, and the coordinate number system.</rdfs:comment>
+      <rdfs:label xml:lang="en">OrientationKind</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#OrientationKind.negative">
+      <cims:stereotype>enum</cims:stereotype>
+      <rdf:type rdf:resource="#OrientationKind"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">For 2D diagrams, a negative orientation gives the left-hand orientation (favoured by computer graphics displays) with X values increasing from left to right and Y values increasing from top to bottom.   This is also known as a left hand orientation.</rdfs:comment>
+      <rdfs:label xml:lang="en">negative</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#OrientationKind.positive">
+      <cims:stereotype>enum</cims:stereotype>
+      <rdf:type rdf:resource="#OrientationKind"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">For 2D diagrams, a positive orientation will result in X values increasing from left to right and Y values increasing from bottom to top.  This is also known as a right hand orientation.</rdfs:comment>
+      <rdfs:label xml:lang="en">positive</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_Base">
+      <cims:belongsToCategory rdf:resource="#Package_Grid"/>
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Content of the base CIM. The information in the entire clause "Common Information Model Base Package" is reproduced from the UML with the permission of UCAIug.</rdfs:comment>
+      <rdfs:label xml:lang="en">Base</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_CIM">
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Top package for CIM.</rdfs:comment>
+      <rdfs:label xml:lang="en">CIM</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_Compatible_Unit">
+      <cims:belongsToCategory rdf:resource="#Package_InfDesign"/>
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:label xml:lang="en">Compatible Unit</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_Core">
+      <cims:belongsToCategory rdf:resource="#Package_Base"/>
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Contains the core PowerSystemResource and ConductingEquipment entities shared by all applications plus common collections of those entities. Not all applications require all the Core entities.  This package does not depend on any other package except the Domain package, but most of the other packages have associations and generalizations that depend on it.</rdfs:comment>
+      <rdfs:label xml:lang="en">Core</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_DetailedModelDescription">
+      <cims:belongsToCategory rdf:resource="#Package_Dynamics"/>
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This clause packages classes needed to describe a model for dynamics simulations. This approach enables parties to exchange user defined model description expressed as mathematical expressions. It can also be used to describe standard models. Different profiles that use this information model shall make a choice of language used to describe the equations. The model enables creation of two separate profiles:
+1) a profile to describe the detailed model configuration, and
+2) a profile to enable an exchange of parameters of the model described using profile defined in  1).</rdfs:comment>
+      <rdfs:label xml:lang="en">DetailedModelDescription</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_DiagramLayout">
+      <cims:belongsToCategory rdf:resource="#Package_Base"/>
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This package describes diagram layout. This describes how objects are arranged in a coordinate system rather than how they are rendered.</rdfs:comment>
+      <rdfs:label xml:lang="en">DiagramLayout</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_Domain">
+      <cims:belongsToCategory rdf:resource="#Package_Base"/>
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The domain package defines primitive datatypes that are used by classes in other packages. Stereotypes are used to describe the datatypes. The following stereotypes are defined:
+&amp;lt;&amp;lt;enumeration&amp;gt;&amp;gt; A list of permissible constant values.
+&amp;lt;&amp;lt;Primitive&amp;gt;&amp;gt; The most basic data types used to compose all other data types.
+&amp;lt;&amp;lt;CIMDatatype&amp;gt;&amp;gt; A datatype that contains a value attribute, an optional unit of measure and a unit multiplier. The unit and multiplier may be specified as a static variable initialized to the allowed value.
+&amp;lt;&amp;lt;Compound&amp;gt;&amp;gt; A composite of Primitive, enumeration, CIMDatatype or other Compound classes, as long as the Compound classes do not recurse.
+For all datatypes both positive and negative values are allowed unless stated otherwise for a particular datatype.</rdfs:comment>
+      <rdfs:label xml:lang="en">Domain</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_Dynamics">
+      <cims:belongsToCategory rdf:resource="#Package_Grid"/>
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The CIM dynamic model definitions reflect the most common IEEE or, in the case of wind models, IEC, representations of models as well as models included in some of the transient stability software widely used by utilities.
+These dynamic models are intended to ensure interoperability between different vendors� software products currently in use by electric utility energy companies, utilities, Transmission System Operators (TSOs), Regional Transmission Organizations (RTOs), and Independent System Operators (ISOs).  It is important to note that each vendor is free to select its own internal implementation of these models.  Differences in vendor results, as long as they are within accepted engineering practice, caused by different internal representations, are acceptable.
+Unless explicitly stated otherwise, the following modelling conventions are followed:
+- limited integrators are of the non-windup type;
+- it shall be possible to enter a time constant of zero (where it makes sense).
+The information in the entire clause "Common Information Model Dynamics package" is reproduced from the UML with the permission of UCAIug.</rdfs:comment>
+      <rdfs:label xml:lang="en">Dynamics</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_Enterprise">
+      <cims:belongsToCategory rdf:resource="#Package_CIM"/>
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The 61968 UML subpackages of the CIM are developed and maintained by a CIM User Group task force.
+Currently, normative parts of the model support the needs of information exchange defined in the profiles for outage management, asset management, work management, customer support, metering, and DER.</rdfs:comment>
+      <rdfs:label xml:lang="en">Enterprise</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_Grid">
+      <cims:belongsToCategory rdf:resource="#Package_CIM"/>
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This top package includes the CIM model related to the grid.</rdfs:comment>
+      <rdfs:label xml:lang="en">Grid</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_InfDesign">
+      <cims:belongsToCategory rdf:resource="#Package_InfEnterprise"/>
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:label xml:lang="en">InfDesign</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_InfEnterprise">
+      <cims:belongsToCategory rdf:resource="#Package_Enterprise"/>
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This package and its subpackages contain informative (unstable) elements of the model, expected to evolve a lot or to be removed, and not published as IEC document yet. Some portions of it will be reworked and moved to normative packages as the need arises, and some portions may be removed.
+WG14 does not generate documentation for this informative portion of the model.</rdfs:comment>
+      <rdfs:label xml:lang="en">InfEnterprise</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#String">
+      <cims:belongsToCategory rdf:resource="#Package_DetailedModelDescription"/>
+      <cims:stereotype>Primitive</cims:stereotype>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A string consisting of a sequence of characters. The character encoding is UTF-8. The string length is unspecified and unlimited.</rdfs:comment>
+      <rdfs:label xml:lang="en">String</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#TextDiagramObject">
+      <cims:belongsToCategory rdf:resource="#Package_DiagramLayout"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A diagram object for placing free-text or text derived from an associated domain object.</rdfs:comment>
+      <rdfs:label xml:lang="en">TextDiagramObject</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#DiagramObject"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#TextDiagramObject.text">
+      <cims:dataType rdf:resource="#String"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..1"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The text that is displayed by this text diagram object.</rdfs:comment>
+      <rdfs:domain rdf:resource="#TextDiagramObject"/>
+      <rdfs:label xml:lang="en">text</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#VisibilityLayer">
+      <cims:belongsToCategory rdf:resource="#Package_DiagramLayout"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Layers are typically used for grouping diagram objects according to themes and scales. Themes are used to display or hide certain information (e.g., lakes, borders), while scales are used for hiding or displaying information depending on the current zoom level (hide text when it is too small to be read, or when it exceeds the screen size). This is also called de-cluttering.
+CIM based graphics exchange supports an m:n relationship between diagram objects and layers. The importing system shall convert an m:n case into an appropriate 1:n representation if the importing system does not support m:n.</rdfs:comment>
+      <rdfs:label xml:lang="en">VisibilityLayer</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#IdentifiedObject"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#VisibilityLayer.VisibleObjects">
+      <cims:AssociationUsed>Yes</cims:AssociationUsed>
+      <cims:inverseRoleName rdf:resource="#DiagramObject.VisibilityLayers"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..n"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A visibility layer can contain one or more diagram objects.</rdfs:comment>
+      <rdfs:domain rdf:resource="#VisibilityLayer"/>
+      <rdfs:label xml:lang="en">VisibleObjects</rdfs:label>
+      <rdfs:range rdf:resource="#DiagramObject"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#VisibilityLayer.drawingOrder">
+      <cims:dataType rdf:resource="#Integer"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The drawing order for this layer.  The higher the number, the later the layer and the objects within it are rendered.</rdfs:comment>
+      <rdfs:domain rdf:resource="#VisibilityLayer"/>
+      <rdfs:label xml:lang="en">drawingOrder</rdfs:label>
+   </rdf:Description>
+</rdf:RDF>
