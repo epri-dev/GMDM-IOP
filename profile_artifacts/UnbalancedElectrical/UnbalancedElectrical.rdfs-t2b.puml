@@ -108,7 +108,7 @@ class ACLineSegment <<Description>>  {
 }
 
 Conductor <|-- ACLineSegment
-ACLineSegment "+ACLineSegments 0..*" --> "+PerLengthImpedance 0..1" PerLengthImpedance#red
+ACLineSegment "+ACLineSegments 0..*" --> "+PerLengthImpedance 0..1" PerLengthImpedance
 
 ' ACLineSegmentPhase inherits from PowerSystemResource
 class ACLineSegmentPhase <<Description>>  {
@@ -179,7 +179,7 @@ class EnergyConsumer <<Description>>  {
 }
 
 EnergyConnection <|-- EnergyConsumer
-EnergyConsumer "+EnergyConsumer 0..*" --> "+LoadResponse 0..1" LoadResponseCharacteristic#red
+EnergyConsumer "+EnergyConsumer 0..*" --> "+LoadResponse 0..1" LoadResponseCharacteristic
 
 ' EnergySource inherits from EnergyConnection
 class EnergySource <<Description>>  {
@@ -198,17 +198,16 @@ PowerSystemResource <|-- Equipment
 
 ' FossilFuel inherits from IdentifiedObject
 class FossilFuel   {
+   +fossilFuelType : FuelType [1]
 }
 
 IdentifiedObject <|-- FossilFuel
-FossilFuel " " --> "+fossilFuelType 1" FuelType#red : <<ShadowExtension,gmdm>>
 
 ' Enumeration FuelType
 enum FuelType <<ShadowExtension>><<gmdm>><<enumeration>><<Attribute>>  {
    brownCoalLignite
    coal
    coalDerivedGas
-   diesel
    gas
    hardCoal
    lignite
@@ -230,7 +229,7 @@ abstract class GeneratingUnit  <<abstract>> {
 }
 
 Equipment <|-- GeneratingUnit
-GeneratingUnit "+GeneratingUnit 0..1" --> "+RotatingMachine 1" RotatingMachine#red
+GeneratingUnit "+GeneratingUnit 0..1" --> "+RotatingMachine 1" RotatingMachine
 
 ' IdentifiedObject inherits from Identity
 abstract class IdentifiedObject  <<abstract>> {
@@ -339,7 +338,7 @@ class PhaseImpedanceData   {
 }
 
 Identity <|-- PhaseImpedanceData
-PhaseImpedanceData "+PhaseImpedanceData 0..*" --> "+PhaseImpedance 1" PerLengthPhaseImpedance#red
+PhaseImpedanceData "+PhaseImpedanceData 0..6" --> "+PhaseImpedance 1" PerLengthPhaseImpedance
 
 ' PhotoVoltaicUnit inherits from PowerElectronicsUnit
 class PhotoVoltaicUnit   {
@@ -348,15 +347,15 @@ class PhotoVoltaicUnit   {
 PowerElectronicsUnit <|-- PhotoVoltaicUnit
 
 ' PowerElectronicsConnection inherits from RegulatingCondEq
-class PowerElectronicsConnection <<Description>>  {
+abstract class PowerElectronicsConnection <<gmdm>><<ShadowExtension>> <<abstract>> {
+   +<<gmdm>> controlMode : ConverterControlModeKind [0..1]
    +maxQ : ReactivePower [0..1]
    +minQ : ReactivePower [0..1]
-   +ratedS : ApparentPower [0..1]
-   +ratedU : Voltage [0..1]
+   +ratedS : ApparentPower [1]
+   +ratedU : Voltage [1]
 }
 
 RegulatingCondEq <|-- PowerElectronicsConnection
-PowerElectronicsConnection " " --> "+controlMode 0..1" ConverterControlModeKind#red : <<gmdm>>
 
 ' PowerElectronicsThermalUnit inherits from PowerElectronicsUnit
 class PowerElectronicsThermalUnit   {
@@ -369,10 +368,10 @@ PowerElectronicsThermalUnit "+PowerElectronicsThermalUnit 0..*" --> "+FossilFuel
 abstract class PowerElectronicsUnit  <<abstract>> {
    +maxP : ActivePower [1]
    +minP : ActivePower [1]
+   PowerElectronicsConnection "+PowerElectronicsConnection 0..1" --> "+PowerElectronicsUnit 1..*" PowerElectronicsUnit#red
 }
 
 Equipment <|-- PowerElectronicsUnit
-PowerElectronicsUnit "+PowerElectronicsUnit 0..*" --> "+PowerElectronicsConnection 1" PowerElectronicsConnection#red
 
 ' PowerElectronicsWindUnit inherits from PowerElectronicsUnit
 class PowerElectronicsWindUnit   {
@@ -418,7 +417,7 @@ class RatioTapChanger <<gmdm>><<ShadowExtension>>  {
 }
 
 TapChanger <|-- RatioTapChanger
-RatioTapChanger "+RatioTapChanger 0..1" --> "+TransformerEnd 1" TransformerEnd#red
+RatioTapChanger "+RatioTapChanger 0..1" --> "+TransformerEnd 1" TransformerEnd
 
 ' Recloser inherits from ProtectedSwitch
 class Recloser <<Description>>  {
@@ -431,19 +430,19 @@ abstract class RegulatingCondEq  <<abstract>> {
 }
 
 EnergyConnection <|-- RegulatingCondEq
-RegulatingCondEq "+RegulatingCondEq 0..*" --> "+RegulatingControl 0..1" RegulatingControl#red
+RegulatingCondEq "+RegulatingCondEq 0..*" --> "+RegulatingControl 0..1" RegulatingControl
 
 ' RegulatingControl inherits from PowerSystemResource
 abstract class RegulatingControl  <<abstract>> {
    +discrete : boolean [1]
    +enabled : boolean [1]
+   +mode : RegulatingControlModeKind [0..1]
+   +monitoredPhase : PhaseCode [0..1]
    +targetDeadband : float [0..1]
    +targetValue : float [0..1]
 }
 
 PowerSystemResource <|-- RegulatingControl
-RegulatingControl " " --> "+mode 0..1" RegulatingControlModeKind#red
-RegulatingControl " " --> "+monitoredPhase 0..1" PhaseCode#red
 RegulatingControl "+RegulatingControl 0..*" --> "+Terminal 1" Terminal
 
 ' Enumeration RegulatingControlModeKind
@@ -510,9 +509,8 @@ class SynchronousMachine <<Description>>  {
 RotatingMachine <|-- SynchronousMachine
 
 ' TapChanger inherits from PowerSystemResource
-abstract class TapChanger  <<abstract>> {
+abstract class TapChanger <<ShadowExtension>><<gmdm>> <<abstract>> {
    +controlEnabled : boolean [1]
-   +ctRating : float [0..1]
    +ctRatio : float [0..1]
    +highStep : integer [1]
    +initialDelay : Seconds [0..1]
@@ -525,7 +523,7 @@ abstract class TapChanger  <<abstract>> {
 }
 
 PowerSystemResource <|-- TapChanger
-TapChanger "+TapChanger 0..*" --> "+TapChangerControl 0..1" TapChangerControl#red
+TapChanger "+TapChanger 0..*" --> "+TapChangerControl 1" TapChangerControl
 
 ' TapChangerControl inherits from RegulatingControl
 class TapChangerControl   {
@@ -575,20 +573,20 @@ abstract class TransformerEnd  <<abstract>> {
 }
 
 IdentifiedObject <|-- TransformerEnd
-TransformerEnd "+TransformerEnd 0..*" --> "+CoreAdmittance 0..1" TransformerCoreAdmittance#red
+TransformerEnd "+TransformerEnd 0..*" --> "+CoreAdmittance 0..1" TransformerCoreAdmittance
 
 ' TransformerMeshImpedance inherits from IdentifiedObject
 class TransformerMeshImpedance   {
    +r : Resistance [1]
    +x : Reactance [1]
-   TransformerEnd "+FromTransformerEnd 0..1" --> "+FromMeshImpedance 1..*" TransformerMeshImpedance#red
 }
 
 IdentifiedObject <|-- TransformerMeshImpedance
-TransformerMeshImpedance "+ToMeshImpedance 0..*" --> "+ToTransformerEnd 0..*" TransformerEnd#red
+TransformerMeshImpedance "+FromMeshImpedance 0..*" --> "+FromTransformerEnd 0..1" TransformerEnd
+TransformerMeshImpedance "+ToMeshImpedance 0..*" --> "+ToTransformerEnd 0..*" TransformerEnd
 
 ' TransformerTankEnd inherits from TransformerEnd
-class TransformerTankEnd <<Description>>  {
+class TransformerTankEnd <<ShadowExtension>><<gmdm>><<Description>>  {
 }
 
 TransformerEnd <|-- TransformerTankEnd

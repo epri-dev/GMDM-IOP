@@ -181,12 +181,6 @@ class Fuse <<Description>>  {
 
 Switch <|-- Fuse
 
-' GeometricElement inherits from Identity
-abstract class GeometricElement  <<abstract>> {
-}
-
-Identity <|-- GeometricElement
-
 ' IdentifiedObject inherits from Identity
 abstract class IdentifiedObject  <<abstract>> {
    +description : string [0..1]
@@ -220,15 +214,15 @@ class Location   {
 IdentifiedObject <|-- Location
 Location "+Location 0..*" --> "+CoordinateSystem 0..1" CoordinateSystem
 
-' PositionPoint inherits from GeometricElement
-class PositionPoint <<ShadowExtension>>  {
-   +sequenceNumber : integer [0..1]
+' PositionPoint inherits from Identity
+class PositionPoint   {
+   +sequenceNumber : integer [1]
    +xPosition : string [1]
    +yPosition : string [1]
    +zPosition : string [0..1]
 }
 
-GeometricElement <|-- PositionPoint
+Identity <|-- PositionPoint
 PositionPoint "+PositionPoints 0..*" --> "+Location 1" Location
 
 ' PowerElectronicsConnection inherits from RegulatingCondEq
