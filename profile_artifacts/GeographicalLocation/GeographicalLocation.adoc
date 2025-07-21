@@ -12,7 +12,7 @@
 Profile namespace: http://www.ucaiug.org/gmdm/geographical_location#
 
 .GeographicalLocation Profile
-GeographicalLocation.svg[format=svg, align=center]
+plantuml::./Profiles/GeographicalLocation.rdfs-t2b.puml[format=svg, align=center]
 
 
 === Concrete Classes
@@ -491,7 +491,7 @@ Coordinate system used to describe position points of this location.
 [[GeographicalLocation-PositionPoint]]
 ==== PositionPoint
 
-Inheritance path = <<GeographicalLocation-GeometricElement,GeometricElement>> => <<GeographicalLocation-Identity,Identity>>
+Inheritance path = <<GeographicalLocation-Identity,Identity>>
 
 :PositionPoint:
 Set of spatial coordinates that determine a point, defined in the coordinate system specified in 'Location.CoordinateSystem'. Use a single position point instance to describe a point-oriented location. Use a sequence of position points to describe a line-oriented object (physical location of non-point oriented objects like cables or lines), or area of an object (like a substation or a geographical zone - in this case, have first and last position point with the same values).
@@ -503,7 +503,7 @@ Set of spatial coordinates that determine a point, defined in the coordinate sys
 |===
 |name |mult |type |description
 |[extension]#sequenceNumber#
-|0..1
+|1..1
 |<<GeographicalLocation-Integer,Integer>>
 |
 |xPosition
@@ -937,27 +937,6 @@ The parts of a power system that are physical devices, electronic or mechanical.
 |see <<GeographicalLocation-Identity,Identity>>
 |===
 :!Equipment:
-
-[[GeographicalLocation-GeometricElement]]
-==== GeometricElement
-
-Inheritance path = <<GeographicalLocation-Identity,Identity>>
-
-:GeometricElement:
-Exists solely as the parent of the separate geometry types (Point, Line, Circle, Polygon) in order to create an xsd Choice between the types.
-
-
-*Inherited Members*
-
-[%header,width="100%",cols="25%,^10%,20%,45%a"]
-|===
-|name |mult |type |description
-|identifier
-|1..1
-|<<GeographicalLocation-String,String>>
-|see <<GeographicalLocation-Identity,Identity>>
-|===
-:!GeometricElement:
 
 [[GeographicalLocation-IdentifiedObject]]
 ==== IdentifiedObject

@@ -112,10 +112,10 @@ Conductor <|-- ACLineSegment
 
 ' ACLineSegmentPhase inherits from PowerSystemResource
 class ACLineSegmentPhase   {
+   +phase : SinglePhaseKind [1]
 }
 
 PowerSystemResource <|-- ACLineSegmentPhase
-ACLineSegmentPhase " " --> "+phase 1" SinglePhaseKind#red
 ACLineSegmentPhase "+ACLineSegmentPhases 0..4" --> "+ACLineSegment 0..1" ACLineSegment
 
 ' AsynchronousMachine inherits from RotatingMachine
@@ -148,7 +148,7 @@ abstract class ConductingEquipment  <<abstract>> {
 }
 
 Equipment <|-- ConductingEquipment
-ConductingEquipment "+ConductingEquipment 0..*" --> "+BaseVoltage 1" BaseVoltage#red
+ConductingEquipment "+ConductingEquipment 0..*" --> "+BaseVoltage 1" BaseVoltage
 
 ' Conductor inherits from ConductingEquipment
 abstract class Conductor  <<abstract>> {
@@ -190,17 +190,17 @@ ConductingEquipment <|-- EnergyConnection
 class EnergyConsumer   {
    +customerCount : integer [0..1]
    +grounded : boolean [0..1]
+   +phaseConnection : PhaseShuntConnectionKind [1]
 }
 
 EnergyConnection <|-- EnergyConsumer
-EnergyConsumer " " --> "+phaseConnection 1" PhaseShuntConnectionKind#red
 
 ' EnergyConsumerPhase inherits from PowerSystemResource
 class EnergyConsumerPhase   {
+   +phase : SinglePhaseKind [1]
 }
 
 PowerSystemResource <|-- EnergyConsumerPhase
-EnergyConsumerPhase " " --> "+phase 1" SinglePhaseKind#red
 EnergyConsumerPhase "+EnergyConsumerPhase 0..3" --> "+EnergyConsumer 1" EnergyConsumer
 
 ' EnergySource inherits from EnergyConnection
@@ -216,8 +216,8 @@ abstract class Equipment  <<abstract>> {
 }
 
 PowerSystemResource <|-- Equipment
-Equipment "+AdditionalGroupedEquipment 0..*" --> "+AdditionalEquipmentContainer 0..1" EquipmentContainer#red
-Equipment "+Equipments 0..*" --> "+EquipmentContainer 1" EquipmentContainer#red
+Equipment "+AdditionalGroupedEquipment 0..*" --> "+AdditionalEquipmentContainer 0..*" EquipmentContainer
+Equipment "+Equipments 0..*" --> "+EquipmentContainer 1" EquipmentContainer
 
 ' EquipmentContainer inherits from ConnectivityNodeContainer
 abstract class EquipmentContainer  <<abstract>> {
@@ -230,7 +230,7 @@ class Feeder   {
 }
 
 EquipmentContainer <|-- Feeder
-Feeder "+NormalEnergizedFeeder 0..*" --o "+NormalEnergizingSubstation 1" Substation#red
+Feeder "+NormalEnergizedFeeder 0..*" --o "+NormalEnergizingSubstation 1" Substation
 
 ' Fuse inherits from Switch
 class Fuse   {
@@ -318,10 +318,10 @@ RegulatingCondEq <|-- PowerElectronicsConnection
 
 ' PowerElectronicsConnectionPhase inherits from PowerSystemResource
 class PowerElectronicsConnectionPhase   {
+   +phase : SinglePhaseKind [1]
 }
 
 PowerSystemResource <|-- PowerElectronicsConnectionPhase
-PowerElectronicsConnectionPhase " " --> "+phase 1" SinglePhaseKind#red
 PowerElectronicsConnectionPhase "+PowerElectronicsConnectionPhase 0..3" --> "+PowerElectronicsConnection 1" PowerElectronicsConnection
 
 ' PowerSystemResource inherits from IdentifiedObject
@@ -339,10 +339,10 @@ ConductingEquipment <|-- PowerTransformer
 
 ' PowerTransformerEnd inherits from TransformerEnd
 class PowerTransformerEnd   {
+   +connectionKind : WindingConnection [0..1]
 }
 
 TransformerEnd <|-- PowerTransformerEnd
-PowerTransformerEnd " " --> "+connectionKind 0..1" WindingConnection#red
 PowerTransformerEnd "+PowerTransformerEnd 1..3" --> "+PowerTransformer 1" PowerTransformer
 
 ' ProtectedSwitch inherits from Switch
@@ -384,17 +384,17 @@ ConductingEquipment <|-- SeriesCompensator
 ' ShuntCompensator inherits from RegulatingCondEq
 abstract class ShuntCompensator  <<abstract>> {
    +grounded : boolean [0..1]
+   +phaseConnection : PhaseShuntConnectionKind [0..1]
 }
 
 RegulatingCondEq <|-- ShuntCompensator
-ShuntCompensator " " --> "+phaseConnection 0..1" PhaseShuntConnectionKind#red
 
 ' ShuntCompensatorPhase inherits from PowerSystemResource
 abstract class ShuntCompensatorPhase  <<abstract>> {
+   +phase : SinglePhaseKind [1]
 }
 
 PowerSystemResource <|-- ShuntCompensatorPhase
-ShuntCompensatorPhase " " --> "+phase 1" SinglePhaseKind#red
 ShuntCompensatorPhase "+ShuntCompensatorPhase 0..3" --> "+ShuntCompensator 1" ShuntCompensator
 
 ' Enumeration SinglePhaseKind
@@ -424,11 +424,11 @@ ConductingEquipment <|-- Switch
 ' SwitchPhase inherits from PowerSystemResource
 class SwitchPhase   {
    +normalOpen : boolean [0..1]
+   +phaseSide1 : SinglePhaseKind [1]
+   +phaseSide2 : SinglePhaseKind [1]
 }
 
 PowerSystemResource <|-- SwitchPhase
-SwitchPhase " " --> "+phaseSide1 1" SinglePhaseKind#red
-SwitchPhase " " --> "+phaseSide2 1" SinglePhaseKind#red
 SwitchPhase "+SwitchPhase 0..3" --> "+Switch 1" Switch
 
 ' SynchronousMachine inherits from RotatingMachine
@@ -442,9 +442,9 @@ class Terminal   {
 }
 
 ACDCTerminal <|-- Terminal
-Terminal "+Terminals 0..*" --> "+ConductingEquipment 1" ConductingEquipment#red
-Terminal "+Terminals 0..*" --> "+ConnectivityNode 1" ConnectivityNode#red
-Terminal "+NormalHeadTerminal 0..*" --> "+NormalHeadFeeder 0..1" Feeder#red
+Terminal "+Terminals 0..*" --> "+ConductingEquipment 0..1" ConductingEquipment
+Terminal "+Terminals 0..*" --> "+ConnectivityNode 0..1" ConnectivityNode
+Terminal "+NormalHeadTerminal 0..*" --> "+NormalHeadFeeder 0..1" Feeder
 
 ' TransformerEnd inherits from IdentifiedObject
 abstract class TransformerEnd  <<abstract>> {
@@ -453,7 +453,7 @@ abstract class TransformerEnd  <<abstract>> {
 }
 
 IdentifiedObject <|-- TransformerEnd
-TransformerEnd "+TransformerEnds 0..*" --> "+BaseVoltage 1" BaseVoltage#red
+TransformerEnd "+TransformerEnds 0..*" --> "+BaseVoltage 1" BaseVoltage
 
 ' TransformerTank inherits from Equipment
 class TransformerTank   {
@@ -464,10 +464,10 @@ TransformerTank "+TransformerTanks 0..3" --> "+PowerTransformer 1" PowerTransfor
 
 ' TransformerTankEnd inherits from TransformerEnd
 class TransformerTankEnd   {
+   +<<gmdm>> orderedPhases : OrderedPhaseCodeKind [0..1]
 }
 
 TransformerEnd <|-- TransformerTankEnd
-TransformerTankEnd " " --> "+orderedPhases 1" OrderedPhaseCodeKind#red : <<gmdm>>
 TransformerTankEnd "+TransformerTankEnds 1..3" --> "+TransformerTank 1" TransformerTank
 
 ' VoltageLevel inherits from EquipmentContainer
@@ -475,8 +475,8 @@ class VoltageLevel   {
 }
 
 EquipmentContainer <|-- VoltageLevel
-VoltageLevel "+VoltageLevel 0..*" --> "+BaseVoltage 1" BaseVoltage#red
-VoltageLevel "+VoltageLevels 0..*" --o "+Substation 1" Substation#red
+VoltageLevel "+VoltageLevel 0..*" --> "+BaseVoltage 1" BaseVoltage
+VoltageLevel "+VoltageLevels 0..*" --o "+Substation 1" Substation
 
 ' Enumeration WindingConnection
 enum WindingConnection <<enumeration>><<Attribute>>  {

@@ -165,13 +165,6 @@ EnergyConsumer.pfixed, .qfixed, .pfixedPct and .qfixedPct have meaning only if t
       <rdfs:label xml:lang="en">Fuse</rdfs:label>
       <rdfs:subClassOf rdf:resource="#Switch"/>
    </rdf:Description>
-   <rdf:Description rdf:about="#GeometricElement">
-      <cims:belongsToCategory rdf:resource="#Package_Common"/>
-      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exists solely as the parent of the separate geometry types (Point, Line, Circle, Polygon) in order to create an xsd Choice between the types.</rdfs:comment>
-      <rdfs:label xml:lang="en">GeometricElement</rdfs:label>
-      <rdfs:subClassOf rdf:resource="#Identity"/>
-   </rdf:Description>
    <rdf:Description rdf:about="#IdentifiedObject">
       <cims:belongsToCategory rdf:resource="#Package_Core"/>
       <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
@@ -357,10 +350,10 @@ WG14 does not generate documentation for this informative portion of the model.<
    <rdf:Description rdf:about="#PositionPoint">
       <cims:belongsToCategory rdf:resource="#Package_Common"/>
       <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
-      <cims:stereotype>ShadowExtension</cims:stereotype>
       <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Set of spatial coordinates that determine a point, defined in the coordinate system specified in 'Location.CoordinateSystem'. Use a single position point instance to describe a point-oriented location. Use a sequence of position points to describe a line-oriented object (physical location of non-point oriented objects like cables or lines), or area of an object (like a substation or a geographical zone - in this case, have first and last position point with the same values).</rdfs:comment>
       <rdfs:label xml:lang="en">PositionPoint</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#Identity"/>
    </rdf:Description>
    <rdf:Description rdf:about="#PositionPoint.xPosition">
       <cims:dataType rdf:resource="#String"/>
@@ -525,7 +518,7 @@ The inherited association ConductingEquipment.BaseVoltage should not be used. Th
    </rdf:Description>
    <rdf:Description rdf:about="http://epri.com/gmdm#PositionPoint.sequenceNumber">
       <cims:dataType rdf:resource="#Integer"/>
-      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..1"/>
       <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
       <rdfs:domain rdf:resource="#PositionPoint"/>
