@@ -1,0 +1,31 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix cim: <http://iec.ch/TC57/CIM100#> .
+@prefix gmdm: <http://gridappsd.org/data-model#> .
+@prefix ex: <http://gridappsd.org/export#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# ==============================================================================
+# UsagePoint Permissions - Root objects we want to start with
+# ==============================================================================
+ex:UsagePointShape
+    a sh:NodeShape ;
+    sh:targetClass cim:UsagePoint ;
+    sh:property [
+        sh:path cim:IdentifiedObject.name ;
+        ex:exportAllowed true ;
+    ] ;
+    sh:property [
+        sh:path cim:Identity.identifier ;
+        ex:exportAllowed true ;
+    ] ;
+    sh:property [
+        sh:path cim:UsagePoint.phaseCode ;
+        ex:exportAllowed true ;
+    ] ;
+    sh:property [
+        sh:path gmdm:UsagePoint.Terminal ;
+        ex:exportAllowed true ;
+        ex:traverseAllowed true ;
+        ex:maxTraversalDepth 1 ;
+    ] .
+
