@@ -1,0 +1,1481 @@
+<?xml version="1.0"?>
+<!-- 
+
+	Copyright 2025 UCAIug
+
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+
+	https://www.apache.org/licenses/LICENSE-2.0
+
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+-->
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns="https://ucaiug.org/2023/MarketDER#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:msg="http://langdale.com.au/2005/Message#"
+    xmlns:uml="http://langdale.com.au/2005/UML#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xml:base="https://ucaiug.org/2023/MarketDER" > 
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7e78">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7e79">
+    <rdf:first rdf:resource="#ResourceCertificationKind"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7e7b">
+    <rdf:first rdf:resource="#MarketType"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7e80">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7e81"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#ResourceCertification.type"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7e81">
+    <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#enumeration"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>type</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#ResourceCertificationKind"/>
+    <owl:unionOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7e79"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7e86">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7e87"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#ResourceCertification.market"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7e87">
+    <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#enumeration"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>market</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#MarketType"/>
+    <owl:unionOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7e7b"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7e88">
+    <rdf:first rdf:resource="#ResourceCertification"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7e8a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7e8b"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#RegisteredResource.ResourceCertification"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7e8b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>ResourceCertification</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#ResourceCertification"/>
+    <owl:unionOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7e88"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ecb">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#CoordinateSystem.crsUrn"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ecc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ecd"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#CoordinateSystem.crsUrn"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ecd">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>crsUrn</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ece">
+    <rdf:first rdf:resource="#CoordinateSystem"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ed0">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ed1"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#Document.type"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ed1">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>type</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ed3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ed4"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#Document.title"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ed4">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>title</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ed6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ed7"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#Document.subject"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ed7">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>subject</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ed9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7eda"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#Document.revisionNumber"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7eda">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>revisionNumber</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7edc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7edd"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#Document.createdDateTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7edd">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>createdDateTime</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7edf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ee0"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#Document.comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ee0">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>comment</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ee1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#DateTimeInterval.start"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ee2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ee3"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#DateTimeInterval.start"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ee3">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>start</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ee4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#DateTimeInterval.end"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ee5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ee6"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#DateTimeInterval.end"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ee6">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>end</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ee7">
+    <rdf:first rdf:resource="#DateTimeInterval"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ee8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#Agreement.validityInterval"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ee9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7eea"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#Agreement.validityInterval"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7eea">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>validityInterval</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#DateTimeInterval"/>
+    <owl:unionOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ee7"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7eec">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7eed"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#Agreement.signDate"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7eed">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>signDate</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ef7">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ef8"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#RegisteredDistributedResource.distributedResourceType"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ef8">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>distributedResourceType</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ef9">
+    <rdf:first rdf:resource="#IndividualPnode"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7efb">
+    <rdf:first rdf:resource="#ResourceRegistrationStatus"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7efc">
+    <rdf:first rdf:resource="#YesNo"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7efd">
+    <rdf:first rdf:resource="#Status"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7efe">
+    <rdf:first rdf:resource="#StreetAddress"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f02">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#PositionPoint.yPosition"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f03">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f04"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#PositionPoint.yPosition"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f04">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>yPosition</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f05">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#PositionPoint.xPosition"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f06">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f07"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#PositionPoint.xPosition"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f07">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>xPosition</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f0e">
+    <rdf:first rdf:resource="#PositionPoint"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f10">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f11"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#TelephoneNumber.localNumber"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f11">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>localNumber</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f13">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f14"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#TelephoneNumber.ituPhone"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f14">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>ituPhone</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f16">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f17"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#TelephoneNumber.internationalPrefix"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f17">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>internationalPrefix</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f19">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f1a"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#TelephoneNumber.extension"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f1a">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>extension</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f1c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f1d"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#TelephoneNumber.dialOut"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f1d">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>dialOut</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f1f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f20"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#TelephoneNumber.countryCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f20">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>countryCode</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f22">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f23"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#TelephoneNumber.cityCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f23">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>cityCode</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f25">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f26"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#TelephoneNumber.areaCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f26">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>areaCode</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f27">
+    <rdf:first rdf:resource="#TelephoneNumber"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f29">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f2a"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#Status.value"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f2a">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>value</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f2c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f2d"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#Status.remark"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f2d">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>remark</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f2f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f30"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#Status.reason"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f30">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>reason</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f32">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f33"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#Status.dateTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f33">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>dateTime</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f34">
+    <rdf:first rdf:resource="#Status"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f36">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f37"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#TownDetail.stateOrProvince"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f37">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>stateOrProvince</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f39">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f3a"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#TownDetail.section"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f3a">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>section</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f3c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f3d"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#TownDetail.name"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f3d">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>name</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f3f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f40"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#TownDetail.country"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f40">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>country</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f42">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f43"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#TownDetail.code"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f43">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>code</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f44">
+    <rdf:first rdf:resource="#TownDetail"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f46">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f47"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#StreetDetail.withinTownLimits"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f47">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>withinTownLimits</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f49">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f4a"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#StreetDetail.type"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f4a">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>type</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f4c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f4d"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#StreetDetail.suiteNumber"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f4d">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>suiteNumber</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f4f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f50"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#StreetDetail.suffix"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f50">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>suffix</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f52">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f53"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#StreetDetail.prefix"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f53">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>prefix</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f55">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f56"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#StreetDetail.number"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f56">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>number</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f58">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f59"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#StreetDetail.name"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f59">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>name</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f5b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f5c"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#StreetDetail.code"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f5c">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>code</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f5e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f5f"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#StreetDetail.buildingName"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f5f">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>buildingName</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f60">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#StreetDetail.addressGeneral"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f61">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f62"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#StreetDetail.addressGeneral"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f62">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>addressGeneral</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f64">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f65"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#StreetDetail.addressGeneral3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f65">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>addressGeneral3</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f67">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f68"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#StreetDetail.addressGeneral2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f68">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>addressGeneral2</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f69">
+    <rdf:first rdf:resource="#StreetDetail"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f6a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#StreetAddress.townDetail"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f6b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f6c"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#StreetAddress.townDetail"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f6c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>townDetail</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#TownDetail"/>
+    <owl:unionOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f44"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f6d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#StreetAddress.streetDetail"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f6e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f6f"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#StreetAddress.streetDetail"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f6f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>streetDetail</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#StreetDetail"/>
+    <owl:unionOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f69"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f71">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f72"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#StreetAddress.status"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f72">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>status</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#Status"/>
+    <owl:unionOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f34"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f74">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f75"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#StreetAddress.postalCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f75">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>postalCode</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f77">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f78"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#StreetAddress.poBox"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f78">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>poBox</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f79">
+    <rdf:first rdf:resource="#StreetAddress"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f7b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f7c"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#ElectronicAddress.email2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f7c">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>email2</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f7d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#ElectronicAddress.email1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f7e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f7f"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#ElectronicAddress.email1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f7f">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>email1</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f80">
+    <rdf:first rdf:resource="#ElectronicAddress"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f82">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f83"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#Location.type"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f83">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>type</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f85">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f86"/>
+    <owl:onProperty rdf:resource="http://epri.com/gmdm#Location.status"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f86">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>status</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#Status"/>
+    <owl:unionOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7efd"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f88">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f89"/>
+    <owl:onProperty rdf:resource="http://epri.com/gmdm#Location.secondaryAddress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f89">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>secondaryAddress</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#StreetAddress"/>
+    <owl:unionOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7efe"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f8b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f8c"/>
+    <owl:onProperty rdf:resource="http://epri.com/gmdm#Location.PositionPoints"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f8c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>PositionPoints</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#PositionPoint"/>
+    <owl:unionOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f0e"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f8d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://epri.com/gmdm#Location.phone1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f8e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f8f"/>
+    <owl:onProperty rdf:resource="http://epri.com/gmdm#Location.phone1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f8f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>phone1</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#TelephoneNumber"/>
+    <owl:unionOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f27"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f90">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://epri.com/gmdm#Location.mainAddress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f91">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f92"/>
+    <owl:onProperty rdf:resource="http://epri.com/gmdm#Location.mainAddress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f92">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>mainAddress</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#StreetAddress"/>
+    <owl:unionOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f79"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f94">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f95"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#Location.CoordinateSystem"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f95">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>CoordinateSystem</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#CoordinateSystem"/>
+    <owl:unionOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ece"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f97">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f98"/>
+    <owl:onProperty rdf:resource="http://epri.com/gmdm#Location.electronicAddress"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f98">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>electronicAddress</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#ElectronicAddress"/>
+    <owl:unionOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f80"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f99">
+    <rdf:first rdf:resource="#Location"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f9d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#IdentifiedObject.mRID"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f9e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f9f"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#IdentifiedObject.mRID"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f9f">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>mRID</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7fa1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7fa2"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#IdentifiedObject.description"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7fa2">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>description</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7fa4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7fa5"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#PowerSystemResource.Location"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7fa5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Location</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#Location"/>
+    <owl:unionOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f99"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7fa7">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7fa8"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#RegisteredResource.Pnode"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7fa8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Pnode</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#Pnode"/>
+    <owl:unionOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ef9"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7fad">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7fae"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#RegisteredResource.registrationStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7fae">
+    <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#enumeration"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>registrationStatus</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#ResourceRegistrationStatus"/>
+    <owl:unionOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7efb"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7faf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#RegisteredResource.isAggregatedRes"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7fb0">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7fb1"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#RegisteredResource.isAggregatedRes"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7fb1">
+    <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#enumeration"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>isAggregatedRes</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#YesNo"/>
+    <owl:unionOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7efc"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X53X9029897Xa3X190a31f464bXa3X-7ffe">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X53X9029897Xa3X190a31f464bXa3X-7fff"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#ResourceCertification.isCertified"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X53X9029897Xa3X190a31f464bXa3X-7fff">
+    <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#attribute"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>isCertified</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X63X17c1402Xa3X19842624d4fXa3X-7f82">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X63X17c1402Xa3X19842624d4fXa3X-7f83"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#IdentifiedObject.name"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X63X17c1402Xa3X19842624d4fXa3X-7f83">
+    <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#attribute"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>name</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X63X17c1402Xa3X19842624d4fXa3X-7fbc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X63X17c1402Xa3X19842624d4fXa3X-7fbd"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#RegisteredDistributedResource.maximumResponseTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X63X17c1402Xa3X19842624d4fXa3X-7fbd">
+    <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#attribute"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>maximumResponseTime</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://cim.ucaiug.io/ns#Seconds"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X20c8988eXa3X17f09c1ced6Xa3X-7681">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#IdentifiedObject.mRID"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X20c8988eXa3X17f09c1ced6Xa3X-7682">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X20c8988eXa3X17f09c1ced6Xa3X-7683"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#IdentifiedObject.mRID"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X20c8988eXa3X17f09c1ced6Xa3X-7683">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>mRID</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X41866468Xa3X17fb7688eafXa3X-7ffc">
+    <rdf:first rdf:nodeID="Xd2X41866468Xa3X17fb7688eafXa3X-7ffd"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X41866468Xa3X17fb7688eafXa3X-7ffd">
+    <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#enumeration"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>UnitSymbol</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#UnitSymbol"/>
+    <owl:oneOf rdf:nodeID="Xd2X71fbc4c5Xa3X1984259ae31Xa3X-7f3f"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6e449d43Xa3X179cd59ce17Xa3X-7fe6">
+    <rdf:first rdf:resource="#ResourceCapacityType"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6e449d43Xa3X179cd59ce17Xa3X-7fe8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X6e449d43Xa3X179cd59ce17Xa3X-7fe9"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#ResourceCapacity.unitSymbol"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6e449d43Xa3X179cd59ce17Xa3X-7fe9">
+    <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#enumeration"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>unitSymbol</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#UnitSymbol"/>
+    <owl:unionOf rdf:nodeID="Xd2X41866468Xa3X17fb7688eafXa3X-7ffc"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6e449d43Xa3X179cd59ce17Xa3X-7feb">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X6e449d43Xa3X179cd59ce17Xa3X-7fec"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#ResourceCapacity.minimumCapacity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6e449d43Xa3X179cd59ce17Xa3X-7fec">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>minimumCapacity</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6e449d43Xa3X179cd59ce17Xa3X-7fee">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X6e449d43Xa3X179cd59ce17Xa3X-7fef"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#ResourceCapacity.maximumCapacity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6e449d43Xa3X179cd59ce17Xa3X-7fef">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>maximumCapacity</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6e449d43Xa3X179cd59ce17Xa3X-7ff1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X6e449d43Xa3X179cd59ce17Xa3X-7ff2"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#ResourceCapacity.defaultCapacity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6e449d43Xa3X179cd59ce17Xa3X-7ff2">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>defaultCapacity</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6e449d43Xa3X179cd59ce17Xa3X-7ff4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X6e449d43Xa3X179cd59ce17Xa3X-7ff5"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#ResourceCapacity.capacityType"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6e449d43Xa3X179cd59ce17Xa3X-7ff5">
+    <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#enumeration"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>capacityType</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#ResourceCapacityType"/>
+    <owl:unionOf rdf:nodeID="Xd2X6e449d43Xa3X179cd59ce17Xa3X-7fe6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6e449d43Xa3X179cd59ce17Xa3X-7ff6">
+    <rdf:first rdf:resource="#ResourceCapacity"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6e449d43Xa3X179cd59ce17Xa3X-7ff8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X6e449d43Xa3X179cd59ce17Xa3X-7ff9"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#RegisteredResource.ResourceCapacity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X6e449d43Xa3X179cd59ce17Xa3X-7ff9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>ResourceCapacity</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#ResourceCapacity"/>
+    <owl:unionOf rdf:nodeID="Xd2X6e449d43Xa3X179cd59ce17Xa3X-7ff6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X71fbc4c5Xa3X1984259ae31Xa3X-7ed2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X71fbc4c5Xa3X1984259ae31Xa3X-7ed3"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#RegisteredDistributedResource.energyUpRampRate"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X71fbc4c5Xa3X1984259ae31Xa3X-7ed3">
+    <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#attribute"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>energyUpRampRate</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://cim.ucaiug.io/ns#ActivePowerChangeRate"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X71fbc4c5Xa3X1984259ae31Xa3X-7ed4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X71fbc4c5Xa3X1984259ae31Xa3X-7ed5"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#RegisteredDistributedResource.energyDownRampRate"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X71fbc4c5Xa3X1984259ae31Xa3X-7ed5">
+    <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#attribute"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>energyDownRampRate</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://cim.ucaiug.io/ns#ActivePowerChangeRate"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X71fbc4c5Xa3X1984259ae31Xa3X-7f3b">
+    <rdf:first rdf:resource="http://cim.ucaiug.io/ns#UnitSymbol.WPers"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X71fbc4c5Xa3X1984259ae31Xa3X-7f3c">
+    <rdf:first rdf:resource="http://cim.ucaiug.io/ns#UnitSymbol.S"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X71fbc4c5Xa3X1984259ae31Xa3X-7f3d">
+    <rdf:first rdf:resource="http://cim.ucaiug.io/ns#UnitSymbol.S"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X71fbc4c5Xa3X1984259ae31Xa3X-7f3f">
+    <rdf:first rdf:resource="http://cim.ucaiug.io/ns#UnitSymbol.W"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-4255">
+    <rdf:first rdf:resource="#UnitMultiplier"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-4257">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-4258"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#ResourceCapacity.unitMultiplier"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-4258">
+    <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#enumeration"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>unitMultiplier</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#UnitMultiplier"/>
+    <owl:unionOf rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-4255"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-55eb">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>UnitSymbol</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#UnitSymbol"/>
+    <owl:oneOf rdf:nodeID="Xd2X71fbc4c5Xa3X1984259ae31Xa3X-7f3d"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-55f8">
+    <rdf:first rdf:resource="#RegisteredResource1"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-55fc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-55fd"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#RegisteredResource.AggregatedRegisteredResource"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-55fd">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>AggregatedRegisteredResource</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#RegisteredResource"/>
+    <owl:unionOf rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-55f8"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-5605">
+    <rdf:first rdf:resource="#ContractResourceCertificationAgreement"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-5607">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-5608"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#ResourceCertification.ContractResourceCertificationAgreement"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-5608">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>ContractResourceCertificationAgreement</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#ContractResourceCertificationAgreement"/>
+    <owl:unionOf rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-5605"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69a0">
+    <rdf:first rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69a1"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69a1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>UnitSymbol</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#UnitSymbol"/>
+    <owl:oneOf rdf:nodeID="Xd2X71fbc4c5Xa3X1984259ae31Xa3X-7f3c"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69a3">
+    <rdf:first rdf:resource="#UnitMultiplier"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69a4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="https://ucaiug.org/CIM101#Seconds.value"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69a5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69a6"/>
+    <owl:onProperty rdf:resource="https://ucaiug.org/CIM101#Seconds.value"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69a6">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>value</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69a7">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="https://ucaiug.org/CIM101#Seconds.unit"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69a8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69a9"/>
+    <owl:onProperty rdf:resource="https://ucaiug.org/CIM101#Seconds.unit"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69a9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>unit</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#UnitSymbol"/>
+    <owl:unionOf rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69a0"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69aa">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="https://ucaiug.org/CIM101#Seconds.multiplier"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69ab">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69ac"/>
+    <owl:onProperty rdf:resource="https://ucaiug.org/CIM101#Seconds.multiplier"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69ac">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>multiplier</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#UnitMultiplier"/>
+    <owl:unionOf rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69a3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69ae">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Seconds</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69a4"/>
+    <rdfs:subClassOf rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69a5"/>
+    <rdfs:subClassOf rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69a7"/>
+    <rdfs:subClassOf rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69a8"/>
+    <rdfs:subClassOf rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69aa"/>
+    <rdfs:subClassOf rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69ab"/>
+    <rdfs:subClassOf rdf:resource="https://ucaiug.org/CIM101#Seconds"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69af">
+    <rdf:first rdf:resource="#UnitSymbol"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69b6">
+    <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#enumeration"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>unit</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#UnitSymbol"/>
+    <owl:unionOf rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69af"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69bb">
+    <rdf:first rdf:resource="#UnitMultiplier"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69be">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>value</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69c4">
+    <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#enumeration"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>multiplier</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#UnitMultiplier"/>
+    <owl:unionOf rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69bb"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69c5">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69c6">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69c7">
+    <rdf:first rdf:resource="#PriorityKind"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69d2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69d3"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/ns#RegisteredDistributedResource.loadCriticality"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69d3">
+    <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#enumeration"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>loadCriticality</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#PriorityKind"/>
+    <owl:unionOf rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69c7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://langdale.com.au/2007/Buildlet#draft-07.schema.json">
+    <rdf:type rdf:resource="http://langdale.com.au/2005/Message#Flag"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://langdale.com.au/2007/Buildlet#draft-2020-12.schema.json">
+    <rdf:type rdf:resource="http://langdale.com.au/2005/Message#Flag"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://langdale.com.au/2007/Buildlet#rdfs-t2b.puml">
+    <rdf:type rdf:resource="http://langdale.com.au/2005/Message#Flag"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://langdale.com.au/2007/Buildlet#xsd">
+    <rdf:type rdf:resource="http://langdale.com.au/2005/Message#Flag"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:comment xml:space="preserve">V1.2: 2024 Updates to ResourceCertification (removed qualificationFlag, added isCertified); ResourceRegistrationStatus enum value changed from InActive to Inactive&#xD;
+V1.1: 2024 Generation with latest UML&#xD;
+V1: 2023 Initial Creation</rdfs:comment>
+    <rdfs:label>MarketDER</rdfs:label>
+    <owl:imports rdf:resource="http://iec.ch/TC57/CIM-generic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Agreement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ee8"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ee9"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7eec"/>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#Agreement"/>
+    <rdfs:subClassOf rdf:resource="#Document"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#ContractResourceCertificationAgreement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#ContractResourceCertificationAgreement"/>
+    <rdfs:subClassOf rdf:resource="#Agreement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#CoordinateSystem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ecb"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ecc"/>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#CoordinateSystem"/>
+    <rdfs:subClassOf rdf:resource="#IdentifiedObject1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#DateTimeInterval">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ee1"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ee2"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ee4"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ee5"/>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#DateTimeInterval"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Document">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ed0"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ed3"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ed6"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ed9"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7edc"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7edf"/>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#Document"/>
+    <rdfs:subClassOf rdf:resource="#IdentifiedObject1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#ElectronicAddress">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f7b"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f7d"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f7e"/>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#ElectronicAddress"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#IdentifiedObject">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f9d"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f9e"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7fa1"/>
+    <rdfs:subClassOf rdf:nodeID="X63X17c1402Xa3X19842624d4fXa3X-7f82"/>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#IdentifiedObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#IdentifiedObject1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:space="preserve"></rdfs:comment>
+    <rdfs:label>mRID_IdentifiedObject</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="Xd2X20c8988eXa3X17f09c1ced6Xa3X-7681"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X20c8988eXa3X17f09c1ced6Xa3X-7682"/>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#IdentifiedObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#IndividualPnode">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#IndividualPnode"/>
+    <rdfs:subClassOf rdf:resource="#Pnode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Location">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f82"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f85"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f88"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f8b"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f8d"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f8e"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f90"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f91"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f94"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f97"/>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#Location"/>
+    <rdfs:subClassOf rdf:resource="#IdentifiedObject1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#MarketType">
+    <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#enumeration"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#MarketType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Pnode">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#Pnode"/>
+    <rdfs:subClassOf rdf:resource="#IdentifiedObject1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#PositionPoint">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f02"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f03"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f05"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f06"/>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#PositionPoint"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#PowerSystemResource">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7fa4"/>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#PowerSystemResource"/>
+    <rdfs:subClassOf rdf:resource="#IdentifiedObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#PriorityKind">
+    <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#enumeration"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#PriorityKind"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#RegisteredDistributedResource">
+    <uml:hasMinCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</uml:hasMinCardinality>
+    <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#concrete"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7ef7"/>
+    <rdfs:subClassOf rdf:nodeID="X63X17c1402Xa3X19842624d4fXa3X-7fbc"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X71fbc4c5Xa3X1984259ae31Xa3X-7ed2"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X71fbc4c5Xa3X1984259ae31Xa3X-7ed4"/>
+    <rdfs:subClassOf rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-69d2"/>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#RegisteredDistributedResource"/>
+    <rdfs:subClassOf rdf:resource="#RegisteredResource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#RegisteredResource">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7e8a"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7fa7"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7fad"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7faf"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7fb0"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6e449d43Xa3X179cd59ce17Xa3X-7ff8"/>
+    <rdfs:subClassOf rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-55fc"/>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#RegisteredResource"/>
+    <rdfs:subClassOf rdf:resource="#PowerSystemResource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#RegisteredResource1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:space="preserve"></rdfs:comment>
+    <rdfs:label>Aggregated_RegisteredResource</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#RegisteredResource"/>
+    <rdfs:subClassOf rdf:resource="#IdentifiedObject1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#ResourceCapacity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6e449d43Xa3X179cd59ce17Xa3X-7fe8"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6e449d43Xa3X179cd59ce17Xa3X-7feb"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6e449d43Xa3X179cd59ce17Xa3X-7fee"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6e449d43Xa3X179cd59ce17Xa3X-7ff1"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X6e449d43Xa3X179cd59ce17Xa3X-7ff4"/>
+    <rdfs:subClassOf rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-4257"/>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#ResourceCapacity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#ResourceCapacityType">
+    <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#enumeration"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#ResourceCapacityType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#ResourceCertification">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7e80"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7e86"/>
+    <rdfs:subClassOf rdf:nodeID="X53X9029897Xa3X190a31f464bXa3X-7ffe"/>
+    <rdfs:subClassOf rdf:nodeID="ae529a4Xa3X17f9a39abf5Xa3X-5607"/>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#ResourceCertification"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#ResourceCertificationKind">
+    <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#enumeration"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#ResourceCertificationKind"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#ResourceRegistrationStatus">
+    <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#enumeration"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#ResourceRegistrationStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Status">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f29"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f2c"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f2f"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f32"/>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#Status"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#StreetAddress">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f6a"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f6b"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f6d"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f6e"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f71"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f74"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f77"/>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#StreetAddress"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#StreetDetail">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f46"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f49"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f4c"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f4f"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f52"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f55"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f58"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f5b"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f5e"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f60"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f61"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f64"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f67"/>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#StreetDetail"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#TelephoneNumber">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f10"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f13"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f16"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f19"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f1c"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f1f"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f22"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f25"/>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#TelephoneNumber"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#TownDetail">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f36"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f39"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f3c"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f3f"/>
+    <rdfs:subClassOf rdf:nodeID="X13X21550cfXa3X16027e60929Xa3X-7f42"/>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#TownDetail"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#UnitMultiplier">
+    <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#enumeration"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#UnitMultiplier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#UnitSymbol">
+    <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#enumeration"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#UnitSymbol"/>
+    <owl:oneOf rdf:nodeID="Xd2X71fbc4c5Xa3X1984259ae31Xa3X-7f3b"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#YesNo">
+    <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#enumeration"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/ns#YesNo"/>
+  </rdf:Description>
+</rdf:RDF>

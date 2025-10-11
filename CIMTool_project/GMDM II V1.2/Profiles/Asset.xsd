@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:m="http://www.ucaiug.org/gmdm/asset#"
+           xmlns:sawsdl="http://www.w3.org/ns/sawsdl"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.ucaiug.org/gmdm/asset#"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+   <xs:annotation>
+      <xs:documentation xml:lang="en">
+	Copyright 2025 UCAIug
+
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+
+	https://www.apache.org/licenses/LICENSE-2.0
+
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	
+	See the License for the specific language governing permissions and
+	limitations under the License.
+</xs:documentation>
+   </xs:annotation>
+   <xs:annotation/>
+   <xs:element name="Asset" type="m:Asset"/>
+   <xs:complexType name="Asset">
+      <xs:sequence>
+         <xs:element name="NoLoadTest"
+                     type="m:NoLoadTest"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
+         <xs:element name="ShortCircuitTest"
+                     type="m:ShortCircuitTest"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
+         <xs:element name="TransformerEndInfo"
+                     type="m:TransformerEndInfo"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
+         <xs:element name="TransformerTank"
+                     type="m:TransformerTank"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
+         <xs:element name="TransformerTankInfo"
+                     type="m:TransformerTankInfo"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="AssetInfo"
+                   sawsdl:modelReference="http://cim.ucaiug.io/ns#AssetInfo">
+      <xs:annotation>
+         <xs:documentation>Set of attributes of an asset, representing typical datasheet information of a physical device that can be instantiated and shared in different data exchange contexts:</xs:documentation>
+         <xs:documentation>- as attributes of an asset instance (installed or in stock)</xs:documentation>
+         <xs:documentation>- as attributes of an asset model (product by a manufacturer)</xs:documentation>
+         <xs:documentation>- as attributes of a type asset (generic type of an asset as used in designs/extension planning).</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="m:IdentifiedObject">
+            <xs:sequence/>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="ConductingAssetInfo"
+                   sawsdl:modelReference="http://cim.ucaiug.io/ns#ConductingAssetInfo">
+      <xs:annotation>
+         <xs:documentation>Generic information for conducting asset</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="m:AssetInfo">
+            <xs:sequence>
+               <xs:element name="ratedVoltage"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           type="m:Voltage"
+                           sawsdl:modelReference="http://cim.ucaiug.io/ns#ConductingAssetInfo.ratedVoltage">
+                  <xs:annotation>
+                     <xs:documentation>Rated voltage.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="Equipment"
+                   sawsdl:modelReference="http://cim.ucaiug.io/ns#Equipment">
+      <xs:annotation>
+         <xs:documentation>The parts of a power system that are physical devices, electronic or mechanical.</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="m:PowerSystemResource">
+            <xs:sequence/>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="IdentifiedObject"
+                   sawsdl:modelReference="http://cim.ucaiug.io/ns#IdentifiedObject">
+      <xs:annotation>
+         <xs:documentation>This is a class that provides common identification for all classes needing identification and naming attributes.</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="m:Identity">
+            <xs:sequence>
+               <xs:element name="description"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           type="xs:string"
+                           sawsdl:modelReference="http://cim.ucaiug.io/ns#IdentifiedObject.description">
+                  <xs:annotation>
+                     <xs:documentation>The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="name"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           type="xs:string"
+                           sawsdl:modelReference="http://cim.ucaiug.io/ns#IdentifiedObject.name">
+                  <xs:annotation>
+                     <xs:documentation>The name is any free human readable and possibly non unique text naming the object.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="Identity"
+                   sawsdl:modelReference="http://cim.ucaiug.io/ns#Identity">
+      <xs:annotation>
+         <xs:documentation>,</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="identifier"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     type="xs:string"
+                     sawsdl:modelReference="http://cim.ucaiug.io/ns#Identity.identifier">
+            <xs:annotation>
+               <xs:documentation>A universally unique object identifier. Used to uniquely identify persistent objects between CIM messages.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="NoLoadTest"
+                   sawsdl:modelReference="http://cim.ucaiug.io/ns#NoLoadTest">
+      <xs:annotation>
+         <xs:documentation>No-load test results determine core admittance parameters. They include exciting current and core loss measurements from applying voltage to one winding. The excitation may be positive sequence or zero sequence. The test may be repeated at different voltages to measure saturation.</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="m:TransformerTest">
+            <xs:sequence>
+               <xs:element name="energisedEndVoltage"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           type="m:Voltage"
+                           sawsdl:modelReference="http://cim.ucaiug.io/ns#NoLoadTest.energisedEndVoltage">
+                  <xs:annotation>
+                     <xs:documentation>Voltage applied to the winding (end) during test.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="excitingCurrent"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           type="m:PerCent"
+                           sawsdl:modelReference="http://cim.ucaiug.io/ns#NoLoadTest.excitingCurrent">
+                  <xs:annotation>
+                     <xs:documentation>Exciting current measured from a positive-sequence or single-phase excitation test.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="excitingCurrentZero"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           type="m:PerCent"
+                           sawsdl:modelReference="http://cim.ucaiug.io/ns#NoLoadTest.excitingCurrentZero">
+                  <xs:annotation>
+                     <xs:documentation>Exciting current measured from a zero-sequence open-circuit excitation test.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="loss"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           type="m:KiloActivePower"
+                           sawsdl:modelReference="http://cim.ucaiug.io/ns#NoLoadTest.loss">
+                  <xs:annotation>
+                     <xs:documentation>Losses measured from a positive-sequence or single-phase excitation test.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="lossZero"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           type="m:KiloActivePower"
+                           sawsdl:modelReference="http://cim.ucaiug.io/ns#NoLoadTest.lossZero">
+                  <xs:annotation>
+                     <xs:documentation>Losses measured from a zero-sequence excitation test.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="EnergisedEnd"
+                           minOccurs="1"
+                           maxOccurs="1"
+                           sawsdl:modelReference="http://cim.ucaiug.io/ns#NoLoadTest.EnergisedEnd">
+                  <xs:annotation>
+                     <xs:documentation>Transformer end that current is applied to in this no-load test.</xs:documentation>
+                  </xs:annotation>
+                  <xs:complexType sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerEndInfo">
+                     <xs:attribute name="ref" type="xs:string" use="required"/>
+                     <xs:attribute name="referenceType" type="xs:string" use="optional"/>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:simpleType name="OrderedPhaseCodeKind"
+                  sawsdl:modelReference="http://epri.com/gmdm#OrderedPhaseCodeKind">
+      <xs:annotation>
+         <xs:documentation>In some use cases, the ordering of phases is important. The PhaseCode class does not represent order, but this class addresses such use cases. When two or more phases are present, the individual phases may occur in any order, but the neutral must always occur last. When only one phase and the neutral is present, that phase and the neutral may be re-ordered.</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="A">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="AB">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="ABC">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="ABCN">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="ABN">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="AC">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="ACB">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="ACBN">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="ACN">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="AN">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="B">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="BA">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="BAC">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="BACN">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="BAN">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="BC">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="BCA">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="BCAN">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="BCN">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="BN">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="C">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="CA">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="CAB">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="CABN">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="CAN">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="CB">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="CBA">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="CBAN">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="CBN">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="CN">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="NA">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="NB">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="NC">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="Ns1">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="Ns2">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="X">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="XN">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="XY">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="XYN">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="none">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="s1">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="s12">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="s12N">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="s1N">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="s2">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="s21">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="s21N">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="s2N">
+            <xs:annotation/>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="PhaseCountKind"
+                  sawsdl:modelReference="http://cim.ucaiug.io/ns#PhaseCountKind">
+      <xs:annotation>
+         <xs:documentation>Number of phases supported by a device.</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="other">
+            <xs:annotation>
+               <xs:documentation>Other</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="singlePhase">
+            <xs:annotation>
+               <xs:documentation>Single phase</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="threePhase">
+            <xs:annotation>
+               <xs:documentation>Three phases</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:complexType name="PowerSystemResource"
+                   sawsdl:modelReference="http://cim.ucaiug.io/ns#PowerSystemResource">
+      <xs:annotation>
+         <xs:documentation>A power system resource (PSR) can be an item of equipment such as a switch, an equipment container containing many individual items of equipment such as a substation, or an organisational entity such as sub-control area. Power system resources can have measurements associated.</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="m:IdentifiedObject">
+            <xs:sequence/>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="ShortCircuitTest"
+                   sawsdl:modelReference="http://cim.ucaiug.io/ns#ShortCircuitTest">
+      <xs:annotation>
+         <xs:documentation>Short-circuit test results determine mesh impedance parameters. They include load losses and leakage impedances. For three-phase windings, the excitation can be a positive sequence (the default) or a zero sequence. There shall be at least one grounded winding.</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="m:TransformerTest">
+            <xs:sequence>
+               <xs:element name="energisedEndStep"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           type="xs:integer"
+                           sawsdl:modelReference="http://cim.ucaiug.io/ns#ShortCircuitTest.energisedEndStep">
+                  <xs:annotation>
+                     <xs:documentation>Tap step number for the energised end of the test pair.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="groundedEndStep"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           type="xs:integer"
+                           sawsdl:modelReference="http://cim.ucaiug.io/ns#ShortCircuitTest.groundedEndStep">
+                  <xs:annotation>
+                     <xs:documentation>Tap step number for the grounded end of the test pair.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="leakageImpedance"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           type="m:Impedance"
+                           sawsdl:modelReference="http://cim.ucaiug.io/ns#ShortCircuitTest.leakageImpedance">
+                  <xs:annotation>
+                     <xs:documentation>Leakage impedance measured from a positive-sequence or single-phase short-circuit test.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="leakageImpedanceZero"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           type="m:Impedance"
+                           sawsdl:modelReference="http://cim.ucaiug.io/ns#ShortCircuitTest.leakageImpedanceZero">
+                  <xs:annotation>
+                     <xs:documentation>Leakage impedance measured from a zero-sequence short-circuit test.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="loss"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           type="m:KiloActivePower"
+                           sawsdl:modelReference="http://cim.ucaiug.io/ns#ShortCircuitTest.loss">
+                  <xs:annotation>
+                     <xs:documentation>Load losses from a positive-sequence or single-phase short-circuit test.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="lossZero"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           type="m:KiloActivePower"
+                           sawsdl:modelReference="http://cim.ucaiug.io/ns#ShortCircuitTest.lossZero">
+                  <xs:annotation>
+                     <xs:documentation>Load losses from a zero-sequence short-circuit test.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="EnergisedEnd"
+                           minOccurs="1"
+                           maxOccurs="1"
+                           sawsdl:modelReference="http://cim.ucaiug.io/ns#ShortCircuitTest.EnergisedEnd">
+                  <xs:annotation>
+                     <xs:documentation>Transformer end that voltage is applied to in this short-circuit test. The test voltage is chosen to induce rated current in the energised end.</xs:documentation>
+                  </xs:annotation>
+                  <xs:complexType sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerEndInfo">
+                     <xs:attribute name="ref" type="xs:string" use="required"/>
+                     <xs:attribute name="referenceType" type="xs:string" use="optional"/>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="GroundedEnds"
+                           minOccurs="1"
+                           maxOccurs="unbounded"
+                           sawsdl:modelReference="http://cim.ucaiug.io/ns#ShortCircuitTest.GroundedEnds">
+                  <xs:annotation>
+                     <xs:documentation>All ends short-circuited in this short-circuit test.</xs:documentation>
+                  </xs:annotation>
+                  <xs:complexType sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerEndInfo">
+                     <xs:attribute name="ref" type="xs:string" use="required"/>
+                     <xs:attribute name="referenceType" type="xs:string" use="optional"/>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="TransformerEndInfo"
+                   sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerEndInfo">
+      <xs:annotation>
+         <xs:documentation>Transformer end data.</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="m:ConductingAssetInfo">
+            <xs:sequence>
+               <xs:element name="connectionKind"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerEndInfo.connectionKind">
+                  <xs:annotation>
+                     <xs:documentation>Kind of connection.</xs:documentation>
+                  </xs:annotation>
+                  <xs:complexType sawsdl:modelReference="http://cim.ucaiug.io/ns#WindingConnection">
+                     <xs:attribute name="ref" type="xs:string" use="required"/>
+                     <xs:attribute name="referenceType" type="xs:string" use="optional"/>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="emergencyS"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           type="m:ApparentPower"
+                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerEndInfo.emergencyS">
+                  <xs:annotation>
+                     <xs:documentation>Apparent power that the winding can carry under emergency conditions (also called long-term emergency power).</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="endNumber"
+                           minOccurs="1"
+                           maxOccurs="1"
+                           type="xs:integer"
+                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerEndInfo.endNumber">
+                  <xs:annotation>
+                     <xs:documentation>Number for this transformer end, corresponding to the end's order in the PowerTransformer.vectorGroup attribute. Highest voltage winding should be 1.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="insulationU"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           type="m:Voltage"
+                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerEndInfo.insulationU">
+                  <xs:annotation>
+                     <xs:documentation>Basic insulation level voltage rating.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="phaseAngleClock"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           type="xs:integer"
+                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerEndInfo.phaseAngleClock">
+                  <xs:annotation>
+                     <xs:documentation>Winding phase angle where 360 degrees are represented with clock hours, so the valid values are {0, ..., 11}. For example, to express the second winding in code 'Dyn11', set attributes as follows: 'endNumber'=2, 'connectionKind' = Yn and 'phaseAngleClock' = 11.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="r"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           type="m:Resistance"
+                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerEndInfo.r">
+                  <xs:annotation>
+                     <xs:documentation>DC resistance.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="ratedS"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           type="m:ApparentPower"
+                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerEndInfo.ratedS">
+                  <xs:annotation>
+                     <xs:documentation>Normal apparent power rating.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="shortTermS"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           type="m:ApparentPower"
+                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerEndInfo.shortTermS">
+                  <xs:annotation>
+                     <xs:documentation>Apparent power that this winding can carry for a short period of time (in emergency).</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="TransformerTankInfo"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerEndInfo.TransformerTankInfo">
+                  <xs:annotation>
+                     <xs:documentation>Transformer tank data that this end description is part of.</xs:documentation>
+                  </xs:annotation>
+                  <xs:complexType sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerTankInfo">
+                     <xs:attribute name="ref" type="xs:string" use="required"/>
+                     <xs:attribute name="referenceType" type="xs:string" use="optional"/>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="TransformerTank"
+                   sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerTank">
+      <xs:annotation>
+         <xs:documentation>An assembly of two or more coupled windings that transform electrical power between voltage levels. These windings are bound on a common core and placed in the same tank. Transformer tank can be used to model both single-phase and 3-phase transformers.</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="m:Equipment">
+            <xs:sequence>
+               <xs:element name="TransformerTankInfo"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           sawsdl:modelReference="http://epri.com/gmdm#TransformerTank.TransformerTankInfo">
+                  <xs:annotation/>
+                  <xs:complexType sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerTankInfo">
+                     <xs:attribute name="ref" type="xs:string" use="required"/>
+                     <xs:attribute name="referenceType" type="xs:string" use="optional"/>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="TransformerTankInfo"
+                   sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerTankInfo">
+      <xs:annotation>
+         <xs:documentation>Set of transformer tank data, from an equipment library.</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="m:AssetInfo">
+            <xs:sequence/>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="TransformerTest"
+                   sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerTest">
+      <xs:annotation>
+         <xs:documentation>Test result for transformer ends, such as short-circuit, open-circuit (excitation) or no-load test.</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="m:IdentifiedObject">
+            <xs:sequence>
+               <xs:element name="basePower"
+                           minOccurs="1"
+                           maxOccurs="1"
+                           type="m:ApparentPower"
+                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerTest.basePower">
+                  <xs:annotation>
+                     <xs:documentation>Base power at which the tests are conducted, usually equal to the rateds of one of the involved transformer ends.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="temperature"
+                           minOccurs="1"
+                           maxOccurs="1"
+                           type="m:Temperature"
+                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerTest.temperature">
+                  <xs:annotation>
+                     <xs:documentation>Temperature at which the test is conducted.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:simpleType name="WindingConnection"
+                  sawsdl:modelReference="http://cim.ucaiug.io/ns#WindingConnection">
+      <xs:annotation>
+         <xs:documentation>Winding connection type.</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="A">
+            <xs:annotation>
+               <xs:documentation>Autotransformer common winding.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="D">
+            <xs:annotation>
+               <xs:documentation>Delta.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="I">
+            <xs:annotation>
+               <xs:documentation>Independent winding, for single-phase connections.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="Y">
+            <xs:annotation>
+               <xs:documentation>Wye.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="Yn">
+            <xs:annotation>
+               <xs:documentation>Wye, with neutral brought out for grounding.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="Z">
+            <xs:annotation>
+               <xs:documentation>ZigZag.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="Zn">
+            <xs:annotation>
+               <xs:documentation>ZigZag, with neutral brought out for grounding.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="ApparentPower"
+                  sawsdl:modelReference="http://cim.ucaiug.io/ns#ApparentPower">
+      <xs:annotation>
+         <xs:documentation>Product of the RMS value of the voltage and the RMS value of the current.</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:float"/>
+   </xs:simpleType>
+   <xs:simpleType name="Impedance"
+                  sawsdl:modelReference="http://cim.ucaiug.io/ns#Impedance">
+      <xs:annotation>
+         <xs:documentation>Ratio of voltage to current.</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:float"/>
+   </xs:simpleType>
+   <xs:simpleType name="KiloActivePower"
+                  sawsdl:modelReference="http://cim.ucaiug.io/ns#KiloActivePower">
+      <xs:annotation>
+         <xs:documentation>Active power in kilowatts.</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:float"/>
+   </xs:simpleType>
+   <xs:simpleType name="PerCent" sawsdl:modelReference="http://cim.ucaiug.io/ns#PerCent">
+      <xs:annotation>
+         <xs:documentation>Percentage on a defined base. For example, specify as 100 to indicate at the defined base.</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:float"/>
+   </xs:simpleType>
+   <xs:simpleType name="Resistance"
+                  sawsdl:modelReference="http://cim.ucaiug.io/ns#Resistance">
+      <xs:annotation>
+         <xs:documentation>Resistance (real part of impedance).</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:float"/>
+   </xs:simpleType>
+   <xs:simpleType name="Temperature"
+                  sawsdl:modelReference="http://cim.ucaiug.io/ns#Temperature">
+      <xs:annotation>
+         <xs:documentation>Value of temperature in degrees Celsius.</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:float"/>
+   </xs:simpleType>
+   <xs:simpleType name="Voltage" sawsdl:modelReference="http://cim.ucaiug.io/ns#Voltage">
+      <xs:annotation>
+         <xs:documentation>Electrical voltage, can be both AC and DC.</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:float"/>
+   </xs:simpleType>
+</xs:schema>

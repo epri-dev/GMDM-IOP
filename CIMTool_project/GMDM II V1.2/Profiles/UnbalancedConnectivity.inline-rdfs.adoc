@@ -1,0 +1,2828 @@
+
+== UnbalancedConnectivity Profile Specification
+
+// Settings:
+:doctype: inline
+:reproducible:
+:icons: font
+:sectnums:
+:sectnumlevels: 4
+:xrefstyle: short
+
+Profile namespace: http://www.ucaiug.org/gmdm/connectivity/unbalanced#
+
+.UnbalancedConnectivity Profile
+plantuml::./Profiles/UnbalancedConnectivity.rdfs-t2b.puml[format=svg, align=center]
+
+
+=== Concrete Classes
+
+[[UnbalancedConnectivity-ACLineSegment]]
+==== ACLineSegment
+
+Inheritance path = <<UnbalancedConnectivity-Conductor,Conductor>> => <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>> => <<UnbalancedConnectivity-Equipment,Equipment>> => <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:ACLineSegment:
+A line segment is a conductor or combination of conductors, with consistent electrical characteristics along its length, building a single electrical system that carries alternating current between two points in the power system.
+
+The BaseVoltage at the two ends of a line segment shall have the same BaseVoltage.nominalVoltage. However, boundary lines may have slightly different BaseVoltage.nominalVoltages and variation is allowed. Larger voltage difference in general requires use of an equivalent branch.
+
+Line segment impedances can be either directly described in electrical terms or physical line detail can be provided from which impedances can be calculated.
+
+{lt}b{gt}Directly described impedances{lt}/b{gt}
+
+For symmetrical, transposed three phase line segments, it is sufficient to use attributes of the line segment, which describe impedances and admittances for the entire length of the line segment. Additionally, line segment impedances can be computed by using line segment length and associated per length impedances.
+
+Unbalanced modeling of impedances is supported by the per length phase impedance matrix (PerLengthPhaseImpedance) in conjunction with phase-to-sequence number mapping supplied by either ACLineSegmentPhase or WirePosition. The sequence numbers are referenced by the row and column attributes of the per length phase impedance matrix. This method enables single-phase and two-phase line segments, and transpositions of phases, to be described using the same per length phase impedance matrix. The length of the line segment is used in the computation of total impedance values for the line segment.
+
+{lt}b{gt}Line detail characteristics{lt}/b{gt}
+
+There are three approaches to providing line detail and all use WireAssembly to supply line positions:
+
+{lt}ul{gt}
+
+{lt}li{gt}Option 1 - WireAssembly supplies only line positions. ACLineSegmentPhase points to wire type and intraphase spacing and supplies the phase-to-sequence number mapping.{lt}/li{gt}
+
+{lt}li{gt}Option 2 - WireAssembly supplies line position and, for each position, also supplies wire type and intraphase spacing. ACLineSegmentPhase supplies the phase-to-sequence number mapping.{lt}/li{gt}
+
+{lt}li{gt}Option 3 - WireAssembly supplies line position and, for each position, also supplies wire type and intraphase spacing and phase. WireAssembly therefore supplies the phase-to-sequence number mapping and ACLineSegmentPhase is not needed.{lt}/li{gt}
+
+{lt}/ul{gt}
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|BaseVoltage
+|1..1
+|<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
+|see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
+|aggregate
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|normallyInService
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|AdditionalEquipmentContainer
+|0..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|EquipmentContainer
+|1..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!ACLineSegment:
+
+[[UnbalancedConnectivity-ACLineSegmentPhase]]
+==== ACLineSegmentPhase
+
+Inheritance path = <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:ACLineSegmentPhase:
+A line segment phase represents one phase (or optionally the neutral) of an alternating current line segment.
+
+Under most circumstances there is not a line segment phase for the neutral. However, if a wire assembly is being used and it does not specify phase, a line segment phase must exist for each position in the assembly (including the neutral).
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|phase (enumeration)
+|1..1
+|<<UnbalancedConnectivity-SinglePhaseKind,SinglePhaseKind>>
+|
+Phase identifies the phase or neutral connection of the conductor at both ends.
+
+|ACLineSegment
+|0..1
+|<<UnbalancedConnectivity-ACLineSegment,ACLineSegment>>
+|
+The line segment to which the phase belongs.
+
+|===
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!ACLineSegmentPhase:
+
+[[UnbalancedConnectivity-AsynchronousMachine]]
+==== AsynchronousMachine
+
+Inheritance path = <<UnbalancedConnectivity-RotatingMachine,RotatingMachine>> => <<UnbalancedConnectivity-RegulatingCondEq,RegulatingCondEq>> => <<UnbalancedConnectivity-EnergyConnection,EnergyConnection>> => <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>> => <<UnbalancedConnectivity-Equipment,Equipment>> => <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:AsynchronousMachine:
+A rotating machine whose shaft rotates asynchronously with the electrical field. Also known as an induction machine with no external connection to the rotor windings, e.g. squirrel-cage induction machine.
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|BaseVoltage
+|1..1
+|<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
+|see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
+|aggregate
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|normallyInService
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|AdditionalEquipmentContainer
+|0..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|EquipmentContainer
+|1..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!AsynchronousMachine:
+
+[[UnbalancedConnectivity-BaseVoltage]]
+==== BaseVoltage
+
+Inheritance path = <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:BaseVoltage:
+Defines a system base voltage which is referenced. This may be different than the rated voltage.
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|nominalVoltage
+|1..1
+|<<UnbalancedConnectivity-Voltage,Voltage>>
+|
+The power system resource's base voltage, expressed on a phase-to-phase (line-to-line) basis. Shall be a positive value and not zero.
+
+|===
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!BaseVoltage:
+
+[[UnbalancedConnectivity-Breaker]]
+==== Breaker
+
+Inheritance path = <<UnbalancedConnectivity-ProtectedSwitch,ProtectedSwitch>> => <<UnbalancedConnectivity-Switch,Switch>> => <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>> => <<UnbalancedConnectivity-Equipment,Equipment>> => <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:Breaker:
+A mechanical switching device capable of making, carrying, and breaking currents under normal circuit conditions and also making, carrying for a specified time, and breaking currents under specified abnormal circuit conditions e.g. those of short circuit.
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|locked
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Switch,Switch>>
+|normalOpen
+|1..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Switch,Switch>>
+|BaseVoltage
+|1..1
+|<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
+|see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
+|aggregate
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|normallyInService
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|AdditionalEquipmentContainer
+|0..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|EquipmentContainer
+|1..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!Breaker:
+
+[[UnbalancedConnectivity-BusbarSection]]
+==== BusbarSection
+
+Inheritance path = <<UnbalancedConnectivity-Connector,Connector>> => <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>> => <<UnbalancedConnectivity-Equipment,Equipment>> => <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:BusbarSection:
+A conductor, or group of conductors, with negligible impedance, that serve to connect other conducting equipment within a single substation. The BusbarSection class is intended to represent physical parts of bus bars no matter how that bus bar is constructed.
+
+Voltage measurements are typically obtained from voltage transformers that are connected to busbar sections. A bus bar section may have many physical terminals but for analysis is modelled with exactly one logical terminal.
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|BaseVoltage
+|1..1
+|<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
+|see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
+|aggregate
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|normallyInService
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|AdditionalEquipmentContainer
+|0..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|EquipmentContainer
+|1..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!BusbarSection:
+
+[[UnbalancedConnectivity-ConnectivityNode]]
+==== ConnectivityNode
+
+Inheritance path = <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:ConnectivityNode:
+Connectivity nodes are points where terminals of AC conducting equipment are connected together with zero impedance.
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!ConnectivityNode:
+
+[[UnbalancedConnectivity-Disconnector]]
+==== Disconnector
+
+Inheritance path = <<UnbalancedConnectivity-Switch,Switch>> => <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>> => <<UnbalancedConnectivity-Equipment,Equipment>> => <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:Disconnector:
+A mechanical switching device which provides, in the open position, an isolating distance in accordance with specified requirements.
+
+A disconnector is capable of opening and closing a circuit when either negligible current is broken or made, or when no significant change in the voltage across the terminals of each of the poles of the disconnector occurs. It is also capable of carrying currents under normal circuit conditions and carrying for a specified time currents under abnormal conditions such as those of short circuit.
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|locked
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Switch,Switch>>
+|normalOpen
+|1..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Switch,Switch>>
+|BaseVoltage
+|1..1
+|<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
+|see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
+|aggregate
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|normallyInService
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|AdditionalEquipmentContainer
+|0..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|EquipmentContainer
+|1..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!Disconnector:
+
+[[UnbalancedConnectivity-EnergyConsumer]]
+==== EnergyConsumer
+
+Inheritance path = <<UnbalancedConnectivity-EnergyConnection,EnergyConnection>> => <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>> => <<UnbalancedConnectivity-Equipment,Equipment>> => <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:EnergyConsumer:
+Generic user of energy - a point of consumption on the power system model.
+
+EnergyConsumer.pfixed, .qfixed, .pfixedPct and .qfixedPct have meaning only if there is no LoadResponseCharacteristic associated with EnergyConsumer or if LoadResponseCharacteristic.exponentModel is set to False.
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|customerCount
+|0..1
+|<<UnbalancedConnectivity-Integer,Integer>>
+|
+Number of individual customers represented by this demand.
+
+|grounded
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|
+Required for Yn and I connections (as represented by EnergyConsumer.phaseConnection). True if the neutral is solidly grounded.
+
+|phaseConnection (enumeration)
+|1..1
+|<<UnbalancedConnectivity-PhaseShuntConnectionKind,PhaseShuntConnectionKind>>
+|
+The type of phase connection, such as wye or delta.
+
+|===
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|BaseVoltage
+|1..1
+|<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
+|see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
+|aggregate
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|normallyInService
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|AdditionalEquipmentContainer
+|0..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|EquipmentContainer
+|1..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!EnergyConsumer:
+
+[[UnbalancedConnectivity-EnergyConsumerPhase]]
+==== EnergyConsumerPhase
+
+Inheritance path = <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:EnergyConsumerPhase:
+A single phase of an energy consumer.
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|phase (enumeration)
+|1..1
+|<<UnbalancedConnectivity-SinglePhaseKind,SinglePhaseKind>>
+|
+Phase of this energy consumer component. If the energy consumer is wye connected, the connection is from the indicated phase to the central ground or neutral point. If the energy consumer is delta connected, the phase indicates an energy consumer connected from the indicated phase to the next logical non-neutral phase.
+
+|EnergyConsumer
+|1..1
+|<<UnbalancedConnectivity-EnergyConsumer,EnergyConsumer>>
+|
+The energy consumer to which this phase belongs.
+
+|===
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!EnergyConsumerPhase:
+
+[[UnbalancedConnectivity-EnergySource]]
+==== EnergySource
+
+Inheritance path = <<UnbalancedConnectivity-EnergyConnection,EnergyConnection>> => <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>> => <<UnbalancedConnectivity-Equipment,Equipment>> => <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:EnergySource:
+A generic equivalent for an energy supplier on a transmission or distribution voltage level.
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|BaseVoltage
+|1..1
+|<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
+|see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
+|aggregate
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|normallyInService
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|AdditionalEquipmentContainer
+|0..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|EquipmentContainer
+|1..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!EnergySource:
+
+[[UnbalancedConnectivity-Feeder]]
+==== Feeder
+
+Inheritance path = <<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>> => <<UnbalancedConnectivity-ConnectivityNodeContainer,ConnectivityNodeContainer>> => <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:Feeder:
+A collection of equipment for organizational purposes, used for grouping distribution resources.
+
+The organization a feeder does not necessarily reflect connectivity or current operation state.
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|NormalEnergizingSubstation (OfAggregate)
+|1..1
+|<<UnbalancedConnectivity-Substation,Substation>>
+|
+The substation that nominally energizes the feeder. Also used for naming purposes.
+
+|===
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!Feeder:
+
+[[UnbalancedConnectivity-Fuse]]
+==== Fuse
+
+Inheritance path = <<UnbalancedConnectivity-Switch,Switch>> => <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>> => <<UnbalancedConnectivity-Equipment,Equipment>> => <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:Fuse:
+An overcurrent protective device with a circuit opening fusible part that is heated and severed by the passage of overcurrent through it. A fuse is considered a switching device because it breaks current.
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|locked
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Switch,Switch>>
+|normalOpen
+|1..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Switch,Switch>>
+|BaseVoltage
+|1..1
+|<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
+|see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
+|aggregate
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|normallyInService
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|AdditionalEquipmentContainer
+|0..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|EquipmentContainer
+|1..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!Fuse:
+
+[[UnbalancedConnectivity-Line]]
+==== Line
+
+Inheritance path = <<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>> => <<UnbalancedConnectivity-ConnectivityNodeContainer,ConnectivityNodeContainer>> => <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:Line:
+Contains equipment beyond a substation belonging to a power transmission line.
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!Line:
+
+[[UnbalancedConnectivity-LinearShuntCompensator]]
+==== LinearShuntCompensator
+
+Inheritance path = <<UnbalancedConnectivity-ShuntCompensator,ShuntCompensator>> => <<UnbalancedConnectivity-RegulatingCondEq,RegulatingCondEq>> => <<UnbalancedConnectivity-EnergyConnection,EnergyConnection>> => <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>> => <<UnbalancedConnectivity-Equipment,Equipment>> => <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:LinearShuntCompensator:
+A linear shunt compensator has banks or sections with equal admittance values.
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|grounded
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-ShuntCompensator,ShuntCompensator>>
+|phaseConnection (enumeration)
+|0..1
+|<<UnbalancedConnectivity-PhaseShuntConnectionKind,PhaseShuntConnectionKind>>
+|see <<UnbalancedConnectivity-ShuntCompensator,ShuntCompensator>>
+|BaseVoltage
+|1..1
+|<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
+|see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
+|aggregate
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|normallyInService
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|AdditionalEquipmentContainer
+|0..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|EquipmentContainer
+|1..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!LinearShuntCompensator:
+
+[[UnbalancedConnectivity-LinearShuntCompensatorPhase]]
+==== LinearShuntCompensatorPhase
+
+Inheritance path = <<UnbalancedConnectivity-ShuntCompensatorPhase,ShuntCompensatorPhase>> => <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:LinearShuntCompensatorPhase:
+A per phase linear shunt compensator has banks or sections with equal admittance values.
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|phase (enumeration)
+|1..1
+|<<UnbalancedConnectivity-SinglePhaseKind,SinglePhaseKind>>
+|see <<UnbalancedConnectivity-ShuntCompensatorPhase,ShuntCompensatorPhase>>
+|ShuntCompensator
+|1..1
+|<<UnbalancedConnectivity-ShuntCompensator,ShuntCompensator>>
+|see <<UnbalancedConnectivity-ShuntCompensatorPhase,ShuntCompensatorPhase>>
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!LinearShuntCompensatorPhase:
+
+[[UnbalancedConnectivity-LoadBreakSwitch]]
+==== LoadBreakSwitch
+
+Inheritance path = <<UnbalancedConnectivity-ProtectedSwitch,ProtectedSwitch>> => <<UnbalancedConnectivity-Switch,Switch>> => <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>> => <<UnbalancedConnectivity-Equipment,Equipment>> => <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:LoadBreakSwitch:
+A mechanical switching device capable of making, carrying, and breaking currents under normal operating conditions.
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|locked
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Switch,Switch>>
+|normalOpen
+|1..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Switch,Switch>>
+|BaseVoltage
+|1..1
+|<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
+|see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
+|aggregate
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|normallyInService
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|AdditionalEquipmentContainer
+|0..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|EquipmentContainer
+|1..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!LoadBreakSwitch:
+
+[[UnbalancedConnectivity-PowerElectronicsConnection]]
+==== PowerElectronicsConnection
+
+Inheritance path = <<UnbalancedConnectivity-RegulatingCondEq,RegulatingCondEq>> => <<UnbalancedConnectivity-EnergyConnection,EnergyConnection>> => <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>> => <<UnbalancedConnectivity-Equipment,Equipment>> => <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:PowerElectronicsConnection:
+A connection to the AC network for energy production or consumption that uses power electronics rather than rotating machines.
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|BaseVoltage
+|1..1
+|<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
+|see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
+|aggregate
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|normallyInService
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|AdditionalEquipmentContainer
+|0..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|EquipmentContainer
+|1..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!PowerElectronicsConnection:
+
+[[UnbalancedConnectivity-PowerElectronicsConnectionPhase]]
+==== PowerElectronicsConnectionPhase
+
+Inheritance path = <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:PowerElectronicsConnectionPhase:
+A single phase of a power electronics connection.
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|phase (enumeration)
+|1..1
+|<<UnbalancedConnectivity-SinglePhaseKind,SinglePhaseKind>>
+|
+Phase of this energy producer component. If the energy producer is wye connected, the connection is from the indicated phase to the central ground or neutral point. If the energy producer is delta connected, the phase indicates an energy producer connected from the indicated phase to the next logical non-neutral phase.
+
+|PowerElectronicsConnection
+|1..1
+|<<UnbalancedConnectivity-PowerElectronicsConnection,PowerElectronicsConnection>>
+|
+Power electronics connection of this power electronics connection phase.
+
+|===
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!PowerElectronicsConnectionPhase:
+
+[[UnbalancedConnectivity-PowerTransformer]]
+==== PowerTransformer
+
+Inheritance path = <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>> => <<UnbalancedConnectivity-Equipment,Equipment>> => <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:PowerTransformer:
+An electrical device consisting of two or more coupled windings, with or without a magnetic core, for introducing mutual coupling between electric circuits. Transformers can be used to control voltage and phase shift (active power flow).
+
+A power transformer may be composed of separate transformer tanks that need not be identical.
+
+A power transformer can be modelled with or without tanks and is intended for use in both balanced and unbalanced representations. A power transformer typically has two terminals, but may have one (grounding), three or more terminals.
+
+The inherited association ConductingEquipment.BaseVoltage should not be used. The association from TransformerEnd to BaseVoltage should be used instead.
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|vectorGroup
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|
+Vector group of the transformer for protective relaying, e.g., Dyn1. For unbalanced transformers, this may not be simply determined from the constituent winding connections and phase angle displacements.
+
+The vectorGroup string consists of the following components in the order listed: high voltage winding connection, mid voltage winding connection (for three winding transformers), phase displacement clock number from 0 to 11, low voltage winding connection
+
+phase displacement clock number from 0 to 11. The winding connections are D (delta), Y (wye), YN (wye with neutral), Z (zigzag), ZN (zigzag with neutral), A (auto transformer). Upper case means the high voltage, lower case mid or low. The high voltage winding always has clock position 0 and is not included in the vector group string. Some examples: YNy0 (two winding wye to wye with no phase displacement), YNd11 (two winding wye to delta with 330 degrees phase displacement), YNyn0d5 (three winding transformer wye with neutral high voltage, wye with neutral mid voltage and no phase displacement, delta low voltage with 150 degrees displacement).
+
+Phase displacement is defined as the angular difference between the phasors representing the voltages between the neutral point (real or imaginary) and the corresponding terminals of two windings, a positive sequence voltage system being applied to the high-voltage terminals, following each other in alphabetical sequence if they are lettered, or in numerical sequence if they are numbered: the phasors are assumed to rotate in a counter-clockwise sense.
+
+|===
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|BaseVoltage
+|1..1
+|<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
+|see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
+|aggregate
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|normallyInService
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|AdditionalEquipmentContainer
+|0..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|EquipmentContainer
+|1..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!PowerTransformer:
+
+[[UnbalancedConnectivity-PowerTransformerEnd]]
+==== PowerTransformerEnd
+
+Inheritance path = <<UnbalancedConnectivity-TransformerEnd,TransformerEnd>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:PowerTransformerEnd:
+A PowerTransformerEnd is associated with each Terminal of a PowerTransformer.
+
+The impedance values r, r0, x, and x0 of a PowerTransformerEnd represents a star equivalent as follows.
+
+1) two PowerTransformerEnd-s shall be defined for a two Terminal PowerTransformer even if the two PowerTransformerEnd-s have the same rated voltage. The high voltage PowerTransformerEnd (TransformerEnd.endNumber=1) is the one used to exchange resistances (r, r0) and reactances (x, x0) of the PowerTransformer while the low voltage PowerTransformerEnd (TransformerEnd.endNumber=2) shall have zero impedance values.
+
+2) for a three Terminal PowerTransformer the three PowerTransformerEnds represent a star equivalent with each leg in the star represented by r, r0, x, and x0 values.
+
+3) For a three Terminal transformer each PowerTransformerEnd shall have g, g0, b and b0 values corresponding to the no load losses distributed on the three PowerTransformerEnds. The total no load loss shunt impedances may also be placed at one of the PowerTransformerEnds, preferably the end numbered 1, having the shunt values on end 1. This is the preferred way.
+
+4) for a PowerTransformer with more than three Terminals the PowerTransformerEnd impedance values cannot be used. Instead use the TransformerMeshImpedance or split the transformer into multiple PowerTransformers.
+
+Each PowerTransformerEnd must be contained by a PowerTransformer. Because a PowerTransformerEnd (or any other object) can not be contained by more than one parent, a PowerTransformerEnd can not have an association to an EquipmentContainer (Substation, VoltageLevel, etc).
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|connectionKind (enumeration)
+|0..1
+|<<UnbalancedConnectivity-WindingConnection,WindingConnection>>
+|
+Kind of connection.
+
+|PowerTransformer
+|1..1
+|<<UnbalancedConnectivity-PowerTransformer,PowerTransformer>>
+|
+The power transformer of this power transformer end.
+
+|===
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|endNumber
+|1..1
+|<<UnbalancedConnectivity-Integer,Integer>>
+|see <<UnbalancedConnectivity-TransformerEnd,TransformerEnd>>
+|BaseVoltage
+|0..1
+|<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
+|see <<UnbalancedConnectivity-TransformerEnd,TransformerEnd>>
+|Terminal
+|1..1
+|<<UnbalancedConnectivity-Terminal,Terminal>>
+|see <<UnbalancedConnectivity-TransformerEnd,TransformerEnd>>
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!PowerTransformerEnd:
+
+[[UnbalancedConnectivity-Recloser]]
+==== Recloser
+
+Inheritance path = <<UnbalancedConnectivity-ProtectedSwitch,ProtectedSwitch>> => <<UnbalancedConnectivity-Switch,Switch>> => <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>> => <<UnbalancedConnectivity-Equipment,Equipment>> => <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:Recloser:
+Pole-mounted fault interrupter with built-in phase and ground relays, current transformer (CT), and supplemental controls.
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|locked
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Switch,Switch>>
+|normalOpen
+|1..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Switch,Switch>>
+|BaseVoltage
+|1..1
+|<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
+|see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
+|aggregate
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|normallyInService
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|AdditionalEquipmentContainer
+|0..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|EquipmentContainer
+|1..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!Recloser:
+
+[[UnbalancedConnectivity-Sectionaliser]]
+==== Sectionaliser
+
+Inheritance path = <<UnbalancedConnectivity-Switch,Switch>> => <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>> => <<UnbalancedConnectivity-Equipment,Equipment>> => <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:Sectionaliser:
+Automatic switch that will lock open to isolate a faulted section. It may, or may not, have load breaking capability. Its primary purpose is to provide fault sectionalising at locations where the fault current is either too high, or too low, for proper coordination of fuses.
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|locked
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Switch,Switch>>
+|normalOpen
+|1..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Switch,Switch>>
+|BaseVoltage
+|1..1
+|<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
+|see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
+|aggregate
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|normallyInService
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|AdditionalEquipmentContainer
+|0..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|EquipmentContainer
+|1..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!Sectionaliser:
+
+[[UnbalancedConnectivity-SeriesCompensator]]
+==== SeriesCompensator
+
+Inheritance path = <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>> => <<UnbalancedConnectivity-Equipment,Equipment>> => <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:SeriesCompensator:
+A Series Compensator is a series capacitor or reactor or an AC transmission line without charging susceptance. It is a two terminal device.
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|BaseVoltage
+|1..1
+|<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
+|see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
+|aggregate
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|normallyInService
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|AdditionalEquipmentContainer
+|0..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|EquipmentContainer
+|1..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!SeriesCompensator:
+
+[[UnbalancedConnectivity-Substation]]
+==== Substation
+
+Inheritance path = <<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>> => <<UnbalancedConnectivity-ConnectivityNodeContainer,ConnectivityNodeContainer>> => <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:Substation:
+A collection of equipment for purposes other than generation or utilization, through which electric energy in bulk is passed for the purposes of switching or modifying its characteristics.
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!Substation:
+
+[[UnbalancedConnectivity-SwitchPhase]]
+==== SwitchPhase
+
+Inheritance path = <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:SwitchPhase:
+Single phase of a multi-phase switch when its attributes might be different per phase.
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|normalOpen
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|
+Used in cases when no Measurement for the status value is present. If the SwitchPhase has a status measurement the Discrete.normalValue is expected to match with this value.
+
+|phaseSide1 (enumeration)
+|1..1
+|<<UnbalancedConnectivity-SinglePhaseKind,SinglePhaseKind>>
+|
+Phase of this SwitchPhase on the side with terminal sequence number equal to 1. Should be a phase contained in that terminal's phases attribute.
+
+|phaseSide2 (enumeration)
+|1..1
+|<<UnbalancedConnectivity-SinglePhaseKind,SinglePhaseKind>>
+|
+Phase of this SwitchPhase on the side with terminal sequence number equal to 2. Should be a phase contained in that terminal's Terminal.phases attribute.
+
+|Switch
+|1..1
+|<<UnbalancedConnectivity-Switch,Switch>>
+|
+The switch of the switch phase.
+
+|===
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!SwitchPhase:
+
+[[UnbalancedConnectivity-SynchronousMachine]]
+==== SynchronousMachine
+
+Inheritance path = <<UnbalancedConnectivity-RotatingMachine,RotatingMachine>> => <<UnbalancedConnectivity-RegulatingCondEq,RegulatingCondEq>> => <<UnbalancedConnectivity-EnergyConnection,EnergyConnection>> => <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>> => <<UnbalancedConnectivity-Equipment,Equipment>> => <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:SynchronousMachine:
+An electromechanical device that operates with shaft rotating synchronously with the network. It is a single machine operating either as a generator or synchronous condenser or pump.
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|BaseVoltage
+|1..1
+|<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
+|see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
+|aggregate
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|normallyInService
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|AdditionalEquipmentContainer
+|0..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|EquipmentContainer
+|1..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!SynchronousMachine:
+
+[[UnbalancedConnectivity-Terminal]]
+==== Terminal
+
+Inheritance path = <<UnbalancedConnectivity-ACDCTerminal,ACDCTerminal>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:Terminal:
+An AC electrical connection point to a piece of conducting equipment. Terminals are connected at physical connection points called connectivity nodes.
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|ConductingEquipment
+|0..1
+|<<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
+|
+The conducting equipment of the terminal. Conducting equipment have terminals that may be connected to other conducting equipment terminals via connectivity nodes or topological nodes.
+
+|ConnectivityNode
+|0..1
+|<<UnbalancedConnectivity-ConnectivityNode,ConnectivityNode>>
+|
+The connectivity node to which this terminal connects with zero impedance.
+
+|NormalHeadFeeder
+|0..1
+|<<UnbalancedConnectivity-Feeder,Feeder>>
+|
+The feeder that this terminal normally feeds. Only specified for the terminals at head of feeders.
+
+|===
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|sequenceNumber
+|0..1
+|<<UnbalancedConnectivity-Integer,Integer>>
+|see <<UnbalancedConnectivity-ACDCTerminal,ACDCTerminal>>
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!Terminal:
+
+[[UnbalancedConnectivity-TransformerTank]]
+==== TransformerTank
+
+Inheritance path = <<UnbalancedConnectivity-Equipment,Equipment>> => <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:TransformerTank:
+An assembly of two or more coupled windings that transform electrical power between voltage levels. These windings are bound on a common core and placed in the same tank. Transformer tank can be used to model both single-phase and 3-phase transformers.
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|PowerTransformer
+|1..1
+|<<UnbalancedConnectivity-PowerTransformer,PowerTransformer>>
+|
+Bank this transformer belongs to.
+
+|===
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|aggregate
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|normallyInService
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|AdditionalEquipmentContainer
+|0..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|EquipmentContainer
+|1..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!TransformerTank:
+
+[[UnbalancedConnectivity-TransformerTankEnd]]
+==== TransformerTankEnd
+
+Inheritance path = <<UnbalancedConnectivity-TransformerEnd,TransformerEnd>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:TransformerTankEnd:
+Transformer tank end represents an individual winding for unbalanced models or for transformer tanks connected into a bank (and bank is modelled with the PowerTransformer).
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|[extension]#orderedPhases (gmdm, enumeration)#
+|1..1
+|<<UnbalancedConnectivity-OrderedPhaseCodeKind,OrderedPhaseCodeKind>>
+|
+|TransformerTank
+|1..1
+|<<UnbalancedConnectivity-TransformerTank,TransformerTank>>
+|
+Transformer this winding belongs to.
+
+|===
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|endNumber
+|1..1
+|<<UnbalancedConnectivity-Integer,Integer>>
+|see <<UnbalancedConnectivity-TransformerEnd,TransformerEnd>>
+|BaseVoltage
+|0..1
+|<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
+|see <<UnbalancedConnectivity-TransformerEnd,TransformerEnd>>
+|Terminal
+|1..1
+|<<UnbalancedConnectivity-Terminal,Terminal>>
+|see <<UnbalancedConnectivity-TransformerEnd,TransformerEnd>>
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!TransformerTankEnd:
+
+[[UnbalancedConnectivity-VoltageLevel]]
+==== VoltageLevel
+
+Inheritance path = <<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>> => <<UnbalancedConnectivity-ConnectivityNodeContainer,ConnectivityNodeContainer>> => <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:VoltageLevel:
+A collection of equipment at one common system voltage forming a switchgear. The equipment typically consists of breakers, busbars, instrumentation, control, regulation and protection devices as well as assemblies of all these.
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|BaseVoltage
+|1..1
+|<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
+|
+The base voltage used for all equipment within the voltage level.
+
+|Substation (OfAggregate)
+|1..1
+|<<UnbalancedConnectivity-Substation,Substation>>
+|
+The substation of the voltage level.
+
+|===
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!VoltageLevel:
+
+
+=== Abstract Classes
+
+[[UnbalancedConnectivity-ACDCTerminal]]
+==== ACDCTerminal
+
+Inheritance path = <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:ACDCTerminal:
+An electrical connection point (AC or DC) to a piece of conducting equipment. Terminals are connected at physical connection points called connectivity nodes.
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|sequenceNumber
+|0..1
+|<<UnbalancedConnectivity-Integer,Integer>>
+|
+The orientation of the terminal connections for a multiple terminal conducting equipment. The sequence numbering starts with 1 and additional terminals should follow in increasing order. The first terminal is the "starting point" for a two terminal branch.
+
+|===
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!ACDCTerminal:
+
+[[UnbalancedConnectivity-ConductingEquipment]]
+==== ConductingEquipment
+
+Inheritance path = <<UnbalancedConnectivity-Equipment,Equipment>> => <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:ConductingEquipment:
+The parts of the AC power system that are designed to carry current or that are conductively connected through terminals.
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|BaseVoltage
+|1..1
+|<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
+|
+Base voltage of this conducting equipment. Use only when there is no voltage level container used and only one base voltage applies. For example, not used for transformers.
+
+|===
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|aggregate
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|normallyInService
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|AdditionalEquipmentContainer
+|0..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|EquipmentContainer
+|1..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!ConductingEquipment:
+
+[[UnbalancedConnectivity-Conductor]]
+==== Conductor
+
+Inheritance path = <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>> => <<UnbalancedConnectivity-Equipment,Equipment>> => <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:Conductor:
+Combination of conducting material with consistent electrical characteristics, building a single electrical system, used to carry current between points in the power system.
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|BaseVoltage
+|1..1
+|<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
+|see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
+|aggregate
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|normallyInService
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|AdditionalEquipmentContainer
+|0..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|EquipmentContainer
+|1..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!Conductor:
+
+[[UnbalancedConnectivity-ConnectivityNodeContainer]]
+==== ConnectivityNodeContainer
+
+Inheritance path = <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:ConnectivityNodeContainer:
+A base class for all objects that may contain connectivity nodes or topological nodes.
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!ConnectivityNodeContainer:
+
+[[UnbalancedConnectivity-Connector]]
+==== Connector
+
+Inheritance path = <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>> => <<UnbalancedConnectivity-Equipment,Equipment>> => <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:Connector:
+A conductor, or group of conductors, with negligible impedance, that serve to connect other conducting equipment within a single substation and are modelled with a single logical terminal.
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|BaseVoltage
+|1..1
+|<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
+|see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
+|aggregate
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|normallyInService
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|AdditionalEquipmentContainer
+|0..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|EquipmentContainer
+|1..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!Connector:
+
+[[UnbalancedConnectivity-EnergyConnection]]
+==== EnergyConnection
+
+Inheritance path = <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>> => <<UnbalancedConnectivity-Equipment,Equipment>> => <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:EnergyConnection:
+A connection of energy generation or consumption on the power system model.
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|BaseVoltage
+|1..1
+|<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
+|see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
+|aggregate
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|normallyInService
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|AdditionalEquipmentContainer
+|0..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|EquipmentContainer
+|1..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!EnergyConnection:
+
+[[UnbalancedConnectivity-Equipment]]
+==== Equipment
+
+Inheritance path = <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:Equipment:
+The parts of a power system that are physical devices, electronic or mechanical.
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|aggregate
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|
+The aggregate flag provides an alternative way of representing an aggregated (equivalent) element. It is applicable in cases when the dedicated classes for equivalent equipment do not have all of the attributes necessary to represent the required level of detail. In case the flag is set to "true" the single instance of equipment represents multiple pieces of equipment that have been modelled together as an aggregate equivalent obtained by a network reduction procedure. Examples would be power transformers or synchronous machines operating in parallel modelled as a single aggregate power transformer or aggregate synchronous machine.
+
+The attribute is not used for EquivalentBranch, EquivalentShunt, EquivalentInjection and ExternalNetworkInjection.
+
+|normallyInService
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|
+Specifies the availability of the equipment under normal operating conditions. True means the equipment is available for topology processing, which determines if the equipment is energized or not. False means that the equipment is treated by network applications as if it is not in the model.
+
+|AdditionalEquipmentContainer
+|0..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|
+Additional equipment container beyond the primary equipment container. The equipment is contained in another equipment container, but also grouped with this equipment container.
+
+|EquipmentContainer
+|1..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|
+Container of this equipment.
+
+|===
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!Equipment:
+
+[[UnbalancedConnectivity-EquipmentContainer]]
+==== EquipmentContainer
+
+Inheritance path = <<UnbalancedConnectivity-ConnectivityNodeContainer,ConnectivityNodeContainer>> => <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:EquipmentContainer:
+A modelling construct to provide a root class for containing equipment.
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!EquipmentContainer:
+
+[[UnbalancedConnectivity-IdentifiedObject]]
+==== IdentifiedObject
+
+Inheritance path = <<UnbalancedConnectivity-Identity,Identity>>
+
+:IdentifiedObject:
+This is a class that provides common identification for all classes needing identification and naming attributes.
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|
+The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.
+
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|
+The name is any free human readable and possibly non unique text naming the object.
+
+|===
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!IdentifiedObject:
+
+[[UnbalancedConnectivity-Identity]]
+==== Identity
+
+
+:Identity:
+,
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|
+A universally unique object identifier. Used to uniquely identify persistent objects between CIM messages.
+
+|===
+:!Identity:
+
+[[UnbalancedConnectivity-PowerSystemResource]]
+==== PowerSystemResource
+
+Inheritance path = <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:PowerSystemResource:
+A power system resource (PSR) can be an item of equipment such as a switch, an equipment container containing many individual items of equipment such as a substation, or an organisational entity such as sub-control area. Power system resources can have measurements associated.
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!PowerSystemResource:
+
+[[UnbalancedConnectivity-ProtectedSwitch]]
+==== ProtectedSwitch
+
+Inheritance path = <<UnbalancedConnectivity-Switch,Switch>> => <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>> => <<UnbalancedConnectivity-Equipment,Equipment>> => <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:ProtectedSwitch:
+A ProtectedSwitch is a switching device that can be operated by ProtectionEquipment.
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|locked
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Switch,Switch>>
+|normalOpen
+|1..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Switch,Switch>>
+|BaseVoltage
+|1..1
+|<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
+|see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
+|aggregate
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|normallyInService
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|AdditionalEquipmentContainer
+|0..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|EquipmentContainer
+|1..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!ProtectedSwitch:
+
+[[UnbalancedConnectivity-RegulatingCondEq]]
+==== RegulatingCondEq
+
+Inheritance path = <<UnbalancedConnectivity-EnergyConnection,EnergyConnection>> => <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>> => <<UnbalancedConnectivity-Equipment,Equipment>> => <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:RegulatingCondEq:
+A type of conducting equipment that can regulate a quantity (i.e. voltage or flow) at a specific point in the network.
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|BaseVoltage
+|1..1
+|<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
+|see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
+|aggregate
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|normallyInService
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|AdditionalEquipmentContainer
+|0..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|EquipmentContainer
+|1..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!RegulatingCondEq:
+
+[[UnbalancedConnectivity-RotatingMachine]]
+==== RotatingMachine
+
+Inheritance path = <<UnbalancedConnectivity-RegulatingCondEq,RegulatingCondEq>> => <<UnbalancedConnectivity-EnergyConnection,EnergyConnection>> => <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>> => <<UnbalancedConnectivity-Equipment,Equipment>> => <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:RotatingMachine:
+A rotating machine which may be used as a generator or motor.
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|BaseVoltage
+|1..1
+|<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
+|see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
+|aggregate
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|normallyInService
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|AdditionalEquipmentContainer
+|0..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|EquipmentContainer
+|1..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!RotatingMachine:
+
+[[UnbalancedConnectivity-ShuntCompensator]]
+==== ShuntCompensator
+
+Inheritance path = <<UnbalancedConnectivity-RegulatingCondEq,RegulatingCondEq>> => <<UnbalancedConnectivity-EnergyConnection,EnergyConnection>> => <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>> => <<UnbalancedConnectivity-Equipment,Equipment>> => <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:ShuntCompensator:
+A shunt capacitor or reactor or switchable bank of shunt capacitors or reactors. A section of a shunt compensator is an individual capacitor or reactor. A negative value for bPerSection indicates that the compensator is a reactor. ShuntCompensator is a single terminal device. Ground is implied.
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|grounded
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|
+Required for Yn and I connections (as represented by ShuntCompensator.phaseConnection). True if the neutral is solidly grounded.
+
+|phaseConnection (enumeration)
+|0..1
+|<<UnbalancedConnectivity-PhaseShuntConnectionKind,PhaseShuntConnectionKind>>
+|
+The type of phase connection, such as wye or delta.
+
+|===
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|BaseVoltage
+|1..1
+|<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
+|see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
+|aggregate
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|normallyInService
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|AdditionalEquipmentContainer
+|0..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|EquipmentContainer
+|1..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!ShuntCompensator:
+
+[[UnbalancedConnectivity-ShuntCompensatorPhase]]
+==== ShuntCompensatorPhase
+
+Inheritance path = <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:ShuntCompensatorPhase:
+Single phase of a multi-phase shunt compensator when its attributes might be different per phase.
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|phase (enumeration)
+|1..1
+|<<UnbalancedConnectivity-SinglePhaseKind,SinglePhaseKind>>
+|
+Phase of this shunt compensator component. If the shunt compensator is wye connected, the connection is from the indicated phase to the central ground or neutral point. If the shunt compensator is delta connected, the phase indicates a shunt compensator connected from the indicated phase to the next logical non-neutral phase.
+
+|ShuntCompensator
+|1..1
+|<<UnbalancedConnectivity-ShuntCompensator,ShuntCompensator>>
+|
+Shunt compensator of this shunt compensator phase.
+
+|===
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!ShuntCompensatorPhase:
+
+[[UnbalancedConnectivity-Switch]]
+==== Switch
+
+Inheritance path = <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>> => <<UnbalancedConnectivity-Equipment,Equipment>> => <<UnbalancedConnectivity-PowerSystemResource,PowerSystemResource>> => <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:Switch:
+A generic device designed to close, or open, or both, one or more electric circuits. All switches are two terminal devices including grounding switches. The ACDCTerminal.connected at the two sides of the switch shall not be considered for assessing switch connectivity, i.e. only Switch.open, .normalOpen and .locked are relevant.
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|locked
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|
+If true, the switch is locked. The resulting switch state is a combination of locked and Switch.open attributes as follows:
+
+<ul>
+
+<li>locked=true and Switch.open=true. The resulting state is open and locked;</li>
+
+<li>locked=false and Switch.open=true. The resulting state is open;</li>
+
+<li>locked=false and Switch.open=false. The resulting state is closed.</li>
+
+</ul>
+
+|normalOpen
+|1..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|
+The attribute is used in cases when no Measurement for the status value is present. If the Switch has a status measurement the Discrete.normalValue is expected to match with the Switch.normalOpen.
+
+|===
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|BaseVoltage
+|1..1
+|<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
+|see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
+|aggregate
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|normallyInService
+|0..1
+|<<UnbalancedConnectivity-Boolean,Boolean>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|AdditionalEquipmentContainer
+|0..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|EquipmentContainer
+|1..1
+|<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
+|see <<UnbalancedConnectivity-Equipment,Equipment>>
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!Switch:
+
+[[UnbalancedConnectivity-TransformerEnd]]
+==== TransformerEnd
+
+Inheritance path = <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:TransformerEnd:
+A conducting connection point of a power transformer. It corresponds to a physical transformer winding terminal. In earlier CIM versions, the TransformerWinding class served a similar purpose, but this class is more flexible because it associates to terminal but is not a specialization of ConductingEquipment.
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|endNumber
+|1..1
+|<<UnbalancedConnectivity-Integer,Integer>>
+|
+Number for this transformer end, corresponding to the end's order in the power transformer vector group or phase angle clock number. Highest voltage winding should be 1. Each end within a power transformer should have a unique subsequent end number. Note the transformer end number need not match the terminal sequence number.
+
+|BaseVoltage
+|0..1
+|<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
+|
+Base voltage of the transformer end. This is essential for PU calculation.
+
+|Terminal
+|1..1
+|<<UnbalancedConnectivity-Terminal,Terminal>>
+|
+Terminal of the power transformer to which this transformer end belongs.
+
+|===
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!TransformerEnd:
+
+
+=== Enumerations
+
+[[UnbalancedConnectivity-OrderedPhaseCodeKind]]
+==== OrderedPhaseCodeKind
+
+In some use cases, the ordering of phases is important. The PhaseCode class does not represent order, but this class addresses such use cases. When two or more phases are present, the individual phases may occur in any order, but the neutral must always occur last. When only one phase and the neutral is present, that phase and the neutral may be re-ordered.
+
+
+[%header,width="100%",cols="25%,75%a"]
+|===
+|name |description
+
+|A
+|
+
+|AB
+|
+
+|ABC
+|
+
+|ABCN
+|
+
+|ABN
+|
+
+|AC
+|
+
+|ACB
+|
+
+|ACBN
+|
+
+|ACN
+|
+
+|AN
+|
+
+|B
+|
+
+|BA
+|
+
+|BAC
+|
+
+|BACN
+|
+
+|BAN
+|
+
+|BC
+|
+
+|BCA
+|
+
+|BCAN
+|
+
+|BCN
+|
+
+|BN
+|
+
+|C
+|
+
+|CA
+|
+
+|CAB
+|
+
+|CABN
+|
+
+|CAN
+|
+
+|CB
+|
+
+|CBA
+|
+
+|CBAN
+|
+
+|CBN
+|
+
+|CN
+|
+
+|NA
+|
+
+|NB
+|
+
+|NC
+|
+
+|Ns1
+|
+
+|Ns2
+|
+
+|X
+|
+
+|XN
+|
+
+|XY
+|
+
+|XYN
+|
+
+|none
+|
+
+|s1
+|
+
+|s12
+|
+
+|s12N
+|
+
+|s1N
+|
+
+|s2
+|
+
+|s21
+|
+
+|s21N
+|
+
+|s2N
+|
+|===
+[[UnbalancedConnectivity-PhaseShuntConnectionKind]]
+==== PhaseShuntConnectionKind
+
+The configuration of phase connections for a single terminal device such as a load or capacitor.
+
+
+[%header,width="100%",cols="25%,75%a"]
+|===
+|name |description
+
+|D
+|
+Delta connection.
+
+
+|G
+|
+Ground connection; use when explicit connection to ground needs to be expressed in combination with the phase code, such as for electrical wire/cable or for meters.
+
+
+|I
+|
+Independent winding, for single-phase connections.
+
+
+|Y
+|
+Wye connection.
+
+
+|Yn
+|
+Wye, with neutral brought out for grounding.
+
+|===
+[[UnbalancedConnectivity-SinglePhaseKind]]
+==== SinglePhaseKind
+
+Enumeration of phase identifiers used to designate the specific phase of conducting equipment modelled as individual unbalanced phases.
+
+Allows designation of specific phases for transmission and distribution equipment, circuits and loads.
+
+
+[%header,width="100%",cols="25%,75%a"]
+|===
+|name |description
+
+|A
+|
+Phase A.
+
+
+|B
+|
+Phase B.
+
+
+|C
+|
+Phase C.
+
+
+|N
+|
+Neutral.
+
+
+|s1
+|
+Secondary phase 1.
+
+
+|s2
+|
+Secondary phase 2.
+
+|===
+[[UnbalancedConnectivity-WindingConnection]]
+==== WindingConnection
+
+Winding connection type.
+
+
+[%header,width="100%",cols="25%,75%a"]
+|===
+|name |description
+
+|A
+|
+Autotransformer common winding.
+
+
+|D
+|
+Delta.
+
+
+|I
+|
+Independent winding, for single-phase connections.
+
+
+|Y
+|
+Wye.
+
+
+|Yn
+|
+Wye, with neutral brought out for grounding.
+
+
+|Z
+|
+ZigZag.
+
+
+|Zn
+|
+ZigZag, with neutral brought out for grounding.
+
+|===
+
+=== Datatypes
+
+[[UnbalancedConnectivity-Voltage]]
+==== Voltage
+
+Electrical voltage, can be both AC and DC.
+
+
+XSD type: float
+
+
+=== Primitive Types
+
+[[UnbalancedConnectivity-Boolean]]
+==== Boolean
+
+A type with the value space "true" and "false".http://langdale.com.au/2005/UML#primitive
+
+XSD type: boolean
+
+[[UnbalancedConnectivity-Integer]]
+==== Integer
+
+An integer number. The range is unspecified and not limited.http://langdale.com.au/2005/UML#primitive
+
+XSD type: integer
+
+[[UnbalancedConnectivity-String]]
+==== String
+
+A string consisting of a sequence of characters. The character encoding is UTF-8. The string length is unspecified and unlimited.http://langdale.com.au/2005/UML#primitive
+
+XSD type: string
+
+

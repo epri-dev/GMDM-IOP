@@ -1,0 +1,492 @@
+@startuml
+top to bottom direction
+hide empty methods
+
+' Here we adjust the horizontal spacing for better spatial rendering (the PlantUML default is ~20)
+skinparam nodesep 20
+' Here we adjust the vertical spacing for better spatial rendering (the PlantUML default is ~30)
+skinparam ranksep 30
+
+skinparam BackgroundColor #FFFFFF
+skinparam shadowing false
+skinparam RoundCorner 5
+skinparam BorderColor #454645
+skinparam ArrowColor #454645
+skinparam FontColor #000000
+
+skinparam class {
+  ' Concrete classes style definition
+  BackgroundColor #FFFFE0
+  FontColor #000000
+  AttributeFontColor #000000
+  StereotypeFontColor #000000
+  HeaderFontColor #000000
+  BorderColor #454645
+  BorderThickness 1
+  
+  ' Abstract classes style definition
+  BackgroundColor<<abstract>> #D3D3D3
+  FontColor<<abstract>> #000000
+  AttributeFontColor<<abstract>> #000000
+  StereotypeFontColor<<abstract>> #000000
+  HeaderFontColor<<abstract>> #000000
+  BorderColor<<abstract>> #454645
+  BorderThickness<<abstract>> 1
+  
+  ' Enumerations style definition
+  BackgroundColor<<enumeration>> #90EE90
+  FontColor<<enumeration>> #000000
+  AttributeFontColor<<enumeration>> #000000
+  StereotypeFontColor<<enumeration>> #000000
+  HeaderFontColor <<enumeration>> #000000
+  BorderColor<<enumeration>> #454645
+  BorderThickness<<enumeration>> 1
+  
+  ' CIMDatatypes style definition
+  BackgroundColor<<CIMDatatype>> #FFEBCD
+  FontColor<<CIMDatatype>> #000000
+  AttributeFontColor<<CIMDatatype>> #000000
+  StereotypeFontColor<<CIMDatatype>> #000000
+  HeaderFontColor<<CIMDatatype>> #000000
+  BorderColor<<CIMDatatype>> #454645
+  BorderThickness<<CIMDatatype>> 1
+  
+  ' Compound classes style definition
+  BackgroundColor<<Compound>> #FFEBCD
+  FontColor<<Compound>> #000000
+  AttributeFontColor<<Compound>> #000000
+  StereotypeFontColor<<Compound>> #000000
+  HeaderFontColor<<Compound>> #000000
+  BorderColor<<Compound>> #454645
+  BorderThickness<<Compound>> 1
+  
+  ' Primitive classes style definition
+  BackgroundColor<<Primitive>> #E6E6FF
+  FontColor<<Primitive>> #000000
+  AttributeFontColor<<Primitive>> #000000
+  StereotypeFontColor<<Primitive>> #000000
+  HeaderFontColor<<Primitive>> #000000
+  BorderColor<<Primitive>> #454645
+  BorderThickness<<Primitive>> 1
+  
+  ' Errors classes style definition
+  BackgroundColor<<error>> #FFC0CB
+  FontColor<<error>> #000000
+  AttributeFontColor<<error>> #000000
+  StereotypeFontColor<<error>> #000000
+  HeaderFontColor<<error>> #000000
+  BorderColor<<error>> #454645
+  BorderThickness<<error>> 1
+}
+skinparam shadowing true
+
+hide <<abstract>> stereotype
+hide <<error>> stereotype
+
+
+skinparam note {
+  BorderColor #454645
+  BorderThickness 1.5
+  FontSize 14
+  Font Bold
+  FontColor #000000
+}
+' Add a note towards the upper left corner of the diagram
+note as UnbalancedConnectivityNote #lightyellow
+   Profile: UnbalancedConnectivity
+   Namespace: http://www.ucaiug.org/gmdm/connectivity/unbalanced#
+end note
+
+' ACDCTerminal inherits from IdentifiedObject
+abstract class ACDCTerminal  <<abstract>> {
+   +sequenceNumber : integer [0..1]
+}
+
+IdentifiedObject <|-- ACDCTerminal
+
+' ACLineSegment inherits from Conductor
+class ACLineSegment   {
+}
+
+Conductor <|-- ACLineSegment
+
+' ACLineSegmentPhase inherits from PowerSystemResource
+class ACLineSegmentPhase   {
+   +phase : SinglePhaseKind [1]
+}
+
+PowerSystemResource <|-- ACLineSegmentPhase
+ACLineSegmentPhase "+ACLineSegmentPhases 0..4" --> "+ACLineSegment 0..1" ACLineSegment
+
+' AsynchronousMachine inherits from RotatingMachine
+class AsynchronousMachine   {
+}
+
+RotatingMachine <|-- AsynchronousMachine
+
+' BaseVoltage inherits from IdentifiedObject
+class BaseVoltage   {
+   +nominalVoltage : Voltage [1]
+}
+
+IdentifiedObject <|-- BaseVoltage
+
+' Breaker inherits from ProtectedSwitch
+class Breaker   {
+}
+
+ProtectedSwitch <|-- Breaker
+
+' BusbarSection inherits from Connector
+class BusbarSection   {
+}
+
+Connector <|-- BusbarSection
+
+' ConductingEquipment inherits from Equipment
+abstract class ConductingEquipment  <<abstract>> {
+}
+
+Equipment <|-- ConductingEquipment
+ConductingEquipment "+ConductingEquipment 0..*" --> "+BaseVoltage 1" BaseVoltage#red
+
+' Conductor inherits from ConductingEquipment
+abstract class Conductor  <<abstract>> {
+}
+
+ConductingEquipment <|-- Conductor
+
+' ConnectivityNode inherits from IdentifiedObject
+class ConnectivityNode   {
+}
+
+IdentifiedObject <|-- ConnectivityNode
+
+' ConnectivityNodeContainer inherits from PowerSystemResource
+abstract class ConnectivityNodeContainer  <<abstract>> {
+}
+
+PowerSystemResource <|-- ConnectivityNodeContainer
+
+' Connector inherits from ConductingEquipment
+abstract class Connector  <<abstract>> {
+}
+
+ConductingEquipment <|-- Connector
+
+' Disconnector inherits from Switch
+class Disconnector   {
+}
+
+Switch <|-- Disconnector
+
+' EnergyConnection inherits from ConductingEquipment
+abstract class EnergyConnection  <<abstract>> {
+}
+
+ConductingEquipment <|-- EnergyConnection
+
+' EnergyConsumer inherits from EnergyConnection
+class EnergyConsumer   {
+   +customerCount : integer [0..1]
+   +grounded : boolean [0..1]
+}
+
+EnergyConnection <|-- EnergyConsumer
+EnergyConsumer " " --> "+phaseConnection 1" PhaseShuntConnectionKind#red
+
+' EnergyConsumerPhase inherits from PowerSystemResource
+class EnergyConsumerPhase   {
+   +phase : SinglePhaseKind [1]
+}
+
+PowerSystemResource <|-- EnergyConsumerPhase
+EnergyConsumerPhase "+EnergyConsumerPhase 0..3" --> "+EnergyConsumer 1" EnergyConsumer
+
+' EnergySource inherits from EnergyConnection
+class EnergySource   {
+}
+
+EnergyConnection <|-- EnergySource
+
+' Equipment inherits from PowerSystemResource
+abstract class Equipment  <<abstract>> {
+   +aggregate : boolean [0..1]
+   +normallyInService : boolean [0..1]
+}
+
+PowerSystemResource <|-- Equipment
+Equipment "+AdditionalGroupedEquipment 0..*" --> "+AdditionalEquipmentContainer 0..1" EquipmentContainer
+Equipment "+Equipments 0..*" --> "+EquipmentContainer 1" EquipmentContainer#red
+
+' EquipmentContainer inherits from ConnectivityNodeContainer
+abstract class EquipmentContainer  <<abstract>> {
+}
+
+ConnectivityNodeContainer <|-- EquipmentContainer
+
+' Feeder inherits from EquipmentContainer
+class Feeder   {
+}
+
+EquipmentContainer <|-- Feeder
+Feeder "+NormalEnergizedFeeder 0..*" --o "+NormalEnergizingSubstation 1" Substation#red
+
+' Fuse inherits from Switch
+class Fuse   {
+}
+
+Switch <|-- Fuse
+
+' IdentifiedObject inherits from Identity
+abstract class IdentifiedObject  <<abstract>> {
+   +description : string [0..1]
+   +name : string [0..1]
+}
+
+Identity <|-- IdentifiedObject
+
+' Identity
+abstract class Identity  <<abstract>> {
+   +identifier : string [1]
+}
+
+
+' Line inherits from EquipmentContainer
+class Line   {
+}
+
+EquipmentContainer <|-- Line
+
+' LinearShuntCompensator inherits from ShuntCompensator
+class LinearShuntCompensator   {
+}
+
+ShuntCompensator <|-- LinearShuntCompensator
+
+' LinearShuntCompensatorPhase inherits from ShuntCompensatorPhase
+class LinearShuntCompensatorPhase   {
+}
+
+ShuntCompensatorPhase <|-- LinearShuntCompensatorPhase
+
+' LoadBreakSwitch inherits from ProtectedSwitch
+class LoadBreakSwitch   {
+}
+
+ProtectedSwitch <|-- LoadBreakSwitch
+
+' Enumeration OrderedPhaseCodeKind
+enum OrderedPhaseCodeKind <<gmdm>><<enumeration>><<Attribute>>  {
+   A
+   AB
+   ABC
+   ABCN
+   ABN
+   AC
+   ACB
+   ACBN
+   ACN
+   AN
+   B
+   BA
+   BAC
+   BACN
+   BAN
+   BC
+   BCA
+   BCAN
+   BCN
+   BN
+   [Remaining 33 literals hidden]
+}
+
+' Enumeration PhaseShuntConnectionKind
+enum PhaseShuntConnectionKind <<enumeration>><<Attribute>>  {
+   D
+   G
+   I
+   Y
+   Yn
+}
+
+' PowerElectronicsConnection inherits from RegulatingCondEq
+class PowerElectronicsConnection   {
+}
+
+RegulatingCondEq <|-- PowerElectronicsConnection
+
+' PowerElectronicsConnectionPhase inherits from PowerSystemResource
+class PowerElectronicsConnectionPhase   {
+   +phase : SinglePhaseKind [1]
+}
+
+PowerSystemResource <|-- PowerElectronicsConnectionPhase
+PowerElectronicsConnectionPhase "+PowerElectronicsConnectionPhase 0..3" --> "+PowerElectronicsConnection 1" PowerElectronicsConnection
+
+' PowerSystemResource inherits from IdentifiedObject
+abstract class PowerSystemResource  <<abstract>> {
+}
+
+IdentifiedObject <|-- PowerSystemResource
+
+' PowerTransformer inherits from ConductingEquipment
+class PowerTransformer   {
+   +vectorGroup : string [1]
+}
+
+ConductingEquipment <|-- PowerTransformer
+
+' PowerTransformerEnd inherits from TransformerEnd
+class PowerTransformerEnd   {
+}
+
+TransformerEnd <|-- PowerTransformerEnd
+PowerTransformerEnd " " --> "+connectionKind 0..1" WindingConnection#red
+PowerTransformerEnd "+PowerTransformerEnd 1..3" --> "+PowerTransformer 1" PowerTransformer
+
+' ProtectedSwitch inherits from Switch
+abstract class ProtectedSwitch  <<abstract>> {
+}
+
+Switch <|-- ProtectedSwitch
+
+' Recloser inherits from ProtectedSwitch
+class Recloser   {
+}
+
+ProtectedSwitch <|-- Recloser
+
+' RegulatingCondEq inherits from EnergyConnection
+abstract class RegulatingCondEq  <<abstract>> {
+}
+
+EnergyConnection <|-- RegulatingCondEq
+
+' RotatingMachine inherits from RegulatingCondEq
+abstract class RotatingMachine  <<abstract>> {
+}
+
+RegulatingCondEq <|-- RotatingMachine
+
+' Sectionaliser inherits from Switch
+class Sectionaliser   {
+}
+
+Switch <|-- Sectionaliser
+
+' SeriesCompensator inherits from ConductingEquipment
+class SeriesCompensator   {
+}
+
+ConductingEquipment <|-- SeriesCompensator
+
+' ShuntCompensator inherits from RegulatingCondEq
+abstract class ShuntCompensator  <<abstract>> {
+   +grounded : boolean [0..1]
+}
+
+RegulatingCondEq <|-- ShuntCompensator
+ShuntCompensator " " --> "+phaseConnection 0..1" PhaseShuntConnectionKind#red
+
+' ShuntCompensatorPhase inherits from PowerSystemResource
+abstract class ShuntCompensatorPhase  <<abstract>> {
+   +phase : SinglePhaseKind [1]
+}
+
+PowerSystemResource <|-- ShuntCompensatorPhase
+ShuntCompensatorPhase "+ShuntCompensatorPhase 0..3" --> "+ShuntCompensator 1" ShuntCompensator
+
+' Enumeration SinglePhaseKind
+enum SinglePhaseKind <<enumeration>><<Attribute>>  {
+   A
+   B
+   C
+   N
+   s1
+   s2
+}
+
+' Substation inherits from EquipmentContainer
+class Substation   {
+}
+
+EquipmentContainer <|-- Substation
+
+' Switch inherits from ConductingEquipment
+abstract class Switch  <<abstract>> {
+   +locked : boolean [0..1]
+   +normalOpen : boolean [1]
+}
+
+ConductingEquipment <|-- Switch
+
+' SwitchPhase inherits from PowerSystemResource
+class SwitchPhase   {
+   +normalOpen : boolean [0..1]
+   +phaseSide1 : SinglePhaseKind [1]
+   +phaseSide2 : SinglePhaseKind [1]
+}
+
+PowerSystemResource <|-- SwitchPhase
+SwitchPhase "+SwitchPhase 0..3" --> "+Switch 1" Switch
+
+' SynchronousMachine inherits from RotatingMachine
+class SynchronousMachine   {
+}
+
+RotatingMachine <|-- SynchronousMachine
+
+' Terminal inherits from ACDCTerminal
+class Terminal   {
+}
+
+ACDCTerminal <|-- Terminal
+Terminal "+Terminals 0..*" --> "+ConductingEquipment 0..1" ConductingEquipment
+Terminal "+Terminals 0..*" --> "+ConnectivityNode 0..1" ConnectivityNode
+Terminal "+NormalHeadTerminal 0..*" --> "+NormalHeadFeeder 0..1" Feeder
+
+' TransformerEnd inherits from IdentifiedObject
+abstract class TransformerEnd  <<abstract>> {
+   +endNumber : integer [1]
+}
+
+IdentifiedObject <|-- TransformerEnd
+TransformerEnd "+TransformerEnds 0..*" --> "+BaseVoltage 0..1" BaseVoltage
+TransformerEnd "+TransformerEnd 0..*" --> "+Terminal 1" Terminal
+
+' TransformerTank inherits from Equipment
+class TransformerTank   {
+}
+
+Equipment <|-- TransformerTank
+TransformerTank "+TransformerTanks 0..3" --> "+PowerTransformer 1" PowerTransformer
+
+' TransformerTankEnd inherits from TransformerEnd
+class TransformerTankEnd   {
+}
+
+TransformerEnd <|-- TransformerTankEnd
+TransformerTankEnd " " --> "+orderedPhases 1" OrderedPhaseCodeKind#red : <<gmdm>>
+TransformerTankEnd "+TransformerTankEnds 1..3" --> "+TransformerTank 1" TransformerTank
+
+' VoltageLevel inherits from EquipmentContainer
+class VoltageLevel   {
+}
+
+EquipmentContainer <|-- VoltageLevel
+VoltageLevel "+VoltageLevel 0..*" --> "+BaseVoltage 1" BaseVoltage#red
+VoltageLevel "+VoltageLevels 0..*" --o "+Substation 1" Substation#red
+
+' Enumeration WindingConnection
+enum WindingConnection <<enumeration>><<Attribute>>  {
+   A
+   D
+   I
+   Y
+   Yn
+   Z
+   Zn
+}
+
+@enduml
