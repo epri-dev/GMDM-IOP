@@ -1,0 +1,910 @@
+
+== Asset Profile Specification
+
+// Settings:
+:doctype: inline
+:reproducible:
+:icons: font
+:sectnums:
+:sectnumlevels: 4
+:xrefstyle: short
+
+Profile namespace: http://www.ucaiug.org/gmdm/asset#
+
+.Asset Profile
+plantuml::./Profiles/Asset.rdfs-t2b.puml[format=svg, align=center]
+
+
+=== Concrete Classes
+
+[[Asset-NoLoadTest]]
+==== NoLoadTest
+
+Inheritance path = <<Asset-TransformerTest,TransformerTest>> => <<Asset-IdentifiedObject,IdentifiedObject>> => <<Asset-Identity,Identity>>
+
+:NoLoadTest:
+No-load test results determine core admittance parameters. They include exciting current and core loss measurements from applying voltage to one winding. The excitation may be positive sequence or zero sequence. The test may be repeated at different voltages to measure saturation.
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|energisedEndVoltage
+|0..1
+|<<Asset-Voltage,Voltage>>
+|
+Voltage applied to the winding (end) during test.
+
+|excitingCurrent
+|0..1
+|<<Asset-PerCent,PerCent>>
+|
+Exciting current measured from a positive-sequence or single-phase excitation test.
+
+|excitingCurrentZero
+|0..1
+|<<Asset-PerCent,PerCent>>
+|
+Exciting current measured from a zero-sequence open-circuit excitation test.
+
+|loss
+|0..1
+|<<Asset-KiloActivePower,KiloActivePower>>
+|
+Losses measured from a positive-sequence or single-phase excitation test.
+
+|lossZero
+|0..1
+|<<Asset-KiloActivePower,KiloActivePower>>
+|
+Losses measured from a zero-sequence excitation test.
+
+|EnergisedEnd
+|1..1
+|<<Asset-TransformerEndInfo,TransformerEndInfo>>
+|
+Transformer end that current is applied to in this no-load test.
+
+|===
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|basePower
+|1..1
+|<<Asset-ApparentPower,ApparentPower>>
+|see <<Asset-TransformerTest,TransformerTest>>
+|temperature
+|1..1
+|<<Asset-Temperature,Temperature>>
+|see <<Asset-TransformerTest,TransformerTest>>
+|description
+|0..1
+|<<Asset-String,String>>
+|see <<Asset-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<Asset-String,String>>
+|see <<Asset-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<Asset-String,String>>
+|see <<Asset-Identity,Identity>>
+|===
+:!NoLoadTest:
+
+[[Asset-ShortCircuitTest]]
+==== ShortCircuitTest
+
+Inheritance path = <<Asset-TransformerTest,TransformerTest>> => <<Asset-IdentifiedObject,IdentifiedObject>> => <<Asset-Identity,Identity>>
+
+:ShortCircuitTest:
+Short-circuit test results determine mesh impedance parameters. They include load losses and leakage impedances. For three-phase windings, the excitation can be a positive sequence (the default) or a zero sequence. There shall be at least one grounded winding.
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|energisedEndStep
+|0..1
+|<<Asset-Integer,Integer>>
+|
+Tap step number for the energised end of the test pair.
+
+|groundedEndStep
+|0..1
+|<<Asset-Integer,Integer>>
+|
+Tap step number for the grounded end of the test pair.
+
+|leakageImpedance
+|0..1
+|<<Asset-Impedance,Impedance>>
+|
+Leakage impedance measured from a positive-sequence or single-phase short-circuit test.
+
+|leakageImpedanceZero
+|0..1
+|<<Asset-Impedance,Impedance>>
+|
+Leakage impedance measured from a zero-sequence short-circuit test.
+
+|loss
+|0..1
+|<<Asset-KiloActivePower,KiloActivePower>>
+|
+Load losses from a positive-sequence or single-phase short-circuit test.
+
+|lossZero
+|0..1
+|<<Asset-KiloActivePower,KiloActivePower>>
+|
+Load losses from a zero-sequence short-circuit test.
+
+|EnergisedEnd
+|1..1
+|<<Asset-TransformerEndInfo,TransformerEndInfo>>
+|
+Transformer end that voltage is applied to in this short-circuit test. The test voltage is chosen to induce rated current in the energised end.
+
+|GroundedEnds
+|1..*
+|<<Asset-TransformerEndInfo,TransformerEndInfo>>
+|
+All ends short-circuited in this short-circuit test.
+
+|===
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|basePower
+|1..1
+|<<Asset-ApparentPower,ApparentPower>>
+|see <<Asset-TransformerTest,TransformerTest>>
+|temperature
+|1..1
+|<<Asset-Temperature,Temperature>>
+|see <<Asset-TransformerTest,TransformerTest>>
+|description
+|0..1
+|<<Asset-String,String>>
+|see <<Asset-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<Asset-String,String>>
+|see <<Asset-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<Asset-String,String>>
+|see <<Asset-Identity,Identity>>
+|===
+:!ShortCircuitTest:
+
+[[Asset-TransformerEndInfo]]
+==== TransformerEndInfo
+
+Inheritance path = <<Asset-ConductingAssetInfo,ConductingAssetInfo>> => <<Asset-AssetInfo,AssetInfo>> => <<Asset-IdentifiedObject,IdentifiedObject>> => <<Asset-Identity,Identity>>
+
+:TransformerEndInfo:
+Transformer end data.
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|connectionKind (enumeration)
+|0..1
+|<<Asset-WindingConnection,WindingConnection>>
+|
+Kind of connection.
+
+|emergencyS
+|0..1
+|<<Asset-ApparentPower,ApparentPower>>
+|
+Apparent power that the winding can carry under emergency conditions (also called long-term emergency power).
+
+|endNumber
+|1..1
+|<<Asset-Integer,Integer>>
+|
+Number for this transformer end, corresponding to the end's order in the PowerTransformer.vectorGroup attribute. Highest voltage winding should be 1.
+
+|insulationU
+|0..1
+|<<Asset-Voltage,Voltage>>
+|
+Basic insulation level voltage rating.
+
+|phaseAngleClock
+|0..1
+|<<Asset-Integer,Integer>>
+|
+Winding phase angle where 360 degrees are represented with clock hours, so the valid values are {0, ..., 11}. For example, to express the second winding in code 'Dyn11', set attributes as follows: 'endNumber'=2, 'connectionKind' = Yn and 'phaseAngleClock' = 11.
+
+|r
+|0..1
+|<<Asset-Resistance,Resistance>>
+|
+DC resistance.
+
+|ratedS
+|0..1
+|<<Asset-ApparentPower,ApparentPower>>
+|
+Normal apparent power rating.
+
+|shortTermS
+|0..1
+|<<Asset-ApparentPower,ApparentPower>>
+|
+Apparent power that this winding can carry for a short period of time (in emergency).
+
+|TransformerTankInfo
+|0..1
+|<<Asset-TransformerTankInfo,TransformerTankInfo>>
+|
+Transformer tank data that this end description is part of.
+
+|===
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|ratedVoltage
+|0..1
+|<<Asset-Voltage,Voltage>>
+|see <<Asset-ConductingAssetInfo,ConductingAssetInfo>>
+|description
+|0..1
+|<<Asset-String,String>>
+|see <<Asset-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<Asset-String,String>>
+|see <<Asset-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<Asset-String,String>>
+|see <<Asset-Identity,Identity>>
+|===
+:!TransformerEndInfo:
+
+[[Asset-TransformerTank]]
+==== (Description) TransformerTank
+
+Inheritance path = <<Asset-Equipment,Equipment>> => <<Asset-PowerSystemResource,PowerSystemResource>> => <<Asset-IdentifiedObject,IdentifiedObject>> => <<Asset-Identity,Identity>>
+
+ifdef::Asset-description-profile[]
+This class is tagged in this profile with the 'Description' tag. To refer to the full definition of this class as defined in the profile this one depends on visit <<{Asset-description-profile}-TransformerTank,TransformerTank>>.
+endif::Asset-description-profile[]
+
+:TransformerTank:
+An assembly of two or more coupled windings that transform electrical power between voltage levels. These windings are bound on a common core and placed in the same tank. Transformer tank can be used to model both single-phase and 3-phase transformers.
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|[extension]#TransformerTankInfo#
+|0..1
+|<<Asset-TransformerTankInfo,TransformerTankInfo>>
+|
+|===
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|description
+|0..1
+|<<Asset-String,String>>
+|see <<Asset-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<Asset-String,String>>
+|see <<Asset-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<Asset-String,String>>
+|see <<Asset-Identity,Identity>>
+|===
+:!TransformerTank:
+
+[[Asset-TransformerTankInfo]]
+==== TransformerTankInfo
+
+Inheritance path = <<Asset-AssetInfo,AssetInfo>> => <<Asset-IdentifiedObject,IdentifiedObject>> => <<Asset-Identity,Identity>>
+
+:TransformerTankInfo:
+Set of transformer tank data, from an equipment library.
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|description
+|0..1
+|<<Asset-String,String>>
+|see <<Asset-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<Asset-String,String>>
+|see <<Asset-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<Asset-String,String>>
+|see <<Asset-Identity,Identity>>
+|===
+:!TransformerTankInfo:
+
+
+=== Abstract Classes
+
+[[Asset-AssetInfo]]
+==== AssetInfo
+
+Inheritance path = <<Asset-IdentifiedObject,IdentifiedObject>> => <<Asset-Identity,Identity>>
+
+:AssetInfo:
+Set of attributes of an asset, representing typical datasheet information of a physical device that can be instantiated and shared in different data exchange contexts:
+
+- as attributes of an asset instance (installed or in stock)
+
+- as attributes of an asset model (product by a manufacturer)
+
+- as attributes of a type asset (generic type of an asset as used in designs/extension planning).
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|description
+|0..1
+|<<Asset-String,String>>
+|see <<Asset-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<Asset-String,String>>
+|see <<Asset-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<Asset-String,String>>
+|see <<Asset-Identity,Identity>>
+|===
+:!AssetInfo:
+
+[[Asset-ConductingAssetInfo]]
+==== ConductingAssetInfo
+
+Inheritance path = <<Asset-AssetInfo,AssetInfo>> => <<Asset-IdentifiedObject,IdentifiedObject>> => <<Asset-Identity,Identity>>
+
+:ConductingAssetInfo:
+Generic information for conducting asset
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|ratedVoltage
+|0..1
+|<<Asset-Voltage,Voltage>>
+|
+Rated voltage.
+
+|===
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|description
+|0..1
+|<<Asset-String,String>>
+|see <<Asset-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<Asset-String,String>>
+|see <<Asset-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<Asset-String,String>>
+|see <<Asset-Identity,Identity>>
+|===
+:!ConductingAssetInfo:
+
+[[Asset-Equipment]]
+==== Equipment
+
+Inheritance path = <<Asset-PowerSystemResource,PowerSystemResource>> => <<Asset-IdentifiedObject,IdentifiedObject>> => <<Asset-Identity,Identity>>
+
+:Equipment:
+The parts of a power system that are physical devices, electronic or mechanical.
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|description
+|0..1
+|<<Asset-String,String>>
+|see <<Asset-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<Asset-String,String>>
+|see <<Asset-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<Asset-String,String>>
+|see <<Asset-Identity,Identity>>
+|===
+:!Equipment:
+
+[[Asset-IdentifiedObject]]
+==== IdentifiedObject
+
+Inheritance path = <<Asset-Identity,Identity>>
+
+:IdentifiedObject:
+This is a class that provides common identification for all classes needing identification and naming attributes.
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|description
+|0..1
+|<<Asset-String,String>>
+|
+The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.
+
+|name
+|0..1
+|<<Asset-String,String>>
+|
+The name is any free human readable and possibly non unique text naming the object.
+
+|===
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|identifier
+|1..1
+|<<Asset-String,String>>
+|see <<Asset-Identity,Identity>>
+|===
+:!IdentifiedObject:
+
+[[Asset-Identity]]
+==== Identity
+
+
+:Identity:
+,
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|identifier
+|1..1
+|<<Asset-String,String>>
+|
+A universally unique object identifier. Used to uniquely identify persistent objects between CIM messages.
+
+|===
+:!Identity:
+
+[[Asset-PowerSystemResource]]
+==== PowerSystemResource
+
+Inheritance path = <<Asset-IdentifiedObject,IdentifiedObject>> => <<Asset-Identity,Identity>>
+
+:PowerSystemResource:
+A power system resource (PSR) can be an item of equipment such as a switch, an equipment container containing many individual items of equipment such as a substation, or an organisational entity such as sub-control area. Power system resources can have measurements associated.
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|description
+|0..1
+|<<Asset-String,String>>
+|see <<Asset-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<Asset-String,String>>
+|see <<Asset-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<Asset-String,String>>
+|see <<Asset-Identity,Identity>>
+|===
+:!PowerSystemResource:
+
+[[Asset-TransformerTest]]
+==== TransformerTest
+
+Inheritance path = <<Asset-IdentifiedObject,IdentifiedObject>> => <<Asset-Identity,Identity>>
+
+:TransformerTest:
+Test result for transformer ends, such as short-circuit, open-circuit (excitation) or no-load test.
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|basePower
+|1..1
+|<<Asset-ApparentPower,ApparentPower>>
+|
+Base power at which the tests are conducted, usually equal to the rateds of one of the involved transformer ends.
+
+|temperature
+|1..1
+|<<Asset-Temperature,Temperature>>
+|
+Temperature at which the test is conducted.
+
+|===
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|description
+|0..1
+|<<Asset-String,String>>
+|see <<Asset-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<Asset-String,String>>
+|see <<Asset-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<Asset-String,String>>
+|see <<Asset-Identity,Identity>>
+|===
+:!TransformerTest:
+
+
+=== Enumerations
+
+[[Asset-OrderedPhaseCodeKind]]
+==== OrderedPhaseCodeKind
+
+In some use cases, the ordering of phases is important. The PhaseCode class does not represent order, but this class addresses such use cases. When two or more phases are present, the individual phases may occur in any order, but the neutral must always occur last. When only one phase and the neutral is present, that phase and the neutral may be re-ordered.
+
+
+[%header,width="100%",cols="25%,75%a"]
+|===
+|name |description
+
+|A
+|
+
+|AB
+|
+
+|ABC
+|
+
+|ABCN
+|
+
+|ABN
+|
+
+|AC
+|
+
+|ACB
+|
+
+|ACBN
+|
+
+|ACN
+|
+
+|AN
+|
+
+|B
+|
+
+|BA
+|
+
+|BAC
+|
+
+|BACN
+|
+
+|BAN
+|
+
+|BC
+|
+
+|BCA
+|
+
+|BCAN
+|
+
+|BCN
+|
+
+|BN
+|
+
+|C
+|
+
+|CA
+|
+
+|CAB
+|
+
+|CABN
+|
+
+|CAN
+|
+
+|CB
+|
+
+|CBA
+|
+
+|CBAN
+|
+
+|CBN
+|
+
+|CN
+|
+
+|NA
+|
+
+|NB
+|
+
+|NC
+|
+
+|Ns1
+|
+
+|Ns2
+|
+
+|X
+|
+
+|XN
+|
+
+|XY
+|
+
+|XYN
+|
+
+|none
+|
+
+|s1
+|
+
+|s12
+|
+
+|s12N
+|
+
+|s1N
+|
+
+|s2
+|
+
+|s21
+|
+
+|s21N
+|
+
+|s2N
+|
+|===
+[[Asset-PhaseCountKind]]
+==== PhaseCountKind
+
+Number of phases supported by a device.
+
+
+[%header,width="100%",cols="25%,75%a"]
+|===
+|name |description
+
+|other
+|
+Other
+
+
+|singlePhase
+|
+Single phase
+
+
+|threePhase
+|
+Three phases
+
+|===
+[[Asset-WindingConnection]]
+==== WindingConnection
+
+Winding connection type.
+
+
+[%header,width="100%",cols="25%,75%a"]
+|===
+|name |description
+
+|A
+|
+Autotransformer common winding.
+
+
+|D
+|
+Delta.
+
+
+|I
+|
+Independent winding, for single-phase connections.
+
+
+|Y
+|
+Wye.
+
+
+|Yn
+|
+Wye, with neutral brought out for grounding.
+
+
+|Z
+|
+ZigZag.
+
+
+|Zn
+|
+ZigZag, with neutral brought out for grounding.
+
+|===
+
+=== Datatypes
+
+[[Asset-ApparentPower]]
+==== ApparentPower
+
+Product of the RMS value of the voltage and the RMS value of the current.
+
+
+XSD type: float
+
+[[Asset-Impedance]]
+==== Impedance
+
+Ratio of voltage to current.
+
+
+XSD type: float
+
+[[Asset-KiloActivePower]]
+==== KiloActivePower
+
+Active power in kilowatts.
+
+
+XSD type: float
+
+[[Asset-PerCent]]
+==== PerCent
+
+Percentage on a defined base. For example, specify as 100 to indicate at the defined base.
+
+
+XSD type: float
+
+[[Asset-Resistance]]
+==== Resistance
+
+Resistance (real part of impedance).
+
+
+XSD type: float
+
+[[Asset-Temperature]]
+==== Temperature
+
+Value of temperature in degrees Celsius.
+
+
+XSD type: float
+
+[[Asset-Voltage]]
+==== Voltage
+
+Electrical voltage, can be both AC and DC.
+
+
+XSD type: float
+
+
+=== Primitive Types
+
+[[Asset-Integer]]
+==== Integer
+
+An integer number. The range is unspecified and not limited.http://langdale.com.au/2005/UML#primitive
+
+XSD type: integer
+
+[[Asset-String]]
+==== String
+
+A string consisting of a sequence of characters. The character encoding is UTF-8. The string length is unspecified and unlimited.http://langdale.com.au/2005/UML#primitive
+
+XSD type: string
+
+

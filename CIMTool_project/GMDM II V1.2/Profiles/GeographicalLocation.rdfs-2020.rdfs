@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+	Copyright 2025 UCAIug
+
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+
+	https://www.apache.org/licenses/LICENSE-2.0
+
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+-->
+<rdf:RDF xmlns:cims="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:uml="http://iec.ch/TC57/NonStandard/UML#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+         xml:base="http://cim.ucaiug.io/ns">
+   <rdf:Description rdf:about="#ACLineSegment">
+      <cims:belongsToCategory rdf:resource="#Package_Wires"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
+      <cims:stereotype>Description</cims:stereotype>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A line segment is a conductor or combination of conductors, with consistent electrical characteristics along its length, building a single electrical system that carries alternating current between two points in the power system.
+The BaseVoltage at the two ends of a line segment shall have the same BaseVoltage.nominalVoltage. However, boundary lines may have slightly different BaseVoltage.nominalVoltages and variation is allowed. Larger voltage difference in general requires use of an equivalent branch.
+Line segment impedances can be either directly described in electrical terms or physical line detail can be provided from which impedances can be calculated.
+&lt;b&gt;Directly described impedances&lt;/b&gt;
+For symmetrical, transposed three phase line segments, it is sufficient to use attributes of the line segment, which describe impedances and admittances for the entire length of the line segment.  Additionally, line segment impedances can be computed by using line segment length and associated per length impedances.
+Unbalanced modeling of impedances is supported by the per length phase impedance matrix (PerLengthPhaseImpedance) in conjunction with phase-to-sequence number mapping supplied by either ACLineSegmentPhase or WirePosition. The sequence numbers are referenced by the row and column attributes of the per length phase impedance matrix. This method enables single-phase and two-phase line segments, and transpositions of phases, to be described using the same per length phase impedance matrix. The length of the line segment is used in the computation of total impedance values for the line segment.
+&lt;b&gt;Line detail characteristics&lt;/b&gt;
+There are three approaches to providing line detail and all use WireAssembly to supply line positions:
+&lt;ul&gt;
+	&lt;li&gt;Option 1 - WireAssembly supplies only line positions. ACLineSegmentPhase points to wire type and intraphase spacing and supplies the phase-to-sequence number mapping.&lt;/li&gt;
+	&lt;li&gt;Option 2 - WireAssembly supplies line position and, for each position, also supplies wire type and intraphase spacing. ACLineSegmentPhase supplies the phase-to-sequence number mapping.&lt;/li&gt;
+	&lt;li&gt;Option 3 - WireAssembly supplies line position and, for each position, also supplies wire type and intraphase spacing and phase. WireAssembly therefore supplies the phase-to-sequence number mapping and ACLineSegmentPhase is not needed.&lt;/li&gt;
+&lt;/ul&gt;</rdfs:comment>
+      <rdfs:label xml:lang="en">ACLineSegment</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#Conductor"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#AsynchronousMachine">
+      <cims:belongsToCategory rdf:resource="#Package_Wires"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
+      <cims:stereotype>Description</cims:stereotype>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A rotating machine whose shaft rotates asynchronously with the electrical field.  Also known as an induction machine with no external connection to the rotor windings, e.g. squirrel-cage induction machine.</rdfs:comment>
+      <rdfs:label xml:lang="en">AsynchronousMachine</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#RotatingMachine"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Breaker">
+      <cims:belongsToCategory rdf:resource="#Package_Wires"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
+      <cims:stereotype>Description</cims:stereotype>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A mechanical switching device capable of making, carrying, and breaking currents under normal circuit conditions and also making, carrying for a specified time, and breaking currents under specified abnormal circuit conditions e.g. those of short circuit.</rdfs:comment>
+      <rdfs:label xml:lang="en">Breaker</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#ProtectedSwitch"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#BusbarSection">
+      <cims:belongsToCategory rdf:resource="#Package_Wires"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
+      <cims:stereotype>Description</cims:stereotype>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A conductor, or group of conductors, with negligible impedance, that serve to connect other conducting equipment within a single substation. The BusbarSection class is intended to represent physical parts of bus bars no matter how that bus bar is constructed.
+Voltage measurements are typically obtained from voltage transformers that are connected to busbar sections. A bus bar section may have many physical terminals but for analysis is modelled with exactly one logical terminal.</rdfs:comment>
+      <rdfs:label xml:lang="en">BusbarSection</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#Connector"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#ConductingEquipment">
+      <cims:belongsToCategory rdf:resource="#Package_Core"/>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The parts of the AC power system that are designed to carry current or that are conductively connected through terminals.</rdfs:comment>
+      <rdfs:label xml:lang="en">ConductingEquipment</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#Equipment"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Conductor">
+      <cims:belongsToCategory rdf:resource="#Package_Wires"/>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Combination of conducting material with consistent electrical characteristics, building a single electrical system, used to carry current between points in the power system.</rdfs:comment>
+      <rdfs:label xml:lang="en">Conductor</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#ConductingEquipment"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Connector">
+      <cims:belongsToCategory rdf:resource="#Package_Wires"/>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A conductor, or group of conductors, with negligible impedance, that serve to connect other conducting equipment within a single substation and are modelled with a single logical terminal.</rdfs:comment>
+      <rdfs:label xml:lang="en">Connector</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#ConductingEquipment"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#CoordinateSystem">
+      <cims:belongsToCategory rdf:resource="#Package_Common"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coordinate reference system.</rdfs:comment>
+      <rdfs:label xml:lang="en">CoordinateSystem</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#IdentifiedObject"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#CoordinateSystem.Location">
+      <cims:AssociationUsed>No</cims:AssociationUsed>
+      <cims:inverseRoleName rdf:resource="#Location.CoordinateSystem"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..n"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">All locations described with position points in this coordinate system.</rdfs:comment>
+      <rdfs:domain rdf:resource="#CoordinateSystem"/>
+      <rdfs:label xml:lang="en">Location</rdfs:label>
+      <rdfs:range rdf:resource="#Location"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Disconnector">
+      <cims:belongsToCategory rdf:resource="#Package_Wires"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
+      <cims:stereotype>Description</cims:stereotype>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A mechanical switching device which provides, in the open position, an isolating distance in accordance with specified requirements.
+A disconnector is capable of opening and closing a circuit when either negligible current is broken or made, or when no significant change in the voltage across the terminals of each of the poles of the disconnector occurs. It is also capable of carrying currents under normal circuit conditions and carrying for a specified time currents under abnormal conditions such as those of short circuit.</rdfs:comment>
+      <rdfs:label xml:lang="en">Disconnector</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#Switch"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#EnergyConnection">
+      <cims:belongsToCategory rdf:resource="#Package_Wires"/>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A connection of energy generation or consumption on the power system model.</rdfs:comment>
+      <rdfs:label xml:lang="en">EnergyConnection</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#ConductingEquipment"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#EnergyConsumer">
+      <cims:belongsToCategory rdf:resource="#Package_Wires"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
+      <cims:stereotype>Description</cims:stereotype>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Generic user of energy - a  point of consumption on the power system model.
+EnergyConsumer.pfixed, .qfixed, .pfixedPct and .qfixedPct have meaning only if there is no LoadResponseCharacteristic associated with EnergyConsumer or if LoadResponseCharacteristic.exponentModel is set to False.</rdfs:comment>
+      <rdfs:label xml:lang="en">EnergyConsumer</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#EnergyConnection"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#EnergySource">
+      <cims:belongsToCategory rdf:resource="#Package_Wires"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
+      <cims:stereotype>Description</cims:stereotype>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A generic equivalent for an energy supplier on a transmission or distribution voltage level.</rdfs:comment>
+      <rdfs:label xml:lang="en">EnergySource</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#EnergyConnection"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Equipment">
+      <cims:belongsToCategory rdf:resource="#Package_Core"/>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The parts of a power system that are physical devices, electronic or mechanical.</rdfs:comment>
+      <rdfs:label xml:lang="en">Equipment</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#PowerSystemResource"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Fuse">
+      <cims:belongsToCategory rdf:resource="#Package_Wires"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
+      <cims:stereotype>Description</cims:stereotype>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An overcurrent protective device with a circuit opening fusible part that is heated and severed by the passage of overcurrent through it. A fuse is considered a switching device because it breaks current.</rdfs:comment>
+      <rdfs:label xml:lang="en">Fuse</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#Switch"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#IdentifiedObject">
+      <cims:belongsToCategory rdf:resource="#Package_Core"/>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is a class that provides common identification for all classes needing identification and naming attributes.</rdfs:comment>
+      <rdfs:label xml:lang="en">IdentifiedObject</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#Identity"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#IdentifiedObject.description">
+      <cims:dataType rdf:resource="#String"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</rdfs:comment>
+      <rdfs:domain rdf:resource="#IdentifiedObject"/>
+      <rdfs:label xml:lang="en">description</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#IdentifiedObject.name">
+      <cims:dataType rdf:resource="#String"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The name is any free human readable and possibly non unique text naming the object.</rdfs:comment>
+      <rdfs:domain rdf:resource="#IdentifiedObject"/>
+      <rdfs:label xml:lang="en">name</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Identity">
+      <cims:belongsToCategory rdf:resource="#Package_Compatible_Unit"/>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">,</rdfs:comment>
+      <rdfs:label xml:lang="en">Identity</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Identity.identifier">
+      <cims:dataType rdf:resource="#String"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..1"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A universally unique object identifier. Used to uniquely identify persistent objects between CIM messages.</rdfs:comment>
+      <rdfs:domain rdf:resource="#Identity"/>
+      <rdfs:label xml:lang="en">identifier</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Integer">
+      <cims:belongsToCategory rdf:resource="#Package_Domain"/>
+      <cims:stereotype>Primitive</cims:stereotype>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An integer number. The range is unspecified and not limited.</rdfs:comment>
+      <rdfs:label xml:lang="en">Integer</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#LinearShuntCompensator">
+      <cims:belongsToCategory rdf:resource="#Package_Wires"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
+      <cims:stereotype>Description</cims:stereotype>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A linear shunt compensator has banks or sections with equal admittance values.</rdfs:comment>
+      <rdfs:label xml:lang="en">LinearShuntCompensator</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#ShuntCompensator"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#LoadBreakSwitch">
+      <cims:belongsToCategory rdf:resource="#Package_Wires"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
+      <cims:stereotype>Description</cims:stereotype>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A mechanical switching device capable of making, carrying, and breaking currents under normal operating conditions.</rdfs:comment>
+      <rdfs:label xml:lang="en">LoadBreakSwitch</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#ProtectedSwitch"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Location">
+      <cims:belongsToCategory rdf:resource="#Package_Common"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The place, scene, or point of something where someone or something has been, is, and/or will be at a given moment in time. It can be defined with one or more position points (coordinates) in a given coordinate system.</rdfs:comment>
+      <rdfs:label xml:lang="en">Location</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#IdentifiedObject"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Location.CoordinateSystem">
+      <cims:AssociationUsed>Yes</cims:AssociationUsed>
+      <cims:inverseRoleName rdf:resource="#CoordinateSystem.Location"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coordinate system used to describe position points of this location.</rdfs:comment>
+      <rdfs:domain rdf:resource="#Location"/>
+      <rdfs:label xml:lang="en">CoordinateSystem</rdfs:label>
+      <rdfs:range rdf:resource="#CoordinateSystem"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Location.PowerSystemResources">
+      <cims:AssociationUsed>No</cims:AssociationUsed>
+      <cims:inverseRoleName rdf:resource="#PowerSystemResource.Location"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..n"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">All power system resources at this location.</rdfs:comment>
+      <rdfs:domain rdf:resource="#Location"/>
+      <rdfs:label xml:lang="en">PowerSystemResources</rdfs:label>
+      <rdfs:range rdf:resource="#PowerSystemResource"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_Base">
+      <cims:belongsToCategory rdf:resource="#Package_Grid"/>
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Content of the base CIM. The information in the entire clause "Common Information Model Base Package" is reproduced from the UML with the permission of UCAIug.</rdfs:comment>
+      <rdfs:label xml:lang="en">Base</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_CIM">
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Top package for CIM.</rdfs:comment>
+      <rdfs:label xml:lang="en">CIM</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_Common">
+      <cims:belongsToCategory rdf:resource="#Package_Enterprise"/>
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This package contains the information classes that support operations in general.</rdfs:comment>
+      <rdfs:label xml:lang="en">Common</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_Compatible_Unit">
+      <cims:belongsToCategory rdf:resource="#Package_InfDesign"/>
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:label xml:lang="en">Compatible Unit</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_Core">
+      <cims:belongsToCategory rdf:resource="#Package_Base"/>
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Contains the core PowerSystemResource and ConductingEquipment entities shared by all applications plus common collections of those entities. Not all applications require all the Core entities.  This package does not depend on any other package except the Domain package, but most of the other packages have associations and generalizations that depend on it.</rdfs:comment>
+      <rdfs:label xml:lang="en">Core</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_DetailedModelDescription">
+      <cims:belongsToCategory rdf:resource="#Package_Dynamics"/>
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This clause packages classes needed to describe a model for dynamics simulations. This approach enables parties to exchange user defined model description expressed as mathematical expressions. It can also be used to describe standard models. Different profiles that use this information model shall make a choice of language used to describe the equations. The model enables creation of two separate profiles:
+1) a profile to describe the detailed model configuration, and
+2) a profile to enable an exchange of parameters of the model described using profile defined in  1).</rdfs:comment>
+      <rdfs:label xml:lang="en">DetailedModelDescription</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_Domain">
+      <cims:belongsToCategory rdf:resource="#Package_Base"/>
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The domain package defines primitive datatypes that are used by classes in other packages. Stereotypes are used to describe the datatypes. The following stereotypes are defined:
+&amp;lt;&amp;lt;enumeration&amp;gt;&amp;gt; A list of permissible constant values.
+&amp;lt;&amp;lt;Primitive&amp;gt;&amp;gt; The most basic data types used to compose all other data types.
+&amp;lt;&amp;lt;CIMDatatype&amp;gt;&amp;gt; A datatype that contains a value attribute, an optional unit of measure and a unit multiplier. The unit and multiplier may be specified as a static variable initialized to the allowed value.
+&amp;lt;&amp;lt;Compound&amp;gt;&amp;gt; A composite of Primitive, enumeration, CIMDatatype or other Compound classes, as long as the Compound classes do not recurse.
+For all datatypes both positive and negative values are allowed unless stated otherwise for a particular datatype.</rdfs:comment>
+      <rdfs:label xml:lang="en">Domain</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_Dynamics">
+      <cims:belongsToCategory rdf:resource="#Package_Grid"/>
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The CIM dynamic model definitions reflect the most common IEEE or, in the case of wind models, IEC, representations of models as well as models included in some of the transient stability software widely used by utilities.
+These dynamic models are intended to ensure interoperability between different vendors� software products currently in use by electric utility energy companies, utilities, Transmission System Operators (TSOs), Regional Transmission Organizations (RTOs), and Independent System Operators (ISOs).  It is important to note that each vendor is free to select its own internal implementation of these models.  Differences in vendor results, as long as they are within accepted engineering practice, caused by different internal representations, are acceptable.
+Unless explicitly stated otherwise, the following modelling conventions are followed:
+- limited integrators are of the non-windup type;
+- it shall be possible to enter a time constant of zero (where it makes sense).
+The information in the entire clause "Common Information Model Dynamics package" is reproduced from the UML with the permission of UCAIug.</rdfs:comment>
+      <rdfs:label xml:lang="en">Dynamics</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_Enterprise">
+      <cims:belongsToCategory rdf:resource="#Package_CIM"/>
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The 61968 UML subpackages of the CIM are developed and maintained by a CIM User Group task force.
+Currently, normative parts of the model support the needs of information exchange defined in the profiles for outage management, asset management, work management, customer support, metering, and DER.</rdfs:comment>
+      <rdfs:label xml:lang="en">Enterprise</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_Grid">
+      <cims:belongsToCategory rdf:resource="#Package_CIM"/>
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This top package includes the CIM model related to the grid.</rdfs:comment>
+      <rdfs:label xml:lang="en">Grid</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_InfDesign">
+      <cims:belongsToCategory rdf:resource="#Package_InfEnterprise"/>
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:label xml:lang="en">InfDesign</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_InfEnterprise">
+      <cims:belongsToCategory rdf:resource="#Package_Enterprise"/>
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This package and its subpackages contain informative (unstable) elements of the model, expected to evolve a lot or to be removed, and not published as IEC document yet. Some portions of it will be reworked and moved to normative packages as the need arises, and some portions may be removed.
+WG14 does not generate documentation for this informative portion of the model.</rdfs:comment>
+      <rdfs:label xml:lang="en">InfEnterprise</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_Wires">
+      <cims:belongsToCategory rdf:resource="#Package_Base"/>
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An extension to the Core and Topology package that models information on the electrical characteristics of Transmission and Distribution networks. This package is used by network applications such as State Estimation, Load Flow and Optimal Power Flow.</rdfs:comment>
+      <rdfs:label xml:lang="en">Wires</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#PositionPoint">
+      <cims:belongsToCategory rdf:resource="#Package_Common"/>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Set of spatial coordinates that determine a point, defined in the coordinate system specified in 'Location.CoordinateSystem'. Use a single position point instance to describe a point-oriented location. Use a sequence of position points to describe a line-oriented object (physical location of non-point oriented objects like cables or lines), or area of an object (like a substation or a geographical zone - in this case, have first and last position point with the same values).</rdfs:comment>
+      <rdfs:label xml:lang="en">PositionPoint</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#PositionPoint.xPosition">
+      <cims:dataType rdf:resource="#String"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..1"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">X axis position.</rdfs:comment>
+      <rdfs:domain rdf:resource="#PositionPoint"/>
+      <rdfs:label xml:lang="en">xPosition</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#PositionPoint.yPosition">
+      <cims:dataType rdf:resource="#String"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..1"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Y axis position.</rdfs:comment>
+      <rdfs:domain rdf:resource="#PositionPoint"/>
+      <rdfs:label xml:lang="en">yPosition</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#PositionPoint.zPosition">
+      <cims:dataType rdf:resource="#String"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(if applicable) Z axis position.</rdfs:comment>
+      <rdfs:domain rdf:resource="#PositionPoint"/>
+      <rdfs:label xml:lang="en">zPosition</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#PowerElectronicsConnection">
+      <cims:belongsToCategory rdf:resource="#Package_Wires"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
+      <cims:stereotype>Description</cims:stereotype>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A connection to the AC network for energy production or consumption that uses power electronics rather than rotating machines.</rdfs:comment>
+      <rdfs:label xml:lang="en">PowerElectronicsConnection</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#RegulatingCondEq"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#PowerSystemResource">
+      <cims:belongsToCategory rdf:resource="#Package_Core"/>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A power system resource (PSR) can be an item of equipment such as a switch, an equipment container containing many individual items of equipment such as a substation, or an organisational entity such as sub-control area. Power system resources can have measurements associated.</rdfs:comment>
+      <rdfs:label xml:lang="en">PowerSystemResource</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#IdentifiedObject"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#PowerSystemResource.Location">
+      <cims:AssociationUsed>Yes</cims:AssociationUsed>
+      <cims:inverseRoleName rdf:resource="#Location.PowerSystemResources"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Location of this power system resource.</rdfs:comment>
+      <rdfs:domain rdf:resource="#PowerSystemResource"/>
+      <rdfs:label xml:lang="en">Location</rdfs:label>
+      <rdfs:range rdf:resource="#Location"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#PowerTransformer">
+      <cims:belongsToCategory rdf:resource="#Package_Wires"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
+      <cims:stereotype>Description</cims:stereotype>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An electrical device consisting of  two or more coupled windings, with or without a magnetic core, for introducing mutual coupling between electric circuits. Transformers can be used to control voltage and phase shift (active power flow).
+A power transformer may be composed of separate transformer tanks that need not be identical.
+A power transformer can be modelled with or without tanks and is intended for use in both balanced and unbalanced representations. A power transformer typically has two terminals, but may have one (grounding), three or more terminals.
+The inherited association ConductingEquipment.BaseVoltage should not be used. The association from TransformerEnd to BaseVoltage should be used instead.</rdfs:comment>
+      <rdfs:label xml:lang="en">PowerTransformer</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#ConductingEquipment"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#ProtectedSwitch">
+      <cims:belongsToCategory rdf:resource="#Package_Wires"/>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A ProtectedSwitch is a switching device that can be operated by ProtectionEquipment.</rdfs:comment>
+      <rdfs:label xml:lang="en">ProtectedSwitch</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#Switch"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Recloser">
+      <cims:belongsToCategory rdf:resource="#Package_Wires"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
+      <cims:stereotype>Description</cims:stereotype>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pole-mounted fault interrupter with built-in phase and ground relays, current transformer (CT), and supplemental controls.</rdfs:comment>
+      <rdfs:label xml:lang="en">Recloser</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#ProtectedSwitch"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#RegulatingCondEq">
+      <cims:belongsToCategory rdf:resource="#Package_Wires"/>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of conducting equipment that can regulate a quantity (i.e. voltage or flow) at a specific point in the network.</rdfs:comment>
+      <rdfs:label xml:lang="en">RegulatingCondEq</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#EnergyConnection"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#RotatingMachine">
+      <cims:belongsToCategory rdf:resource="#Package_Wires"/>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A rotating machine which may be used as a generator or motor.</rdfs:comment>
+      <rdfs:label xml:lang="en">RotatingMachine</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#RegulatingCondEq"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Sectionaliser">
+      <cims:belongsToCategory rdf:resource="#Package_Wires"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
+      <cims:stereotype>Description</cims:stereotype>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Automatic switch that will lock open to isolate a faulted section. It may, or may not, have load breaking capability. Its primary purpose is to provide fault sectionalising at locations where the fault current is either too high, or too low, for proper coordination of fuses.</rdfs:comment>
+      <rdfs:label xml:lang="en">Sectionaliser</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#Switch"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#SeriesCompensator">
+      <cims:belongsToCategory rdf:resource="#Package_Wires"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
+      <cims:stereotype>Description</cims:stereotype>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Series Compensator is a series capacitor or reactor or an AC transmission line without charging susceptance.  It is a two terminal device.</rdfs:comment>
+      <rdfs:label xml:lang="en">SeriesCompensator</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#ConductingEquipment"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#ShuntCompensator">
+      <cims:belongsToCategory rdf:resource="#Package_Wires"/>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A shunt capacitor or reactor or switchable bank of shunt capacitors or reactors. A section of a shunt compensator is an individual capacitor or reactor. A negative value for bPerSection indicates that the compensator is a reactor. ShuntCompensator is a single terminal device.  Ground is implied.</rdfs:comment>
+      <rdfs:label xml:lang="en">ShuntCompensator</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#RegulatingCondEq"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#String">
+      <cims:belongsToCategory rdf:resource="#Package_DetailedModelDescription"/>
+      <cims:stereotype>Primitive</cims:stereotype>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A string consisting of a sequence of characters. The character encoding is UTF-8. The string length is unspecified and unlimited.</rdfs:comment>
+      <rdfs:label xml:lang="en">String</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Switch">
+      <cims:belongsToCategory rdf:resource="#Package_Wires"/>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A generic device designed to close, or open, or both, one or more electric circuits.  All switches are two terminal devices including grounding switches. The ACDCTerminal.connected at the two sides of the switch shall not be considered for assessing switch connectivity, i.e. only Switch.open, .normalOpen and .locked are relevant.</rdfs:comment>
+      <rdfs:label xml:lang="en">Switch</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#ConductingEquipment"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#SynchronousMachine">
+      <cims:belongsToCategory rdf:resource="#Package_Wires"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
+      <cims:stereotype>Description</cims:stereotype>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An electromechanical device that operates with shaft rotating synchronously with the network. It is a single machine operating either as a generator or synchronous condenser or pump.</rdfs:comment>
+      <rdfs:label xml:lang="en">SynchronousMachine</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#RotatingMachine"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://epri.com/gmdm#Location.PositionPoints">
+      <cims:AssociationUsed>No</cims:AssociationUsed>
+      <cims:inverseRoleName rdf:resource="http://epri.com/gmdm#PositionPoint.Location"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..n"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:domain rdf:resource="#Location"/>
+      <rdfs:label xml:lang="en">PositionPoints</rdfs:label>
+      <rdfs:range rdf:resource="#PositionPoint"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://epri.com/gmdm#PositionPoint.Location">
+      <cims:AssociationUsed>Yes</cims:AssociationUsed>
+      <cims:inverseRoleName rdf:resource="http://epri.com/gmdm#Location.PositionPoints"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..1"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:domain rdf:resource="#PositionPoint"/>
+      <rdfs:label xml:lang="en">Location</rdfs:label>
+      <rdfs:range rdf:resource="#Location"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://epri.com/gmdm#PositionPoint.sequenceNumber">
+      <cims:dataType rdf:resource="#Integer"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..1"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:domain rdf:resource="#PositionPoint"/>
+      <rdfs:label xml:lang="en">sequenceNumber</rdfs:label>
+   </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:m="http://www.ucaiug.org/gmdm/usagepoint#"
+           xmlns:sawsdl="http://www.w3.org/ns/sawsdl"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.ucaiug.org/gmdm/usagepoint#"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+   <xs:annotation>
+      <xs:documentation xml:lang="en">
+	Copyright 2025 UCAIug
+
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+
+	https://www.apache.org/licenses/LICENSE-2.0
+
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	
+	See the License for the specific language governing permissions and
+	limitations under the License.
+</xs:documentation>
+   </xs:annotation>
+   <xs:annotation/>
+   <xs:element name="Profile" type="m:Profile"/>
+   <xs:complexType name="Profile">
+      <xs:sequence>
+         <xs:element name="Terminal"
+                     type="m:Terminal"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
+         <xs:element name="UsagePoint"
+                     type="m:UsagePoint"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="ACDCTerminal"
+                   sawsdl:modelReference="http://cim.ucaiug.io/ns#ACDCTerminal">
+      <xs:annotation>
+         <xs:documentation>An electrical connection point (AC or DC) to a piece of conducting equipment. Terminals are connected at physical connection points called connectivity nodes.</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="m:IdentifiedObject">
+            <xs:sequence/>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="IdentifiedObject"
+                   sawsdl:modelReference="http://cim.ucaiug.io/ns#IdentifiedObject">
+      <xs:annotation>
+         <xs:documentation>This is a class that provides common identification for all classes needing identification and naming attributes.</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="m:Identity">
+            <xs:sequence>
+               <xs:element name="name"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           type="xs:string"
+                           sawsdl:modelReference="http://cim.ucaiug.io/ns#IdentifiedObject.name">
+                  <xs:annotation>
+                     <xs:documentation>The name is any free human readable and possibly non unique text naming the object.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="Identity"
+                   sawsdl:modelReference="http://cim.ucaiug.io/ns#Identity">
+      <xs:annotation>
+         <xs:documentation>,</xs:documentation>
+      </xs:annotation>
+      <xs:sequence/>
+   </xs:complexType>
+   <xs:simpleType name="PhaseCode"
+                  sawsdl:modelReference="http://cim.ucaiug.io/ns#PhaseCode">
+      <xs:annotation>
+         <xs:documentation>Enumeration of phase identifiers used to designate the combination of phase and/or neutral conductors at a terminal, measurement or equipment modelled as a single-line balanced equivalent.</xs:documentation>
+         <xs:documentation>This is an unordered enumeration of phase identifiers.  Allows designation of phases for both transmission and distribution equipment, circuits and loads.   The enumeration, by itself, does not describe how the phases are connected together or connected to ground.  Ground is not explicitly denoted as a phase.</xs:documentation>
+         <xs:documentation>Residential and small commercial loads are often served from single-phase, or split-phase, secondary circuits. For the example of s12N, phases 1 and 2 refer to hot wires that are 180 degrees out of phase, while N refers to the neutral wire. Through single-phase transformer connections, these secondary circuits may be served from one or two of the primary phases A, B, and C. For three-phase loads, use the A, B, C phase codes instead of s12N.</xs:documentation>
+         <xs:documentation>The integer values are from IEC 61968-9 to support revenue metering applications.</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="A">
+            <xs:annotation>
+               <xs:documentation>Phase A.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="AB">
+            <xs:annotation>
+               <xs:documentation>Phases A and B.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="ABC">
+            <xs:annotation>
+               <xs:documentation>Phases A, B, and C.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="ABCN">
+            <xs:annotation>
+               <xs:documentation>Phases A, B, C, and N.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="ABN">
+            <xs:annotation>
+               <xs:documentation>Phases A, B, and neutral.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="AC">
+            <xs:annotation>
+               <xs:documentation>Phases A and C.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="ACN">
+            <xs:annotation>
+               <xs:documentation>Phases A, C and neutral.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="AN">
+            <xs:annotation>
+               <xs:documentation>Phases A and neutral.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="B">
+            <xs:annotation>
+               <xs:documentation>Phase B.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="BC">
+            <xs:annotation>
+               <xs:documentation>Phases B and C.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="BCN">
+            <xs:annotation>
+               <xs:documentation>Phases B, C, and neutral.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="BN">
+            <xs:annotation>
+               <xs:documentation>Phases B and neutral.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="C">
+            <xs:annotation>
+               <xs:documentation>Phase C.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="CN">
+            <xs:annotation>
+               <xs:documentation>Phases C and neutral.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="N">
+            <xs:annotation>
+               <xs:documentation>Neutral phase.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="X">
+            <xs:annotation>
+               <xs:documentation>Unknown non-neutral phase.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="XN">
+            <xs:annotation>
+               <xs:documentation>Unknown non-neutral phase plus neutral.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="XY">
+            <xs:annotation>
+               <xs:documentation>Two unknown non-neutral phases.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="XYN">
+            <xs:annotation>
+               <xs:documentation>Two unknown non-neutral phases plus neutral.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="none">
+            <xs:annotation>
+               <xs:documentation>No phases specified.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="s1">
+            <xs:annotation>
+               <xs:documentation>Secondary phase 1.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="s12">
+            <xs:annotation>
+               <xs:documentation>Secondary phase 1 and 2.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="s12N">
+            <xs:annotation>
+               <xs:documentation>Secondary phases 1, 2, and neutral.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="s1N">
+            <xs:annotation>
+               <xs:documentation>Secondary phase 1 and neutral.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="s2">
+            <xs:annotation>
+               <xs:documentation>Secondary phase 2.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="s2N">
+            <xs:annotation>
+               <xs:documentation>Secondary phase 2 and neutral.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:complexType name="Terminal"
+                   sawsdl:modelReference="http://cim.ucaiug.io/ns#Terminal">
+      <xs:annotation>
+         <xs:documentation>An AC electrical connection point to a piece of conducting equipment. Terminals are connected at physical connection points called connectivity nodes.</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="m:ACDCTerminal">
+            <xs:sequence/>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="UsagePoint"
+                   sawsdl:modelReference="http://cim.ucaiug.io/ns#UsagePoint">
+      <xs:annotation>
+         <xs:documentation>Logical or physical point in the network to which readings or events may be attributed. Used at the place where a physical or virtual meter may be located; however, it is not required that a meter be present.</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="m:IdentifiedObject">
+            <xs:sequence>
+               <xs:element name="phaseCode"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           type="m:PhaseCode"
+                           sawsdl:modelReference="http://cim.ucaiug.io/ns#UsagePoint.phaseCode">
+                  <xs:annotation>
+                     <xs:documentation>Phase code. Number of wires and specific nominal phases can be deduced from enumeration literal values. For example, ABCN is three-phase, four-wire, s12n (splitSecondary12N) is single-phase, three-wire, and s1n and s2n are single-phase, two-wire.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="Terminal"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           type="m:Terminal"
+                           sawsdl:modelReference="http://epri.com/gmdm#UsagePoint.Terminal">
+                  <xs:annotation/>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+</xs:schema>

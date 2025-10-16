@@ -1,0 +1,709 @@
+@prefix msg:     <http://langdale.com.au/2005/Message#> .
+@prefix :        <http://www.ucaiug.org/gmdm/asset#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix uml:     <http://langdale.com.au/2005/UML#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+
+<http://cim.ucaiug.io/ns#PhaseCountKind.other>
+      rdfs:label "other" .
+
+<http://cim.ucaiug.io/ns#PhaseCountKind.singlePhase>
+      rdfs:label "singlePhase" .
+
+<http://cim.ucaiug.io/ns#PhaseCountKind.threePhase>
+      rdfs:label "threePhase" .
+
+<http://cim.ucaiug.io/ns#WindingConnection.A>
+      rdfs:label "A" .
+
+<http://cim.ucaiug.io/ns#WindingConnection.D>
+      rdfs:label "D" .
+
+<http://cim.ucaiug.io/ns#WindingConnection.I>
+      rdfs:label "I" .
+
+<http://cim.ucaiug.io/ns#WindingConnection.Y>
+      rdfs:label "Y" .
+
+<http://cim.ucaiug.io/ns#WindingConnection.Yn>
+      rdfs:label "Yn" .
+
+<http://cim.ucaiug.io/ns#WindingConnection.Z>
+      rdfs:label "Z" .
+
+<http://cim.ucaiug.io/ns#WindingConnection.Zn>
+      rdfs:label "Zn" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.A>
+      rdfs:label "A" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.AB>
+      rdfs:label "AB" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.ABC>
+      rdfs:label "ABC" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.ABCN>
+      rdfs:label "ABCN" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.ABN>
+      rdfs:label "ABN" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.AC>
+      rdfs:label "AC" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.ACB>
+      rdfs:label "ACB" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.ACBN>
+      rdfs:label "ACBN" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.ACN>
+      rdfs:label "ACN" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.AN>
+      rdfs:label "AN" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.B>
+      rdfs:label "B" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.BA>
+      rdfs:label "BA" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.BAC>
+      rdfs:label "BAC" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.BACN>
+      rdfs:label "BACN" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.BAN>
+      rdfs:label "BAN" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.BC>
+      rdfs:label "BC" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.BCA>
+      rdfs:label "BCA" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.BCAN>
+      rdfs:label "BCAN" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.BCN>
+      rdfs:label "BCN" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.BN>
+      rdfs:label "BN" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.C>
+      rdfs:label "C" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.CA>
+      rdfs:label "CA" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.CAB>
+      rdfs:label "CAB" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.CABN>
+      rdfs:label "CABN" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.CAN>
+      rdfs:label "CAN" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.CB>
+      rdfs:label "CB" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.CBA>
+      rdfs:label "CBA" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.CBAN>
+      rdfs:label "CBAN" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.CBN>
+      rdfs:label "CBN" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.CN>
+      rdfs:label "CN" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.NA>
+      rdfs:label "NA" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.NB>
+      rdfs:label "NB" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.NC>
+      rdfs:label "NC" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.Ns1>
+      rdfs:label "Ns1" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.Ns2>
+      rdfs:label "Ns2" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.X>
+      rdfs:label "X" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.XN>
+      rdfs:label "XN" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.XY>
+      rdfs:label "XY" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.XYN>
+      rdfs:label "XYN" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.none>
+      rdfs:label "none" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.s1>
+      rdfs:label "s1" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.s12>
+      rdfs:label "s12" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.s12N>
+      rdfs:label "s12N" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.s1N>
+      rdfs:label "s1N" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.s2>
+      rdfs:label "s2" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.s21>
+      rdfs:label "s21" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.s21N>
+      rdfs:label "s21N" .
+
+<http://epri.com/gmdm#OrderedPhaseCodeKind.s2N>
+      rdfs:label "s2N" .
+
+<http://langdale.com.au/2007/Buildlet#inline-rdfs.adoc>
+      a       msg:Flag .
+
+<http://langdale.com.au/2007/Buildlet#rdfs-2020.rdfs>
+      a       msg:Flag .
+
+<http://langdale.com.au/2007/Buildlet#rdfs-t2b.puml>
+      a       msg:Flag .
+
+<http://langdale.com.au/2007/Buildlet#ttl>
+      a       msg:Flag .
+
+<http://langdale.com.au/2007/Buildlet#xsd>
+      a       msg:Flag .
+
+<http://www.ucaiug.org/gmdm/asset>
+      a       owl:Ontology ;
+      rdfs:label "Asset" ;
+      owl:imports <http://iec.ch/TC57/CIM101> .
+
+:ApparentPower
+      rdfs:label "ApparentPower" .
+
+:AssetInfo
+      a       owl:Class ;
+      rdfs:label "AssetInfo" ;
+      rdfs:subClassOf <http://cim.ucaiug.io/ns#AssetInfo> , :IdentifiedObject .
+
+:ConductingAssetInfo
+      a       owl:Class ;
+      rdfs:label "ConductingAssetInfo" ;
+      rdfs:subClassOf :AssetInfo , <http://cim.ucaiug.io/ns#ConductingAssetInfo> ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       rdfs:Datatype ;
+                          rdfs:label "ratedVoltage" ;
+                          uml:hasStereotype uml:attribute ;
+                          owl:equivalentClass <http://cim.ucaiug.io/ns#Voltage>
+                        ] ;
+                owl:onProperty <http://cim.ucaiug.io/ns#ConductingAssetInfo.ratedVoltage>
+              ] .
+
+:Equipment
+      a       owl:Class ;
+      rdfs:label "Equipment" ;
+      rdfs:subClassOf :PowerSystemResource , <http://cim.ucaiug.io/ns#Equipment> .
+
+:IdentifiedObject
+      a       owl:Class ;
+      rdfs:label "IdentifiedObject" ;
+      rdfs:subClassOf :Identity , <http://cim.ucaiug.io/ns#IdentifiedObject> ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       rdfs:Datatype ;
+                          rdfs:label "description" ;
+                          uml:hasStereotype uml:attribute ;
+                          owl:equivalentClass xsd:string
+                        ] ;
+                owl:onProperty <http://cim.ucaiug.io/ns#IdentifiedObject.description>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       rdfs:Datatype ;
+                          rdfs:label "name" ;
+                          uml:hasStereotype uml:attribute ;
+                          owl:equivalentClass xsd:string
+                        ] ;
+                owl:onProperty <http://cim.ucaiug.io/ns#IdentifiedObject.name>
+              ] .
+
+:Identity
+      a       owl:Class ;
+      rdfs:label "Identity" ;
+      rdfs:subClassOf <http://cim.ucaiug.io/ns#Identity> ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:minCardinality "1"^^xsd:int ;
+                owl:onProperty <http://cim.ucaiug.io/ns#Identity.identifier>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       rdfs:Datatype ;
+                          rdfs:label "identifier" ;
+                          uml:hasStereotype uml:attribute ;
+                          owl:equivalentClass xsd:string
+                        ] ;
+                owl:onProperty <http://cim.ucaiug.io/ns#Identity.identifier>
+              ] .
+
+:Impedance
+      rdfs:label "Impedance" .
+
+:KiloActivePower
+      rdfs:label "KiloActivePower" .
+
+:NoLoadTest
+      a       owl:Class ;
+      rdfs:label "NoLoadTest" ;
+      rdfs:subClassOf :TransformerTest , <http://cim.ucaiug.io/ns#NoLoadTest> ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       owl:Class ;
+                          rdfs:label "EnergisedEnd" ;
+                          rdfs:subClassOf <http://cim.ucaiug.io/ns#TransformerEndInfo>
+                        ] ;
+                owl:onProperty <http://cim.ucaiug.io/ns#NoLoadTest.EnergisedEnd>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       rdfs:Datatype ;
+                          rdfs:label "lossZero" ;
+                          uml:hasStereotype uml:attribute ;
+                          owl:equivalentClass <http://cim.ucaiug.io/ns#KiloActivePower>
+                        ] ;
+                owl:onProperty <http://cim.ucaiug.io/ns#NoLoadTest.lossZero>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:minCardinality "1"^^xsd:int ;
+                owl:onProperty <http://cim.ucaiug.io/ns#NoLoadTest.EnergisedEnd>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       rdfs:Datatype ;
+                          rdfs:label "energisedEndVoltage" ;
+                          uml:hasStereotype uml:attribute ;
+                          owl:equivalentClass <http://cim.ucaiug.io/ns#Voltage>
+                        ] ;
+                owl:onProperty <http://cim.ucaiug.io/ns#NoLoadTest.energisedEndVoltage>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:int ;
+                owl:onProperty <http://cim.ucaiug.io/ns#NoLoadTest.EnergisedEnd>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       rdfs:Datatype ;
+                          rdfs:label "loss" ;
+                          uml:hasStereotype uml:attribute ;
+                          owl:equivalentClass <http://cim.ucaiug.io/ns#KiloActivePower>
+                        ] ;
+                owl:onProperty <http://cim.ucaiug.io/ns#NoLoadTest.loss>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       rdfs:Datatype ;
+                          rdfs:label "excitingCurrent" ;
+                          uml:hasStereotype uml:attribute ;
+                          owl:equivalentClass <http://cim.ucaiug.io/ns#PerCent>
+                        ] ;
+                owl:onProperty <http://cim.ucaiug.io/ns#NoLoadTest.excitingCurrent>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       rdfs:Datatype ;
+                          rdfs:label "excitingCurrentZero" ;
+                          uml:hasStereotype uml:attribute ;
+                          owl:equivalentClass <http://cim.ucaiug.io/ns#PerCent>
+                        ] ;
+                owl:onProperty <http://cim.ucaiug.io/ns#NoLoadTest.excitingCurrentZero>
+              ] ;
+      uml:hasStereotype uml:concrete .
+
+:OrderedPhaseCodeKind
+      a       owl:Class ;
+      rdfs:label "OrderedPhaseCodeKind" ;
+      rdfs:subClassOf <http://epri.com/gmdm#OrderedPhaseCodeKind> ;
+      uml:hasStereotype uml:enumeration , uml:gmdm ;
+      owl:oneOf (<http://epri.com/gmdm#OrderedPhaseCodeKind.AC> <http://epri.com/gmdm#OrderedPhaseCodeKind.BC> <http://epri.com/gmdm#OrderedPhaseCodeKind.s12> <http://epri.com/gmdm#OrderedPhaseCodeKind.BA> <http://epri.com/gmdm#OrderedPhaseCodeKind.CA> <http://epri.com/gmdm#OrderedPhaseCodeKind.XYN> <http://epri.com/gmdm#OrderedPhaseCodeKind.Ns2> <http://epri.com/gmdm#OrderedPhaseCodeKind.C> <http://epri.com/gmdm#OrderedPhaseCodeKind.A> <http://epri.com/gmdm#OrderedPhaseCodeKind.CAN> <http://epri.com/gmdm#OrderedPhaseCodeKind.CBN> <http://epri.com/gmdm#OrderedPhaseCodeKind.NB> <http://epri.com/gmdm#OrderedPhaseCodeKind.ACN> <http://epri.com/gmdm#OrderedPhaseCodeKind.ABN> <http://epri.com/gmdm#OrderedPhaseCodeKind.XN> <http://epri.com/gmdm#OrderedPhaseCodeKind.AN> <http://epri.com/gmdm#OrderedPhaseCodeKind.BN> <http://epri.com/gmdm#OrderedPhaseCodeKind.CN> <http://epri.com/gmdm#OrderedPhaseCodeKind.CBAN> <http://epri.com/gmdm#OrderedPhaseCodeKind.CAB> <http://epri.com/gmdm#OrderedPhaseCodeKind.BAC> <http://epri.com/gmdm#OrderedPhaseCodeKind.s12N> <http://epri.com/gmdm#OrderedPhaseCodeKind.s2> <http://epri.com/gmdm#OrderedPhaseCodeKind.ACB> <http://epri.com/gmdm#OrderedPhaseCodeKind.BCA> <http://epri.com/gmdm#OrderedPhaseCodeKind.ACBN> <http://epri.com/gmdm#OrderedPhaseCodeKind.s21> <http://epri.com/gmdm#OrderedPhaseCodeKind.AB> <http://epri.com/gmdm#OrderedPhaseCodeKind.s2N> <http://epri.com/gmdm#OrderedPhaseCodeKind.BACN> <http://epri.com/gmdm#OrderedPhaseCodeKind.CB> <http://epri.com/gmdm#OrderedPhaseCodeKind.s1N> <http://epri.com/gmdm#OrderedPhaseCodeKind.BCAN> <http://epri.com/gmdm#OrderedPhaseCodeKind.B> <http://epri.com/gmdm#OrderedPhaseCodeKind.Ns1> <http://epri.com/gmdm#OrderedPhaseCodeKind.BAN> <http://epri.com/gmdm#OrderedPhaseCodeKind.NA> <http://epri.com/gmdm#OrderedPhaseCodeKind.BCN> <http://epri.com/gmdm#OrderedPhaseCodeKind.none> <http://epri.com/gmdm#OrderedPhaseCodeKind.NC> <http://epri.com/gmdm#OrderedPhaseCodeKind.s21N> <http://epri.com/gmdm#OrderedPhaseCodeKind.X> <http://epri.com/gmdm#OrderedPhaseCodeKind.CABN> <http://epri.com/gmdm#OrderedPhaseCodeKind.s1> <http://epri.com/gmdm#OrderedPhaseCodeKind.ABC> <http://epri.com/gmdm#OrderedPhaseCodeKind.CBA> <http://epri.com/gmdm#OrderedPhaseCodeKind.ABCN> <http://epri.com/gmdm#OrderedPhaseCodeKind.XY>) .
+
+:Package_AssetInfo
+      rdfs:label "AssetInfo" .
+
+:Package_AssetInfoEXT
+      rdfs:label "AssetInfoEXT" .
+
+:Package_Assets
+      rdfs:label "Assets" .
+
+:Package_Base
+      rdfs:label "Base" .
+
+:Package_CIM
+      rdfs:label "CIM" .
+
+:Package_Compatible_Unit
+      rdfs:label "Compatible Unit" .
+
+:Package_Core
+      rdfs:label "Core" .
+
+:Package_Enterprise
+      rdfs:label "Enterprise" .
+
+:Package_EnterpriseEXT
+      rdfs:label "EnterpriseEXT" .
+
+:Package_GMDM
+      rdfs:label "GMDM" .
+
+:Package_Grid
+      rdfs:label "Grid" .
+
+:Package_InfDesign
+      rdfs:label "InfDesign" .
+
+:Package_InfEnterprise
+      rdfs:label "InfEnterprise" .
+
+:Package_Wires
+      rdfs:label "Wires" .
+
+:PerCent
+      rdfs:label "PerCent" .
+
+:PhaseCountKind
+      a       owl:Class ;
+      rdfs:label "PhaseCountKind" ;
+      rdfs:subClassOf <http://cim.ucaiug.io/ns#PhaseCountKind> ;
+      uml:hasStereotype uml:enumeration , uml:attribute ;
+      owl:oneOf (<http://cim.ucaiug.io/ns#PhaseCountKind.other> <http://cim.ucaiug.io/ns#PhaseCountKind.threePhase> <http://cim.ucaiug.io/ns#PhaseCountKind.singlePhase>) .
+
+:PowerSystemResource
+      a       owl:Class ;
+      rdfs:label "PowerSystemResource" ;
+      rdfs:subClassOf <http://cim.ucaiug.io/ns#PowerSystemResource> , :IdentifiedObject .
+
+:Resistance
+      rdfs:label "Resistance" .
+
+:ShortCircuitTest
+      a       owl:Class ;
+      rdfs:label "ShortCircuitTest" ;
+      rdfs:subClassOf <http://cim.ucaiug.io/ns#ShortCircuitTest> , :TransformerTest ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:minCardinality "1"^^xsd:int ;
+                owl:onProperty <http://cim.ucaiug.io/ns#ShortCircuitTest.GroundedEnds>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       rdfs:Datatype ;
+                          rdfs:label "groundedEndStep" ;
+                          uml:hasStereotype uml:attribute ;
+                          owl:equivalentClass xsd:integer
+                        ] ;
+                owl:onProperty <http://cim.ucaiug.io/ns#ShortCircuitTest.groundedEndStep>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       rdfs:Datatype ;
+                          rdfs:label "leakageImpedanceZero" ;
+                          uml:hasStereotype uml:attribute ;
+                          owl:equivalentClass <http://cim.ucaiug.io/ns#Impedance>
+                        ] ;
+                owl:onProperty <http://cim.ucaiug.io/ns#ShortCircuitTest.leakageImpedanceZero>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       rdfs:Datatype ;
+                          rdfs:label "lossZero" ;
+                          uml:hasStereotype uml:attribute ;
+                          owl:equivalentClass <http://cim.ucaiug.io/ns#KiloActivePower>
+                        ] ;
+                owl:onProperty <http://cim.ucaiug.io/ns#ShortCircuitTest.lossZero>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       rdfs:Datatype ;
+                          rdfs:label "loss" ;
+                          uml:hasStereotype uml:attribute ;
+                          owl:equivalentClass <http://cim.ucaiug.io/ns#KiloActivePower>
+                        ] ;
+                owl:onProperty <http://cim.ucaiug.io/ns#ShortCircuitTest.loss>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       rdfs:Datatype ;
+                          rdfs:label "energisedEndStep" ;
+                          uml:hasStereotype uml:attribute ;
+                          owl:equivalentClass xsd:integer
+                        ] ;
+                owl:onProperty <http://cim.ucaiug.io/ns#ShortCircuitTest.energisedEndStep>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       owl:Class ;
+                          rdfs:label "GroundedEnds" ;
+                          rdfs:subClassOf <http://cim.ucaiug.io/ns#TransformerEndInfo>
+                        ] ;
+                owl:onProperty <http://cim.ucaiug.io/ns#ShortCircuitTest.GroundedEnds>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:int ;
+                owl:onProperty <http://cim.ucaiug.io/ns#ShortCircuitTest.EnergisedEnd>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       rdfs:Datatype ;
+                          rdfs:label "leakageImpedance" ;
+                          uml:hasStereotype uml:attribute ;
+                          owl:equivalentClass <http://cim.ucaiug.io/ns#Impedance>
+                        ] ;
+                owl:onProperty <http://cim.ucaiug.io/ns#ShortCircuitTest.leakageImpedance>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:minCardinality "1"^^xsd:int ;
+                owl:onProperty <http://cim.ucaiug.io/ns#ShortCircuitTest.EnergisedEnd>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       owl:Class ;
+                          rdfs:label "EnergisedEnd" ;
+                          rdfs:subClassOf <http://cim.ucaiug.io/ns#TransformerEndInfo>
+                        ] ;
+                owl:onProperty <http://cim.ucaiug.io/ns#ShortCircuitTest.EnergisedEnd>
+              ] ;
+      uml:hasStereotype uml:concrete .
+
+:Temperature
+      rdfs:label "Temperature" .
+
+:TransformerEndInfo
+      a       owl:Class ;
+      rdfs:label "TransformerEndInfo" ;
+      rdfs:subClassOf :ConductingAssetInfo , <http://cim.ucaiug.io/ns#TransformerEndInfo> ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:int ;
+                owl:onProperty <http://cim.ucaiug.io/ns#TransformerEndInfo.TransformerTankInfo>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       rdfs:Datatype ;
+                          rdfs:label "r" ;
+                          uml:hasStereotype uml:attribute ;
+                          owl:equivalentClass <http://cim.ucaiug.io/ns#Resistance>
+                        ] ;
+                owl:onProperty <http://cim.ucaiug.io/ns#TransformerEndInfo.r>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       rdfs:Datatype ;
+                          rdfs:label "phaseAngleClock" ;
+                          uml:hasStereotype uml:attribute ;
+                          owl:equivalentClass xsd:integer
+                        ] ;
+                owl:onProperty <http://cim.ucaiug.io/ns#TransformerEndInfo.phaseAngleClock>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       rdfs:Datatype ;
+                          rdfs:label "shortTermS" ;
+                          uml:hasStereotype uml:attribute ;
+                          owl:equivalentClass <http://cim.ucaiug.io/ns#ApparentPower>
+                        ] ;
+                owl:onProperty <http://cim.ucaiug.io/ns#TransformerEndInfo.shortTermS>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:minCardinality "1"^^xsd:int ;
+                owl:onProperty <http://cim.ucaiug.io/ns#TransformerEndInfo.endNumber>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       rdfs:Datatype ;
+                          rdfs:label "endNumber" ;
+                          uml:hasStereotype uml:attribute ;
+                          owl:equivalentClass xsd:integer
+                        ] ;
+                owl:onProperty <http://cim.ucaiug.io/ns#TransformerEndInfo.endNumber>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:int ;
+                owl:onProperty <http://cim.ucaiug.io/ns#TransformerEndInfo.connectionKind>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       rdfs:Datatype ;
+                          rdfs:label "insulationU" ;
+                          uml:hasStereotype uml:attribute ;
+                          owl:equivalentClass <http://cim.ucaiug.io/ns#Voltage>
+                        ] ;
+                owl:onProperty <http://cim.ucaiug.io/ns#TransformerEndInfo.insulationU>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       owl:Class ;
+                          rdfs:label "connectionKind" ;
+                          rdfs:subClassOf <http://cim.ucaiug.io/ns#WindingConnection> ;
+                          uml:hasStereotype uml:enumeration , uml:attribute
+                        ] ;
+                owl:onProperty <http://cim.ucaiug.io/ns#TransformerEndInfo.connectionKind>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       rdfs:Datatype ;
+                          rdfs:label "emergencyS" ;
+                          uml:hasStereotype uml:attribute ;
+                          owl:equivalentClass <http://cim.ucaiug.io/ns#ApparentPower>
+                        ] ;
+                owl:onProperty <http://cim.ucaiug.io/ns#TransformerEndInfo.emergencyS>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       rdfs:Datatype ;
+                          rdfs:label "ratedS" ;
+                          uml:hasStereotype uml:attribute ;
+                          owl:equivalentClass <http://cim.ucaiug.io/ns#ApparentPower>
+                        ] ;
+                owl:onProperty <http://cim.ucaiug.io/ns#TransformerEndInfo.ratedS>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       owl:Class ;
+                          rdfs:label "TransformerTankInfo" ;
+                          rdfs:subClassOf <http://cim.ucaiug.io/ns#TransformerTankInfo>
+                        ] ;
+                owl:onProperty <http://cim.ucaiug.io/ns#TransformerEndInfo.TransformerTankInfo>
+              ] ;
+      uml:hasStereotype uml:concrete .
+
+:TransformerTank
+      a       owl:Class ;
+      rdfs:label "TransformerTank" ;
+      rdfs:subClassOf :Equipment , <http://cim.ucaiug.io/ns#TransformerTank> ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       owl:Class ;
+                          rdfs:label "TransformerTankInfo" ;
+                          rdfs:subClassOf <http://cim.ucaiug.io/ns#TransformerTankInfo>
+                        ] ;
+                owl:onProperty <http://epri.com/gmdm#TransformerTank.TransformerTankInfo>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:maxCardinality "1"^^xsd:int ;
+                owl:onProperty <http://epri.com/gmdm#TransformerTank.TransformerTankInfo>
+              ] ;
+      uml:hasStereotype uml:concrete , uml:description .
+
+:TransformerTankInfo
+      a       owl:Class ;
+      rdfs:label "TransformerTankInfo" ;
+      rdfs:subClassOf :AssetInfo , <http://cim.ucaiug.io/ns#TransformerTankInfo> ;
+      uml:hasStereotype uml:concrete .
+
+:TransformerTest
+      a       owl:Class ;
+      rdfs:label "TransformerTest" ;
+      rdfs:subClassOf <http://cim.ucaiug.io/ns#TransformerTest> , :IdentifiedObject ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:minCardinality "1"^^xsd:int ;
+                owl:onProperty <http://cim.ucaiug.io/ns#TransformerTest.basePower>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       rdfs:Datatype ;
+                          rdfs:label "basePower" ;
+                          uml:hasStereotype uml:attribute ;
+                          owl:equivalentClass <http://cim.ucaiug.io/ns#ApparentPower>
+                        ] ;
+                owl:onProperty <http://cim.ucaiug.io/ns#TransformerTest.basePower>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       rdfs:Datatype ;
+                          rdfs:label "temperature" ;
+                          uml:hasStereotype uml:attribute ;
+                          owl:equivalentClass <http://cim.ucaiug.io/ns#Temperature>
+                        ] ;
+                owl:onProperty <http://cim.ucaiug.io/ns#TransformerTest.temperature>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:minCardinality "1"^^xsd:int ;
+                owl:onProperty <http://cim.ucaiug.io/ns#TransformerTest.temperature>
+              ] .
+
+:Voltage
+      rdfs:label "Voltage" .
+
+:WindingConnection
+      a       owl:Class ;
+      rdfs:label "WindingConnection" ;
+      rdfs:subClassOf <http://cim.ucaiug.io/ns#WindingConnection> ;
+      uml:hasStereotype uml:enumeration , uml:attribute ;
+      owl:oneOf (<http://cim.ucaiug.io/ns#WindingConnection.Zn> <http://cim.ucaiug.io/ns#WindingConnection.D> <http://cim.ucaiug.io/ns#WindingConnection.A> <http://cim.ucaiug.io/ns#WindingConnection.Yn> <http://cim.ucaiug.io/ns#WindingConnection.Z> <http://cim.ucaiug.io/ns#WindingConnection.I> <http://cim.ucaiug.io/ns#WindingConnection.Y>) .
+
+owl:Thing
+      a       owl:Class .
