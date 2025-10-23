@@ -148,7 +148,7 @@
       </xs:sequence>
    </xs:complexType>
    <xs:complexType name="ACDCTerminal"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#ACDCTerminal">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ACDCTerminal">
       <xs:annotation>
          <xs:documentation>An electrical connection point (AC or DC) to a piece of conducting equipment. Terminals are connected at physical connection points called connectivity nodes.</xs:documentation>
       </xs:annotation>
@@ -159,7 +159,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="xs:integer"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#ACDCTerminal.sequenceNumber">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ACDCTerminal.sequenceNumber">
                   <xs:annotation>
                      <xs:documentation>The orientation of the terminal connections for a multiple terminal conducting equipment. The sequence numbering starts with 1 and additional terminals should follow in increasing order. The first terminal is the "starting point" for a two terminal branch.</xs:documentation>
                   </xs:annotation>
@@ -169,7 +169,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="ACLineSegment"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#ACLineSegment">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ACLineSegment">
       <xs:annotation>
          <xs:documentation>A line segment is a conductor or combination of conductors, with consistent electrical characteristics along its length, building a single electrical system that carries alternating current between two points in the power system.</xs:documentation>
          <xs:documentation>The BaseVoltage at the two ends of a line segment shall have the same BaseVoltage.nominalVoltage. However, boundary lines may have slightly different BaseVoltage.nominalVoltages and variation is allowed. Larger voltage difference in general requires use of an equivalent branch.</xs:documentation>
@@ -192,7 +192,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="ACLineSegmentPhase"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#ACLineSegmentPhase">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ACLineSegmentPhase">
       <xs:annotation>
          <xs:documentation>A line segment phase represents one phase (or optionally the neutral) of an alternating current line segment.</xs:documentation>
          <xs:documentation>Under most circumstances there is not a line segment phase for the neutral. However, if a wire assembly is being used and it does not specify phase, a line segment phase must exist for each position in the assembly (including the neutral).</xs:documentation>
@@ -204,7 +204,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="m:SinglePhaseKind"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#ACLineSegmentPhase.phase">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ACLineSegmentPhase.phase">
                   <xs:annotation>
                      <xs:documentation>Phase identifies the phase or neutral connection of the conductor at both ends.</xs:documentation>
                   </xs:annotation>
@@ -213,7 +213,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="m:ACLineSegment"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#ACLineSegmentPhase.ACLineSegment">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ACLineSegmentPhase.ACLineSegment">
                   <xs:annotation>
                      <xs:documentation>The line segment to which the phase belongs.</xs:documentation>
                   </xs:annotation>
@@ -223,7 +223,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="AsynchronousMachine"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#AsynchronousMachine">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#AsynchronousMachine">
       <xs:annotation>
          <xs:documentation>A rotating machine whose shaft rotates asynchronously with the electrical field.  Also known as an induction machine with no external connection to the rotor windings, e.g. squirrel-cage induction machine.</xs:documentation>
       </xs:annotation>
@@ -234,7 +234,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="BaseVoltage"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#BaseVoltage">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#BaseVoltage">
       <xs:annotation>
          <xs:documentation>Defines a system base voltage which is referenced. This may be different than the rated voltage.</xs:documentation>
       </xs:annotation>
@@ -245,7 +245,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="m:Voltage"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#BaseVoltage.nominalVoltage">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#BaseVoltage.nominalVoltage">
                   <xs:annotation>
                      <xs:documentation>The power system resource's base voltage, expressed on a phase-to-phase (line-to-line) basis. Shall be a positive value and not zero.</xs:documentation>
                   </xs:annotation>
@@ -254,7 +254,8 @@
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
-   <xs:complexType name="Breaker" sawsdl:modelReference="http://cim.ucaiug.io/ns#Breaker">
+   <xs:complexType name="Breaker"
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Breaker">
       <xs:annotation>
          <xs:documentation>A mechanical switching device capable of making, carrying, and breaking currents under normal circuit conditions and also making, carrying for a specified time, and breaking currents under specified abnormal circuit conditions e.g. those of short circuit.</xs:documentation>
       </xs:annotation>
@@ -265,7 +266,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="BusbarSection"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#BusbarSection">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#BusbarSection">
       <xs:annotation>
          <xs:documentation>A conductor, or group of conductors, with negligible impedance, that serve to connect other conducting equipment within a single substation. The BusbarSection class is intended to represent physical parts of bus bars no matter how that bus bar is constructed.</xs:documentation>
          <xs:documentation>Voltage measurements are typically obtained from voltage transformers that are connected to busbar sections. A bus bar section may have many physical terminals but for analysis is modelled with exactly one logical terminal.</xs:documentation>
@@ -277,7 +278,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="ConductingEquipment"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#ConductingEquipment">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ConductingEquipment">
       <xs:annotation>
          <xs:documentation>The parts of the AC power system that are designed to carry current or that are conductively connected through terminals.</xs:documentation>
       </xs:annotation>
@@ -287,18 +288,21 @@
                <xs:element name="BaseVoltage"
                            minOccurs="1"
                            maxOccurs="1"
-                           type="m:BaseVoltage"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#ConductingEquipment.BaseVoltage">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ConductingEquipment.BaseVoltage">
                   <xs:annotation>
                      <xs:documentation>Base voltage of this conducting equipment.  Use only when there is no voltage level container used and only one base voltage applies.  For example, not used for transformers.</xs:documentation>
                   </xs:annotation>
+                  <xs:complexType sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#BaseVoltage">
+                     <xs:attribute name="ref" type="xs:string" use="required"/>
+                     <xs:attribute name="referenceType" type="xs:string" use="optional"/>
+                  </xs:complexType>
                </xs:element>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="Conductor"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#Conductor">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Conductor">
       <xs:annotation>
          <xs:documentation>Combination of conducting material with consistent electrical characteristics, building a single electrical system, used to carry current between points in the power system.</xs:documentation>
       </xs:annotation>
@@ -309,7 +313,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="ConnectivityNode"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#ConnectivityNode">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ConnectivityNode">
       <xs:annotation>
          <xs:documentation>Connectivity nodes are points where terminals of AC conducting equipment are connected together with zero impedance.</xs:documentation>
       </xs:annotation>
@@ -320,7 +324,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="ConnectivityNodeContainer"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#ConnectivityNodeContainer">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ConnectivityNodeContainer">
       <xs:annotation>
          <xs:documentation>A base class for all objects that may contain connectivity nodes or topological nodes.</xs:documentation>
       </xs:annotation>
@@ -331,7 +335,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="Connector"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#Connector">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Connector">
       <xs:annotation>
          <xs:documentation>A conductor, or group of conductors, with negligible impedance, that serve to connect other conducting equipment within a single substation and are modelled with a single logical terminal.</xs:documentation>
       </xs:annotation>
@@ -342,7 +346,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="Disconnector"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#Disconnector">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Disconnector">
       <xs:annotation>
          <xs:documentation>A mechanical switching device which provides, in the open position, an isolating distance in accordance with specified requirements.</xs:documentation>
          <xs:documentation>A disconnector is capable of opening and closing a circuit when either negligible current is broken or made, or when no significant change in the voltage across the terminals of each of the poles of the disconnector occurs. It is also capable of carrying currents under normal circuit conditions and carrying for a specified time currents under abnormal conditions such as those of short circuit.</xs:documentation>
@@ -354,7 +358,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="EnergyConnection"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#EnergyConnection">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#EnergyConnection">
       <xs:annotation>
          <xs:documentation>A connection of energy generation or consumption on the power system model.</xs:documentation>
       </xs:annotation>
@@ -365,7 +369,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="EnergyConsumer"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#EnergyConsumer">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#EnergyConsumer">
       <xs:annotation>
          <xs:documentation>Generic user of energy - a  point of consumption on the power system model.</xs:documentation>
          <xs:documentation>EnergyConsumer.pfixed, .qfixed, .pfixedPct and .qfixedPct have meaning only if there is no LoadResponseCharacteristic associated with EnergyConsumer or if LoadResponseCharacteristic.exponentModel is set to False.</xs:documentation>
@@ -377,7 +381,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="xs:integer"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#EnergyConsumer.customerCount">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#EnergyConsumer.customerCount">
                   <xs:annotation>
                      <xs:documentation>Number of individual customers represented by this demand.</xs:documentation>
                   </xs:annotation>
@@ -386,7 +390,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="xs:boolean"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#EnergyConsumer.grounded">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#EnergyConsumer.grounded">
                   <xs:annotation>
                      <xs:documentation>Required for Yn and I connections (as represented by EnergyConsumer.phaseConnection). True if the neutral is solidly grounded.</xs:documentation>
                   </xs:annotation>
@@ -395,7 +399,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="m:PhaseShuntConnectionKind"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#EnergyConsumer.phaseConnection">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#EnergyConsumer.phaseConnection">
                   <xs:annotation>
                      <xs:documentation>The type of phase connection, such as wye or delta.</xs:documentation>
                   </xs:annotation>
@@ -405,7 +409,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="EnergyConsumerPhase"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#EnergyConsumerPhase">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#EnergyConsumerPhase">
       <xs:annotation>
          <xs:documentation>A single phase of an energy consumer.</xs:documentation>
       </xs:annotation>
@@ -416,7 +420,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="m:SinglePhaseKind"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#EnergyConsumerPhase.phase">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#EnergyConsumerPhase.phase">
                   <xs:annotation>
                      <xs:documentation>Phase of this energy consumer component.   If the energy consumer is wye connected, the connection is from the indicated phase to the central ground or neutral point.  If the energy consumer is delta connected, the phase indicates an energy consumer connected from the indicated phase to the next logical non-neutral phase.</xs:documentation>
                   </xs:annotation>
@@ -425,7 +429,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="m:EnergyConsumer"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#EnergyConsumerPhase.EnergyConsumer">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#EnergyConsumerPhase.EnergyConsumer">
                   <xs:annotation>
                      <xs:documentation>The energy consumer to which this phase belongs.</xs:documentation>
                   </xs:annotation>
@@ -435,7 +439,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="EnergySource"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#EnergySource">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#EnergySource">
       <xs:annotation>
          <xs:documentation>A generic equivalent for an energy supplier on a transmission or distribution voltage level.</xs:documentation>
       </xs:annotation>
@@ -446,7 +450,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="Equipment"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#Equipment">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Equipment">
       <xs:annotation>
          <xs:documentation>The parts of a power system that are physical devices, electronic or mechanical.</xs:documentation>
       </xs:annotation>
@@ -457,7 +461,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="xs:boolean"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#Equipment.aggregate">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Equipment.aggregate">
                   <xs:annotation>
                      <xs:documentation>The aggregate flag provides an alternative way of representing an aggregated (equivalent) element. It is applicable in cases when the dedicated classes for equivalent equipment do not have all of the attributes necessary to represent the required level of detail. In case the flag is set to "true" the single instance of equipment represents multiple pieces of equipment that have been modelled together as an aggregate equivalent obtained by a network reduction procedure. Examples would be power transformers or synchronous machines operating in parallel modelled as a single aggregate power transformer or aggregate synchronous machine.</xs:documentation>
                      <xs:documentation>The attribute is not used for EquivalentBranch, EquivalentShunt, EquivalentInjection and ExternalNetworkInjection.</xs:documentation>
@@ -467,16 +471,16 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="xs:boolean"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#Equipment.normallyInService">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Equipment.normallyInService">
                   <xs:annotation>
                      <xs:documentation>Specifies the availability of the equipment under normal operating conditions. True means the equipment is available for topology processing, which determines if the equipment is energized or not. False means that the equipment is treated by network applications as if it is not in the model.</xs:documentation>
                   </xs:annotation>
                </xs:element>
                <xs:element name="AdditionalEquipmentContainer"
                            minOccurs="0"
-                           maxOccurs="unbounded"
+                           maxOccurs="1"
                            type="m:EquipmentContainer"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#Equipment.AdditionalEquipmentContainer">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Equipment.AdditionalEquipmentContainer">
                   <xs:annotation>
                      <xs:documentation>Additional equipment container beyond the primary equipment container.  The equipment is contained in another equipment container, but also grouped with this equipment container.</xs:documentation>
                   </xs:annotation>
@@ -484,18 +488,21 @@
                <xs:element name="EquipmentContainer"
                            minOccurs="1"
                            maxOccurs="1"
-                           type="m:EquipmentContainer"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#Equipment.EquipmentContainer">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Equipment.EquipmentContainer">
                   <xs:annotation>
                      <xs:documentation>Container of this equipment.</xs:documentation>
                   </xs:annotation>
+                  <xs:complexType sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#EquipmentContainer">
+                     <xs:attribute name="ref" type="xs:string" use="required"/>
+                     <xs:attribute name="referenceType" type="xs:string" use="optional"/>
+                  </xs:complexType>
                </xs:element>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="EquipmentContainer"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#EquipmentContainer">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#EquipmentContainer">
       <xs:annotation>
          <xs:documentation>A modelling construct to provide a root class for containing equipment.</xs:documentation>
       </xs:annotation>
@@ -505,7 +512,8 @@
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
-   <xs:complexType name="Feeder" sawsdl:modelReference="http://cim.ucaiug.io/ns#Feeder">
+   <xs:complexType name="Feeder"
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Feeder">
       <xs:annotation>
          <xs:documentation>A collection of equipment for organizational purposes, used for grouping distribution resources.</xs:documentation>
          <xs:documentation>The organization a feeder does not necessarily reflect connectivity or current operation state.</xs:documentation>
@@ -516,17 +524,21 @@
                <xs:element name="NormalEnergizingSubstation"
                            minOccurs="1"
                            maxOccurs="1"
-                           type="m:Substation"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#Feeder.NormalEnergizingSubstation">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Feeder.NormalEnergizingSubstation">
                   <xs:annotation>
                      <xs:documentation>The substation that nominally energizes the feeder.  Also used for naming purposes.</xs:documentation>
                   </xs:annotation>
+                  <xs:complexType sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Substation">
+                     <xs:attribute name="ref" type="xs:string" use="required"/>
+                     <xs:attribute name="referenceType" type="xs:string" use="optional"/>
+                  </xs:complexType>
                </xs:element>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
-   <xs:complexType name="Fuse" sawsdl:modelReference="http://cim.ucaiug.io/ns#Fuse">
+   <xs:complexType name="Fuse"
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Fuse">
       <xs:annotation>
          <xs:documentation>An overcurrent protective device with a circuit opening fusible part that is heated and severed by the passage of overcurrent through it. A fuse is considered a switching device because it breaks current.</xs:documentation>
       </xs:annotation>
@@ -537,7 +549,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="IdentifiedObject"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#IdentifiedObject">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#IdentifiedObject">
       <xs:annotation>
          <xs:documentation>This is a class that provides common identification for all classes needing identification and naming attributes.</xs:documentation>
       </xs:annotation>
@@ -548,7 +560,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="xs:string"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#IdentifiedObject.description">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#IdentifiedObject.description">
                   <xs:annotation>
                      <xs:documentation>The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</xs:documentation>
                   </xs:annotation>
@@ -557,7 +569,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="xs:string"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#IdentifiedObject.name">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#IdentifiedObject.name">
                   <xs:annotation>
                      <xs:documentation>The name is any free human readable and possibly non unique text naming the object.</xs:documentation>
                   </xs:annotation>
@@ -567,23 +579,24 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="Identity"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#Identity">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Identity">
       <xs:annotation>
-         <xs:documentation>,</xs:documentation>
+         <xs:documentation>This is a root class to provide common identification for all classes.  IdentifiedObject and any class to be exchanged with RDF XML now inherits from Identity.  mRID is superseded by Identity.identifier, which is typed to be a UUID.</xs:documentation>
       </xs:annotation>
       <xs:sequence>
          <xs:element name="identifier"
                      minOccurs="1"
                      maxOccurs="1"
                      type="xs:string"
-                     sawsdl:modelReference="http://cim.ucaiug.io/ns#Identity.identifier">
+                     sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Identity.identifier">
             <xs:annotation>
                <xs:documentation>A universally unique object identifier. Used to uniquely identify persistent objects between CIM messages.</xs:documentation>
             </xs:annotation>
          </xs:element>
       </xs:sequence>
    </xs:complexType>
-   <xs:complexType name="Line" sawsdl:modelReference="http://cim.ucaiug.io/ns#Line">
+   <xs:complexType name="Line"
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Line">
       <xs:annotation>
          <xs:documentation>Contains equipment beyond a substation belonging to a power transmission line.</xs:documentation>
       </xs:annotation>
@@ -594,7 +607,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="LinearShuntCompensator"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#LinearShuntCompensator">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#LinearShuntCompensator">
       <xs:annotation>
          <xs:documentation>A linear shunt compensator has banks or sections with equal admittance values.</xs:documentation>
       </xs:annotation>
@@ -605,7 +618,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="LinearShuntCompensatorPhase"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#LinearShuntCompensatorPhase">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#LinearShuntCompensatorPhase">
       <xs:annotation>
          <xs:documentation>A per phase linear shunt compensator has banks or sections with equal admittance values.</xs:documentation>
       </xs:annotation>
@@ -616,7 +629,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="LoadBreakSwitch"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#LoadBreakSwitch">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#LoadBreakSwitch">
       <xs:annotation>
          <xs:documentation>A mechanical switching device capable of making, carrying, and breaking currents under normal operating conditions.</xs:documentation>
       </xs:annotation>
@@ -627,7 +640,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:simpleType name="OrderedPhaseCodeKind"
-                  sawsdl:modelReference="http://epri.com/gmdm#OrderedPhaseCodeKind">
+                  sawsdl:modelReference="http://epri.com/gmdm/2025#OrderedPhaseCodeKind">
       <xs:annotation>
          <xs:documentation>In some use cases, the ordering of phases is important. The PhaseCode class does not represent order, but this class addresses such use cases. When two or more phases are present, the individual phases may occur in any order, but the neutral must always occur last. When only one phase and the neutral is present, that phase and the neutral may be re-ordered.</xs:documentation>
       </xs:annotation>
@@ -778,41 +791,172 @@
          </xs:enumeration>
       </xs:restriction>
    </xs:simpleType>
-   <xs:simpleType name="PhaseShuntConnectionKind"
-                  sawsdl:modelReference="http://cim.ucaiug.io/ns#PhaseShuntConnectionKind">
+   <xs:simpleType name="PhaseCode"
+                  sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PhaseCode">
       <xs:annotation>
-         <xs:documentation>The configuration of phase connections for a single terminal device such as a load or capacitor.</xs:documentation>
+         <xs:documentation>Enumeration of phase identifiers used to designate the combination of phase and/or neutral conductors at a terminal, measurement or equipment modelled as a single-line balanced equivalent.</xs:documentation>
+         <xs:documentation>This is an unordered enumeration of phase identifiers.  Allows designation of phases for both transmission and distribution equipment, circuits and loads.   The enumeration, by itself, does not describe how the phases are connected together or connected to ground.  Ground is not explicitly denoted as a phase.</xs:documentation>
+         <xs:documentation>Residential and small commercial loads are often served from single-phase, or split-phase, secondary circuits. For the example of s12N, phases 1 and 2 refer to hot wires that are 180 degrees out of phase, while N refers to the neutral wire. Through single-phase transformer connections, these secondary circuits may be served from one or two of the primary phases A, B, and C. For three-phase loads, use the A, B, C phase codes instead of s12N.</xs:documentation>
+         <xs:documentation>The integer values are from IEC 61968-9 to support revenue metering applications.</xs:documentation>
       </xs:annotation>
       <xs:restriction base="xs:string">
-         <xs:enumeration value="D">
+         <xs:enumeration value="A">
             <xs:annotation>
-               <xs:documentation>Delta connection.</xs:documentation>
+               <xs:documentation>Phase A.</xs:documentation>
             </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="G">
+         <xs:enumeration value="AB">
             <xs:annotation>
-               <xs:documentation>Ground connection; use when explicit connection to ground needs to be expressed in combination with the phase code, such as for electrical wire/cable or for meters.</xs:documentation>
+               <xs:documentation>Phases A and B.</xs:documentation>
             </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="I">
+         <xs:enumeration value="ABC">
             <xs:annotation>
-               <xs:documentation>Independent winding, for single-phase connections.</xs:documentation>
+               <xs:documentation>Phases A, B, and C.</xs:documentation>
             </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="Y">
+         <xs:enumeration value="ABCN">
             <xs:annotation>
-               <xs:documentation>Wye connection.</xs:documentation>
+               <xs:documentation>Phases A, B, C, and N.</xs:documentation>
             </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="Yn">
+         <xs:enumeration value="ABN">
             <xs:annotation>
-               <xs:documentation>Wye, with neutral brought out for grounding.</xs:documentation>
+               <xs:documentation>Phases A, B, and neutral.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="AC">
+            <xs:annotation>
+               <xs:documentation>Phases A and C.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="ACN">
+            <xs:annotation>
+               <xs:documentation>Phases A, C and neutral.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="AN">
+            <xs:annotation>
+               <xs:documentation>Phases A and neutral.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="B">
+            <xs:annotation>
+               <xs:documentation>Phase B.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="BC">
+            <xs:annotation>
+               <xs:documentation>Phases B and C.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="BCN">
+            <xs:annotation>
+               <xs:documentation>Phases B, C, and neutral.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="BN">
+            <xs:annotation>
+               <xs:documentation>Phases B and neutral.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="C">
+            <xs:annotation>
+               <xs:documentation>Phase C.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="CN">
+            <xs:annotation>
+               <xs:documentation>Phases C and neutral.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="N">
+            <xs:annotation>
+               <xs:documentation>Neutral phase.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="X">
+            <xs:annotation>
+               <xs:documentation>Unknown non-neutral phase.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="XN">
+            <xs:annotation>
+               <xs:documentation>Unknown non-neutral phase plus neutral.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="XY">
+            <xs:annotation>
+               <xs:documentation>Two unknown non-neutral phases.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="XYN">
+            <xs:annotation>
+               <xs:documentation>Two unknown non-neutral phases plus neutral.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="none">
+            <xs:annotation>
+               <xs:documentation>No phases specified.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="s1">
+            <xs:annotation>
+               <xs:documentation>Secondary phase 1.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="s12">
+            <xs:annotation>
+               <xs:documentation>Secondary phase 1 and 2.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="s12N">
+            <xs:annotation>
+               <xs:documentation>Secondary phases 1, 2, and neutral.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="s1N">
+            <xs:annotation>
+               <xs:documentation>Secondary phase 1 and neutral.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="s2">
+            <xs:annotation>
+               <xs:documentation>Secondary phase 2.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="s2N">
+            <xs:annotation>
+               <xs:documentation>Secondary phase 2 and neutral.</xs:documentation>
             </xs:annotation>
          </xs:enumeration>
       </xs:restriction>
    </xs:simpleType>
+   <xs:simpleType name="PhaseShuntConnectionKind"
+                  sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PhaseShuntConnectionKind">
+      <xs:annotation>
+         <xs:documentation>The configuration of phase connections for a single terminal device such as a load or capacitor.</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="PhaseShuntConnectionKind.D">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="PhaseShuntConnectionKind.G">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="PhaseShuntConnectionKind.I">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="PhaseShuntConnectionKind.Y">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="PhaseShuntConnectionKind.Yn">
+            <xs:annotation/>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
    <xs:complexType name="PowerElectronicsConnection"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#PowerElectronicsConnection">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerElectronicsConnection">
       <xs:annotation>
          <xs:documentation>A connection to the AC network for energy production or consumption that uses power electronics rather than rotating machines.</xs:documentation>
       </xs:annotation>
@@ -823,7 +967,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="PowerElectronicsConnectionPhase"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#PowerElectronicsConnectionPhase">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerElectronicsConnectionPhase">
       <xs:annotation>
          <xs:documentation>A single phase of a power electronics connection.</xs:documentation>
       </xs:annotation>
@@ -834,7 +978,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="m:SinglePhaseKind"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#PowerElectronicsConnectionPhase.phase">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerElectronicsConnectionPhase.phase">
                   <xs:annotation>
                      <xs:documentation>Phase of this energy producer component.   If the energy producer is wye connected, the connection is from the indicated phase to the central ground or neutral point.  If the energy producer is delta connected, the phase indicates an energy producer connected from the indicated phase to the next logical non-neutral phase.</xs:documentation>
                   </xs:annotation>
@@ -842,18 +986,21 @@
                <xs:element name="PowerElectronicsConnection"
                            minOccurs="1"
                            maxOccurs="1"
-                           type="m:PowerElectronicsConnection"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#PowerElectronicsConnectionPhase.PowerElectronicsConnection">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerElectronicsConnectionPhase.PowerElectronicsConnection">
                   <xs:annotation>
                      <xs:documentation>Power electronics connection of this power electronics connection phase.</xs:documentation>
                   </xs:annotation>
+                  <xs:complexType sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerElectronicsConnection">
+                     <xs:attribute name="ref" type="xs:string" use="required"/>
+                     <xs:attribute name="referenceType" type="xs:string" use="optional"/>
+                  </xs:complexType>
                </xs:element>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="PowerSystemResource"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#PowerSystemResource">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerSystemResource">
       <xs:annotation>
          <xs:documentation>A power system resource (PSR) can be an item of equipment such as a switch, an equipment container containing many individual items of equipment such as a substation, or an organisational entity such as sub-control area. Power system resources can have measurements associated.</xs:documentation>
       </xs:annotation>
@@ -864,7 +1011,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="PowerTransformer"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#PowerTransformer">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerTransformer">
       <xs:annotation>
          <xs:documentation>An electrical device consisting of  two or more coupled windings, with or without a magnetic core, for introducing mutual coupling between electric circuits. Transformers can be used to control voltage and phase shift (active power flow).</xs:documentation>
          <xs:documentation>A power transformer may be composed of separate transformer tanks that need not be identical.</xs:documentation>
@@ -878,7 +1025,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="xs:string"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#PowerTransformer.vectorGroup">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerTransformer.vectorGroup">
                   <xs:annotation>
                      <xs:documentation>Vector group of the transformer for protective relaying, e.g., Dyn1. For unbalanced transformers, this may not be simply determined from the constituent winding connections and phase angle displacements.</xs:documentation>
                      <xs:documentation>The vectorGroup string consists of the following components in the order listed: high voltage winding connection, mid voltage winding connection (for three winding transformers), phase displacement clock number from 0 to 11,  low voltage winding connection</xs:documentation>
@@ -891,7 +1038,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="PowerTransformerEnd"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#PowerTransformerEnd">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerTransformerEnd">
       <xs:annotation>
          <xs:documentation>A PowerTransformerEnd is associated with each Terminal of a PowerTransformer.</xs:documentation>
          <xs:documentation>The impedance values r, r0, x, and x0 of a PowerTransformerEnd represents a star equivalent as follows.</xs:documentation>
@@ -908,7 +1055,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="m:WindingConnection"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#PowerTransformerEnd.connectionKind">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerTransformerEnd.connectionKind">
                   <xs:annotation>
                      <xs:documentation>Kind of connection.</xs:documentation>
                   </xs:annotation>
@@ -917,7 +1064,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="m:PowerTransformer"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#PowerTransformerEnd.PowerTransformer">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerTransformerEnd.PowerTransformer">
                   <xs:annotation>
                      <xs:documentation>The power transformer of this power transformer end.</xs:documentation>
                   </xs:annotation>
@@ -927,7 +1074,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="ProtectedSwitch"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#ProtectedSwitch">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ProtectedSwitch">
       <xs:annotation>
          <xs:documentation>A ProtectedSwitch is a switching device that can be operated by ProtectionEquipment.</xs:documentation>
       </xs:annotation>
@@ -938,7 +1085,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="Recloser"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#Recloser">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Recloser">
       <xs:annotation>
          <xs:documentation>Pole-mounted fault interrupter with built-in phase and ground relays, current transformer (CT), and supplemental controls.</xs:documentation>
       </xs:annotation>
@@ -949,7 +1096,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="RegulatingCondEq"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#RegulatingCondEq">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#RegulatingCondEq">
       <xs:annotation>
          <xs:documentation>A type of conducting equipment that can regulate a quantity (i.e. voltage or flow) at a specific point in the network.</xs:documentation>
       </xs:annotation>
@@ -960,7 +1107,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="RotatingMachine"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#RotatingMachine">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#RotatingMachine">
       <xs:annotation>
          <xs:documentation>A rotating machine which may be used as a generator or motor.</xs:documentation>
       </xs:annotation>
@@ -971,7 +1118,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="Sectionaliser"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#Sectionaliser">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Sectionaliser">
       <xs:annotation>
          <xs:documentation>Automatic switch that will lock open to isolate a faulted section. It may, or may not, have load breaking capability. Its primary purpose is to provide fault sectionalising at locations where the fault current is either too high, or too low, for proper coordination of fuses.</xs:documentation>
       </xs:annotation>
@@ -982,7 +1129,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="SeriesCompensator"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#SeriesCompensator">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#SeriesCompensator">
       <xs:annotation>
          <xs:documentation>A Series Compensator is a series capacitor or reactor or an AC transmission line without charging susceptance.  It is a two terminal device.</xs:documentation>
       </xs:annotation>
@@ -993,7 +1140,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="ShuntCompensator"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#ShuntCompensator">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ShuntCompensator">
       <xs:annotation>
          <xs:documentation>A shunt capacitor or reactor or switchable bank of shunt capacitors or reactors. A section of a shunt compensator is an individual capacitor or reactor. A negative value for bPerSection indicates that the compensator is a reactor. ShuntCompensator is a single terminal device.  Ground is implied.</xs:documentation>
       </xs:annotation>
@@ -1004,7 +1151,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="xs:boolean"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#ShuntCompensator.grounded">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ShuntCompensator.grounded">
                   <xs:annotation>
                      <xs:documentation>Required for Yn and I connections (as represented by ShuntCompensator.phaseConnection). True if the neutral is solidly grounded.</xs:documentation>
                   </xs:annotation>
@@ -1013,7 +1160,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="m:PhaseShuntConnectionKind"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#ShuntCompensator.phaseConnection">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ShuntCompensator.phaseConnection">
                   <xs:annotation>
                      <xs:documentation>The type of phase connection, such as wye or delta.</xs:documentation>
                   </xs:annotation>
@@ -1023,7 +1170,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="ShuntCompensatorPhase"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#ShuntCompensatorPhase">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ShuntCompensatorPhase">
       <xs:annotation>
          <xs:documentation>Single phase of a multi-phase shunt compensator when its attributes might be different per phase.</xs:documentation>
       </xs:annotation>
@@ -1034,7 +1181,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="m:SinglePhaseKind"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#ShuntCompensatorPhase.phase">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ShuntCompensatorPhase.phase">
                   <xs:annotation>
                      <xs:documentation>Phase of this shunt compensator component.   If the shunt compensator is wye connected, the connection is from the indicated phase to the central ground or neutral point.  If the shunt compensator is delta connected, the phase indicates a shunt compensator connected from the indicated phase to the next logical non-neutral phase.</xs:documentation>
                   </xs:annotation>
@@ -1043,7 +1190,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="m:ShuntCompensator"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#ShuntCompensatorPhase.ShuntCompensator">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ShuntCompensatorPhase.ShuntCompensator">
                   <xs:annotation>
                      <xs:documentation>Shunt compensator of this shunt compensator phase.</xs:documentation>
                   </xs:annotation>
@@ -1053,46 +1200,34 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:simpleType name="SinglePhaseKind"
-                  sawsdl:modelReference="http://cim.ucaiug.io/ns#SinglePhaseKind">
+                  sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#SinglePhaseKind">
       <xs:annotation>
          <xs:documentation>Enumeration of phase identifiers used to designate the specific phase of conducting equipment modelled as individual unbalanced phases.</xs:documentation>
          <xs:documentation>Allows designation of specific phases for transmission and distribution equipment, circuits and loads.</xs:documentation>
       </xs:annotation>
       <xs:restriction base="xs:string">
-         <xs:enumeration value="A">
-            <xs:annotation>
-               <xs:documentation>Phase A.</xs:documentation>
-            </xs:annotation>
+         <xs:enumeration value="SinglePhaseKind.A">
+            <xs:annotation/>
          </xs:enumeration>
-         <xs:enumeration value="B">
-            <xs:annotation>
-               <xs:documentation>Phase B.</xs:documentation>
-            </xs:annotation>
+         <xs:enumeration value="SinglePhaseKind.B">
+            <xs:annotation/>
          </xs:enumeration>
-         <xs:enumeration value="C">
-            <xs:annotation>
-               <xs:documentation>Phase C.</xs:documentation>
-            </xs:annotation>
+         <xs:enumeration value="SinglePhaseKind.C">
+            <xs:annotation/>
          </xs:enumeration>
-         <xs:enumeration value="N">
-            <xs:annotation>
-               <xs:documentation>Neutral.</xs:documentation>
-            </xs:annotation>
+         <xs:enumeration value="SinglePhaseKind.N">
+            <xs:annotation/>
          </xs:enumeration>
-         <xs:enumeration value="s1">
-            <xs:annotation>
-               <xs:documentation>Secondary phase 1.</xs:documentation>
-            </xs:annotation>
+         <xs:enumeration value="SinglePhaseKind.s1">
+            <xs:annotation/>
          </xs:enumeration>
-         <xs:enumeration value="s2">
-            <xs:annotation>
-               <xs:documentation>Secondary phase 2.</xs:documentation>
-            </xs:annotation>
+         <xs:enumeration value="SinglePhaseKind.s2">
+            <xs:annotation/>
          </xs:enumeration>
       </xs:restriction>
    </xs:simpleType>
    <xs:complexType name="Substation"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#Substation">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Substation">
       <xs:annotation>
          <xs:documentation>A collection of equipment for purposes other than generation or utilization, through which electric energy in bulk is passed for the purposes of switching or modifying its characteristics.</xs:documentation>
       </xs:annotation>
@@ -1102,7 +1237,8 @@
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
-   <xs:complexType name="Switch" sawsdl:modelReference="http://cim.ucaiug.io/ns#Switch">
+   <xs:complexType name="Switch"
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Switch">
       <xs:annotation>
          <xs:documentation>A generic device designed to close, or open, or both, one or more electric circuits.  All switches are two terminal devices including grounding switches. The ACDCTerminal.connected at the two sides of the switch shall not be considered for assessing switch connectivity, i.e. only Switch.open, .normalOpen and .locked are relevant.</xs:documentation>
       </xs:annotation>
@@ -1113,7 +1249,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="xs:boolean"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#Switch.locked">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Switch.locked">
                   <xs:annotation>
                      <xs:documentation>If true, the switch is locked. The resulting switch state is a combination of locked and Switch.open attributes as follows:</xs:documentation>
                      <xs:documentation>&lt;ul&gt;</xs:documentation>
@@ -1127,7 +1263,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="xs:boolean"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#Switch.normalOpen">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Switch.normalOpen">
                   <xs:annotation>
                      <xs:documentation>The attribute is used in cases when no Measurement for the status value is present. If the Switch has a status measurement the Discrete.normalValue is expected to match with the Switch.normalOpen.</xs:documentation>
                   </xs:annotation>
@@ -1137,7 +1273,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="SwitchPhase"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#SwitchPhase">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#SwitchPhase">
       <xs:annotation>
          <xs:documentation>Single phase of a multi-phase switch when its attributes might be different per phase.</xs:documentation>
       </xs:annotation>
@@ -1148,7 +1284,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="xs:boolean"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#SwitchPhase.normalOpen">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#SwitchPhase.normalOpen">
                   <xs:annotation>
                      <xs:documentation>Used in cases when no Measurement for the status value is present. If the SwitchPhase has a status measurement the Discrete.normalValue is expected to match with this value.</xs:documentation>
                   </xs:annotation>
@@ -1157,7 +1293,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="m:SinglePhaseKind"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#SwitchPhase.phaseSide1">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#SwitchPhase.phaseSide1">
                   <xs:annotation>
                      <xs:documentation>Phase of this SwitchPhase on the side with terminal sequence number equal to 1. Should be a phase contained in that terminal's phases attribute.</xs:documentation>
                   </xs:annotation>
@@ -1166,7 +1302,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="m:SinglePhaseKind"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#SwitchPhase.phaseSide2">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#SwitchPhase.phaseSide2">
                   <xs:annotation>
                      <xs:documentation>Phase of this SwitchPhase on the side with terminal sequence number equal to 2.  Should be a phase contained in that terminal's Terminal.phases attribute.</xs:documentation>
                   </xs:annotation>
@@ -1175,7 +1311,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="m:Switch"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#SwitchPhase.Switch">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#SwitchPhase.Switch">
                   <xs:annotation>
                      <xs:documentation>The switch of the switch phase.</xs:documentation>
                   </xs:annotation>
@@ -1185,7 +1321,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="SynchronousMachine"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#SynchronousMachine">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#SynchronousMachine">
       <xs:annotation>
          <xs:documentation>An electromechanical device that operates with shaft rotating synchronously with the network. It is a single machine operating either as a generator or synchronous condenser or pump.</xs:documentation>
       </xs:annotation>
@@ -1196,7 +1332,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="Terminal"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#Terminal">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Terminal">
       <xs:annotation>
          <xs:documentation>An AC electrical connection point to a piece of conducting equipment. Terminals are connected at physical connection points called connectivity nodes.</xs:documentation>
       </xs:annotation>
@@ -1206,36 +1342,45 @@
                <xs:element name="ConductingEquipment"
                            minOccurs="0"
                            maxOccurs="1"
-                           type="m:ConductingEquipment"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#Terminal.ConductingEquipment">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Terminal.ConductingEquipment">
                   <xs:annotation>
                      <xs:documentation>The conducting equipment of the terminal.  Conducting equipment have  terminals that may be connected to other conducting equipment terminals via connectivity nodes or topological nodes.</xs:documentation>
                   </xs:annotation>
+                  <xs:complexType sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ConductingEquipment">
+                     <xs:attribute name="ref" type="xs:string" use="required"/>
+                     <xs:attribute name="referenceType" type="xs:string" use="optional"/>
+                  </xs:complexType>
                </xs:element>
                <xs:element name="ConnectivityNode"
                            minOccurs="0"
                            maxOccurs="1"
-                           type="m:ConnectivityNode"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#Terminal.ConnectivityNode">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Terminal.ConnectivityNode">
                   <xs:annotation>
                      <xs:documentation>The connectivity node to which this terminal connects with zero impedance.</xs:documentation>
                   </xs:annotation>
+                  <xs:complexType sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ConnectivityNode">
+                     <xs:attribute name="ref" type="xs:string" use="required"/>
+                     <xs:attribute name="referenceType" type="xs:string" use="optional"/>
+                  </xs:complexType>
                </xs:element>
                <xs:element name="NormalHeadFeeder"
                            minOccurs="0"
                            maxOccurs="1"
-                           type="m:Feeder"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#Terminal.NormalHeadFeeder">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Terminal.NormalHeadFeeder">
                   <xs:annotation>
                      <xs:documentation>The feeder that this terminal normally feeds.  Only specified for the terminals at head of feeders.</xs:documentation>
                   </xs:annotation>
+                  <xs:complexType sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Feeder">
+                     <xs:attribute name="ref" type="xs:string" use="required"/>
+                     <xs:attribute name="referenceType" type="xs:string" use="optional"/>
+                  </xs:complexType>
                </xs:element>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="TransformerEnd"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerEnd">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TransformerEnd">
       <xs:annotation>
          <xs:documentation>A conducting connection point of a power transformer. It corresponds to a physical transformer winding terminal. In earlier CIM versions, the TransformerWinding class served a similar purpose, but this class is more flexible because it associates to terminal but is not a specialization of ConductingEquipment.</xs:documentation>
       </xs:annotation>
@@ -1246,16 +1391,16 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="xs:integer"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerEnd.endNumber">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TransformerEnd.endNumber">
                   <xs:annotation>
                      <xs:documentation>Number for this transformer end, corresponding to the end's order in the power transformer vector group or phase angle clock number. Highest voltage winding should be 1. Each end within a power transformer should have a unique subsequent end number. Note the transformer end number need not match the terminal sequence number.</xs:documentation>
                   </xs:annotation>
                </xs:element>
                <xs:element name="BaseVoltage"
-                           minOccurs="1"
+                           minOccurs="0"
                            maxOccurs="1"
                            type="m:BaseVoltage"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerEnd.BaseVoltage">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TransformerEnd.BaseVoltage">
                   <xs:annotation>
                      <xs:documentation>Base voltage of the transformer end. This is essential for PU calculation.</xs:documentation>
                   </xs:annotation>
@@ -1263,25 +1408,13 @@
                <xs:element name="Terminal"
                            minOccurs="1"
                            maxOccurs="1"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerEnd.Terminal">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TransformerEnd.Terminal">
                   <xs:annotation>
                      <xs:documentation>Terminal of the power transformer to which this transformer end belongs.</xs:documentation>
                   </xs:annotation>
-                  <xs:complexType sawsdl:modelReference="http://cim.ucaiug.io/ns#Terminal">
-                     <xs:sequence>
-                        <xs:element name="TransformerEnd"
-                                    minOccurs="0"
-                                    maxOccurs="1"
-                                    sawsdl:modelReference="http://cim.ucaiug.io/ns#Terminal.TransformerEnd">
-                           <xs:annotation>
-                              <xs:documentation>All transformer ends connected at this terminal.</xs:documentation>
-                           </xs:annotation>
-                           <xs:complexType sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerEnd">
-                              <xs:attribute name="ref" type="xs:string" use="required"/>
-                              <xs:attribute name="referenceType" type="xs:string" use="optional"/>
-                           </xs:complexType>
-                        </xs:element>
-                     </xs:sequence>
+                  <xs:complexType sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Terminal">
+                     <xs:attribute name="ref" type="xs:string" use="required"/>
+                     <xs:attribute name="referenceType" type="xs:string" use="optional"/>
                   </xs:complexType>
                </xs:element>
             </xs:sequence>
@@ -1289,7 +1422,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="TransformerTank"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerTank">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TransformerTank">
       <xs:annotation>
          <xs:documentation>An assembly of two or more coupled windings that transform electrical power between voltage levels. These windings are bound on a common core and placed in the same tank. Transformer tank can be used to model both single-phase and 3-phase transformers.</xs:documentation>
       </xs:annotation>
@@ -1299,18 +1432,21 @@
                <xs:element name="PowerTransformer"
                            minOccurs="1"
                            maxOccurs="1"
-                           type="m:PowerTransformer"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerTank.PowerTransformer">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TransformerTank.PowerTransformer">
                   <xs:annotation>
                      <xs:documentation>Bank this transformer belongs to.</xs:documentation>
                   </xs:annotation>
+                  <xs:complexType sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerTransformer">
+                     <xs:attribute name="ref" type="xs:string" use="required"/>
+                     <xs:attribute name="referenceType" type="xs:string" use="optional"/>
+                  </xs:complexType>
                </xs:element>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="TransformerTankEnd"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerTankEnd">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TransformerTankEnd">
       <xs:annotation>
          <xs:documentation>Transformer tank end represents an individual winding for unbalanced models or for transformer tanks connected into a bank (and bank is modelled with the PowerTransformer).</xs:documentation>
       </xs:annotation>
@@ -1321,24 +1457,58 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="m:OrderedPhaseCodeKind"
-                           sawsdl:modelReference="http://epri.com/gmdm#TransformerTankEnd.orderedPhases">
+                           sawsdl:modelReference="http://epri.com/gmdm/2025#TransformerTankEnd.orderedPhases">
                   <xs:annotation/>
                </xs:element>
                <xs:element name="TransformerTank"
                            minOccurs="1"
                            maxOccurs="1"
-                           type="m:TransformerTank"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerTankEnd.TransformerTank">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TransformerTankEnd.TransformerTank">
                   <xs:annotation>
                      <xs:documentation>Transformer this winding belongs to.</xs:documentation>
                   </xs:annotation>
+                  <xs:complexType sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TransformerTank">
+                     <xs:attribute name="ref" type="xs:string" use="required"/>
+                     <xs:attribute name="referenceType" type="xs:string" use="optional"/>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="UsagePoint"
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#UsagePoint">
+      <xs:annotation>
+         <xs:documentation>Logical or physical point in the network to which readings or events may be attributed. Used at the place where a physical or virtual meter may be located; however, it is not required that a meter be present.</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="m:IdentifiedObject">
+            <xs:sequence>
+               <xs:element name="phaseCode"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           type="m:PhaseCode"
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#UsagePoint.phaseCode">
+                  <xs:annotation>
+                     <xs:documentation>Phase code. Number of wires and specific nominal phases can be deduced from enumeration literal values. For example, ABCN is three-phase, four-wire, s12n (splitSecondary12N) is single-phase, three-wire, and s1n and s2n are single-phase, two-wire.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="Terminal"
+                           minOccurs="1"
+                           maxOccurs="1"
+                           sawsdl:modelReference="http://epri.com/gmdm/2025#UsagePoint.Terminal">
+                  <xs:annotation/>
+                  <xs:complexType sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Terminal">
+                     <xs:attribute name="ref" type="xs:string" use="required"/>
+                     <xs:attribute name="referenceType" type="xs:string" use="optional"/>
+                  </xs:complexType>
                </xs:element>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="VoltageLevel"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#VoltageLevel">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#VoltageLevel">
       <xs:annotation>
          <xs:documentation>A collection of equipment at one common system voltage forming a switchgear. The equipment typically consists of breakers, busbars, instrumentation, control, regulation and protection devices as well as assemblies of all these.</xs:documentation>
       </xs:annotation>
@@ -1348,69 +1518,62 @@
                <xs:element name="BaseVoltage"
                            minOccurs="1"
                            maxOccurs="1"
-                           type="m:BaseVoltage"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#VoltageLevel.BaseVoltage">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#VoltageLevel.BaseVoltage">
                   <xs:annotation>
                      <xs:documentation>The base voltage used for all equipment within the voltage level.</xs:documentation>
                   </xs:annotation>
+                  <xs:complexType sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#BaseVoltage">
+                     <xs:attribute name="ref" type="xs:string" use="required"/>
+                     <xs:attribute name="referenceType" type="xs:string" use="optional"/>
+                  </xs:complexType>
                </xs:element>
                <xs:element name="Substation"
-                           minOccurs="1"
+                           minOccurs="0"
                            maxOccurs="1"
-                           type="m:Substation"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#VoltageLevel.Substation">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#VoltageLevel.Substation">
                   <xs:annotation>
                      <xs:documentation>The substation of the voltage level.</xs:documentation>
                   </xs:annotation>
+                  <xs:complexType sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Substation">
+                     <xs:attribute name="ref" type="xs:string" use="required"/>
+                     <xs:attribute name="referenceType" type="xs:string" use="optional"/>
+                  </xs:complexType>
                </xs:element>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
    <xs:simpleType name="WindingConnection"
-                  sawsdl:modelReference="http://cim.ucaiug.io/ns#WindingConnection">
+                  sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#WindingConnection">
       <xs:annotation>
          <xs:documentation>Winding connection type.</xs:documentation>
       </xs:annotation>
       <xs:restriction base="xs:string">
-         <xs:enumeration value="A">
-            <xs:annotation>
-               <xs:documentation>Autotransformer common winding.</xs:documentation>
-            </xs:annotation>
+         <xs:enumeration value="WindingConnection.A">
+            <xs:annotation/>
          </xs:enumeration>
-         <xs:enumeration value="D">
-            <xs:annotation>
-               <xs:documentation>Delta.</xs:documentation>
-            </xs:annotation>
+         <xs:enumeration value="WindingConnection.D">
+            <xs:annotation/>
          </xs:enumeration>
-         <xs:enumeration value="I">
-            <xs:annotation>
-               <xs:documentation>Independent winding, for single-phase connections.</xs:documentation>
-            </xs:annotation>
+         <xs:enumeration value="WindingConnection.I">
+            <xs:annotation/>
          </xs:enumeration>
-         <xs:enumeration value="Y">
-            <xs:annotation>
-               <xs:documentation>Wye.</xs:documentation>
-            </xs:annotation>
+         <xs:enumeration value="WindingConnection.Y">
+            <xs:annotation/>
          </xs:enumeration>
-         <xs:enumeration value="Yn">
-            <xs:annotation>
-               <xs:documentation>Wye, with neutral brought out for grounding.</xs:documentation>
-            </xs:annotation>
+         <xs:enumeration value="WindingConnection.Yn">
+            <xs:annotation/>
          </xs:enumeration>
-         <xs:enumeration value="Z">
-            <xs:annotation>
-               <xs:documentation>ZigZag.</xs:documentation>
-            </xs:annotation>
+         <xs:enumeration value="WindingConnection.Z">
+            <xs:annotation/>
          </xs:enumeration>
-         <xs:enumeration value="Zn">
-            <xs:annotation>
-               <xs:documentation>ZigZag, with neutral brought out for grounding.</xs:documentation>
-            </xs:annotation>
+         <xs:enumeration value="WindingConnection.Zn">
+            <xs:annotation/>
          </xs:enumeration>
       </xs:restriction>
    </xs:simpleType>
-   <xs:simpleType name="Voltage" sawsdl:modelReference="http://cim.ucaiug.io/ns#Voltage">
+   <xs:simpleType name="Voltage"
+                  sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Voltage">
       <xs:annotation>
          <xs:documentation>Electrical voltage, can be both AC and DC.</xs:documentation>
       </xs:annotation>

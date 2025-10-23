@@ -108,7 +108,7 @@ class ACLineSegment <<Description>>  {
 }
 
 Conductor <|-- ACLineSegment
-ACLineSegment "+ACLineSegments 0..*" --> "+PerLengthImpedance 0..1" PerLengthImpedance
+ACLineSegment "+ACLineSegments 0..*" --> "+PerLengthImpedance 1" PerLengthImpedance
 
 ' ACLineSegmentPhase inherits from PowerSystemResource
 class ACLineSegmentPhase <<Description>>  {
@@ -156,7 +156,7 @@ abstract class ConnectivityNodeContainer  <<abstract>> {
 PowerSystemResource <|-- ConnectivityNodeContainer
 
 ' Enumeration ConverterControlModeKind
-enum ConverterControlModeKind <<gmdm>><<enumeration>><<Attribute>>  {
+enum ConverterControlModeKind <<gmdm>><<enumeration>>  {
    constantPowerFactor
    constantReactivePower
    dynamic
@@ -198,7 +198,6 @@ PowerSystemResource <|-- Equipment
 
 ' FossilFuel inherits from IdentifiedObject
 class FossilFuel   {
-   +fossilFuelType : FuelType [1]
 }
 
 IdentifiedObject <|-- FossilFuel
@@ -208,6 +207,7 @@ enum FuelType <<ShadowExtension>><<gmdm>><<enumeration>><<Attribute>>  {
    brownCoalLignite
    coal
    coalDerivedGas
+   diesel
    gas
    hardCoal
    lignite
@@ -329,7 +329,7 @@ enum PhaseCode <<enumeration>><<Attribute>>  {
 }
 
 ' PhaseImpedanceData inherits from Identity
-class PhaseImpedanceData   {
+class PhaseImpedanceData <<ShadowExtension>>  {
    +b : SusceptancePerLength [1]
    +column : integer [1]
    +r : ResistancePerLength [1]
@@ -338,7 +338,7 @@ class PhaseImpedanceData   {
 }
 
 Identity <|-- PhaseImpedanceData
-PhaseImpedanceData "+PhaseImpedanceData 0..6" --> "+PhaseImpedance 1" PerLengthPhaseImpedance
+PhaseImpedanceData "+PhaseImpedanceData 0..*" --> "+PhaseImpedance 0..1" PerLengthPhaseImpedance
 
 ' PhotoVoltaicUnit inherits from PowerElectronicsUnit
 class PhotoVoltaicUnit   {
@@ -347,18 +347,18 @@ class PhotoVoltaicUnit   {
 PowerElectronicsUnit <|-- PhotoVoltaicUnit
 
 ' PowerElectronicsConnection inherits from RegulatingCondEq
-abstract class PowerElectronicsConnection <<gmdm>><<ShadowExtension>> <<abstract>> {
+class PowerElectronicsConnection <<Description>>  {
    +<<gmdm>> controlMode : ConverterControlModeKind [0..1]
    +maxQ : ReactivePower [0..1]
    +minQ : ReactivePower [0..1]
-   +ratedS : ApparentPower [1]
-   +ratedU : Voltage [1]
+   +ratedS : ApparentPower [0..1]
+   +ratedU : Voltage [0..1]
 }
 
 RegulatingCondEq <|-- PowerElectronicsConnection
 
 ' PowerElectronicsThermalUnit inherits from PowerElectronicsUnit
-class PowerElectronicsThermalUnit   {
+class PowerElectronicsThermalUnit <<gmdm>>  {
 }
 
 PowerElectronicsUnit <|-- PowerElectronicsThermalUnit
@@ -368,10 +368,10 @@ PowerElectronicsThermalUnit "+PowerElectronicsThermalUnit 0..*" --> "+FossilFuel
 abstract class PowerElectronicsUnit  <<abstract>> {
    +maxP : ActivePower [1]
    +minP : ActivePower [1]
-   PowerElectronicsConnection "+PowerElectronicsConnection 0..1" --> "+PowerElectronicsUnit 1..*" PowerElectronicsUnit#red
 }
 
 Equipment <|-- PowerElectronicsUnit
+PowerElectronicsUnit "+PowerElectronicsUnit 0..*" --> "+PowerElectronicsConnection 0..1" PowerElectronicsConnection
 
 ' PowerElectronicsWindUnit inherits from PowerElectronicsUnit
 class PowerElectronicsWindUnit   {
@@ -412,12 +412,12 @@ abstract class ProtectedSwitch  <<abstract>> {
 Switch <|-- ProtectedSwitch
 
 ' RatioTapChanger inherits from TapChanger
-class RatioTapChanger <<gmdm>><<ShadowExtension>>  {
+class RatioTapChanger   {
    +stepVoltageIncrement : PerCent [0..1]
 }
 
 TapChanger <|-- RatioTapChanger
-RatioTapChanger "+RatioTapChanger 0..1" --> "+TransformerEnd 1" TransformerEnd
+RatioTapChanger "+AdditionalRatioTapChanger 0..1" --> "+TransformerEnd 1" TransformerEnd
 
 ' Recloser inherits from ProtectedSwitch
 class Recloser <<Description>>  {
@@ -473,6 +473,8 @@ Switch <|-- Sectionaliser
 
 ' SeriesCompensator inherits from ConductingEquipment
 class SeriesCompensator <<Description>>  {
+   +r : Resistance [1]
+   +x : Reactance [1]
 }
 
 ConductingEquipment <|-- SeriesCompensator
@@ -509,8 +511,9 @@ class SynchronousMachine <<Description>>  {
 RotatingMachine <|-- SynchronousMachine
 
 ' TapChanger inherits from PowerSystemResource
-abstract class TapChanger <<ShadowExtension>><<gmdm>> <<abstract>> {
-   +controlEnabled : boolean [1]
+abstract class TapChanger  <<abstract>> {
+   +controlEnabled : boolean [0..1]
+   +<<gmdm>> ctRating : float [0..1]
    +ctRatio : float [0..1]
    +highStep : integer [1]
    +initialDelay : Seconds [0..1]
@@ -523,23 +526,23 @@ abstract class TapChanger <<ShadowExtension>><<gmdm>> <<abstract>> {
 }
 
 PowerSystemResource <|-- TapChanger
-TapChanger "+TapChanger 0..*" --> "+TapChangerControl 1" TapChangerControl
+TapChanger "+TapChanger 0..*" --> "+TapChangerControl 0..1" TapChangerControl
 
 ' TapChangerControl inherits from RegulatingControl
 class TapChangerControl   {
-   +lineDropCompensation : boolean [1]
+   +lineDropCompensation : boolean [0..1]
    +lineDropR : Resistance [0..1]
    +lineDropX : Reactance [0..1]
-   +maxLimitVoltage : Voltage [1]
-   +minLimitVoltage : Voltage [1]
+   +maxLimitVoltage : Voltage [0..1]
+   +minLimitVoltage : Voltage [0..1]
    +reverseLineDropR : Resistance [0..1]
    +reverseLineDropX : Reactance [0..1]
-   +reverseTargetDeadband : Voltage [0..1]
-   +reverseTargetValue : Voltage [0..1]
-   +reverseToNeutral : boolean [0..1]
-   +reversible : boolean [1]
-   +reversingDelay : Seconds [0..1]
-   +reversingPowerThreshold : ApparentPower [0..1]
+   +<<gmdm>> reverseTargetDeadband : Voltage [0..1]
+   +<<gmdm>> reverseTargetValue : Voltage [0..1]
+   +<<gmdm>> reverseToNeutral : boolean [0..1]
+   +<<gmdm>> reversible : boolean [0..1]
+   +<<gmdm>> reversingDelay : Seconds [0..1]
+   +<<gmdm>> reversingPowerThreshold : ApparentPower [0..1]
 }
 
 RegulatingControl <|-- TapChangerControl
@@ -586,7 +589,7 @@ TransformerMeshImpedance "+FromMeshImpedance 0..*" --> "+FromTransformerEnd 0..1
 TransformerMeshImpedance "+ToMeshImpedance 0..*" --> "+ToTransformerEnd 0..*" TransformerEnd
 
 ' TransformerTankEnd inherits from TransformerEnd
-class TransformerTankEnd <<ShadowExtension>><<gmdm>><<Description>>  {
+class TransformerTankEnd <<Description>>  {
 }
 
 TransformerEnd <|-- TransformerTankEnd

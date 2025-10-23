@@ -103,7 +103,7 @@
       </xs:sequence>
    </xs:complexType>
    <xs:complexType name="ACLineSegment"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#ACLineSegment">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ACLineSegment">
       <xs:annotation>
          <xs:documentation>A line segment is a conductor or combination of conductors, with consistent electrical characteristics along its length, building a single electrical system that carries alternating current between two points in the power system.</xs:documentation>
          <xs:documentation>The BaseVoltage at the two ends of a line segment shall have the same BaseVoltage.nominalVoltage. However, boundary lines may have slightly different BaseVoltage.nominalVoltages and variation is allowed. Larger voltage difference in general requires use of an equivalent branch.</xs:documentation>
@@ -126,7 +126,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="AsynchronousMachine"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#AsynchronousMachine">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#AsynchronousMachine">
       <xs:annotation>
          <xs:documentation>A rotating machine whose shaft rotates asynchronously with the electrical field.  Also known as an induction machine with no external connection to the rotor windings, e.g. squirrel-cage induction machine.</xs:documentation>
       </xs:annotation>
@@ -136,7 +136,8 @@
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
-   <xs:complexType name="Breaker" sawsdl:modelReference="http://cim.ucaiug.io/ns#Breaker">
+   <xs:complexType name="Breaker"
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Breaker">
       <xs:annotation>
          <xs:documentation>A mechanical switching device capable of making, carrying, and breaking currents under normal circuit conditions and also making, carrying for a specified time, and breaking currents under specified abnormal circuit conditions e.g. those of short circuit.</xs:documentation>
       </xs:annotation>
@@ -147,7 +148,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="BusbarSection"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#BusbarSection">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#BusbarSection">
       <xs:annotation>
          <xs:documentation>A conductor, or group of conductors, with negligible impedance, that serve to connect other conducting equipment within a single substation. The BusbarSection class is intended to represent physical parts of bus bars no matter how that bus bar is constructed.</xs:documentation>
          <xs:documentation>Voltage measurements are typically obtained from voltage transformers that are connected to busbar sections. A bus bar section may have many physical terminals but for analysis is modelled with exactly one logical terminal.</xs:documentation>
@@ -159,7 +160,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="ConductingEquipment"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#ConductingEquipment">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ConductingEquipment">
       <xs:annotation>
          <xs:documentation>The parts of the AC power system that are designed to carry current or that are conductively connected through terminals.</xs:documentation>
       </xs:annotation>
@@ -170,7 +171,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="Conductor"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#Conductor">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Conductor">
       <xs:annotation>
          <xs:documentation>Combination of conducting material with consistent electrical characteristics, building a single electrical system, used to carry current between points in the power system.</xs:documentation>
       </xs:annotation>
@@ -181,7 +182,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="Connector"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#Connector">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Connector">
       <xs:annotation>
          <xs:documentation>A conductor, or group of conductors, with negligible impedance, that serve to connect other conducting equipment within a single substation and are modelled with a single logical terminal.</xs:documentation>
       </xs:annotation>
@@ -192,7 +193,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="CoordinateSystem"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#CoordinateSystem">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#CoordinateSystem">
       <xs:annotation>
          <xs:documentation>Coordinate reference system.</xs:documentation>
       </xs:annotation>
@@ -203,7 +204,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="Disconnector"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#Disconnector">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Disconnector">
       <xs:annotation>
          <xs:documentation>A mechanical switching device which provides, in the open position, an isolating distance in accordance with specified requirements.</xs:documentation>
          <xs:documentation>A disconnector is capable of opening and closing a circuit when either negligible current is broken or made, or when no significant change in the voltage across the terminals of each of the poles of the disconnector occurs. It is also capable of carrying currents under normal circuit conditions and carrying for a specified time currents under abnormal conditions such as those of short circuit.</xs:documentation>
@@ -214,8 +215,19 @@
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
+   <xs:complexType name="ElectronicAddress"
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ElectronicAddress">
+      <xs:annotation>
+         <xs:documentation>Electronic address information.</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="m:IdentifiedObject">
+            <xs:sequence/>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
    <xs:complexType name="EnergyConnection"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#EnergyConnection">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#EnergyConnection">
       <xs:annotation>
          <xs:documentation>A connection of energy generation or consumption on the power system model.</xs:documentation>
       </xs:annotation>
@@ -226,7 +238,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="EnergyConsumer"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#EnergyConsumer">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#EnergyConsumer">
       <xs:annotation>
          <xs:documentation>Generic user of energy - a  point of consumption on the power system model.</xs:documentation>
          <xs:documentation>EnergyConsumer.pfixed, .qfixed, .pfixedPct and .qfixedPct have meaning only if there is no LoadResponseCharacteristic associated with EnergyConsumer or if LoadResponseCharacteristic.exponentModel is set to False.</xs:documentation>
@@ -238,7 +250,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="EnergySource"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#EnergySource">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#EnergySource">
       <xs:annotation>
          <xs:documentation>A generic equivalent for an energy supplier on a transmission or distribution voltage level.</xs:documentation>
       </xs:annotation>
@@ -249,7 +261,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="Equipment"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#Equipment">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Equipment">
       <xs:annotation>
          <xs:documentation>The parts of a power system that are physical devices, electronic or mechanical.</xs:documentation>
       </xs:annotation>
@@ -259,7 +271,8 @@
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
-   <xs:complexType name="Fuse" sawsdl:modelReference="http://cim.ucaiug.io/ns#Fuse">
+   <xs:complexType name="Fuse"
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Fuse">
       <xs:annotation>
          <xs:documentation>An overcurrent protective device with a circuit opening fusible part that is heated and severed by the passage of overcurrent through it. A fuse is considered a switching device because it breaks current.</xs:documentation>
       </xs:annotation>
@@ -270,7 +283,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="IdentifiedObject"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#IdentifiedObject">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#IdentifiedObject">
       <xs:annotation>
          <xs:documentation>This is a class that provides common identification for all classes needing identification and naming attributes.</xs:documentation>
       </xs:annotation>
@@ -281,7 +294,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="xs:string"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#IdentifiedObject.description">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#IdentifiedObject.description">
                   <xs:annotation>
                      <xs:documentation>The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</xs:documentation>
                   </xs:annotation>
@@ -290,7 +303,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="xs:string"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#IdentifiedObject.name">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#IdentifiedObject.name">
                   <xs:annotation>
                      <xs:documentation>The name is any free human readable and possibly non unique text naming the object.</xs:documentation>
                   </xs:annotation>
@@ -300,16 +313,16 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="Identity"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#Identity">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Identity">
       <xs:annotation>
-         <xs:documentation>,</xs:documentation>
+         <xs:documentation>This is a root class to provide common identification for all classes.  IdentifiedObject and any class to be exchanged with RDF XML now inherits from Identity.  mRID is superseded by Identity.identifier, which is typed to be a UUID.</xs:documentation>
       </xs:annotation>
       <xs:sequence>
          <xs:element name="identifier"
                      minOccurs="1"
                      maxOccurs="1"
                      type="xs:string"
-                     sawsdl:modelReference="http://cim.ucaiug.io/ns#Identity.identifier">
+                     sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Identity.identifier">
             <xs:annotation>
                <xs:documentation>A universally unique object identifier. Used to uniquely identify persistent objects between CIM messages.</xs:documentation>
             </xs:annotation>
@@ -317,7 +330,7 @@
       </xs:sequence>
    </xs:complexType>
    <xs:complexType name="LinearShuntCompensator"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#LinearShuntCompensator">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#LinearShuntCompensator">
       <xs:annotation>
          <xs:documentation>A linear shunt compensator has banks or sections with equal admittance values.</xs:documentation>
       </xs:annotation>
@@ -328,7 +341,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="LoadBreakSwitch"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#LoadBreakSwitch">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#LoadBreakSwitch">
       <xs:annotation>
          <xs:documentation>A mechanical switching device capable of making, carrying, and breaking currents under normal operating conditions.</xs:documentation>
       </xs:annotation>
@@ -339,7 +352,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="Location"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#Location">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Location">
       <xs:annotation>
          <xs:documentation>The place, scene, or point of something where someone or something has been, is, and/or will be at a given moment in time. It can be defined with one or more position points (coordinates) in a given coordinate system.</xs:documentation>
       </xs:annotation>
@@ -347,20 +360,23 @@
          <xs:extension base="m:IdentifiedObject">
             <xs:sequence>
                <xs:element name="CoordinateSystem"
-                           minOccurs="0"
+                           minOccurs="1"
                            maxOccurs="1"
-                           type="m:CoordinateSystem"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#Location.CoordinateSystem">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Location.CoordinateSystem">
                   <xs:annotation>
                      <xs:documentation>Coordinate system used to describe position points of this location.</xs:documentation>
                   </xs:annotation>
+                  <xs:complexType sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#CoordinateSystem">
+                     <xs:attribute name="ref" type="xs:string" use="required"/>
+                     <xs:attribute name="referenceType" type="xs:string" use="optional"/>
+                  </xs:complexType>
                </xs:element>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="PositionPoint"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#PositionPoint">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PositionPoint">
       <xs:annotation>
          <xs:documentation>Set of spatial coordinates that determine a point, defined in the coordinate system specified in 'Location.CoordinateSystem'. Use a single position point instance to describe a point-oriented location. Use a sequence of position points to describe a line-oriented object (physical location of non-point oriented objects like cables or lines), or area of an object (like a substation or a geographical zone - in this case, have first and last position point with the same values).</xs:documentation>
       </xs:annotation>
@@ -368,17 +384,17 @@
          <xs:extension base="m:Identity">
             <xs:sequence>
                <xs:element name="sequenceNumber"
-                           minOccurs="1"
+                           minOccurs="0"
                            maxOccurs="1"
                            type="xs:integer"
-                           sawsdl:modelReference="http://epri.com/gmdm#PositionPoint.sequenceNumber">
+                           sawsdl:modelReference="http://epri.com/gmdm/2025#PositionPoint.sequenceNumber">
                   <xs:annotation/>
                </xs:element>
                <xs:element name="xPosition"
                            minOccurs="1"
                            maxOccurs="1"
                            type="xs:string"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#PositionPoint.xPosition">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PositionPoint.xPosition">
                   <xs:annotation>
                      <xs:documentation>X axis position.</xs:documentation>
                   </xs:annotation>
@@ -387,7 +403,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="xs:string"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#PositionPoint.yPosition">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PositionPoint.yPosition">
                   <xs:annotation>
                      <xs:documentation>Y axis position.</xs:documentation>
                   </xs:annotation>
@@ -396,7 +412,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="xs:string"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#PositionPoint.zPosition">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PositionPoint.zPosition">
                   <xs:annotation>
                      <xs:documentation>(if applicable) Z axis position.</xs:documentation>
                   </xs:annotation>
@@ -404,16 +420,19 @@
                <xs:element name="Location"
                            minOccurs="1"
                            maxOccurs="1"
-                           type="m:Location"
-                           sawsdl:modelReference="http://epri.com/gmdm#PositionPoint.Location">
+                           sawsdl:modelReference="http://epri.com/gmdm/2025#PositionPoint.Location">
                   <xs:annotation/>
+                  <xs:complexType sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Location">
+                     <xs:attribute name="ref" type="xs:string" use="required"/>
+                     <xs:attribute name="referenceType" type="xs:string" use="optional"/>
+                  </xs:complexType>
                </xs:element>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="PowerElectronicsConnection"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#PowerElectronicsConnection">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerElectronicsConnection">
       <xs:annotation>
          <xs:documentation>A connection to the AC network for energy production or consumption that uses power electronics rather than rotating machines.</xs:documentation>
       </xs:annotation>
@@ -424,7 +443,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="PowerSystemResource"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#PowerSystemResource">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerSystemResource">
       <xs:annotation>
          <xs:documentation>A power system resource (PSR) can be an item of equipment such as a switch, an equipment container containing many individual items of equipment such as a substation, or an organisational entity such as sub-control area. Power system resources can have measurements associated.</xs:documentation>
       </xs:annotation>
@@ -434,18 +453,21 @@
                <xs:element name="Location"
                            minOccurs="0"
                            maxOccurs="1"
-                           type="m:Location"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#PowerSystemResource.Location">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerSystemResource.Location">
                   <xs:annotation>
                      <xs:documentation>Location of this power system resource.</xs:documentation>
                   </xs:annotation>
+                  <xs:complexType sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Location">
+                     <xs:attribute name="ref" type="xs:string" use="required"/>
+                     <xs:attribute name="referenceType" type="xs:string" use="optional"/>
+                  </xs:complexType>
                </xs:element>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="PowerTransformer"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#PowerTransformer">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerTransformer">
       <xs:annotation>
          <xs:documentation>An electrical device consisting of  two or more coupled windings, with or without a magnetic core, for introducing mutual coupling between electric circuits. Transformers can be used to control voltage and phase shift (active power flow).</xs:documentation>
          <xs:documentation>A power transformer may be composed of separate transformer tanks that need not be identical.</xs:documentation>
@@ -459,7 +481,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="ProtectedSwitch"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#ProtectedSwitch">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ProtectedSwitch">
       <xs:annotation>
          <xs:documentation>A ProtectedSwitch is a switching device that can be operated by ProtectionEquipment.</xs:documentation>
       </xs:annotation>
@@ -470,7 +492,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="Recloser"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#Recloser">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Recloser">
       <xs:annotation>
          <xs:documentation>Pole-mounted fault interrupter with built-in phase and ground relays, current transformer (CT), and supplemental controls.</xs:documentation>
       </xs:annotation>
@@ -481,7 +503,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="RegulatingCondEq"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#RegulatingCondEq">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#RegulatingCondEq">
       <xs:annotation>
          <xs:documentation>A type of conducting equipment that can regulate a quantity (i.e. voltage or flow) at a specific point in the network.</xs:documentation>
       </xs:annotation>
@@ -492,7 +514,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="RotatingMachine"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#RotatingMachine">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#RotatingMachine">
       <xs:annotation>
          <xs:documentation>A rotating machine which may be used as a generator or motor.</xs:documentation>
       </xs:annotation>
@@ -503,7 +525,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="Sectionaliser"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#Sectionaliser">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Sectionaliser">
       <xs:annotation>
          <xs:documentation>Automatic switch that will lock open to isolate a faulted section. It may, or may not, have load breaking capability. Its primary purpose is to provide fault sectionalising at locations where the fault current is either too high, or too low, for proper coordination of fuses.</xs:documentation>
       </xs:annotation>
@@ -514,7 +536,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="SeriesCompensator"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#SeriesCompensator">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#SeriesCompensator">
       <xs:annotation>
          <xs:documentation>A Series Compensator is a series capacitor or reactor or an AC transmission line without charging susceptance.  It is a two terminal device.</xs:documentation>
       </xs:annotation>
@@ -525,7 +547,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="ShuntCompensator"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#ShuntCompensator">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ShuntCompensator">
       <xs:annotation>
          <xs:documentation>A shunt capacitor or reactor or switchable bank of shunt capacitors or reactors. A section of a shunt compensator is an individual capacitor or reactor. A negative value for bPerSection indicates that the compensator is a reactor. ShuntCompensator is a single terminal device.  Ground is implied.</xs:documentation>
       </xs:annotation>
@@ -535,7 +557,22 @@
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
-   <xs:complexType name="Switch" sawsdl:modelReference="http://cim.ucaiug.io/ns#Switch">
+   <xs:complexType name="Status"
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Status">
+      <xs:annotation>
+         <xs:documentation>Current status information relevant to an entity.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence/>
+   </xs:complexType>
+   <xs:complexType name="StreetAddress"
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#StreetAddress">
+      <xs:annotation>
+         <xs:documentation>General purpose street and postal address information.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence/>
+   </xs:complexType>
+   <xs:complexType name="Switch"
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Switch">
       <xs:annotation>
          <xs:documentation>A generic device designed to close, or open, or both, one or more electric circuits.  All switches are two terminal devices including grounding switches. The ACDCTerminal.connected at the two sides of the switch shall not be considered for assessing switch connectivity, i.e. only Switch.open, .normalOpen and .locked are relevant.</xs:documentation>
       </xs:annotation>
@@ -546,12 +583,23 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="SynchronousMachine"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#SynchronousMachine">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#SynchronousMachine">
       <xs:annotation>
          <xs:documentation>An electromechanical device that operates with shaft rotating synchronously with the network. It is a single machine operating either as a generator or synchronous condenser or pump.</xs:documentation>
       </xs:annotation>
       <xs:complexContent>
          <xs:extension base="m:RotatingMachine">
+            <xs:sequence/>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="TelephoneNumber"
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TelephoneNumber">
+      <xs:annotation>
+         <xs:documentation>Telephone number information.</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="m:IdentifiedObject">
             <xs:sequence/>
          </xs:extension>
       </xs:complexContent>

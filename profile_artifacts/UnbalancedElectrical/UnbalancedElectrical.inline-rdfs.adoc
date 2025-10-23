@@ -60,7 +60,7 @@ There are three approaches to providing line detail and all use WireAssembly to 
 |===
 |name |mult |type |description
 |PerLengthImpedance
-|0..1
+|1..1
 |<<UnbalancedElectrical-PerLengthImpedance,PerLengthImpedance>>
 |
 Per-length impedance of this line segment.
@@ -222,7 +222,7 @@ Full energy storage capacity of the battery. The attribute shall be a positive v
 |<<UnbalancedElectrical-ActivePower,ActivePower>>
 |see <<UnbalancedElectrical-PowerElectronicsUnit,PowerElectronicsUnit>>
 |PowerElectronicsConnection
-|1..1
+|0..1
 |<<UnbalancedElectrical-PowerElectronicsConnection,PowerElectronicsConnection>>
 |see <<UnbalancedElectrical-PowerElectronicsUnit,PowerElectronicsUnit>>
 |description
@@ -434,19 +434,6 @@ Inheritance path = <<UnbalancedElectrical-IdentifiedObject,IdentifiedObject>> =>
 :FossilFuel:
 The fossil fuel consumed by the non-nuclear thermal generating unit. For example, coal, oil, gas, etc. These are the specific fuels that the generating unit can consume.
 
-
-*Native Members*
-
-[%header,width="100%",cols="25%,^10%,20%,45%a"]
-|===
-|name |mult |type |description
-|fossilFuelType (ShadowExtension, gmdm, enumeration)
-|1..1
-|<<UnbalancedElectrical-FuelType,FuelType>>
-|
-The type of fossil fuel, such as coal, oil, or gas.
-
-|===
 
 *Inherited Members*
 
@@ -933,7 +920,7 @@ The matrix entry's row number has a range of possible values from 1 to the condu
 Reactance matrix entry value, per length of unit.
 
 |PhaseImpedance
-|1..1
+|0..1
 |<<UnbalancedElectrical-PerLengthPhaseImpedance,PerLengthPhaseImpedance>>
 |
 Conductor phase impedance to which this data belongs.
@@ -975,7 +962,7 @@ A photovoltaic device or an aggregation of such devices.
 |<<UnbalancedElectrical-ActivePower,ActivePower>>
 |see <<UnbalancedElectrical-PowerElectronicsUnit,PowerElectronicsUnit>>
 |PowerElectronicsConnection
-|1..1
+|0..1
 |<<UnbalancedElectrical-PowerElectronicsConnection,PowerElectronicsConnection>>
 |see <<UnbalancedElectrical-PowerElectronicsUnit,PowerElectronicsUnit>>
 |description
@@ -1105,7 +1092,7 @@ A thermal unit that is connected via an inverter such as through a back-to-back 
 |<<UnbalancedElectrical-ActivePower,ActivePower>>
 |see <<UnbalancedElectrical-PowerElectronicsUnit,PowerElectronicsUnit>>
 |PowerElectronicsConnection
-|1..1
+|0..1
 |<<UnbalancedElectrical-PowerElectronicsConnection,PowerElectronicsConnection>>
 |see <<UnbalancedElectrical-PowerElectronicsUnit,PowerElectronicsUnit>>
 |description
@@ -1146,7 +1133,7 @@ A wind generating unit that connects to the AC network with power electronics ra
 |<<UnbalancedElectrical-ActivePower,ActivePower>>
 |see <<UnbalancedElectrical-PowerElectronicsUnit,PowerElectronicsUnit>>
 |PowerElectronicsConnection
-|1..1
+|0..1
 |<<UnbalancedElectrical-PowerElectronicsConnection,PowerElectronicsConnection>>
 |see <<UnbalancedElectrical-PowerElectronicsUnit,PowerElectronicsUnit>>
 |description
@@ -1359,10 +1346,10 @@ Transformer end to which this ratio tap changer belongs.
 |===
 |name |mult |type |description
 |controlEnabled
-|1..1
+|0..1
 |<<UnbalancedElectrical-Boolean,Boolean>>
 |see <<UnbalancedElectrical-TapChanger,TapChanger>>
-|[extension]#ctRating#
+|[extension]#ctRating (gmdm)#
 |0..1
 |<<UnbalancedElectrical-Float,Float>>
 |see <<UnbalancedElectrical-TapChanger,TapChanger>>
@@ -1512,6 +1499,25 @@ endif::UnbalancedElectrical-description-profile[]
 A Series Compensator is a series capacitor or reactor or an AC transmission line without charging susceptance. It is a two terminal device.
 
 
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|r
+|1..1
+|<<UnbalancedElectrical-Resistance,Resistance>>
+|
+Positive sequence resistance.
+
+|x
+|1..1
+|<<UnbalancedElectrical-Reactance,Reactance>>
+|
+Positive sequence reactance.
+
+|===
+
 *Inherited Members*
 
 [%header,width="100%",cols="25%,^10%,20%,45%a"]
@@ -1592,7 +1598,7 @@ Describes behaviour specific to tap changers, e.g. how the voltage at the end of
 |===
 |name |mult |type |description
 |lineDropCompensation
-|1..1
+|0..1
 |<<UnbalancedElectrical-Boolean,Boolean>>
 |
 If true, the line drop compensation is to be applied.
@@ -1610,13 +1616,13 @@ Line drop compensator resistance setting for normal (forward) power flow.
 Line drop compensator reactance setting for normal (forward) power flow.
 
 |maxLimitVoltage
-|1..1
+|0..1
 |<<UnbalancedElectrical-Voltage,Voltage>>
 |
 Maximum allowed regulated voltage on the PT secondary. This is the locally measured secondary voltage, including the effect of any line drop compensation. Typically used for distribution circuit voltage regulator. Sometimes referred to as first-house protection. If utilized, then TapChanger.ptRatio must be supplied.
 
 |minLimitVoltage
-|1..1
+|0..1
 |<<UnbalancedElectrical-Voltage,Voltage>>
 |
 Minimum allowed regulated voltage on the PT secondary. This is the locally measured secondary voltage, including the effect of any line drop compensation. Typically used for distribution circuit voltage regulator. Sometimes referred to as last-house protection. If utilized, then TapChanger.ptRatio must be supplied.
@@ -1633,27 +1639,27 @@ Line drop compensator resistance setting for reverse power flow.
 |
 Line drop compensator reactance setting for reverse power flow.
 
-|[extension]#reverseTargetDeadband#
+|[extension]#reverseTargetDeadband (gmdm)#
 |0..1
 |<<UnbalancedElectrical-Voltage,Voltage>>
 |
-|[extension]#reverseTargetValue#
+|[extension]#reverseTargetValue (gmdm)#
 |0..1
 |<<UnbalancedElectrical-Voltage,Voltage>>
 |
-|[extension]#reverseToNeutral#
+|[extension]#reverseToNeutral (gmdm)#
 |0..1
 |<<UnbalancedElectrical-Boolean,Boolean>>
 |
-|[extension]#reversible#
-|1..1
+|[extension]#reversible (gmdm)#
+|0..1
 |<<UnbalancedElectrical-Boolean,Boolean>>
 |
-|[extension]#reversingDelay#
+|[extension]#reversingDelay (gmdm)#
 |0..1
 |<<UnbalancedElectrical-Seconds,Seconds>>
 |
-|[extension]#reversingPowerThreshold#
+|[extension]#reversingPowerThreshold (gmdm)#
 |0..1
 |<<UnbalancedElectrical-ApparentPower,ApparentPower>>
 |
@@ -1865,6 +1871,12 @@ Resistance between the 'from' and the 'to' end, seen from the 'from' end.
 |<<UnbalancedElectrical-Reactance,Reactance>>
 |
 Reactance between the 'from' and the 'to' end, seen from the 'from' end.
+
+|FromTransformerEnd
+|0..1
+|<<UnbalancedElectrical-TransformerEnd,TransformerEnd>>
+|
+From end this mesh impedance is connected to. It determines the voltage reference.
 
 |ToTransformerEnd
 |0..*
@@ -2278,7 +2290,7 @@ The name is any free human readable and possibly non unique text naming the obje
 
 
 :Identity:
-,
+This is a root class to provide common identification for all classes. IdentifiedObject and any class to be exchanged with RDF XML now inherits from Identity. mRID is superseded by Identity.identifier, which is typed to be a UUID.
 
 
 *Native Members*
@@ -2380,7 +2392,7 @@ Maximum active power limit. This is the maximum (nameplate) limit for the unit.
 Minimum active power limit. This is the minimum (nameplate) limit for the unit.
 
 |PowerElectronicsConnection
-|1..1
+|0..1
 |<<UnbalancedElectrical-PowerElectronicsConnection,PowerElectronicsConnection>>
 |
 A power electronics unit has a connection to the AC network.
@@ -2847,12 +2859,12 @@ Mechanism for changing transformer winding tap positions.
 |===
 |name |mult |type |description
 |controlEnabled
-|1..1
+|0..1
 |<<UnbalancedElectrical-Boolean,Boolean>>
 |
 Specifies the regulation status of the equipment. True is regulating, false is not regulating.
 
-|[extension]#ctRating#
+|[extension]#ctRating (gmdm)#
 |0..1
 |<<UnbalancedElectrical-Float,Float>>
 |
@@ -3029,67 +3041,43 @@ Core admittance of this transformer end, representing magnetising current and co
 [[UnbalancedElectrical-FuelType]]
 ==== FuelType
 
-Type of fuel.
-
 
 [%header,width="100%",cols="25%,75%a"]
 |===
 |name |description
 
-|brownCoalLignite
+|FuelType.brownCoalLignite
 |
-Brown coal lignite.
 
-
-|coal
+|FuelType.coal
 |
-Generic coal, not including lignite type.
 
-
-|coalDerivedGas
+|FuelType.coalDerivedGas
 |
-Coal derived gas.
 
-
-|diesel
+|FuelType.diesel
 |
-Diesel
 
-
-|gas
+|FuelType.gas
 |
-Natural gas.
 
-
-|hardCoal
+|FuelType.hardCoal
 |
-Hard coal.
 
-
-|lignite
+|FuelType.lignite
 |
-The fuel is lignite coal. Note that this is a special type of coal, so the other enum of coal is reserved for hard coal types or if the exact type of coal is not known.
 
-
-|oil
+|FuelType.oil
 |
-Oil.
 
-
-|oilShale
+|FuelType.oilShale
 |
-Oil Shale.
 
-
-|other
+|FuelType.other
 |
-Any fuel type not included in the rest of the enumerated value.
 
-
-|peat
+|FuelType.peat
 |
-Peat.
-
 |===
 [[UnbalancedElectrical-PhaseCode]]
 ==== PhaseCode
@@ -3107,135 +3095,83 @@ The integer values are from IEC 61968-9 to support revenue metering applications
 |===
 |name |description
 
-|A
+|PhaseCode.A
 |
-Phase A.
 
-
-|AB
+|PhaseCode.AB
 |
-Phases A and B.
 
-
-|ABC
+|PhaseCode.ABC
 |
-Phases A, B, and C.
 
-
-|ABCN
+|PhaseCode.ABCN
 |
-Phases A, B, C, and N.
 
-
-|ABN
+|PhaseCode.ABN
 |
-Phases A, B, and neutral.
 
-
-|AC
+|PhaseCode.AC
 |
-Phases A and C.
 
-
-|ACN
+|PhaseCode.ACN
 |
-Phases A, C and neutral.
 
-
-|AN
+|PhaseCode.AN
 |
-Phases A and neutral.
 
-
-|B
+|PhaseCode.B
 |
-Phase B.
 
-
-|BC
+|PhaseCode.BC
 |
-Phases B and C.
 
-
-|BCN
+|PhaseCode.BCN
 |
-Phases B, C, and neutral.
 
-
-|BN
+|PhaseCode.BN
 |
-Phases B and neutral.
 
-
-|C
+|PhaseCode.C
 |
-Phase C.
 
-
-|CN
+|PhaseCode.CN
 |
-Phases C and neutral.
 
-
-|N
+|PhaseCode.N
 |
-Neutral phase.
 
-
-|X
+|PhaseCode.X
 |
-Unknown non-neutral phase.
 
-
-|XN
+|PhaseCode.XN
 |
-Unknown non-neutral phase plus neutral.
 
-
-|XY
+|PhaseCode.XY
 |
-Two unknown non-neutral phases.
 
-
-|XYN
+|PhaseCode.XYN
 |
-Two unknown non-neutral phases plus neutral.
 
-
-|none
+|PhaseCode.none
 |
-No phases specified.
 
-
-|s1
+|PhaseCode.s1
 |
-Secondary phase 1.
 
-
-|s12
+|PhaseCode.s12
 |
-Secondary phase 1 and 2.
 
-
-|s12N
+|PhaseCode.s12N
 |
-Secondary phases 1, 2, and neutral.
 
-
-|s1N
+|PhaseCode.s1N
 |
-Secondary phase 1 and neutral.
 
-
-|s2
+|PhaseCode.s2
 |
-Secondary phase 2.
 
-
-|s2N
+|PhaseCode.s2N
 |
-Secondary phase 2 and neutral.
-
 |===
 [[UnbalancedElectrical-RegulatingControlModeKind]]
 ==== RegulatingControlModeKind
@@ -3247,45 +3183,29 @@ The kind of regulation model. For example regulating voltage, reactive power, ac
 |===
 |name |description
 
-|activePower
+|RegulatingControlModeKind.activePower
 |
-Active power is specified.
 
-
-|admittance
+|RegulatingControlModeKind.admittance
 |
-Admittance is specified.
 
-
-|currentFlow
+|RegulatingControlModeKind.currentFlow
 |
-Current flow is specified.
 
-
-|powerFactor
+|RegulatingControlModeKind.powerFactor
 |
-Power factor is specified.
 
-
-|reactivePower
+|RegulatingControlModeKind.reactivePower
 |
-Reactive power is specified.
 
-
-|temperature
+|RegulatingControlModeKind.temperature
 |
-Control switches on/off based on the local temperature (i.e., a thermostat).
 
-
-|timeScheduled
+|RegulatingControlModeKind.timeScheduled
 |
-Control switches on/off by time of day. The times may change on the weekend, or in different seasons.
 
-
-|voltage
+|RegulatingControlModeKind.voltage
 |
-Voltage is specified.
-
 |===
 [[UnbalancedElectrical-WindGenUnitKind]]
 ==== WindGenUnitKind

@@ -151,6 +151,12 @@ class Disconnector <<Description>>  {
 
 Switch <|-- Disconnector
 
+' ElectronicAddress inherits from IdentifiedObject
+abstract class ElectronicAddress <<deprecated>> <<abstract>> {
+}
+
+IdentifiedObject <|-- ElectronicAddress
+
 ' EnergyConnection inherits from ConductingEquipment
 abstract class EnergyConnection  <<abstract>> {
 }
@@ -212,18 +218,18 @@ class Location   {
 }
 
 IdentifiedObject <|-- Location
-Location "+Location 0..*" --> "+CoordinateSystem 0..1" CoordinateSystem
+Location "+Location 0..*" --> "+CoordinateSystem 1" CoordinateSystem
 
 ' PositionPoint inherits from Identity
 class PositionPoint   {
-   +sequenceNumber : integer [1]
+   +<<gmdm>> sequenceNumber : integer [0..1]
    +xPosition : string [1]
    +yPosition : string [1]
    +zPosition : string [0..1]
 }
 
 Identity <|-- PositionPoint
-PositionPoint "+PositionPoints 0..*" --> "+Location 1" Location
+PositionPoint "+PositionPoints 0..*" --> "+Location 1" Location : <<ShadowExtension,gmdm>>
 
 ' PowerElectronicsConnection inherits from RegulatingCondEq
 class PowerElectronicsConnection <<Description>>  {
@@ -286,6 +292,11 @@ abstract class ShuntCompensator  <<abstract>> {
 
 RegulatingCondEq <|-- ShuntCompensator
 
+' Status
+abstract class Status  <<abstract>> {
+}
+
+
 ' Switch inherits from ConductingEquipment
 abstract class Switch  <<abstract>> {
 }
@@ -297,5 +308,11 @@ class SynchronousMachine <<Description>>  {
 }
 
 RotatingMachine <|-- SynchronousMachine
+
+' TelephoneNumber inherits from IdentifiedObject
+abstract class TelephoneNumber  <<abstract>> {
+}
+
+IdentifiedObject <|-- TelephoneNumber
 
 @enduml

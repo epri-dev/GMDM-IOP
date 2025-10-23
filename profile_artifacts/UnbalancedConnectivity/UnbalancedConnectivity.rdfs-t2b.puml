@@ -116,7 +116,7 @@ class ACLineSegmentPhase   {
 }
 
 PowerSystemResource <|-- ACLineSegmentPhase
-ACLineSegmentPhase "+ACLineSegmentPhases 0..4" --> "+ACLineSegment 0..1" ACLineSegment
+ACLineSegmentPhase "+ACLineSegmentPhases 0..*" --> "+ACLineSegment 0..1" ACLineSegment
 
 ' AsynchronousMachine inherits from RotatingMachine
 class AsynchronousMachine   {
@@ -201,7 +201,7 @@ class EnergyConsumerPhase   {
 }
 
 PowerSystemResource <|-- EnergyConsumerPhase
-EnergyConsumerPhase "+EnergyConsumerPhase 0..3" --> "+EnergyConsumer 1" EnergyConsumer
+EnergyConsumerPhase "+EnergyConsumerPhase 0..*" --> "+EnergyConsumer 1" EnergyConsumer
 
 ' EnergySource inherits from EnergyConnection
 class EnergySource   {
@@ -216,7 +216,7 @@ abstract class Equipment  <<abstract>> {
 }
 
 PowerSystemResource <|-- Equipment
-Equipment "+AdditionalGroupedEquipment 0..*" --> "+AdditionalEquipmentContainer 0..*" EquipmentContainer
+Equipment "+AdditionalGroupedEquipment 0..*" --> "+AdditionalEquipmentContainer 0..1" EquipmentContainer
 Equipment "+Equipments 0..*" --> "+EquipmentContainer 1" EquipmentContainer
 
 ' EquipmentContainer inherits from ConnectivityNodeContainer
@@ -277,7 +277,7 @@ class LoadBreakSwitch   {
 ProtectedSwitch <|-- LoadBreakSwitch
 
 ' Enumeration OrderedPhaseCodeKind
-enum OrderedPhaseCodeKind <<gmdm>><<enumeration>><<Attribute>>  {
+enum OrderedPhaseCodeKind <<gmdm>><<enumeration>>  {
    A
    AB
    ABC
@@ -301,6 +301,31 @@ enum OrderedPhaseCodeKind <<gmdm>><<enumeration>><<Attribute>>  {
    [Remaining 33 literals hidden]
 }
 
+' Enumeration PhaseCode
+enum PhaseCode <<enumeration>>  {
+   A
+   AB
+   ABC
+   ABCN
+   ABN
+   AC
+   ACN
+   AN
+   B
+   BC
+   BCN
+   BN
+   C
+   CN
+   N
+   X
+   XN
+   XY
+   XYN
+   none
+   [Remaining 11 literals hidden]
+}
+
 ' Enumeration PhaseShuntConnectionKind
 enum PhaseShuntConnectionKind <<enumeration>><<Attribute>>  {
    D
@@ -322,7 +347,7 @@ class PowerElectronicsConnectionPhase   {
 }
 
 PowerSystemResource <|-- PowerElectronicsConnectionPhase
-PowerElectronicsConnectionPhase "+PowerElectronicsConnectionPhase 0..3" --> "+PowerElectronicsConnection 1" PowerElectronicsConnection
+PowerElectronicsConnectionPhase "+PowerElectronicsConnectionPhase 0..*" --> "+PowerElectronicsConnection 1" PowerElectronicsConnection
 
 ' PowerSystemResource inherits from IdentifiedObject
 abstract class PowerSystemResource  <<abstract>> {
@@ -343,7 +368,7 @@ class PowerTransformerEnd   {
 }
 
 TransformerEnd <|-- PowerTransformerEnd
-PowerTransformerEnd "+PowerTransformerEnd 1..3" --> "+PowerTransformer 1" PowerTransformer
+PowerTransformerEnd "+PowerTransformerEnd 0..*" --> "+PowerTransformer 1" PowerTransformer
 
 ' ProtectedSwitch inherits from Switch
 abstract class ProtectedSwitch  <<abstract>> {
@@ -395,7 +420,7 @@ abstract class ShuntCompensatorPhase  <<abstract>> {
 }
 
 PowerSystemResource <|-- ShuntCompensatorPhase
-ShuntCompensatorPhase "+ShuntCompensatorPhase 0..3" --> "+ShuntCompensator 1" ShuntCompensator
+ShuntCompensatorPhase "+ShuntCompensatorPhase 0..*" --> "+ShuntCompensator 1" ShuntCompensator
 
 ' Enumeration SinglePhaseKind
 enum SinglePhaseKind <<enumeration>><<Attribute>>  {
@@ -429,7 +454,7 @@ class SwitchPhase   {
 }
 
 PowerSystemResource <|-- SwitchPhase
-SwitchPhase "+SwitchPhase 0..3" --> "+Switch 1" Switch
+SwitchPhase "+SwitchPhase 0..*" --> "+Switch 1" Switch
 
 ' SynchronousMachine inherits from RotatingMachine
 class SynchronousMachine   {
@@ -449,18 +474,18 @@ Terminal "+NormalHeadTerminal 0..*" --> "+NormalHeadFeeder 0..1" Feeder
 ' TransformerEnd inherits from IdentifiedObject
 abstract class TransformerEnd  <<abstract>> {
    +endNumber : integer [1]
-   Terminal "+Terminal 0..1" --> "+TransformerEnd 0..1" TransformerEnd#red
 }
 
 IdentifiedObject <|-- TransformerEnd
-TransformerEnd "+TransformerEnds 0..*" --> "+BaseVoltage 1" BaseVoltage
+TransformerEnd "+TransformerEnds 0..*" --> "+BaseVoltage 0..1" BaseVoltage
+TransformerEnd "+TransformerEnd 0..*" --> "+Terminal 1" Terminal
 
 ' TransformerTank inherits from Equipment
 class TransformerTank   {
 }
 
 Equipment <|-- TransformerTank
-TransformerTank "+TransformerTanks 0..3" --> "+PowerTransformer 1" PowerTransformer
+TransformerTank "+TransformerTanks 0..*" --> "+PowerTransformer 1" PowerTransformer
 
 ' TransformerTankEnd inherits from TransformerEnd
 class TransformerTankEnd   {
@@ -468,7 +493,15 @@ class TransformerTankEnd   {
 }
 
 TransformerEnd <|-- TransformerTankEnd
-TransformerTankEnd "+TransformerTankEnds 1..3" --> "+TransformerTank 1" TransformerTank
+TransformerTankEnd "+TransformerTankEnds 0..*" --> "+TransformerTank 1" TransformerTank
+
+' UsagePoint inherits from IdentifiedObject
+abstract class UsagePoint  <<abstract>> {
+   +phaseCode : PhaseCode [0..1]
+}
+
+IdentifiedObject <|-- UsagePoint
+UsagePoint "+UsagePoint 0..1" --> "+Terminal 1" Terminal : <<ShadowExtension,gmdm>>
 
 ' VoltageLevel inherits from EquipmentContainer
 class VoltageLevel   {
@@ -476,7 +509,7 @@ class VoltageLevel   {
 
 EquipmentContainer <|-- VoltageLevel
 VoltageLevel "+VoltageLevel 0..*" --> "+BaseVoltage 1" BaseVoltage
-VoltageLevel "+VoltageLevels 0..*" --o "+Substation 1" Substation
+VoltageLevel "+VoltageLevels 0..*" --o "+Substation 0..1" Substation
 
 ' Enumeration WindingConnection
 enum WindingConnection <<enumeration>><<Attribute>>  {
