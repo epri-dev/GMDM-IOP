@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- un-comment this line to enable validation
 -->
-<rdf:RDF xmlns:cim="http://cim.ucaiug.io/CIM101#"  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:gmdm="http://epri.com/gmdm/2025#">
+<rdf:RDF xmlns:cim="http://cim.ucaiug.io/CIM101/draft#" xmlns:eu="http://iec.ch/TC57/CIM100-European#" xmlns:nc="http://entsoe.eu/ns/nc#" xmlns:gb="http://GB/placeholder/ext#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:gmdm="http://epri.com/gmdm/2025#">
 <!--
 -->
 <cim:NoLoadTest rdf:about="urn:uuid:0223ede8-3847-455e-ade1-a77ab64e2999">
@@ -753,7 +753,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:0130fb1a-9ba7-43d0-8f11-5698b0092449">
   <cim:TransformerEndInfo.endNumber>3</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>6</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>375000.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>0.0006912</cim:TransformerEndInfo.r>
@@ -766,7 +766,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:0449d592-871b-4a24-b507-b10d090ff590">
   <cim:TransformerEndInfo.endNumber>3</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>6</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>15000.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>0.01728</cim:TransformerEndInfo.r>
@@ -779,7 +779,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:0529c7f8-dd8a-4f48-a42e-0b7a70f3b971">
   <cim:TransformerEndInfo.endNumber>1</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>15000000.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>0.0002592</cim:TransformerEndInfo.r>
@@ -792,7 +792,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:07b581b1-0336-446b-8b81-131923f7ee55">
   <cim:TransformerEndInfo.endNumber>1</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>112500.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>4.1472</cim:TransformerEndInfo.r>
@@ -805,7 +805,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:0817b7bc-b188-4a7e-86e6-b9cf0b227bd2">
   <cim:TransformerEndInfo.endNumber>3</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>6</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>56250.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>0.004608</cim:TransformerEndInfo.r>
@@ -818,7 +818,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:090630ca-5dcc-48cf-9f77-501d28efaef2">
   <cim:TransformerEndInfo.endNumber>1</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>15000000.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>0.0002592</cim:TransformerEndInfo.r>
@@ -831,7 +831,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:16740ac4-11b9-44e1-a098-216208985ad7">
   <cim:TransformerEndInfo.endNumber>2</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>15000000.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>0.0002592</cim:TransformerEndInfo.r>
@@ -844,7 +844,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:16e6006d-ffc2-47d7-9468-ef7a06125879">
   <cim:TransformerEndInfo.endNumber>2</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>15000000.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>0.0002592</cim:TransformerEndInfo.r>
@@ -857,7 +857,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:170a13de-0e67-4398-a392-6326b1bc4ff0">
   <cim:TransformerEndInfo.endNumber>2</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>112500.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>0.002304</cim:TransformerEndInfo.r>
@@ -870,7 +870,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:1b190f8b-5016-4e60-b775-49d9ce1b3bdf">
   <cim:TransformerEndInfo.endNumber>3</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>6</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>7500.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>0.03456</cim:TransformerEndInfo.r>
@@ -883,7 +883,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:22f1edaa-e7c4-4700-9ce7-a396918d507d">
   <cim:TransformerEndInfo.endNumber>1</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>15000000.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>0.0002592</cim:TransformerEndInfo.r>
@@ -896,7 +896,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:233703a7-d903-4656-aa7f-85c4aa0482d1">
   <cim:TransformerEndInfo.endNumber>1</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>15000000.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>0.0002592</cim:TransformerEndInfo.r>
@@ -909,7 +909,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:2c093522-eda0-4b6a-96db-0a002f832740">
   <cim:TransformerEndInfo.endNumber>2</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>15000000.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>0.0002592</cim:TransformerEndInfo.r>
@@ -922,7 +922,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:2c3bd549-a771-4eea-a215-83d8befb3c11">
   <cim:TransformerEndInfo.endNumber>2</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>22500.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>0.01152</cim:TransformerEndInfo.r>
@@ -935,7 +935,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:2e2f1268-fcc6-4bc0-82a6-03b02950e613">
   <cim:TransformerEndInfo.endNumber>2</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>15000000.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>0.0002592</cim:TransformerEndInfo.r>
@@ -948,7 +948,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:339e68f8-13f4-48d7-832e-1f67956baf11">
   <cim:TransformerEndInfo.endNumber>1</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>75000.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>6.2208</cim:TransformerEndInfo.r>
@@ -961,7 +961,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:349af2ce-1bc7-491c-aeab-582929f0a5dd">
   <cim:TransformerEndInfo.endNumber>2</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>11250000.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>0.0003456</cim:TransformerEndInfo.r>
@@ -974,7 +974,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:451f60ff-3d02-4b6a-99cc-c85e82c68850">
   <cim:TransformerEndInfo.endNumber>2</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>7500.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>0.03456</cim:TransformerEndInfo.r>
@@ -987,7 +987,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:4b05c087-72f6-4a07-8fd7-156d7a5b2b89">
   <cim:TransformerEndInfo.endNumber>2</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>75000.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>0.003456</cim:TransformerEndInfo.r>
@@ -1000,7 +1000,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:52160ebc-974e-4afa-ad36-1f66761579fc">
   <cim:TransformerEndInfo.endNumber>1</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>15000000.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>0.0002592</cim:TransformerEndInfo.r>
@@ -1013,7 +1013,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:5578d64c-2a00-44ca-95b0-d4b24d4b12f2">
   <cim:TransformerEndInfo.endNumber>1</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>22500.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>20.736</cim:TransformerEndInfo.r>
@@ -1026,7 +1026,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:57bd5b72-278d-447f-b1f7-09c6c461b25c">
   <cim:TransformerEndInfo.endNumber>2</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>150000.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>0.001728</cim:TransformerEndInfo.r>
@@ -1039,7 +1039,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:5f1b827f-8f90-4bba-85db-91cd45a4f4bb">
   <cim:TransformerEndInfo.endNumber>1</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>15000000.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>0.0002592</cim:TransformerEndInfo.r>
@@ -1052,7 +1052,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:62e11b0c-c9f9-4191-a0b4-e29d309c2432">
   <cim:TransformerEndInfo.endNumber>3</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>6</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>112500.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>0.002304</cim:TransformerEndInfo.r>
@@ -1065,7 +1065,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:72828bf5-a138-4a75-a91c-85edfb7c0e42">
   <cim:TransformerEndInfo.endNumber>1</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>150000.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>3.1104</cim:TransformerEndInfo.r>
@@ -1078,7 +1078,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:7e82d53a-4f04-4011-82d4-467753cac350">
   <cim:TransformerEndInfo.endNumber>1</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>375000.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>1.24416</cim:TransformerEndInfo.r>
@@ -1091,7 +1091,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:82210b21-7b61-488c-a1ce-fd8666571509">
   <cim:TransformerEndInfo.endNumber>1</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>37500.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>12.4416</cim:TransformerEndInfo.r>
@@ -1104,7 +1104,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:8bce3c64-7a83-4062-8b64-e62b643c3945">
   <cim:TransformerEndInfo.endNumber>2</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>37500.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>0.006912</cim:TransformerEndInfo.r>
@@ -1117,7 +1117,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:9007edf8-ebb1-4299-b477-45a5d7b72f99">
   <cim:TransformerEndInfo.endNumber>2</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>15000000.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>0.0002592</cim:TransformerEndInfo.r>
@@ -1130,7 +1130,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:966238f8-a323-48d1-8a96-0b2f61da783e">
   <cim:TransformerEndInfo.endNumber>1</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>15000000.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>0.0002592</cim:TransformerEndInfo.r>
@@ -1143,7 +1143,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:aa28c74f-b3d0-41cf-82fb-2b6df027df12">
   <cim:TransformerEndInfo.endNumber>2</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>56250.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>0.004608</cim:TransformerEndInfo.r>
@@ -1156,7 +1156,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:af588ce7-8d56-44a1-9581-a122b0aa5a7f">
   <cim:TransformerEndInfo.endNumber>1</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>15000000.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>0.0002592</cim:TransformerEndInfo.r>
@@ -1169,7 +1169,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:b55b8baf-546c-4600-bd87-c20437d84c6b">
   <cim:TransformerEndInfo.endNumber>2</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>15000.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>0.01728</cim:TransformerEndInfo.r>
@@ -1182,7 +1182,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:bcc2a7ea-247e-4442-afff-528aa0c01980">
   <cim:TransformerEndInfo.endNumber>3</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>6</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>75000.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>0.003456</cim:TransformerEndInfo.r>
@@ -1195,7 +1195,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:bf363cd2-c655-43d1-b4ca-f8e28ee51316">
   <cim:TransformerEndInfo.endNumber>1</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>11250000.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>0.0003456</cim:TransformerEndInfo.r>
@@ -1208,7 +1208,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:ce56e371-7f4a-4d25-b5cd-245241f8809b">
   <cim:TransformerEndInfo.endNumber>1</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>56250.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>8.2944</cim:TransformerEndInfo.r>
@@ -1221,7 +1221,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:ddc34d69-d32b-4744-a930-044ad005c0ef">
   <cim:TransformerEndInfo.endNumber>2</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>15000000.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>0.0002592</cim:TransformerEndInfo.r>
@@ -1234,7 +1234,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:e02d8c9c-016b-4706-b819-bf3202126873">
   <cim:TransformerEndInfo.endNumber>1</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>15000.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>31.104</cim:TransformerEndInfo.r>
@@ -1247,7 +1247,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:e401b20f-cb63-49d2-a0a1-a28dba230c04">
   <cim:TransformerEndInfo.endNumber>3</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>6</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>150000.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>0.001728</cim:TransformerEndInfo.r>
@@ -1260,7 +1260,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:e463ec4a-f882-4031-bda2-96379ac56974">
   <cim:TransformerEndInfo.endNumber>1</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>15000000.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>0.0002592</cim:TransformerEndInfo.r>
@@ -1273,7 +1273,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:e7236b08-52b2-4bbc-8f64-eaa1d4cdfed2">
   <cim:TransformerEndInfo.endNumber>2</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>375000.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>0.0006912</cim:TransformerEndInfo.r>
@@ -1286,7 +1286,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:e8c99ca8-18a1-45e1-855e-90629c37cc26">
   <cim:TransformerEndInfo.endNumber>3</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>6</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>37500.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>0.006912</cim:TransformerEndInfo.r>
@@ -1299,7 +1299,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:ee7e423e-0d6b-4980-9e69-4b46abf9906e">
   <cim:TransformerEndInfo.endNumber>1</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>7500.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>62.208</cim:TransformerEndInfo.r>
@@ -1312,7 +1312,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:f0de0264-a02c-456e-97e9-386ff81e7041">
   <cim:TransformerEndInfo.endNumber>2</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>15000000.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>0.0002592</cim:TransformerEndInfo.r>
@@ -1325,7 +1325,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:f6d9213d-5e2e-4a32-a2f3-716c845a43ca">
   <cim:TransformerEndInfo.endNumber>2</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>15000000.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>0.0002592</cim:TransformerEndInfo.r>
@@ -1338,7 +1338,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:fb962d1f-e46d-434f-b0ba-cff03daaecec">
   <cim:TransformerEndInfo.endNumber>3</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>6</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>22500.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>0.01152</cim:TransformerEndInfo.r>
@@ -1351,7 +1351,7 @@
 <cim:TransformerEndInfo rdf:about="urn:uuid:fdcb10ea-d790-467b-8166-32c28869d7c4">
   <cim:TransformerEndInfo.endNumber>2</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101#WindingConnection.I"/>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
   <cim:TransformerEndInfo.emergencyS>15000000.0</cim:TransformerEndInfo.emergencyS>
   <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
   <cim:TransformerEndInfo.r>0.0002592</cim:TransformerEndInfo.r>

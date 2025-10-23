@@ -1,6 +1,6 @@
 {
     "@context": {
-        "cim": "http://cim.ucaiug.io/CIM101#",
+        "cim": "http://cim.ucaiug.io/CIM101/draft#",
         "eu": "http://iec.ch/TC57/CIM100-European#",
         "nc": "http://entsoe.eu/ns/nc#",
         "gb": "http://GB/placeholder/ext#",
