@@ -161,6 +161,7 @@ class ConnectivityNode   {
 }
 
 IdentifiedObject <|-- ConnectivityNode
+ConnectivityNode "+ConnectivityNodes 0..*" --> "+ConnectivityNodeContainer 1" ConnectivityNodeContainer
 
 ' ConnectivityNodeContainer inherits from PowerSystemResource
 abstract class ConnectivityNodeContainer  <<abstract>> {

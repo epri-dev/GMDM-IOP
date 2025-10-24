@@ -319,7 +319,20 @@
       </xs:annotation>
       <xs:complexContent>
          <xs:extension base="m:IdentifiedObject">
-            <xs:sequence/>
+            <xs:sequence>
+               <xs:element name="ConnectivityNodeContainer"
+                           minOccurs="1"
+                           maxOccurs="1"
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ConnectivityNode.ConnectivityNodeContainer">
+                  <xs:annotation>
+                     <xs:documentation>Container of this connectivity node.</xs:documentation>
+                  </xs:annotation>
+                  <xs:complexType sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ConnectivityNodeContainer">
+                     <xs:attribute name="ref" type="xs:string" use="required"/>
+                     <xs:attribute name="referenceType" type="xs:string" use="optional"/>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>

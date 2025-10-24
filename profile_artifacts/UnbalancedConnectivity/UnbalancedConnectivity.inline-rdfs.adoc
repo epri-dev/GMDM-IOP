@@ -348,6 +348,19 @@ Inheritance path = <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> 
 Connectivity nodes are points where terminals of AC conducting equipment are connected together with zero impedance.
 
 
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|ConnectivityNodeContainer
+|1..1
+|<<UnbalancedConnectivity-ConnectivityNodeContainer,ConnectivityNodeContainer>>
+|
+Container of this connectivity node.
+
+|===
+
 *Inherited Members*
 
 [%header,width="100%",cols="25%,^10%,20%,45%a"]

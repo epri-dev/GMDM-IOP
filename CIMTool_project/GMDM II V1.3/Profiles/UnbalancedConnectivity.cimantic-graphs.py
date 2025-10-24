@@ -285,6 +285,18 @@ class ConnectivityNode(IdentifiedObject):
     are connected together with zero impedance.
     '''
 
+    ConnectivityNodeContainer: Optional[ConnectivityNodeContainer] = field(
+        default = None,
+        metadata = {
+            'type': 'ByReference',
+            'minOccurs': '1',
+            'maxOccurs': '1',
+            'inverse': 'ConnectivityNodeContainer.ConnectivityNodes'
+        })
+    '''
+    Container of this connectivity node.
+    '''
+    
 @dataclass(repr=False)
 class PowerSystemResource(IdentifiedObject):
     '''

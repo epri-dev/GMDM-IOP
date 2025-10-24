@@ -220,6 +220,16 @@ Voltage measurements are typically obtained from voltage transformers that are c
       <rdfs:label xml:lang="en">ConnectivityNode</rdfs:label>
       <rdfs:subClassOf rdf:resource="#IdentifiedObject"/>
    </rdf:Description>
+   <rdf:Description rdf:about="#ConnectivityNode.ConnectivityNodeContainer">
+      <cims:AssociationUsed>Yes</cims:AssociationUsed>
+      <cims:inverseRoleName rdf:resource="#ConnectivityNodeContainer.ConnectivityNodes"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..1"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Container of this connectivity node.</rdfs:comment>
+      <rdfs:domain rdf:resource="#ConnectivityNode"/>
+      <rdfs:label xml:lang="en">ConnectivityNodeContainer</rdfs:label>
+      <rdfs:range rdf:resource="#ConnectivityNodeContainer"/>
+   </rdf:Description>
    <rdf:Description rdf:about="#ConnectivityNode.Terminals">
       <cims:AssociationUsed>No</cims:AssociationUsed>
       <cims:inverseRoleName rdf:resource="#Terminal.ConnectivityNode"/>
@@ -236,6 +246,16 @@ Voltage measurements are typically obtained from voltage transformers that are c
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A base class for all objects that may contain connectivity nodes or topological nodes.</rdfs:comment>
       <rdfs:label xml:lang="en">ConnectivityNodeContainer</rdfs:label>
       <rdfs:subClassOf rdf:resource="#PowerSystemResource"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#ConnectivityNodeContainer.ConnectivityNodes">
+      <cims:AssociationUsed>No</cims:AssociationUsed>
+      <cims:inverseRoleName rdf:resource="#ConnectivityNode.ConnectivityNodeContainer"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..n"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Connectivity nodes which belong to this connectivity node container.</rdfs:comment>
+      <rdfs:domain rdf:resource="#ConnectivityNodeContainer"/>
+      <rdfs:label xml:lang="en">ConnectivityNodes</rdfs:label>
+      <rdfs:range rdf:resource="#ConnectivityNode"/>
    </rdf:Description>
    <rdf:Description rdf:about="#Connector">
       <cims:belongsToCategory rdf:resource="#Package_Wires"/>
