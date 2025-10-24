@@ -417,7 +417,7 @@ class RatioTapChanger   {
 }
 
 TapChanger <|-- RatioTapChanger
-RatioTapChanger "+AdditionalRatioTapChanger 0..1" --> "+TransformerEnd 1" TransformerEnd
+RatioTapChanger "+RatioTapChanger 0..1" --> "+TransformerEnd 1" TransformerEnd
 
 ' Recloser inherits from ProtectedSwitch
 class Recloser <<Description>>  {

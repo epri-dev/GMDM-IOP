@@ -1436,7 +1436,7 @@ Angle sign convention (general): Positive value indicates a positive phase shift
    </rdf:Description>
    <rdf:Description rdf:about="#RatioTapChanger.TransformerEnd">
       <cims:AssociationUsed>Yes</cims:AssociationUsed>
-      <cims:inverseRoleName rdf:resource="#TransformerEnd.AdditionalRatioTapChanger"/>
+      <cims:inverseRoleName rdf:resource="#TransformerEnd.RatioTapChanger"/>
       <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..1"/>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transformer end to which this ratio tap changer belongs.</rdfs:comment>
@@ -2390,16 +2390,6 @@ This attribute is not relevant for PhaseTapChangerAsymmetrical, PhaseTapChangerS
       <rdfs:label xml:lang="en">TransformerEnd</rdfs:label>
       <rdfs:subClassOf rdf:resource="#IdentifiedObject"/>
    </rdf:Description>
-   <rdf:Description rdf:about="#TransformerEnd.AdditionalRatioTapChanger">
-      <cims:AssociationUsed>No</cims:AssociationUsed>
-      <cims:inverseRoleName rdf:resource="#RatioTapChanger.TransformerEnd"/>
-      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
-      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An additional ratio tap changer for this transformer end.</rdfs:comment>
-      <rdfs:domain rdf:resource="#TransformerEnd"/>
-      <rdfs:label xml:lang="en">AdditionalRatioTapChanger</rdfs:label>
-      <rdfs:range rdf:resource="#RatioTapChanger"/>
-   </rdf:Description>
    <rdf:Description rdf:about="#TransformerEnd.CoreAdmittance">
       <cims:AssociationUsed>Yes</cims:AssociationUsed>
       <cims:inverseRoleName rdf:resource="#TransformerCoreAdmittance.TransformerEnd"/>
@@ -2419,6 +2409,16 @@ This attribute is not relevant for PhaseTapChangerAsymmetrical, PhaseTapChangerS
       <rdfs:domain rdf:resource="#TransformerEnd"/>
       <rdfs:label xml:lang="en">FromMeshImpedance</rdfs:label>
       <rdfs:range rdf:resource="#TransformerMeshImpedance"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#TransformerEnd.RatioTapChanger">
+      <cims:AssociationUsed>No</cims:AssociationUsed>
+      <cims:inverseRoleName rdf:resource="#RatioTapChanger.TransformerEnd"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ratio tap changer associated with this transformer end.</rdfs:comment>
+      <rdfs:domain rdf:resource="#TransformerEnd"/>
+      <rdfs:label xml:lang="en">RatioTapChanger</rdfs:label>
+      <rdfs:range rdf:resource="#RatioTapChanger"/>
    </rdf:Description>
    <rdf:Description rdf:about="#TransformerEnd.ToMeshImpedance">
       <cims:AssociationUsed>No</cims:AssociationUsed>
