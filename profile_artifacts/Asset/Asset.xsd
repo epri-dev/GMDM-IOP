@@ -218,13 +218,19 @@
       </xs:annotation>
       <xs:restriction base="xs:string">
          <xs:enumeration value="other">
-            <xs:annotation/>
+            <xs:annotation>
+               <xs:documentation>Other</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
          <xs:enumeration value="singlePhase">
-            <xs:annotation/>
+            <xs:annotation>
+               <xs:documentation>Single phase</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
          <xs:enumeration value="threePhase">
-            <xs:annotation/>
+            <xs:annotation>
+               <xs:documentation>Three phases</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
       </xs:restriction>
    </xs:simpleType>
@@ -495,25 +501,39 @@
       </xs:annotation>
       <xs:restriction base="xs:string">
          <xs:enumeration value="A">
-            <xs:annotation/>
+            <xs:annotation>
+               <xs:documentation>Autotransformer common winding.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
          <xs:enumeration value="D">
-            <xs:annotation/>
+            <xs:annotation>
+               <xs:documentation>Delta.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
          <xs:enumeration value="I">
-            <xs:annotation/>
+            <xs:annotation>
+               <xs:documentation>Independent winding, for single-phase connections.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
          <xs:enumeration value="Y">
-            <xs:annotation/>
+            <xs:annotation>
+               <xs:documentation>Wye.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
          <xs:enumeration value="Yn">
-            <xs:annotation/>
+            <xs:annotation>
+               <xs:documentation>Wye, with neutral brought out for grounding.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
          <xs:enumeration value="Z">
-            <xs:annotation/>
+            <xs:annotation>
+               <xs:documentation>ZigZag.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
          <xs:enumeration value="Zn">
-            <xs:annotation/>
+            <xs:annotation>
+               <xs:documentation>ZigZag, with neutral brought out for grounding.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
       </xs:restriction>
    </xs:simpleType>

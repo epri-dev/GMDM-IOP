@@ -938,20 +938,30 @@
          <xs:documentation>The configuration of phase connections for a single terminal device such as a load or capacitor.</xs:documentation>
       </xs:annotation>
       <xs:restriction base="xs:string">
-         <xs:enumeration value="PhaseShuntConnectionKind.D">
-            <xs:annotation/>
+         <xs:enumeration value="D">
+            <xs:annotation>
+               <xs:documentation>Delta connection.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="PhaseShuntConnectionKind.G">
-            <xs:annotation/>
+         <xs:enumeration value="G">
+            <xs:annotation>
+               <xs:documentation>Ground connection; use when explicit connection to ground needs to be expressed in combination with the phase code, such as for electrical wire/cable or for meters.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="PhaseShuntConnectionKind.I">
-            <xs:annotation/>
+         <xs:enumeration value="I">
+            <xs:annotation>
+               <xs:documentation>Independent winding, for single-phase connections.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="PhaseShuntConnectionKind.Y">
-            <xs:annotation/>
+         <xs:enumeration value="Y">
+            <xs:annotation>
+               <xs:documentation>Wye connection.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="PhaseShuntConnectionKind.Yn">
-            <xs:annotation/>
+         <xs:enumeration value="Yn">
+            <xs:annotation>
+               <xs:documentation>Wye, with neutral brought out for grounding.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
       </xs:restriction>
    </xs:simpleType>
@@ -1206,23 +1216,35 @@
          <xs:documentation>Allows designation of specific phases for transmission and distribution equipment, circuits and loads.</xs:documentation>
       </xs:annotation>
       <xs:restriction base="xs:string">
-         <xs:enumeration value="SinglePhaseKind.A">
-            <xs:annotation/>
+         <xs:enumeration value="A">
+            <xs:annotation>
+               <xs:documentation>Phase A.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="SinglePhaseKind.B">
-            <xs:annotation/>
+         <xs:enumeration value="B">
+            <xs:annotation>
+               <xs:documentation>Phase B.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="SinglePhaseKind.C">
-            <xs:annotation/>
+         <xs:enumeration value="C">
+            <xs:annotation>
+               <xs:documentation>Phase C.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="SinglePhaseKind.N">
-            <xs:annotation/>
+         <xs:enumeration value="N">
+            <xs:annotation>
+               <xs:documentation>Neutral.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="SinglePhaseKind.s1">
-            <xs:annotation/>
+         <xs:enumeration value="s1">
+            <xs:annotation>
+               <xs:documentation>Secondary phase 1.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="SinglePhaseKind.s2">
-            <xs:annotation/>
+         <xs:enumeration value="s2">
+            <xs:annotation>
+               <xs:documentation>Secondary phase 2.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
       </xs:restriction>
    </xs:simpleType>
@@ -1549,26 +1571,40 @@
          <xs:documentation>Winding connection type.</xs:documentation>
       </xs:annotation>
       <xs:restriction base="xs:string">
-         <xs:enumeration value="WindingConnection.A">
-            <xs:annotation/>
+         <xs:enumeration value="A">
+            <xs:annotation>
+               <xs:documentation>Autotransformer common winding.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="WindingConnection.D">
-            <xs:annotation/>
+         <xs:enumeration value="D">
+            <xs:annotation>
+               <xs:documentation>Delta.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="WindingConnection.I">
-            <xs:annotation/>
+         <xs:enumeration value="I">
+            <xs:annotation>
+               <xs:documentation>Independent winding, for single-phase connections.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="WindingConnection.Y">
-            <xs:annotation/>
+         <xs:enumeration value="Y">
+            <xs:annotation>
+               <xs:documentation>Wye.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="WindingConnection.Yn">
-            <xs:annotation/>
+         <xs:enumeration value="Yn">
+            <xs:annotation>
+               <xs:documentation>Wye, with neutral brought out for grounding.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="WindingConnection.Z">
-            <xs:annotation/>
+         <xs:enumeration value="Z">
+            <xs:annotation>
+               <xs:documentation>ZigZag.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="WindingConnection.Zn">
-            <xs:annotation/>
+         <xs:enumeration value="Zn">
+            <xs:annotation>
+               <xs:documentation>ZigZag, with neutral brought out for grounding.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
       </xs:restriction>
    </xs:simpleType>

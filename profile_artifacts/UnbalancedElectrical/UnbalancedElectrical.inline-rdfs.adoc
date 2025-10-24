@@ -3046,38 +3046,58 @@ Core admittance of this transformer end, representing magnetising current and co
 |===
 |name |description
 
-|FuelType.brownCoalLignite
-|
-
-|FuelType.coal
-|
-
-|FuelType.coalDerivedGas
-|
-
 |FuelType.diesel
 |
 
-|FuelType.gas
+|brownCoalLignite
 |
+Brown coal lignite.
 
-|FuelType.hardCoal
-|
 
-|FuelType.lignite
+|coal
 |
+Generic coal, not including lignite type.
 
-|FuelType.oil
-|
 
-|FuelType.oilShale
+|coalDerivedGas
 |
+Coal derived gas.
 
-|FuelType.other
-|
 
-|FuelType.peat
+|gas
 |
+Natural gas.
+
+
+|hardCoal
+|
+Hard coal.
+
+
+|lignite
+|
+The fuel is lignite coal. Note that this is a special type of coal, so the other enum of coal is reserved for hard coal types or if the exact type of coal is not known.
+
+
+|oil
+|
+Oil.
+
+
+|oilShale
+|
+Oil Shale.
+
+
+|other
+|
+Any fuel type not included in the rest of the enumerated value.
+
+
+|peat
+|
+Peat.
+
 |===
 [[UnbalancedElectrical-PhaseCode]]
 ==== PhaseCode
@@ -3095,83 +3115,135 @@ The integer values are from IEC 61968-9 to support revenue metering applications
 |===
 |name |description
 
-|PhaseCode.A
+|A
 |
+Phase A.
 
-|PhaseCode.AB
-|
 
-|PhaseCode.ABC
+|AB
 |
+Phases A and B.
 
-|PhaseCode.ABCN
-|
 
-|PhaseCode.ABN
+|ABC
 |
+Phases A, B, and C.
 
-|PhaseCode.AC
-|
 
-|PhaseCode.ACN
+|ABCN
 |
+Phases A, B, C, and N.
 
-|PhaseCode.AN
-|
 
-|PhaseCode.B
+|ABN
 |
+Phases A, B, and neutral.
 
-|PhaseCode.BC
-|
 
-|PhaseCode.BCN
+|AC
 |
+Phases A and C.
 
-|PhaseCode.BN
-|
 
-|PhaseCode.C
+|ACN
 |
+Phases A, C and neutral.
 
-|PhaseCode.CN
-|
 
-|PhaseCode.N
+|AN
 |
+Phases A and neutral.
 
-|PhaseCode.X
-|
 
-|PhaseCode.XN
+|B
 |
+Phase B.
 
-|PhaseCode.XY
-|
 
-|PhaseCode.XYN
+|BC
 |
+Phases B and C.
 
-|PhaseCode.none
-|
 
-|PhaseCode.s1
+|BCN
 |
+Phases B, C, and neutral.
 
-|PhaseCode.s12
-|
 
-|PhaseCode.s12N
+|BN
 |
+Phases B and neutral.
 
-|PhaseCode.s1N
-|
 
-|PhaseCode.s2
+|C
 |
+Phase C.
 
-|PhaseCode.s2N
+
+|CN
 |
+Phases C and neutral.
+
+
+|N
+|
+Neutral phase.
+
+
+|X
+|
+Unknown non-neutral phase.
+
+
+|XN
+|
+Unknown non-neutral phase plus neutral.
+
+
+|XY
+|
+Two unknown non-neutral phases.
+
+
+|XYN
+|
+Two unknown non-neutral phases plus neutral.
+
+
+|none
+|
+No phases specified.
+
+
+|s1
+|
+Secondary phase 1.
+
+
+|s12
+|
+Secondary phase 1 and 2.
+
+
+|s12N
+|
+Secondary phases 1, 2, and neutral.
+
+
+|s1N
+|
+Secondary phase 1 and neutral.
+
+
+|s2
+|
+Secondary phase 2.
+
+
+|s2N
+|
+Secondary phase 2 and neutral.
+
 |===
 [[UnbalancedElectrical-RegulatingControlModeKind]]
 ==== RegulatingControlModeKind
@@ -3183,29 +3255,45 @@ The kind of regulation model. For example regulating voltage, reactive power, ac
 |===
 |name |description
 
-|RegulatingControlModeKind.activePower
+|activePower
 |
+Active power is specified.
 
-|RegulatingControlModeKind.admittance
-|
 
-|RegulatingControlModeKind.currentFlow
+|admittance
 |
+Admittance is specified.
 
-|RegulatingControlModeKind.powerFactor
-|
 
-|RegulatingControlModeKind.reactivePower
+|currentFlow
 |
+Current flow is specified.
 
-|RegulatingControlModeKind.temperature
-|
 
-|RegulatingControlModeKind.timeScheduled
+|powerFactor
 |
+Power factor is specified.
 
-|RegulatingControlModeKind.voltage
+
+|reactivePower
 |
+Reactive power is specified.
+
+
+|temperature
+|
+Control switches on/off based on the local temperature (i.e., a thermostat).
+
+
+|timeScheduled
+|
+Control switches on/off by time of day. The times may change on the weekend, or in different seasons.
+
+
+|voltage
+|
+Voltage is specified.
+
 |===
 [[UnbalancedElectrical-WindGenUnitKind]]
 ==== WindGenUnitKind

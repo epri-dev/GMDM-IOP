@@ -440,38 +440,58 @@
                   sawsdl:modelReference="http://epri.com/gmdm/2025#FuelType">
       <xs:annotation/>
       <xs:restriction base="xs:string">
-         <xs:enumeration value="FuelType.brownCoalLignite">
-            <xs:annotation/>
-         </xs:enumeration>
-         <xs:enumeration value="FuelType.coal">
-            <xs:annotation/>
-         </xs:enumeration>
-         <xs:enumeration value="FuelType.coalDerivedGas">
-            <xs:annotation/>
-         </xs:enumeration>
          <xs:enumeration value="FuelType.diesel">
             <xs:annotation/>
          </xs:enumeration>
-         <xs:enumeration value="FuelType.gas">
-            <xs:annotation/>
+         <xs:enumeration value="brownCoalLignite">
+            <xs:annotation>
+               <xs:documentation>Brown coal lignite.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="FuelType.hardCoal">
-            <xs:annotation/>
+         <xs:enumeration value="coal">
+            <xs:annotation>
+               <xs:documentation>Generic coal, not including lignite type.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="FuelType.lignite">
-            <xs:annotation/>
+         <xs:enumeration value="coalDerivedGas">
+            <xs:annotation>
+               <xs:documentation>Coal derived gas.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="FuelType.oil">
-            <xs:annotation/>
+         <xs:enumeration value="gas">
+            <xs:annotation>
+               <xs:documentation>Natural gas.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="FuelType.oilShale">
-            <xs:annotation/>
+         <xs:enumeration value="hardCoal">
+            <xs:annotation>
+               <xs:documentation>Hard coal.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="FuelType.other">
-            <xs:annotation/>
+         <xs:enumeration value="lignite">
+            <xs:annotation>
+               <xs:documentation>The fuel is lignite coal. Note that this is a special type of coal, so the other enum of coal is reserved for hard coal types or if the exact type of coal is not known.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="FuelType.peat">
-            <xs:annotation/>
+         <xs:enumeration value="oil">
+            <xs:annotation>
+               <xs:documentation>Oil.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="oilShale">
+            <xs:annotation>
+               <xs:documentation>Oil Shale.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="other">
+            <xs:annotation>
+               <xs:documentation>Any fuel type not included in the rest of the enumerated value.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="peat">
+            <xs:annotation>
+               <xs:documentation>Peat.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
       </xs:restriction>
    </xs:simpleType>
@@ -830,83 +850,135 @@
          <xs:documentation>The integer values are from IEC 61968-9 to support revenue metering applications.</xs:documentation>
       </xs:annotation>
       <xs:restriction base="xs:string">
-         <xs:enumeration value="PhaseCode.A">
-            <xs:annotation/>
+         <xs:enumeration value="A">
+            <xs:annotation>
+               <xs:documentation>Phase A.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="PhaseCode.AB">
-            <xs:annotation/>
+         <xs:enumeration value="AB">
+            <xs:annotation>
+               <xs:documentation>Phases A and B.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="PhaseCode.ABC">
-            <xs:annotation/>
+         <xs:enumeration value="ABC">
+            <xs:annotation>
+               <xs:documentation>Phases A, B, and C.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="PhaseCode.ABCN">
-            <xs:annotation/>
+         <xs:enumeration value="ABCN">
+            <xs:annotation>
+               <xs:documentation>Phases A, B, C, and N.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="PhaseCode.ABN">
-            <xs:annotation/>
+         <xs:enumeration value="ABN">
+            <xs:annotation>
+               <xs:documentation>Phases A, B, and neutral.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="PhaseCode.AC">
-            <xs:annotation/>
+         <xs:enumeration value="AC">
+            <xs:annotation>
+               <xs:documentation>Phases A and C.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="PhaseCode.ACN">
-            <xs:annotation/>
+         <xs:enumeration value="ACN">
+            <xs:annotation>
+               <xs:documentation>Phases A, C and neutral.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="PhaseCode.AN">
-            <xs:annotation/>
+         <xs:enumeration value="AN">
+            <xs:annotation>
+               <xs:documentation>Phases A and neutral.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="PhaseCode.B">
-            <xs:annotation/>
+         <xs:enumeration value="B">
+            <xs:annotation>
+               <xs:documentation>Phase B.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="PhaseCode.BC">
-            <xs:annotation/>
+         <xs:enumeration value="BC">
+            <xs:annotation>
+               <xs:documentation>Phases B and C.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="PhaseCode.BCN">
-            <xs:annotation/>
+         <xs:enumeration value="BCN">
+            <xs:annotation>
+               <xs:documentation>Phases B, C, and neutral.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="PhaseCode.BN">
-            <xs:annotation/>
+         <xs:enumeration value="BN">
+            <xs:annotation>
+               <xs:documentation>Phases B and neutral.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="PhaseCode.C">
-            <xs:annotation/>
+         <xs:enumeration value="C">
+            <xs:annotation>
+               <xs:documentation>Phase C.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="PhaseCode.CN">
-            <xs:annotation/>
+         <xs:enumeration value="CN">
+            <xs:annotation>
+               <xs:documentation>Phases C and neutral.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="PhaseCode.N">
-            <xs:annotation/>
+         <xs:enumeration value="N">
+            <xs:annotation>
+               <xs:documentation>Neutral phase.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="PhaseCode.X">
-            <xs:annotation/>
+         <xs:enumeration value="X">
+            <xs:annotation>
+               <xs:documentation>Unknown non-neutral phase.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="PhaseCode.XN">
-            <xs:annotation/>
+         <xs:enumeration value="XN">
+            <xs:annotation>
+               <xs:documentation>Unknown non-neutral phase plus neutral.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="PhaseCode.XY">
-            <xs:annotation/>
+         <xs:enumeration value="XY">
+            <xs:annotation>
+               <xs:documentation>Two unknown non-neutral phases.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="PhaseCode.XYN">
-            <xs:annotation/>
+         <xs:enumeration value="XYN">
+            <xs:annotation>
+               <xs:documentation>Two unknown non-neutral phases plus neutral.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="PhaseCode.none">
-            <xs:annotation/>
+         <xs:enumeration value="none">
+            <xs:annotation>
+               <xs:documentation>No phases specified.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="PhaseCode.s1">
-            <xs:annotation/>
+         <xs:enumeration value="s1">
+            <xs:annotation>
+               <xs:documentation>Secondary phase 1.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="PhaseCode.s12">
-            <xs:annotation/>
+         <xs:enumeration value="s12">
+            <xs:annotation>
+               <xs:documentation>Secondary phase 1 and 2.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="PhaseCode.s12N">
-            <xs:annotation/>
+         <xs:enumeration value="s12N">
+            <xs:annotation>
+               <xs:documentation>Secondary phases 1, 2, and neutral.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="PhaseCode.s1N">
-            <xs:annotation/>
+         <xs:enumeration value="s1N">
+            <xs:annotation>
+               <xs:documentation>Secondary phase 1 and neutral.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="PhaseCode.s2">
-            <xs:annotation/>
+         <xs:enumeration value="s2">
+            <xs:annotation>
+               <xs:documentation>Secondary phase 2.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="PhaseCode.s2N">
-            <xs:annotation/>
+         <xs:enumeration value="s2N">
+            <xs:annotation>
+               <xs:documentation>Secondary phase 2 and neutral.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
       </xs:restriction>
    </xs:simpleType>
@@ -1413,29 +1485,45 @@
          <xs:documentation>The kind of regulation model.   For example regulating voltage, reactive power, active power, etc.</xs:documentation>
       </xs:annotation>
       <xs:restriction base="xs:string">
-         <xs:enumeration value="RegulatingControlModeKind.activePower">
-            <xs:annotation/>
+         <xs:enumeration value="activePower">
+            <xs:annotation>
+               <xs:documentation>Active power is specified.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="RegulatingControlModeKind.admittance">
-            <xs:annotation/>
+         <xs:enumeration value="admittance">
+            <xs:annotation>
+               <xs:documentation>Admittance is specified.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="RegulatingControlModeKind.currentFlow">
-            <xs:annotation/>
+         <xs:enumeration value="currentFlow">
+            <xs:annotation>
+               <xs:documentation>Current flow is specified.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="RegulatingControlModeKind.powerFactor">
-            <xs:annotation/>
+         <xs:enumeration value="powerFactor">
+            <xs:annotation>
+               <xs:documentation>Power factor is specified.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="RegulatingControlModeKind.reactivePower">
-            <xs:annotation/>
+         <xs:enumeration value="reactivePower">
+            <xs:annotation>
+               <xs:documentation>Reactive power is specified.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="RegulatingControlModeKind.temperature">
-            <xs:annotation/>
+         <xs:enumeration value="temperature">
+            <xs:annotation>
+               <xs:documentation>Control switches on/off based on the local temperature (i.e., a thermostat).</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="RegulatingControlModeKind.timeScheduled">
-            <xs:annotation/>
+         <xs:enumeration value="timeScheduled">
+            <xs:annotation>
+               <xs:documentation>Control switches on/off by time of day. The times may change on the weekend, or in different seasons.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
-         <xs:enumeration value="RegulatingControlModeKind.voltage">
-            <xs:annotation/>
+         <xs:enumeration value="voltage">
+            <xs:annotation>
+               <xs:documentation>Voltage is specified.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
       </xs:restriction>
    </xs:simpleType>

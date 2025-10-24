@@ -619,12 +619,18 @@ Number of phases supported by a device.
 
 |other
 |
+Other
+
 
 |singlePhase
 |
+Single phase
+
 
 |threePhase
 |
+Three phases
+
 |===
 [[Asset-WindingConnection]]
 ==== WindingConnection
@@ -638,24 +644,38 @@ Winding connection type.
 
 |A
 |
+Autotransformer common winding.
+
 
 |D
 |
+Delta.
+
 
 |I
 |
+Independent winding, for single-phase connections.
+
 
 |Y
 |
+Wye.
+
 
 |Yn
 |
+Wye, with neutral brought out for grounding.
+
 
 |Z
 |
+ZigZag.
+
 
 |Zn
 |
+ZigZag, with neutral brought out for grounding.
+
 |===
 
 === Datatypes

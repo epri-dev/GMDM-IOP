@@ -376,6 +376,24 @@ Currently, normative parts of the model support the needs of information exchang
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Number of phases supported by a device.</rdfs:comment>
       <rdfs:label xml:lang="en">PhaseCountKind</rdfs:label>
    </rdf:Description>
+   <rdf:Description rdf:about="#PhaseCountKind.other">
+      <cims:stereotype>enum</cims:stereotype>
+      <rdf:type rdf:resource="#PhaseCountKind"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Other</rdfs:comment>
+      <rdfs:label xml:lang="en">other</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#PhaseCountKind.singlePhase">
+      <cims:stereotype>enum</cims:stereotype>
+      <rdf:type rdf:resource="#PhaseCountKind"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single phase</rdfs:comment>
+      <rdfs:label xml:lang="en">singlePhase</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#PhaseCountKind.threePhase">
+      <cims:stereotype>enum</cims:stereotype>
+      <rdf:type rdf:resource="#PhaseCountKind"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Three phases</rdfs:comment>
+      <rdfs:label xml:lang="en">threePhase</rdfs:label>
+   </rdf:Description>
    <rdf:Description rdf:about="#PowerSystemResource">
       <cims:belongsToCategory rdf:resource="#Package_Core"/>
       <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
@@ -759,54 +777,46 @@ Currently, normative parts of the model support the needs of information exchang
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Winding connection type.</rdfs:comment>
       <rdfs:label xml:lang="en">WindingConnection</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://cim.ucaiug.io/ns#PhaseCountKind.other">
+   <rdf:Description rdf:about="#WindingConnection.A">
       <cims:stereotype>enum</cims:stereotype>
-      <rdf:type rdf:resource="http://cim.ucaiug.io/ns#PhaseCountKind"/>
-      <rdfs:label xml:lang="en">other</rdfs:label>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://cim.ucaiug.io/ns#PhaseCountKind.singlePhase">
-      <cims:stereotype>enum</cims:stereotype>
-      <rdf:type rdf:resource="http://cim.ucaiug.io/ns#PhaseCountKind"/>
-      <rdfs:label xml:lang="en">singlePhase</rdfs:label>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://cim.ucaiug.io/ns#PhaseCountKind.threePhase">
-      <cims:stereotype>enum</cims:stereotype>
-      <rdf:type rdf:resource="http://cim.ucaiug.io/ns#PhaseCountKind"/>
-      <rdfs:label xml:lang="en">threePhase</rdfs:label>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://cim.ucaiug.io/ns#WindingConnection.A">
-      <cims:stereotype>enum</cims:stereotype>
-      <rdf:type rdf:resource="http://cim.ucaiug.io/ns#WindingConnection"/>
+      <rdf:type rdf:resource="#WindingConnection"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Autotransformer common winding.</rdfs:comment>
       <rdfs:label xml:lang="en">A</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://cim.ucaiug.io/ns#WindingConnection.D">
+   <rdf:Description rdf:about="#WindingConnection.D">
       <cims:stereotype>enum</cims:stereotype>
-      <rdf:type rdf:resource="http://cim.ucaiug.io/ns#WindingConnection"/>
+      <rdf:type rdf:resource="#WindingConnection"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Delta.</rdfs:comment>
       <rdfs:label xml:lang="en">D</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://cim.ucaiug.io/ns#WindingConnection.I">
+   <rdf:Description rdf:about="#WindingConnection.I">
       <cims:stereotype>enum</cims:stereotype>
-      <rdf:type rdf:resource="http://cim.ucaiug.io/ns#WindingConnection"/>
+      <rdf:type rdf:resource="#WindingConnection"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Independent winding, for single-phase connections.</rdfs:comment>
       <rdfs:label xml:lang="en">I</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://cim.ucaiug.io/ns#WindingConnection.Y">
+   <rdf:Description rdf:about="#WindingConnection.Y">
       <cims:stereotype>enum</cims:stereotype>
-      <rdf:type rdf:resource="http://cim.ucaiug.io/ns#WindingConnection"/>
+      <rdf:type rdf:resource="#WindingConnection"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wye.</rdfs:comment>
       <rdfs:label xml:lang="en">Y</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://cim.ucaiug.io/ns#WindingConnection.Yn">
+   <rdf:Description rdf:about="#WindingConnection.Yn">
       <cims:stereotype>enum</cims:stereotype>
-      <rdf:type rdf:resource="http://cim.ucaiug.io/ns#WindingConnection"/>
+      <rdf:type rdf:resource="#WindingConnection"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wye, with neutral brought out for grounding.</rdfs:comment>
       <rdfs:label xml:lang="en">Yn</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://cim.ucaiug.io/ns#WindingConnection.Z">
+   <rdf:Description rdf:about="#WindingConnection.Z">
       <cims:stereotype>enum</cims:stereotype>
-      <rdf:type rdf:resource="http://cim.ucaiug.io/ns#WindingConnection"/>
+      <rdf:type rdf:resource="#WindingConnection"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ZigZag.</rdfs:comment>
       <rdfs:label xml:lang="en">Z</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://cim.ucaiug.io/ns#WindingConnection.Zn">
+   <rdf:Description rdf:about="#WindingConnection.Zn">
       <cims:stereotype>enum</cims:stereotype>
-      <rdf:type rdf:resource="http://cim.ucaiug.io/ns#WindingConnection"/>
+      <rdf:type rdf:resource="#WindingConnection"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ZigZag, with neutral brought out for grounding.</rdfs:comment>
       <rdfs:label xml:lang="en">Zn</rdfs:label>
    </rdf:Description>
    <rdf:Description rdf:about="http://epri.com/gmdm/2025#TransformerTank.TransformerTankInfo">

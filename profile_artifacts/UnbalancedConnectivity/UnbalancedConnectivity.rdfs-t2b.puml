@@ -116,7 +116,7 @@ class ACLineSegmentPhase   {
 }
 
 PowerSystemResource <|-- ACLineSegmentPhase
-ACLineSegmentPhase "+ACLineSegmentPhases 0..*" --> "+ACLineSegment 0..1" ACLineSegment
+ACLineSegmentPhase "+ACLineSegmentPhases 0..4" --> "+ACLineSegment 0..1" ACLineSegment
 
 ' AsynchronousMachine inherits from RotatingMachine
 class AsynchronousMachine   {
@@ -201,7 +201,7 @@ class EnergyConsumerPhase   {
 }
 
 PowerSystemResource <|-- EnergyConsumerPhase
-EnergyConsumerPhase "+EnergyConsumerPhase 0..*" --> "+EnergyConsumer 1" EnergyConsumer
+EnergyConsumerPhase "+EnergyConsumerPhase 0..3" --> "+EnergyConsumer 1" EnergyConsumer
 
 ' EnergySource inherits from EnergyConnection
 class EnergySource   {
@@ -368,7 +368,7 @@ class PowerTransformerEnd   {
 }
 
 TransformerEnd <|-- PowerTransformerEnd
-PowerTransformerEnd "+PowerTransformerEnd 0..*" --> "+PowerTransformer 1" PowerTransformer
+PowerTransformerEnd "+PowerTransformerEnd 0..3" --> "+PowerTransformer 1" PowerTransformer
 
 ' ProtectedSwitch inherits from Switch
 abstract class ProtectedSwitch  <<abstract>> {
@@ -420,7 +420,7 @@ abstract class ShuntCompensatorPhase  <<abstract>> {
 }
 
 PowerSystemResource <|-- ShuntCompensatorPhase
-ShuntCompensatorPhase "+ShuntCompensatorPhase 0..*" --> "+ShuntCompensator 1" ShuntCompensator
+ShuntCompensatorPhase "+ShuntCompensatorPhase 0..3" --> "+ShuntCompensator 1" ShuntCompensator
 
 ' Enumeration SinglePhaseKind
 enum SinglePhaseKind <<enumeration>><<Attribute>>  {
@@ -454,7 +454,7 @@ class SwitchPhase   {
 }
 
 PowerSystemResource <|-- SwitchPhase
-SwitchPhase "+SwitchPhase 0..*" --> "+Switch 1" Switch
+SwitchPhase "+SwitchPhase 0..3" --> "+Switch 1" Switch
 
 ' SynchronousMachine inherits from RotatingMachine
 class SynchronousMachine   {

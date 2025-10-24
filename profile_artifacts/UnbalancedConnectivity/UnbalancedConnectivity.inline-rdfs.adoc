@@ -2871,20 +2871,30 @@ The configuration of phase connections for a single terminal device such as a lo
 |===
 |name |description
 
-|PhaseShuntConnectionKind.D
+|D
 |
+Delta connection.
 
-|PhaseShuntConnectionKind.G
-|
 
-|PhaseShuntConnectionKind.I
+|G
 |
+Ground connection; use when explicit connection to ground needs to be expressed in combination with the phase code, such as for electrical wire/cable or for meters.
 
-|PhaseShuntConnectionKind.Y
-|
 
-|PhaseShuntConnectionKind.Yn
+|I
 |
+Independent winding, for single-phase connections.
+
+
+|Y
+|
+Wye connection.
+
+
+|Yn
+|
+Wye, with neutral brought out for grounding.
+
 |===
 [[UnbalancedConnectivity-SinglePhaseKind]]
 ==== SinglePhaseKind
@@ -2898,23 +2908,35 @@ Allows designation of specific phases for transmission and distribution equipmen
 |===
 |name |description
 
-|SinglePhaseKind.A
+|A
 |
+Phase A.
 
-|SinglePhaseKind.B
-|
 
-|SinglePhaseKind.C
+|B
 |
+Phase B.
 
-|SinglePhaseKind.N
-|
 
-|SinglePhaseKind.s1
+|C
 |
+Phase C.
 
-|SinglePhaseKind.s2
+
+|N
 |
+Neutral.
+
+
+|s1
+|
+Secondary phase 1.
+
+
+|s2
+|
+Secondary phase 2.
+
 |===
 [[UnbalancedConnectivity-WindingConnection]]
 ==== WindingConnection
@@ -2926,26 +2948,40 @@ Winding connection type.
 |===
 |name |description
 
-|WindingConnection.A
+|A
 |
+Autotransformer common winding.
 
-|WindingConnection.D
-|
 
-|WindingConnection.I
+|D
 |
+Delta.
 
-|WindingConnection.Y
-|
 
-|WindingConnection.Yn
+|I
 |
+Independent winding, for single-phase connections.
 
-|WindingConnection.Z
-|
 
-|WindingConnection.Zn
+|Y
 |
+Wye.
+
+
+|Yn
+|
+Wye, with neutral brought out for grounding.
+
+
+|Z
+|
+ZigZag.
+
+
+|Zn
+|
+ZigZag, with neutral brought out for grounding.
+
 |===
 
 === Datatypes

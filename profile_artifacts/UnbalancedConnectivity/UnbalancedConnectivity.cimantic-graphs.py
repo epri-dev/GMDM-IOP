@@ -1566,24 +1566,31 @@ class PhaseShuntConnectionKind(Enum):
     as a load or capacitor.
     '''
 
-    PhaseShuntConnectionKind.D = 'PhaseShuntConnectionKind.D'
+    D = 'D'
     '''
-    '''
-    
-    PhaseShuntConnectionKind.G = 'PhaseShuntConnectionKind.G'
-    '''
+    Delta connection.
     '''
     
-    PhaseShuntConnectionKind.I = 'PhaseShuntConnectionKind.I'
+    G = 'G'
     '''
+    Ground connection; use when explicit connection to ground needs to be expressed
+    in combination with the phase code, such as for electrical wire/cable or
+    for meters.
     '''
     
-    PhaseShuntConnectionKind.Y = 'PhaseShuntConnectionKind.Y'
+    I = 'I'
     '''
+    Independent winding, for single-phase connections.
     '''
     
-    PhaseShuntConnectionKind.Yn = 'PhaseShuntConnectionKind.Yn'
+    Y = 'Y'
     '''
+    Wye connection.
+    '''
+    
+    Yn = 'Yn'
+    '''
+    Wye, with neutral brought out for grounding.
     '''
     
 class SinglePhaseKind(Enum):
@@ -1594,28 +1601,34 @@ class SinglePhaseKind(Enum):
     equipment, circuits and loads.
     '''
 
-    SinglePhaseKind.A = 'SinglePhaseKind.A'
+    A = 'A'
     '''
-    '''
-    
-    SinglePhaseKind.B = 'SinglePhaseKind.B'
-    '''
+    Phase A.
     '''
     
-    SinglePhaseKind.C = 'SinglePhaseKind.C'
+    B = 'B'
     '''
-    '''
-    
-    SinglePhaseKind.N = 'SinglePhaseKind.N'
-    '''
+    Phase B.
     '''
     
-    SinglePhaseKind.s1 = 'SinglePhaseKind.s1'
+    C = 'C'
     '''
+    Phase C.
     '''
     
-    SinglePhaseKind.s2 = 'SinglePhaseKind.s2'
+    N = 'N'
     '''
+    Neutral.
+    '''
+    
+    s1 = 's1'
+    '''
+    Secondary phase 1.
+    '''
+    
+    s2 = 's2'
+    '''
+    Secondary phase 2.
     '''
     
 class WindingConnection(Enum):
@@ -1623,32 +1636,39 @@ class WindingConnection(Enum):
     Winding connection type.
     '''
 
-    WindingConnection.A = 'WindingConnection.A'
+    A = 'A'
     '''
-    '''
-    
-    WindingConnection.D = 'WindingConnection.D'
-    '''
+    Autotransformer common winding.
     '''
     
-    WindingConnection.I = 'WindingConnection.I'
+    D = 'D'
     '''
-    '''
-    
-    WindingConnection.Y = 'WindingConnection.Y'
-    '''
+    Delta.
     '''
     
-    WindingConnection.Yn = 'WindingConnection.Yn'
+    I = 'I'
     '''
-    '''
-    
-    WindingConnection.Z = 'WindingConnection.Z'
-    '''
+    Independent winding, for single-phase connections.
     '''
     
-    WindingConnection.Zn = 'WindingConnection.Zn'
+    Y = 'Y'
     '''
+    Wye.
+    '''
+    
+    Yn = 'Yn'
+    '''
+    Wye, with neutral brought out for grounding.
+    '''
+    
+    Z = 'Z'
+    '''
+    ZigZag.
+    '''
+    
+    Zn = 'Zn'
+    '''
+    ZigZag, with neutral brought out for grounding.
     '''
     
 @dataclass

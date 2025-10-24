@@ -64,7 +64,7 @@ There are three approaches to providing line detail and all use WireAssembly to 
    <rdf:Description rdf:about="#ACLineSegment.ACLineSegmentPhases">
       <cims:AssociationUsed>No</cims:AssociationUsed>
       <cims:inverseRoleName rdf:resource="#ACLineSegmentPhase.ACLineSegment"/>
-      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..n"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..4"/>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The line segment phases which belong to the line segment.</rdfs:comment>
       <rdfs:domain rdf:resource="#ACLineSegment"/>
@@ -272,7 +272,7 @@ EnergyConsumer.pfixed, .qfixed, .pfixedPct and .qfixedPct have meaning only if t
    <rdf:Description rdf:about="#EnergyConsumer.EnergyConsumerPhase">
       <cims:AssociationUsed>No</cims:AssociationUsed>
       <cims:inverseRoleName rdf:resource="#EnergyConsumerPhase.EnergyConsumer"/>
-      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..n"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..3"/>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The individual phase models for this energy consumer.</rdfs:comment>
       <rdfs:domain rdf:resource="#EnergyConsumer"/>
@@ -771,6 +771,36 @@ The integer values are from IEC 61968-9 to support revenue metering applications
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The configuration of phase connections for a single terminal device such as a load or capacitor.</rdfs:comment>
       <rdfs:label xml:lang="en">PhaseShuntConnectionKind</rdfs:label>
    </rdf:Description>
+   <rdf:Description rdf:about="#PhaseShuntConnectionKind.D">
+      <cims:stereotype>enum</cims:stereotype>
+      <rdf:type rdf:resource="#PhaseShuntConnectionKind"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Delta connection.</rdfs:comment>
+      <rdfs:label xml:lang="en">D</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#PhaseShuntConnectionKind.G">
+      <cims:stereotype>enum</cims:stereotype>
+      <rdf:type rdf:resource="#PhaseShuntConnectionKind"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ground connection; use when explicit connection to ground needs to be expressed in combination with the phase code, such as for electrical wire/cable or for meters.</rdfs:comment>
+      <rdfs:label xml:lang="en">G</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#PhaseShuntConnectionKind.I">
+      <cims:stereotype>enum</cims:stereotype>
+      <rdf:type rdf:resource="#PhaseShuntConnectionKind"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Independent winding, for single-phase connections.</rdfs:comment>
+      <rdfs:label xml:lang="en">I</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#PhaseShuntConnectionKind.Y">
+      <cims:stereotype>enum</cims:stereotype>
+      <rdf:type rdf:resource="#PhaseShuntConnectionKind"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wye connection.</rdfs:comment>
+      <rdfs:label xml:lang="en">Y</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#PhaseShuntConnectionKind.Yn">
+      <cims:stereotype>enum</cims:stereotype>
+      <rdf:type rdf:resource="#PhaseShuntConnectionKind"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wye, with neutral brought out for grounding.</rdfs:comment>
+      <rdfs:label xml:lang="en">Yn</rdfs:label>
+   </rdf:Description>
    <rdf:Description rdf:about="#PowerElectronicsConnection">
       <cims:belongsToCategory rdf:resource="#Package_Wires"/>
       <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
@@ -837,7 +867,7 @@ The inherited association ConductingEquipment.BaseVoltage should not be used. Th
    <rdf:Description rdf:about="#PowerTransformer.PowerTransformerEnd">
       <cims:AssociationUsed>No</cims:AssociationUsed>
       <cims:inverseRoleName rdf:resource="#PowerTransformerEnd.PowerTransformer"/>
-      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..n"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..3"/>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The ends of this power transformer.</rdfs:comment>
       <rdfs:domain rdf:resource="#PowerTransformer"/>
@@ -954,7 +984,7 @@ Each PowerTransformerEnd must be contained by a PowerTransformer. Because a Powe
    <rdf:Description rdf:about="#ShuntCompensator.ShuntCompensatorPhase">
       <cims:AssociationUsed>No</cims:AssociationUsed>
       <cims:inverseRoleName rdf:resource="#ShuntCompensatorPhase.ShuntCompensator"/>
-      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..n"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..3"/>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The individual phases models for the shunt compensator.</rdfs:comment>
       <rdfs:domain rdf:resource="#ShuntCompensator"/>
@@ -1013,6 +1043,42 @@ Each PowerTransformerEnd must be contained by a PowerTransformer. Because a Powe
 Allows designation of specific phases for transmission and distribution equipment, circuits and loads.</rdfs:comment>
       <rdfs:label xml:lang="en">SinglePhaseKind</rdfs:label>
    </rdf:Description>
+   <rdf:Description rdf:about="#SinglePhaseKind.A">
+      <cims:stereotype>enum</cims:stereotype>
+      <rdf:type rdf:resource="#SinglePhaseKind"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phase A.</rdfs:comment>
+      <rdfs:label xml:lang="en">A</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#SinglePhaseKind.B">
+      <cims:stereotype>enum</cims:stereotype>
+      <rdf:type rdf:resource="#SinglePhaseKind"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phase B.</rdfs:comment>
+      <rdfs:label xml:lang="en">B</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#SinglePhaseKind.C">
+      <cims:stereotype>enum</cims:stereotype>
+      <rdf:type rdf:resource="#SinglePhaseKind"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phase C.</rdfs:comment>
+      <rdfs:label xml:lang="en">C</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#SinglePhaseKind.N">
+      <cims:stereotype>enum</cims:stereotype>
+      <rdf:type rdf:resource="#SinglePhaseKind"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neutral.</rdfs:comment>
+      <rdfs:label xml:lang="en">N</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#SinglePhaseKind.s1">
+      <cims:stereotype>enum</cims:stereotype>
+      <rdf:type rdf:resource="#SinglePhaseKind"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Secondary phase 1.</rdfs:comment>
+      <rdfs:label xml:lang="en">s1</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#SinglePhaseKind.s2">
+      <cims:stereotype>enum</cims:stereotype>
+      <rdf:type rdf:resource="#SinglePhaseKind"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Secondary phase 2.</rdfs:comment>
+      <rdfs:label xml:lang="en">s2</rdfs:label>
+   </rdf:Description>
    <rdf:Description rdf:about="#String">
       <cims:belongsToCategory rdf:resource="#Package_Domain"/>
       <cims:stereotype>Primitive</cims:stereotype>
@@ -1060,7 +1126,7 @@ Allows designation of specific phases for transmission and distribution equipmen
    <rdf:Description rdf:about="#Switch.SwitchPhase">
       <cims:AssociationUsed>No</cims:AssociationUsed>
       <cims:inverseRoleName rdf:resource="#SwitchPhase.Switch"/>
-      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..n"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..3"/>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The individual switch phases for the switch.</rdfs:comment>
       <rdfs:domain rdf:resource="#Switch"/>
@@ -1360,95 +1426,47 @@ Allows designation of specific phases for transmission and distribution equipmen
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Winding connection type.</rdfs:comment>
       <rdfs:label xml:lang="en">WindingConnection</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://cim.ucaiug.io/ns#PhaseShuntConnectionKind.D">
+   <rdf:Description rdf:about="#WindingConnection.A">
       <cims:stereotype>enum</cims:stereotype>
-      <rdf:type rdf:resource=""/>
-      <rdfs:label xml:lang="en">PhaseShuntConnectionKind.D</rdfs:label>
+      <rdf:type rdf:resource="#WindingConnection"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Autotransformer common winding.</rdfs:comment>
+      <rdfs:label xml:lang="en">A</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://cim.ucaiug.io/ns#PhaseShuntConnectionKind.G">
+   <rdf:Description rdf:about="#WindingConnection.D">
       <cims:stereotype>enum</cims:stereotype>
-      <rdf:type rdf:resource=""/>
-      <rdfs:label xml:lang="en">PhaseShuntConnectionKind.G</rdfs:label>
+      <rdf:type rdf:resource="#WindingConnection"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Delta.</rdfs:comment>
+      <rdfs:label xml:lang="en">D</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://cim.ucaiug.io/ns#PhaseShuntConnectionKind.I">
+   <rdf:Description rdf:about="#WindingConnection.I">
       <cims:stereotype>enum</cims:stereotype>
-      <rdf:type rdf:resource=""/>
-      <rdfs:label xml:lang="en">PhaseShuntConnectionKind.I</rdfs:label>
+      <rdf:type rdf:resource="#WindingConnection"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Independent winding, for single-phase connections.</rdfs:comment>
+      <rdfs:label xml:lang="en">I</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://cim.ucaiug.io/ns#PhaseShuntConnectionKind.Y">
+   <rdf:Description rdf:about="#WindingConnection.Y">
       <cims:stereotype>enum</cims:stereotype>
-      <rdf:type rdf:resource=""/>
-      <rdfs:label xml:lang="en">PhaseShuntConnectionKind.Y</rdfs:label>
+      <rdf:type rdf:resource="#WindingConnection"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wye.</rdfs:comment>
+      <rdfs:label xml:lang="en">Y</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://cim.ucaiug.io/ns#PhaseShuntConnectionKind.Yn">
+   <rdf:Description rdf:about="#WindingConnection.Yn">
       <cims:stereotype>enum</cims:stereotype>
-      <rdf:type rdf:resource=""/>
-      <rdfs:label xml:lang="en">PhaseShuntConnectionKind.Yn</rdfs:label>
+      <rdf:type rdf:resource="#WindingConnection"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wye, with neutral brought out for grounding.</rdfs:comment>
+      <rdfs:label xml:lang="en">Yn</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://cim.ucaiug.io/ns#SinglePhaseKind.A">
+   <rdf:Description rdf:about="#WindingConnection.Z">
       <cims:stereotype>enum</cims:stereotype>
-      <rdf:type rdf:resource=""/>
-      <rdfs:label xml:lang="en">SinglePhaseKind.A</rdfs:label>
+      <rdf:type rdf:resource="#WindingConnection"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ZigZag.</rdfs:comment>
+      <rdfs:label xml:lang="en">Z</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://cim.ucaiug.io/ns#SinglePhaseKind.B">
+   <rdf:Description rdf:about="#WindingConnection.Zn">
       <cims:stereotype>enum</cims:stereotype>
-      <rdf:type rdf:resource=""/>
-      <rdfs:label xml:lang="en">SinglePhaseKind.B</rdfs:label>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://cim.ucaiug.io/ns#SinglePhaseKind.C">
-      <cims:stereotype>enum</cims:stereotype>
-      <rdf:type rdf:resource=""/>
-      <rdfs:label xml:lang="en">SinglePhaseKind.C</rdfs:label>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://cim.ucaiug.io/ns#SinglePhaseKind.N">
-      <cims:stereotype>enum</cims:stereotype>
-      <rdf:type rdf:resource=""/>
-      <rdfs:label xml:lang="en">SinglePhaseKind.N</rdfs:label>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://cim.ucaiug.io/ns#SinglePhaseKind.s1">
-      <cims:stereotype>enum</cims:stereotype>
-      <rdf:type rdf:resource=""/>
-      <rdfs:label xml:lang="en">SinglePhaseKind.s1</rdfs:label>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://cim.ucaiug.io/ns#SinglePhaseKind.s2">
-      <cims:stereotype>enum</cims:stereotype>
-      <rdf:type rdf:resource=""/>
-      <rdfs:label xml:lang="en">SinglePhaseKind.s2</rdfs:label>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://cim.ucaiug.io/ns#WindingConnection.A">
-      <cims:stereotype>enum</cims:stereotype>
-      <rdf:type rdf:resource=""/>
-      <rdfs:label xml:lang="en">WindingConnection.A</rdfs:label>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://cim.ucaiug.io/ns#WindingConnection.D">
-      <cims:stereotype>enum</cims:stereotype>
-      <rdf:type rdf:resource=""/>
-      <rdfs:label xml:lang="en">WindingConnection.D</rdfs:label>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://cim.ucaiug.io/ns#WindingConnection.I">
-      <cims:stereotype>enum</cims:stereotype>
-      <rdf:type rdf:resource=""/>
-      <rdfs:label xml:lang="en">WindingConnection.I</rdfs:label>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://cim.ucaiug.io/ns#WindingConnection.Y">
-      <cims:stereotype>enum</cims:stereotype>
-      <rdf:type rdf:resource=""/>
-      <rdfs:label xml:lang="en">WindingConnection.Y</rdfs:label>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://cim.ucaiug.io/ns#WindingConnection.Yn">
-      <cims:stereotype>enum</cims:stereotype>
-      <rdf:type rdf:resource=""/>
-      <rdfs:label xml:lang="en">WindingConnection.Yn</rdfs:label>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://cim.ucaiug.io/ns#WindingConnection.Z">
-      <cims:stereotype>enum</cims:stereotype>
-      <rdf:type rdf:resource=""/>
-      <rdfs:label xml:lang="en">WindingConnection.Z</rdfs:label>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://cim.ucaiug.io/ns#WindingConnection.Zn">
-      <cims:stereotype>enum</cims:stereotype>
-      <rdf:type rdf:resource=""/>
-      <rdfs:label xml:lang="en">WindingConnection.Zn</rdfs:label>
+      <rdf:type rdf:resource="#WindingConnection"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ZigZag, with neutral brought out for grounding.</rdfs:comment>
+      <rdfs:label xml:lang="en">Zn</rdfs:label>
    </rdf:Description>
    <rdf:Description rdf:about="http://epri.com/gmdm/2025#OrderedPhaseCodeKind">
       <cims:belongsToCategory rdf:resource="#Package_AssetInfoEXT"/>

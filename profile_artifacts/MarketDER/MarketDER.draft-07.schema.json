@@ -212,7 +212,7 @@
               "modelReference": "http://cim.ucaiug.io/CIM101/draft#UnitMultiplier",
               "type": "string",
               "enum": [
-                  "UnitMultiplier.k"
+                  "k"
               ]
           },
           "UnitSymbol": {
@@ -221,7 +221,7 @@
               "modelReference": "http://cim.ucaiug.io/CIM101/draft#UnitSymbol",
               "type": "string",
               "enum": [
-                  "UnitSymbol.W"
+                  "W"
               ]
           },
           "YesNo": {

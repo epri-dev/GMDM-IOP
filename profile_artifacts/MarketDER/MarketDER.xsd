@@ -227,8 +227,10 @@
          <xs:documentation>For example, the SI unit for mass is "kg" and not "g".  If the unit symbol is defined as "kg", then the multiplier is applied to "kg" as a whole and does not replace the "k" in front of the "g". In this case, the multiplier of "m" would be used with the unit symbol of "kg" to represent one gram.  As a text string, this violates the instructions in IEC 80000-1. However, because the unit symbol in CIM is treated as a derived unit instead of as an SI unit, it makes more sense to conceptualize the "kg" as if it were replaced by one of the proposed replacements for the SI mass symbol. If one imagines that the "kg" were replaced by a symbol "&amp;#222;", then it is easier to conceptualize the multiplier "m" as creating the proper unit "m&amp;#222;", and not the forbidden unit "mkg".</xs:documentation>
       </xs:annotation>
       <xs:restriction base="xs:string">
-         <xs:enumeration value="UnitMultiplier.k">
-            <xs:annotation/>
+         <xs:enumeration value="k">
+            <xs:annotation>
+               <xs:documentation>Kilo 10**3.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
       </xs:restriction>
    </xs:simpleType>
@@ -242,8 +244,10 @@
          <xs:documentation>The integer values are used for harmonization with IEC 61850.</xs:documentation>
       </xs:annotation>
       <xs:restriction base="xs:string">
-         <xs:enumeration value="UnitSymbol.W">
-            <xs:annotation/>
+         <xs:enumeration value="W">
+            <xs:annotation>
+               <xs:documentation>Real power in watts (J/s). Electrical power may have real and reactive components. The real portion of electrical power (I^2*R or V*I*cos(phi)), is expressed in Watts. See also apparent power and reactive power.</xs:documentation>
+            </xs:annotation>
          </xs:enumeration>
       </xs:restriction>
    </xs:simpleType>
