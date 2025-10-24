@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:m="https://ucaiug.org/2023/MarketDER#"
+           xmlns:sawsdl="http://www.w3.org/ns/sawsdl"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="https://ucaiug.org/2023/MarketDER#"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+   <xs:annotation>
+      <xs:documentation xml:lang="en">
+	Copyright 2025 UCAIug
+
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+
+	https://www.apache.org/licenses/LICENSE-2.0
+
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	
+	See the License for the specific language governing permissions and
+	limitations under the License.
+</xs:documentation>
+   </xs:annotation>
+   <xs:annotation>
+      <xs:documentation>V1.2: 2024 Updates to ResourceCertification (removed qualificationFlag, added isCertified); ResourceRegistrationStatus enum value changed from InActive to Inactive</xs:documentation>
+      <xs:documentation>V1.1: 2024 Generation with latest UML</xs:documentation>
+      <xs:documentation>V1: 2023 Initial Creation</xs:documentation>
+   </xs:annotation>
+   <xs:element name="MarketDER" type="m:MarketDER"/>
+   <xs:complexType name="MarketDER">
+      <xs:sequence>
+         <xs:element name="RegisteredDistributedResource"
+                     type="m:RegisteredDistributedResource"
+                     minOccurs="1"
+                     maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="IdentifiedObject"
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#IdentifiedObject">
+      <xs:annotation>
+         <xs:documentation>This is a class that provides common identification for all classes needing identification and naming attributes.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="mRID"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     type="xs:string"
+                     sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#IdentifiedObject.mRID">
+            <xs:annotation>
+               <xs:documentation>Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in IETF RFC 4122, for the mRID. The use of UUID is strongly recommended.</xs:documentation>
+               <xs:documentation>For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="name"
+                     minOccurs="0"
+                     maxOccurs="1"
+                     type="xs:string"
+                     sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#IdentifiedObject.name">
+            <xs:annotation>
+               <xs:documentation>The name is any free human readable and possibly non unique text naming the object.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="IndividualPnode"
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#IndividualPnode">
+      <xs:annotation>
+         <xs:documentation>Individual pricing node based on Pnode.</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="m:IdentifiedObject">
+            <xs:sequence/>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="RegisteredDistributedResource"
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#RegisteredDistributedResource">
+      <xs:annotation>
+         <xs:documentation>A registered resource that represents a distributed energy resource, such as a micro-generator, fuel cell, photo-voltaic energy source, etc.</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="m:RegisteredResource">
+            <xs:sequence>
+               <xs:element name="distributedResourceType"
+                           minOccurs="1"
+                           maxOccurs="1"
+                           type="xs:string"
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#RegisteredDistributedResource.distributedResourceType">
+                  <xs:annotation>
+                     <xs:documentation>The type of resource. Examples include: fuel cell, flywheel, photovoltaic, micro-turbine, CHP (combined heat power), V2G (vehicle to grid), DES (distributed energy storage), and others.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="RegisteredResource"
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#RegisteredResource">
+      <xs:annotation>
+         <xs:documentation>A resource that is registered through the market participant registration system. Examples include generating unit, load, and non-physical generator or load.</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="m:IdentifiedObject">
+            <xs:sequence>
+               <xs:element name="isAggregatedRes"
+                           minOccurs="1"
+                           maxOccurs="1"
+                           type="m:YesNo"
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#RegisteredResource.isAggregatedRes">
+                  <xs:annotation>
+                     <xs:documentation>A flag to indicate if a resource is an aggregated resource.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="registrationStatus"
+                           minOccurs="1"
+                           maxOccurs="1"
+                           type="m:ResourceRegistrationStatus"
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#RegisteredResource.registrationStatus">
+                  <xs:annotation>
+                     <xs:documentation>Current state of the resource registration which describes the lifecycle from initial design through to eventual decommissioning.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="Pnode"
+                           minOccurs="1"
+                           maxOccurs="1"
+                           type="m:IndividualPnode"
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#RegisteredResource.Pnode">
+                  <xs:annotation>
+                     <xs:documentation>A registered resource injects power at one or more connectivity nodes related to a pnode</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="ResourceCapacity"
+                           minOccurs="1"
+                           maxOccurs="unbounded"
+                           type="m:ResourceCapacity"
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#RegisteredResource.ResourceCapacity">
+                  <xs:annotation/>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="ResourceCapacity"
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ResourceCapacity">
+      <xs:annotation>
+         <xs:documentation>This class model the various capacities of a resource. A resource may have numbers of capacities related to operating, ancillary services, energy trade and so forth. Capacities may be defined for active power or reactive power.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="maximumCapacity"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     type="xs:decimal"
+                     sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ResourceCapacity.maximumCapacity">
+            <xs:annotation>
+               <xs:documentation>maximum capacity</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="minimumCapacity"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     type="xs:decimal"
+                     sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ResourceCapacity.minimumCapacity">
+            <xs:annotation>
+               <xs:documentation>minimum capacity</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="unitMultiplier"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     type="m:UnitMultiplier"
+                     sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ResourceCapacity.unitMultiplier">
+            <xs:annotation>
+               <xs:documentation>Unit Multiplier selection for the capacity values.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="unitSymbol"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     type="m:UnitSymbol"
+                     sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ResourceCapacity.unitSymbol">
+            <xs:annotation>
+               <xs:documentation>Unit selection for the capacity values.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:simpleType name="ResourceRegistrationStatus"
+                  sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ResourceRegistrationStatus">
+      <xs:annotation>
+         <xs:documentation>Types of resource registration status.</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="Active">
+            <xs:annotation>
+               <xs:documentation>Resource registration is active</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="Decommissioned">
+            <xs:annotation>
+               <xs:documentation>Resource registration status is decommissioned</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="Inactive">
+            <xs:annotation>
+               <xs:documentation>Resource registration status is inactive.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="Mothballed">
+            <xs:annotation>
+               <xs:documentation>Resource registration has been suspended</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="Planned">
+            <xs:annotation>
+               <xs:documentation>Registration status is in the planning stage</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="UnitMultiplier"
+                  sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#UnitMultiplier">
+      <xs:annotation>
+         <xs:documentation>The unit multipliers defined for the CIM. When applied to unit symbols, the unit symbol is treated as a derived unit. Regardless of the contents of the unit symbol text, the unit symbol shall be treated as if it were a single-character unit symbol. Unit symbols should not contain multipliers, and it should be left to the multiplier to define the multiple for an entire data type.</xs:documentation>
+         <xs:documentation>For example, if a unit symbol is "m2Pers" and the multiplier is "k", then the value is k(m**2/s), and the multiplier applies to the entire final value, not to any individual part of the value. This can be conceptualized by substituting a derived unit symbol for the unit type. If one imagines that the symbol "&amp;#222;" represents the derived unit "m2Pers", then applying the multiplier "k" can be conceptualized simply as "k&amp;#222;".</xs:documentation>
+         <xs:documentation>For example, the SI unit for mass is "kg" and not "g".  If the unit symbol is defined as "kg", then the multiplier is applied to "kg" as a whole and does not replace the "k" in front of the "g". In this case, the multiplier of "m" would be used with the unit symbol of "kg" to represent one gram.  As a text string, this violates the instructions in IEC 80000-1. However, because the unit symbol in CIM is treated as a derived unit instead of as an SI unit, it makes more sense to conceptualize the "kg" as if it were replaced by one of the proposed replacements for the SI mass symbol. If one imagines that the "kg" were replaced by a symbol "&amp;#222;", then it is easier to conceptualize the multiplier "m" as creating the proper unit "m&amp;#222;", and not the forbidden unit "mkg".</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="k">
+            <xs:annotation>
+               <xs:documentation>Kilo 10**3.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="UnitSymbol"
+                  sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#UnitSymbol">
+      <xs:annotation>
+         <xs:documentation>The derived units defined for usage in the CIM. In some cases, the derived unit is equal to an SI unit. Whenever possible, the standard derived symbol is used instead of the formula for the derived unit. For example, the unit symbol Farad is defined as "F" instead of "CPerV". In cases where a standard symbol does not exist for a derived unit, the formula for the unit is used as the unit symbol. For example, density does not have a standard symbol and so it is represented as "kgPerm^3". With the exception of the "kg", which is an SI unit, the unit symbols do not contain multipliers and therefore represent the base derived unit to which a multiplier can be applied as a whole.</xs:documentation>
+         <xs:documentation>Every unit symbol is treated as an unparseable text as if it were a single-letter symbol. The meaning of each unit symbol is defined by the accompanying descriptive text and not by the text contents of the unit symbol.</xs:documentation>
+         <xs:documentation>To allow the widest possible range of serializations without requiring special character handling, several substitutions are made which deviate from the format described in IEC 80000-1. The division symbol "/" is replaced by the letters "Per". Exponents are written in plain text after the unit as "m^3". The letters "deg" are used instead of the degree symbol. Any clarification of the meaning for a substitution is included in the description for the unit symbol.</xs:documentation>
+         <xs:documentation>Non-SI units are included in list of unit symbols to allow sources of data to be correctly labelled with their non-SI units (for example, a GPS sensor that is reporting numbers that represent feet instead of meters). This allows software to use the unit symbol information correctly convert and scale the raw data of those sources into SI-based units.</xs:documentation>
+         <xs:documentation>The integer values are used for harmonization with IEC 61850.</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="W">
+            <xs:annotation>
+               <xs:documentation>Real power in watts (J/s). Electrical power may have real and reactive components. The real portion of electrical power (I^2*R or V*I*cos(phi)), is expressed in Watts. See also apparent power and reactive power.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="YesNo"
+                  sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#YesNo">
+      <xs:annotation>
+         <xs:documentation>Used as a flag set to Yes or No.</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="NO">
+            <xs:annotation/>
+         </xs:enumeration>
+         <xs:enumeration value="YES">
+            <xs:annotation/>
+         </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+</xs:schema>

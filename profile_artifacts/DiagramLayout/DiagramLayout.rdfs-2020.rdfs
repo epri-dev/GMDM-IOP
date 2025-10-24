@@ -24,7 +24,7 @@
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
          xmlns:uml="http://iec.ch/TC57/NonStandard/UML#"
          xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-         xml:base="http://cim.ucaiug.io/ns">
+         xml:base="http://cim.ucaiug.io/CIM101/draft">
    <rdf:Description rdf:about="#AngleDegrees">
       <cims:belongsToCategory rdf:resource="#Package_Domain"/>
       <cims:stereotype>CIMDatatype</cims:stereotype>
