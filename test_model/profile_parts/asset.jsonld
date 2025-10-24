@@ -1104,6 +1104,7 @@
                 "@id": "37575d94-902e-4fd1-91c7-fae9600a0362",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "120.0",
             "cim:IdentifiedObject.name": "ct250_3"
         },
         {
@@ -1121,6 +1122,7 @@
                 "@id": "10d2f024-080a-490f-a9a8-572c0e12901f",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "120.0",
             "cim:IdentifiedObject.name": "ct10_3"
         },
         {
@@ -1138,6 +1140,7 @@
                 "@id": "7ff0d07b-a187-420e-a999-4534c7235c3f",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "7200.0",
             "cim:IdentifiedObject.name": "cimxfmrcode_vreg3_b_1"
         },
         {
@@ -1155,6 +1158,7 @@
                 "@id": "ec9403da-f835-465f-883a-88b903f23c47",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "7200.0",
             "cim:IdentifiedObject.name": "ct75_1"
         },
         {
@@ -1172,6 +1176,7 @@
                 "@id": "5c73cd2b-b5b5-40be-b577-af25f87d3f66",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "120.0",
             "cim:IdentifiedObject.name": "ct37_3"
         },
         {
@@ -1189,6 +1194,7 @@
                 "@id": "6f6e23e6-6a86-4745-8b95-e9365222498f",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "7200.0",
             "cim:IdentifiedObject.name": "cimxfmrcode_vreg2_c_1"
         },
         {
@@ -1206,6 +1212,7 @@
                 "@id": "6f6e23e6-6a86-4745-8b95-e9365222498f",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "7200.0",
             "cim:IdentifiedObject.name": "cimxfmrcode_vreg2_c_2"
         },
         {
@@ -1223,6 +1230,7 @@
                 "@id": "f95dc446-5465-4e95-a219-17232d6d0c45",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "7200.0",
             "cim:IdentifiedObject.name": "cimxfmrcode_vreg3_c_2"
         },
         {
@@ -1240,6 +1248,7 @@
                 "@id": "ec9403da-f835-465f-883a-88b903f23c47",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "120.0",
             "cim:IdentifiedObject.name": "ct75_2"
         },
         {
@@ -1257,6 +1266,7 @@
                 "@id": "fba45fbc-8f91-4386-a40b-297f1ec5cdab",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "120.0",
             "cim:IdentifiedObject.name": "ct5_3"
         },
         {
@@ -1274,6 +1284,7 @@
                 "@id": "a32a1d19-3b6f-43a7-a924-927afe3780ab",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "7200.0",
             "cim:IdentifiedObject.name": "cimxfmrcode_vreg2_a_1"
         },
         {
@@ -1291,6 +1302,7 @@
                 "@id": "38702957-887f-4b23-8fa4-f89c34fd53f3",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "7200.0",
             "cim:IdentifiedObject.name": "cimxfmrcode_vreg4_c_1"
         },
         {
@@ -1308,6 +1320,7 @@
                 "@id": "7ff0d07b-a187-420e-a999-4534c7235c3f",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "7200.0",
             "cim:IdentifiedObject.name": "cimxfmrcode_vreg3_b_2"
         },
         {
@@ -1325,6 +1338,7 @@
                 "@id": "6c8c8ed7-142e-4a4d-bec5-d729237b2af7",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "120.0",
             "cim:IdentifiedObject.name": "ct15_2"
         },
         {
@@ -1342,6 +1356,7 @@
                 "@id": "97f0efc3-840f-4721-b7fb-9f4619252422",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "7200.0",
             "cim:IdentifiedObject.name": "cimxfmrcode_vreg4_b_2"
         },
         {
@@ -1359,6 +1374,7 @@
                 "@id": "2ed9ffb7-c9cc-4512-9b72-8a84a91e74ec",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "7200.0",
             "cim:IdentifiedObject.name": "ct50_1"
         },
         {
@@ -1376,6 +1392,7 @@
                 "@id": "6b95b655-62df-42a2-9d02-090ac9eccfac",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "7200.0",
             "cim:IdentifiedObject.name": "feeder_reg_2"
         },
         {
@@ -1393,6 +1410,7 @@
                 "@id": "fba45fbc-8f91-4386-a40b-297f1ec5cdab",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "120.0",
             "cim:IdentifiedObject.name": "ct5_2"
         },
         {
@@ -1410,6 +1428,7 @@
                 "@id": "2ed9ffb7-c9cc-4512-9b72-8a84a91e74ec",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "120.0",
             "cim:IdentifiedObject.name": "ct50_2"
         },
         {
@@ -1427,6 +1446,7 @@
                 "@id": "fd796cf0-fae3-48c4-a6c2-b13aabd06a5c",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "7200.0",
             "cim:IdentifiedObject.name": "cimxfmrcode_vreg2_b_1"
         },
         {
@@ -1444,6 +1464,7 @@
                 "@id": "6c8c8ed7-142e-4a4d-bec5-d729237b2af7",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "7200.0",
             "cim:IdentifiedObject.name": "ct15_1"
         },
         {
@@ -1461,6 +1482,7 @@
                 "@id": "ceff1871-3271-4745-980b-2ec2f8dbbf7b",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "120.0",
             "cim:IdentifiedObject.name": "ct100_2"
         },
         {
@@ -1478,6 +1500,7 @@
                 "@id": "89813c1d-cc96-46ba-bf96-eac689bb1d81",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "7200.0",
             "cim:IdentifiedObject.name": "cimxfmrcode_vreg3_a_1"
         },
         {
@@ -1495,6 +1518,7 @@
                 "@id": "ec9403da-f835-465f-883a-88b903f23c47",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "120.0",
             "cim:IdentifiedObject.name": "ct75_3"
         },
         {
@@ -1512,6 +1536,7 @@
                 "@id": "ceff1871-3271-4745-980b-2ec2f8dbbf7b",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "7200.0",
             "cim:IdentifiedObject.name": "ct100_1"
         },
         {
@@ -1529,6 +1554,7 @@
                 "@id": "37575d94-902e-4fd1-91c7-fae9600a0362",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "7200.0",
             "cim:IdentifiedObject.name": "ct250_1"
         },
         {
@@ -1546,6 +1572,7 @@
                 "@id": "cc5d98d4-ec04-435e-8ece-a7feedc5c26c",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "7200.0",
             "cim:IdentifiedObject.name": "ct25_1"
         },
         {
@@ -1563,6 +1590,7 @@
                 "@id": "cc5d98d4-ec04-435e-8ece-a7feedc5c26c",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "120.0",
             "cim:IdentifiedObject.name": "ct25_2"
         },
         {
@@ -1580,6 +1608,7 @@
                 "@id": "89813c1d-cc96-46ba-bf96-eac689bb1d81",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "7200.0",
             "cim:IdentifiedObject.name": "cimxfmrcode_vreg3_a_2"
         },
         {
@@ -1597,6 +1626,7 @@
                 "@id": "f95dc446-5465-4e95-a219-17232d6d0c45",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "7200.0",
             "cim:IdentifiedObject.name": "cimxfmrcode_vreg3_c_1"
         },
         {
@@ -1614,6 +1644,7 @@
                 "@id": "5c73cd2b-b5b5-40be-b577-af25f87d3f66",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "120.0",
             "cim:IdentifiedObject.name": "ct37_2"
         },
         {
@@ -1631,6 +1662,7 @@
                 "@id": "97f0efc3-840f-4721-b7fb-9f4619252422",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "7200.0",
             "cim:IdentifiedObject.name": "cimxfmrcode_vreg4_b_1"
         },
         {
@@ -1648,6 +1680,7 @@
                 "@id": "10d2f024-080a-490f-a9a8-572c0e12901f",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "120.0",
             "cim:IdentifiedObject.name": "ct10_2"
         },
         {
@@ -1665,6 +1698,7 @@
                 "@id": "2ed9ffb7-c9cc-4512-9b72-8a84a91e74ec",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "120.0",
             "cim:IdentifiedObject.name": "ct50_3"
         },
         {
@@ -1682,6 +1716,7 @@
                 "@id": "6b95b655-62df-42a2-9d02-090ac9eccfac",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "7200.0",
             "cim:IdentifiedObject.name": "feeder_reg_1"
         },
         {
@@ -1699,6 +1734,7 @@
                 "@id": "5c73cd2b-b5b5-40be-b577-af25f87d3f66",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "7200.0",
             "cim:IdentifiedObject.name": "ct37_1"
         },
         {
@@ -1716,6 +1752,7 @@
                 "@id": "fd796cf0-fae3-48c4-a6c2-b13aabd06a5c",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "7200.0",
             "cim:IdentifiedObject.name": "cimxfmrcode_vreg2_b_2"
         },
         {
@@ -1733,6 +1770,7 @@
                 "@id": "10d2f024-080a-490f-a9a8-572c0e12901f",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "7200.0",
             "cim:IdentifiedObject.name": "ct10_1"
         },
         {
@@ -1750,6 +1788,7 @@
                 "@id": "ceff1871-3271-4745-980b-2ec2f8dbbf7b",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "120.0",
             "cim:IdentifiedObject.name": "ct100_3"
         },
         {
@@ -1767,6 +1806,7 @@
                 "@id": "13d908c5-371b-43bf-b715-d5e6c4c18e66",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "7200.0",
             "cim:IdentifiedObject.name": "cimxfmrcode_vreg4_a_1"
         },
         {
@@ -1784,6 +1824,7 @@
                 "@id": "37575d94-902e-4fd1-91c7-fae9600a0362",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "120.0",
             "cim:IdentifiedObject.name": "ct250_2"
         },
         {
@@ -1801,6 +1842,7 @@
                 "@id": "cc5d98d4-ec04-435e-8ece-a7feedc5c26c",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "120.0",
             "cim:IdentifiedObject.name": "ct25_3"
         },
         {
@@ -1818,6 +1860,7 @@
                 "@id": "fba45fbc-8f91-4386-a40b-297f1ec5cdab",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "7200.0",
             "cim:IdentifiedObject.name": "ct5_1"
         },
         {
@@ -1835,6 +1878,7 @@
                 "@id": "13d908c5-371b-43bf-b715-d5e6c4c18e66",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "7200.0",
             "cim:IdentifiedObject.name": "cimxfmrcode_vreg4_a_2"
         },
         {
@@ -1852,6 +1896,7 @@
                 "@id": "38702957-887f-4b23-8fa4-f89c34fd53f3",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "7200.0",
             "cim:IdentifiedObject.name": "cimxfmrcode_vreg4_c_2"
         },
         {
@@ -1869,6 +1914,7 @@
                 "@id": "6c8c8ed7-142e-4a4d-bec5-d729237b2af7",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "120.0",
             "cim:IdentifiedObject.name": "ct15_3"
         },
         {
@@ -1886,6 +1932,7 @@
                 "@id": "a32a1d19-3b6f-43a7-a924-927afe3780ab",
                 "@type": "TransformerTankInfo"
             },
+            "cim:ConductingAssetInfo.ratedVoltage": "7200.0",
             "cim:IdentifiedObject.name": "cimxfmrcode_vreg2_a_2"
         },
         {

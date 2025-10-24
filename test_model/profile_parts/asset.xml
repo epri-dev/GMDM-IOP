@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- un-comment this line to enable validation
 -->
-<rdf:RDF xmlns:cim="http://cim.ucaiug.io/CIM101/draft#" xmlns:eu="http://iec.ch/TC57/CIM100-European#" xmlns:nc="http://entsoe.eu/ns/nc#" xmlns:gb="http://GB/placeholder/ext#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:gmdm="http://epri.com/gmdm/2025#">
+<rdf:RDF xmlns:cim="http://cim.ucaiug.io/CIM101/draft#"  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:gmdm="http://epri.com/gmdm/2025#">
 <!--
 -->
 <cim:NoLoadTest rdf:about="urn:uuid:0223ede8-3847-455e-ade1-a77ab64e2999">
@@ -760,6 +760,7 @@
   <cim:TransformerEndInfo.ratedS>250000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>275000.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:37575d94-902e-4fd1-91c7-fae9600a0362"/>
+  <cim:ConductingAssetInfo.ratedVoltage>120.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>ct250_3</cim:IdentifiedObject.name>
   <cim:Identity.identifier>0130fb1a-9ba7-43d0-8f11-5698b0092449</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -773,6 +774,7 @@
   <cim:TransformerEndInfo.ratedS>10000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>11000.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:10d2f024-080a-490f-a9a8-572c0e12901f"/>
+  <cim:ConductingAssetInfo.ratedVoltage>120.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>ct10_3</cim:IdentifiedObject.name>
   <cim:Identity.identifier>0449d592-871b-4a24-b507-b10d090ff590</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -786,6 +788,7 @@
   <cim:TransformerEndInfo.ratedS>10000000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>11000000.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:7ff0d07b-a187-420e-a999-4534c7235c3f"/>
+  <cim:ConductingAssetInfo.ratedVoltage>7200.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>cimxfmrcode_vreg3_b_1</cim:IdentifiedObject.name>
   <cim:Identity.identifier>0529c7f8-dd8a-4f48-a42e-0b7a70f3b971</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -799,6 +802,7 @@
   <cim:TransformerEndInfo.ratedS>75000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>82500.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:ec9403da-f835-465f-883a-88b903f23c47"/>
+  <cim:ConductingAssetInfo.ratedVoltage>7200.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>ct75_1</cim:IdentifiedObject.name>
   <cim:Identity.identifier>07b581b1-0336-446b-8b81-131923f7ee55</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -812,6 +816,7 @@
   <cim:TransformerEndInfo.ratedS>37500.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>41250.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:5c73cd2b-b5b5-40be-b577-af25f87d3f66"/>
+  <cim:ConductingAssetInfo.ratedVoltage>120.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>ct37_3</cim:IdentifiedObject.name>
   <cim:Identity.identifier>0817b7bc-b188-4a7e-86e6-b9cf0b227bd2</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -825,6 +830,7 @@
   <cim:TransformerEndInfo.ratedS>10000000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>11000000.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:6f6e23e6-6a86-4745-8b95-e9365222498f"/>
+  <cim:ConductingAssetInfo.ratedVoltage>7200.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>cimxfmrcode_vreg2_c_1</cim:IdentifiedObject.name>
   <cim:Identity.identifier>090630ca-5dcc-48cf-9f77-501d28efaef2</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -838,6 +844,7 @@
   <cim:TransformerEndInfo.ratedS>10000000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>11000000.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:6f6e23e6-6a86-4745-8b95-e9365222498f"/>
+  <cim:ConductingAssetInfo.ratedVoltage>7200.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>cimxfmrcode_vreg2_c_2</cim:IdentifiedObject.name>
   <cim:Identity.identifier>16740ac4-11b9-44e1-a098-216208985ad7</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -851,6 +858,7 @@
   <cim:TransformerEndInfo.ratedS>10000000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>11000000.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:f95dc446-5465-4e95-a219-17232d6d0c45"/>
+  <cim:ConductingAssetInfo.ratedVoltage>7200.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>cimxfmrcode_vreg3_c_2</cim:IdentifiedObject.name>
   <cim:Identity.identifier>16e6006d-ffc2-47d7-9468-ef7a06125879</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -864,6 +872,7 @@
   <cim:TransformerEndInfo.ratedS>75000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>82500.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:ec9403da-f835-465f-883a-88b903f23c47"/>
+  <cim:ConductingAssetInfo.ratedVoltage>120.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>ct75_2</cim:IdentifiedObject.name>
   <cim:Identity.identifier>170a13de-0e67-4398-a392-6326b1bc4ff0</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -877,6 +886,7 @@
   <cim:TransformerEndInfo.ratedS>5000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>5500.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:fba45fbc-8f91-4386-a40b-297f1ec5cdab"/>
+  <cim:ConductingAssetInfo.ratedVoltage>120.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>ct5_3</cim:IdentifiedObject.name>
   <cim:Identity.identifier>1b190f8b-5016-4e60-b775-49d9ce1b3bdf</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -890,6 +900,7 @@
   <cim:TransformerEndInfo.ratedS>10000000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>11000000.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:a32a1d19-3b6f-43a7-a924-927afe3780ab"/>
+  <cim:ConductingAssetInfo.ratedVoltage>7200.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>cimxfmrcode_vreg2_a_1</cim:IdentifiedObject.name>
   <cim:Identity.identifier>22f1edaa-e7c4-4700-9ce7-a396918d507d</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -903,6 +914,7 @@
   <cim:TransformerEndInfo.ratedS>10000000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>11000000.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:38702957-887f-4b23-8fa4-f89c34fd53f3"/>
+  <cim:ConductingAssetInfo.ratedVoltage>7200.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>cimxfmrcode_vreg4_c_1</cim:IdentifiedObject.name>
   <cim:Identity.identifier>233703a7-d903-4656-aa7f-85c4aa0482d1</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -916,6 +928,7 @@
   <cim:TransformerEndInfo.ratedS>10000000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>11000000.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:7ff0d07b-a187-420e-a999-4534c7235c3f"/>
+  <cim:ConductingAssetInfo.ratedVoltage>7200.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>cimxfmrcode_vreg3_b_2</cim:IdentifiedObject.name>
   <cim:Identity.identifier>2c093522-eda0-4b6a-96db-0a002f832740</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -929,6 +942,7 @@
   <cim:TransformerEndInfo.ratedS>15000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>16500.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:6c8c8ed7-142e-4a4d-bec5-d729237b2af7"/>
+  <cim:ConductingAssetInfo.ratedVoltage>120.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>ct15_2</cim:IdentifiedObject.name>
   <cim:Identity.identifier>2c3bd549-a771-4eea-a215-83d8befb3c11</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -942,6 +956,7 @@
   <cim:TransformerEndInfo.ratedS>10000000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>11000000.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:97f0efc3-840f-4721-b7fb-9f4619252422"/>
+  <cim:ConductingAssetInfo.ratedVoltage>7200.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>cimxfmrcode_vreg4_b_2</cim:IdentifiedObject.name>
   <cim:Identity.identifier>2e2f1268-fcc6-4bc0-82a6-03b02950e613</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -955,6 +970,7 @@
   <cim:TransformerEndInfo.ratedS>50000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>55000.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:2ed9ffb7-c9cc-4512-9b72-8a84a91e74ec"/>
+  <cim:ConductingAssetInfo.ratedVoltage>7200.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>ct50_1</cim:IdentifiedObject.name>
   <cim:Identity.identifier>339e68f8-13f4-48d7-832e-1f67956baf11</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -968,6 +984,7 @@
   <cim:TransformerEndInfo.ratedS>7500000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>8250000.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:6b95b655-62df-42a2-9d02-090ac9eccfac"/>
+  <cim:ConductingAssetInfo.ratedVoltage>7200.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>feeder_reg_2</cim:IdentifiedObject.name>
   <cim:Identity.identifier>349af2ce-1bc7-491c-aeab-582929f0a5dd</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -981,6 +998,7 @@
   <cim:TransformerEndInfo.ratedS>5000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>5500.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:fba45fbc-8f91-4386-a40b-297f1ec5cdab"/>
+  <cim:ConductingAssetInfo.ratedVoltage>120.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>ct5_2</cim:IdentifiedObject.name>
   <cim:Identity.identifier>451f60ff-3d02-4b6a-99cc-c85e82c68850</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -994,6 +1012,7 @@
   <cim:TransformerEndInfo.ratedS>50000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>55000.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:2ed9ffb7-c9cc-4512-9b72-8a84a91e74ec"/>
+  <cim:ConductingAssetInfo.ratedVoltage>120.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>ct50_2</cim:IdentifiedObject.name>
   <cim:Identity.identifier>4b05c087-72f6-4a07-8fd7-156d7a5b2b89</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -1007,6 +1026,7 @@
   <cim:TransformerEndInfo.ratedS>10000000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>11000000.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:fd796cf0-fae3-48c4-a6c2-b13aabd06a5c"/>
+  <cim:ConductingAssetInfo.ratedVoltage>7200.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>cimxfmrcode_vreg2_b_1</cim:IdentifiedObject.name>
   <cim:Identity.identifier>52160ebc-974e-4afa-ad36-1f66761579fc</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -1020,6 +1040,7 @@
   <cim:TransformerEndInfo.ratedS>15000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>16500.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:6c8c8ed7-142e-4a4d-bec5-d729237b2af7"/>
+  <cim:ConductingAssetInfo.ratedVoltage>7200.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>ct15_1</cim:IdentifiedObject.name>
   <cim:Identity.identifier>5578d64c-2a00-44ca-95b0-d4b24d4b12f2</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -1033,6 +1054,7 @@
   <cim:TransformerEndInfo.ratedS>100000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>110000.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:ceff1871-3271-4745-980b-2ec2f8dbbf7b"/>
+  <cim:ConductingAssetInfo.ratedVoltage>120.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>ct100_2</cim:IdentifiedObject.name>
   <cim:Identity.identifier>57bd5b72-278d-447f-b1f7-09c6c461b25c</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -1046,6 +1068,7 @@
   <cim:TransformerEndInfo.ratedS>10000000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>11000000.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:89813c1d-cc96-46ba-bf96-eac689bb1d81"/>
+  <cim:ConductingAssetInfo.ratedVoltage>7200.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>cimxfmrcode_vreg3_a_1</cim:IdentifiedObject.name>
   <cim:Identity.identifier>5f1b827f-8f90-4bba-85db-91cd45a4f4bb</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -1059,6 +1082,7 @@
   <cim:TransformerEndInfo.ratedS>75000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>82500.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:ec9403da-f835-465f-883a-88b903f23c47"/>
+  <cim:ConductingAssetInfo.ratedVoltage>120.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>ct75_3</cim:IdentifiedObject.name>
   <cim:Identity.identifier>62e11b0c-c9f9-4191-a0b4-e29d309c2432</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -1072,6 +1096,7 @@
   <cim:TransformerEndInfo.ratedS>100000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>110000.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:ceff1871-3271-4745-980b-2ec2f8dbbf7b"/>
+  <cim:ConductingAssetInfo.ratedVoltage>7200.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>ct100_1</cim:IdentifiedObject.name>
   <cim:Identity.identifier>72828bf5-a138-4a75-a91c-85edfb7c0e42</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -1085,6 +1110,7 @@
   <cim:TransformerEndInfo.ratedS>250000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>275000.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:37575d94-902e-4fd1-91c7-fae9600a0362"/>
+  <cim:ConductingAssetInfo.ratedVoltage>7200.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>ct250_1</cim:IdentifiedObject.name>
   <cim:Identity.identifier>7e82d53a-4f04-4011-82d4-467753cac350</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -1098,6 +1124,7 @@
   <cim:TransformerEndInfo.ratedS>25000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>27500.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:cc5d98d4-ec04-435e-8ece-a7feedc5c26c"/>
+  <cim:ConductingAssetInfo.ratedVoltage>7200.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>ct25_1</cim:IdentifiedObject.name>
   <cim:Identity.identifier>82210b21-7b61-488c-a1ce-fd8666571509</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -1111,6 +1138,7 @@
   <cim:TransformerEndInfo.ratedS>25000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>27500.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:cc5d98d4-ec04-435e-8ece-a7feedc5c26c"/>
+  <cim:ConductingAssetInfo.ratedVoltage>120.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>ct25_2</cim:IdentifiedObject.name>
   <cim:Identity.identifier>8bce3c64-7a83-4062-8b64-e62b643c3945</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -1124,6 +1152,7 @@
   <cim:TransformerEndInfo.ratedS>10000000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>11000000.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:89813c1d-cc96-46ba-bf96-eac689bb1d81"/>
+  <cim:ConductingAssetInfo.ratedVoltage>7200.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>cimxfmrcode_vreg3_a_2</cim:IdentifiedObject.name>
   <cim:Identity.identifier>9007edf8-ebb1-4299-b477-45a5d7b72f99</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -1137,6 +1166,7 @@
   <cim:TransformerEndInfo.ratedS>10000000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>11000000.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:f95dc446-5465-4e95-a219-17232d6d0c45"/>
+  <cim:ConductingAssetInfo.ratedVoltage>7200.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>cimxfmrcode_vreg3_c_1</cim:IdentifiedObject.name>
   <cim:Identity.identifier>966238f8-a323-48d1-8a96-0b2f61da783e</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -1150,6 +1180,7 @@
   <cim:TransformerEndInfo.ratedS>37500.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>41250.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:5c73cd2b-b5b5-40be-b577-af25f87d3f66"/>
+  <cim:ConductingAssetInfo.ratedVoltage>120.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>ct37_2</cim:IdentifiedObject.name>
   <cim:Identity.identifier>aa28c74f-b3d0-41cf-82fb-2b6df027df12</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -1163,6 +1194,7 @@
   <cim:TransformerEndInfo.ratedS>10000000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>11000000.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:97f0efc3-840f-4721-b7fb-9f4619252422"/>
+  <cim:ConductingAssetInfo.ratedVoltage>7200.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>cimxfmrcode_vreg4_b_1</cim:IdentifiedObject.name>
   <cim:Identity.identifier>af588ce7-8d56-44a1-9581-a122b0aa5a7f</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -1176,6 +1208,7 @@
   <cim:TransformerEndInfo.ratedS>10000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>11000.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:10d2f024-080a-490f-a9a8-572c0e12901f"/>
+  <cim:ConductingAssetInfo.ratedVoltage>120.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>ct10_2</cim:IdentifiedObject.name>
   <cim:Identity.identifier>b55b8baf-546c-4600-bd87-c20437d84c6b</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -1189,6 +1222,7 @@
   <cim:TransformerEndInfo.ratedS>50000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>55000.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:2ed9ffb7-c9cc-4512-9b72-8a84a91e74ec"/>
+  <cim:ConductingAssetInfo.ratedVoltage>120.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>ct50_3</cim:IdentifiedObject.name>
   <cim:Identity.identifier>bcc2a7ea-247e-4442-afff-528aa0c01980</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -1202,6 +1236,7 @@
   <cim:TransformerEndInfo.ratedS>7500000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>8250000.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:6b95b655-62df-42a2-9d02-090ac9eccfac"/>
+  <cim:ConductingAssetInfo.ratedVoltage>7200.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>feeder_reg_1</cim:IdentifiedObject.name>
   <cim:Identity.identifier>bf363cd2-c655-43d1-b4ca-f8e28ee51316</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -1215,6 +1250,7 @@
   <cim:TransformerEndInfo.ratedS>37500.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>41250.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:5c73cd2b-b5b5-40be-b577-af25f87d3f66"/>
+  <cim:ConductingAssetInfo.ratedVoltage>7200.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>ct37_1</cim:IdentifiedObject.name>
   <cim:Identity.identifier>ce56e371-7f4a-4d25-b5cd-245241f8809b</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -1228,6 +1264,7 @@
   <cim:TransformerEndInfo.ratedS>10000000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>11000000.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:fd796cf0-fae3-48c4-a6c2-b13aabd06a5c"/>
+  <cim:ConductingAssetInfo.ratedVoltage>7200.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>cimxfmrcode_vreg2_b_2</cim:IdentifiedObject.name>
   <cim:Identity.identifier>ddc34d69-d32b-4744-a930-044ad005c0ef</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -1241,6 +1278,7 @@
   <cim:TransformerEndInfo.ratedS>10000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>11000.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:10d2f024-080a-490f-a9a8-572c0e12901f"/>
+  <cim:ConductingAssetInfo.ratedVoltage>7200.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>ct10_1</cim:IdentifiedObject.name>
   <cim:Identity.identifier>e02d8c9c-016b-4706-b819-bf3202126873</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -1254,6 +1292,7 @@
   <cim:TransformerEndInfo.ratedS>100000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>110000.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:ceff1871-3271-4745-980b-2ec2f8dbbf7b"/>
+  <cim:ConductingAssetInfo.ratedVoltage>120.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>ct100_3</cim:IdentifiedObject.name>
   <cim:Identity.identifier>e401b20f-cb63-49d2-a0a1-a28dba230c04</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -1267,6 +1306,7 @@
   <cim:TransformerEndInfo.ratedS>10000000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>11000000.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:13d908c5-371b-43bf-b715-d5e6c4c18e66"/>
+  <cim:ConductingAssetInfo.ratedVoltage>7200.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>cimxfmrcode_vreg4_a_1</cim:IdentifiedObject.name>
   <cim:Identity.identifier>e463ec4a-f882-4031-bda2-96379ac56974</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -1280,6 +1320,7 @@
   <cim:TransformerEndInfo.ratedS>250000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>275000.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:37575d94-902e-4fd1-91c7-fae9600a0362"/>
+  <cim:ConductingAssetInfo.ratedVoltage>120.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>ct250_2</cim:IdentifiedObject.name>
   <cim:Identity.identifier>e7236b08-52b2-4bbc-8f64-eaa1d4cdfed2</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -1293,6 +1334,7 @@
   <cim:TransformerEndInfo.ratedS>25000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>27500.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:cc5d98d4-ec04-435e-8ece-a7feedc5c26c"/>
+  <cim:ConductingAssetInfo.ratedVoltage>120.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>ct25_3</cim:IdentifiedObject.name>
   <cim:Identity.identifier>e8c99ca8-18a1-45e1-855e-90629c37cc26</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -1306,6 +1348,7 @@
   <cim:TransformerEndInfo.ratedS>5000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>5500.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:fba45fbc-8f91-4386-a40b-297f1ec5cdab"/>
+  <cim:ConductingAssetInfo.ratedVoltage>7200.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>ct5_1</cim:IdentifiedObject.name>
   <cim:Identity.identifier>ee7e423e-0d6b-4980-9e69-4b46abf9906e</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -1319,6 +1362,7 @@
   <cim:TransformerEndInfo.ratedS>10000000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>11000000.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:13d908c5-371b-43bf-b715-d5e6c4c18e66"/>
+  <cim:ConductingAssetInfo.ratedVoltage>7200.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>cimxfmrcode_vreg4_a_2</cim:IdentifiedObject.name>
   <cim:Identity.identifier>f0de0264-a02c-456e-97e9-386ff81e7041</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -1332,6 +1376,7 @@
   <cim:TransformerEndInfo.ratedS>10000000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>11000000.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:38702957-887f-4b23-8fa4-f89c34fd53f3"/>
+  <cim:ConductingAssetInfo.ratedVoltage>7200.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>cimxfmrcode_vreg4_c_2</cim:IdentifiedObject.name>
   <cim:Identity.identifier>f6d9213d-5e2e-4a32-a2f3-716c845a43ca</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -1345,6 +1390,7 @@
   <cim:TransformerEndInfo.ratedS>15000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>16500.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:6c8c8ed7-142e-4a4d-bec5-d729237b2af7"/>
+  <cim:ConductingAssetInfo.ratedVoltage>120.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>ct15_3</cim:IdentifiedObject.name>
   <cim:Identity.identifier>fb962d1f-e46d-434f-b0ba-cff03daaecec</cim:Identity.identifier>
 </cim:TransformerEndInfo>
@@ -1358,6 +1404,7 @@
   <cim:TransformerEndInfo.ratedS>10000000.0</cim:TransformerEndInfo.ratedS>
   <cim:TransformerEndInfo.shortTermS>11000000.0</cim:TransformerEndInfo.shortTermS>
   <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:a32a1d19-3b6f-43a7-a924-927afe3780ab"/>
+  <cim:ConductingAssetInfo.ratedVoltage>7200.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>cimxfmrcode_vreg2_a_2</cim:IdentifiedObject.name>
   <cim:Identity.identifier>fdcb10ea-d790-467b-8166-32c28869d7c4</cim:Identity.identifier>
 </cim:TransformerEndInfo>
