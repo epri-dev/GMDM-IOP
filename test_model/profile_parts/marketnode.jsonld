@@ -299,7 +299,7 @@
         {
             "@id": "urn:uuid:02b19842-93da-4323-b06c-5144eb98523b",
             "@type": "cim:ConnectivityNode",
-            "cim:IdentifiedObject.name": "regxfmr_hvmv69sub1_lsb1"
+            "cim:IdentifiedObject.name": "regxfmr_hvmv69s1_lsb1"
         },
         {
             "@id": "urn:uuid:02bda788-083e-4c7d-878d-2413e62e0acf",
@@ -2661,7 +2661,7 @@
         {
             "@id": "urn:uuid:15816cf9-d1a1-4ade-9920-5d4f059558a6",
             "@type": "cim:ConnectivityNode",
-            "cim:IdentifiedObject.name": "hvmv11sub3_lsb"
+            "cim:IdentifiedObject.name": "hvmv11s3_lsb"
         },
         {
             "@id": "urn:uuid:158eb10f-b873-4793-add4-a4a77116e9e4",
@@ -3919,7 +3919,7 @@
         {
             "@id": "urn:uuid:202035fd-cbea-4a6a-8b1a-9bc57f665671",
             "@type": "cim:ConnectivityNode",
-            "cim:IdentifiedObject.name": "hvmv11sub1_lsb"
+            "cim:IdentifiedObject.name": "hvmv11s1_lsb"
         },
         {
             "@id": "urn:uuid:20578b89-c222-4123-9621-57c058064f7a",
@@ -4485,7 +4485,7 @@
         {
             "@id": "urn:uuid:24763057-11ee-4ee2-8c9c-f55e99a440c6",
             "@type": "cim:ConnectivityNode",
-            "cim:IdentifiedObject.name": "regxfmr_hvmv11sub1_lsb"
+            "cim:IdentifiedObject.name": "regxfmr_hvmv11s1_lsb"
         },
         {
             "@id": "urn:uuid:247cb726-4d4f-491a-af2d-f23ef78800a6",
@@ -6761,7 +6761,7 @@
         {
             "@id": "urn:uuid:354fd89e-997a-414c-a159-c2b3e4d77523",
             "@type": "cim:ConnectivityNode",
-            "cim:IdentifiedObject.name": "regxfmr_hvmv11sub3_lsb"
+            "cim:IdentifiedObject.name": "regxfmr_hvmv11s3_lsb"
         },
         {
             "@id": "urn:uuid:3568f613-f0b2-43b3-9ab0-fa97c3091950",
@@ -7667,7 +7667,7 @@
         {
             "@id": "urn:uuid:3e3cf4cb-c66b-4be0-b621-b2c7e90bb0f2",
             "@type": "cim:ConnectivityNode",
-            "cim:IdentifiedObject.name": "hvmv69sub3_hsb"
+            "cim:IdentifiedObject.name": "hvmv69s3_hsb"
         },
         {
             "@id": "urn:uuid:3e414e68-81a7-40a5-9e57-ea804f58adf6",
@@ -7873,7 +7873,7 @@
         {
             "@id": "urn:uuid:40043952-5fc1-4eaf-8ced-c0df6ea31fa8",
             "@type": "cim:ConnectivityNode",
-            "cim:IdentifiedObject.name": "hvmv11sub2_lsb"
+            "cim:IdentifiedObject.name": "hvmv11s2_lsb"
         },
         {
             "@id": "urn:uuid:40092009-f11f-4337-beef-ba660d74b4c6",
@@ -16535,7 +16535,7 @@
         {
             "@id": "urn:uuid:86849d9c-e903-4799-9d7e-4b53155ac393",
             "@type": "cim:ConnectivityNode",
-            "cim:IdentifiedObject.name": "hvmv69sub2_hsb"
+            "cim:IdentifiedObject.name": "hvmv69s2_hsb"
         },
         {
             "@id": "urn:uuid:86b6e3bd-1066-4cf4-b6e7-f46eb8db733b",
@@ -21771,7 +21771,7 @@
         {
             "@id": "urn:uuid:b1c4748b-9559-483e-8526-6e7617aa1203",
             "@type": "cim:ConnectivityNode",
-            "cim:IdentifiedObject.name": "hvmv69sub2_lnb"
+            "cim:IdentifiedObject.name": "hvmv69s2_lnb"
         },
         {
             "@id": "urn:uuid:b1ceecaf-f812-42f3-a1c1-9439830d5072",
@@ -24330,7 +24330,7 @@
         {
             "@id": "urn:uuid:c58d9941-6286-449e-8d7c-d7ff67480eb4",
             "@type": "cim:ConnectivityNode",
-            "cim:IdentifiedObject.name": "hvmv69sub1_hsb"
+            "cim:IdentifiedObject.name": "hvmv69s1_hsb"
         },
         {
             "@id": "urn:uuid:c59b1d14-8bda-469a-9586-b14245dbbade",
@@ -24647,7 +24647,7 @@
         {
             "@id": "urn:uuid:c7c18436-3026-4d19-8f4c-d9f37e2b8696",
             "@type": "cim:ConnectivityNode",
-            "cim:IdentifiedObject.name": "hvmv69sub1_lsb2"
+            "cim:IdentifiedObject.name": "hvmv69s1_lsb2"
         },
         {
             "@id": "urn:uuid:c7e3543a-e088-47b1-9ac8-cc64c256a1c0",
@@ -28001,7 +28001,7 @@
         {
             "@id": "urn:uuid:e248602f-d454-45dc-b9ac-e902b0e0314d",
             "@type": "cim:ConnectivityNode",
-            "cim:IdentifiedObject.name": "regxfmr_hvmv11sub2_lsb"
+            "cim:IdentifiedObject.name": "regxfmr_hvmv11s2_lsb"
         },
         {
             "@id": "urn:uuid:e26104e9-1f13-4d48-bbd8-f77c7df4c627",
