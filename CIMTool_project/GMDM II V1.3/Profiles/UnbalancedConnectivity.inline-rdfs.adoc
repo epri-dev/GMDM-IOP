@@ -1454,7 +1454,7 @@ An AC electrical connection point to a piece of conducting equipment. Terminals 
 |===
 |name |mult |type |description
 |ConductingEquipment
-|0..1
+|1..1
 |<<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
 |
 The conducting equipment of the terminal. Conducting equipment have terminals that may be connected to other conducting equipment terminals via connectivity nodes or topological nodes.

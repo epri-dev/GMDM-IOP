@@ -1375,7 +1375,7 @@
          <xs:extension base="m:ACDCTerminal">
             <xs:sequence>
                <xs:element name="ConductingEquipment"
-                           minOccurs="0"
+                           minOccurs="1"
                            maxOccurs="1"
                            sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Terminal.ConductingEquipment">
                   <xs:annotation>

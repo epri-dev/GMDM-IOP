@@ -224,7 +224,7 @@ class Terminal(ACDCTerminal):
         default = None,
         metadata = {
             'type': 'ByReference',
-            'minOccurs': '0',
+            'minOccurs': '1',
             'maxOccurs': '1',
             'inverse': 'ConductingEquipment.Terminals'
         })

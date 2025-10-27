@@ -468,7 +468,7 @@ class Terminal   {
 }
 
 ACDCTerminal <|-- Terminal
-Terminal "+Terminals 0..*" --> "+ConductingEquipment 0..1" ConductingEquipment
+Terminal "+Terminals 0..*" --> "+ConductingEquipment 1" ConductingEquipment
 Terminal "+Terminals 0..*" --> "+ConnectivityNode 0..1" ConnectivityNode
 Terminal "+NormalHeadTerminal 0..*" --> "+NormalHeadFeeder 0..1" Feeder
 
