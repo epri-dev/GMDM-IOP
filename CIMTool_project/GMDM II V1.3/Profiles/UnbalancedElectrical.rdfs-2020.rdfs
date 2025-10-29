@@ -400,6 +400,16 @@ EnergyConsumer.pfixed, .qfixed, .pfixedPct and .qfixedPct have meaning only if t
       <rdfs:range rdf:resource="http://epri.com/gmdm/2025#PowerElectronicsThermalUnit"/>
    </rdf:Description>
    <rdf:Description rdf:about="#FossilFuel.ThermalGeneratingUnit">
+      <cims:AssociationUsed>Yes</cims:AssociationUsed>
+      <cims:inverseRoleName rdf:resource="#ThermalGeneratingUnit.FossilFuels"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..1"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A thermal generating unit may have one or more fossil fuels.</rdfs:comment>
+      <rdfs:domain rdf:resource="#FossilFuel"/>
+      <rdfs:label xml:lang="en">ThermalGeneratingUnit</rdfs:label>
+      <rdfs:range rdf:resource="#ThermalGeneratingUnit"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#FossilFuel.ThermalGeneratingUnit">
       <cims:AssociationUsed>No</cims:AssociationUsed>
       <cims:inverseRoleName rdf:resource="#ThermalGeneratingUnit.FossilFuels"/>
       <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
@@ -2336,6 +2346,16 @@ This attribute is not relevant for PhaseTapChangerAsymmetrical, PhaseTapChangerS
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A generating unit whose prime mover could be a steam turbine, combustion turbine, or diesel engine.</rdfs:comment>
       <rdfs:label xml:lang="en">ThermalGeneratingUnit</rdfs:label>
       <rdfs:subClassOf rdf:resource="#GeneratingUnit"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#ThermalGeneratingUnit.FossilFuels">
+      <cims:AssociationUsed>No</cims:AssociationUsed>
+      <cims:inverseRoleName rdf:resource="#FossilFuel.ThermalGeneratingUnit"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..n"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A thermal generating unit may have one or more fossil fuels.</rdfs:comment>
+      <rdfs:domain rdf:resource="#ThermalGeneratingUnit"/>
+      <rdfs:label xml:lang="en">FossilFuels</rdfs:label>
+      <rdfs:range rdf:resource="#FossilFuel"/>
    </rdf:Description>
    <rdf:Description rdf:about="#ThermalGeneratingUnit.FossilFuels">
       <cims:AssociationUsed>Yes</cims:AssociationUsed>

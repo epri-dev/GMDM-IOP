@@ -1361,6 +1361,7 @@ Allows designation of specific phases for transmission and distribution equipmen
    </rdf:Description>
    <rdf:Description rdf:about="#UsagePoint">
       <cims:belongsToCategory rdf:resource="#Package_Metering"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
       <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Logical or physical point in the network to which readings or events may be attributed. Used at the place where a physical or virtual meter may be located; however, it is not required that a meter be present.</rdfs:comment>
       <rdfs:label xml:lang="en">UsagePoint</rdfs:label>

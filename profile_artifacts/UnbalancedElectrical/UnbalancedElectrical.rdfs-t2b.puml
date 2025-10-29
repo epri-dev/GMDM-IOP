@@ -201,6 +201,7 @@ class FossilFuel   {
 }
 
 IdentifiedObject <|-- FossilFuel
+FossilFuel "+FossilFuels 0..*" --> "+ThermalGeneratingUnit 1" ThermalGeneratingUnit
 
 ' Enumeration FuelType
 enum FuelType <<ShadowExtension>><<gmdm>><<enumeration>><<Attribute>>  {

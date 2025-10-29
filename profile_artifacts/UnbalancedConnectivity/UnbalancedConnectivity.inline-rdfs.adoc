@@ -1613,6 +1613,52 @@ Transformer this winding belongs to.
 |===
 :!TransformerTankEnd:
 
+[[UnbalancedConnectivity-UsagePoint]]
+==== UsagePoint
+
+Inheritance path = <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
+
+:UsagePoint:
+Logical or physical point in the network to which readings or events may be attributed. Used at the place where a physical or virtual meter may be located; however, it is not required that a meter be present.
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|phaseCode (enumeration)
+|0..1
+|<<UnbalancedConnectivity-PhaseCode,PhaseCode>>
+|
+Phase code. Number of wires and specific nominal phases can be deduced from enumeration literal values. For example, ABCN is three-phase, four-wire, s12n (splitSecondary12N) is single-phase, three-wire, and s1n and s2n are single-phase, two-wire.
+
+|[extension]#Terminal (ShadowExtension, gmdm)#
+|1..1
+|<<UnbalancedConnectivity-Terminal,Terminal>>
+|
+|===
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|description
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<UnbalancedConnectivity-String,String>>
+|see <<UnbalancedConnectivity-Identity,Identity>>
+|===
+:!UsagePoint:
+
 [[UnbalancedConnectivity-VoltageLevel]]
 ==== VoltageLevel
 
@@ -2524,52 +2570,6 @@ Terminal of the power transformer to which this transformer end belongs.
 |see <<UnbalancedConnectivity-Identity,Identity>>
 |===
 :!TransformerEnd:
-
-[[UnbalancedConnectivity-UsagePoint]]
-==== UsagePoint
-
-Inheritance path = <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>> => <<UnbalancedConnectivity-Identity,Identity>>
-
-:UsagePoint:
-Logical or physical point in the network to which readings or events may be attributed. Used at the place where a physical or virtual meter may be located; however, it is not required that a meter be present.
-
-
-*Native Members*
-
-[%header,width="100%",cols="25%,^10%,20%,45%a"]
-|===
-|name |mult |type |description
-|phaseCode (enumeration)
-|0..1
-|<<UnbalancedConnectivity-PhaseCode,PhaseCode>>
-|
-Phase code. Number of wires and specific nominal phases can be deduced from enumeration literal values. For example, ABCN is three-phase, four-wire, s12n (splitSecondary12N) is single-phase, three-wire, and s1n and s2n are single-phase, two-wire.
-
-|[extension]#Terminal (ShadowExtension, gmdm)#
-|1..1
-|<<UnbalancedConnectivity-Terminal,Terminal>>
-|
-|===
-
-*Inherited Members*
-
-[%header,width="100%",cols="25%,^10%,20%,45%a"]
-|===
-|name |mult |type |description
-|description
-|0..1
-|<<UnbalancedConnectivity-String,String>>
-|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
-|name
-|0..1
-|<<UnbalancedConnectivity-String,String>>
-|see <<UnbalancedConnectivity-IdentifiedObject,IdentifiedObject>>
-|identifier
-|1..1
-|<<UnbalancedConnectivity-String,String>>
-|see <<UnbalancedConnectivity-Identity,Identity>>
-|===
-:!UsagePoint:
 
 
 === Enumerations

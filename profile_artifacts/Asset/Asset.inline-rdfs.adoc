@@ -97,6 +97,35 @@ Transformer end that current is applied to in this no-load test.
 |===
 :!NoLoadTest:
 
+[[Asset-PowerTransformerInfo]]
+==== PowerTransformerInfo
+
+Inheritance path = <<Asset-AssetInfo,AssetInfo>> => <<Asset-IdentifiedObject,IdentifiedObject>> => <<Asset-Identity,Identity>>
+
+:PowerTransformerInfo:
+Set of power transformer data, from an equipment library.
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|description
+|0..1
+|<<Asset-String,String>>
+|see <<Asset-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<Asset-String,String>>
+|see <<Asset-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<Asset-String,String>>
+|see <<Asset-Identity,Identity>>
+|===
+:!PowerTransformerInfo:
+
 [[Asset-ShortCircuitTest]]
 ==== ShortCircuitTest
 
@@ -335,6 +364,19 @@ Inheritance path = <<Asset-AssetInfo,AssetInfo>> => <<Asset-IdentifiedObject,Ide
 :TransformerTankInfo:
 Set of transformer tank data, from an equipment library.
 
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|PowerTransformerInfo
+|1..1
+|<<Asset-PowerTransformerInfo,PowerTransformerInfo>>
+|
+Power transformer data that this tank description is part of.
+
+|===
 
 *Inherited Members*
 

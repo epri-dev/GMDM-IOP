@@ -497,7 +497,7 @@ TransformerEnd <|-- TransformerTankEnd
 TransformerTankEnd "+TransformerTankEnds 0..*" --> "+TransformerTank 1" TransformerTank
 
 ' UsagePoint inherits from IdentifiedObject
-abstract class UsagePoint  <<abstract>> {
+class UsagePoint   {
    +phaseCode : PhaseCode [0..1]
 }
 

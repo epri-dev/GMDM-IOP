@@ -411,6 +411,11 @@
       rdfs:label "PowerSystemResource" ;
       rdfs:subClassOf <http://cim.ucaiug.io/CIM101/draft#PowerSystemResource> , :IdentifiedObject .
 
+:PowerTransformerInfo
+      a       owl:Class ;
+      rdfs:subClassOf :AssetInfo , <http://cim.ucaiug.io/CIM101/draft#PowerTransformerInfo> ;
+      uml:hasStereotype uml:concrete .
+
 :Resistance
       rdfs:label "Resistance" .
 
@@ -639,6 +644,27 @@
 :TransformerTankInfo
       a       owl:Class ;
       rdfs:subClassOf :AssetInfo , <http://cim.ucaiug.io/CIM101/draft#TransformerTankInfo> ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:minCardinality "1"^^xsd:int ;
+                owl:onProperty <http://cim.ucaiug.io/CIM101/draft#TransformerTankInfo.PowerTransformerInfo>
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       owl:Class ;
+                          rdfs:label "PowerTransformerInfo" ;
+                          rdfs:subClassOf <http://cim.ucaiug.io/CIM101/draft#PowerTransformerInfo> ;
+                          rdfs:subClassOf
+                                  [ a       owl:Restriction ;
+                                    owl:minCardinality "1"^^xsd:int ;
+                                    owl:onProperty <http://cim.ucaiug.io/CIM101/draft#PowerTransformerInfo.TransformerTankInfos>
+                                  ] ;
+                          uml:hasStereotype uml:byreference ;
+                          owl:unionOf (:PowerTransformerInfo)
+                        ] ;
+                owl:onProperty <http://cim.ucaiug.io/CIM101/draft#TransformerTankInfo.PowerTransformerInfo>
+              ] ;
       uml:hasStereotype uml:concrete .
 
 :TransformerTest

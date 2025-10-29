@@ -432,7 +432,20 @@
       </xs:annotation>
       <xs:complexContent>
          <xs:extension base="m:IdentifiedObject">
-            <xs:sequence/>
+            <xs:sequence>
+               <xs:element name="ThermalGeneratingUnit"
+                           minOccurs="1"
+                           maxOccurs="1"
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#FossilFuel.ThermalGeneratingUnit">
+                  <xs:annotation>
+                     <xs:documentation>A thermal generating unit may have one or more fossil fuels.</xs:documentation>
+                  </xs:annotation>
+                  <xs:complexType sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ThermalGeneratingUnit">
+                     <xs:attribute name="ref" type="xs:string" use="required"/>
+                     <xs:attribute name="referenceType" type="xs:string" use="optional"/>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>

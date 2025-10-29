@@ -31,6 +31,10 @@
                      type="m:NoLoadTest"
                      minOccurs="0"
                      maxOccurs="unbounded"/>
+         <xs:element name="PowerTransformerInfo"
+                     type="m:PowerTransformerInfo"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
          <xs:element name="ShortCircuitTest"
                      type="m:ShortCircuitTest"
                      minOccurs="0"
@@ -241,6 +245,17 @@
       </xs:annotation>
       <xs:complexContent>
          <xs:extension base="m:IdentifiedObject">
+            <xs:sequence/>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="PowerTransformerInfo"
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerTransformerInfo">
+      <xs:annotation>
+         <xs:documentation>Set of power transformer data, from an equipment library.</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="m:AssetInfo">
             <xs:sequence/>
          </xs:extension>
       </xs:complexContent>
@@ -460,7 +475,20 @@
       </xs:annotation>
       <xs:complexContent>
          <xs:extension base="m:AssetInfo">
-            <xs:sequence/>
+            <xs:sequence>
+               <xs:element name="PowerTransformerInfo"
+                           minOccurs="1"
+                           maxOccurs="1"
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TransformerTankInfo.PowerTransformerInfo">
+                  <xs:annotation>
+                     <xs:documentation>Power transformer data that this tank description is part of.</xs:documentation>
+                  </xs:annotation>
+                  <xs:complexType sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerTransformerInfo">
+                     <xs:attribute name="ref" type="xs:string" use="required"/>
+                     <xs:attribute name="referenceType" type="xs:string" use="optional"/>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>

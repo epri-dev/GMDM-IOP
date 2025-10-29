@@ -27,11 +27,6 @@
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
   xml:base="http://www.ucaiug.org/gmdm/connectivity/unbalanced" > 
-  <rdf:Description rdf:nodeID="Xd2X79b87534Xa3X19a27655ed8Xa3X-7fff">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
-    <owl:onProperty rdf:resource="http://cim.ucaiug.io/CIM101/draft#Terminal.ConductingEquipment"/>
-  </rdf:Description>
   <rdf:Description rdf:nodeID="X13Xbfa537bXa3X197ec86a7f3Xa3X-7995">
     <rdf:first rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.A"/>
     <rdf:rest rdf:nodeID="X13Xbfa537bXa3X197ec86a7f3Xa3X-7996"/>
@@ -1105,6 +1100,11 @@
     <rdfs:label>normalOpen</rdfs:label>
     <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X79b87534Xa3X19a27655ed8Xa3X-7fff">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/CIM101/draft#Terminal.ConductingEquipment"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://epri.com/gmdm#OrderedPhaseCodeKind.A">
     <rdfs:label>A</rdfs:label>
   </rdf:Description>
@@ -1823,10 +1823,10 @@
   <rdf:Description rdf:about="#Terminal">
     <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#concrete"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:nodeID="Xd2X79b87534Xa3X19a27655ed8Xa3X-7fff"/>
     <rdfs:subClassOf rdf:nodeID="Xd2X320f407eXa3X199ef2dfe20Xa3X-7fea"/>
     <rdfs:subClassOf rdf:nodeID="Xd2X320f407eXa3X199ef2dfe20Xa3X-7fed"/>
     <rdfs:subClassOf rdf:nodeID="Xd2X320f407eXa3X199ef2dfe20Xa3X-7ff0"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X79b87534Xa3X19a27655ed8Xa3X-7fff"/>
     <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/CIM101/draft#Terminal"/>
     <rdfs:subClassOf rdf:resource="#ACDCTerminal"/>
   </rdf:Description>
@@ -1860,6 +1860,7 @@
     <rdfs:subClassOf rdf:resource="#TransformerEnd"/>
   </rdf:Description>
   <rdf:Description rdf:about="#UsagePoint">
+    <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#concrete"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:subClassOf rdf:nodeID="Xd2X2b3d9349Xa3X19a0d4f1cf7Xa3X-6df8"/>
     <rdfs:subClassOf rdf:nodeID="Xd2X2b3d9349Xa3X19a0d4f1cf7Xa3X-6dfa"/>

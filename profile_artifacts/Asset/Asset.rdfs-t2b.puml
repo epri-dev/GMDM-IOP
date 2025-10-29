@@ -155,6 +155,12 @@ abstract class PowerSystemResource  <<abstract>> {
 
 IdentifiedObject <|-- PowerSystemResource
 
+' PowerTransformerInfo inherits from AssetInfo
+class PowerTransformerInfo   {
+}
+
+AssetInfo <|-- PowerTransformerInfo
+
 ' ShortCircuitTest inherits from TransformerTest
 class ShortCircuitTest   {
    +energisedEndStep : integer [0..1]
@@ -196,6 +202,7 @@ class TransformerTankInfo   {
 }
 
 AssetInfo <|-- TransformerTankInfo
+TransformerTankInfo "+TransformerTankInfos 1..*" --> "+PowerTransformerInfo 1" PowerTransformerInfo
 
 ' TransformerTest inherits from IdentifiedObject
 abstract class TransformerTest  <<abstract>> {

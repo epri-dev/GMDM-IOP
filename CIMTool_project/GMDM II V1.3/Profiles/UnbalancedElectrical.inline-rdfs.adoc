@@ -435,6 +435,19 @@ Inheritance path = <<UnbalancedElectrical-IdentifiedObject,IdentifiedObject>> =>
 The fossil fuel consumed by the non-nuclear thermal generating unit. For example, coal, oil, gas, etc. These are the specific fuels that the generating unit can consume.
 
 
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|ThermalGeneratingUnit
+|1..1
+|<<UnbalancedElectrical-ThermalGeneratingUnit,ThermalGeneratingUnit>>
+|
+A thermal generating unit may have one or more fossil fuels.
+
+|===
+
 *Inherited Members*
 
 [%header,width="100%",cols="25%,^10%,20%,45%a"]

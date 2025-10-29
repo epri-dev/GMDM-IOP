@@ -401,6 +401,24 @@ Currently, normative parts of the model support the needs of information exchang
       <rdfs:label xml:lang="en">PowerSystemResource</rdfs:label>
       <rdfs:subClassOf rdf:resource="#IdentifiedObject"/>
    </rdf:Description>
+   <rdf:Description rdf:about="#PowerTransformerInfo">
+      <cims:belongsToCategory rdf:resource="#Package_AssetInfo"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Set of power transformer data, from an equipment library.</rdfs:comment>
+      <rdfs:label xml:lang="en">PowerTransformerInfo</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#AssetInfo"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#PowerTransformerInfo.TransformerTankInfos">
+      <cims:AssociationUsed>No</cims:AssociationUsed>
+      <cims:inverseRoleName rdf:resource="#TransformerTankInfo.PowerTransformerInfo"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..n"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data for all the tanks described by this power transformer data.</rdfs:comment>
+      <rdfs:domain rdf:resource="#PowerTransformerInfo"/>
+      <rdfs:label xml:lang="en">TransformerTankInfos</rdfs:label>
+      <rdfs:range rdf:resource="#TransformerTankInfo"/>
+   </rdf:Description>
    <rdf:Description rdf:about="#Resistance">
       <cims:belongsToCategory rdf:resource="#Package_Domain"/>
       <cims:stereotype>CIMDatatype</cims:stereotype>
@@ -699,6 +717,16 @@ Currently, normative parts of the model support the needs of information exchang
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Set of transformer tank data, from an equipment library.</rdfs:comment>
       <rdfs:label xml:lang="en">TransformerTankInfo</rdfs:label>
       <rdfs:subClassOf rdf:resource="#AssetInfo"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#TransformerTankInfo.PowerTransformerInfo">
+      <cims:AssociationUsed>Yes</cims:AssociationUsed>
+      <cims:inverseRoleName rdf:resource="#PowerTransformerInfo.TransformerTankInfos"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..1"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Power transformer data that this tank description is part of.</rdfs:comment>
+      <rdfs:domain rdf:resource="#TransformerTankInfo"/>
+      <rdfs:label xml:lang="en">PowerTransformerInfo</rdfs:label>
+      <rdfs:range rdf:resource="#PowerTransformerInfo"/>
    </rdf:Description>
    <rdf:Description rdf:about="#TransformerTankInfo.TransformerEndInfos">
       <cims:AssociationUsed>No</cims:AssociationUsed>

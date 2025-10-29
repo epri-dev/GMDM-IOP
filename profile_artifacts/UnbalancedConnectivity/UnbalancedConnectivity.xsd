@@ -141,6 +141,10 @@
                      type="m:TransformerTankEnd"
                      minOccurs="0"
                      maxOccurs="unbounded"/>
+         <xs:element name="UsagePoint"
+                     type="m:UsagePoint"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
          <xs:element name="VoltageLevel"
                      type="m:VoltageLevel"
                      minOccurs="0"
