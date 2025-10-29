@@ -1,0 +1,241 @@
+{
+     "$comment": "Copyright 2025 UCAIug SPDX-License-Identifier: Apache-2.0",
+     "$id": "https://ucaiug.org/2023/MarketDER.schema.json",
+     "$schema": "http://json-schema.org/draft-07/schema#",
+     "title": "MarketDER",
+     "description": "V1.2: 2024 Updates to ResourceCertification (removed qualificationFlag, added isCertified); ResourceRegistrationStatus enum value changed from InActive to Inactive V1.1: 2024 Generation with latest UML V1: 2023 Initial Creation",
+     "namespace": "https://ucaiug.org/2023/MarketDER#",
+     "type": "object",
+     "additionalProperties": false,
+     "properties": {
+         "RegisteredDistributedResource": {
+             "type": "array",
+             "items": {
+                 "$ref": "#/definitions/RegisteredDistributedResource"
+             },
+             "minItems": 1
+         }
+     },
+     "required": [
+         "RegisteredDistributedResource"
+     ],
+     "definitions": {
+          "IdentifiedObject": {
+              "title": "IdentifiedObject",
+              "description": "This is a class that provides common identification for all classes needing identification and naming attributes.",
+              "modelReference": "http://cim.ucaiug.io/CIM101/draft#IdentifiedObject",
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in IETF RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://cim.ucaiug.io/CIM101/draft#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "name": {
+                      "description": "The name is any free human readable and possibly non unique text naming the object.",
+                      "modelReference": "http://cim.ucaiug.io/CIM101/draft#IdentifiedObject.name",
+                      "type": "string"
+                  }
+              },
+              "required": [
+                  "mRID"
+              ]
+          },
+          "IndividualPnode": {
+              "title": "IndividualPnode",
+              "description": "Individual pricing node based on Pnode.",
+              "modelReference": "http://cim.ucaiug.io/CIM101/draft#IndividualPnode",
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in IETF RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://cim.ucaiug.io/CIM101/draft#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "name": {
+                      "description": "The name is any free human readable and possibly non unique text naming the object.",
+                      "modelReference": "http://cim.ucaiug.io/CIM101/draft#IdentifiedObject.name",
+                      "type": "string"
+                  }
+              },
+              "required": [
+                  "mRID"
+              ]
+          },
+          "RegisteredDistributedResource": {
+              "title": "RegisteredDistributedResource",
+              "description": "A registered resource that represents a distributed energy resource, such as a micro-generator, fuel cell, photo-voltaic energy source, etc.",
+              "modelReference": "http://cim.ucaiug.io/CIM101/draft#RegisteredDistributedResource",
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in IETF RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://cim.ucaiug.io/CIM101/draft#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "name": {
+                      "description": "The name is any free human readable and possibly non unique text naming the object.",
+                      "modelReference": "http://cim.ucaiug.io/CIM101/draft#IdentifiedObject.name",
+                      "type": "string"
+                  },
+                  "isAggregatedRes": {
+                      "description": "A flag to indicate if a resource is an aggregated resource.",
+                      "modelReference": "http://cim.ucaiug.io/CIM101/draft#RegisteredResource.isAggregatedRes",
+                      "$ref": "#/definitions/YesNo"
+                  },
+                  "registrationStatus": {
+                      "description": "Current state of the resource registration which describes the lifecycle from initial design through to eventual decommissioning.",
+                      "modelReference": "http://cim.ucaiug.io/CIM101/draft#RegisteredResource.registrationStatus",
+                      "$ref": "#/definitions/ResourceRegistrationStatus"
+                  },
+                  "Pnode": {
+                      "description": "A registered resource injects power at one or more connectivity nodes related to a pnode",
+                      "modelReference": "http://cim.ucaiug.io/CIM101/draft#RegisteredResource.Pnode",
+                      "$ref": "#/definitions/IndividualPnode"
+                  },
+                  "ResourceCapacity": {
+                      "description": "",
+                      "modelReference": "http://cim.ucaiug.io/CIM101/draft#RegisteredResource.ResourceCapacity",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/ResourceCapacity"
+                      },
+                      "minItems": 1
+                  },
+                  "distributedResourceType": {
+                      "description": "The type of resource. Examples include: fuel cell, flywheel, photovoltaic, micro-turbine, CHP (combined heat power), V2G (vehicle to grid), DES (distributed energy storage), and others.",
+                      "modelReference": "http://cim.ucaiug.io/CIM101/draft#RegisteredDistributedResource.distributedResourceType",
+                      "type": "string"
+                  }
+              },
+              "required": [
+                  "mRID", "isAggregatedRes", "registrationStatus", "Pnode", "ResourceCapacity", "distributedResourceType"
+              ]
+          },
+          "RegisteredResource": {
+              "title": "RegisteredResource",
+              "description": "A resource that is registered through the market participant registration system. Examples include generating unit, load, and non-physical generator or load.",
+              "modelReference": "http://cim.ucaiug.io/CIM101/draft#RegisteredResource",
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                  "mRID": {
+                      "description": "Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID, as specified in IETF RFC 4122, for the mRID. The use of UUID is strongly recommended. For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.",
+                      "modelReference": "http://cim.ucaiug.io/CIM101/draft#IdentifiedObject.mRID",
+                      "type": "string"
+                  },
+                  "name": {
+                      "description": "The name is any free human readable and possibly non unique text naming the object.",
+                      "modelReference": "http://cim.ucaiug.io/CIM101/draft#IdentifiedObject.name",
+                      "type": "string"
+                  },
+                  "isAggregatedRes": {
+                      "description": "A flag to indicate if a resource is an aggregated resource.",
+                      "modelReference": "http://cim.ucaiug.io/CIM101/draft#RegisteredResource.isAggregatedRes",
+                      "$ref": "#/definitions/YesNo"
+                  },
+                  "registrationStatus": {
+                      "description": "Current state of the resource registration which describes the lifecycle from initial design through to eventual decommissioning.",
+                      "modelReference": "http://cim.ucaiug.io/CIM101/draft#RegisteredResource.registrationStatus",
+                      "$ref": "#/definitions/ResourceRegistrationStatus"
+                  },
+                  "Pnode": {
+                      "description": "A registered resource injects power at one or more connectivity nodes related to a pnode",
+                      "modelReference": "http://cim.ucaiug.io/CIM101/draft#RegisteredResource.Pnode",
+                      "$ref": "#/definitions/IndividualPnode"
+                  },
+                  "ResourceCapacity": {
+                      "description": "",
+                      "modelReference": "http://cim.ucaiug.io/CIM101/draft#RegisteredResource.ResourceCapacity",
+                      "type": "array",
+                      "items": {
+                          "$ref": "#/definitions/ResourceCapacity"
+                      },
+                      "minItems": 1
+                  }
+              },
+              "required": [
+                  "mRID", "isAggregatedRes", "registrationStatus", "Pnode", "ResourceCapacity"
+              ]
+          },
+          "ResourceCapacity": {
+              "title": "ResourceCapacity",
+              "description": "This class model the various capacities of a resource. A resource may have numbers of capacities related to operating, ancillary services, energy trade and so forth. Capacities may be defined for active power or reactive power.",
+              "modelReference": "http://cim.ucaiug.io/CIM101/draft#ResourceCapacity",
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                  "maximumCapacity": {
+                      "description": "maximum capacity",
+                      "modelReference": "http://cim.ucaiug.io/CIM101/draft#ResourceCapacity.maximumCapacity",
+                      "type": "number"
+                  },
+                  "minimumCapacity": {
+                      "description": "minimum capacity",
+                      "modelReference": "http://cim.ucaiug.io/CIM101/draft#ResourceCapacity.minimumCapacity",
+                      "type": "number"
+                  },
+                  "unitMultiplier": {
+                      "description": "Unit Multiplier selection for the capacity values.",
+                      "modelReference": "http://cim.ucaiug.io/CIM101/draft#ResourceCapacity.unitMultiplier",
+                      "$ref": "#/definitions/UnitMultiplier"
+                  },
+                  "unitSymbol": {
+                      "description": "Unit selection for the capacity values.",
+                      "modelReference": "http://cim.ucaiug.io/CIM101/draft#ResourceCapacity.unitSymbol",
+                      "$ref": "#/definitions/UnitSymbol"
+                  }
+              },
+              "required": [
+                  "maximumCapacity", "minimumCapacity", "unitMultiplier", "unitSymbol"
+              ]
+          },
+          "ResourceRegistrationStatus": {
+              "title": "ResourceRegistrationStatus",
+              "description": "Types of resource registration status.",
+              "modelReference": "http://cim.ucaiug.io/CIM101/draft#ResourceRegistrationStatus",
+              "type": "string",
+              "enum": [
+                  "Active",
+                  "Decommissioned",
+                  "Inactive",
+                  "Mothballed",
+                  "Planned"
+              ]
+          },
+          "UnitMultiplier": {
+              "title": "UnitMultiplier",
+              "description": "The unit multipliers defined for the CIM. When applied to unit symbols, the unit symbol is treated as a derived unit. Regardless of the contents of the unit symbol text, the unit symbol shall be treated as if it were a single-character unit symbol. Unit symbols should not contain multipliers, and it should be left to the multiplier to define the multiple for an entire data type. For example, if a unit symbol is m2Pers and the multiplier is k, then the value is k(m**2/s), and the multiplier applies to the entire final value, not to any individual part of the value. This can be conceptualized by substituting a derived unit symbol for the unit type. If one imagines that the symbol &#222; represents the derived unit m2Pers, then applying the multiplier k can be conceptualized simply as k&#222;. For example, the SI unit for mass is kg and not g. If the unit symbol is defined as kg, then the multiplier is applied to kg as a whole and does not replace the k in front of the g. In this case, the multiplier of m would be used with the unit symbol of kg to represent one gram. As a text string, this violates the instructions in IEC 80000-1. However, because the unit symbol in CIM is treated as a derived unit instead of as an SI unit, it makes more sense to conceptualize the kg as if it were replaced by one of the proposed replacements for the SI mass symbol. If one imagines that the kg were replaced by a symbol &#222;, then it is easier to conceptualize the multiplier m as creating the proper unit m&#222;, and not the forbidden unit mkg.",
+              "modelReference": "http://cim.ucaiug.io/CIM101/draft#UnitMultiplier",
+              "type": "string",
+              "enum": [
+                  "k"
+              ]
+          },
+          "UnitSymbol": {
+              "title": "UnitSymbol",
+              "description": "The derived units defined for usage in the CIM. In some cases, the derived unit is equal to an SI unit. Whenever possible, the standard derived symbol is used instead of the formula for the derived unit. For example, the unit symbol Farad is defined as F instead of CPerV. In cases where a standard symbol does not exist for a derived unit, the formula for the unit is used as the unit symbol. For example, density does not have a standard symbol and so it is represented as kgPerm^3. With the exception of the kg, which is an SI unit, the unit symbols do not contain multipliers and therefore represent the base derived unit to which a multiplier can be applied as a whole. Every unit symbol is treated as an unparseable text as if it were a single-letter symbol. The meaning of each unit symbol is defined by the accompanying descriptive text and not by the text contents of the unit symbol. To allow the widest possible range of serializations without requiring special character handling, several substitutions are made which deviate from the format described in IEC 80000-1. The division symbol / is replaced by the letters Per. Exponents are written in plain text after the unit as m^3. The letters deg are used instead of the degree symbol. Any clarification of the meaning for a substitution is included in the description for the unit symbol. Non-SI units are included in list of unit symbols to allow sources of data to be correctly labelled with their non-SI units (for example, a GPS sensor that is reporting numbers that represent feet instead of meters). This allows software to use the unit symbol information correctly convert and scale the raw data of those sources into SI-based units. The integer values are used for harmonization with IEC 61850.",
+              "modelReference": "http://cim.ucaiug.io/CIM101/draft#UnitSymbol",
+              "type": "string",
+              "enum": [
+                  "W"
+              ]
+          },
+          "YesNo": {
+              "title": "YesNo",
+              "description": "Used as a flag set to Yes or No.",
+              "modelReference": "http://cim.ucaiug.io/CIM101/draft#YesNo",
+              "type": "string",
+              "enum": [
+                  "NO",
+                  "YES"
+              ]
+          },
+          "MarketDER": {
+               "$ref": "#"
+          }
+     }
+}

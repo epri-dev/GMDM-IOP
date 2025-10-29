@@ -1,0 +1,173 @@
+@startuml
+top to bottom direction
+hide empty methods
+
+' Here we adjust the horizontal spacing for better spatial rendering (the PlantUML default is ~20)
+skinparam nodesep 20
+' Here we adjust the vertical spacing for better spatial rendering (the PlantUML default is ~30)
+skinparam ranksep 30
+
+skinparam BackgroundColor #FFFFFF
+skinparam shadowing false
+skinparam RoundCorner 5
+skinparam BorderColor #454645
+skinparam ArrowColor #454645
+skinparam FontColor #000000
+
+skinparam class {
+  ' Concrete classes style definition
+  BackgroundColor #FFFFE0
+  FontColor #000000
+  AttributeFontColor #000000
+  StereotypeFontColor #000000
+  HeaderFontColor #000000
+  BorderColor #454645
+  BorderThickness 1
+  
+  ' Abstract classes style definition
+  BackgroundColor<<abstract>> #D3D3D3
+  FontColor<<abstract>> #000000
+  AttributeFontColor<<abstract>> #000000
+  StereotypeFontColor<<abstract>> #000000
+  HeaderFontColor<<abstract>> #000000
+  BorderColor<<abstract>> #454645
+  BorderThickness<<abstract>> 1
+  
+  ' Enumerations style definition
+  BackgroundColor<<enumeration>> #90EE90
+  FontColor<<enumeration>> #000000
+  AttributeFontColor<<enumeration>> #000000
+  StereotypeFontColor<<enumeration>> #000000
+  HeaderFontColor <<enumeration>> #000000
+  BorderColor<<enumeration>> #454645
+  BorderThickness<<enumeration>> 1
+  
+  ' CIMDatatypes style definition
+  BackgroundColor<<CIMDatatype>> #FFEBCD
+  FontColor<<CIMDatatype>> #000000
+  AttributeFontColor<<CIMDatatype>> #000000
+  StereotypeFontColor<<CIMDatatype>> #000000
+  HeaderFontColor<<CIMDatatype>> #000000
+  BorderColor<<CIMDatatype>> #454645
+  BorderThickness<<CIMDatatype>> 1
+  
+  ' Compound classes style definition
+  BackgroundColor<<Compound>> #FFEBCD
+  FontColor<<Compound>> #000000
+  AttributeFontColor<<Compound>> #000000
+  StereotypeFontColor<<Compound>> #000000
+  HeaderFontColor<<Compound>> #000000
+  BorderColor<<Compound>> #454645
+  BorderThickness<<Compound>> 1
+  
+  ' Primitive classes style definition
+  BackgroundColor<<Primitive>> #E6E6FF
+  FontColor<<Primitive>> #000000
+  AttributeFontColor<<Primitive>> #000000
+  StereotypeFontColor<<Primitive>> #000000
+  HeaderFontColor<<Primitive>> #000000
+  BorderColor<<Primitive>> #454645
+  BorderThickness<<Primitive>> 1
+  
+  ' Errors classes style definition
+  BackgroundColor<<error>> #FFC0CB
+  FontColor<<error>> #000000
+  AttributeFontColor<<error>> #000000
+  StereotypeFontColor<<error>> #000000
+  HeaderFontColor<<error>> #000000
+  BorderColor<<error>> #454645
+  BorderThickness<<error>> 1
+}
+skinparam shadowing true
+
+hide <<abstract>> stereotype
+hide <<error>> stereotype
+
+
+skinparam note {
+  BorderColor #454645
+  BorderThickness 1.5
+  FontSize 14
+  Font Bold
+  FontColor #000000
+}
+' Add a note towards the upper left corner of the diagram
+note as MarketDERNote #lightyellow
+   Profile: MarketDER
+   Namespace: https://ucaiug.org/2023/MarketDER#
+   
+   Profile Notes:
+      V1.2: 2024 Updates to ResourceCertification (removed qualificationFlag, added isCertified);
+      ResourceRegistrationStatus enum value changed from InActive to Inactive
+      
+      V1.1: 2024 Generation with latest UML
+      
+      V1: 2023 Initial Creation
+      
+end note
+
+' IdentifiedObject
+abstract class IdentifiedObject  <<abstract>> {
+   +mRID : string [1]
+   +name : string [0..1]
+}
+
+
+' IndividualPnode inherits from IdentifiedObject
+abstract class IndividualPnode  <<abstract>> {
+}
+
+IdentifiedObject <|-- IndividualPnode
+
+' RegisteredDistributedResource inherits from RegisteredResource
+class RegisteredDistributedResource   {
+   +distributedResourceType : string [1]
+}
+
+RegisteredResource <|-- RegisteredDistributedResource
+
+' RegisteredResource inherits from IdentifiedObject
+abstract class RegisteredResource  <<abstract>> {
+   +isAggregatedRes : YesNo [1]
+   +registrationStatus : ResourceRegistrationStatus [1]
+}
+
+IdentifiedObject <|-- RegisteredResource
+RegisteredResource "+RegisteredResources 0..*" --> "+Pnode 1" IndividualPnode
+RegisteredResource "+RegisteredResource 0..*" --> "+ResourceCapacity 1..*" ResourceCapacity
+
+' ResourceCapacity
+abstract class ResourceCapacity  <<abstract>> {
+   +maximumCapacity : decimal [1]
+   +minimumCapacity : decimal [1]
+   +unitMultiplier : UnitMultiplier [1]
+   +unitSymbol : UnitSymbol [1]
+}
+
+
+' Enumeration ResourceRegistrationStatus
+enum ResourceRegistrationStatus <<enumeration>>  {
+   Active
+   Decommissioned
+   Inactive
+   Mothballed
+   Planned
+}
+
+' Enumeration UnitMultiplier
+enum UnitMultiplier <<enumeration>>  {
+   k
+}
+
+' Enumeration UnitSymbol
+enum UnitSymbol <<enumeration>>  {
+   W
+}
+
+' Enumeration YesNo
+enum YesNo <<enumeration>>  {
+   NO
+   YES
+}
+
+@enduml

@@ -1,0 +1,611 @@
+@startuml
+top to bottom direction
+hide empty methods
+
+' Here we adjust the horizontal spacing for better spatial rendering (the PlantUML default is ~20)
+skinparam nodesep 20
+' Here we adjust the vertical spacing for better spatial rendering (the PlantUML default is ~30)
+skinparam ranksep 30
+
+skinparam BackgroundColor #FFFFFF
+skinparam shadowing false
+skinparam RoundCorner 5
+skinparam BorderColor #454645
+skinparam ArrowColor #454645
+skinparam FontColor #000000
+
+skinparam class {
+  ' Concrete classes style definition
+  BackgroundColor #FFFFE0
+  FontColor #000000
+  AttributeFontColor #000000
+  StereotypeFontColor #000000
+  HeaderFontColor #000000
+  BorderColor #454645
+  BorderThickness 1
+  
+  ' Abstract classes style definition
+  BackgroundColor<<abstract>> #D3D3D3
+  FontColor<<abstract>> #000000
+  AttributeFontColor<<abstract>> #000000
+  StereotypeFontColor<<abstract>> #000000
+  HeaderFontColor<<abstract>> #000000
+  BorderColor<<abstract>> #454645
+  BorderThickness<<abstract>> 1
+  
+  ' Enumerations style definition
+  BackgroundColor<<enumeration>> #90EE90
+  FontColor<<enumeration>> #000000
+  AttributeFontColor<<enumeration>> #000000
+  StereotypeFontColor<<enumeration>> #000000
+  HeaderFontColor <<enumeration>> #000000
+  BorderColor<<enumeration>> #454645
+  BorderThickness<<enumeration>> 1
+  
+  ' CIMDatatypes style definition
+  BackgroundColor<<CIMDatatype>> #FFEBCD
+  FontColor<<CIMDatatype>> #000000
+  AttributeFontColor<<CIMDatatype>> #000000
+  StereotypeFontColor<<CIMDatatype>> #000000
+  HeaderFontColor<<CIMDatatype>> #000000
+  BorderColor<<CIMDatatype>> #454645
+  BorderThickness<<CIMDatatype>> 1
+  
+  ' Compound classes style definition
+  BackgroundColor<<Compound>> #FFEBCD
+  FontColor<<Compound>> #000000
+  AttributeFontColor<<Compound>> #000000
+  StereotypeFontColor<<Compound>> #000000
+  HeaderFontColor<<Compound>> #000000
+  BorderColor<<Compound>> #454645
+  BorderThickness<<Compound>> 1
+  
+  ' Primitive classes style definition
+  BackgroundColor<<Primitive>> #E6E6FF
+  FontColor<<Primitive>> #000000
+  AttributeFontColor<<Primitive>> #000000
+  StereotypeFontColor<<Primitive>> #000000
+  HeaderFontColor<<Primitive>> #000000
+  BorderColor<<Primitive>> #454645
+  BorderThickness<<Primitive>> 1
+  
+  ' Errors classes style definition
+  BackgroundColor<<error>> #FFC0CB
+  FontColor<<error>> #000000
+  AttributeFontColor<<error>> #000000
+  StereotypeFontColor<<error>> #000000
+  HeaderFontColor<<error>> #000000
+  BorderColor<<error>> #454645
+  BorderThickness<<error>> 1
+}
+skinparam shadowing true
+
+hide <<abstract>> stereotype
+hide <<error>> stereotype
+
+
+skinparam note {
+  BorderColor #454645
+  BorderThickness 1.5
+  FontSize 14
+  Font Bold
+  FontColor #000000
+}
+' Add a note towards the upper left corner of the diagram
+note as UnbalancedElectricalNote #lightyellow
+   Profile: UnbalancedElectrical
+   Namespace: http://www.ucaiug.org/gmdm/electrical/unbalanced#
+end note
+
+' ACDCTerminal inherits from IdentifiedObject
+abstract class ACDCTerminal  <<abstract>> {
+}
+
+IdentifiedObject <|-- ACDCTerminal
+
+' ACLineSegment inherits from Conductor
+class ACLineSegment <<Description>>  {
+}
+
+Conductor <|-- ACLineSegment
+ACLineSegment "+ACLineSegments 0..*" --> "+PerLengthImpedance 1" PerLengthImpedance
+
+' ACLineSegmentPhase inherits from PowerSystemResource
+class ACLineSegmentPhase <<Description>>  {
+   +sequenceNumber : integer [1]
+}
+
+PowerSystemResource <|-- ACLineSegmentPhase
+
+' AsynchronousMachine inherits from RotatingMachine
+class AsynchronousMachine <<Description>>  {
+}
+
+RotatingMachine <|-- AsynchronousMachine
+
+' BatteryUnit inherits from PowerElectronicsUnit
+class BatteryUnit   {
+   +ratedE : RealEnergy [0..1]
+}
+
+PowerElectronicsUnit <|-- BatteryUnit
+
+' Breaker inherits from ProtectedSwitch
+class Breaker <<Description>>  {
+}
+
+ProtectedSwitch <|-- Breaker
+
+' ConductingEquipment inherits from Equipment
+abstract class ConductingEquipment  <<abstract>> {
+}
+
+Equipment <|-- ConductingEquipment
+
+' Conductor inherits from ConductingEquipment
+abstract class Conductor  <<abstract>> {
+   +length : Length [1]
+}
+
+ConductingEquipment <|-- Conductor
+
+' ConnectivityNodeContainer inherits from PowerSystemResource
+abstract class ConnectivityNodeContainer  <<abstract>> {
+}
+
+PowerSystemResource <|-- ConnectivityNodeContainer
+
+' Enumeration ConverterControlModeKind
+enum ConverterControlModeKind <<gmdm>><<enumeration>>  {
+   constantPowerFactor
+   constantReactivePower
+   dynamic
+}
+
+' Disconnector inherits from Switch
+class Disconnector <<Description>>  {
+}
+
+Switch <|-- Disconnector
+
+' EnergyConnection inherits from ConductingEquipment
+abstract class EnergyConnection  <<abstract>> {
+}
+
+ConductingEquipment <|-- EnergyConnection
+
+' EnergyConsumer inherits from EnergyConnection
+class EnergyConsumer <<Description>>  {
+}
+
+EnergyConnection <|-- EnergyConsumer
+EnergyConsumer "+EnergyConsumer 0..*" --> "+LoadResponse 0..1" LoadResponseCharacteristic
+
+' EnergySource inherits from EnergyConnection
+class EnergySource <<Description>>  {
+   +nominalVoltage : Voltage [1]
+   +r : Resistance [1]
+   +x : Reactance [1]
+}
+
+EnergyConnection <|-- EnergySource
+
+' Equipment inherits from PowerSystemResource
+abstract class Equipment  <<abstract>> {
+}
+
+PowerSystemResource <|-- Equipment
+
+' FossilFuel inherits from IdentifiedObject
+class FossilFuel   {
+}
+
+IdentifiedObject <|-- FossilFuel
+FossilFuel "+FossilFuels 0..*" --> "+ThermalGeneratingUnit 1" ThermalGeneratingUnit
+
+' Enumeration FuelType
+enum FuelType <<ShadowExtension>><<gmdm>><<enumeration>><<Attribute>>  {
+   diesel
+   brownCoalLignite
+   coal
+   coalDerivedGas
+   gas
+   hardCoal
+   lignite
+   oil
+   oilShale
+   other
+   peat
+}
+
+' Fuse inherits from Switch
+class Fuse <<Description>>  {
+}
+
+Switch <|-- Fuse
+
+' GeneratingUnit inherits from Equipment
+abstract class GeneratingUnit  <<abstract>> {
+   +ratedGrossMaxP : ActivePower [0..1]
+}
+
+Equipment <|-- GeneratingUnit
+GeneratingUnit "+GeneratingUnit 0..1" --> "+RotatingMachine 1" RotatingMachine
+
+' IdentifiedObject inherits from Identity
+abstract class IdentifiedObject  <<abstract>> {
+   +description : string [0..1]
+   +name : string [0..1]
+}
+
+Identity <|-- IdentifiedObject
+
+' Identity
+abstract class Identity  <<abstract>> {
+   +identifier : string [1]
+}
+
+
+' LinearShuntCompensator inherits from ShuntCompensator
+class LinearShuntCompensator <<Description>>  {
+   +bPerSection : Susceptance [1]
+   +gPerSection : Conductance [1]
+}
+
+ShuntCompensator <|-- LinearShuntCompensator
+
+' LinearShuntCompensatorPhase inherits from ShuntCompensatorPhase
+class LinearShuntCompensatorPhase <<Description>>  {
+   +bPerSection : Susceptance [1]
+   +gPerSection : Conductance [1]
+}
+
+ShuntCompensatorPhase <|-- LinearShuntCompensatorPhase
+
+' LoadBreakSwitch inherits from ProtectedSwitch
+class LoadBreakSwitch <<Description>>  {
+}
+
+ProtectedSwitch <|-- LoadBreakSwitch
+
+' LoadResponseCharacteristic inherits from IdentifiedObject
+class LoadResponseCharacteristic   {
+   +exponentModel : boolean [0..1]
+   +pConstantCurrent : float [0..1]
+   +pConstantImpedance : float [0..1]
+   +pConstantPower : float [0..1]
+   +pFrequencyExponent : float [0..1]
+   +pVoltageExponent : float [0..1]
+   +qConstantCurrent : float [0..1]
+   +qConstantImpedance : float [0..1]
+   +qConstantPower : float [0..1]
+   +qFrequencyExponent : float [0..1]
+   +qVoltageExponent : float [0..1]
+}
+
+IdentifiedObject <|-- LoadResponseCharacteristic
+
+' PerLengthImpedance inherits from PerLengthLineParameter
+abstract class PerLengthImpedance  <<abstract>> {
+}
+
+PerLengthLineParameter <|-- PerLengthImpedance
+
+' PerLengthLineParameter inherits from IdentifiedObject
+abstract class PerLengthLineParameter  <<abstract>> {
+}
+
+IdentifiedObject <|-- PerLengthLineParameter
+
+' PerLengthPhaseImpedance inherits from PerLengthImpedance
+class PerLengthPhaseImpedance   {
+   +conductorCount : integer [1]
+}
+
+PerLengthImpedance <|-- PerLengthPhaseImpedance
+
+' Enumeration PhaseCode
+enum PhaseCode <<enumeration>><<Attribute>>  {
+   A
+   AB
+   ABC
+   ABCN
+   ABN
+   AC
+   ACN
+   AN
+   B
+   BC
+   BCN
+   BN
+   C
+   CN
+   N
+   X
+   XN
+   XY
+   XYN
+   none
+   [Remaining 11 literals hidden]
+}
+
+' PhaseImpedanceData inherits from Identity
+class PhaseImpedanceData <<ShadowExtension>>  {
+   +b : SusceptancePerLength [1]
+   +column : integer [1]
+   +r : ResistancePerLength [1]
+   +row : integer [1]
+   +x : ReactancePerLength [1]
+}
+
+Identity <|-- PhaseImpedanceData
+PhaseImpedanceData "+PhaseImpedanceData 0..*" --> "+PhaseImpedance 0..1" PerLengthPhaseImpedance
+
+' PhotoVoltaicUnit inherits from PowerElectronicsUnit
+class PhotoVoltaicUnit   {
+}
+
+PowerElectronicsUnit <|-- PhotoVoltaicUnit
+
+' PowerElectronicsConnection inherits from RegulatingCondEq
+class PowerElectronicsConnection <<Description>>  {
+   +<<gmdm>> controlMode : ConverterControlModeKind [0..1]
+   +maxQ : ReactivePower [0..1]
+   +minQ : ReactivePower [0..1]
+   +ratedS : ApparentPower [0..1]
+   +ratedU : Voltage [0..1]
+}
+
+RegulatingCondEq <|-- PowerElectronicsConnection
+
+' PowerElectronicsThermalUnit inherits from PowerElectronicsUnit
+class PowerElectronicsThermalUnit <<gmdm>>  {
+}
+
+PowerElectronicsUnit <|-- PowerElectronicsThermalUnit
+PowerElectronicsThermalUnit "+PowerElectronicsThermalUnit 0..*" --> "+FossilFuels 0..1" FossilFuel
+
+' PowerElectronicsUnit inherits from Equipment
+abstract class PowerElectronicsUnit  <<abstract>> {
+   +maxP : ActivePower [1]
+   +minP : ActivePower [1]
+}
+
+Equipment <|-- PowerElectronicsUnit
+PowerElectronicsUnit "+PowerElectronicsUnit 0..*" --> "+PowerElectronicsConnection 0..1" PowerElectronicsConnection
+
+' PowerElectronicsWindUnit inherits from PowerElectronicsUnit
+class PowerElectronicsWindUnit   {
+}
+
+PowerElectronicsUnit <|-- PowerElectronicsWindUnit
+
+' PowerSystemResource inherits from IdentifiedObject
+abstract class PowerSystemResource  <<abstract>> {
+}
+
+IdentifiedObject <|-- PowerSystemResource
+
+' PowerTransformer inherits from ConductingEquipment
+class PowerTransformer <<Description>>  {
+}
+
+ConductingEquipment <|-- PowerTransformer
+
+' PowerTransformerEnd inherits from TransformerEnd
+class PowerTransformerEnd <<Description>>  {
+   +b : Susceptance [0..1]
+   +g : Conductance [0..1]
+   +phaseAngleClock : integer [0..1]
+   +r : Resistance [1]
+   +ratedS : ApparentPower [1]
+   +ratedU : Voltage [1]
+   +x : Reactance [0..1]
+}
+
+TransformerEnd <|-- PowerTransformerEnd
+
+' ProtectedSwitch inherits from Switch
+abstract class ProtectedSwitch  <<abstract>> {
+   +breakingCapacity : CurrentFlow [0..1]
+}
+
+Switch <|-- ProtectedSwitch
+
+' RatioTapChanger inherits from TapChanger
+class RatioTapChanger   {
+   +stepVoltageIncrement : PerCent [0..1]
+}
+
+TapChanger <|-- RatioTapChanger
+RatioTapChanger "+RatioTapChanger 0..1" --> "+TransformerEnd 1" TransformerEnd
+
+' Recloser inherits from ProtectedSwitch
+class Recloser <<Description>>  {
+}
+
+ProtectedSwitch <|-- Recloser
+
+' RegulatingCondEq inherits from EnergyConnection
+abstract class RegulatingCondEq  <<abstract>> {
+}
+
+EnergyConnection <|-- RegulatingCondEq
+RegulatingCondEq "+RegulatingCondEq 0..*" --> "+RegulatingControl 0..1" RegulatingControl
+
+' RegulatingControl inherits from PowerSystemResource
+abstract class RegulatingControl  <<abstract>> {
+   +discrete : boolean [1]
+   +enabled : boolean [1]
+   +mode : RegulatingControlModeKind [0..1]
+   +monitoredPhase : PhaseCode [0..1]
+   +targetDeadband : float [0..1]
+   +targetValue : float [0..1]
+}
+
+PowerSystemResource <|-- RegulatingControl
+RegulatingControl "+RegulatingControl 0..*" --> "+Terminal 1" Terminal
+
+' Enumeration RegulatingControlModeKind
+enum RegulatingControlModeKind <<enumeration>><<Attribute>>  {
+   activePower
+   admittance
+   currentFlow
+   powerFactor
+   reactivePower
+   temperature
+   timeScheduled
+   voltage
+}
+
+' RotatingMachine inherits from RegulatingCondEq
+abstract class RotatingMachine  <<abstract>> {
+   +ratedS : ApparentPower [1]
+   +ratedU : Voltage [1]
+}
+
+RegulatingCondEq <|-- RotatingMachine
+
+' Sectionaliser inherits from Switch
+class Sectionaliser <<Description>>  {
+}
+
+Switch <|-- Sectionaliser
+
+' SeriesCompensator inherits from ConductingEquipment
+class SeriesCompensator <<Description>>  {
+   +r : Resistance [1]
+   +x : Reactance [1]
+}
+
+ConductingEquipment <|-- SeriesCompensator
+
+' ShuntCompensator inherits from RegulatingCondEq
+abstract class ShuntCompensator  <<abstract>> {
+   +aVRDelay : Seconds [0..1]
+   +maximumSections : integer [1]
+   +nomU : Voltage [1]
+   +normalSections : integer [1]
+}
+
+RegulatingCondEq <|-- ShuntCompensator
+
+' ShuntCompensatorPhase inherits from PowerSystemResource
+abstract class ShuntCompensatorPhase  <<abstract>> {
+   +maximumSections : integer [1]
+   +normalSections : integer [1]
+}
+
+PowerSystemResource <|-- ShuntCompensatorPhase
+
+' Switch inherits from ConductingEquipment
+abstract class Switch  <<abstract>> {
+   +ratedCurrent : CurrentFlow [1]
+}
+
+ConductingEquipment <|-- Switch
+
+' SynchronousMachine inherits from RotatingMachine
+class SynchronousMachine <<Description>>  {
+}
+
+RotatingMachine <|-- SynchronousMachine
+
+' TapChanger inherits from PowerSystemResource
+abstract class TapChanger  <<abstract>> {
+   +controlEnabled : boolean [0..1]
+   +<<gmdm>> ctRating : float [0..1]
+   +ctRatio : float [0..1]
+   +highStep : integer [1]
+   +initialDelay : Seconds [0..1]
+   +lowStep : integer [1]
+   +ltcFlag : boolean [1]
+   +neutralStep : integer [1]
+   +neutralU : Voltage [1]
+   +ptRatio : float [0..1]
+   +subsequentDelay : Seconds [0..1]
+}
+
+PowerSystemResource <|-- TapChanger
+TapChanger "+TapChanger 0..*" --> "+TapChangerControl 0..1" TapChangerControl
+
+' TapChangerControl inherits from RegulatingControl
+class TapChangerControl   {
+   +lineDropCompensation : boolean [0..1]
+   +lineDropR : Resistance [0..1]
+   +lineDropX : Reactance [0..1]
+   +maxLimitVoltage : Voltage [0..1]
+   +minLimitVoltage : Voltage [0..1]
+   +reverseLineDropR : Resistance [0..1]
+   +reverseLineDropX : Reactance [0..1]
+   +<<gmdm>> reverseTargetDeadband : Voltage [0..1]
+   +<<gmdm>> reverseTargetValue : Voltage [0..1]
+   +<<gmdm>> reverseToNeutral : boolean [0..1]
+   +<<gmdm>> reversible : boolean [0..1]
+   +<<gmdm>> reversingDelay : Seconds [0..1]
+   +<<gmdm>> reversingPowerThreshold : ApparentPower [0..1]
+}
+
+RegulatingControl <|-- TapChangerControl
+
+' Terminal inherits from ACDCTerminal
+class Terminal <<Description>>  {
+}
+
+ACDCTerminal <|-- Terminal
+
+' ThermalGeneratingUnit inherits from GeneratingUnit
+class ThermalGeneratingUnit   {
+}
+
+GeneratingUnit <|-- ThermalGeneratingUnit
+ThermalGeneratingUnit "+ThermalGeneratingUnit 0..1" --> "+FossilFuels 0..*" FossilFuel
+
+' TransformerCoreAdmittance inherits from IdentifiedObject
+class TransformerCoreAdmittance   {
+   +b : Susceptance [1]
+   +g : Conductance [1]
+}
+
+IdentifiedObject <|-- TransformerCoreAdmittance
+
+' TransformerEnd inherits from IdentifiedObject
+abstract class TransformerEnd  <<abstract>> {
+   +grounded : boolean [1]
+   +rground : Resistance [0..1]
+   +xground : Reactance [0..1]
+}
+
+IdentifiedObject <|-- TransformerEnd
+TransformerEnd "+TransformerEnd 0..*" --> "+CoreAdmittance 0..1" TransformerCoreAdmittance
+
+' TransformerMeshImpedance inherits from IdentifiedObject
+class TransformerMeshImpedance   {
+   +r : Resistance [1]
+   +x : Reactance [1]
+}
+
+IdentifiedObject <|-- TransformerMeshImpedance
+TransformerMeshImpedance "+FromMeshImpedance 0..*" --> "+FromTransformerEnd 0..1" TransformerEnd
+TransformerMeshImpedance "+ToMeshImpedance 0..*" --> "+ToTransformerEnd 0..*" TransformerEnd
+
+' TransformerTankEnd inherits from TransformerEnd
+class TransformerTankEnd <<Description>>  {
+}
+
+TransformerEnd <|-- TransformerTankEnd
+
+' Enumeration WindGenUnitKind
+enum WindGenUnitKind <<enumeration>>  {
+   offshore
+   onshore
+}
+
+' WindGeneratingUnit inherits from GeneratingUnit
+class WindGeneratingUnit   {
+   +windGenUnitType : WindGenUnitKind [0..1]
+}
+
+GeneratingUnit <|-- WindGeneratingUnit
+
+@enduml

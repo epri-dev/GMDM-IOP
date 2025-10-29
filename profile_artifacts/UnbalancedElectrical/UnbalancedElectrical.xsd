@@ -92,6 +92,10 @@
                      type="m:PhotoVoltaicUnit"
                      minOccurs="0"
                      maxOccurs="unbounded"/>
+         <xs:element name="PowerElectronicsConnection"
+                     type="m:PowerElectronicsConnection"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
          <xs:element name="PowerElectronicsThermalUnit"
                      type="m:PowerElectronicsThermalUnit"
                      minOccurs="0"
@@ -159,7 +163,7 @@
       </xs:sequence>
    </xs:complexType>
    <xs:complexType name="ACDCTerminal"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#ACDCTerminal">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ACDCTerminal">
       <xs:annotation>
          <xs:documentation>An electrical connection point (AC or DC) to a piece of conducting equipment. Terminals are connected at physical connection points called connectivity nodes.</xs:documentation>
       </xs:annotation>
@@ -170,7 +174,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="ACLineSegment"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#ACLineSegment">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ACLineSegment">
       <xs:annotation>
          <xs:documentation>A line segment is a conductor or combination of conductors, with consistent electrical characteristics along its length, building a single electrical system that carries alternating current between two points in the power system.</xs:documentation>
          <xs:documentation>The BaseVoltage at the two ends of a line segment shall have the same BaseVoltage.nominalVoltage. However, boundary lines may have slightly different BaseVoltage.nominalVoltages and variation is allowed. Larger voltage difference in general requires use of an equivalent branch.</xs:documentation>
@@ -190,10 +194,10 @@
          <xs:extension base="m:Conductor">
             <xs:sequence>
                <xs:element name="PerLengthImpedance"
-                           minOccurs="0"
+                           minOccurs="1"
                            maxOccurs="1"
                            type="m:PerLengthImpedance"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#ACLineSegment.PerLengthImpedance">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ACLineSegment.PerLengthImpedance">
                   <xs:annotation>
                      <xs:documentation>Per-length impedance of this line segment.</xs:documentation>
                   </xs:annotation>
@@ -203,7 +207,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="ACLineSegmentPhase"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#ACLineSegmentPhase">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ACLineSegmentPhase">
       <xs:annotation>
          <xs:documentation>A line segment phase represents one phase (or optionally the neutral) of an alternating current line segment.</xs:documentation>
          <xs:documentation>Under most circumstances there is not a line segment phase for the neutral. However, if a wire assembly is being used and it does not specify phase, a line segment phase must exist for each position in the assembly (including the neutral).</xs:documentation>
@@ -215,7 +219,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="xs:integer"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#ACLineSegmentPhase.sequenceNumber">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ACLineSegmentPhase.sequenceNumber">
                   <xs:annotation>
                      <xs:documentation>Sequence number provides the numbering for this line segment phase. When impedance is directly described, sequence number binds the phase to the column and row for entries in the per length phase impedance matrix (PhaseImpedanceData of PerLengthPhaseImpedance). When used in conjunction with a wire assembly description, sequence number associates the line segment phase to a position.</xs:documentation>
                      <xs:documentation>For a line segment not a part of a parallel line segment group, sequence number starts at one and increments by one through each line segment phase associated with the line segment. If there is a line segment phase for neutral, it is numbered last.</xs:documentation>
@@ -226,7 +230,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="AsynchronousMachine"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#AsynchronousMachine">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#AsynchronousMachine">
       <xs:annotation>
          <xs:documentation>A rotating machine whose shaft rotates asynchronously with the electrical field.  Also known as an induction machine with no external connection to the rotor windings, e.g. squirrel-cage induction machine.</xs:documentation>
       </xs:annotation>
@@ -237,7 +241,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="BatteryUnit"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#BatteryUnit">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#BatteryUnit">
       <xs:annotation>
          <xs:documentation>An electrochemical energy storage device.</xs:documentation>
       </xs:annotation>
@@ -248,7 +252,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="m:RealEnergy"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#BatteryUnit.ratedE">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#BatteryUnit.ratedE">
                   <xs:annotation>
                      <xs:documentation>Full energy storage capacity of the battery. The attribute shall be a positive value.</xs:documentation>
                   </xs:annotation>
@@ -257,7 +261,8 @@
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
-   <xs:complexType name="Breaker" sawsdl:modelReference="http://cim.ucaiug.io/ns#Breaker">
+   <xs:complexType name="Breaker"
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Breaker">
       <xs:annotation>
          <xs:documentation>A mechanical switching device capable of making, carrying, and breaking currents under normal circuit conditions and also making, carrying for a specified time, and breaking currents under specified abnormal circuit conditions e.g. those of short circuit.</xs:documentation>
       </xs:annotation>
@@ -268,7 +273,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="ConductingEquipment"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#ConductingEquipment">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ConductingEquipment">
       <xs:annotation>
          <xs:documentation>The parts of the AC power system that are designed to carry current or that are conductively connected through terminals.</xs:documentation>
       </xs:annotation>
@@ -279,7 +284,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="Conductor"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#Conductor">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Conductor">
       <xs:annotation>
          <xs:documentation>Combination of conducting material with consistent electrical characteristics, building a single electrical system, used to carry current between points in the power system.</xs:documentation>
       </xs:annotation>
@@ -290,7 +295,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="m:Length"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#Conductor.length">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Conductor.length">
                   <xs:annotation>
                      <xs:documentation>Segment length for calculating line segment capabilities.</xs:documentation>
                   </xs:annotation>
@@ -300,7 +305,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="ConnectivityNodeContainer"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#ConnectivityNodeContainer">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ConnectivityNodeContainer">
       <xs:annotation>
          <xs:documentation>A base class for all objects that may contain connectivity nodes or topological nodes.</xs:documentation>
       </xs:annotation>
@@ -311,7 +316,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:simpleType name="ConverterControlModeKind"
-                  sawsdl:modelReference="http://epri.com/gmdm#ConverterControlModeKind">
+                  sawsdl:modelReference="http://epri.com/gmdm/2025#ConverterControlModeKind">
       <xs:annotation/>
       <xs:restriction base="xs:string">
          <xs:enumeration value="constantPowerFactor">
@@ -326,7 +331,7 @@
       </xs:restriction>
    </xs:simpleType>
    <xs:complexType name="Disconnector"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#Disconnector">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Disconnector">
       <xs:annotation>
          <xs:documentation>A mechanical switching device which provides, in the open position, an isolating distance in accordance with specified requirements.</xs:documentation>
          <xs:documentation>A disconnector is capable of opening and closing a circuit when either negligible current is broken or made, or when no significant change in the voltage across the terminals of each of the poles of the disconnector occurs. It is also capable of carrying currents under normal circuit conditions and carrying for a specified time currents under abnormal conditions such as those of short circuit.</xs:documentation>
@@ -338,7 +343,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="EnergyConnection"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#EnergyConnection">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#EnergyConnection">
       <xs:annotation>
          <xs:documentation>A connection of energy generation or consumption on the power system model.</xs:documentation>
       </xs:annotation>
@@ -349,7 +354,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="EnergyConsumer"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#EnergyConsumer">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#EnergyConsumer">
       <xs:annotation>
          <xs:documentation>Generic user of energy - a  point of consumption on the power system model.</xs:documentation>
          <xs:documentation>EnergyConsumer.pfixed, .qfixed, .pfixedPct and .qfixedPct have meaning only if there is no LoadResponseCharacteristic associated with EnergyConsumer or if LoadResponseCharacteristic.exponentModel is set to False.</xs:documentation>
@@ -361,7 +366,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="m:LoadResponseCharacteristic"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#EnergyConsumer.LoadResponse">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#EnergyConsumer.LoadResponse">
                   <xs:annotation>
                      <xs:documentation>The load response characteristic of this load.  If missing, this load is assumed to be constant power.</xs:documentation>
                   </xs:annotation>
@@ -371,7 +376,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="EnergySource"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#EnergySource">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#EnergySource">
       <xs:annotation>
          <xs:documentation>A generic equivalent for an energy supplier on a transmission or distribution voltage level.</xs:documentation>
       </xs:annotation>
@@ -382,7 +387,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="m:Voltage"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#EnergySource.nominalVoltage">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#EnergySource.nominalVoltage">
                   <xs:annotation>
                      <xs:documentation>Phase-to-phase nominal voltage.</xs:documentation>
                   </xs:annotation>
@@ -391,7 +396,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="m:Resistance"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#EnergySource.r">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#EnergySource.r">
                   <xs:annotation>
                      <xs:documentation>Positive sequence Thevenin resistance.</xs:documentation>
                   </xs:annotation>
@@ -400,7 +405,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="m:Reactance"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#EnergySource.x">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#EnergySource.x">
                   <xs:annotation>
                      <xs:documentation>Positive sequence Thevenin reactance.</xs:documentation>
                   </xs:annotation>
@@ -410,7 +415,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="Equipment"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#Equipment">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Equipment">
       <xs:annotation>
          <xs:documentation>The parts of a power system that are physical devices, electronic or mechanical.</xs:documentation>
       </xs:annotation>
@@ -421,32 +426,36 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="FossilFuel"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#FossilFuel">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#FossilFuel">
       <xs:annotation>
          <xs:documentation>The fossil fuel consumed by the non-nuclear thermal generating unit. For example, coal, oil, gas, etc. These are the specific fuels that the generating unit can consume.</xs:documentation>
       </xs:annotation>
       <xs:complexContent>
          <xs:extension base="m:IdentifiedObject">
             <xs:sequence>
-               <xs:element name="fossilFuelType"
+               <xs:element name="ThermalGeneratingUnit"
                            minOccurs="1"
                            maxOccurs="1"
-                           type="m:FuelType"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#FossilFuel.fossilFuelType">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#FossilFuel.ThermalGeneratingUnit">
                   <xs:annotation>
-                     <xs:documentation>The type of fossil fuel, such as coal, oil, or gas.</xs:documentation>
+                     <xs:documentation>A thermal generating unit may have one or more fossil fuels.</xs:documentation>
                   </xs:annotation>
+                  <xs:complexType sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ThermalGeneratingUnit">
+                     <xs:attribute name="ref" type="xs:string" use="required"/>
+                     <xs:attribute name="referenceType" type="xs:string" use="optional"/>
+                  </xs:complexType>
                </xs:element>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
    <xs:simpleType name="FuelType"
-                  sawsdl:modelReference="http://cim.ucaiug.io/ns#FuelType">
-      <xs:annotation>
-         <xs:documentation>Type of fuel.</xs:documentation>
-      </xs:annotation>
+                  sawsdl:modelReference="http://epri.com/gmdm/2025#FuelType">
+      <xs:annotation/>
       <xs:restriction base="xs:string">
+         <xs:enumeration value="FuelType.diesel">
+            <xs:annotation/>
+         </xs:enumeration>
          <xs:enumeration value="brownCoalLignite">
             <xs:annotation>
                <xs:documentation>Brown coal lignite.</xs:documentation>
@@ -499,7 +508,8 @@
          </xs:enumeration>
       </xs:restriction>
    </xs:simpleType>
-   <xs:complexType name="Fuse" sawsdl:modelReference="http://cim.ucaiug.io/ns#Fuse">
+   <xs:complexType name="Fuse"
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Fuse">
       <xs:annotation>
          <xs:documentation>An overcurrent protective device with a circuit opening fusible part that is heated and severed by the passage of overcurrent through it. A fuse is considered a switching device because it breaks current.</xs:documentation>
       </xs:annotation>
@@ -510,7 +520,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="GeneratingUnit"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#GeneratingUnit">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#GeneratingUnit">
       <xs:annotation>
          <xs:documentation>A single or set of synchronous machines for converting mechanical power into alternating-current power. For example, individual machines within a set may be defined for scheduling purposes while a single control signal is derived for the set. In this case there would be a GeneratingUnit for each member of the set and an additional GeneratingUnit corresponding to the set.</xs:documentation>
       </xs:annotation>
@@ -521,7 +531,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="m:ActivePower"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#GeneratingUnit.ratedGrossMaxP">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#GeneratingUnit.ratedGrossMaxP">
                   <xs:annotation>
                      <xs:documentation>The unit's gross rated maximum capacity (book value).</xs:documentation>
                      <xs:documentation>The attribute shall be a positive value.</xs:documentation>
@@ -531,7 +541,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="m:RotatingMachine"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#GeneratingUnit.RotatingMachine">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#GeneratingUnit.RotatingMachine">
                   <xs:annotation>
                      <xs:documentation>A synchronous machine may operate as a generator and as such becomes a member of a generating unit.</xs:documentation>
                   </xs:annotation>
@@ -541,7 +551,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="IdentifiedObject"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#IdentifiedObject">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#IdentifiedObject">
       <xs:annotation>
          <xs:documentation>This is a class that provides common identification for all classes needing identification and naming attributes.</xs:documentation>
       </xs:annotation>
@@ -552,7 +562,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="xs:string"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#IdentifiedObject.description">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#IdentifiedObject.description">
                   <xs:annotation>
                      <xs:documentation>The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</xs:documentation>
                   </xs:annotation>
@@ -561,7 +571,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="xs:string"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#IdentifiedObject.name">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#IdentifiedObject.name">
                   <xs:annotation>
                      <xs:documentation>The name is any free human readable and possibly non unique text naming the object.</xs:documentation>
                   </xs:annotation>
@@ -571,16 +581,16 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="Identity"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#Identity">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Identity">
       <xs:annotation>
-         <xs:documentation>,</xs:documentation>
+         <xs:documentation>This is a root class to provide common identification for all classes.  IdentifiedObject and any class to be exchanged with RDF XML now inherits from Identity.  mRID is superseded by Identity.identifier, which is typed to be a UUID.</xs:documentation>
       </xs:annotation>
       <xs:sequence>
          <xs:element name="identifier"
                      minOccurs="1"
                      maxOccurs="1"
                      type="xs:string"
-                     sawsdl:modelReference="http://cim.ucaiug.io/ns#Identity.identifier">
+                     sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Identity.identifier">
             <xs:annotation>
                <xs:documentation>A universally unique object identifier. Used to uniquely identify persistent objects between CIM messages.</xs:documentation>
             </xs:annotation>
@@ -588,7 +598,7 @@
       </xs:sequence>
    </xs:complexType>
    <xs:complexType name="LinearShuntCompensator"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#LinearShuntCompensator">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#LinearShuntCompensator">
       <xs:annotation>
          <xs:documentation>A linear shunt compensator has banks or sections with equal admittance values.</xs:documentation>
       </xs:annotation>
@@ -599,7 +609,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="m:Susceptance"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#LinearShuntCompensator.bPerSection">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#LinearShuntCompensator.bPerSection">
                   <xs:annotation>
                      <xs:documentation>Positive sequence shunt (charging) susceptance per section.</xs:documentation>
                   </xs:annotation>
@@ -608,7 +618,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="m:Conductance"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#LinearShuntCompensator.gPerSection">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#LinearShuntCompensator.gPerSection">
                   <xs:annotation>
                      <xs:documentation>Positive sequence shunt (charging) conductance per section.</xs:documentation>
                   </xs:annotation>
@@ -618,7 +628,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="LinearShuntCompensatorPhase"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#LinearShuntCompensatorPhase">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#LinearShuntCompensatorPhase">
       <xs:annotation>
          <xs:documentation>A per phase linear shunt compensator has banks or sections with equal admittance values.</xs:documentation>
       </xs:annotation>
@@ -629,7 +639,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="m:Susceptance"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#LinearShuntCompensatorPhase.bPerSection">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#LinearShuntCompensatorPhase.bPerSection">
                   <xs:annotation>
                      <xs:documentation>Susceptance per section of the phase if shunt compensator is wye connected.   Susceptance per section phase to phase if shunt compensator is delta connected.</xs:documentation>
                   </xs:annotation>
@@ -638,7 +648,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="m:Conductance"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#LinearShuntCompensatorPhase.gPerSection">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#LinearShuntCompensatorPhase.gPerSection">
                   <xs:annotation>
                      <xs:documentation>Conductance per section for this phase if shunt compensator is wye connected.  Conductance per section phase to phase if shunt compensator is delta connected.</xs:documentation>
                   </xs:annotation>
@@ -648,7 +658,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="LoadBreakSwitch"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#LoadBreakSwitch">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#LoadBreakSwitch">
       <xs:annotation>
          <xs:documentation>A mechanical switching device capable of making, carrying, and breaking currents under normal operating conditions.</xs:documentation>
       </xs:annotation>
@@ -659,7 +669,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="LoadResponseCharacteristic"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#LoadResponseCharacteristic">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#LoadResponseCharacteristic">
       <xs:annotation>
          <xs:documentation>Models the characteristic response of the load demand due to changes in system conditions such as voltage and frequency. It is not related to demand response.</xs:documentation>
          <xs:documentation>If LoadResponseCharacteristic.exponentModel is True, the exponential voltage or frequency dependent models are specified and used as to calculate active and reactive power components of the load model.</xs:documentation>
@@ -687,7 +697,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="xs:boolean"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#LoadResponseCharacteristic.exponentModel">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#LoadResponseCharacteristic.exponentModel">
                   <xs:annotation>
                      <xs:documentation>Indicates the exponential voltage dependency model is to be used. If false, the coefficient model is to be used.</xs:documentation>
                      <xs:documentation>The exponential voltage dependency model consist of the attributes:</xs:documentation>
@@ -710,7 +720,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="xs:float"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#LoadResponseCharacteristic.pConstantCurrent">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#LoadResponseCharacteristic.pConstantCurrent">
                   <xs:annotation>
                      <xs:documentation>Portion of active power load modelled as constant current.</xs:documentation>
                   </xs:annotation>
@@ -719,7 +729,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="xs:float"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#LoadResponseCharacteristic.pConstantImpedance">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#LoadResponseCharacteristic.pConstantImpedance">
                   <xs:annotation>
                      <xs:documentation>Portion of active power load modelled as constant impedance.</xs:documentation>
                   </xs:annotation>
@@ -728,7 +738,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="xs:float"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#LoadResponseCharacteristic.pConstantPower">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#LoadResponseCharacteristic.pConstantPower">
                   <xs:annotation>
                      <xs:documentation>Portion of active power load modelled as constant power.</xs:documentation>
                   </xs:annotation>
@@ -737,7 +747,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="xs:float"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#LoadResponseCharacteristic.pFrequencyExponent">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#LoadResponseCharacteristic.pFrequencyExponent">
                   <xs:annotation>
                      <xs:documentation>Exponent of per unit frequency effecting active power.</xs:documentation>
                   </xs:annotation>
@@ -746,7 +756,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="xs:float"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#LoadResponseCharacteristic.pVoltageExponent">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#LoadResponseCharacteristic.pVoltageExponent">
                   <xs:annotation>
                      <xs:documentation>Exponent of per unit voltage effecting real power.</xs:documentation>
                   </xs:annotation>
@@ -755,7 +765,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="xs:float"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#LoadResponseCharacteristic.qConstantCurrent">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#LoadResponseCharacteristic.qConstantCurrent">
                   <xs:annotation>
                      <xs:documentation>Portion of reactive power load modelled as constant current.</xs:documentation>
                   </xs:annotation>
@@ -764,7 +774,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="xs:float"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#LoadResponseCharacteristic.qConstantImpedance">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#LoadResponseCharacteristic.qConstantImpedance">
                   <xs:annotation>
                      <xs:documentation>Portion of reactive power load modelled as constant impedance.</xs:documentation>
                   </xs:annotation>
@@ -773,7 +783,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="xs:float"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#LoadResponseCharacteristic.qConstantPower">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#LoadResponseCharacteristic.qConstantPower">
                   <xs:annotation>
                      <xs:documentation>Portion of reactive power load modelled as constant power.</xs:documentation>
                   </xs:annotation>
@@ -782,7 +792,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="xs:float"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#LoadResponseCharacteristic.qFrequencyExponent">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#LoadResponseCharacteristic.qFrequencyExponent">
                   <xs:annotation>
                      <xs:documentation>Exponent of per unit frequency effecting reactive power.</xs:documentation>
                   </xs:annotation>
@@ -791,7 +801,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="xs:float"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#LoadResponseCharacteristic.qVoltageExponent">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#LoadResponseCharacteristic.qVoltageExponent">
                   <xs:annotation>
                      <xs:documentation>Exponent of per unit voltage effecting reactive power.</xs:documentation>
                   </xs:annotation>
@@ -801,7 +811,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="PerLengthImpedance"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#PerLengthImpedance">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PerLengthImpedance">
       <xs:annotation>
          <xs:documentation>Common type for per-length electrical impedances.</xs:documentation>
       </xs:annotation>
@@ -812,7 +822,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="PerLengthLineParameter"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#PerLengthLineParameter">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PerLengthLineParameter">
       <xs:annotation>
          <xs:documentation>Common type for per-length electrical line parameters.</xs:documentation>
       </xs:annotation>
@@ -823,7 +833,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="PerLengthPhaseImpedance"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#PerLengthPhaseImpedance">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PerLengthPhaseImpedance">
       <xs:annotation>
          <xs:documentation>The per length phase impedance matrix expresses impedance and admittance parameters per unit length for n-conductor unbalanced line segments. A phase impedance matrix contains both self impedances for each phase and mutual impedances between pairs of phases. The matrix is stored in symmetric lower triangular format where the diagonal entries represent self-impedances (and have the same value in row and column) and the off diagonal entries represent phase-to-phase impedances (and have different row and column values).</xs:documentation>
          <xs:documentation>The matrix can be use to express impedances for both non-coupled and coupled line segments. Coupled line segments share a single per length phase impedance matrix whose entries reflect the self and mutual impedances of all the phases of all the wires.</xs:documentation>
@@ -835,7 +845,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="xs:integer"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#PerLengthPhaseImpedance.conductorCount">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PerLengthPhaseImpedance.conductorCount">
                   <xs:annotation>
                      <xs:documentation>Conductor count identifies the number of phase, neutral, and other wires represented in the phase impedance matrix and constrains the number of elements in the matrix. Typically, Kron reduction is used for incorporating effects of neutral impedance in the phase conductor values (so conductor count only considers phase wires), but neutrals can be included in the matrix (in which case conductor count would include the neutral wire(s)). For a phase impedance matrix associated with the lines of a coupled line segment group, the conductor count reflects the total of the conductors associated with all the coupled line segments in the group.</xs:documentation>
                   </xs:annotation>
@@ -845,7 +855,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:simpleType name="PhaseCode"
-                  sawsdl:modelReference="http://cim.ucaiug.io/ns#PhaseCode">
+                  sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PhaseCode">
       <xs:annotation>
          <xs:documentation>Enumeration of phase identifiers used to designate the combination of phase and/or neutral conductors at a terminal, measurement or equipment modelled as a single-line balanced equivalent.</xs:documentation>
          <xs:documentation>This is an unordered enumeration of phase identifiers.  Allows designation of phases for both transmission and distribution equipment, circuits and loads.   The enumeration, by itself, does not describe how the phases are connected together or connected to ground.  Ground is not explicitly denoted as a phase.</xs:documentation>
@@ -986,7 +996,7 @@
       </xs:restriction>
    </xs:simpleType>
    <xs:complexType name="PhaseImpedanceData"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#PhaseImpedanceData">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PhaseImpedanceData">
       <xs:annotation>
          <xs:documentation>Per length phase impedance matrix entry describes impedance and conductance matrix element values for a specific row and column of the matrix.</xs:documentation>
          <xs:documentation>The phases to which each entry applies can be determined by means of the row and column attributes which bind to a sequence number provided in either ACLineSegmentPhase or WirePosition (which also specify phase). Due to physical symmetry that is reflected in the matrix, only the lower triangle of the matrix is populated with the row and column method. That is, the column attribute is always less than or equal to the row attribute.</xs:documentation>
@@ -998,7 +1008,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="m:SusceptancePerLength"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#PhaseImpedanceData.b">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PhaseImpedanceData.b">
                   <xs:annotation>
                      <xs:documentation>Susceptance matrix entry value, per length of unit.</xs:documentation>
                   </xs:annotation>
@@ -1007,7 +1017,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="xs:integer"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#PhaseImpedanceData.column">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PhaseImpedanceData.column">
                   <xs:annotation>
                      <xs:documentation>The matrix entry's column number has a range of possible values from 1 to the conductor count of the matrix, but due to symmetry, only entries in the lower triangle (including diagonal) of the matrix need be defined. Column number binds to the sequence number in either ACLineSegmentPhase or WirePosition, which then identifies the phase for this entry.</xs:documentation>
                   </xs:annotation>
@@ -1016,7 +1026,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="m:ResistancePerLength"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#PhaseImpedanceData.r">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PhaseImpedanceData.r">
                   <xs:annotation>
                      <xs:documentation>Resistance matrix entry value, per length of unit.</xs:documentation>
                   </xs:annotation>
@@ -1025,7 +1035,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="xs:integer"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#PhaseImpedanceData.row">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PhaseImpedanceData.row">
                   <xs:annotation>
                      <xs:documentation>The matrix entry's row number has a range of possible values from 1 to the conductor count of the matrix, but due to symmetry, only entries in the lower triangle (including diagonal) of the matrix need be defined. Row number binds to the sequence number in either ACLineSegmentPhase or WirePosition, which then identifies the phase for this entry.</xs:documentation>
                   </xs:annotation>
@@ -1034,16 +1044,16 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="m:ReactancePerLength"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#PhaseImpedanceData.x">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PhaseImpedanceData.x">
                   <xs:annotation>
                      <xs:documentation>Reactance matrix entry value, per length of unit.</xs:documentation>
                   </xs:annotation>
                </xs:element>
                <xs:element name="PhaseImpedance"
-                           minOccurs="1"
+                           minOccurs="0"
                            maxOccurs="1"
                            type="m:PerLengthPhaseImpedance"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#PhaseImpedanceData.PhaseImpedance">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PhaseImpedanceData.PhaseImpedance">
                   <xs:annotation>
                      <xs:documentation>Conductor phase impedance to which this data belongs.</xs:documentation>
                   </xs:annotation>
@@ -1053,7 +1063,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="PhotoVoltaicUnit"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#PhotoVoltaicUnit">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PhotoVoltaicUnit">
       <xs:annotation>
          <xs:documentation>A photovoltaic device or an aggregation of such devices.</xs:documentation>
       </xs:annotation>
@@ -1064,7 +1074,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="PowerElectronicsConnection"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#PowerElectronicsConnection">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerElectronicsConnection">
       <xs:annotation>
          <xs:documentation>A connection to the AC network for energy production or consumption that uses power electronics rather than rotating machines.</xs:documentation>
       </xs:annotation>
@@ -1075,7 +1085,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="m:ConverterControlModeKind"
-                           sawsdl:modelReference="http://epri.com/gmdm#PowerElectronicsConnection.controlMode">
+                           sawsdl:modelReference="http://epri.com/gmdm/2025#PowerElectronicsConnection.controlMode">
                   <xs:annotation>
                      <xs:documentation>Inverter control mode indicating whether reactive power output is based on constant PF or constant Q</xs:documentation>
                   </xs:annotation>
@@ -1084,7 +1094,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="m:ReactivePower"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#PowerElectronicsConnection.maxQ">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerElectronicsConnection.maxQ">
                   <xs:annotation>
                      <xs:documentation>Maximum reactive power limit. This is the maximum (nameplate) limit for the unit.</xs:documentation>
                   </xs:annotation>
@@ -1093,26 +1103,26 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="m:ReactivePower"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#PowerElectronicsConnection.minQ">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerElectronicsConnection.minQ">
                   <xs:annotation>
                      <xs:documentation>Minimum reactive power limit for the unit. This is the minimum (nameplate) limit for the unit.</xs:documentation>
                   </xs:annotation>
                </xs:element>
                <xs:element name="ratedS"
-                           minOccurs="1"
+                           minOccurs="0"
                            maxOccurs="1"
                            type="m:ApparentPower"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#PowerElectronicsConnection.ratedS">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerElectronicsConnection.ratedS">
                   <xs:annotation>
                      <xs:documentation>Nameplate apparent power rating for the unit.</xs:documentation>
                      <xs:documentation>The attribute shall have a positive value.</xs:documentation>
                   </xs:annotation>
                </xs:element>
                <xs:element name="ratedU"
-                           minOccurs="1"
+                           minOccurs="0"
                            maxOccurs="1"
                            type="m:Voltage"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#PowerElectronicsConnection.ratedU">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerElectronicsConnection.ratedU">
                   <xs:annotation>
                      <xs:documentation>Rated voltage (nameplate data, Ur in IEC 60909-0). It is primarily used for short circuit data exchange according to IEC 60909.</xs:documentation>
                      <xs:documentation>The attribute shall be a positive value.</xs:documentation>
@@ -1123,7 +1133,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="PowerElectronicsThermalUnit"
-                   sawsdl:modelReference="http://epri.com/gmdm#PowerElectronicsThermalUnit">
+                   sawsdl:modelReference="http://epri.com/gmdm/2025#PowerElectronicsThermalUnit">
       <xs:annotation>
          <xs:documentation>A thermal unit that is connected via an inverter such as through a back-to-back converter</xs:documentation>
       </xs:annotation>
@@ -1133,16 +1143,19 @@
                <xs:element name="FossilFuels"
                            minOccurs="0"
                            maxOccurs="1"
-                           type="m:FossilFuel"
-                           sawsdl:modelReference="http://epri.com/gmdm#PowerElectronicsThermalUnit.FossilFuels">
+                           sawsdl:modelReference="http://epri.com/gmdm/2025#PowerElectronicsThermalUnit.FossilFuels">
                   <xs:annotation/>
+                  <xs:complexType sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#FossilFuel">
+                     <xs:attribute name="ref" type="xs:string" use="required"/>
+                     <xs:attribute name="referenceType" type="xs:string" use="optional"/>
+                  </xs:complexType>
                </xs:element>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="PowerElectronicsUnit"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#PowerElectronicsUnit">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerElectronicsUnit">
       <xs:annotation>
          <xs:documentation>A generating unit or battery or aggregation that connects to the AC network using power electronics rather than rotating machines.</xs:documentation>
       </xs:annotation>
@@ -1153,7 +1166,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="m:ActivePower"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#PowerElectronicsUnit.maxP">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerElectronicsUnit.maxP">
                   <xs:annotation>
                      <xs:documentation>Maximum active power limit. This is the maximum (nameplate) limit for the unit.</xs:documentation>
                   </xs:annotation>
@@ -1162,19 +1175,19 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="m:ActivePower"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#PowerElectronicsUnit.minP">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerElectronicsUnit.minP">
                   <xs:annotation>
                      <xs:documentation>Minimum active power limit. This is the minimum (nameplate) limit for the unit.</xs:documentation>
                   </xs:annotation>
                </xs:element>
                <xs:element name="PowerElectronicsConnection"
-                           minOccurs="1"
+                           minOccurs="0"
                            maxOccurs="1"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#PowerElectronicsUnit.PowerElectronicsConnection">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerElectronicsUnit.PowerElectronicsConnection">
                   <xs:annotation>
                      <xs:documentation>A power electronics unit has a connection to the AC network.</xs:documentation>
                   </xs:annotation>
-                  <xs:complexType sawsdl:modelReference="http://cim.ucaiug.io/ns#PowerElectronicsConnection">
+                  <xs:complexType sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerElectronicsConnection">
                      <xs:attribute name="ref" type="xs:string" use="required"/>
                      <xs:attribute name="referenceType" type="xs:string" use="optional"/>
                   </xs:complexType>
@@ -1184,7 +1197,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="PowerElectronicsWindUnit"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#PowerElectronicsWindUnit">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerElectronicsWindUnit">
       <xs:annotation>
          <xs:documentation>A wind generating unit that connects to the AC network with power electronics rather than rotating machines or an aggregation of such units.</xs:documentation>
       </xs:annotation>
@@ -1195,7 +1208,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="PowerSystemResource"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#PowerSystemResource">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerSystemResource">
       <xs:annotation>
          <xs:documentation>A power system resource (PSR) can be an item of equipment such as a switch, an equipment container containing many individual items of equipment such as a substation, or an organisational entity such as sub-control area. Power system resources can have measurements associated.</xs:documentation>
       </xs:annotation>
@@ -1206,7 +1219,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="PowerTransformer"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#PowerTransformer">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerTransformer">
       <xs:annotation>
          <xs:documentation>An electrical device consisting of  two or more coupled windings, with or without a magnetic core, for introducing mutual coupling between electric circuits. Transformers can be used to control voltage and phase shift (active power flow).</xs:documentation>
          <xs:documentation>A power transformer may be composed of separate transformer tanks that need not be identical.</xs:documentation>
@@ -1220,7 +1233,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="PowerTransformerEnd"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#PowerTransformerEnd">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerTransformerEnd">
       <xs:annotation>
          <xs:documentation>A PowerTransformerEnd is associated with each Terminal of a PowerTransformer.</xs:documentation>
          <xs:documentation>The impedance values r, r0, x, and x0 of a PowerTransformerEnd represents a star equivalent as follows.</xs:documentation>
@@ -1237,7 +1250,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="m:Susceptance"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#PowerTransformerEnd.b">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerTransformerEnd.b">
                   <xs:annotation>
                      <xs:documentation>Magnetizing branch susceptance (B mag).  The value can be positive or negative.</xs:documentation>
                   </xs:annotation>
@@ -1246,7 +1259,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="m:Conductance"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#PowerTransformerEnd.g">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerTransformerEnd.g">
                   <xs:annotation>
                      <xs:documentation>Magnetizing branch conductance.</xs:documentation>
                   </xs:annotation>
@@ -1255,7 +1268,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="xs:integer"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#PowerTransformerEnd.phaseAngleClock">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerTransformerEnd.phaseAngleClock">
                   <xs:annotation>
                      <xs:documentation>Terminal voltage phase angle displacement where 360 degrees are represented with clock hours. The valid values are 0 to 11. For example, for the secondary side end of a transformer with vector group code of 'Dyn11', specify the connection kind as wye with neutral and specify the phase angle of the clock as 11.  The clock value of the transformer end number specified as 1, is assumed to be zero.  Note the transformer end number is not assumed to be the same as the terminal sequence number.</xs:documentation>
                   </xs:annotation>
@@ -1264,7 +1277,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="m:Resistance"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#PowerTransformerEnd.r">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerTransformerEnd.r">
                   <xs:annotation>
                      <xs:documentation>Resistance (star-model) of the transformer end.</xs:documentation>
                      <xs:documentation>The attribute shall be equal to or greater than zero for non-equivalent transformers.</xs:documentation>
@@ -1274,7 +1287,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="m:ApparentPower"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#PowerTransformerEnd.ratedS">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerTransformerEnd.ratedS">
                   <xs:annotation>
                      <xs:documentation>Normal apparent power rating.</xs:documentation>
                      <xs:documentation>The attribute shall be a positive value. For a two-winding transformer the values for the high and low voltage sides shall be identical.</xs:documentation>
@@ -1284,7 +1297,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="m:Voltage"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#PowerTransformerEnd.ratedU">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerTransformerEnd.ratedU">
                   <xs:annotation>
                      <xs:documentation>Rated voltage: phase-phase for three-phase windings, and either phase-phase or phase-neutral for single-phase windings.</xs:documentation>
                      <xs:documentation>A high voltage side, as given by TransformerEnd.endNumber, shall have a ratedU that is greater than or equal to ratedU for the lower voltage sides.</xs:documentation>
@@ -1295,7 +1308,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="m:Reactance"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#PowerTransformerEnd.x">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerTransformerEnd.x">
                   <xs:annotation>
                      <xs:documentation>Positive sequence series reactance (star-model) of the transformer end.</xs:documentation>
                   </xs:annotation>
@@ -1305,7 +1318,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="ProtectedSwitch"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#ProtectedSwitch">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ProtectedSwitch">
       <xs:annotation>
          <xs:documentation>A ProtectedSwitch is a switching device that can be operated by ProtectionEquipment.</xs:documentation>
       </xs:annotation>
@@ -1316,7 +1329,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="m:CurrentFlow"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#ProtectedSwitch.breakingCapacity">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ProtectedSwitch.breakingCapacity">
                   <xs:annotation>
                      <xs:documentation>The maximum fault current a breaking device can break safely under prescribed conditions of use.</xs:documentation>
                   </xs:annotation>
@@ -1326,7 +1339,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="RatioTapChanger"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#RatioTapChanger">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#RatioTapChanger">
       <xs:annotation>
          <xs:documentation>A tap changer that changes the voltage ratio impacting the voltage magnitude but not the phase angle across the transformer.</xs:documentation>
          <xs:documentation>Angle sign convention (general): Positive value indicates a positive phase shift from the winding where the tap is located to the other winding (for a two-winding transformer).</xs:documentation>
@@ -1338,7 +1351,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="m:PerCent"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#RatioTapChanger.stepVoltageIncrement">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#RatioTapChanger.stepVoltageIncrement">
                   <xs:annotation>
                      <xs:documentation>Tap step increment, in per cent of rated voltage of the power transformer end, per step position.</xs:documentation>
                      <xs:documentation>When the increment is negative, the voltage decreases when the tap step increases.</xs:documentation>
@@ -1347,18 +1360,21 @@
                <xs:element name="TransformerEnd"
                            minOccurs="1"
                            maxOccurs="1"
-                           type="m:TransformerEnd"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#RatioTapChanger.TransformerEnd">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#RatioTapChanger.TransformerEnd">
                   <xs:annotation>
                      <xs:documentation>Transformer end to which this ratio tap changer belongs.</xs:documentation>
                   </xs:annotation>
+                  <xs:complexType sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TransformerEnd">
+                     <xs:attribute name="ref" type="xs:string" use="required"/>
+                     <xs:attribute name="referenceType" type="xs:string" use="optional"/>
+                  </xs:complexType>
                </xs:element>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="Recloser"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#Recloser">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Recloser">
       <xs:annotation>
          <xs:documentation>Pole-mounted fault interrupter with built-in phase and ground relays, current transformer (CT), and supplemental controls.</xs:documentation>
       </xs:annotation>
@@ -1369,7 +1385,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="RegulatingCondEq"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#RegulatingCondEq">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#RegulatingCondEq">
       <xs:annotation>
          <xs:documentation>A type of conducting equipment that can regulate a quantity (i.e. voltage or flow) at a specific point in the network.</xs:documentation>
       </xs:annotation>
@@ -1380,7 +1396,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="m:RegulatingControl"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#RegulatingCondEq.RegulatingControl">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#RegulatingCondEq.RegulatingControl">
                   <xs:annotation>
                      <xs:documentation>The regulating control scheme in which this equipment participates.</xs:documentation>
                   </xs:annotation>
@@ -1390,7 +1406,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="RegulatingControl"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#RegulatingControl">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#RegulatingControl">
       <xs:annotation>
          <xs:documentation>Specifies a set of equipment that works together to control a power system quantity such as voltage or flow.</xs:documentation>
          <xs:documentation>Remote bus voltage control is possible by specifying the controlled terminal located at some place remote from the controlling equipment.</xs:documentation>
@@ -1408,7 +1424,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="xs:boolean"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#RegulatingControl.discrete">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#RegulatingControl.discrete">
                   <xs:annotation>
                      <xs:documentation>If true, indicates that regulation is performed in the simulation in a discrete mode. If false, indicates that non-discrete regulation is used in the simulation. This applies to equipment with discrete controls, e.g. tap changers and shunt compensators.</xs:documentation>
                   </xs:annotation>
@@ -1417,7 +1433,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="xs:boolean"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#RegulatingControl.enabled">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#RegulatingControl.enabled">
                   <xs:annotation>
                      <xs:documentation>The flag tells if regulation is enabled.</xs:documentation>
                   </xs:annotation>
@@ -1426,7 +1442,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="m:RegulatingControlModeKind"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#RegulatingControl.mode">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#RegulatingControl.mode">
                   <xs:annotation>
                      <xs:documentation>The regulating control mode presently available.  This specification allows for determining the kind of regulation without need for obtaining the units from a schedule.</xs:documentation>
                   </xs:annotation>
@@ -1435,7 +1451,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="m:PhaseCode"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#RegulatingControl.monitoredPhase">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#RegulatingControl.monitoredPhase">
                   <xs:annotation>
                      <xs:documentation>Phase voltage controlling this regulator, measured at regulator location.</xs:documentation>
                   </xs:annotation>
@@ -1444,7 +1460,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="xs:float"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#RegulatingControl.targetDeadband">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#RegulatingControl.targetDeadband">
                   <xs:annotation>
                      <xs:documentation>This is the deadband set on the controller. It is used with discrete control to avoid excessive tap changes in tap changers and state changes in shunt compensator banks while regulating.  The units in which deadband is expressed are based on RegulatingControl.mode. The attribute shall be a positive value or zero. If RegulatingControl.discrete is set to "false", the RegulatingControl.targetDeadband is to be ignored in simulations. If TapChanger.ctRatio or TapChanger.ptRatio are populated, deadband shall be expressed in secondary units.</xs:documentation>
                      <xs:documentation>Note that for instance, if the targetValue is 100 kV and the targetDeadband is 2 kV the range is from 99 to 101 kV.</xs:documentation>
@@ -1454,7 +1470,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="xs:float"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#RegulatingControl.targetValue">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#RegulatingControl.targetValue">
                   <xs:annotation>
                      <xs:documentation>The target value set on the controller. It is the starting value for a steady state solution. This value can be used for the target value without the use of schedules. The value has the units appropriate to the mode attribute.</xs:documentation>
                      <xs:documentation>If used for a TapChangerControl and if TapChanger.ctRatio or TapChanger.ptRatio are populated, the target value shall be expressed in secondary units. As an example, with PT ratio of 60 on a 12.47 KV distribution system, a phase to ground PT has a ratio of 7200 volts primary to 120 volts secondary. If the required primary target is 7128 volts for a single phase tap changer then the value of targetValue would equal 118.8 volts secondary (7128/60).</xs:documentation>
@@ -1463,11 +1479,11 @@
                <xs:element name="Terminal"
                            minOccurs="1"
                            maxOccurs="1"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#RegulatingControl.Terminal">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#RegulatingControl.Terminal">
                   <xs:annotation>
                      <xs:documentation>The terminal associated with this regulating control.  The terminal is associated instead of a node, since the terminal could connect into either a topological node or a connectivity node.  Sometimes it is useful to model regulation at a terminal of a bus bar object.</xs:documentation>
                   </xs:annotation>
-                  <xs:complexType sawsdl:modelReference="http://cim.ucaiug.io/ns#Terminal">
+                  <xs:complexType sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Terminal">
                      <xs:attribute name="ref" type="xs:string" use="required"/>
                      <xs:attribute name="referenceType" type="xs:string" use="optional"/>
                   </xs:complexType>
@@ -1477,7 +1493,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:simpleType name="RegulatingControlModeKind"
-                  sawsdl:modelReference="http://cim.ucaiug.io/ns#RegulatingControlModeKind">
+                  sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#RegulatingControlModeKind">
       <xs:annotation>
          <xs:documentation>The kind of regulation model.   For example regulating voltage, reactive power, active power, etc.</xs:documentation>
       </xs:annotation>
@@ -1525,7 +1541,7 @@
       </xs:restriction>
    </xs:simpleType>
    <xs:complexType name="RotatingMachine"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#RotatingMachine">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#RotatingMachine">
       <xs:annotation>
          <xs:documentation>A rotating machine which may be used as a generator or motor.</xs:documentation>
       </xs:annotation>
@@ -1536,7 +1552,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="m:ApparentPower"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#RotatingMachine.ratedS">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#RotatingMachine.ratedS">
                   <xs:annotation>
                      <xs:documentation>Nameplate apparent power rating for the unit.</xs:documentation>
                      <xs:documentation>The attribute shall have a positive value.</xs:documentation>
@@ -1546,7 +1562,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="m:Voltage"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#RotatingMachine.ratedU">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#RotatingMachine.ratedU">
                   <xs:annotation>
                      <xs:documentation>Rated voltage (nameplate data, Ur in IEC 60909-0). It is primarily used for short circuit data exchange according to IEC 60909.</xs:documentation>
                      <xs:documentation>The attribute shall be a positive value.</xs:documentation>
@@ -1557,7 +1573,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="Sectionaliser"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#Sectionaliser">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Sectionaliser">
       <xs:annotation>
          <xs:documentation>Automatic switch that will lock open to isolate a faulted section. It may, or may not, have load breaking capability. Its primary purpose is to provide fault sectionalising at locations where the fault current is either too high, or too low, for proper coordination of fuses.</xs:documentation>
       </xs:annotation>
@@ -1568,18 +1584,37 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="SeriesCompensator"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#SeriesCompensator">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#SeriesCompensator">
       <xs:annotation>
          <xs:documentation>A Series Compensator is a series capacitor or reactor or an AC transmission line without charging susceptance.  It is a two terminal device.</xs:documentation>
       </xs:annotation>
       <xs:complexContent>
          <xs:extension base="m:ConductingEquipment">
-            <xs:sequence/>
+            <xs:sequence>
+               <xs:element name="r"
+                           minOccurs="1"
+                           maxOccurs="1"
+                           type="m:Resistance"
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#SeriesCompensator.r">
+                  <xs:annotation>
+                     <xs:documentation>Positive sequence resistance.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="x"
+                           minOccurs="1"
+                           maxOccurs="1"
+                           type="m:Reactance"
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#SeriesCompensator.x">
+                  <xs:annotation>
+                     <xs:documentation>Positive sequence reactance.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="ShuntCompensator"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#ShuntCompensator">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ShuntCompensator">
       <xs:annotation>
          <xs:documentation>A shunt capacitor or reactor or switchable bank of shunt capacitors or reactors. A section of a shunt compensator is an individual capacitor or reactor. A negative value for bPerSection indicates that the compensator is a reactor. ShuntCompensator is a single terminal device.  Ground is implied.</xs:documentation>
       </xs:annotation>
@@ -1590,7 +1625,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="m:Seconds"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#ShuntCompensator.aVRDelay">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ShuntCompensator.aVRDelay">
                   <xs:annotation>
                      <xs:documentation>An automatic voltage regulation delay (AVRDelay) which is the time delay from a change in voltage to when the capacitor is allowed to change state. This filters out temporary changes in voltage.</xs:documentation>
                   </xs:annotation>
@@ -1599,7 +1634,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="xs:integer"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#ShuntCompensator.maximumSections">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ShuntCompensator.maximumSections">
                   <xs:annotation>
                      <xs:documentation>The maximum number of sections that may be switched in.</xs:documentation>
                   </xs:annotation>
@@ -1608,7 +1643,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="m:Voltage"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#ShuntCompensator.nomU">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ShuntCompensator.nomU">
                   <xs:annotation>
                      <xs:documentation>The voltage at which the nominal reactive power may be calculated. This should normally be within 10% of the voltage at which the capacitor is connected to the network.</xs:documentation>
                   </xs:annotation>
@@ -1617,7 +1652,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="xs:integer"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#ShuntCompensator.normalSections">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ShuntCompensator.normalSections">
                   <xs:annotation>
                      <xs:documentation>The normal number of sections switched in. The value shall be between zero and ShuntCompensator.maximumSections.</xs:documentation>
                   </xs:annotation>
@@ -1627,7 +1662,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="ShuntCompensatorPhase"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#ShuntCompensatorPhase">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ShuntCompensatorPhase">
       <xs:annotation>
          <xs:documentation>Single phase of a multi-phase shunt compensator when its attributes might be different per phase.</xs:documentation>
       </xs:annotation>
@@ -1638,7 +1673,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="xs:integer"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#ShuntCompensatorPhase.maximumSections">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ShuntCompensatorPhase.maximumSections">
                   <xs:annotation>
                      <xs:documentation>The maximum number of sections that may be switched in for this phase.</xs:documentation>
                   </xs:annotation>
@@ -1647,7 +1682,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="xs:integer"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#ShuntCompensatorPhase.normalSections">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ShuntCompensatorPhase.normalSections">
                   <xs:annotation>
                      <xs:documentation>For the capacitor phase, the normal number of sections switched in. The value shall be between zero and ShuntCompensatorPhase.maximumSections.</xs:documentation>
                   </xs:annotation>
@@ -1656,7 +1691,8 @@
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
-   <xs:complexType name="Switch" sawsdl:modelReference="http://cim.ucaiug.io/ns#Switch">
+   <xs:complexType name="Switch"
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Switch">
       <xs:annotation>
          <xs:documentation>A generic device designed to close, or open, or both, one or more electric circuits.  All switches are two terminal devices including grounding switches. The ACDCTerminal.connected at the two sides of the switch shall not be considered for assessing switch connectivity, i.e. only Switch.open, .normalOpen and .locked are relevant.</xs:documentation>
       </xs:annotation>
@@ -1667,7 +1703,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="m:CurrentFlow"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#Switch.ratedCurrent">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Switch.ratedCurrent">
                   <xs:annotation>
                      <xs:documentation>The maximum continuous current carrying capacity in amps governed by the device material and construction.</xs:documentation>
                      <xs:documentation>The attribute shall be a positive value.</xs:documentation>
@@ -1678,7 +1714,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="SynchronousMachine"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#SynchronousMachine">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#SynchronousMachine">
       <xs:annotation>
          <xs:documentation>An electromechanical device that operates with shaft rotating synchronously with the network. It is a single machine operating either as a generator or synchronous condenser or pump.</xs:documentation>
       </xs:annotation>
@@ -1689,7 +1725,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="TapChanger"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#TapChanger">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TapChanger">
       <xs:annotation>
          <xs:documentation>Mechanism for changing transformer winding tap positions.</xs:documentation>
       </xs:annotation>
@@ -1697,19 +1733,26 @@
          <xs:extension base="m:PowerSystemResource">
             <xs:sequence>
                <xs:element name="controlEnabled"
-                           minOccurs="1"
+                           minOccurs="0"
                            maxOccurs="1"
                            type="xs:boolean"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TapChanger.controlEnabled">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TapChanger.controlEnabled">
                   <xs:annotation>
                      <xs:documentation>Specifies the regulation status of the equipment.  True is regulating, false is not regulating.</xs:documentation>
                   </xs:annotation>
+               </xs:element>
+               <xs:element name="ctRating"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           type="xs:float"
+                           sawsdl:modelReference="http://epri.com/gmdm/2025#TapChanger.ctRating">
+                  <xs:annotation/>
                </xs:element>
                <xs:element name="ctRatio"
                            minOccurs="0"
                            maxOccurs="1"
                            type="xs:float"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TapChanger.ctRatio">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TapChanger.ctRatio">
                   <xs:annotation>
                      <xs:documentation>Built-in current transformer ratio. If a value is specified, then RegulatingControl.targetValue (and RegulatingControl.targetDeadband, RegulatingControl.maxAllowedTargetValue and RegulatingControl.minAllowedTargetValue) are expressed in secondary units.</xs:documentation>
                   </xs:annotation>
@@ -1718,7 +1761,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="xs:integer"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TapChanger.highStep">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TapChanger.highStep">
                   <xs:annotation>
                      <xs:documentation>Highest possible tap step position, advance from neutral.</xs:documentation>
                      <xs:documentation>The attribute shall be greater than lowStep.</xs:documentation>
@@ -1728,7 +1771,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="m:Seconds"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TapChanger.initialDelay">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TapChanger.initialDelay">
                   <xs:annotation>
                      <xs:documentation>For an LTC, the delay for initial tap changer operation (first step change).</xs:documentation>
                   </xs:annotation>
@@ -1737,7 +1780,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="xs:integer"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TapChanger.lowStep">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TapChanger.lowStep">
                   <xs:annotation>
                      <xs:documentation>Lowest possible tap step position, retard from neutral.</xs:documentation>
                   </xs:annotation>
@@ -1746,7 +1789,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="xs:boolean"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TapChanger.ltcFlag">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TapChanger.ltcFlag">
                   <xs:annotation>
                      <xs:documentation>Specifies whether or not a TapChanger has load tap changing capabilities.</xs:documentation>
                   </xs:annotation>
@@ -1755,7 +1798,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="xs:integer"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TapChanger.neutralStep">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TapChanger.neutralStep">
                   <xs:annotation>
                      <xs:documentation>The neutral tap step position for this winding.</xs:documentation>
                      <xs:documentation>The attribute shall be equal to or greater than lowStep and equal or less than highStep.</xs:documentation>
@@ -1766,7 +1809,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="m:Voltage"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TapChanger.neutralU">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TapChanger.neutralU">
                   <xs:annotation>
                      <xs:documentation>Voltage at which the winding operates at the neutral tap setting. It is the voltage at the terminal of the PowerTransformerEnd associated with the tap changer when all tap changers on the transformer are at their neutralStep position.  Normally neutralU of the tap changer is the same as ratedU of the PowerTransformerEnd, but it can differ in special cases such as when the tapping mechanism is separate from the winding more common on lower voltage transformers.</xs:documentation>
                      <xs:documentation>This attribute is not relevant for PhaseTapChangerAsymmetrical, PhaseTapChangerSymmetrical and PhaseTapChangerLinear.</xs:documentation>
@@ -1776,7 +1819,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="xs:float"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TapChanger.ptRatio">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TapChanger.ptRatio">
                   <xs:annotation>
                      <xs:documentation>Built-in potential (voltage) transformer ratio. If a value is specified, then RegulatingControl.targetValue (and RegulatingControl.targetDeadband, RegulatingControl.maxAllowedTargetValue, RegulatingControl.minAllowedTargetValue as well as TapChangerControl.maxLimitVoltage and TapChangerControl.minLimitVoltage) are expressed in secondary units.</xs:documentation>
                   </xs:annotation>
@@ -1785,16 +1828,16 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="m:Seconds"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TapChanger.subsequentDelay">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TapChanger.subsequentDelay">
                   <xs:annotation>
                      <xs:documentation>For an LTC, the delay for subsequent tap changer operation (second and later step changes).</xs:documentation>
                   </xs:annotation>
                </xs:element>
                <xs:element name="TapChangerControl"
-                           minOccurs="1"
+                           minOccurs="0"
                            maxOccurs="1"
                            type="m:TapChangerControl"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TapChanger.TapChangerControl">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TapChanger.TapChangerControl">
                   <xs:annotation>
                      <xs:documentation>The regulating control scheme in which this tap changer participates.</xs:documentation>
                   </xs:annotation>
@@ -1804,7 +1847,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="TapChangerControl"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#TapChangerControl">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TapChangerControl">
       <xs:annotation>
          <xs:documentation>Describes behaviour specific to tap changers, e.g. how the voltage at the end of a line varies with the load level and compensation of the voltage drop by tap adjustment. When TapChanger.ctRatio and .ptRatio are present, RegulatingControl.targetVoltage RegulatingControl.targetDeadband, RegulatingControl.maxAllowedTargetValue, RegulatingControl.minAllowedTargetValue as well as TapChangerControl.maxLimitVoltage and TapChangerControl.minLimitVoltage  shall be expressed in terms of secondary CT currents and PT voltages.</xs:documentation>
       </xs:annotation>
@@ -1812,10 +1855,10 @@
          <xs:extension base="m:RegulatingControl">
             <xs:sequence>
                <xs:element name="lineDropCompensation"
-                           minOccurs="1"
+                           minOccurs="0"
                            maxOccurs="1"
                            type="xs:boolean"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TapChangerControl.lineDropCompensation">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TapChangerControl.lineDropCompensation">
                   <xs:annotation>
                      <xs:documentation>If true, the line drop compensation is to be applied.</xs:documentation>
                   </xs:annotation>
@@ -1824,7 +1867,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="m:Resistance"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TapChangerControl.lineDropR">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TapChangerControl.lineDropR">
                   <xs:annotation>
                      <xs:documentation>Line drop compensator resistance setting for normal (forward) power flow.</xs:documentation>
                   </xs:annotation>
@@ -1833,25 +1876,25 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="m:Reactance"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TapChangerControl.lineDropX">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TapChangerControl.lineDropX">
                   <xs:annotation>
                      <xs:documentation>Line drop compensator reactance setting for normal (forward) power flow.</xs:documentation>
                   </xs:annotation>
                </xs:element>
                <xs:element name="maxLimitVoltage"
-                           minOccurs="1"
+                           minOccurs="0"
                            maxOccurs="1"
                            type="m:Voltage"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TapChangerControl.maxLimitVoltage">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TapChangerControl.maxLimitVoltage">
                   <xs:annotation>
                      <xs:documentation>Maximum allowed regulated voltage on the PT secondary. This is the locally measured secondary voltage, including the effect of any line drop compensation. Typically used for distribution circuit voltage regulator. Sometimes referred to as first-house protection. If utilized, then TapChanger.ptRatio must be supplied.</xs:documentation>
                   </xs:annotation>
                </xs:element>
                <xs:element name="minLimitVoltage"
-                           minOccurs="1"
+                           minOccurs="0"
                            maxOccurs="1"
                            type="m:Voltage"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TapChangerControl.minLimitVoltage">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TapChangerControl.minLimitVoltage">
                   <xs:annotation>
                      <xs:documentation>Minimum allowed regulated voltage on the PT secondary.  This is the locally measured secondary voltage, including the effect of any line drop compensation. Typically used for distribution circuit voltage regulator. Sometimes referred to as last-house protection. If utilized, then TapChanger.ptRatio must be supplied.</xs:documentation>
                   </xs:annotation>
@@ -1860,7 +1903,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="m:Resistance"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TapChangerControl.reverseLineDropR">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TapChangerControl.reverseLineDropR">
                   <xs:annotation>
                      <xs:documentation>Line drop compensator resistance setting for reverse power flow.</xs:documentation>
                   </xs:annotation>
@@ -1869,7 +1912,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="m:Reactance"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TapChangerControl.reverseLineDropX">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TapChangerControl.reverseLineDropX">
                   <xs:annotation>
                      <xs:documentation>Line drop compensator reactance setting for reverse power flow.</xs:documentation>
                   </xs:annotation>
@@ -1878,42 +1921,42 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="m:Voltage"
-                           sawsdl:modelReference="http://epri.com/gmdm#TapChangerControl.reverseTargetDeadband">
+                           sawsdl:modelReference="http://epri.com/gmdm/2025#TapChangerControl.reverseTargetDeadband">
                   <xs:annotation/>
                </xs:element>
                <xs:element name="reverseTargetValue"
                            minOccurs="0"
                            maxOccurs="1"
                            type="m:Voltage"
-                           sawsdl:modelReference="http://epri.com/gmdm#TapChangerControl.reverseTargetValue">
+                           sawsdl:modelReference="http://epri.com/gmdm/2025#TapChangerControl.reverseTargetValue">
                   <xs:annotation/>
                </xs:element>
                <xs:element name="reverseToNeutral"
                            minOccurs="0"
                            maxOccurs="1"
                            type="xs:boolean"
-                           sawsdl:modelReference="http://epri.com/gmdm#TapChangerControl.reverseToNeutral">
+                           sawsdl:modelReference="http://epri.com/gmdm/2025#TapChangerControl.reverseToNeutral">
                   <xs:annotation/>
                </xs:element>
                <xs:element name="reversible"
-                           minOccurs="1"
+                           minOccurs="0"
                            maxOccurs="1"
                            type="xs:boolean"
-                           sawsdl:modelReference="http://epri.com/gmdm#TapChangerControl.reversible">
+                           sawsdl:modelReference="http://epri.com/gmdm/2025#TapChangerControl.reversible">
                   <xs:annotation/>
                </xs:element>
                <xs:element name="reversingDelay"
                            minOccurs="0"
                            maxOccurs="1"
                            type="m:Seconds"
-                           sawsdl:modelReference="http://epri.com/gmdm#TapChangerControl.reversingDelay">
+                           sawsdl:modelReference="http://epri.com/gmdm/2025#TapChangerControl.reversingDelay">
                   <xs:annotation/>
                </xs:element>
                <xs:element name="reversingPowerThreshold"
                            minOccurs="0"
                            maxOccurs="1"
                            type="m:ApparentPower"
-                           sawsdl:modelReference="http://epri.com/gmdm#TapChangerControl.reversingPowerThreshold">
+                           sawsdl:modelReference="http://epri.com/gmdm/2025#TapChangerControl.reversingPowerThreshold">
                   <xs:annotation/>
                </xs:element>
             </xs:sequence>
@@ -1921,7 +1964,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="Terminal"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#Terminal">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Terminal">
       <xs:annotation>
          <xs:documentation>An AC electrical connection point to a piece of conducting equipment. Terminals are connected at physical connection points called connectivity nodes.</xs:documentation>
       </xs:annotation>
@@ -1932,7 +1975,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="ThermalGeneratingUnit"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#ThermalGeneratingUnit">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ThermalGeneratingUnit">
       <xs:annotation>
          <xs:documentation>A generating unit whose prime mover could be a steam turbine, combustion turbine, or diesel engine.</xs:documentation>
       </xs:annotation>
@@ -1943,7 +1986,7 @@
                            minOccurs="0"
                            maxOccurs="unbounded"
                            type="m:FossilFuel"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#ThermalGeneratingUnit.FossilFuels">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ThermalGeneratingUnit.FossilFuels">
                   <xs:annotation>
                      <xs:documentation>A thermal generating unit may have one or more fossil fuels.</xs:documentation>
                   </xs:annotation>
@@ -1953,7 +1996,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="TransformerCoreAdmittance"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerCoreAdmittance">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TransformerCoreAdmittance">
       <xs:annotation>
          <xs:documentation>The transformer core admittance.  Used to specify the core admittance of a transformer in a manner that can be shared among power transformers.</xs:documentation>
       </xs:annotation>
@@ -1964,7 +2007,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="m:Susceptance"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerCoreAdmittance.b">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TransformerCoreAdmittance.b">
                   <xs:annotation>
                      <xs:documentation>Magnetizing branch susceptance (B mag).  The value can be positive or negative.</xs:documentation>
                   </xs:annotation>
@@ -1973,7 +2016,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="m:Conductance"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerCoreAdmittance.g">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TransformerCoreAdmittance.g">
                   <xs:annotation>
                      <xs:documentation>Magnetizing branch conductance (G mag).</xs:documentation>
                   </xs:annotation>
@@ -1983,7 +2026,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="TransformerEnd"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerEnd">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TransformerEnd">
       <xs:annotation>
          <xs:documentation>A conducting connection point of a power transformer. It corresponds to a physical transformer winding terminal. In earlier CIM versions, the TransformerWinding class served a similar purpose, but this class is more flexible because it associates to terminal but is not a specialization of ConductingEquipment.</xs:documentation>
       </xs:annotation>
@@ -1994,7 +2037,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="xs:boolean"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerEnd.grounded">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TransformerEnd.grounded">
                   <xs:annotation>
                      <xs:documentation>Used only for Yn and Zn connections indicated by PowerTransformerEnd.connectionKind. If true, the neutral is grounded and attributes TransformerEnd.rground and TransformerEnd.xground are required. If false, the attributes TransformerEnd.rground and TransformerEnd.xground are not considered.</xs:documentation>
                   </xs:annotation>
@@ -2003,7 +2046,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="m:Resistance"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerEnd.rground">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TransformerEnd.rground">
                   <xs:annotation>
                      <xs:documentation>Resistance part of neutral impedance. Zero indicates solidly grounded or grounded through a reactor.</xs:documentation>
                   </xs:annotation>
@@ -2012,7 +2055,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="m:Reactance"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerEnd.xground">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TransformerEnd.xground">
                   <xs:annotation>
                      <xs:documentation>Reactance part of neutral impedance. Zero indicates solidly grounded or grounded through a reactor.</xs:documentation>
                   </xs:annotation>
@@ -2021,7 +2064,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="m:TransformerCoreAdmittance"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerEnd.CoreAdmittance">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TransformerEnd.CoreAdmittance">
                   <xs:annotation>
                      <xs:documentation>Core admittance of this transformer end, representing magnetising current and core losses. The full values of the transformer should be supplied for one transformer end only.</xs:documentation>
                   </xs:annotation>
@@ -2031,7 +2074,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="TransformerMeshImpedance"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerMeshImpedance">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TransformerMeshImpedance">
       <xs:annotation>
          <xs:documentation>Transformer mesh impedance (Delta-model) between transformer ends.</xs:documentation>
          <xs:documentation>The typical case is that this class describes the impedance between two transformer ends pair-wise, i.e. the cardinalities at both transformer end associations are 1. However, in cases where two or more transformer ends are modelled the cardinalities are larger than 1.</xs:documentation>
@@ -2043,7 +2086,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="m:Resistance"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerMeshImpedance.r">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TransformerMeshImpedance.r">
                   <xs:annotation>
                      <xs:documentation>Resistance between the 'from' and the 'to' end, seen from the 'from' end.</xs:documentation>
                   </xs:annotation>
@@ -2052,7 +2095,7 @@
                            minOccurs="1"
                            maxOccurs="1"
                            type="m:Reactance"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerMeshImpedance.x">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TransformerMeshImpedance.x">
                   <xs:annotation>
                      <xs:documentation>Reactance between the 'from' and the 'to' end, seen from the 'from' end.</xs:documentation>
                   </xs:annotation>
@@ -2061,7 +2104,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="m:TransformerEnd"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerMeshImpedance.FromTransformerEnd">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TransformerMeshImpedance.FromTransformerEnd">
                   <xs:annotation>
                      <xs:documentation>From end this mesh impedance is connected to. It determines the voltage reference.</xs:documentation>
                   </xs:annotation>
@@ -2070,7 +2113,7 @@
                            minOccurs="0"
                            maxOccurs="unbounded"
                            type="m:TransformerEnd"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerMeshImpedance.ToTransformerEnd">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TransformerMeshImpedance.ToTransformerEnd">
                   <xs:annotation>
                      <xs:documentation>All transformer ends this mesh impedance is connected to.</xs:documentation>
                   </xs:annotation>
@@ -2080,7 +2123,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="TransformerTankEnd"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#TransformerTankEnd">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#TransformerTankEnd">
       <xs:annotation>
          <xs:documentation>Transformer tank end represents an individual winding for unbalanced models or for transformer tanks connected into a bank (and bank is modelled with the PowerTransformer).</xs:documentation>
       </xs:annotation>
@@ -2091,7 +2134,7 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:simpleType name="WindGenUnitKind"
-                  sawsdl:modelReference="http://cim.ucaiug.io/ns#WindGenUnitKind">
+                  sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#WindGenUnitKind">
       <xs:annotation>
          <xs:documentation>Kind of wind generating unit.</xs:documentation>
       </xs:annotation>
@@ -2109,7 +2152,7 @@
       </xs:restriction>
    </xs:simpleType>
    <xs:complexType name="WindGeneratingUnit"
-                   sawsdl:modelReference="http://cim.ucaiug.io/ns#WindGeneratingUnit">
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#WindGeneratingUnit">
       <xs:annotation>
          <xs:documentation>A wind driven generating unit, connected to the grid by means of a rotating machine.  May be used to represent a single turbine or an aggregation.</xs:documentation>
       </xs:annotation>
@@ -2120,7 +2163,7 @@
                            minOccurs="0"
                            maxOccurs="1"
                            type="m:WindGenUnitKind"
-                           sawsdl:modelReference="http://cim.ucaiug.io/ns#WindGeneratingUnit.windGenUnitType">
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#WindGeneratingUnit.windGenUnitType">
                   <xs:annotation>
                      <xs:documentation>The kind of wind generating unit.</xs:documentation>
                   </xs:annotation>
@@ -2130,108 +2173,112 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:simpleType name="ActivePower"
-                  sawsdl:modelReference="http://cim.ucaiug.io/ns#ActivePower">
+                  sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ActivePower">
       <xs:annotation>
          <xs:documentation>Product of RMS value of the voltage and the RMS value of the in-phase component of the current.</xs:documentation>
       </xs:annotation>
       <xs:restriction base="xs:float"/>
    </xs:simpleType>
    <xs:simpleType name="ApparentPower"
-                  sawsdl:modelReference="http://cim.ucaiug.io/ns#ApparentPower">
+                  sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ApparentPower">
       <xs:annotation>
          <xs:documentation>Product of the RMS value of the voltage and the RMS value of the current.</xs:documentation>
       </xs:annotation>
       <xs:restriction base="xs:float"/>
    </xs:simpleType>
    <xs:simpleType name="Conductance"
-                  sawsdl:modelReference="http://cim.ucaiug.io/ns#Conductance">
+                  sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Conductance">
       <xs:annotation>
          <xs:documentation>Factor by which voltage must be multiplied to give corresponding power lost from a circuit. Real part of admittance.</xs:documentation>
       </xs:annotation>
       <xs:restriction base="xs:float"/>
    </xs:simpleType>
    <xs:simpleType name="CurrentFlow"
-                  sawsdl:modelReference="http://cim.ucaiug.io/ns#CurrentFlow">
+                  sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#CurrentFlow">
       <xs:annotation>
          <xs:documentation>Electrical current with sign convention: positive flow is out of the conducting equipment into the connectivity node. Can be both AC and DC.</xs:documentation>
       </xs:annotation>
       <xs:restriction base="xs:float"/>
    </xs:simpleType>
-   <xs:simpleType name="Length" sawsdl:modelReference="http://cim.ucaiug.io/ns#Length">
+   <xs:simpleType name="Length"
+                  sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Length">
       <xs:annotation>
          <xs:documentation>Unit of length. It shall be a positive value or zero.</xs:documentation>
       </xs:annotation>
       <xs:restriction base="xs:float"/>
    </xs:simpleType>
-   <xs:simpleType name="PerCent" sawsdl:modelReference="http://cim.ucaiug.io/ns#PerCent">
+   <xs:simpleType name="PerCent"
+                  sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PerCent">
       <xs:annotation>
          <xs:documentation>Percentage on a defined base. For example, specify as 100 to indicate at the defined base.</xs:documentation>
       </xs:annotation>
       <xs:restriction base="xs:float"/>
    </xs:simpleType>
    <xs:simpleType name="Reactance"
-                  sawsdl:modelReference="http://cim.ucaiug.io/ns#Reactance">
+                  sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Reactance">
       <xs:annotation>
          <xs:documentation>Reactance (imaginary part of impedance), at rated frequency.</xs:documentation>
       </xs:annotation>
       <xs:restriction base="xs:float"/>
    </xs:simpleType>
    <xs:simpleType name="ReactancePerLength"
-                  sawsdl:modelReference="http://cim.ucaiug.io/ns#ReactancePerLength">
+                  sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ReactancePerLength">
       <xs:annotation>
          <xs:documentation>Reactance (imaginary part of impedance) per unit of length, at rated frequency.</xs:documentation>
       </xs:annotation>
       <xs:restriction base="xs:float"/>
    </xs:simpleType>
    <xs:simpleType name="ReactivePower"
-                  sawsdl:modelReference="http://cim.ucaiug.io/ns#ReactivePower">
+                  sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ReactivePower">
       <xs:annotation>
          <xs:documentation>Product of RMS value of the voltage and the RMS value of the quadrature component of the current.</xs:documentation>
       </xs:annotation>
       <xs:restriction base="xs:float"/>
    </xs:simpleType>
    <xs:simpleType name="RealEnergy"
-                  sawsdl:modelReference="http://cim.ucaiug.io/ns#RealEnergy">
+                  sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#RealEnergy">
       <xs:annotation>
          <xs:documentation>Real electrical energy.</xs:documentation>
       </xs:annotation>
       <xs:restriction base="xs:float"/>
    </xs:simpleType>
    <xs:simpleType name="Resistance"
-                  sawsdl:modelReference="http://cim.ucaiug.io/ns#Resistance">
+                  sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Resistance">
       <xs:annotation>
          <xs:documentation>Resistance (real part of impedance).</xs:documentation>
       </xs:annotation>
       <xs:restriction base="xs:float"/>
    </xs:simpleType>
    <xs:simpleType name="ResistancePerLength"
-                  sawsdl:modelReference="http://cim.ucaiug.io/ns#ResistancePerLength">
+                  sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ResistancePerLength">
       <xs:annotation>
          <xs:documentation>Resistance (real part of impedance) per unit of length.</xs:documentation>
       </xs:annotation>
       <xs:restriction base="xs:float"/>
    </xs:simpleType>
-   <xs:simpleType name="Seconds" sawsdl:modelReference="http://cim.ucaiug.io/ns#Seconds">
+   <xs:simpleType name="Seconds"
+                  sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Seconds">
       <xs:annotation>
          <xs:documentation>Time, in seconds.</xs:documentation>
       </xs:annotation>
       <xs:restriction base="xs:float"/>
    </xs:simpleType>
    <xs:simpleType name="Susceptance"
-                  sawsdl:modelReference="http://cim.ucaiug.io/ns#Susceptance">
+                  sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Susceptance">
       <xs:annotation>
          <xs:documentation>Imaginary part of admittance.</xs:documentation>
       </xs:annotation>
       <xs:restriction base="xs:float"/>
    </xs:simpleType>
    <xs:simpleType name="SusceptancePerLength"
-                  sawsdl:modelReference="http://cim.ucaiug.io/ns#SusceptancePerLength">
+                  sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#SusceptancePerLength">
       <xs:annotation>
          <xs:documentation>Imaginary part of admittance per unit of length.</xs:documentation>
       </xs:annotation>
       <xs:restriction base="xs:float"/>
    </xs:simpleType>
-   <xs:simpleType name="Voltage" sawsdl:modelReference="http://cim.ucaiug.io/ns#Voltage">
+   <xs:simpleType name="Voltage"
+                  sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Voltage">
       <xs:annotation>
          <xs:documentation>Electrical voltage, can be both AC and DC.</xs:documentation>
       </xs:annotation>

@@ -24,7 +24,7 @@
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
          xmlns:uml="http://iec.ch/TC57/NonStandard/UML#"
          xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-         xml:base="http://cim.ucaiug.io/ns">
+         xml:base="http://cim.ucaiug.io/CIM101/draft">
    <rdf:Description rdf:about="#ACDCTerminal">
       <cims:belongsToCategory rdf:resource="#Package_Core"/>
       <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
@@ -56,7 +56,7 @@ There are three approaches to providing line detail and all use WireAssembly to 
    <rdf:Description rdf:about="#ACLineSegment.PerLengthImpedance">
       <cims:AssociationUsed>Yes</cims:AssociationUsed>
       <cims:inverseRoleName rdf:resource="#PerLengthImpedance.ACLineSegments"/>
-      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..1"/>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per-length impedance of this line segment.</rdfs:comment>
       <rdfs:domain rdf:resource="#ACLineSegment"/>
@@ -390,6 +390,25 @@ EnergyConsumer.pfixed, .qfixed, .pfixedPct and .qfixedPct have meaning only if t
       <rdfs:label xml:lang="en">FossilFuel</rdfs:label>
       <rdfs:subClassOf rdf:resource="#IdentifiedObject"/>
    </rdf:Description>
+   <rdf:Description rdf:about="#FossilFuel.PowerElectronicsThermalUnit">
+      <cims:AssociationUsed>No</cims:AssociationUsed>
+      <cims:inverseRoleName rdf:resource="http://epri.com/gmdm/2025#PowerElectronicsThermalUnit.FossilFuels"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..n"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:domain rdf:resource="#FossilFuel"/>
+      <rdfs:label xml:lang="en">PowerElectronicsThermalUnit</rdfs:label>
+      <rdfs:range rdf:resource="http://epri.com/gmdm/2025#PowerElectronicsThermalUnit"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#FossilFuel.ThermalGeneratingUnit">
+      <cims:AssociationUsed>Yes</cims:AssociationUsed>
+      <cims:inverseRoleName rdf:resource="#ThermalGeneratingUnit.FossilFuels"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..1"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A thermal generating unit may have one or more fossil fuels.</rdfs:comment>
+      <rdfs:domain rdf:resource="#FossilFuel"/>
+      <rdfs:label xml:lang="en">ThermalGeneratingUnit</rdfs:label>
+      <rdfs:range rdf:resource="#ThermalGeneratingUnit"/>
+   </rdf:Description>
    <rdf:Description rdf:about="#FossilFuel.ThermalGeneratingUnit">
       <cims:AssociationUsed>No</cims:AssociationUsed>
       <cims:inverseRoleName rdf:resource="#ThermalGeneratingUnit.FossilFuels"/>
@@ -399,26 +418,6 @@ EnergyConsumer.pfixed, .qfixed, .pfixedPct and .qfixedPct have meaning only if t
       <rdfs:domain rdf:resource="#FossilFuel"/>
       <rdfs:label xml:lang="en">ThermalGeneratingUnit</rdfs:label>
       <rdfs:range rdf:resource="#ThermalGeneratingUnit"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="#FossilFuel.fossilFuelType">
-      <cims:AssociationUsed>Yes</cims:AssociationUsed>
-      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..1"/>
-      <cims:stereotype>gmdm</cims:stereotype>
-      <cims:stereotype>ShadowExtension</cims:stereotype>
-      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The type of fossil fuel, such as coal, oil, or gas.</rdfs:comment>
-      <rdfs:domain rdf:resource="#FossilFuel"/>
-      <rdfs:label xml:lang="en">fossilFuelType</rdfs:label>
-      <rdfs:range rdf:resource="#FuelType"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="#FuelType">
-      <cims:belongsToCategory rdf:resource="#Package_Production"/>
-      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#enumeration"/>
-      <cims:stereotype>gmdm</cims:stereotype>
-      <cims:stereotype>ShadowExtension</cims:stereotype>
-      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Type of fuel.</rdfs:comment>
-      <rdfs:label xml:lang="en">FuelType</rdfs:label>
    </rdf:Description>
    <rdf:Description rdf:about="#FuelType.brownCoalLignite">
       <cims:stereotype>enum</cims:stereotype>
@@ -542,9 +541,9 @@ The attribute shall be a positive value.</rdfs:comment>
       <rdfs:label xml:lang="en">name</rdfs:label>
    </rdf:Description>
    <rdf:Description rdf:about="#Identity">
-      <cims:belongsToCategory rdf:resource="#Package_Compatible_Unit"/>
+      <cims:belongsToCategory rdf:resource="#Package_Core"/>
       <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">,</rdfs:comment>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is a root class to provide common identification for all classes.  IdentifiedObject and any class to be exchanged with RDF XML now inherits from Identity.  mRID is superseded by Identity.identifier, which is typed to be a UUID.</rdfs:comment>
       <rdfs:label xml:lang="en">Identity</rdfs:label>
    </rdf:Description>
    <rdf:Description rdf:about="#Identity.identifier">
@@ -820,24 +819,11 @@ The sum of qConstantImpedance, qConstantCurrent and qConstantPower shall equal 1
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Top package for CIM.</rdfs:comment>
       <rdfs:label xml:lang="en">CIM</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="#Package_Compatible_Unit">
-      <cims:belongsToCategory rdf:resource="#Package_InfDesign"/>
-      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
-      <rdfs:label xml:lang="en">Compatible Unit</rdfs:label>
-   </rdf:Description>
    <rdf:Description rdf:about="#Package_Core">
       <cims:belongsToCategory rdf:resource="#Package_Base"/>
       <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Contains the core PowerSystemResource and ConductingEquipment entities shared by all applications plus common collections of those entities. Not all applications require all the Core entities.  This package does not depend on any other package except the Domain package, but most of the other packages have associations and generalizations that depend on it.</rdfs:comment>
       <rdfs:label xml:lang="en">Core</rdfs:label>
-   </rdf:Description>
-   <rdf:Description rdf:about="#Package_DetailedModelDescription">
-      <cims:belongsToCategory rdf:resource="#Package_Dynamics"/>
-      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
-      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This clause packages classes needed to describe a model for dynamics simulations. This approach enables parties to exchange user defined model description expressed as mathematical expressions. It can also be used to describe standard models. Different profiles that use this information model shall make a choice of language used to describe the equations. The model enables creation of two separate profiles:
-1) a profile to describe the detailed model configuration, and
-2) a profile to enable an exchange of parameters of the model described using profile defined in  1).</rdfs:comment>
-      <rdfs:label xml:lang="en">DetailedModelDescription</rdfs:label>
    </rdf:Description>
    <rdf:Description rdf:about="#Package_Domain">
       <cims:belongsToCategory rdf:resource="#Package_Base"/>
@@ -849,24 +835,6 @@ The sum of qConstantImpedance, qConstantCurrent and qConstantPower shall equal 1
 &amp;lt;&amp;lt;Compound&amp;gt;&amp;gt; A composite of Primitive, enumeration, CIMDatatype or other Compound classes, as long as the Compound classes do not recurse.
 For all datatypes both positive and negative values are allowed unless stated otherwise for a particular datatype.</rdfs:comment>
       <rdfs:label xml:lang="en">Domain</rdfs:label>
-   </rdf:Description>
-   <rdf:Description rdf:about="#Package_Dynamics">
-      <cims:belongsToCategory rdf:resource="#Package_Grid"/>
-      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
-      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The CIM dynamic model definitions reflect the most common IEEE or, in the case of wind models, IEC, representations of models as well as models included in some of the transient stability software widely used by utilities.
-These dynamic models are intended to ensure interoperability between different vendors� software products currently in use by electric utility energy companies, utilities, Transmission System Operators (TSOs), Regional Transmission Organizations (RTOs), and Independent System Operators (ISOs).  It is important to note that each vendor is free to select its own internal implementation of these models.  Differences in vendor results, as long as they are within accepted engineering practice, caused by different internal representations, are acceptable.
-Unless explicitly stated otherwise, the following modelling conventions are followed:
-- limited integrators are of the non-windup type;
-- it shall be possible to enter a time constant of zero (where it makes sense).
-The information in the entire clause "Common Information Model Dynamics package" is reproduced from the UML with the permission of UCAIug.</rdfs:comment>
-      <rdfs:label xml:lang="en">Dynamics</rdfs:label>
-   </rdf:Description>
-   <rdf:Description rdf:about="#Package_Enterprise">
-      <cims:belongsToCategory rdf:resource="#Package_CIM"/>
-      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
-      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The 61968 UML subpackages of the CIM are developed and maintained by a CIM User Group task force.
-Currently, normative parts of the model support the needs of information exchange defined in the profiles for outage management, asset management, work management, customer support, metering, and DER.</rdfs:comment>
-      <rdfs:label xml:lang="en">Enterprise</rdfs:label>
    </rdf:Description>
    <rdf:Description rdf:about="#Package_GMDM">
       <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
@@ -893,18 +861,6 @@ Currently, normative parts of the model support the needs of information exchang
       <cims:belongsToCategory rdf:resource="#Package_GMDM"/>
       <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
       <rdfs:label xml:lang="en">GridEXT</rdfs:label>
-   </rdf:Description>
-   <rdf:Description rdf:about="#Package_InfDesign">
-      <cims:belongsToCategory rdf:resource="#Package_InfEnterprise"/>
-      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
-      <rdfs:label xml:lang="en">InfDesign</rdfs:label>
-   </rdf:Description>
-   <rdf:Description rdf:about="#Package_InfEnterprise">
-      <cims:belongsToCategory rdf:resource="#Package_Enterprise"/>
-      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
-      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This package and its subpackages contain informative (unstable) elements of the model, expected to evolve a lot or to be removed, and not published as IEC document yet. Some portions of it will be reworked and moved to normative packages as the need arises, and some portions may be removed.
-WG14 does not generate documentation for this informative portion of the model.</rdfs:comment>
-      <rdfs:label xml:lang="en">InfEnterprise</rdfs:label>
    </rdf:Description>
    <rdf:Description rdf:about="#Package_LoadModel">
       <cims:belongsToCategory rdf:resource="#Package_Base"/>
@@ -1190,8 +1146,9 @@ The integer values are from IEC 61968-9 to support revenue metering applications
       <rdfs:label xml:lang="en">s2N</rdfs:label>
    </rdf:Description>
    <rdf:Description rdf:about="#PhaseImpedanceData">
-      <cims:belongsToCategory rdf:resource="#Package_WiresEXT"/>
+      <cims:belongsToCategory rdf:resource="#Package_Wires"/>
       <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
+      <cims:stereotype>ShadowExtension</cims:stereotype>
       <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Per length phase impedance matrix entry describes impedance and conductance matrix element values for a specific row and column of the matrix.
 The phases to which each entry applies can be determined by means of the row and column attributes which bind to a sequence number provided in either ACLineSegmentPhase or WirePosition (which also specify phase). Due to physical symmetry that is reflected in the matrix, only the lower triangle of the matrix is populated with the row and column method. That is, the column attribute is always less than or equal to the row attribute.</rdfs:comment>
@@ -1201,7 +1158,7 @@ The phases to which each entry applies can be determined by means of the row and
    <rdf:Description rdf:about="#PhaseImpedanceData.PhaseImpedance">
       <cims:AssociationUsed>Yes</cims:AssociationUsed>
       <cims:inverseRoleName rdf:resource="#PerLengthPhaseImpedance.PhaseImpedanceData"/>
-      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..1"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conductor phase impedance to which this data belongs.</rdfs:comment>
       <rdfs:domain rdf:resource="#PhaseImpedanceData"/>
@@ -1328,7 +1285,7 @@ The attribute shall be a positive value.</rdfs:comment>
    <rdf:Description rdf:about="#PowerElectronicsUnit.PowerElectronicsConnection">
       <cims:AssociationUsed>Yes</cims:AssociationUsed>
       <cims:inverseRoleName rdf:resource="#PowerElectronicsConnection.PowerElectronicsUnit"/>
-      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..1"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A power electronics unit has a connection to the AC network.</rdfs:comment>
       <rdfs:domain rdf:resource="#PowerElectronicsUnit"/>
@@ -1481,8 +1438,6 @@ The attribute shall be a positive value.</rdfs:comment>
    <rdf:Description rdf:about="#RatioTapChanger">
       <cims:belongsToCategory rdf:resource="#Package_Wires"/>
       <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
-      <cims:stereotype>gmdm</cims:stereotype>
-      <cims:stereotype>ShadowExtension</cims:stereotype>
       <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A tap changer that changes the voltage ratio impacting the voltage magnitude but not the phase angle across the transformer.
 Angle sign convention (general): Positive value indicates a positive phase shift from the winding where the tap is located to the other winding (for a two-winding transformer).</rdfs:comment>
@@ -1729,8 +1684,8 @@ The attributes minAllowedTargetValue and maxAllowedTargetValue are not related t
       <rdfs:label xml:lang="en">enabled</rdfs:label>
    </rdf:Description>
    <rdf:Description rdf:about="#RegulatingControl.mode">
-      <cims:AssociationUsed>Yes</cims:AssociationUsed>
       <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The regulating control mode presently available.  This specification allows for determining the kind of regulation without need for obtaining the units from a schedule.</rdfs:comment>
       <rdfs:domain rdf:resource="#RegulatingControl"/>
@@ -1738,8 +1693,8 @@ The attributes minAllowedTargetValue and maxAllowedTargetValue are not related t
       <rdfs:range rdf:resource="#RegulatingControlModeKind"/>
    </rdf:Description>
    <rdf:Description rdf:about="#RegulatingControl.monitoredPhase">
-      <cims:AssociationUsed>Yes</cims:AssociationUsed>
       <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phase voltage controlling this regulator, measured at regulator location.</rdfs:comment>
       <rdfs:domain rdf:resource="#RegulatingControl"/>
@@ -1983,6 +1938,24 @@ The attribute shall be a positive value.</rdfs:comment>
       <rdfs:label xml:lang="en">SeriesCompensator</rdfs:label>
       <rdfs:subClassOf rdf:resource="#ConductingEquipment"/>
    </rdf:Description>
+   <rdf:Description rdf:about="#SeriesCompensator.r">
+      <cims:dataType rdf:resource="#Resistance"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..1"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Positive sequence resistance.</rdfs:comment>
+      <rdfs:domain rdf:resource="#SeriesCompensator"/>
+      <rdfs:label xml:lang="en">r</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#SeriesCompensator.x">
+      <cims:dataType rdf:resource="#Reactance"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..1"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Positive sequence reactance.</rdfs:comment>
+      <rdfs:domain rdf:resource="#SeriesCompensator"/>
+      <rdfs:label xml:lang="en">x</rdfs:label>
+   </rdf:Description>
    <rdf:Description rdf:about="#ShuntCompensator">
       <cims:belongsToCategory rdf:resource="#Package_Wires"/>
       <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
@@ -2052,7 +2025,7 @@ The attribute shall be a positive value.</rdfs:comment>
       <rdfs:label xml:lang="en">normalSections</rdfs:label>
    </rdf:Description>
    <rdf:Description rdf:about="#String">
-      <cims:belongsToCategory rdf:resource="#Package_DetailedModelDescription"/>
+      <cims:belongsToCategory rdf:resource="#Package_Domain"/>
       <cims:stereotype>Primitive</cims:stereotype>
       <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A string consisting of a sequence of characters. The character encoding is UTF-8. The string length is unspecified and unlimited.</rdfs:comment>
@@ -2174,7 +2147,7 @@ The attribute shall be a positive value.</rdfs:comment>
    </rdf:Description>
    <rdf:Description rdf:about="#TapChanger.controlEnabled">
       <cims:dataType rdf:resource="#Boolean"/>
-      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..1"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
       <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Specifies the regulation status of the equipment.  True is regulating, false is not regulating.</rdfs:comment>
@@ -2286,7 +2259,7 @@ This attribute is not relevant for PhaseTapChangerAsymmetrical, PhaseTapChangerS
    </rdf:Description>
    <rdf:Description rdf:about="#TapChangerControl.lineDropCompensation">
       <cims:dataType rdf:resource="#Boolean"/>
-      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..1"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
       <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">If true, the line drop compensation is to be applied.</rdfs:comment>
@@ -2313,7 +2286,7 @@ This attribute is not relevant for PhaseTapChangerAsymmetrical, PhaseTapChangerS
    </rdf:Description>
    <rdf:Description rdf:about="#TapChangerControl.maxLimitVoltage">
       <cims:dataType rdf:resource="#Voltage"/>
-      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..1"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
       <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maximum allowed regulated voltage on the PT secondary. This is the locally measured secondary voltage, including the effect of any line drop compensation. Typically used for distribution circuit voltage regulator. Sometimes referred to as first-house protection. If utilized, then TapChanger.ptRatio must be supplied.</rdfs:comment>
@@ -2322,7 +2295,7 @@ This attribute is not relevant for PhaseTapChangerAsymmetrical, PhaseTapChangerS
    </rdf:Description>
    <rdf:Description rdf:about="#TapChangerControl.minLimitVoltage">
       <cims:dataType rdf:resource="#Voltage"/>
-      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..1"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
       <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum allowed regulated voltage on the PT secondary.  This is the locally measured secondary voltage, including the effect of any line drop compensation. Typically used for distribution circuit voltage regulator. Sometimes referred to as last-house protection. If utilized, then TapChanger.ptRatio must be supplied.</rdfs:comment>
@@ -2373,6 +2346,16 @@ This attribute is not relevant for PhaseTapChangerAsymmetrical, PhaseTapChangerS
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A generating unit whose prime mover could be a steam turbine, combustion turbine, or diesel engine.</rdfs:comment>
       <rdfs:label xml:lang="en">ThermalGeneratingUnit</rdfs:label>
       <rdfs:subClassOf rdf:resource="#GeneratingUnit"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#ThermalGeneratingUnit.FossilFuels">
+      <cims:AssociationUsed>No</cims:AssociationUsed>
+      <cims:inverseRoleName rdf:resource="#FossilFuel.ThermalGeneratingUnit"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..n"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A thermal generating unit may have one or more fossil fuels.</rdfs:comment>
+      <rdfs:domain rdf:resource="#ThermalGeneratingUnit"/>
+      <rdfs:label xml:lang="en">FossilFuels</rdfs:label>
+      <rdfs:range rdf:resource="#FossilFuel"/>
    </rdf:Description>
    <rdf:Description rdf:about="#ThermalGeneratingUnit.FossilFuels">
       <cims:AssociationUsed>Yes</cims:AssociationUsed>
@@ -2438,19 +2421,9 @@ This attribute is not relevant for PhaseTapChangerAsymmetrical, PhaseTapChangerS
       <rdfs:range rdf:resource="#TransformerCoreAdmittance"/>
    </rdf:Description>
    <rdf:Description rdf:about="#TransformerEnd.FromMeshImpedance">
-      <cims:AssociationUsed>Yes</cims:AssociationUsed>
+      <cims:AssociationUsed>No</cims:AssociationUsed>
       <cims:inverseRoleName rdf:resource="#TransformerMeshImpedance.FromTransformerEnd"/>
-      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..n"/>
-      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">All mesh impedances between this 'to' and other 'from' transformer ends.</rdfs:comment>
-      <rdfs:domain rdf:resource="#TransformerEnd"/>
-      <rdfs:label xml:lang="en">FromMeshImpedance</rdfs:label>
-      <rdfs:range rdf:resource="#TransformerMeshImpedance"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="#TransformerEnd.FromMeshImpedance">
-      <cims:AssociationUsed>Yes</cims:AssociationUsed>
-      <cims:inverseRoleName rdf:resource="#TransformerMeshImpedance.FromTransformerEnd"/>
-      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..n"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..n"/>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">All mesh impedances between this 'to' and other 'from' transformer ends.</rdfs:comment>
       <rdfs:domain rdf:resource="#TransformerEnd"/>
@@ -2514,17 +2487,7 @@ The typical case is that this class describes the impedance between two transfor
       <rdfs:subClassOf rdf:resource="#IdentifiedObject"/>
    </rdf:Description>
    <rdf:Description rdf:about="#TransformerMeshImpedance.FromTransformerEnd">
-      <cims:AssociationUsed>No</cims:AssociationUsed>
-      <cims:inverseRoleName rdf:resource="#TransformerEnd.FromMeshImpedance"/>
-      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
-      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">From end this mesh impedance is connected to. It determines the voltage reference.</rdfs:comment>
-      <rdfs:domain rdf:resource="#TransformerMeshImpedance"/>
-      <rdfs:label xml:lang="en">FromTransformerEnd</rdfs:label>
-      <rdfs:range rdf:resource="#TransformerEnd"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="#TransformerMeshImpedance.FromTransformerEnd">
-      <cims:AssociationUsed>No</cims:AssociationUsed>
+      <cims:AssociationUsed>Yes</cims:AssociationUsed>
       <cims:inverseRoleName rdf:resource="#TransformerEnd.FromMeshImpedance"/>
       <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -2641,124 +2604,130 @@ The typical case is that this class describes the impedance between two transfor
       <rdfs:label xml:lang="en">windGenUnitType</rdfs:label>
       <rdfs:range rdf:resource="#WindGenUnitKind"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://epri.com/gmdm#ConverterControlModeKind">
+   <rdf:Description rdf:about="http://epri.com/gmdm#FuelType.diesel">
+      <cims:stereotype>enum</cims:stereotype>
+      <rdf:type rdf:resource=""/>
+      <rdfs:label xml:lang="en">FuelType.diesel</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://epri.com/gmdm/2025#ConverterControlModeKind">
       <cims:belongsToCategory rdf:resource="#Package_WiresEXT"/>
       <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#enumeration"/>
       <cims:stereotype>gmdm</cims:stereotype>
       <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
       <rdfs:label xml:lang="en">ConverterControlModeKind</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://epri.com/gmdm#ConverterControlModeKind.constantPowerFactor">
+   <rdf:Description rdf:about="http://epri.com/gmdm/2025#ConverterControlModeKind.constantPowerFactor">
       <cims:stereotype>enum</cims:stereotype>
-      <rdf:type rdf:resource="http://epri.com/gmdm#ConverterControlModeKind"/>
+      <rdf:type rdf:resource="http://epri.com/gmdm/2025#ConverterControlModeKind"/>
       <rdfs:label xml:lang="en">constantPowerFactor</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://epri.com/gmdm#ConverterControlModeKind.constantReactivePower">
+   <rdf:Description rdf:about="http://epri.com/gmdm/2025#ConverterControlModeKind.constantReactivePower">
       <cims:stereotype>enum</cims:stereotype>
-      <rdf:type rdf:resource="http://epri.com/gmdm#ConverterControlModeKind"/>
+      <rdf:type rdf:resource="http://epri.com/gmdm/2025#ConverterControlModeKind"/>
       <rdfs:label xml:lang="en">constantReactivePower</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://epri.com/gmdm#ConverterControlModeKind.dynamic">
+   <rdf:Description rdf:about="http://epri.com/gmdm/2025#ConverterControlModeKind.dynamic">
       <cims:stereotype>enum</cims:stereotype>
-      <rdf:type rdf:resource="http://epri.com/gmdm#ConverterControlModeKind"/>
+      <rdf:type rdf:resource="http://epri.com/gmdm/2025#ConverterControlModeKind"/>
       <rdfs:label xml:lang="en">dynamic</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://epri.com/gmdm#FossilFuel.PowerElectronicsThermalUnit">
-      <cims:AssociationUsed>No</cims:AssociationUsed>
-      <cims:inverseRoleName rdf:resource="http://epri.com/gmdm#PowerElectronicsThermalUnit.FossilFuels"/>
-      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..n"/>
-      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-      <rdfs:domain rdf:resource="#FossilFuel"/>
-      <rdfs:label xml:lang="en">PowerElectronicsThermalUnit</rdfs:label>
-      <rdfs:range rdf:resource="http://epri.com/gmdm#PowerElectronicsThermalUnit"/>
+   <rdf:Description rdf:about="http://epri.com/gmdm/2025#FuelType">
+      <cims:belongsToCategory rdf:resource="#Package_ProductionEXT"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#enumeration"/>
+      <cims:stereotype>gmdm</cims:stereotype>
+      <cims:stereotype>ShadowExtension</cims:stereotype>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:label xml:lang="en">FuelType</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://epri.com/gmdm#FuelType.diesel">
-      <cims:stereotype>enum</cims:stereotype>
-      <rdf:type rdf:resource="http://epri.com/gmdm#FuelType"/>
-      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diesel</rdfs:comment>
-      <rdfs:label xml:lang="en">diesel</rdfs:label>
-   </rdf:Description>
-   <rdf:Description rdf:about="http://epri.com/gmdm#PowerElectronicsConnection.controlMode">
-      <cims:AssociationUsed>Yes</cims:AssociationUsed>
+   <rdf:Description rdf:about="http://epri.com/gmdm/2025#PowerElectronicsConnection.controlMode">
       <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
       <cims:stereotype>gmdm</cims:stereotype>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inverter control mode indicating whether reactive power output is based on constant PF or constant Q</rdfs:comment>
-      <rdfs:domain rdf:resource="#PowerElectronicsConnection"/>
+      <rdfs:domain rdf:resource="http://epri.com/gmdm/2025#PowerElectronicsConnection"/>
       <rdfs:label xml:lang="en">controlMode</rdfs:label>
-      <rdfs:range rdf:resource="http://epri.com/gmdm#ConverterControlModeKind"/>
+      <rdfs:range rdf:resource="http://epri.com/gmdm/2025#ConverterControlModeKind"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://epri.com/gmdm#PowerElectronicsThermalUnit">
+   <rdf:Description rdf:about="http://epri.com/gmdm/2025#PowerElectronicsThermalUnit">
       <cims:belongsToCategory rdf:resource="#Package_ProductionEXT"/>
       <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
+      <cims:stereotype>gmdm</cims:stereotype>
       <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A thermal unit that is connected via an inverter such as through a back-to-back converter</rdfs:comment>
       <rdfs:label xml:lang="en">PowerElectronicsThermalUnit</rdfs:label>
       <rdfs:subClassOf rdf:resource="#PowerElectronicsUnit"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://epri.com/gmdm#PowerElectronicsThermalUnit.FossilFuels">
+   <rdf:Description rdf:about="http://epri.com/gmdm/2025#PowerElectronicsThermalUnit.FossilFuels">
       <cims:AssociationUsed>Yes</cims:AssociationUsed>
-      <cims:inverseRoleName rdf:resource="http://epri.com/gmdm#FossilFuel.PowerElectronicsThermalUnit"/>
+      <cims:inverseRoleName rdf:resource="#FossilFuel.PowerElectronicsThermalUnit"/>
       <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-      <rdfs:domain rdf:resource="http://epri.com/gmdm#PowerElectronicsThermalUnit"/>
+      <rdfs:domain rdf:resource="http://epri.com/gmdm/2025#PowerElectronicsThermalUnit"/>
       <rdfs:label xml:lang="en">FossilFuels</rdfs:label>
       <rdfs:range rdf:resource="#FossilFuel"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://epri.com/gmdm#TapChanger.ctRating">
+   <rdf:Description rdf:about="http://epri.com/gmdm/2025#TapChanger.ctRating">
       <cims:dataType rdf:resource="#Float"/>
       <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
       <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <cims:stereotype>gmdm</cims:stereotype>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-      <rdfs:domain rdf:resource="#TapChanger"/>
+      <rdfs:domain rdf:resource="http://epri.com/gmdm/2025#TapChanger"/>
       <rdfs:label xml:lang="en">ctRating</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://epri.com/gmdm#TapChangerControl.reverseTargetDeadband">
+   <rdf:Description rdf:about="http://epri.com/gmdm/2025#TapChangerControl.reverseTargetDeadband">
       <cims:dataType rdf:resource="#Voltage"/>
       <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
       <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <cims:stereotype>gmdm</cims:stereotype>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-      <rdfs:domain rdf:resource="#TapChangerControl"/>
+      <rdfs:domain rdf:resource="http://epri.com/gmdm/2025#TapChangerControl"/>
       <rdfs:label xml:lang="en">reverseTargetDeadband</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://epri.com/gmdm#TapChangerControl.reverseTargetValue">
+   <rdf:Description rdf:about="http://epri.com/gmdm/2025#TapChangerControl.reverseTargetValue">
       <cims:dataType rdf:resource="#Voltage"/>
       <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
       <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <cims:stereotype>gmdm</cims:stereotype>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-      <rdfs:domain rdf:resource="#TapChangerControl"/>
+      <rdfs:domain rdf:resource="http://epri.com/gmdm/2025#TapChangerControl"/>
       <rdfs:label xml:lang="en">reverseTargetValue</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://epri.com/gmdm#TapChangerControl.reverseToNeutral">
+   <rdf:Description rdf:about="http://epri.com/gmdm/2025#TapChangerControl.reverseToNeutral">
       <cims:dataType rdf:resource="#Boolean"/>
       <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
       <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <cims:stereotype>gmdm</cims:stereotype>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-      <rdfs:domain rdf:resource="#TapChangerControl"/>
+      <rdfs:domain rdf:resource="http://epri.com/gmdm/2025#TapChangerControl"/>
       <rdfs:label xml:lang="en">reverseToNeutral</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://epri.com/gmdm#TapChangerControl.reversible">
+   <rdf:Description rdf:about="http://epri.com/gmdm/2025#TapChangerControl.reversible">
       <cims:dataType rdf:resource="#Boolean"/>
-      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..1"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
       <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <cims:stereotype>gmdm</cims:stereotype>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-      <rdfs:domain rdf:resource="#TapChangerControl"/>
+      <rdfs:domain rdf:resource="http://epri.com/gmdm/2025#TapChangerControl"/>
       <rdfs:label xml:lang="en">reversible</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://epri.com/gmdm#TapChangerControl.reversingDelay">
+   <rdf:Description rdf:about="http://epri.com/gmdm/2025#TapChangerControl.reversingDelay">
       <cims:dataType rdf:resource="#Seconds"/>
       <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
       <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <cims:stereotype>gmdm</cims:stereotype>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-      <rdfs:domain rdf:resource="#TapChangerControl"/>
+      <rdfs:domain rdf:resource="http://epri.com/gmdm/2025#TapChangerControl"/>
       <rdfs:label xml:lang="en">reversingDelay</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://epri.com/gmdm#TapChangerControl.reversingPowerThreshold">
+   <rdf:Description rdf:about="http://epri.com/gmdm/2025#TapChangerControl.reversingPowerThreshold">
       <cims:dataType rdf:resource="#ApparentPower"/>
       <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
       <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <cims:stereotype>gmdm</cims:stereotype>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-      <rdfs:domain rdf:resource="#TapChangerControl"/>
+      <rdfs:domain rdf:resource="http://epri.com/gmdm/2025#TapChangerControl"/>
       <rdfs:label xml:lang="en">reversingPowerThreshold</rdfs:label>
    </rdf:Description>
 </rdf:RDF>

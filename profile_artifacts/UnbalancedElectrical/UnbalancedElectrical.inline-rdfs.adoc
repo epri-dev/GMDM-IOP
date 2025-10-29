@@ -60,7 +60,7 @@ There are three approaches to providing line detail and all use WireAssembly to 
 |===
 |name |mult |type |description
 |PerLengthImpedance
-|0..1
+|1..1
 |<<UnbalancedElectrical-PerLengthImpedance,PerLengthImpedance>>
 |
 Per-length impedance of this line segment.
@@ -222,7 +222,7 @@ Full energy storage capacity of the battery. The attribute shall be a positive v
 |<<UnbalancedElectrical-ActivePower,ActivePower>>
 |see <<UnbalancedElectrical-PowerElectronicsUnit,PowerElectronicsUnit>>
 |PowerElectronicsConnection
-|1..1
+|0..1
 |<<UnbalancedElectrical-PowerElectronicsConnection,PowerElectronicsConnection>>
 |see <<UnbalancedElectrical-PowerElectronicsUnit,PowerElectronicsUnit>>
 |description
@@ -440,11 +440,11 @@ The fossil fuel consumed by the non-nuclear thermal generating unit. For example
 [%header,width="100%",cols="25%,^10%,20%,45%a"]
 |===
 |name |mult |type |description
-|fossilFuelType (ShadowExtension, gmdm, enumeration)
+|ThermalGeneratingUnit
 |1..1
-|<<UnbalancedElectrical-FuelType,FuelType>>
+|<<UnbalancedElectrical-ThermalGeneratingUnit,ThermalGeneratingUnit>>
 |
-The type of fossil fuel, such as coal, oil, or gas.
+A thermal generating unit may have one or more fossil fuels.
 
 |===
 
@@ -933,7 +933,7 @@ The matrix entry's row number has a range of possible values from 1 to the condu
 Reactance matrix entry value, per length of unit.
 
 |PhaseImpedance
-|1..1
+|0..1
 |<<UnbalancedElectrical-PerLengthPhaseImpedance,PerLengthPhaseImpedance>>
 |
 Conductor phase impedance to which this data belongs.
@@ -975,7 +975,7 @@ A photovoltaic device or an aggregation of such devices.
 |<<UnbalancedElectrical-ActivePower,ActivePower>>
 |see <<UnbalancedElectrical-PowerElectronicsUnit,PowerElectronicsUnit>>
 |PowerElectronicsConnection
-|1..1
+|0..1
 |<<UnbalancedElectrical-PowerElectronicsConnection,PowerElectronicsConnection>>
 |see <<UnbalancedElectrical-PowerElectronicsUnit,PowerElectronicsUnit>>
 |description
@@ -1105,7 +1105,7 @@ A thermal unit that is connected via an inverter such as through a back-to-back 
 |<<UnbalancedElectrical-ActivePower,ActivePower>>
 |see <<UnbalancedElectrical-PowerElectronicsUnit,PowerElectronicsUnit>>
 |PowerElectronicsConnection
-|1..1
+|0..1
 |<<UnbalancedElectrical-PowerElectronicsConnection,PowerElectronicsConnection>>
 |see <<UnbalancedElectrical-PowerElectronicsUnit,PowerElectronicsUnit>>
 |description
@@ -1146,7 +1146,7 @@ A wind generating unit that connects to the AC network with power electronics ra
 |<<UnbalancedElectrical-ActivePower,ActivePower>>
 |see <<UnbalancedElectrical-PowerElectronicsUnit,PowerElectronicsUnit>>
 |PowerElectronicsConnection
-|1..1
+|0..1
 |<<UnbalancedElectrical-PowerElectronicsConnection,PowerElectronicsConnection>>
 |see <<UnbalancedElectrical-PowerElectronicsUnit,PowerElectronicsUnit>>
 |description
@@ -1359,10 +1359,10 @@ Transformer end to which this ratio tap changer belongs.
 |===
 |name |mult |type |description
 |controlEnabled
-|1..1
+|0..1
 |<<UnbalancedElectrical-Boolean,Boolean>>
 |see <<UnbalancedElectrical-TapChanger,TapChanger>>
-|[extension]#ctRating#
+|[extension]#ctRating (gmdm)#
 |0..1
 |<<UnbalancedElectrical-Float,Float>>
 |see <<UnbalancedElectrical-TapChanger,TapChanger>>
@@ -1512,6 +1512,25 @@ endif::UnbalancedElectrical-description-profile[]
 A Series Compensator is a series capacitor or reactor or an AC transmission line without charging susceptance. It is a two terminal device.
 
 
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|r
+|1..1
+|<<UnbalancedElectrical-Resistance,Resistance>>
+|
+Positive sequence resistance.
+
+|x
+|1..1
+|<<UnbalancedElectrical-Reactance,Reactance>>
+|
+Positive sequence reactance.
+
+|===
+
 *Inherited Members*
 
 [%header,width="100%",cols="25%,^10%,20%,45%a"]
@@ -1592,7 +1611,7 @@ Describes behaviour specific to tap changers, e.g. how the voltage at the end of
 |===
 |name |mult |type |description
 |lineDropCompensation
-|1..1
+|0..1
 |<<UnbalancedElectrical-Boolean,Boolean>>
 |
 If true, the line drop compensation is to be applied.
@@ -1610,13 +1629,13 @@ Line drop compensator resistance setting for normal (forward) power flow.
 Line drop compensator reactance setting for normal (forward) power flow.
 
 |maxLimitVoltage
-|1..1
+|0..1
 |<<UnbalancedElectrical-Voltage,Voltage>>
 |
 Maximum allowed regulated voltage on the PT secondary. This is the locally measured secondary voltage, including the effect of any line drop compensation. Typically used for distribution circuit voltage regulator. Sometimes referred to as first-house protection. If utilized, then TapChanger.ptRatio must be supplied.
 
 |minLimitVoltage
-|1..1
+|0..1
 |<<UnbalancedElectrical-Voltage,Voltage>>
 |
 Minimum allowed regulated voltage on the PT secondary. This is the locally measured secondary voltage, including the effect of any line drop compensation. Typically used for distribution circuit voltage regulator. Sometimes referred to as last-house protection. If utilized, then TapChanger.ptRatio must be supplied.
@@ -1633,27 +1652,27 @@ Line drop compensator resistance setting for reverse power flow.
 |
 Line drop compensator reactance setting for reverse power flow.
 
-|[extension]#reverseTargetDeadband#
+|[extension]#reverseTargetDeadband (gmdm)#
 |0..1
 |<<UnbalancedElectrical-Voltage,Voltage>>
 |
-|[extension]#reverseTargetValue#
+|[extension]#reverseTargetValue (gmdm)#
 |0..1
 |<<UnbalancedElectrical-Voltage,Voltage>>
 |
-|[extension]#reverseToNeutral#
+|[extension]#reverseToNeutral (gmdm)#
 |0..1
 |<<UnbalancedElectrical-Boolean,Boolean>>
 |
-|[extension]#reversible#
-|1..1
+|[extension]#reversible (gmdm)#
+|0..1
 |<<UnbalancedElectrical-Boolean,Boolean>>
 |
-|[extension]#reversingDelay#
+|[extension]#reversingDelay (gmdm)#
 |0..1
 |<<UnbalancedElectrical-Seconds,Seconds>>
 |
-|[extension]#reversingPowerThreshold#
+|[extension]#reversingPowerThreshold (gmdm)#
 |0..1
 |<<UnbalancedElectrical-ApparentPower,ApparentPower>>
 |
@@ -1865,6 +1884,12 @@ Resistance between the 'from' and the 'to' end, seen from the 'from' end.
 |<<UnbalancedElectrical-Reactance,Reactance>>
 |
 Reactance between the 'from' and the 'to' end, seen from the 'from' end.
+
+|FromTransformerEnd
+|0..1
+|<<UnbalancedElectrical-TransformerEnd,TransformerEnd>>
+|
+From end this mesh impedance is connected to. It determines the voltage reference.
 
 |ToTransformerEnd
 |0..*
@@ -2278,7 +2303,7 @@ The name is any free human readable and possibly non unique text naming the obje
 
 
 :Identity:
-,
+This is a root class to provide common identification for all classes. IdentifiedObject and any class to be exchanged with RDF XML now inherits from Identity. mRID is superseded by Identity.identifier, which is typed to be a UUID.
 
 
 *Native Members*
@@ -2380,7 +2405,7 @@ Maximum active power limit. This is the maximum (nameplate) limit for the unit.
 Minimum active power limit. This is the minimum (nameplate) limit for the unit.
 
 |PowerElectronicsConnection
-|1..1
+|0..1
 |<<UnbalancedElectrical-PowerElectronicsConnection,PowerElectronicsConnection>>
 |
 A power electronics unit has a connection to the AC network.
@@ -2847,12 +2872,12 @@ Mechanism for changing transformer winding tap positions.
 |===
 |name |mult |type |description
 |controlEnabled
-|1..1
+|0..1
 |<<UnbalancedElectrical-Boolean,Boolean>>
 |
 Specifies the regulation status of the equipment. True is regulating, false is not regulating.
 
-|[extension]#ctRating#
+|[extension]#ctRating (gmdm)#
 |0..1
 |<<UnbalancedElectrical-Float,Float>>
 |
@@ -3029,12 +3054,13 @@ Core admittance of this transformer end, representing magnetising current and co
 [[UnbalancedElectrical-FuelType]]
 ==== FuelType
 
-Type of fuel.
-
 
 [%header,width="100%",cols="25%,75%a"]
 |===
 |name |description
+
+|FuelType.diesel
+|
 
 |brownCoalLignite
 |
@@ -3049,11 +3075,6 @@ Generic coal, not including lignite type.
 |coalDerivedGas
 |
 Coal derived gas.
-
-
-|diesel
-|
-Diesel
 
 
 |gas
