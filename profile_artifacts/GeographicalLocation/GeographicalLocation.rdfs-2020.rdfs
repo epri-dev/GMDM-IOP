@@ -113,6 +113,17 @@ Voltage measurements are typically obtained from voltage transformers that are c
       <rdfs:label xml:lang="en">Location</rdfs:label>
       <rdfs:range rdf:resource="#Location"/>
    </rdf:Description>
+   <rdf:Description rdf:about="#CoordinateSystem.crsUrn">
+      <cims:dataType rdf:resource="#String"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Uniform Resource Name (URN) for the coordinate reference system (crs) used to define 'Location.PositionPoints'.
+An example would be the European Petroleum Survey Group (EPSG) code for a coordinate reference system, defined in URN under the Open Geospatial Consortium (OGC) namespace as: urn:ogc:def:crs:EPSG::XXXX, where XXXX is an EPSG code (a full list of codes can be found at the EPSG Registry web site http://www.epsg-registry.org/). To define the coordinate system as being WGS84 (latitude, longitude) using an EPSG OGC, this attribute would be urn:ogc:def:crs:EPSG::4236.
+A profile should limit this code to a set of allowed URNs agreed to by all sending and receiving parties.</rdfs:comment>
+      <rdfs:domain rdf:resource="#CoordinateSystem"/>
+      <rdfs:label xml:lang="en">crsUrn</rdfs:label>
+   </rdf:Description>
    <rdf:Description rdf:about="#Disconnector">
       <cims:belongsToCategory rdf:resource="#Package_Wires"/>
       <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
