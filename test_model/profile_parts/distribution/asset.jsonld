@@ -265,22 +265,6 @@
             "cim:IdentifiedObject.name": "ct10_1"
         },
         {
-            "@id": "urn:uuid:f641b544-87a4-4271-8ce2-2ba2e148fc33",
-            "@type": "cim:NoLoadTest",
-            "cim:NoLoadTest.energisedEndVoltage": "7200.0",
-            "cim:NoLoadTest.excitingCurrent": "0.0",
-            "cim:NoLoadTest.excitingCurrentZero": "0.0",
-            "cim:NoLoadTest.loss": "0.0",
-            "cim:NoLoadTest.lossZero": "0.0",
-            "cim:NoLoadTest.EnergisedEnd": {
-                "@id": "bf363cd2-c655-43d1-b4ca-f8e28ee51316",
-                "@type": "TransformerEndInfo"
-            },
-            "cim:TransformerTest.basePower": "7500000.0",
-            "cim:TransformerTest.temperature": "50.0",
-            "cim:IdentifiedObject.name": "feeder_reg_1"
-        },
-        {
             "@id": "urn:uuid:f75f2239-0e7a-4ba7-9bf2-87cc6b4c0a10",
             "@type": "cim:NoLoadTest",
             "cim:NoLoadTest.energisedEndVoltage": "7200.0",
@@ -626,27 +610,6 @@
             "cim:TransformerTest.basePower": "10000.0",
             "cim:TransformerTest.temperature": "50.0",
             "cim:IdentifiedObject.name": "ct10_1"
-        },
-        {
-            "@id": "urn:uuid:659beb81-dccd-4c34-8890-7696a53dd241",
-            "@type": "cim:ShortCircuitTest",
-            "cim:ShortCircuitTest.energisedEndStep": "16",
-            "cim:ShortCircuitTest.groundedEndStep": "16",
-            "cim:ShortCircuitTest.leakageImpedance": "0.006946474",
-            "cim:ShortCircuitTest.leakageImpedanceZero": "0.006946474",
-            "cim:ShortCircuitTest.loss": "0.75",
-            "cim:ShortCircuitTest.lossZero": "0.75",
-            "cim:ShortCircuitTest.EnergisedEnd": {
-                "@id": "bf363cd2-c655-43d1-b4ca-f8e28ee51316",
-                "@type": "TransformerEndInfo"
-            },
-            "cim:ShortCircuitTest.GroundedEnds": {
-                "@id": "349af2ce-1bc7-491c-aeab-582929f0a5dd",
-                "@type": "TransformerEndInfo"
-            },
-            "cim:TransformerTest.basePower": "7500000.0",
-            "cim:TransformerTest.temperature": "50.0",
-            "cim:IdentifiedObject.name": "feeder_reg_1"
         },
         {
             "@id": "urn:uuid:6a8b9d6c-eaf4-4204-ac77-3a5029ffa70c",
@@ -1378,24 +1341,6 @@
             "cim:IdentifiedObject.name": "ct50_1"
         },
         {
-            "@id": "urn:uuid:349af2ce-1bc7-491c-aeab-582929f0a5dd",
-            "@type": "cim:TransformerEndInfo",
-            "cim:TransformerEndInfo.endNumber": "2",
-            "cim:TransformerEndInfo.phaseAngleClock": "0",
-            "cim:TransformerEndInfo.connectionKind": "http://cim.ucaiug.io/CIM101/draft#:WindingConnection.I",
-            "cim:TransformerEndInfo.emergencyS": "11250000.0",
-            "cim:TransformerEndInfo.insulationU": "0.0",
-            "cim:TransformerEndInfo.r": "0.0003456",
-            "cim:TransformerEndInfo.ratedS": "7500000.0",
-            "cim:TransformerEndInfo.shortTermS": "8250000.0",
-            "cim:TransformerEndInfo.TransformerTankInfo": {
-                "@id": "6b95b655-62df-42a2-9d02-090ac9eccfac",
-                "@type": "TransformerTankInfo"
-            },
-            "cim:ConductingAssetInfo.ratedVoltage": "7200.0",
-            "cim:IdentifiedObject.name": "feeder_reg_2"
-        },
-        {
             "@id": "urn:uuid:451f60ff-3d02-4b6a-99cc-c85e82c68850",
             "@type": "cim:TransformerEndInfo",
             "cim:TransformerEndInfo.endNumber": "2",
@@ -1700,24 +1645,6 @@
             },
             "cim:ConductingAssetInfo.ratedVoltage": "120.0",
             "cim:IdentifiedObject.name": "ct50_3"
-        },
-        {
-            "@id": "urn:uuid:bf363cd2-c655-43d1-b4ca-f8e28ee51316",
-            "@type": "cim:TransformerEndInfo",
-            "cim:TransformerEndInfo.endNumber": "1",
-            "cim:TransformerEndInfo.phaseAngleClock": "0",
-            "cim:TransformerEndInfo.connectionKind": "http://cim.ucaiug.io/CIM101/draft#:WindingConnection.I",
-            "cim:TransformerEndInfo.emergencyS": "11250000.0",
-            "cim:TransformerEndInfo.insulationU": "0.0",
-            "cim:TransformerEndInfo.r": "0.0003456",
-            "cim:TransformerEndInfo.ratedS": "7500000.0",
-            "cim:TransformerEndInfo.shortTermS": "8250000.0",
-            "cim:TransformerEndInfo.TransformerTankInfo": {
-                "@id": "6b95b655-62df-42a2-9d02-090ac9eccfac",
-                "@type": "TransformerTankInfo"
-            },
-            "cim:ConductingAssetInfo.ratedVoltage": "7200.0",
-            "cim:IdentifiedObject.name": "feeder_reg_1"
         },
         {
             "@id": "urn:uuid:ce56e371-7f4a-4d25-b5cd-245241f8809b",
@@ -2449,15 +2376,6 @@
             "cim:IdentifiedObject.name": "t5260595b"
         },
         {
-            "@id": "urn:uuid:0b8853f5-f7b5-4a4e-b94b-f785d3b1f0cf",
-            "@type": "cim:TransformerTank",
-            "gmdm:TransformerTank.TransformerTankInfo": {
-                "@id": "6b95b655-62df-42a2-9d02-090ac9eccfac",
-                "@type": "TransformerTankInfo"
-            },
-            "cim:IdentifiedObject.name": "feeder_reg3b"
-        },
-        {
             "@id": "urn:uuid:0bd1e208-1ad9-45a3-bd5f-d5d468faa5c6",
             "@type": "cim:TransformerTank",
             "gmdm:TransformerTank.TransformerTankInfo": {
@@ -2942,15 +2860,6 @@
                 "@type": "TransformerTankInfo"
             },
             "cim:IdentifiedObject.name": "t5260647a"
-        },
-        {
-            "@id": "urn:uuid:17685e45-9064-410d-ba9f-660ada115dfb",
-            "@type": "cim:TransformerTank",
-            "gmdm:TransformerTank.TransformerTankInfo": {
-                "@id": "6b95b655-62df-42a2-9d02-090ac9eccfac",
-                "@type": "TransformerTankInfo"
-            },
-            "cim:IdentifiedObject.name": "feeder_reg1b"
         },
         {
             "@id": "urn:uuid:176d9bec-c009-4d8a-b945-253988c9faf2",
@@ -3664,15 +3573,6 @@
             "cim:IdentifiedObject.name": "t5391751b"
         },
         {
-            "@id": "urn:uuid:292ef6a2-8bdf-460f-a4c4-a00e3786a1d2",
-            "@type": "cim:TransformerTank",
-            "gmdm:TransformerTank.TransformerTankInfo": {
-                "@id": "6b95b655-62df-42a2-9d02-090ac9eccfac",
-                "@type": "TransformerTankInfo"
-            },
-            "cim:IdentifiedObject.name": "feeder_reg2c"
-        },
-        {
             "@id": "urn:uuid:29587022-592f-4ef9-92e2-2d94642b052c",
             "@type": "cim:TransformerTank",
             "gmdm:TransformerTank.TransformerTankInfo": {
@@ -3797,15 +3697,6 @@
                 "@type": "TransformerTankInfo"
             },
             "cim:IdentifiedObject.name": "t5391746b"
-        },
-        {
-            "@id": "urn:uuid:2c3b1a6f-fe59-48df-ba9f-60d51c547fb1",
-            "@type": "cim:TransformerTank",
-            "gmdm:TransformerTank.TransformerTankInfo": {
-                "@id": "6b95b655-62df-42a2-9d02-090ac9eccfac",
-                "@type": "TransformerTankInfo"
-            },
-            "cim:IdentifiedObject.name": "feeder_reg1c"
         },
         {
             "@id": "urn:uuid:2c50396b-e438-4640-925e-4e8b0f478ca1",
@@ -7156,15 +7047,6 @@
             "cim:IdentifiedObject.name": "t5337684a"
         },
         {
-            "@id": "urn:uuid:72121c6c-8f67-412b-972d-316bcb19bf28",
-            "@type": "cim:TransformerTank",
-            "gmdm:TransformerTank.TransformerTankInfo": {
-                "@id": "6b95b655-62df-42a2-9d02-090ac9eccfac",
-                "@type": "TransformerTankInfo"
-            },
-            "cim:IdentifiedObject.name": "feeder_reg3c"
-        },
-        {
             "@id": "urn:uuid:722181d9-8d3f-46b5-87b9-3bbb3e3cbc29",
             "@type": "cim:TransformerTank",
             "gmdm:TransformerTank.TransformerTankInfo": {
@@ -9532,24 +9414,6 @@
             "cim:IdentifiedObject.name": "t5338992b"
         },
         {
-            "@id": "urn:uuid:a43410f7-db5b-4e49-8008-cb64b1e59fd2",
-            "@type": "cim:TransformerTank",
-            "gmdm:TransformerTank.TransformerTankInfo": {
-                "@id": "6b95b655-62df-42a2-9d02-090ac9eccfac",
-                "@type": "TransformerTankInfo"
-            },
-            "cim:IdentifiedObject.name": "feeder_reg2b"
-        },
-        {
-            "@id": "urn:uuid:a44d62b7-a2e7-4b32-8dd2-158a9f0e9b5f",
-            "@type": "cim:TransformerTank",
-            "gmdm:TransformerTank.TransformerTankInfo": {
-                "@id": "6b95b655-62df-42a2-9d02-090ac9eccfac",
-                "@type": "TransformerTankInfo"
-            },
-            "cim:IdentifiedObject.name": "feeder_reg3a"
-        },
-        {
             "@id": "urn:uuid:a46f3e71-3cc6-4941-95b8-979a72ea33de",
             "@type": "cim:TransformerTank",
             "gmdm:TransformerTank.TransformerTankInfo": {
@@ -10097,15 +9961,6 @@
                 "@type": "TransformerTankInfo"
             },
             "cim:IdentifiedObject.name": "t5337648b"
-        },
-        {
-            "@id": "urn:uuid:b1871ffe-234d-4ab6-8914-ddc51ab98f6f",
-            "@type": "cim:TransformerTank",
-            "gmdm:TransformerTank.TransformerTankInfo": {
-                "@id": "6b95b655-62df-42a2-9d02-090ac9eccfac",
-                "@type": "TransformerTankInfo"
-            },
-            "cim:IdentifiedObject.name": "feeder_reg1a"
         },
         {
             "@id": "urn:uuid:b188d6df-e90c-4ef7-b934-b6c888fece9e",
@@ -11528,15 +11383,6 @@
                 "@type": "TransformerTankInfo"
             },
             "cim:IdentifiedObject.name": "t2224387113a"
-        },
-        {
-            "@id": "urn:uuid:cf408eb0-3a1e-487a-a7f1-36ec9fb517d7",
-            "@type": "cim:TransformerTank",
-            "gmdm:TransformerTank.TransformerTankInfo": {
-                "@id": "6b95b655-62df-42a2-9d02-090ac9eccfac",
-                "@type": "TransformerTankInfo"
-            },
-            "cim:IdentifiedObject.name": "feeder_reg2a"
         },
         {
             "@id": "urn:uuid:cf6fefcf-febf-4344-bf3f-3fc9b4a670cd",
@@ -13601,11 +13447,6 @@
             "@id": "urn:uuid:5c73cd2b-b5b5-40be-b577-af25f87d3f66",
             "@type": "cim:TransformerTankInfo",
             "cim:IdentifiedObject.name": "ct37"
-        },
-        {
-            "@id": "urn:uuid:6b95b655-62df-42a2-9d02-090ac9eccfac",
-            "@type": "cim:TransformerTankInfo",
-            "cim:IdentifiedObject.name": "feeder_reg"
         },
         {
             "@id": "urn:uuid:6c8c8ed7-142e-4a4d-bec5-d729237b2af7",

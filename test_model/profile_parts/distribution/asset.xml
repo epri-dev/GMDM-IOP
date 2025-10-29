@@ -196,18 +196,6 @@
   <cim:IdentifiedObject.name>ct10_1</cim:IdentifiedObject.name>
   <cim:Identity.identifier>e57ea8d5-c71a-448b-a958-b93027af0161</cim:Identity.identifier>
 </cim:NoLoadTest>
-<cim:NoLoadTest rdf:about="urn:uuid:f641b544-87a4-4271-8ce2-2ba2e148fc33">
-  <cim:NoLoadTest.energisedEndVoltage>7200.0</cim:NoLoadTest.energisedEndVoltage>
-  <cim:NoLoadTest.excitingCurrent>0.0</cim:NoLoadTest.excitingCurrent>
-  <cim:NoLoadTest.excitingCurrentZero>0.0</cim:NoLoadTest.excitingCurrentZero>
-  <cim:NoLoadTest.loss>0.0</cim:NoLoadTest.loss>
-  <cim:NoLoadTest.lossZero>0.0</cim:NoLoadTest.lossZero>
-  <cim:NoLoadTest.EnergisedEnd rdf:resource="urn:uuid:bf363cd2-c655-43d1-b4ca-f8e28ee51316"/>
-  <cim:TransformerTest.basePower>7500000.0</cim:TransformerTest.basePower>
-  <cim:TransformerTest.temperature>50.0</cim:TransformerTest.temperature>
-  <cim:IdentifiedObject.name>feeder_reg_1</cim:IdentifiedObject.name>
-  <cim:Identity.identifier>f641b544-87a4-4271-8ce2-2ba2e148fc33</cim:Identity.identifier>
-</cim:NoLoadTest>
 <cim:NoLoadTest rdf:about="urn:uuid:f75f2239-0e7a-4ba7-9bf2-87cc6b4c0a10">
   <cim:NoLoadTest.energisedEndVoltage>7200.0</cim:NoLoadTest.energisedEndVoltage>
   <cim:NoLoadTest.excitingCurrent>0.0</cim:NoLoadTest.excitingCurrent>
@@ -441,20 +429,6 @@
   <cim:TransformerTest.temperature>50.0</cim:TransformerTest.temperature>
   <cim:IdentifiedObject.name>ct10_1</cim:IdentifiedObject.name>
   <cim:Identity.identifier>5f1887b2-006b-4b16-8506-ec990f951f7a</cim:Identity.identifier>
-</cim:ShortCircuitTest>
-<cim:ShortCircuitTest rdf:about="urn:uuid:659beb81-dccd-4c34-8890-7696a53dd241">
-  <cim:ShortCircuitTest.energisedEndStep>16</cim:ShortCircuitTest.energisedEndStep>
-  <cim:ShortCircuitTest.groundedEndStep>16</cim:ShortCircuitTest.groundedEndStep>
-  <cim:ShortCircuitTest.leakageImpedance>0.006946474</cim:ShortCircuitTest.leakageImpedance>
-  <cim:ShortCircuitTest.leakageImpedanceZero>0.006946474</cim:ShortCircuitTest.leakageImpedanceZero>
-  <cim:ShortCircuitTest.loss>0.75</cim:ShortCircuitTest.loss>
-  <cim:ShortCircuitTest.lossZero>0.75</cim:ShortCircuitTest.lossZero>
-  <cim:ShortCircuitTest.EnergisedEnd rdf:resource="urn:uuid:bf363cd2-c655-43d1-b4ca-f8e28ee51316"/>
-  <cim:ShortCircuitTest.GroundedEnds rdf:resource="urn:uuid:349af2ce-1bc7-491c-aeab-582929f0a5dd"/>
-  <cim:TransformerTest.basePower>7500000.0</cim:TransformerTest.basePower>
-  <cim:TransformerTest.temperature>50.0</cim:TransformerTest.temperature>
-  <cim:IdentifiedObject.name>feeder_reg_1</cim:IdentifiedObject.name>
-  <cim:Identity.identifier>659beb81-dccd-4c34-8890-7696a53dd241</cim:Identity.identifier>
 </cim:ShortCircuitTest>
 <cim:ShortCircuitTest rdf:about="urn:uuid:6a8b9d6c-eaf4-4204-ac77-3a5029ffa70c">
   <cim:ShortCircuitTest.energisedEndStep>16</cim:ShortCircuitTest.energisedEndStep>
@@ -974,20 +948,6 @@
   <cim:IdentifiedObject.name>ct50_1</cim:IdentifiedObject.name>
   <cim:Identity.identifier>339e68f8-13f4-48d7-832e-1f67956baf11</cim:Identity.identifier>
 </cim:TransformerEndInfo>
-<cim:TransformerEndInfo rdf:about="urn:uuid:349af2ce-1bc7-491c-aeab-582929f0a5dd">
-  <cim:TransformerEndInfo.endNumber>2</cim:TransformerEndInfo.endNumber>
-  <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
-  <cim:TransformerEndInfo.emergencyS>11250000.0</cim:TransformerEndInfo.emergencyS>
-  <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
-  <cim:TransformerEndInfo.r>0.0003456</cim:TransformerEndInfo.r>
-  <cim:TransformerEndInfo.ratedS>7500000.0</cim:TransformerEndInfo.ratedS>
-  <cim:TransformerEndInfo.shortTermS>8250000.0</cim:TransformerEndInfo.shortTermS>
-  <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:6b95b655-62df-42a2-9d02-090ac9eccfac"/>
-  <cim:ConductingAssetInfo.ratedVoltage>7200.0</cim:ConductingAssetInfo.ratedVoltage>
-  <cim:IdentifiedObject.name>feeder_reg_2</cim:IdentifiedObject.name>
-  <cim:Identity.identifier>349af2ce-1bc7-491c-aeab-582929f0a5dd</cim:Identity.identifier>
-</cim:TransformerEndInfo>
 <cim:TransformerEndInfo rdf:about="urn:uuid:451f60ff-3d02-4b6a-99cc-c85e82c68850">
   <cim:TransformerEndInfo.endNumber>2</cim:TransformerEndInfo.endNumber>
   <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
@@ -1225,20 +1185,6 @@
   <cim:ConductingAssetInfo.ratedVoltage>120.0</cim:ConductingAssetInfo.ratedVoltage>
   <cim:IdentifiedObject.name>ct50_3</cim:IdentifiedObject.name>
   <cim:Identity.identifier>bcc2a7ea-247e-4442-afff-528aa0c01980</cim:Identity.identifier>
-</cim:TransformerEndInfo>
-<cim:TransformerEndInfo rdf:about="urn:uuid:bf363cd2-c655-43d1-b4ca-f8e28ee51316">
-  <cim:TransformerEndInfo.endNumber>1</cim:TransformerEndInfo.endNumber>
-  <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
-  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
-  <cim:TransformerEndInfo.emergencyS>11250000.0</cim:TransformerEndInfo.emergencyS>
-  <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
-  <cim:TransformerEndInfo.r>0.0003456</cim:TransformerEndInfo.r>
-  <cim:TransformerEndInfo.ratedS>7500000.0</cim:TransformerEndInfo.ratedS>
-  <cim:TransformerEndInfo.shortTermS>8250000.0</cim:TransformerEndInfo.shortTermS>
-  <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:6b95b655-62df-42a2-9d02-090ac9eccfac"/>
-  <cim:ConductingAssetInfo.ratedVoltage>7200.0</cim:ConductingAssetInfo.ratedVoltage>
-  <cim:IdentifiedObject.name>feeder_reg_1</cim:IdentifiedObject.name>
-  <cim:Identity.identifier>bf363cd2-c655-43d1-b4ca-f8e28ee51316</cim:Identity.identifier>
 </cim:TransformerEndInfo>
 <cim:TransformerEndInfo rdf:about="urn:uuid:ce56e371-7f4a-4d25-b5cd-245241f8809b">
   <cim:TransformerEndInfo.endNumber>1</cim:TransformerEndInfo.endNumber>
@@ -1693,11 +1639,6 @@
   <cim:IdentifiedObject.name>t5260595b</cim:IdentifiedObject.name>
   <cim:Identity.identifier>0b7421d9-48be-4af5-b446-50b11e211aff</cim:Identity.identifier>
 </cim:TransformerTank>
-<cim:TransformerTank rdf:about="urn:uuid:0b8853f5-f7b5-4a4e-b94b-f785d3b1f0cf">
-  <gmdm:TransformerTank.TransformerTankInfo rdf:resource="urn:uuid:6b95b655-62df-42a2-9d02-090ac9eccfac"/>
-  <cim:IdentifiedObject.name>feeder_reg3b</cim:IdentifiedObject.name>
-  <cim:Identity.identifier>0b8853f5-f7b5-4a4e-b94b-f785d3b1f0cf</cim:Identity.identifier>
-</cim:TransformerTank>
 <cim:TransformerTank rdf:about="urn:uuid:0bd1e208-1ad9-45a3-bd5f-d5d468faa5c6">
   <gmdm:TransformerTank.TransformerTankInfo rdf:resource="urn:uuid:5c73cd2b-b5b5-40be-b577-af25f87d3f66"/>
   <cim:IdentifiedObject.name>t5328363b</cim:IdentifiedObject.name>
@@ -1967,11 +1908,6 @@
   <gmdm:TransformerTank.TransformerTankInfo rdf:resource="urn:uuid:10d2f024-080a-490f-a9a8-572c0e12901f"/>
   <cim:IdentifiedObject.name>t5260647a</cim:IdentifiedObject.name>
   <cim:Identity.identifier>174bc277-836c-4ba3-b252-9fb39a2673fd</cim:Identity.identifier>
-</cim:TransformerTank>
-<cim:TransformerTank rdf:about="urn:uuid:17685e45-9064-410d-ba9f-660ada115dfb">
-  <gmdm:TransformerTank.TransformerTankInfo rdf:resource="urn:uuid:6b95b655-62df-42a2-9d02-090ac9eccfac"/>
-  <cim:IdentifiedObject.name>feeder_reg1b</cim:IdentifiedObject.name>
-  <cim:Identity.identifier>17685e45-9064-410d-ba9f-660ada115dfb</cim:Identity.identifier>
 </cim:TransformerTank>
 <cim:TransformerTank rdf:about="urn:uuid:176d9bec-c009-4d8a-b945-253988c9faf2">
   <gmdm:TransformerTank.TransformerTankInfo rdf:resource="urn:uuid:6c8c8ed7-142e-4a4d-bec5-d729237b2af7"/>
@@ -2368,11 +2304,6 @@
   <cim:IdentifiedObject.name>t5391751b</cim:IdentifiedObject.name>
   <cim:Identity.identifier>28d5ff1e-3207-4bc9-ae6d-5bd6d3817830</cim:Identity.identifier>
 </cim:TransformerTank>
-<cim:TransformerTank rdf:about="urn:uuid:292ef6a2-8bdf-460f-a4c4-a00e3786a1d2">
-  <gmdm:TransformerTank.TransformerTankInfo rdf:resource="urn:uuid:6b95b655-62df-42a2-9d02-090ac9eccfac"/>
-  <cim:IdentifiedObject.name>feeder_reg2c</cim:IdentifiedObject.name>
-  <cim:Identity.identifier>292ef6a2-8bdf-460f-a4c4-a00e3786a1d2</cim:Identity.identifier>
-</cim:TransformerTank>
 <cim:TransformerTank rdf:about="urn:uuid:29587022-592f-4ef9-92e2-2d94642b052c">
   <gmdm:TransformerTank.TransformerTankInfo rdf:resource="urn:uuid:2ed9ffb7-c9cc-4512-9b72-8a84a91e74ec"/>
   <cim:IdentifiedObject.name>t227760024b</cim:IdentifiedObject.name>
@@ -2442,11 +2373,6 @@
   <gmdm:TransformerTank.TransformerTankInfo rdf:resource="urn:uuid:10d2f024-080a-490f-a9a8-572c0e12901f"/>
   <cim:IdentifiedObject.name>t5391746b</cim:IdentifiedObject.name>
   <cim:Identity.identifier>2c3698d9-c5ae-49ad-acae-f364991df376</cim:Identity.identifier>
-</cim:TransformerTank>
-<cim:TransformerTank rdf:about="urn:uuid:2c3b1a6f-fe59-48df-ba9f-60d51c547fb1">
-  <gmdm:TransformerTank.TransformerTankInfo rdf:resource="urn:uuid:6b95b655-62df-42a2-9d02-090ac9eccfac"/>
-  <cim:IdentifiedObject.name>feeder_reg1c</cim:IdentifiedObject.name>
-  <cim:Identity.identifier>2c3b1a6f-fe59-48df-ba9f-60d51c547fb1</cim:Identity.identifier>
 </cim:TransformerTank>
 <cim:TransformerTank rdf:about="urn:uuid:2c50396b-e438-4640-925e-4e8b0f478ca1">
   <gmdm:TransformerTank.TransformerTankInfo rdf:resource="urn:uuid:6c8c8ed7-142e-4a4d-bec5-d729237b2af7"/>
@@ -4308,11 +4234,6 @@
   <cim:IdentifiedObject.name>t5337684a</cim:IdentifiedObject.name>
   <cim:Identity.identifier>720454f7-cf0f-40ae-8daf-bc8084059cad</cim:Identity.identifier>
 </cim:TransformerTank>
-<cim:TransformerTank rdf:about="urn:uuid:72121c6c-8f67-412b-972d-316bcb19bf28">
-  <gmdm:TransformerTank.TransformerTankInfo rdf:resource="urn:uuid:6b95b655-62df-42a2-9d02-090ac9eccfac"/>
-  <cim:IdentifiedObject.name>feeder_reg3c</cim:IdentifiedObject.name>
-  <cim:Identity.identifier>72121c6c-8f67-412b-972d-316bcb19bf28</cim:Identity.identifier>
-</cim:TransformerTank>
 <cim:TransformerTank rdf:about="urn:uuid:722181d9-8d3f-46b5-87b9-3bbb3e3cbc29">
   <gmdm:TransformerTank.TransformerTankInfo rdf:resource="urn:uuid:5c73cd2b-b5b5-40be-b577-af25f87d3f66"/>
   <cim:IdentifiedObject.name>t5337636c</cim:IdentifiedObject.name>
@@ -5628,16 +5549,6 @@
   <cim:IdentifiedObject.name>t5338992b</cim:IdentifiedObject.name>
   <cim:Identity.identifier>a412720a-dd44-42cc-8add-23a00f1ea4b2</cim:Identity.identifier>
 </cim:TransformerTank>
-<cim:TransformerTank rdf:about="urn:uuid:a43410f7-db5b-4e49-8008-cb64b1e59fd2">
-  <gmdm:TransformerTank.TransformerTankInfo rdf:resource="urn:uuid:6b95b655-62df-42a2-9d02-090ac9eccfac"/>
-  <cim:IdentifiedObject.name>feeder_reg2b</cim:IdentifiedObject.name>
-  <cim:Identity.identifier>a43410f7-db5b-4e49-8008-cb64b1e59fd2</cim:Identity.identifier>
-</cim:TransformerTank>
-<cim:TransformerTank rdf:about="urn:uuid:a44d62b7-a2e7-4b32-8dd2-158a9f0e9b5f">
-  <gmdm:TransformerTank.TransformerTankInfo rdf:resource="urn:uuid:6b95b655-62df-42a2-9d02-090ac9eccfac"/>
-  <cim:IdentifiedObject.name>feeder_reg3a</cim:IdentifiedObject.name>
-  <cim:Identity.identifier>a44d62b7-a2e7-4b32-8dd2-158a9f0e9b5f</cim:Identity.identifier>
-</cim:TransformerTank>
 <cim:TransformerTank rdf:about="urn:uuid:a46f3e71-3cc6-4941-95b8-979a72ea33de">
   <gmdm:TransformerTank.TransformerTankInfo rdf:resource="urn:uuid:ec9403da-f835-465f-883a-88b903f23c47"/>
   <cim:IdentifiedObject.name>t21458756c</cim:IdentifiedObject.name>
@@ -5942,11 +5853,6 @@
   <gmdm:TransformerTank.TransformerTankInfo rdf:resource="urn:uuid:cc5d98d4-ec04-435e-8ece-a7feedc5c26c"/>
   <cim:IdentifiedObject.name>t5337648b</cim:IdentifiedObject.name>
   <cim:Identity.identifier>b17e0663-3c9f-4897-bc60-a569cd3a27e4</cim:Identity.identifier>
-</cim:TransformerTank>
-<cim:TransformerTank rdf:about="urn:uuid:b1871ffe-234d-4ab6-8914-ddc51ab98f6f">
-  <gmdm:TransformerTank.TransformerTankInfo rdf:resource="urn:uuid:6b95b655-62df-42a2-9d02-090ac9eccfac"/>
-  <cim:IdentifiedObject.name>feeder_reg1a</cim:IdentifiedObject.name>
-  <cim:Identity.identifier>b1871ffe-234d-4ab6-8914-ddc51ab98f6f</cim:Identity.identifier>
 </cim:TransformerTank>
 <cim:TransformerTank rdf:about="urn:uuid:b188d6df-e90c-4ef7-b934-b6c888fece9e">
   <gmdm:TransformerTank.TransformerTankInfo rdf:resource="urn:uuid:cc5d98d4-ec04-435e-8ece-a7feedc5c26c"/>
@@ -6737,11 +6643,6 @@
   <gmdm:TransformerTank.TransformerTankInfo rdf:resource="urn:uuid:5c73cd2b-b5b5-40be-b577-af25f87d3f66"/>
   <cim:IdentifiedObject.name>t2224387113a</cim:IdentifiedObject.name>
   <cim:Identity.identifier>cf2a52aa-c032-498c-91be-4a6a0351c057</cim:Identity.identifier>
-</cim:TransformerTank>
-<cim:TransformerTank rdf:about="urn:uuid:cf408eb0-3a1e-487a-a7f1-36ec9fb517d7">
-  <gmdm:TransformerTank.TransformerTankInfo rdf:resource="urn:uuid:6b95b655-62df-42a2-9d02-090ac9eccfac"/>
-  <cim:IdentifiedObject.name>feeder_reg2a</cim:IdentifiedObject.name>
-  <cim:Identity.identifier>cf408eb0-3a1e-487a-a7f1-36ec9fb517d7</cim:Identity.identifier>
 </cim:TransformerTank>
 <cim:TransformerTank rdf:about="urn:uuid:cf6fefcf-febf-4344-bf3f-3fc9b4a670cd">
   <gmdm:TransformerTank.TransformerTankInfo rdf:resource="urn:uuid:cc5d98d4-ec04-435e-8ece-a7feedc5c26c"/>
@@ -7896,10 +7797,6 @@
 <cim:TransformerTankInfo rdf:about="urn:uuid:5c73cd2b-b5b5-40be-b577-af25f87d3f66">
   <cim:IdentifiedObject.name>ct37</cim:IdentifiedObject.name>
   <cim:Identity.identifier>5c73cd2b-b5b5-40be-b577-af25f87d3f66</cim:Identity.identifier>
-</cim:TransformerTankInfo>
-<cim:TransformerTankInfo rdf:about="urn:uuid:6b95b655-62df-42a2-9d02-090ac9eccfac">
-  <cim:IdentifiedObject.name>feeder_reg</cim:IdentifiedObject.name>
-  <cim:Identity.identifier>6b95b655-62df-42a2-9d02-090ac9eccfac</cim:Identity.identifier>
 </cim:TransformerTankInfo>
 <cim:TransformerTankInfo rdf:about="urn:uuid:6c8c8ed7-142e-4a4d-bec5-d729237b2af7">
   <cim:IdentifiedObject.name>ct15</cim:IdentifiedObject.name>
