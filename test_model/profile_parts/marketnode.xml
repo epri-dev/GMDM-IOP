@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- un-comment this line to enable validation
 -->
-<rdf:RDF xmlns:cim="http://cim.ucaiug.io/CIM101/draft#" xmlns:eu="http://iec.ch/TC57/CIM100-European#" xmlns:nc="http://entsoe.eu/ns/nc#" xmlns:gb="http://GB/placeholder/ext#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:gmdm="http://epri.com/gmdm/2025#">
+<rdf:RDF xmlns:cim="http://cim.ucaiug.io/CIM101/draft#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:gmdm="http://epri.com/gmdm/2025#">
 <!--
 -->
 <cim:ConnectivityNode rdf:about="urn:uuid:000bb52f-e917-4ab1-9c73-a79ed0cd265f">
