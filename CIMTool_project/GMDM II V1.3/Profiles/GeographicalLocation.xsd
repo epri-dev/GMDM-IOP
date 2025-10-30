@@ -96,6 +96,10 @@
                      type="m:SeriesCompensator"
                      minOccurs="0"
                      maxOccurs="unbounded"/>
+         <xs:element name="Substation"
+                     type="m:Substation"
+                     minOccurs="0"
+                     maxOccurs="unbounded"/>
          <xs:element name="SynchronousMachine"
                      type="m:SynchronousMachine"
                      minOccurs="0"
@@ -177,6 +181,17 @@
       </xs:annotation>
       <xs:complexContent>
          <xs:extension base="m:ConductingEquipment">
+            <xs:sequence/>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="ConnectivityNodeContainer"
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ConnectivityNodeContainer">
+      <xs:annotation>
+         <xs:documentation>A base class for all objects that may contain connectivity nodes or topological nodes.</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="m:PowerSystemResource">
             <xs:sequence/>
          </xs:extension>
       </xs:complexContent>
@@ -279,6 +294,17 @@
       </xs:annotation>
       <xs:complexContent>
          <xs:extension base="m:PowerSystemResource">
+            <xs:sequence/>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="EquipmentContainer"
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#EquipmentContainer">
+      <xs:annotation>
+         <xs:documentation>A modelling construct to provide a root class for containing equipment.</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="m:ConnectivityNodeContainer">
             <xs:sequence/>
          </xs:extension>
       </xs:complexContent>
@@ -582,6 +608,17 @@
          <xs:documentation>General purpose street and postal address information.</xs:documentation>
       </xs:annotation>
       <xs:sequence/>
+   </xs:complexType>
+   <xs:complexType name="Substation"
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Substation">
+      <xs:annotation>
+         <xs:documentation>A collection of equipment for purposes other than generation or utilization, through which electric energy in bulk is passed for the purposes of switching or modifying its characteristics.</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="m:EquipmentContainer">
+            <xs:sequence/>
+         </xs:extension>
+      </xs:complexContent>
    </xs:complexType>
    <xs:complexType name="Switch"
                    sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Switch">

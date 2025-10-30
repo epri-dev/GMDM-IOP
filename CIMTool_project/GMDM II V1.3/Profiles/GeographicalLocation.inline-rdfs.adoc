@@ -750,6 +750,43 @@ A Series Compensator is a series capacitor or reactor or an AC transmission line
 |===
 :!SeriesCompensator:
 
+[[GeographicalLocation-Substation]]
+==== (Description) Substation
+
+Inheritance path = <<GeographicalLocation-EquipmentContainer,EquipmentContainer>> => <<GeographicalLocation-ConnectivityNodeContainer,ConnectivityNodeContainer>> => <<GeographicalLocation-PowerSystemResource,PowerSystemResource>> => <<GeographicalLocation-IdentifiedObject,IdentifiedObject>> => <<GeographicalLocation-Identity,Identity>>
+
+ifdef::GeographicalLocation-description-profile[]
+This class is tagged in this profile with the 'Description' tag. To refer to the full definition of this class as defined in the profile this one depends on visit <<{GeographicalLocation-description-profile}-Substation,Substation>>.
+endif::GeographicalLocation-description-profile[]
+
+:Substation:
+A collection of equipment for purposes other than generation or utilization, through which electric energy in bulk is passed for the purposes of switching or modifying its characteristics.
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|Location
+|0..1
+|<<GeographicalLocation-Location,Location>>
+|see <<GeographicalLocation-PowerSystemResource,PowerSystemResource>>
+|description
+|0..1
+|<<GeographicalLocation-String,String>>
+|see <<GeographicalLocation-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<GeographicalLocation-String,String>>
+|see <<GeographicalLocation-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<GeographicalLocation-String,String>>
+|see <<GeographicalLocation-Identity,Identity>>
+|===
+:!Substation:
+
 [[GeographicalLocation-SynchronousMachine]]
 ==== (Description) SynchronousMachine
 
@@ -855,6 +892,39 @@ Combination of conducting material with consistent electrical characteristics, b
 |see <<GeographicalLocation-Identity,Identity>>
 |===
 :!Conductor:
+
+[[GeographicalLocation-ConnectivityNodeContainer]]
+==== ConnectivityNodeContainer
+
+Inheritance path = <<GeographicalLocation-PowerSystemResource,PowerSystemResource>> => <<GeographicalLocation-IdentifiedObject,IdentifiedObject>> => <<GeographicalLocation-Identity,Identity>>
+
+:ConnectivityNodeContainer:
+A base class for all objects that may contain connectivity nodes or topological nodes.
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|Location
+|0..1
+|<<GeographicalLocation-Location,Location>>
+|see <<GeographicalLocation-PowerSystemResource,PowerSystemResource>>
+|description
+|0..1
+|<<GeographicalLocation-String,String>>
+|see <<GeographicalLocation-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<GeographicalLocation-String,String>>
+|see <<GeographicalLocation-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<GeographicalLocation-String,String>>
+|see <<GeographicalLocation-Identity,Identity>>
+|===
+:!ConnectivityNodeContainer:
 
 [[GeographicalLocation-Connector]]
 ==== Connector
@@ -983,6 +1053,39 @@ The parts of a power system that are physical devices, electronic or mechanical.
 |see <<GeographicalLocation-Identity,Identity>>
 |===
 :!Equipment:
+
+[[GeographicalLocation-EquipmentContainer]]
+==== EquipmentContainer
+
+Inheritance path = <<GeographicalLocation-ConnectivityNodeContainer,ConnectivityNodeContainer>> => <<GeographicalLocation-PowerSystemResource,PowerSystemResource>> => <<GeographicalLocation-IdentifiedObject,IdentifiedObject>> => <<GeographicalLocation-Identity,Identity>>
+
+:EquipmentContainer:
+A modelling construct to provide a root class for containing equipment.
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|Location
+|0..1
+|<<GeographicalLocation-Location,Location>>
+|see <<GeographicalLocation-PowerSystemResource,PowerSystemResource>>
+|description
+|0..1
+|<<GeographicalLocation-String,String>>
+|see <<GeographicalLocation-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<GeographicalLocation-String,String>>
+|see <<GeographicalLocation-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<GeographicalLocation-String,String>>
+|see <<GeographicalLocation-Identity,Identity>>
+|===
+:!EquipmentContainer:
 
 [[GeographicalLocation-IdentifiedObject]]
 ==== IdentifiedObject

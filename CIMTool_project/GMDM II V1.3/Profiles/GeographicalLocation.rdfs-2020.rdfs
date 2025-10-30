@@ -88,6 +88,13 @@ Voltage measurements are typically obtained from voltage transformers that are c
       <rdfs:label xml:lang="en">Conductor</rdfs:label>
       <rdfs:subClassOf rdf:resource="#ConductingEquipment"/>
    </rdf:Description>
+   <rdf:Description rdf:about="#ConnectivityNodeContainer">
+      <cims:belongsToCategory rdf:resource="#Package_Core"/>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A base class for all objects that may contain connectivity nodes or topological nodes.</rdfs:comment>
+      <rdfs:label xml:lang="en">ConnectivityNodeContainer</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#PowerSystemResource"/>
+   </rdf:Description>
    <rdf:Description rdf:about="#Connector">
       <cims:belongsToCategory rdf:resource="#Package_Wires"/>
       <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
@@ -174,6 +181,13 @@ EnergyConsumer.pfixed, .qfixed, .pfixedPct and .qfixedPct have meaning only if t
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The parts of a power system that are physical devices, electronic or mechanical.</rdfs:comment>
       <rdfs:label xml:lang="en">Equipment</rdfs:label>
       <rdfs:subClassOf rdf:resource="#PowerSystemResource"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="#EquipmentContainer">
+      <cims:belongsToCategory rdf:resource="#Package_Core"/>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A modelling construct to provide a root class for containing equipment.</rdfs:comment>
+      <rdfs:label xml:lang="en">EquipmentContainer</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#ConnectivityNodeContainer"/>
    </rdf:Description>
    <rdf:Description rdf:about="#Fuse">
       <cims:belongsToCategory rdf:resource="#Package_Wires"/>
@@ -479,6 +493,15 @@ The inherited association ConductingEquipment.BaseVoltage should not be used. Th
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A string consisting of a sequence of characters. The character encoding is UTF-8. The string length is unspecified and unlimited.</rdfs:comment>
       <rdfs:label xml:lang="en">String</rdfs:label>
    </rdf:Description>
+   <rdf:Description rdf:about="#Substation">
+      <cims:belongsToCategory rdf:resource="#Package_Core"/>
+      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
+      <cims:stereotype>Description</cims:stereotype>
+      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A collection of equipment for purposes other than generation or utilization, through which electric energy in bulk is passed for the purposes of switching or modifying its characteristics.</rdfs:comment>
+      <rdfs:label xml:lang="en">Substation</rdfs:label>
+      <rdfs:subClassOf rdf:resource="#EquipmentContainer"/>
+   </rdf:Description>
    <rdf:Description rdf:about="#Switch">
       <cims:belongsToCategory rdf:resource="#Package_Wires"/>
       <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
@@ -508,9 +531,9 @@ The inherited association ConductingEquipment.BaseVoltage should not be used. Th
       <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..n"/>
       <cims:stereotype>gmdm</cims:stereotype>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-      <rdfs:domain rdf:resource="#Location"/>
+      <rdfs:domain rdf:resource="http://epri.com/gmdm/2025#Location"/>
       <rdfs:label xml:lang="en">PositionPoints</rdfs:label>
-      <rdfs:range rdf:resource="#PositionPoint"/>
+      <rdfs:range rdf:resource="http://epri.com/gmdm/2025#PositionPoint"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://epri.com/gmdm/2025#PositionPoint.Location">
       <cims:AssociationUsed>Yes</cims:AssociationUsed>
@@ -529,7 +552,7 @@ The inherited association ConductingEquipment.BaseVoltage should not be used. Th
       <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
       <cims:stereotype>gmdm</cims:stereotype>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-      <rdfs:domain rdf:resource="#PositionPoint"/>
+      <rdfs:domain rdf:resource="http://epri.com/gmdm/2025#PositionPoint"/>
       <rdfs:label xml:lang="en">sequenceNumber</rdfs:label>
    </rdf:Description>
 </rdf:RDF>

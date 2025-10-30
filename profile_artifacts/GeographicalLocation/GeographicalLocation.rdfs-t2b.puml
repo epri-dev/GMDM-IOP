@@ -133,6 +133,12 @@ abstract class Conductor  <<abstract>> {
 
 ConductingEquipment <|-- Conductor
 
+' ConnectivityNodeContainer inherits from PowerSystemResource
+abstract class ConnectivityNodeContainer  <<abstract>> {
+}
+
+PowerSystemResource <|-- ConnectivityNodeContainer
+
 ' Connector inherits from ConductingEquipment
 abstract class Connector  <<abstract>> {
 }
@@ -141,7 +147,7 @@ ConductingEquipment <|-- Connector
 
 ' CoordinateSystem inherits from IdentifiedObject
 class CoordinateSystem   {
-   +crsUrn : string [0..1]
+   +crsUrn : string [1]
 }
 
 IdentifiedObject <|-- CoordinateSystem
@@ -181,6 +187,12 @@ abstract class Equipment  <<abstract>> {
 }
 
 PowerSystemResource <|-- Equipment
+
+' EquipmentContainer inherits from ConnectivityNodeContainer
+abstract class EquipmentContainer  <<abstract>> {
+}
+
+ConnectivityNodeContainer <|-- EquipmentContainer
 
 ' Fuse inherits from Switch
 class Fuse <<Description>>  {
@@ -297,6 +309,12 @@ RegulatingCondEq <|-- ShuntCompensator
 abstract class Status  <<abstract>> {
 }
 
+
+' Substation inherits from EquipmentContainer
+class Substation <<Description>>  {
+}
+
+EquipmentContainer <|-- Substation
 
 ' Switch inherits from ConductingEquipment
 abstract class Switch  <<abstract>> {
