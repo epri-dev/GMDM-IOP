@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- un-comment this line to enable validation
 -->
-<rdf:RDF xmlns:cim="http://cim.ucaiug.io/CIM101/draft#"  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:gmdm="http://epri.com/gmdm/2025#">
+<rdf:RDF xmlns:cim="http://cim.ucaiug.io/CIM101/draft#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:gmdm="http://epri.com/gmdm/2025#">
 <!--
 -->
 <cim:ConnectivityNode rdf:about="urn:uuid:000bb52f-e917-4ab1-9c73-a79ed0cd265f">
@@ -4050,7 +4050,7 @@
   <cim:Identity.identifier>2d9a838a-e639-4b2a-89d1-db0d3cd77b69</cim:Identity.identifier>
 </cim:ConnectivityNode>
 <cim:ConnectivityNode rdf:about="urn:uuid:2d9dfa68-5d6d-4a8d-8f52-c05a321b6bd5">
-  <cim:IdentifiedObject.name>hvmv115_hsb1</cim:IdentifiedObject.name>
+  <cim:IdentifiedObject.name>hvmv115s1_hsb1</cim:IdentifiedObject.name>
   <cim:Identity.identifier>2d9dfa68-5d6d-4a8d-8f52-c05a321b6bd5</cim:Identity.identifier>
 </cim:ConnectivityNode>
 <cim:ConnectivityNode rdf:about="urn:uuid:2da24b9f-40ce-4771-80ad-cb13feb833e6">
@@ -18180,7 +18180,7 @@
   <cim:Identity.identifier>cf62d2f7-f804-4788-92b6-56dbaae00659</cim:Identity.identifier>
 </cim:ConnectivityNode>
 <cim:ConnectivityNode rdf:about="urn:uuid:cf8a099d-25f4-4610-bbcc-1e08dfdabd16">
-  <cim:IdentifiedObject.name>hvmv115_hsb2</cim:IdentifiedObject.name>
+  <cim:IdentifiedObject.name>hvmv115s1_hsb2</cim:IdentifiedObject.name>
   <cim:Identity.identifier>cf8a099d-25f4-4610-bbcc-1e08dfdabd16</cim:Identity.identifier>
 </cim:ConnectivityNode>
 <cim:ConnectivityNode rdf:about="urn:uuid:cfa209b6-5fbf-4645-acb0-cefb556fa9ef">

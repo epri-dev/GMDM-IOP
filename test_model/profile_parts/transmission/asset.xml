@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- un-comment this line to enable validation
+-->
+<rdf:RDF xmlns:cim="http://cim.ucaiug.io/CIM101/draft#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:gmdm="http://epri.com/gmdm/2025#">
+<!--
+-->
+<cim:NoLoadTest rdf:about="urn:uuid:f641b544-87a4-4271-8ce2-2ba2e148fc33">
+  <cim:NoLoadTest.energisedEndVoltage>7200.0</cim:NoLoadTest.energisedEndVoltage>
+  <cim:NoLoadTest.excitingCurrent>0.0</cim:NoLoadTest.excitingCurrent>
+  <cim:NoLoadTest.excitingCurrentZero>0.0</cim:NoLoadTest.excitingCurrentZero>
+  <cim:NoLoadTest.loss>0.0</cim:NoLoadTest.loss>
+  <cim:NoLoadTest.lossZero>0.0</cim:NoLoadTest.lossZero>
+  <cim:NoLoadTest.EnergisedEnd rdf:resource="urn:uuid:bf363cd2-c655-43d1-b4ca-f8e28ee51316"/>
+  <cim:TransformerTest.basePower>7500000.0</cim:TransformerTest.basePower>
+  <cim:TransformerTest.temperature>50.0</cim:TransformerTest.temperature>
+  <cim:IdentifiedObject.name>feeder_reg_1</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>f641b544-87a4-4271-8ce2-2ba2e148fc33</cim:Identity.identifier>
+</cim:NoLoadTest>
+<cim:PowerTransformerInfo rdf:about="urn:uuid:6eb072d2-9d37-4108-b65b-c7ff32d2493f">
+  <cim:IdentifiedObject.name>feeder_reg</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>6eb072d2-9d37-4108-b65b-c7ff32d2493f</cim:Identity.identifier>
+</cim:PowerTransformerInfo>
+<cim:ShortCircuitTest rdf:about="urn:uuid:659beb81-dccd-4c34-8890-7696a53dd241">
+  <cim:ShortCircuitTest.energisedEndStep>16</cim:ShortCircuitTest.energisedEndStep>
+  <cim:ShortCircuitTest.groundedEndStep>16</cim:ShortCircuitTest.groundedEndStep>
+  <cim:ShortCircuitTest.leakageImpedance>0.006946474</cim:ShortCircuitTest.leakageImpedance>
+  <cim:ShortCircuitTest.leakageImpedanceZero>0.006946474</cim:ShortCircuitTest.leakageImpedanceZero>
+  <cim:ShortCircuitTest.loss>0.75</cim:ShortCircuitTest.loss>
+  <cim:ShortCircuitTest.lossZero>0.75</cim:ShortCircuitTest.lossZero>
+  <cim:ShortCircuitTest.EnergisedEnd rdf:resource="urn:uuid:bf363cd2-c655-43d1-b4ca-f8e28ee51316"/>
+  <cim:ShortCircuitTest.GroundedEnds rdf:resource="urn:uuid:349af2ce-1bc7-491c-aeab-582929f0a5dd"/>
+  <cim:TransformerTest.basePower>7500000.0</cim:TransformerTest.basePower>
+  <cim:TransformerTest.temperature>50.0</cim:TransformerTest.temperature>
+  <cim:IdentifiedObject.name>feeder_reg_1</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>659beb81-dccd-4c34-8890-7696a53dd241</cim:Identity.identifier>
+</cim:ShortCircuitTest>
+<cim:TransformerEndInfo rdf:about="urn:uuid:349af2ce-1bc7-491c-aeab-582929f0a5dd">
+  <cim:TransformerEndInfo.endNumber>2</cim:TransformerEndInfo.endNumber>
+  <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
+  <cim:TransformerEndInfo.emergencyS>11250000.0</cim:TransformerEndInfo.emergencyS>
+  <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
+  <cim:TransformerEndInfo.r>0.0003456</cim:TransformerEndInfo.r>
+  <cim:TransformerEndInfo.ratedS>7500000.0</cim:TransformerEndInfo.ratedS>
+  <cim:TransformerEndInfo.shortTermS>8250000.0</cim:TransformerEndInfo.shortTermS>
+  <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:6b95b655-62df-42a2-9d02-090ac9eccfac"/>
+  <cim:ConductingAssetInfo.ratedVoltage>7200.0</cim:ConductingAssetInfo.ratedVoltage>
+  <cim:IdentifiedObject.name>feeder_reg_2</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>349af2ce-1bc7-491c-aeab-582929f0a5dd</cim:Identity.identifier>
+</cim:TransformerEndInfo>
+<cim:TransformerEndInfo rdf:about="urn:uuid:bf363cd2-c655-43d1-b4ca-f8e28ee51316">
+  <cim:TransformerEndInfo.endNumber>1</cim:TransformerEndInfo.endNumber>
+  <cim:TransformerEndInfo.phaseAngleClock>0</cim:TransformerEndInfo.phaseAngleClock>
+  <cim:TransformerEndInfo.connectionKind rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.I"/>
+  <cim:TransformerEndInfo.emergencyS>11250000.0</cim:TransformerEndInfo.emergencyS>
+  <cim:TransformerEndInfo.insulationU>0.0</cim:TransformerEndInfo.insulationU>
+  <cim:TransformerEndInfo.r>0.0003456</cim:TransformerEndInfo.r>
+  <cim:TransformerEndInfo.ratedS>7500000.0</cim:TransformerEndInfo.ratedS>
+  <cim:TransformerEndInfo.shortTermS>8250000.0</cim:TransformerEndInfo.shortTermS>
+  <cim:TransformerEndInfo.TransformerTankInfo rdf:resource="urn:uuid:6b95b655-62df-42a2-9d02-090ac9eccfac"/>
+  <cim:ConductingAssetInfo.ratedVoltage>7200.0</cim:ConductingAssetInfo.ratedVoltage>
+  <cim:IdentifiedObject.name>feeder_reg_1</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>bf363cd2-c655-43d1-b4ca-f8e28ee51316</cim:Identity.identifier>
+</cim:TransformerEndInfo>
+<cim:TransformerTank rdf:about="urn:uuid:0b8853f5-f7b5-4a4e-b94b-f785d3b1f0cf">
+  <gmdm:TransformerTank.TransformerTankInfo rdf:resource="urn:uuid:6b95b655-62df-42a2-9d02-090ac9eccfac"/>
+  <cim:IdentifiedObject.name>feeder_reg3b</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>0b8853f5-f7b5-4a4e-b94b-f785d3b1f0cf</cim:Identity.identifier>
+</cim:TransformerTank>
+<cim:TransformerTank rdf:about="urn:uuid:17685e45-9064-410d-ba9f-660ada115dfb">
+  <gmdm:TransformerTank.TransformerTankInfo rdf:resource="urn:uuid:6b95b655-62df-42a2-9d02-090ac9eccfac"/>
+  <cim:IdentifiedObject.name>feeder_reg1b</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>17685e45-9064-410d-ba9f-660ada115dfb</cim:Identity.identifier>
+</cim:TransformerTank>
+<cim:TransformerTank rdf:about="urn:uuid:292ef6a2-8bdf-460f-a4c4-a00e3786a1d2">
+  <gmdm:TransformerTank.TransformerTankInfo rdf:resource="urn:uuid:6b95b655-62df-42a2-9d02-090ac9eccfac"/>
+  <cim:IdentifiedObject.name>feeder_reg2c</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>292ef6a2-8bdf-460f-a4c4-a00e3786a1d2</cim:Identity.identifier>
+</cim:TransformerTank>
+<cim:TransformerTank rdf:about="urn:uuid:2c3b1a6f-fe59-48df-ba9f-60d51c547fb1">
+  <gmdm:TransformerTank.TransformerTankInfo rdf:resource="urn:uuid:6b95b655-62df-42a2-9d02-090ac9eccfac"/>
+  <cim:IdentifiedObject.name>feeder_reg1c</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>2c3b1a6f-fe59-48df-ba9f-60d51c547fb1</cim:Identity.identifier>
+</cim:TransformerTank>
+<cim:TransformerTank rdf:about="urn:uuid:72121c6c-8f67-412b-972d-316bcb19bf28">
+  <gmdm:TransformerTank.TransformerTankInfo rdf:resource="urn:uuid:6b95b655-62df-42a2-9d02-090ac9eccfac"/>
+  <cim:IdentifiedObject.name>feeder_reg3c</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>72121c6c-8f67-412b-972d-316bcb19bf28</cim:Identity.identifier>
+</cim:TransformerTank>
+<cim:TransformerTank rdf:about="urn:uuid:a43410f7-db5b-4e49-8008-cb64b1e59fd2">
+  <gmdm:TransformerTank.TransformerTankInfo rdf:resource="urn:uuid:6b95b655-62df-42a2-9d02-090ac9eccfac"/>
+  <cim:IdentifiedObject.name>feeder_reg2b</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>a43410f7-db5b-4e49-8008-cb64b1e59fd2</cim:Identity.identifier>
+</cim:TransformerTank>
+<cim:TransformerTank rdf:about="urn:uuid:a44d62b7-a2e7-4b32-8dd2-158a9f0e9b5f">
+  <gmdm:TransformerTank.TransformerTankInfo rdf:resource="urn:uuid:6b95b655-62df-42a2-9d02-090ac9eccfac"/>
+  <cim:IdentifiedObject.name>feeder_reg3a</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>a44d62b7-a2e7-4b32-8dd2-158a9f0e9b5f</cim:Identity.identifier>
+</cim:TransformerTank>
+<cim:TransformerTank rdf:about="urn:uuid:b1871ffe-234d-4ab6-8914-ddc51ab98f6f">
+  <gmdm:TransformerTank.TransformerTankInfo rdf:resource="urn:uuid:6b95b655-62df-42a2-9d02-090ac9eccfac"/>
+  <cim:IdentifiedObject.name>feeder_reg1a</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>b1871ffe-234d-4ab6-8914-ddc51ab98f6f</cim:Identity.identifier>
+</cim:TransformerTank>
+<cim:TransformerTank rdf:about="urn:uuid:cf408eb0-3a1e-487a-a7f1-36ec9fb517d7">
+  <gmdm:TransformerTank.TransformerTankInfo rdf:resource="urn:uuid:6b95b655-62df-42a2-9d02-090ac9eccfac"/>
+  <cim:IdentifiedObject.name>feeder_reg2a</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>cf408eb0-3a1e-487a-a7f1-36ec9fb517d7</cim:Identity.identifier>
+</cim:TransformerTank>
+<cim:TransformerTankInfo rdf:about="urn:uuid:6b95b655-62df-42a2-9d02-090ac9eccfac">
+  <cim:TransformerTankInfo.PowerTransformerInfo rdf:resource="urn:uuid:6eb072d2-9d37-4108-b65b-c7ff32d2493f"/>
+  <cim:IdentifiedObject.name>feeder_reg</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>6b95b655-62df-42a2-9d02-090ac9eccfac</cim:Identity.identifier>
+</cim:TransformerTankInfo>
+</rdf:RDF>

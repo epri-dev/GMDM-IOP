@@ -1,0 +1,1661 @@
+{
+    "@context": {
+        "cim": "http://cim.ucaiug.io/CIM101/draft#",
+        "eu": "http://iec.ch/TC57/CIM100-European#",
+        "nc": "http://entsoe.eu/ns/nc#",
+        "gb": "http://GB/placeholder/ext#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "gmdm": "http://epri.com/gmdm/2025#"
+    },
+    "@graph": [
+        {
+            "@id": "urn:uuid:03e05d5f-6a5c-4a76-b403-32bfcda2ee75",
+            "@type": "cim:ACLineSegment",
+            "cim:ACLineSegment.PerLengthImpedance": {
+                "@id": "9e16bb95-bec5-4332-9999-323a277b8934",
+                "@type": "PerLengthPhaseImpedance"
+            },
+            "cim:Conductor.length": "750.0",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-2"
+        },
+        {
+            "@id": "urn:uuid:37c4ff07-f38a-4394-b528-510393cafa05",
+            "@type": "cim:ACLineSegment",
+            "cim:ACLineSegment.PerLengthImpedance": {
+                "@id": "9e16bb95-bec5-4332-9999-323a277b8934",
+                "@type": "PerLengthPhaseImpedance"
+            },
+            "cim:Conductor.length": "1000.0",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-7"
+        },
+        {
+            "@id": "urn:uuid:54e3f087-2e1a-4726-9731-276692993540",
+            "@type": "cim:ACLineSegment",
+            "cim:ACLineSegment.PerLengthImpedance": {
+                "@id": "9e16bb95-bec5-4332-9999-323a277b8934",
+                "@type": "PerLengthPhaseImpedance"
+            },
+            "cim:Conductor.length": "1000.0",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-8"
+        },
+        {
+            "@id": "urn:uuid:5ad64201-2649-4ce3-918a-fff933e6a1ff",
+            "@type": "cim:ACLineSegment",
+            "cim:ACLineSegment.PerLengthImpedance": {
+                "@id": "9e16bb95-bec5-4332-9999-323a277b8934",
+                "@type": "PerLengthPhaseImpedance"
+            },
+            "cim:Conductor.length": "4500.0",
+            "cim:IdentifiedObject.name": "hvmv69s2s3-1"
+        },
+        {
+            "@id": "urn:uuid:5f970234-4d34-4056-84e0-f0120716b30c",
+            "@type": "cim:ACLineSegment",
+            "cim:ACLineSegment.PerLengthImpedance": {
+                "@id": "9e16bb95-bec5-4332-9999-323a277b8934",
+                "@type": "PerLengthPhaseImpedance"
+            },
+            "cim:Conductor.length": "1000.0",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-1"
+        },
+        {
+            "@id": "urn:uuid:679e1e4e-6d31-40be-b0af-17ce66fc6a03",
+            "@type": "cim:ACLineSegment",
+            "cim:ACLineSegment.PerLengthImpedance": {
+                "@id": "9e16bb95-bec5-4332-9999-323a277b8934",
+                "@type": "PerLengthPhaseImpedance"
+            },
+            "cim:Conductor.length": "2000.0",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-5"
+        },
+        {
+            "@id": "urn:uuid:98bd0731-b982-40b4-9f44-3c6f2c950b5f",
+            "@type": "cim:ACLineSegment",
+            "cim:ACLineSegment.PerLengthImpedance": {
+                "@id": "9e16bb95-bec5-4332-9999-323a277b8934",
+                "@type": "PerLengthPhaseImpedance"
+            },
+            "cim:Conductor.length": "1000.0",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-9"
+        },
+        {
+            "@id": "urn:uuid:b5c81dab-62d1-4de3-9a46-1933df94565d",
+            "@type": "cim:ACLineSegment",
+            "cim:ACLineSegment.PerLengthImpedance": {
+                "@id": "9e16bb95-bec5-4332-9999-323a277b8934",
+                "@type": "PerLengthPhaseImpedance"
+            },
+            "cim:Conductor.length": "750.0",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-3"
+        },
+        {
+            "@id": "urn:uuid:bf501c26-edcd-4379-bb3b-ca97e14615a5",
+            "@type": "cim:ACLineSegment",
+            "cim:ACLineSegment.PerLengthImpedance": {
+                "@id": "9e16bb95-bec5-4332-9999-323a277b8934",
+                "@type": "PerLengthPhaseImpedance"
+            },
+            "cim:Conductor.length": "2000.0",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-4"
+        },
+        {
+            "@id": "urn:uuid:cfd520f9-9678-48f0-99d4-7a85b66f93e4",
+            "@type": "cim:ACLineSegment",
+            "cim:ACLineSegment.PerLengthImpedance": {
+                "@id": "9e16bb95-bec5-4332-9999-323a277b8934",
+                "@type": "PerLengthPhaseImpedance"
+            },
+            "cim:Conductor.length": "2000.0",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-6"
+        },
+        {
+            "@id": "urn:uuid:0099deaf-b6d1-49d9-9585-28707b7d6bca",
+            "@type": "cim:ACLineSegmentPhase",
+            "cim:ACLineSegmentPhase.sequenceNumber": "3",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-5_C"
+        },
+        {
+            "@id": "urn:uuid:0310faaf-9d1e-40cc-bf45-12605570e6fe",
+            "@type": "cim:ACLineSegmentPhase",
+            "cim:ACLineSegmentPhase.sequenceNumber": "1",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-3_A"
+        },
+        {
+            "@id": "urn:uuid:04f7f756-b698-40a6-aaba-10f9f0c03ed9",
+            "@type": "cim:ACLineSegmentPhase",
+            "cim:ACLineSegmentPhase.sequenceNumber": "3",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-9_C"
+        },
+        {
+            "@id": "urn:uuid:06a5dc04-5f3d-42f9-890a-a3de6fb57da2",
+            "@type": "cim:ACLineSegmentPhase",
+            "cim:ACLineSegmentPhase.sequenceNumber": "2",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-4_B"
+        },
+        {
+            "@id": "urn:uuid:0984ece3-0141-417f-a4b0-1d10cad0a3c5",
+            "@type": "cim:ACLineSegmentPhase",
+            "cim:ACLineSegmentPhase.sequenceNumber": "3",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-3_C"
+        },
+        {
+            "@id": "urn:uuid:0ba5439c-5d73-41fa-8f1c-dec2d462ba6b",
+            "@type": "cim:ACLineSegmentPhase",
+            "cim:ACLineSegmentPhase.sequenceNumber": "1",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-8_A"
+        },
+        {
+            "@id": "urn:uuid:0c30d106-f9ac-4ef1-ad42-c9c246e537f1",
+            "@type": "cim:ACLineSegmentPhase",
+            "cim:ACLineSegmentPhase.sequenceNumber": "2",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-9_B"
+        },
+        {
+            "@id": "urn:uuid:220953ba-e4cb-4bc6-a4d5-ddcca61a86a8",
+            "@type": "cim:ACLineSegmentPhase",
+            "cim:ACLineSegmentPhase.sequenceNumber": "1",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-1_A"
+        },
+        {
+            "@id": "urn:uuid:288d26f8-64d0-4673-85b1-48dedaaf57e5",
+            "@type": "cim:ACLineSegmentPhase",
+            "cim:ACLineSegmentPhase.sequenceNumber": "1",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-5_A"
+        },
+        {
+            "@id": "urn:uuid:3cf8b423-dc95-4a08-9ce6-f07b3412f539",
+            "@type": "cim:ACLineSegmentPhase",
+            "cim:ACLineSegmentPhase.sequenceNumber": "1",
+            "cim:IdentifiedObject.name": "hvmv69s2s3-1_A"
+        },
+        {
+            "@id": "urn:uuid:3e3960e5-71d8-489f-aeed-5a906815b9a4",
+            "@type": "cim:ACLineSegmentPhase",
+            "cim:ACLineSegmentPhase.sequenceNumber": "2",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-7_B"
+        },
+        {
+            "@id": "urn:uuid:47be3c45-54cb-4c14-8c93-5ecdce76ae7d",
+            "@type": "cim:ACLineSegmentPhase",
+            "cim:ACLineSegmentPhase.sequenceNumber": "1",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-9_A"
+        },
+        {
+            "@id": "urn:uuid:6473c8ec-80bf-4c76-923f-a21e447c6215",
+            "@type": "cim:ACLineSegmentPhase",
+            "cim:ACLineSegmentPhase.sequenceNumber": "2",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-5_B"
+        },
+        {
+            "@id": "urn:uuid:68ee2f4d-a795-43d3-be60-44fba1eef196",
+            "@type": "cim:ACLineSegmentPhase",
+            "cim:ACLineSegmentPhase.sequenceNumber": "2",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-8_B"
+        },
+        {
+            "@id": "urn:uuid:6ac0a29e-1618-4c13-85b4-4dcd3e58a77f",
+            "@type": "cim:ACLineSegmentPhase",
+            "cim:ACLineSegmentPhase.sequenceNumber": "1",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-4_A"
+        },
+        {
+            "@id": "urn:uuid:803a9889-e921-4b94-959c-eea1e1da65e1",
+            "@type": "cim:ACLineSegmentPhase",
+            "cim:ACLineSegmentPhase.sequenceNumber": "1",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-6_A"
+        },
+        {
+            "@id": "urn:uuid:80d21fed-5c6c-4937-b102-8ca80c8608b4",
+            "@type": "cim:ACLineSegmentPhase",
+            "cim:ACLineSegmentPhase.sequenceNumber": "3",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-4_C"
+        },
+        {
+            "@id": "urn:uuid:81d8ad45-e734-45f3-ae9b-496c56d422b9",
+            "@type": "cim:ACLineSegmentPhase",
+            "cim:ACLineSegmentPhase.sequenceNumber": "2",
+            "cim:IdentifiedObject.name": "hvmv69s2s3-1_B"
+        },
+        {
+            "@id": "urn:uuid:8351298b-ad52-4dd7-b6cb-d45daac90fd3",
+            "@type": "cim:ACLineSegmentPhase",
+            "cim:ACLineSegmentPhase.sequenceNumber": "3",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-6_C"
+        },
+        {
+            "@id": "urn:uuid:a49e9b81-2260-48b0-bb1f-2a0b54e8a9ef",
+            "@type": "cim:ACLineSegmentPhase",
+            "cim:ACLineSegmentPhase.sequenceNumber": "1",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-2_A"
+        },
+        {
+            "@id": "urn:uuid:b6fdfad7-c3fe-4c10-b0e0-0b678095e1e1",
+            "@type": "cim:ACLineSegmentPhase",
+            "cim:ACLineSegmentPhase.sequenceNumber": "2",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-1_B"
+        },
+        {
+            "@id": "urn:uuid:c06131a9-254a-4298-863a-1a1c9d1896f4",
+            "@type": "cim:ACLineSegmentPhase",
+            "cim:ACLineSegmentPhase.sequenceNumber": "3",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-7_C"
+        },
+        {
+            "@id": "urn:uuid:cf869812-6716-414b-8573-5c4e40558982",
+            "@type": "cim:ACLineSegmentPhase",
+            "cim:ACLineSegmentPhase.sequenceNumber": "1",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-7_A"
+        },
+        {
+            "@id": "urn:uuid:d1ac1160-d274-4eb9-80c7-42ef2527a4d9",
+            "@type": "cim:ACLineSegmentPhase",
+            "cim:ACLineSegmentPhase.sequenceNumber": "3",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-1_C"
+        },
+        {
+            "@id": "urn:uuid:d1fd5ad6-e42c-4ea3-a05c-fb28bfd15165",
+            "@type": "cim:ACLineSegmentPhase",
+            "cim:ACLineSegmentPhase.sequenceNumber": "2",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-6_B"
+        },
+        {
+            "@id": "urn:uuid:dcf719eb-b131-44c9-b751-c4e22c03338d",
+            "@type": "cim:ACLineSegmentPhase",
+            "cim:ACLineSegmentPhase.sequenceNumber": "2",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-2_B"
+        },
+        {
+            "@id": "urn:uuid:dd6441dd-1552-46f0-8b25-9e796ec140a1",
+            "@type": "cim:ACLineSegmentPhase",
+            "cim:ACLineSegmentPhase.sequenceNumber": "3",
+            "cim:IdentifiedObject.name": "hvmv69s2s3-1_C"
+        },
+        {
+            "@id": "urn:uuid:eaac48f7-6902-413f-b2ea-b2fcc7ff1897",
+            "@type": "cim:ACLineSegmentPhase",
+            "cim:ACLineSegmentPhase.sequenceNumber": "3",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-2_C"
+        },
+        {
+            "@id": "urn:uuid:ee3a11f9-d75f-40ad-ba42-277d65954d80",
+            "@type": "cim:ACLineSegmentPhase",
+            "cim:ACLineSegmentPhase.sequenceNumber": "3",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-8_C"
+        },
+        {
+            "@id": "urn:uuid:f1bb69c2-7a36-4fb7-a47b-f0578349a774",
+            "@type": "cim:ACLineSegmentPhase",
+            "cim:ACLineSegmentPhase.sequenceNumber": "2",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-3_B"
+        },
+        {
+            "@id": "urn:uuid:0d07d8b9-e36a-4b25-80b9-b4e838033f90",
+            "@type": "cim:Breaker",
+            "cim:ProtectedSwitch.breakingCapacity": "400.0",
+            "cim:Switch.ratedCurrent": "400.0",
+            "cim:IdentifiedObject.name": "hvmv69s2b3_sw"
+        },
+        {
+            "@id": "urn:uuid:4b865a2e-2163-42d7-a29b-2baf018c2c2c",
+            "@type": "cim:Breaker",
+            "cim:ProtectedSwitch.breakingCapacity": "400.0",
+            "cim:Switch.ratedCurrent": "400.0",
+            "cim:IdentifiedObject.name": "hvmv69s1b1_sw"
+        },
+        {
+            "@id": "urn:uuid:892c7482-8baf-4bde-868e-8f9019ff1c7c",
+            "@type": "cim:Breaker",
+            "cim:ProtectedSwitch.breakingCapacity": "400.0",
+            "cim:Switch.ratedCurrent": "400.0",
+            "cim:IdentifiedObject.name": "hvmv115s1b1_sw"
+        },
+        {
+            "@id": "urn:uuid:89f95de1-c525-4eab-82e5-73abbacbf4d2",
+            "@type": "cim:Breaker",
+            "cim:ProtectedSwitch.breakingCapacity": "400.0",
+            "cim:Switch.ratedCurrent": "400.0",
+            "cim:IdentifiedObject.name": "hvmv69s2b4_sw"
+        },
+        {
+            "@id": "urn:uuid:b775a18b-5b6a-4642-942d-5521bd4f52d4",
+            "@type": "cim:Breaker",
+            "cim:ProtectedSwitch.breakingCapacity": "400.0",
+            "cim:Switch.ratedCurrent": "400.0",
+            "cim:IdentifiedObject.name": "hvmv69s1b3_sw"
+        },
+        {
+            "@id": "urn:uuid:b97ee681-835a-419e-992f-dea51371da49",
+            "@type": "cim:Breaker",
+            "cim:ProtectedSwitch.breakingCapacity": "400.0",
+            "cim:Switch.ratedCurrent": "400.0",
+            "cim:IdentifiedObject.name": "hvmv69s3b1_sw"
+        },
+        {
+            "@id": "urn:uuid:c2694b62-24d1-4b47-81b9-3c2e3d7267b6",
+            "@type": "cim:Breaker",
+            "cim:ProtectedSwitch.breakingCapacity": "400.0",
+            "cim:Switch.ratedCurrent": "400.0",
+            "cim:IdentifiedObject.name": "hvmv11s1b2_sw"
+        },
+        {
+            "@id": "urn:uuid:c8cb060c-7fc8-43b1-8f88-0790dbc4f032",
+            "@type": "cim:Breaker",
+            "cim:ProtectedSwitch.breakingCapacity": "400.0",
+            "cim:Switch.ratedCurrent": "400.0",
+            "cim:IdentifiedObject.name": "hvmv11s2b2_sw"
+        },
+        {
+            "@id": "urn:uuid:e0ad1a26-271b-45fa-8cc2-e576419cec43",
+            "@type": "cim:Breaker",
+            "cim:ProtectedSwitch.breakingCapacity": "400.0",
+            "cim:Switch.ratedCurrent": "400.0",
+            "cim:IdentifiedObject.name": "hvmv69s1b4_sw"
+        },
+        {
+            "@id": "urn:uuid:e742f3b2-b8b7-4e6e-8ddb-dcef2f1797e5",
+            "@type": "cim:Breaker",
+            "cim:ProtectedSwitch.breakingCapacity": "400.0",
+            "cim:Switch.ratedCurrent": "400.0",
+            "cim:IdentifiedObject.name": "hvmv69s2b1_sw"
+        },
+        {
+            "@id": "urn:uuid:ee235f9e-369b-40f1-9977-8dec37d7ec8f",
+            "@type": "cim:Breaker",
+            "cim:ProtectedSwitch.breakingCapacity": "400.0",
+            "cim:Switch.ratedCurrent": "400.0",
+            "cim:IdentifiedObject.name": "hvmv11s3b2_sw"
+        },
+        {
+            "@id": "urn:uuid:ce804296-d1b8-4108-928b-e8227d2501fb",
+            "@type": "cim:EnergySource",
+            "cim:EnergySource.nominalVoltage": "115000.0",
+            "cim:EnergySource.r": "0.0",
+            "cim:EnergySource.x": "0.001",
+            "cim:IdentifiedObject.name": "source"
+        },
+        {
+            "@id": "urn:uuid:84e58b61-3e27-4903-bb61-13a9d8b7a8cc",
+            "@type": "cim:LoadBreakSwitch",
+            "cim:ProtectedSwitch.breakingCapacity": "400.0",
+            "cim:Switch.ratedCurrent": "400.0",
+            "cim:IdentifiedObject.name": "hvmv_sub_connector"
+        },
+        {
+            "@id": "urn:uuid:9e16bb95-bec5-4332-9999-323a277b8934",
+            "@type": "cim:PerLengthPhaseImpedance",
+            "cim:PerLengthPhaseImpedance.conductorCount": "3",
+            "cim:IdentifiedObject.name": "3ph-69kv_397_treewire"
+        },
+        {
+            "@id": "urn:uuid:4fa7e0fe-779e-4140-bd21-cd9c92b90981",
+            "@type": "cim:PhaseImpedanceData",
+            "cim:PhaseImpedanceData.column": "2",
+            "cim:PhaseImpedanceData.row": "3",
+            "cim:PhaseImpedanceData.b": "-7.2557219e-10",
+            "cim:PhaseImpedanceData.r": "0.000103135",
+            "cim:PhaseImpedanceData.x": "0.000297849",
+            "cim:PhaseImpedanceData.PhaseImpedance": {
+                "@id": "9e16bb95-bec5-4332-9999-323a277b8934",
+                "@type": "PerLengthPhaseImpedance"
+            }
+        },
+        {
+            "@id": "urn:uuid:54d24139-a36f-4010-9e30-1123f20167e2",
+            "@type": "cim:PhaseImpedanceData",
+            "cim:PhaseImpedanceData.column": "1",
+            "cim:PhaseImpedanceData.row": "1",
+            "cim:PhaseImpedanceData.b": "3.1245439e-09",
+            "cim:PhaseImpedanceData.r": "0.00026293",
+            "cim:PhaseImpedanceData.x": "0.000751932",
+            "cim:PhaseImpedanceData.PhaseImpedance": {
+                "@id": "9e16bb95-bec5-4332-9999-323a277b8934",
+                "@type": "PerLengthPhaseImpedance"
+            }
+        },
+        {
+            "@id": "urn:uuid:5d427817-bf20-4f5d-b770-89b57c224002",
+            "@type": "cim:PhaseImpedanceData",
+            "cim:PhaseImpedanceData.column": "1",
+            "cim:PhaseImpedanceData.row": "3",
+            "cim:PhaseImpedanceData.b": "-4.9196587e-10",
+            "cim:PhaseImpedanceData.r": "9.89238e-05",
+            "cim:PhaseImpedanceData.x": "0.000274056",
+            "cim:PhaseImpedanceData.PhaseImpedance": {
+                "@id": "9e16bb95-bec5-4332-9999-323a277b8934",
+                "@type": "PerLengthPhaseImpedance"
+            }
+        },
+        {
+            "@id": "urn:uuid:a3790db9-671f-4c6d-89c4-d684cabdcc9f",
+            "@type": "cim:PhaseImpedanceData",
+            "cim:PhaseImpedanceData.column": "3",
+            "cim:PhaseImpedanceData.row": "3",
+            "cim:PhaseImpedanceData.b": "3.2442348e-09",
+            "cim:PhaseImpedanceData.r": "0.000283358",
+            "cim:PhaseImpedanceData.x": "0.000702036",
+            "cim:PhaseImpedanceData.PhaseImpedance": {
+                "@id": "9e16bb95-bec5-4332-9999-323a277b8934",
+                "@type": "PerLengthPhaseImpedance"
+            }
+        },
+        {
+            "@id": "urn:uuid:c729e5f2-41ca-46e8-aedb-8d3a7e904819",
+            "@type": "cim:PhaseImpedanceData",
+            "cim:PhaseImpedanceData.column": "1",
+            "cim:PhaseImpedanceData.row": "2",
+            "cim:PhaseImpedanceData.b": "-7.6696958e-10",
+            "cim:PhaseImpedanceData.r": "9.3208e-05",
+            "cim:PhaseImpedanceData.x": "0.000321999",
+            "cim:PhaseImpedanceData.PhaseImpedance": {
+                "@id": "9e16bb95-bec5-4332-9999-323a277b8934",
+                "@type": "PerLengthPhaseImpedance"
+            }
+        },
+        {
+            "@id": "urn:uuid:c7527f13-ae30-4dde-be36-465dd33ed25a",
+            "@type": "cim:PhaseImpedanceData",
+            "cim:PhaseImpedanceData.column": "2",
+            "cim:PhaseImpedanceData.row": "2",
+            "cim:PhaseImpedanceData.b": "3.2400275e-09",
+            "cim:PhaseImpedanceData.r": "0.00026998",
+            "cim:PhaseImpedanceData.x": "0.000734311",
+            "cim:PhaseImpedanceData.PhaseImpedance": {
+                "@id": "9e16bb95-bec5-4332-9999-323a277b8934",
+                "@type": "PerLengthPhaseImpedance"
+            }
+        },
+        {
+            "@id": "urn:uuid:12ecde7e-029b-466b-b10f-4289600824de",
+            "@type": "cim:PowerTransformer",
+            "cim:IdentifiedObject.name": "hvmv69_11s3"
+        },
+        {
+            "@id": "urn:uuid:4073e035-c254-431d-ae34-399f37319d5a",
+            "@type": "cim:PowerTransformer",
+            "cim:IdentifiedObject.name": "FEEDER2_REG2"
+        },
+        {
+            "@id": "urn:uuid:c4c8b83e-0669-45e8-ad6f-f40c5a773a53",
+            "@type": "cim:PowerTransformer",
+            "cim:IdentifiedObject.name": "hvmv69_11s2"
+        },
+        {
+            "@id": "urn:uuid:cc79ae17-fba5-4228-af78-dca493ee7383",
+            "@type": "cim:PowerTransformer",
+            "cim:IdentifiedObject.name": "FEEDER3_REG3"
+        },
+        {
+            "@id": "urn:uuid:cec3d5eb-a01d-4215-bdd7-cacf9e004820",
+            "@type": "cim:PowerTransformer",
+            "cim:IdentifiedObject.name": "FEEDER1_REG1"
+        },
+        {
+            "@id": "urn:uuid:cf985369-c99e-4ee7-a87c-bdbd1fe4d9f8",
+            "@type": "cim:PowerTransformer",
+            "cim:IdentifiedObject.name": "hvmv115s1_69sub"
+        },
+        {
+            "@id": "urn:uuid:e1eaaf53-aab6-4039-b545-ac3506f33fb0",
+            "@type": "cim:PowerTransformer",
+            "cim:IdentifiedObject.name": "hvmv69_11s1"
+        },
+        {
+            "@id": "urn:uuid:2ca5ff1b-3e7a-4c37-8336-9455d9e23fb7",
+            "@type": "cim:PowerTransformerEnd",
+            "cim:PowerTransformerEnd.phaseAngleClock": "0",
+            "cim:PowerTransformerEnd.r": "1.1814333",
+            "cim:PowerTransformerEnd.ratedS": "75000000.0",
+            "cim:PowerTransformerEnd.ratedU": "115000.0",
+            "cim:TransformerEnd.grounded": "True",
+            "cim:TransformerEnd.rground": "0.0",
+            "cim:TransformerEnd.xground": "0.0",
+            "cim:TransformerEnd.CoreAdmittance": {
+                "@id": "06f452c1-db8c-4694-9d67-e8c9b862013f",
+                "@type": "TransformerCoreAdmittance"
+            },
+            "cim:IdentifiedObject.name": "hvmv115s1_69sub_End_1"
+        },
+        {
+            "@id": "urn:uuid:368b1663-b4f6-4a91-a47f-97760689de80",
+            "@type": "cim:PowerTransformerEnd",
+            "cim:PowerTransformerEnd.phaseAngleClock": "0",
+            "cim:PowerTransformerEnd.r": "1.594935",
+            "cim:PowerTransformerEnd.ratedS": "20000000.0",
+            "cim:PowerTransformerEnd.ratedU": "69000.0",
+            "cim:TransformerEnd.grounded": "False",
+            "cim:TransformerEnd.CoreAdmittance": {
+                "@id": "c2a6f29a-d50d-4a0c-9bd2-9ec941e97037",
+                "@type": "TransformerCoreAdmittance"
+            },
+            "cim:IdentifiedObject.name": "hvmv69_11s1_End_1"
+        },
+        {
+            "@id": "urn:uuid:5b6acaea-39a6-4661-b8d3-26b768e5b4fb",
+            "@type": "cim:PowerTransformerEnd",
+            "cim:PowerTransformerEnd.phaseAngleClock": "1",
+            "cim:PowerTransformerEnd.r": "0.052092802",
+            "cim:PowerTransformerEnd.ratedS": "20000000.0",
+            "cim:PowerTransformerEnd.ratedU": "12470.0",
+            "cim:TransformerEnd.grounded": "True",
+            "cim:TransformerEnd.rground": "0.0",
+            "cim:TransformerEnd.xground": "0.0",
+            "cim:IdentifiedObject.name": "hvmv69_11s3_End_2"
+        },
+        {
+            "@id": "urn:uuid:8e35d28a-d60b-4b8d-b692-840f998eb9cf",
+            "@type": "cim:PowerTransformerEnd",
+            "cim:PowerTransformerEnd.phaseAngleClock": "1",
+            "cim:PowerTransformerEnd.r": "0.425316",
+            "cim:PowerTransformerEnd.ratedS": "75000000.0",
+            "cim:PowerTransformerEnd.ratedU": "69000.0",
+            "cim:TransformerEnd.grounded": "False",
+            "cim:IdentifiedObject.name": "hvmv115s1_69sub_End_2"
+        },
+        {
+            "@id": "urn:uuid:93e6b4dd-a283-49ba-97f1-8d8b56524953",
+            "@type": "cim:PowerTransformerEnd",
+            "cim:PowerTransformerEnd.phaseAngleClock": "0",
+            "cim:PowerTransformerEnd.r": "1.594935",
+            "cim:PowerTransformerEnd.ratedS": "20000000.0",
+            "cim:PowerTransformerEnd.ratedU": "69000.0",
+            "cim:TransformerEnd.grounded": "False",
+            "cim:TransformerEnd.CoreAdmittance": {
+                "@id": "de34ebd3-031b-4522-bf87-f5893be46699",
+                "@type": "TransformerCoreAdmittance"
+            },
+            "cim:IdentifiedObject.name": "hvmv69_11s3_End_1"
+        },
+        {
+            "@id": "urn:uuid:9db19cce-90d5-44b3-adbe-8aa4278f8a6d",
+            "@type": "cim:PowerTransformerEnd",
+            "cim:PowerTransformerEnd.phaseAngleClock": "1",
+            "cim:PowerTransformerEnd.r": "0.052092802",
+            "cim:PowerTransformerEnd.ratedS": "20000000.0",
+            "cim:PowerTransformerEnd.ratedU": "12470.0",
+            "cim:TransformerEnd.grounded": "True",
+            "cim:TransformerEnd.rground": "0.0",
+            "cim:TransformerEnd.xground": "0.0",
+            "cim:IdentifiedObject.name": "hvmv69_11s2_End_2"
+        },
+        {
+            "@id": "urn:uuid:e6be9fab-2e17-41aa-a41e-dcf428d2d02a",
+            "@type": "cim:PowerTransformerEnd",
+            "cim:PowerTransformerEnd.phaseAngleClock": "0",
+            "cim:PowerTransformerEnd.r": "1.594935",
+            "cim:PowerTransformerEnd.ratedS": "20000000.0",
+            "cim:PowerTransformerEnd.ratedU": "69000.0",
+            "cim:TransformerEnd.grounded": "False",
+            "cim:TransformerEnd.CoreAdmittance": {
+                "@id": "cfcb0a4e-a6cc-48d0-8ee9-4fe69239d579",
+                "@type": "TransformerCoreAdmittance"
+            },
+            "cim:IdentifiedObject.name": "hvmv69_11s2_End_1"
+        },
+        {
+            "@id": "urn:uuid:f898952e-3271-4d0e-8c77-2357c91a956b",
+            "@type": "cim:PowerTransformerEnd",
+            "cim:PowerTransformerEnd.phaseAngleClock": "1",
+            "cim:PowerTransformerEnd.r": "0.052092802",
+            "cim:PowerTransformerEnd.ratedS": "20000000.0",
+            "cim:PowerTransformerEnd.ratedU": "12470.0",
+            "cim:TransformerEnd.grounded": "True",
+            "cim:TransformerEnd.rground": "0.0",
+            "cim:TransformerEnd.xground": "0.0",
+            "cim:IdentifiedObject.name": "hvmv69_11s1_End_2"
+        },
+        {
+            "@id": "urn:uuid:3587fb53-a4b6-4387-99a6-d93cd19159c0",
+            "@type": "cim:RatioTapChanger",
+            "cim:RatioTapChanger.stepVoltageIncrement": "0.625",
+            "cim:RatioTapChanger.TransformerEnd": {
+                "@id": "c1434d51-597e-4515-979b-1507dca0dc8c",
+                "@type": "TransformerTankEnd"
+            },
+            "cim:TapChanger.controlEnabled": "True",
+            "gmdm:TapChanger.ctRating": "300.0",
+            "cim:TapChanger.ctRatio": "1500.0",
+            "cim:TapChanger.highStep": "16",
+            "cim:TapChanger.lowStep": "-16",
+            "cim:TapChanger.ltcFlag": "True",
+            "cim:TapChanger.neutralStep": "0",
+            "cim:TapChanger.ptRatio": "60.0",
+            "cim:TapChanger.initialDelay": "15.0",
+            "cim:TapChanger.neutralU": "7200.0",
+            "cim:TapChanger.subsequentDelay": "2.0",
+            "cim:TapChanger.TapChangerControl": {
+                "@id": "30de50d1-ff41-45d9-8379-0a5a91105480",
+                "@type": "TapChangerControl"
+            },
+            "cim:IdentifiedObject.name": "feeder_reg1b"
+        },
+        {
+            "@id": "urn:uuid:52fad1cc-7ef0-486a-93b9-aef8aec180db",
+            "@type": "cim:RatioTapChanger",
+            "cim:RatioTapChanger.stepVoltageIncrement": "0.625",
+            "cim:RatioTapChanger.TransformerEnd": {
+                "@id": "3771b5c0-ea71-4d6e-a8e5-53788a83872f",
+                "@type": "TransformerTankEnd"
+            },
+            "cim:TapChanger.controlEnabled": "True",
+            "gmdm:TapChanger.ctRating": "300.0",
+            "cim:TapChanger.ctRatio": "1500.0",
+            "cim:TapChanger.highStep": "16",
+            "cim:TapChanger.lowStep": "-16",
+            "cim:TapChanger.ltcFlag": "True",
+            "cim:TapChanger.neutralStep": "0",
+            "cim:TapChanger.ptRatio": "60.0",
+            "cim:TapChanger.initialDelay": "15.0",
+            "cim:TapChanger.neutralU": "7200.0",
+            "cim:TapChanger.subsequentDelay": "2.0",
+            "cim:TapChanger.TapChangerControl": {
+                "@id": "b9acc6f7-9817-46d2-9c6f-907141e2a863",
+                "@type": "TapChangerControl"
+            },
+            "cim:IdentifiedObject.name": "feeder_reg3a"
+        },
+        {
+            "@id": "urn:uuid:6545da8b-9b16-4814-8c44-146441580ec3",
+            "@type": "cim:RatioTapChanger",
+            "cim:RatioTapChanger.stepVoltageIncrement": "0.625",
+            "cim:RatioTapChanger.TransformerEnd": {
+                "@id": "c37c7225-7f69-45d5-9e08-9e3f3f4e357e",
+                "@type": "TransformerTankEnd"
+            },
+            "cim:TapChanger.controlEnabled": "True",
+            "gmdm:TapChanger.ctRating": "300.0",
+            "cim:TapChanger.ctRatio": "1500.0",
+            "cim:TapChanger.highStep": "16",
+            "cim:TapChanger.lowStep": "-16",
+            "cim:TapChanger.ltcFlag": "True",
+            "cim:TapChanger.neutralStep": "0",
+            "cim:TapChanger.ptRatio": "60.0",
+            "cim:TapChanger.initialDelay": "15.0",
+            "cim:TapChanger.neutralU": "7200.0",
+            "cim:TapChanger.subsequentDelay": "2.0",
+            "cim:TapChanger.TapChangerControl": {
+                "@id": "52092e2f-1bb5-4db7-a2ab-677d7ec1d93f",
+                "@type": "TapChangerControl"
+            },
+            "cim:IdentifiedObject.name": "feeder_reg2c"
+        },
+        {
+            "@id": "urn:uuid:95581c5f-9cb2-414b-8577-abc2757e3187",
+            "@type": "cim:RatioTapChanger",
+            "cim:RatioTapChanger.stepVoltageIncrement": "0.625",
+            "cim:RatioTapChanger.TransformerEnd": {
+                "@id": "53faadb3-8d92-48d7-9777-9394157e6ace",
+                "@type": "TransformerTankEnd"
+            },
+            "cim:TapChanger.controlEnabled": "True",
+            "gmdm:TapChanger.ctRating": "300.0",
+            "cim:TapChanger.ctRatio": "1500.0",
+            "cim:TapChanger.highStep": "16",
+            "cim:TapChanger.lowStep": "-16",
+            "cim:TapChanger.ltcFlag": "True",
+            "cim:TapChanger.neutralStep": "0",
+            "cim:TapChanger.ptRatio": "60.0",
+            "cim:TapChanger.initialDelay": "15.0",
+            "cim:TapChanger.neutralU": "7200.0",
+            "cim:TapChanger.subsequentDelay": "2.0",
+            "cim:TapChanger.TapChangerControl": {
+                "@id": "6c75f0b1-e738-496f-b2ef-1b4b8e362352",
+                "@type": "TapChangerControl"
+            },
+            "cim:IdentifiedObject.name": "feeder_reg2b"
+        },
+        {
+            "@id": "urn:uuid:9677104f-9b53-4419-a18d-0e33f34199f6",
+            "@type": "cim:RatioTapChanger",
+            "cim:RatioTapChanger.stepVoltageIncrement": "0.625",
+            "cim:RatioTapChanger.TransformerEnd": {
+                "@id": "d95f1827-eac4-449b-a0a9-aa3c2d3b60c7",
+                "@type": "TransformerTankEnd"
+            },
+            "cim:TapChanger.controlEnabled": "True",
+            "gmdm:TapChanger.ctRating": "300.0",
+            "cim:TapChanger.ctRatio": "1500.0",
+            "cim:TapChanger.highStep": "16",
+            "cim:TapChanger.lowStep": "-16",
+            "cim:TapChanger.ltcFlag": "True",
+            "cim:TapChanger.neutralStep": "0",
+            "cim:TapChanger.ptRatio": "60.0",
+            "cim:TapChanger.initialDelay": "15.0",
+            "cim:TapChanger.neutralU": "7200.0",
+            "cim:TapChanger.subsequentDelay": "2.0",
+            "cim:TapChanger.TapChangerControl": {
+                "@id": "a53fa678-e5ea-44f8-b976-db838a2e1306",
+                "@type": "TapChangerControl"
+            },
+            "cim:IdentifiedObject.name": "feeder_reg2a"
+        },
+        {
+            "@id": "urn:uuid:d543fcf4-6035-4896-9614-7fe3382492f5",
+            "@type": "cim:RatioTapChanger",
+            "cim:RatioTapChanger.stepVoltageIncrement": "0.625",
+            "cim:RatioTapChanger.TransformerEnd": {
+                "@id": "99fa1c85-4a1a-4f8b-bfed-fd5ba9f70756",
+                "@type": "TransformerTankEnd"
+            },
+            "cim:TapChanger.controlEnabled": "True",
+            "gmdm:TapChanger.ctRating": "300.0",
+            "cim:TapChanger.ctRatio": "1500.0",
+            "cim:TapChanger.highStep": "16",
+            "cim:TapChanger.lowStep": "-16",
+            "cim:TapChanger.ltcFlag": "True",
+            "cim:TapChanger.neutralStep": "0",
+            "cim:TapChanger.ptRatio": "60.0",
+            "cim:TapChanger.initialDelay": "15.0",
+            "cim:TapChanger.neutralU": "7200.0",
+            "cim:TapChanger.subsequentDelay": "2.0",
+            "cim:TapChanger.TapChangerControl": {
+                "@id": "98f40889-890e-4476-ae78-ef8e297b0581",
+                "@type": "TapChangerControl"
+            },
+            "cim:IdentifiedObject.name": "feeder_reg3c"
+        },
+        {
+            "@id": "urn:uuid:db618833-3d10-4bdf-9e19-ca8152b47492",
+            "@type": "cim:RatioTapChanger",
+            "cim:RatioTapChanger.stepVoltageIncrement": "0.625",
+            "cim:RatioTapChanger.TransformerEnd": {
+                "@id": "ee3442d0-41c3-42d1-ae55-fee1b7de9463",
+                "@type": "TransformerTankEnd"
+            },
+            "cim:TapChanger.controlEnabled": "True",
+            "gmdm:TapChanger.ctRating": "300.0",
+            "cim:TapChanger.ctRatio": "1500.0",
+            "cim:TapChanger.highStep": "16",
+            "cim:TapChanger.lowStep": "-16",
+            "cim:TapChanger.ltcFlag": "True",
+            "cim:TapChanger.neutralStep": "0",
+            "cim:TapChanger.ptRatio": "60.0",
+            "cim:TapChanger.initialDelay": "15.0",
+            "cim:TapChanger.neutralU": "7200.0",
+            "cim:TapChanger.subsequentDelay": "2.0",
+            "cim:TapChanger.TapChangerControl": {
+                "@id": "671843ea-c83e-4dd9-ac7d-76e82f6b3b7b",
+                "@type": "TapChangerControl"
+            },
+            "cim:IdentifiedObject.name": "feeder_reg1a"
+        },
+        {
+            "@id": "urn:uuid:ee394da8-0e8c-4e18-a158-36d960df00fb",
+            "@type": "cim:RatioTapChanger",
+            "cim:RatioTapChanger.stepVoltageIncrement": "0.625",
+            "cim:RatioTapChanger.TransformerEnd": {
+                "@id": "57b10f5b-08dc-4ff4-9319-dc8dc0c0184e",
+                "@type": "TransformerTankEnd"
+            },
+            "cim:TapChanger.controlEnabled": "True",
+            "gmdm:TapChanger.ctRating": "300.0",
+            "cim:TapChanger.ctRatio": "1500.0",
+            "cim:TapChanger.highStep": "16",
+            "cim:TapChanger.lowStep": "-16",
+            "cim:TapChanger.ltcFlag": "True",
+            "cim:TapChanger.neutralStep": "0",
+            "cim:TapChanger.ptRatio": "60.0",
+            "cim:TapChanger.initialDelay": "15.0",
+            "cim:TapChanger.neutralU": "7200.0",
+            "cim:TapChanger.subsequentDelay": "2.0",
+            "cim:TapChanger.TapChangerControl": {
+                "@id": "8445409c-3032-4a3d-8754-c68960c9ed16",
+                "@type": "TapChangerControl"
+            },
+            "cim:IdentifiedObject.name": "feeder_reg3b"
+        },
+        {
+            "@id": "urn:uuid:ef416f75-4ed0-4a1a-b436-741c1e29c10c",
+            "@type": "cim:RatioTapChanger",
+            "cim:RatioTapChanger.stepVoltageIncrement": "0.625",
+            "cim:RatioTapChanger.TransformerEnd": {
+                "@id": "93343216-ec9a-4c2c-903b-e14e4c19bc35",
+                "@type": "TransformerTankEnd"
+            },
+            "cim:TapChanger.controlEnabled": "True",
+            "gmdm:TapChanger.ctRating": "300.0",
+            "cim:TapChanger.ctRatio": "1500.0",
+            "cim:TapChanger.highStep": "16",
+            "cim:TapChanger.lowStep": "-16",
+            "cim:TapChanger.ltcFlag": "True",
+            "cim:TapChanger.neutralStep": "0",
+            "cim:TapChanger.ptRatio": "60.0",
+            "cim:TapChanger.initialDelay": "15.0",
+            "cim:TapChanger.neutralU": "7200.0",
+            "cim:TapChanger.subsequentDelay": "2.0",
+            "cim:TapChanger.TapChangerControl": {
+                "@id": "fec79d5f-5a8c-44ab-8cb0-397d84042b6d",
+                "@type": "TapChangerControl"
+            },
+            "cim:IdentifiedObject.name": "feeder_reg1c"
+        },
+        {
+            "@id": "urn:uuid:2001fcf4-f122-4792-b3e8-e8b35479c492",
+            "@type": "cim:SeriesCompensator",
+            "cim:SeriesCompensator.r": "0.0",
+            "cim:SeriesCompensator.x": "14.798307",
+            "cim:IdentifiedObject.name": "hvmv_sub_hsb"
+        },
+        {
+            "@id": "urn:uuid:30de50d1-ff41-45d9-8379-0a5a91105480",
+            "@type": "cim:TapChangerControl",
+            "cim:TapChangerControl.lineDropCompensation": "False",
+            "gmdm:TapChangerControl.reversible": "False",
+            "cim:TapChangerControl.lineDropR": "0.0",
+            "cim:TapChangerControl.lineDropX": "0.0",
+            "cim:TapChangerControl.maxLimitVoltage": "132.0",
+            "cim:TapChangerControl.minLimitVoltage": "108.0",
+            "cim:RegulatingControl.discrete": "True",
+            "cim:RegulatingControl.enabled": "True",
+            "cim:RegulatingControl.targetDeadband": "2.0",
+            "cim:RegulatingControl.targetValue": "123.0",
+            "cim:RegulatingControl.mode": "http://cim.ucaiug.io/CIM101/draft#:RegulatingControlModeKind.voltage",
+            "cim:RegulatingControl.monitoredPhase": "http://cim.ucaiug.io/CIM101/draft#:PhaseCode.B",
+            "cim:RegulatingControl.Terminal": {
+                "@id": "e3f9e9f4-48fc-484b-9558-f2c3832ae30a",
+                "@type": "Terminal"
+            },
+            "cim:IdentifiedObject.name": "feeder_reg1b_Ctrl"
+        },
+        {
+            "@id": "urn:uuid:52092e2f-1bb5-4db7-a2ab-677d7ec1d93f",
+            "@type": "cim:TapChangerControl",
+            "cim:TapChangerControl.lineDropCompensation": "False",
+            "gmdm:TapChangerControl.reversible": "False",
+            "cim:TapChangerControl.lineDropR": "0.0",
+            "cim:TapChangerControl.lineDropX": "0.0",
+            "cim:TapChangerControl.maxLimitVoltage": "132.0",
+            "cim:TapChangerControl.minLimitVoltage": "108.0",
+            "cim:RegulatingControl.discrete": "True",
+            "cim:RegulatingControl.enabled": "True",
+            "cim:RegulatingControl.targetDeadband": "2.0",
+            "cim:RegulatingControl.targetValue": "123.0",
+            "cim:RegulatingControl.mode": "http://cim.ucaiug.io/CIM101/draft#:RegulatingControlModeKind.voltage",
+            "cim:RegulatingControl.monitoredPhase": "http://cim.ucaiug.io/CIM101/draft#:PhaseCode.C",
+            "cim:RegulatingControl.Terminal": {
+                "@id": "ef1fe890-d08e-4ecf-b0e0-a1f5cf7d0ff9",
+                "@type": "Terminal"
+            },
+            "cim:IdentifiedObject.name": "feeder_reg2c_Ctrl"
+        },
+        {
+            "@id": "urn:uuid:671843ea-c83e-4dd9-ac7d-76e82f6b3b7b",
+            "@type": "cim:TapChangerControl",
+            "cim:TapChangerControl.lineDropCompensation": "False",
+            "gmdm:TapChangerControl.reversible": "False",
+            "cim:TapChangerControl.lineDropR": "0.0",
+            "cim:TapChangerControl.lineDropX": "0.0",
+            "cim:TapChangerControl.maxLimitVoltage": "132.0",
+            "cim:TapChangerControl.minLimitVoltage": "108.0",
+            "cim:RegulatingControl.discrete": "True",
+            "cim:RegulatingControl.enabled": "True",
+            "cim:RegulatingControl.targetDeadband": "2.0",
+            "cim:RegulatingControl.targetValue": "123.0",
+            "cim:RegulatingControl.mode": "http://cim.ucaiug.io/CIM101/draft#:RegulatingControlModeKind.voltage",
+            "cim:RegulatingControl.monitoredPhase": "http://cim.ucaiug.io/CIM101/draft#:PhaseCode.A",
+            "cim:RegulatingControl.Terminal": {
+                "@id": "ba2c36be-8e99-431c-8cae-7da7449aa577",
+                "@type": "Terminal"
+            },
+            "cim:IdentifiedObject.name": "feeder_reg1a_Ctrl"
+        },
+        {
+            "@id": "urn:uuid:6c75f0b1-e738-496f-b2ef-1b4b8e362352",
+            "@type": "cim:TapChangerControl",
+            "cim:TapChangerControl.lineDropCompensation": "False",
+            "gmdm:TapChangerControl.reversible": "False",
+            "cim:TapChangerControl.lineDropR": "0.0",
+            "cim:TapChangerControl.lineDropX": "0.0",
+            "cim:TapChangerControl.maxLimitVoltage": "132.0",
+            "cim:TapChangerControl.minLimitVoltage": "108.0",
+            "cim:RegulatingControl.discrete": "True",
+            "cim:RegulatingControl.enabled": "True",
+            "cim:RegulatingControl.targetDeadband": "2.0",
+            "cim:RegulatingControl.targetValue": "123.0",
+            "cim:RegulatingControl.mode": "http://cim.ucaiug.io/CIM101/draft#:RegulatingControlModeKind.voltage",
+            "cim:RegulatingControl.monitoredPhase": "http://cim.ucaiug.io/CIM101/draft#:PhaseCode.B",
+            "cim:RegulatingControl.Terminal": {
+                "@id": "6a0e972e-66aa-41bd-9b70-1e89a521a4c4",
+                "@type": "Terminal"
+            },
+            "cim:IdentifiedObject.name": "feeder_reg2b_Ctrl"
+        },
+        {
+            "@id": "urn:uuid:8445409c-3032-4a3d-8754-c68960c9ed16",
+            "@type": "cim:TapChangerControl",
+            "cim:TapChangerControl.lineDropCompensation": "False",
+            "gmdm:TapChangerControl.reversible": "False",
+            "cim:TapChangerControl.lineDropR": "0.0",
+            "cim:TapChangerControl.lineDropX": "0.0",
+            "cim:TapChangerControl.maxLimitVoltage": "132.0",
+            "cim:TapChangerControl.minLimitVoltage": "108.0",
+            "cim:RegulatingControl.discrete": "True",
+            "cim:RegulatingControl.enabled": "True",
+            "cim:RegulatingControl.targetDeadband": "2.0",
+            "cim:RegulatingControl.targetValue": "123.0",
+            "cim:RegulatingControl.mode": "http://cim.ucaiug.io/CIM101/draft#:RegulatingControlModeKind.voltage",
+            "cim:RegulatingControl.monitoredPhase": "http://cim.ucaiug.io/CIM101/draft#:PhaseCode.B",
+            "cim:RegulatingControl.Terminal": {
+                "@id": "53c106ba-9023-4065-b7f2-330d8e7f62ab",
+                "@type": "Terminal"
+            },
+            "cim:IdentifiedObject.name": "feeder_reg3b_Ctrl"
+        },
+        {
+            "@id": "urn:uuid:98f40889-890e-4476-ae78-ef8e297b0581",
+            "@type": "cim:TapChangerControl",
+            "cim:TapChangerControl.lineDropCompensation": "False",
+            "gmdm:TapChangerControl.reversible": "False",
+            "cim:TapChangerControl.lineDropR": "0.0",
+            "cim:TapChangerControl.lineDropX": "0.0",
+            "cim:TapChangerControl.maxLimitVoltage": "132.0",
+            "cim:TapChangerControl.minLimitVoltage": "108.0",
+            "cim:RegulatingControl.discrete": "True",
+            "cim:RegulatingControl.enabled": "True",
+            "cim:RegulatingControl.targetDeadband": "2.0",
+            "cim:RegulatingControl.targetValue": "123.0",
+            "cim:RegulatingControl.mode": "http://cim.ucaiug.io/CIM101/draft#:RegulatingControlModeKind.voltage",
+            "cim:RegulatingControl.monitoredPhase": "http://cim.ucaiug.io/CIM101/draft#:PhaseCode.C",
+            "cim:RegulatingControl.Terminal": {
+                "@id": "cb4b0a32-535e-4e0e-99ed-82fb59798d1b",
+                "@type": "Terminal"
+            },
+            "cim:IdentifiedObject.name": "feeder_reg3c_Ctrl"
+        },
+        {
+            "@id": "urn:uuid:a53fa678-e5ea-44f8-b976-db838a2e1306",
+            "@type": "cim:TapChangerControl",
+            "cim:TapChangerControl.lineDropCompensation": "False",
+            "gmdm:TapChangerControl.reversible": "False",
+            "cim:TapChangerControl.lineDropR": "0.0",
+            "cim:TapChangerControl.lineDropX": "0.0",
+            "cim:TapChangerControl.maxLimitVoltage": "132.0",
+            "cim:TapChangerControl.minLimitVoltage": "108.0",
+            "cim:RegulatingControl.discrete": "True",
+            "cim:RegulatingControl.enabled": "True",
+            "cim:RegulatingControl.targetDeadband": "2.0",
+            "cim:RegulatingControl.targetValue": "123.0",
+            "cim:RegulatingControl.mode": "http://cim.ucaiug.io/CIM101/draft#:RegulatingControlModeKind.voltage",
+            "cim:RegulatingControl.monitoredPhase": "http://cim.ucaiug.io/CIM101/draft#:PhaseCode.A",
+            "cim:RegulatingControl.Terminal": {
+                "@id": "39b891aa-b5ca-4b17-9d4b-a6c82433f20f",
+                "@type": "Terminal"
+            },
+            "cim:IdentifiedObject.name": "feeder_reg2a_Ctrl"
+        },
+        {
+            "@id": "urn:uuid:b9acc6f7-9817-46d2-9c6f-907141e2a863",
+            "@type": "cim:TapChangerControl",
+            "cim:TapChangerControl.lineDropCompensation": "False",
+            "gmdm:TapChangerControl.reversible": "False",
+            "cim:TapChangerControl.lineDropR": "0.0",
+            "cim:TapChangerControl.lineDropX": "0.0",
+            "cim:TapChangerControl.maxLimitVoltage": "132.0",
+            "cim:TapChangerControl.minLimitVoltage": "108.0",
+            "cim:RegulatingControl.discrete": "True",
+            "cim:RegulatingControl.enabled": "True",
+            "cim:RegulatingControl.targetDeadband": "2.0",
+            "cim:RegulatingControl.targetValue": "123.0",
+            "cim:RegulatingControl.mode": "http://cim.ucaiug.io/CIM101/draft#:RegulatingControlModeKind.voltage",
+            "cim:RegulatingControl.monitoredPhase": "http://cim.ucaiug.io/CIM101/draft#:PhaseCode.A",
+            "cim:RegulatingControl.Terminal": {
+                "@id": "19e00784-b670-4e49-94e2-c2af8aa15d3d",
+                "@type": "Terminal"
+            },
+            "cim:IdentifiedObject.name": "feeder_reg3a_Ctrl"
+        },
+        {
+            "@id": "urn:uuid:fec79d5f-5a8c-44ab-8cb0-397d84042b6d",
+            "@type": "cim:TapChangerControl",
+            "cim:TapChangerControl.lineDropCompensation": "False",
+            "gmdm:TapChangerControl.reversible": "False",
+            "cim:TapChangerControl.lineDropR": "0.0",
+            "cim:TapChangerControl.lineDropX": "0.0",
+            "cim:TapChangerControl.maxLimitVoltage": "132.0",
+            "cim:TapChangerControl.minLimitVoltage": "108.0",
+            "cim:RegulatingControl.discrete": "True",
+            "cim:RegulatingControl.enabled": "True",
+            "cim:RegulatingControl.targetDeadband": "2.0",
+            "cim:RegulatingControl.targetValue": "123.0",
+            "cim:RegulatingControl.mode": "http://cim.ucaiug.io/CIM101/draft#:RegulatingControlModeKind.voltage",
+            "cim:RegulatingControl.monitoredPhase": "http://cim.ucaiug.io/CIM101/draft#:PhaseCode.C",
+            "cim:RegulatingControl.Terminal": {
+                "@id": "e59c781a-cac0-4276-9b45-2a1928277185",
+                "@type": "Terminal"
+            },
+            "cim:IdentifiedObject.name": "feeder_reg1c_Ctrl"
+        },
+        {
+            "@id": "urn:uuid:07f15e8e-6a3a-4106-95e5-a8a539cd3f59",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69s1b1_sw_T1"
+        },
+        {
+            "@id": "urn:uuid:12efd8a4-8cf4-4b7d-a8c8-447df2f16ae5",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-5_T1"
+        },
+        {
+            "@id": "urn:uuid:19e00784-b670-4e49-94e2-c2af8aa15d3d",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "feeder_reg3a_T2"
+        },
+        {
+            "@id": "urn:uuid:1b8e0469-b2e1-446f-a08b-c048fe4f6749",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv11s3b2_sw_T1"
+        },
+        {
+            "@id": "urn:uuid:1cfda6b5-24d9-4c53-b1b4-0cc4a01ba8eb",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-2_T2"
+        },
+        {
+            "@id": "urn:uuid:1f294cb6-deb2-40fd-afb2-9030f7340e7d",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-8_T2"
+        },
+        {
+            "@id": "urn:uuid:259cc012-de4f-418a-9198-44b72fded52e",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv115s1b1_sw_T1"
+        },
+        {
+            "@id": "urn:uuid:29823e3c-0300-439f-878b-2016d984de7c",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69s2b3_sw_T2"
+        },
+        {
+            "@id": "urn:uuid:2a791534-35dc-4d07-ba57-7ef6c2dbefa2",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-4_T1"
+        },
+        {
+            "@id": "urn:uuid:2ef9d098-d837-461a-b790-5d57cb93982e",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69_11s3_T2"
+        },
+        {
+            "@id": "urn:uuid:364ece60-1803-4bda-9e03-71956a9ccf3e",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-2_T1"
+        },
+        {
+            "@id": "urn:uuid:39b891aa-b5ca-4b17-9d4b-a6c82433f20f",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "feeder_reg2a_T2"
+        },
+        {
+            "@id": "urn:uuid:4041c2bd-ecc4-4010-b58d-c8173f6e5613",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69_11s2_T2"
+        },
+        {
+            "@id": "urn:uuid:45f52a35-f892-47ac-be15-c3e26746b19c",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-7_T1"
+        },
+        {
+            "@id": "urn:uuid:466dc8cb-2af8-4914-abe0-cf9bc90a0f59",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69s1b4_sw_T2"
+        },
+        {
+            "@id": "urn:uuid:4a01b3cb-f39b-4d60-8b24-9ec6356c2efb",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-4_T2"
+        },
+        {
+            "@id": "urn:uuid:4a13dff5-1cda-4bc6-b5df-eb71d87caae6",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "feeder_reg3c_T1"
+        },
+        {
+            "@id": "urn:uuid:4af439cd-fbe4-42e5-a230-ac886449a39b",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv11s1b2_sw_T1"
+        },
+        {
+            "@id": "urn:uuid:508cec8a-75f7-4611-a9a8-1c1d20c40423",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv11s2b2_sw_T2"
+        },
+        {
+            "@id": "urn:uuid:50932669-9eb9-4c38-8fc0-634a651c4477",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "feeder_reg1a_T1"
+        },
+        {
+            "@id": "urn:uuid:53c106ba-9023-4065-b7f2-330d8e7f62ab",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "feeder_reg3b_T2"
+        },
+        {
+            "@id": "urn:uuid:546355d6-982e-424d-8648-c471bd9a7f0f",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-9_T1"
+        },
+        {
+            "@id": "urn:uuid:57cdc8a9-12ac-4f1d-9cb3-ac51dd9c1475",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv_sub_hsb_T2"
+        },
+        {
+            "@id": "urn:uuid:58da6fd4-f8f1-482c-8163-0d74e84e1fee",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "feeder_reg2c_T1"
+        },
+        {
+            "@id": "urn:uuid:5aa371f8-5546-4cd7-9840-e858f5224a0a",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-7_T2"
+        },
+        {
+            "@id": "urn:uuid:5ee3b8b7-9732-4221-92bb-f5f4d521cb46",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69s2s3-1_T1"
+        },
+        {
+            "@id": "urn:uuid:6764f18b-76a4-4546-af57-0e6d79c82dd3",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69s2b4_sw_T1"
+        },
+        {
+            "@id": "urn:uuid:686a17d0-0d2f-4017-8c92-45816fd0df23",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv_sub_connector_T2"
+        },
+        {
+            "@id": "urn:uuid:6871a63e-23c1-4735-8202-978aa5ee1de8",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "feeder_reg1b_T1"
+        },
+        {
+            "@id": "urn:uuid:6a0e972e-66aa-41bd-9b70-1e89a521a4c4",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "feeder_reg2b_T2"
+        },
+        {
+            "@id": "urn:uuid:76707cf8-64d5-4868-aed6-87be265c4146",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "feeder_reg1c_T1"
+        },
+        {
+            "@id": "urn:uuid:78aceb13-b1e9-4975-914c-3e70886e53c4",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69s2b1_sw_T1"
+        },
+        {
+            "@id": "urn:uuid:7bd8852a-7d85-4d15-b199-f19fe18ae067",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-8_T1"
+        },
+        {
+            "@id": "urn:uuid:7d07b780-e2b3-4f56-848d-56e23deb3437",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-1_T2"
+        },
+        {
+            "@id": "urn:uuid:7d24965e-3736-4e6a-9909-66a9585128ca",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69s1b3_sw_T2"
+        },
+        {
+            "@id": "urn:uuid:7e1b3949-0371-49e6-a4f5-226726ee85d2",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "feeder_reg3a_T1"
+        },
+        {
+            "@id": "urn:uuid:82a5c077-77ea-463c-89cc-45ea40a4ec64",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-6_T1"
+        },
+        {
+            "@id": "urn:uuid:8397c212-6c55-4572-bf45-4f502a1bacf0",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv_sub_hsb_T1"
+        },
+        {
+            "@id": "urn:uuid:91b442e9-41eb-42d4-941e-8b208e28298f",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv115s1_69sub_T2"
+        },
+        {
+            "@id": "urn:uuid:a1015005-b7a1-4b4b-8f71-475f9fb45a36",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69_11s1_T2"
+        },
+        {
+            "@id": "urn:uuid:a4987f01-66f0-40df-860d-ada31c4eb065",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-5_T2"
+        },
+        {
+            "@id": "urn:uuid:a59cf7ba-5420-4294-b888-7cfecfd1b117",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69s1b3_sw_T1"
+        },
+        {
+            "@id": "urn:uuid:a982c50d-c9d9-496c-b74a-4bc04966dc36",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv11s3b2_sw_T2"
+        },
+        {
+            "@id": "urn:uuid:ab6c25f8-8d12-4058-8389-f79e6a6391cf",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69_11s1_T1"
+        },
+        {
+            "@id": "urn:uuid:ab806e2b-099c-479e-8d83-4864891b043f",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "feeder_reg2a_T1"
+        },
+        {
+            "@id": "urn:uuid:ae19c3f6-664f-4990-a853-d4a7034103b9",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv115s1_69sub_T1"
+        },
+        {
+            "@id": "urn:uuid:b307460c-aabc-40fe-a132-bda8e99e1197",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-3_T1"
+        },
+        {
+            "@id": "urn:uuid:b3cd992b-cb41-438b-84d4-7be353520879",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69s1b4_sw_T1"
+        },
+        {
+            "@id": "urn:uuid:b5a32b3c-a025-4301-98d3-8cca7f6201de",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-1_T1"
+        },
+        {
+            "@id": "urn:uuid:ba2c36be-8e99-431c-8cae-7da7449aa577",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "feeder_reg1a_T2"
+        },
+        {
+            "@id": "urn:uuid:be49867f-2ed7-4716-bab0-2521d4e60ed1",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "feeder_reg3b_T1"
+        },
+        {
+            "@id": "urn:uuid:c1e052a2-05b3-4a10-b892-7605d6a766ab",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69_11s3_T1"
+        },
+        {
+            "@id": "urn:uuid:c9a3f29d-7081-435e-9499-df11495fe3d8",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv115s1b1_sw_T2"
+        },
+        {
+            "@id": "urn:uuid:cb4b0a32-535e-4e0e-99ed-82fb59798d1b",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "feeder_reg3c_T2"
+        },
+        {
+            "@id": "urn:uuid:cde63db0-637b-4a15-8c9b-6be5b1d746b6",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69s2b3_sw_T1"
+        },
+        {
+            "@id": "urn:uuid:ce69bf4a-b4a4-4186-8a6e-10b1c633e979",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69s2b1_sw_T2"
+        },
+        {
+            "@id": "urn:uuid:cea63416-ddf7-4970-aaaa-cd8e13bb135c",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "source_T1"
+        },
+        {
+            "@id": "urn:uuid:d315873d-291c-4155-af76-702c66dce8f4",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv11s2b2_sw_T1"
+        },
+        {
+            "@id": "urn:uuid:d3284a09-9a02-4280-9010-836ec8b5c967",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69s2s3-1_T2"
+        },
+        {
+            "@id": "urn:uuid:d32e87eb-5321-4e01-ac96-cfd427cd63d9",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-3_T2"
+        },
+        {
+            "@id": "urn:uuid:d3a3b472-154f-44fe-818c-8bdc4316d4cb",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-6_T2"
+        },
+        {
+            "@id": "urn:uuid:d4f7ff54-02d9-48fd-817a-6acf0f363921",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69s2b4_sw_T2"
+        },
+        {
+            "@id": "urn:uuid:e3f9e9f4-48fc-484b-9558-f2c3832ae30a",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "feeder_reg1b_T2"
+        },
+        {
+            "@id": "urn:uuid:e59c781a-cac0-4276-9b45-2a1928277185",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "feeder_reg1c_T2"
+        },
+        {
+            "@id": "urn:uuid:e7b01aa6-403a-4ec1-9f9b-dc1b844aab49",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv11s1b2_sw_T2"
+        },
+        {
+            "@id": "urn:uuid:eb055c94-94a8-4744-8917-03490b9f3a6f",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "feeder_reg2b_T1"
+        },
+        {
+            "@id": "urn:uuid:ec9298e8-023e-4d12-af3a-4b5fcbfe7803",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69s1s2-9_T2"
+        },
+        {
+            "@id": "urn:uuid:ef1fe890-d08e-4ecf-b0e0-a1f5cf7d0ff9",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "feeder_reg2c_T2"
+        },
+        {
+            "@id": "urn:uuid:ef351278-0e0a-4ebd-be6e-fd2bbf6db3d7",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69s1b1_sw_T2"
+        },
+        {
+            "@id": "urn:uuid:f161e32f-0bc0-41c8-8aa6-84672ce6e58f",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69_11s2_T1"
+        },
+        {
+            "@id": "urn:uuid:f5eb04c8-3b33-470b-8dae-6a4e9a4eb584",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69s3b1_sw_T1"
+        },
+        {
+            "@id": "urn:uuid:f82b13d1-c3a0-43ab-a103-1ab3af6f45d7",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv_sub_connector_T1"
+        },
+        {
+            "@id": "urn:uuid:fd12baa4-f6b8-4efe-a461-b9f6123b821c",
+            "@type": "cim:Terminal",
+            "cim:IdentifiedObject.name": "hvmv69s3b1_sw_T2"
+        },
+        {
+            "@id": "urn:uuid:06f452c1-db8c-4694-9d67-e8c9b862013f",
+            "@type": "cim:TransformerCoreAdmittance",
+            "cim:TransformerCoreAdmittance.b": "0.0",
+            "cim:TransformerCoreAdmittance.g": "0.0",
+            "cim:IdentifiedObject.name": "hvmv115s1_69sub_Yc"
+        },
+        {
+            "@id": "urn:uuid:c2a6f29a-d50d-4a0c-9bd2-9ec941e97037",
+            "@type": "cim:TransformerCoreAdmittance",
+            "cim:TransformerCoreAdmittance.b": "0.0",
+            "cim:TransformerCoreAdmittance.g": "0.0",
+            "cim:IdentifiedObject.name": "hvmv69_11s1_Yc"
+        },
+        {
+            "@id": "urn:uuid:cfcb0a4e-a6cc-48d0-8ee9-4fe69239d579",
+            "@type": "cim:TransformerCoreAdmittance",
+            "cim:TransformerCoreAdmittance.b": "0.0",
+            "cim:TransformerCoreAdmittance.g": "0.0",
+            "cim:IdentifiedObject.name": "hvmv69_11s2_Yc"
+        },
+        {
+            "@id": "urn:uuid:de34ebd3-031b-4522-bf87-f5893be46699",
+            "@type": "cim:TransformerCoreAdmittance",
+            "cim:TransformerCoreAdmittance.b": "0.0",
+            "cim:TransformerCoreAdmittance.g": "0.0",
+            "cim:IdentifiedObject.name": "hvmv69_11s3_Yc"
+        },
+        {
+            "@id": "urn:uuid:07ac1c53-f209-4a3e-8d59-f2dbd3ec455f",
+            "@type": "cim:TransformerMeshImpedance",
+            "cim:TransformerMeshImpedance.r": "3.18987",
+            "cim:TransformerMeshImpedance.x": "18.90117",
+            "cim:TransformerMeshImpedance.FromTransformerEnd": {
+                "@id": "e6be9fab-2e17-41aa-a41e-dcf428d2d02a",
+                "@type": "PowerTransformerEnd"
+            },
+            "cim:TransformerMeshImpedance.ToTransformerEnd": {
+                "@id": "9db19cce-90d5-44b3-adbe-8aa4278f8a6d",
+                "@type": "PowerTransformerEnd"
+            },
+            "cim:IdentifiedObject.name": "hvmv69_11s2_Zsc_1"
+        },
+        {
+            "@id": "urn:uuid:319eb543-a00a-4c31-8f04-e7207c5151db",
+            "@type": "cim:TransformerMeshImpedance",
+            "cim:TransformerMeshImpedance.r": "2.3628667",
+            "cim:TransformerMeshImpedance.x": "12.4315",
+            "cim:TransformerMeshImpedance.FromTransformerEnd": {
+                "@id": "2ca5ff1b-3e7a-4c37-8336-9455d9e23fb7",
+                "@type": "PowerTransformerEnd"
+            },
+            "cim:TransformerMeshImpedance.ToTransformerEnd": {
+                "@id": "8e35d28a-d60b-4b8d-b692-840f998eb9cf",
+                "@type": "PowerTransformerEnd"
+            },
+            "cim:IdentifiedObject.name": "hvmv115s1_69sub_Zsc_1"
+        },
+        {
+            "@id": "urn:uuid:5d58a35c-52ad-4f3d-a7a2-c53746979a89",
+            "@type": "cim:TransformerMeshImpedance",
+            "cim:TransformerMeshImpedance.r": "3.18987",
+            "cim:TransformerMeshImpedance.x": "18.90117",
+            "cim:TransformerMeshImpedance.FromTransformerEnd": {
+                "@id": "368b1663-b4f6-4a91-a47f-97760689de80",
+                "@type": "PowerTransformerEnd"
+            },
+            "cim:TransformerMeshImpedance.ToTransformerEnd": {
+                "@id": "f898952e-3271-4d0e-8c77-2357c91a956b",
+                "@type": "PowerTransformerEnd"
+            },
+            "cim:IdentifiedObject.name": "hvmv69_11s1_Zsc_1"
+        },
+        {
+            "@id": "urn:uuid:cde2855d-433b-48b2-a639-5f93ec4871b3",
+            "@type": "cim:TransformerMeshImpedance",
+            "cim:TransformerMeshImpedance.r": "3.18987",
+            "cim:TransformerMeshImpedance.x": "18.90117",
+            "cim:TransformerMeshImpedance.FromTransformerEnd": {
+                "@id": "93e6b4dd-a283-49ba-97f1-8d8b56524953",
+                "@type": "PowerTransformerEnd"
+            },
+            "cim:TransformerMeshImpedance.ToTransformerEnd": {
+                "@id": "5b6acaea-39a6-4661-b8d3-26b768e5b4fb",
+                "@type": "PowerTransformerEnd"
+            },
+            "cim:IdentifiedObject.name": "hvmv69_11s3_Zsc_1"
+        },
+        {
+            "@id": "urn:uuid:00fc81b7-af01-43a9-aa02-09bd36b9c9c7",
+            "@type": "cim:TransformerTankEnd",
+            "cim:TransformerEnd.grounded": "True",
+            "cim:TransformerEnd.rground": "0.0",
+            "cim:TransformerEnd.xground": "0.0",
+            "cim:IdentifiedObject.name": "feeder_reg1b_End_1"
+        },
+        {
+            "@id": "urn:uuid:1fb8ae24-9e06-4e01-ba1a-28b1f70c3c05",
+            "@type": "cim:TransformerTankEnd",
+            "cim:TransformerEnd.grounded": "True",
+            "cim:TransformerEnd.rground": "0.0",
+            "cim:TransformerEnd.xground": "0.0",
+            "cim:IdentifiedObject.name": "feeder_reg3c_End_1"
+        },
+        {
+            "@id": "urn:uuid:3771b5c0-ea71-4d6e-a8e5-53788a83872f",
+            "@type": "cim:TransformerTankEnd",
+            "cim:TransformerEnd.RatioTapChanger": {
+                "@id": "52fad1cc-7ef0-486a-93b9-aef8aec180db",
+                "@type": "RatioTapChanger"
+            },
+            "cim:TransformerEnd.grounded": "True",
+            "cim:TransformerEnd.rground": "0.0",
+            "cim:TransformerEnd.xground": "0.0",
+            "cim:IdentifiedObject.name": "feeder_reg3a_End_2"
+        },
+        {
+            "@id": "urn:uuid:41bf6905-d7a0-4afe-bd46-9536fe82816b",
+            "@type": "cim:TransformerTankEnd",
+            "cim:TransformerEnd.grounded": "True",
+            "cim:TransformerEnd.rground": "0.0",
+            "cim:TransformerEnd.xground": "0.0",
+            "cim:IdentifiedObject.name": "feeder_reg1c_End_1"
+        },
+        {
+            "@id": "urn:uuid:53faadb3-8d92-48d7-9777-9394157e6ace",
+            "@type": "cim:TransformerTankEnd",
+            "cim:TransformerEnd.RatioTapChanger": {
+                "@id": "95581c5f-9cb2-414b-8577-abc2757e3187",
+                "@type": "RatioTapChanger"
+            },
+            "cim:TransformerEnd.grounded": "True",
+            "cim:TransformerEnd.rground": "0.0",
+            "cim:TransformerEnd.xground": "0.0",
+            "cim:IdentifiedObject.name": "feeder_reg2b_End_2"
+        },
+        {
+            "@id": "urn:uuid:5520db8d-7935-4ad5-8163-51ebe1df8c4a",
+            "@type": "cim:TransformerTankEnd",
+            "cim:TransformerEnd.grounded": "True",
+            "cim:TransformerEnd.rground": "0.0",
+            "cim:TransformerEnd.xground": "0.0",
+            "cim:IdentifiedObject.name": "feeder_reg2a_End_1"
+        },
+        {
+            "@id": "urn:uuid:57b10f5b-08dc-4ff4-9319-dc8dc0c0184e",
+            "@type": "cim:TransformerTankEnd",
+            "cim:TransformerEnd.RatioTapChanger": {
+                "@id": "ee394da8-0e8c-4e18-a158-36d960df00fb",
+                "@type": "RatioTapChanger"
+            },
+            "cim:TransformerEnd.grounded": "True",
+            "cim:TransformerEnd.rground": "0.0",
+            "cim:TransformerEnd.xground": "0.0",
+            "cim:IdentifiedObject.name": "feeder_reg3b_End_2"
+        },
+        {
+            "@id": "urn:uuid:63c5c3af-2638-4b01-8d49-70003915bda6",
+            "@type": "cim:TransformerTankEnd",
+            "cim:TransformerEnd.grounded": "True",
+            "cim:TransformerEnd.rground": "0.0",
+            "cim:TransformerEnd.xground": "0.0",
+            "cim:IdentifiedObject.name": "feeder_reg1a_End_1"
+        },
+        {
+            "@id": "urn:uuid:733bb7f4-75cd-48c5-94d2-2aa3407f164f",
+            "@type": "cim:TransformerTankEnd",
+            "cim:TransformerEnd.grounded": "True",
+            "cim:TransformerEnd.rground": "0.0",
+            "cim:TransformerEnd.xground": "0.0",
+            "cim:IdentifiedObject.name": "feeder_reg2c_End_1"
+        },
+        {
+            "@id": "urn:uuid:89421695-bb45-4630-95ab-9c960b56495d",
+            "@type": "cim:TransformerTankEnd",
+            "cim:TransformerEnd.grounded": "True",
+            "cim:TransformerEnd.rground": "0.0",
+            "cim:TransformerEnd.xground": "0.0",
+            "cim:IdentifiedObject.name": "feeder_reg3b_End_1"
+        },
+        {
+            "@id": "urn:uuid:93343216-ec9a-4c2c-903b-e14e4c19bc35",
+            "@type": "cim:TransformerTankEnd",
+            "cim:TransformerEnd.RatioTapChanger": {
+                "@id": "ef416f75-4ed0-4a1a-b436-741c1e29c10c",
+                "@type": "RatioTapChanger"
+            },
+            "cim:TransformerEnd.grounded": "True",
+            "cim:TransformerEnd.rground": "0.0",
+            "cim:TransformerEnd.xground": "0.0",
+            "cim:IdentifiedObject.name": "feeder_reg1c_End_2"
+        },
+        {
+            "@id": "urn:uuid:99fa1c85-4a1a-4f8b-bfed-fd5ba9f70756",
+            "@type": "cim:TransformerTankEnd",
+            "cim:TransformerEnd.RatioTapChanger": {
+                "@id": "d543fcf4-6035-4896-9614-7fe3382492f5",
+                "@type": "RatioTapChanger"
+            },
+            "cim:TransformerEnd.grounded": "True",
+            "cim:TransformerEnd.rground": "0.0",
+            "cim:TransformerEnd.xground": "0.0",
+            "cim:IdentifiedObject.name": "feeder_reg3c_End_2"
+        },
+        {
+            "@id": "urn:uuid:9badbe15-9d5e-40e2-9c89-40feaa338283",
+            "@type": "cim:TransformerTankEnd",
+            "cim:TransformerEnd.grounded": "True",
+            "cim:TransformerEnd.rground": "0.0",
+            "cim:TransformerEnd.xground": "0.0",
+            "cim:IdentifiedObject.name": "feeder_reg3a_End_1"
+        },
+        {
+            "@id": "urn:uuid:a7c7a961-8762-43c8-baa3-08b217bb5851",
+            "@type": "cim:TransformerTankEnd",
+            "cim:TransformerEnd.grounded": "True",
+            "cim:TransformerEnd.rground": "0.0",
+            "cim:TransformerEnd.xground": "0.0",
+            "cim:IdentifiedObject.name": "feeder_reg2b_End_1"
+        },
+        {
+            "@id": "urn:uuid:c1434d51-597e-4515-979b-1507dca0dc8c",
+            "@type": "cim:TransformerTankEnd",
+            "cim:TransformerEnd.RatioTapChanger": {
+                "@id": "3587fb53-a4b6-4387-99a6-d93cd19159c0",
+                "@type": "RatioTapChanger"
+            },
+            "cim:TransformerEnd.grounded": "True",
+            "cim:TransformerEnd.rground": "0.0",
+            "cim:TransformerEnd.xground": "0.0",
+            "cim:IdentifiedObject.name": "feeder_reg1b_End_2"
+        },
+        {
+            "@id": "urn:uuid:c37c7225-7f69-45d5-9e08-9e3f3f4e357e",
+            "@type": "cim:TransformerTankEnd",
+            "cim:TransformerEnd.RatioTapChanger": {
+                "@id": "6545da8b-9b16-4814-8c44-146441580ec3",
+                "@type": "RatioTapChanger"
+            },
+            "cim:TransformerEnd.grounded": "True",
+            "cim:TransformerEnd.rground": "0.0",
+            "cim:TransformerEnd.xground": "0.0",
+            "cim:IdentifiedObject.name": "feeder_reg2c_End_2"
+        },
+        {
+            "@id": "urn:uuid:d95f1827-eac4-449b-a0a9-aa3c2d3b60c7",
+            "@type": "cim:TransformerTankEnd",
+            "cim:TransformerEnd.RatioTapChanger": {
+                "@id": "9677104f-9b53-4419-a18d-0e33f34199f6",
+                "@type": "RatioTapChanger"
+            },
+            "cim:TransformerEnd.grounded": "True",
+            "cim:TransformerEnd.rground": "0.0",
+            "cim:TransformerEnd.xground": "0.0",
+            "cim:IdentifiedObject.name": "feeder_reg2a_End_2"
+        },
+        {
+            "@id": "urn:uuid:ee3442d0-41c3-42d1-ae55-fee1b7de9463",
+            "@type": "cim:TransformerTankEnd",
+            "cim:TransformerEnd.RatioTapChanger": {
+                "@id": "db618833-3d10-4bdf-9e19-ca8152b47492",
+                "@type": "RatioTapChanger"
+            },
+            "cim:TransformerEnd.grounded": "True",
+            "cim:TransformerEnd.rground": "0.0",
+            "cim:TransformerEnd.xground": "0.0",
+            "cim:IdentifiedObject.name": "feeder_reg1a_End_2"
+        }
+    ]
+}

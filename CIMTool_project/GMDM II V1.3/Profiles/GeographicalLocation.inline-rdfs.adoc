@@ -206,7 +206,7 @@ Coordinate reference system.
 |===
 |name |mult |type |description
 |crsUrn
-|0..1
+|1..1
 |<<GeographicalLocation-String,String>>
 |
 A Uniform Resource Name (URN) for the coordinate reference system (crs) used to define 'Location.PositionPoints'.

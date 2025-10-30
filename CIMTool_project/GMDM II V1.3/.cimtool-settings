@@ -10,13 +10,19 @@
 
 project:
       tool:merge_shadow_extensions
-              "false" ;
+              "true" ;
       tool:merged_schema_path
               "" ;
       tool:self_heal_on_import
-              "false" .
+              "true" .
 
 <http://cimtoole.langdale.com.au/2009/project/Profiles/Asset.owl>
+      tool:profile_envelope
+              "Profile" ;
+      tool:profile_namespace
+              "http://www.ucaiug.org/profile#" .
+
+<http://cimtoole.langdale.com.au/2009/project/Profiles/CIM18Canonical.owl>
       tool:profile_envelope
               "Profile" ;
       tool:profile_namespace
@@ -34,6 +40,12 @@ project:
       tool:profile_namespace
               "http://www.ucaiug.org/profile#" .
 
+<http://cimtoole.langdale.com.au/2009/project/Profiles/MarketNode.owl>
+      tool:profile_envelope
+              "Profile" ;
+      tool:profile_namespace
+              "http://www.ucaiug.org/gmdm/marketnode#" .
+
 <http://cimtoole.langdale.com.au/2009/project/Profiles/UnbalancedConnectivity.owl>
       tool:profile_envelope
               "Profile" ;
@@ -47,5 +59,9 @@ project:
               "http://www.ucaiug.org/profile#" .
 
 <http://cimtoole.langdale.com.au/2009/project/Schema/CIM_Grid18v15_Enterprise14v04_Market04v18_GMDM_v1.2.eap>
+      tool:schema_namespace
+              "http://cim.ucaiug.io/CIM101/draft#" .
+
+<http://cimtoole.langdale.com.au/2009/project/Schema/CIM_Grid18v15_Enterprise14v04_Market04v18_GMDM_v1.3.eap>
       tool:schema_namespace
               "http://cim.ucaiug.io/CIM101/draft#" .

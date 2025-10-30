@@ -201,14 +201,15 @@ class FossilFuel   {
 }
 
 IdentifiedObject <|-- FossilFuel
+FossilFuel " " --> "+fossilFuelType 1" FuelType#red
 FossilFuel "+FossilFuels 0..*" --> "+ThermalGeneratingUnit 1" ThermalGeneratingUnit
 
 ' Enumeration FuelType
 enum FuelType <<ShadowExtension>><<gmdm>><<enumeration>><<Attribute>>  {
-   diesel
    brownCoalLignite
    coal
    coalDerivedGas
+   diesel
    gas
    hardCoal
    lignite

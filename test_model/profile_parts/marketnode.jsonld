@@ -5763,7 +5763,7 @@
         {
             "@id": "urn:uuid:2d9dfa68-5d6d-4a8d-8f52-c05a321b6bd5",
             "@type": "cim:ConnectivityNode",
-            "cim:IdentifiedObject.name": "hvmv115_hsb1"
+            "cim:IdentifiedObject.name": "hvmv115s1_hsb1"
         },
         {
             "@id": "urn:uuid:2da24b9f-40ce-4771-80ad-cb13feb833e6",
@@ -25576,7 +25576,7 @@
         {
             "@id": "urn:uuid:cf8a099d-25f4-4610-bbcc-1e08dfdabd16",
             "@type": "cim:ConnectivityNode",
-            "cim:IdentifiedObject.name": "hvmv115_hsb2"
+            "cim:IdentifiedObject.name": "hvmv115s1_hsb2"
         },
         {
             "@id": "urn:uuid:cfa209b6-5fbf-4645-acb0-cefb556fa9ef",

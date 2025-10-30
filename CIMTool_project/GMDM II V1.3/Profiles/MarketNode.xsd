@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:m="http://www.ucaiug.org/gmdm/marketnode#"
+           xmlns:sawsdl="http://www.w3.org/ns/sawsdl"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.ucaiug.org/gmdm/marketnode#"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+   <xs:annotation>
+      <xs:documentation xml:lang="en">
+	Copyright 2025 UCAIug
+
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+
+	https://www.apache.org/licenses/LICENSE-2.0
+
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	
+	See the License for the specific language governing permissions and
+	limitations under the License.
+</xs:documentation>
+   </xs:annotation>
+   <xs:annotation/>
+   <xs:complexType name="ConnectivityNode"
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ConnectivityNode">
+      <xs:annotation>
+         <xs:documentation>Connectivity nodes are points where terminals of AC conducting equipment are connected together with zero impedance.</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="m:IdentifiedObject">
+            <xs:sequence/>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="IdentifiedObject"
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#IdentifiedObject">
+      <xs:annotation>
+         <xs:documentation>This is a class that provides common identification for all classes needing identification and naming attributes.</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="m:Identity">
+            <xs:sequence>
+               <xs:element name="description"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           type="xs:string"
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#IdentifiedObject.description">
+                  <xs:annotation>
+                     <xs:documentation>The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="name"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           type="xs:string"
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#IdentifiedObject.name">
+                  <xs:annotation>
+                     <xs:documentation>The name is any free human readable and possibly non unique text naming the object.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="Identity"
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Identity">
+      <xs:annotation>
+         <xs:documentation>This is a root class to provide common identification for all classes.  IdentifiedObject and any class to be exchanged with RDF XML now inherits from Identity.  mRID is superseded by Identity.identifier, which is typed to be a UUID.</xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="identifier"
+                     minOccurs="1"
+                     maxOccurs="1"
+                     type="xs:string"
+                     sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Identity.identifier">
+            <xs:annotation>
+               <xs:documentation>A universally unique object identifier. Used to uniquely identify persistent objects between CIM messages.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="IndividualPnode"
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#IndividualPnode">
+      <xs:annotation>
+         <xs:documentation>Individual pricing node based on Pnode.</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="m:Pnode">
+            <xs:sequence>
+               <xs:element name="ConnectivityNode"
+                           minOccurs="1"
+                           maxOccurs="1"
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#IndividualPnode.ConnectivityNode">
+                  <xs:annotation/>
+                  <xs:complexType sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ConnectivityNode">
+                     <xs:attribute name="ref" type="xs:string" use="required"/>
+                     <xs:attribute name="referenceType" type="xs:string" use="optional"/>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:complexType name="Pnode"
+                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Pnode">
+      <xs:annotation>
+         <xs:documentation>A pricing node is directly associated with a connectivity node.  It is a pricing location for which market participants submit their bids, offers, buy/sell CRRs, and settle.</xs:documentation>
+      </xs:annotation>
+      <xs:complexContent>
+         <xs:extension base="m:IdentifiedObject">
+            <xs:sequence/>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+</xs:schema>

@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- un-comment this line to enable validation
+-->
+<rdf:RDF xmlns:cim="http://cim.ucaiug.io/CIM101/draft#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:gmdm="http://epri.com/gmdm/2025#">
+<!--
+-->
+<cim:ACLineSegment rdf:about="urn:uuid:03e05d5f-6a5c-4a76-b403-32bfcda2ee75">
+  <cim:PowerSystemResource.Location rdf:resource="urn:uuid:0aa928cc-6653-434a-bd1f-688f23b88202"/>
+  <cim:IdentifiedObject.name>hvmv69s1s2-2</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>03e05d5f-6a5c-4a76-b403-32bfcda2ee75</cim:Identity.identifier>
+</cim:ACLineSegment>
+<cim:ACLineSegment rdf:about="urn:uuid:37c4ff07-f38a-4394-b528-510393cafa05">
+  <cim:PowerSystemResource.Location rdf:resource="urn:uuid:8bf35909-a20c-4bd5-ac9d-dd4c7220b8c6"/>
+  <cim:IdentifiedObject.name>hvmv69s1s2-7</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>37c4ff07-f38a-4394-b528-510393cafa05</cim:Identity.identifier>
+</cim:ACLineSegment>
+<cim:ACLineSegment rdf:about="urn:uuid:54e3f087-2e1a-4726-9731-276692993540">
+  <cim:PowerSystemResource.Location rdf:resource="urn:uuid:01bb0843-2b31-4ea8-b860-b372688114dc"/>
+  <cim:IdentifiedObject.name>hvmv69s1s2-8</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>54e3f087-2e1a-4726-9731-276692993540</cim:Identity.identifier>
+</cim:ACLineSegment>
+<cim:ACLineSegment rdf:about="urn:uuid:5ad64201-2649-4ce3-918a-fff933e6a1ff">
+  <cim:PowerSystemResource.Location rdf:resource="urn:uuid:806c29ec-03e3-4bb7-bbae-9caa27c58198"/>
+  <cim:IdentifiedObject.name>hvmv69s2s3-1</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>5ad64201-2649-4ce3-918a-fff933e6a1ff</cim:Identity.identifier>
+</cim:ACLineSegment>
+<cim:ACLineSegment rdf:about="urn:uuid:5f970234-4d34-4056-84e0-f0120716b30c">
+  <cim:PowerSystemResource.Location rdf:resource="urn:uuid:b7ca504f-bb39-4638-abcb-3952be54b48e"/>
+  <cim:IdentifiedObject.name>hvmv69s1s2-1</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>5f970234-4d34-4056-84e0-f0120716b30c</cim:Identity.identifier>
+</cim:ACLineSegment>
+<cim:ACLineSegment rdf:about="urn:uuid:679e1e4e-6d31-40be-b0af-17ce66fc6a03">
+  <cim:PowerSystemResource.Location rdf:resource="urn:uuid:c7d4fbd9-1d64-4bf5-9cc3-3f47fc604737"/>
+  <cim:IdentifiedObject.name>hvmv69s1s2-5</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>679e1e4e-6d31-40be-b0af-17ce66fc6a03</cim:Identity.identifier>
+</cim:ACLineSegment>
+<cim:ACLineSegment rdf:about="urn:uuid:98bd0731-b982-40b4-9f44-3c6f2c950b5f">
+  <cim:PowerSystemResource.Location rdf:resource="urn:uuid:2f245ed5-0e3d-42b5-9f96-ebd095f8c36e"/>
+  <cim:IdentifiedObject.name>hvmv69s1s2-9</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>98bd0731-b982-40b4-9f44-3c6f2c950b5f</cim:Identity.identifier>
+</cim:ACLineSegment>
+<cim:ACLineSegment rdf:about="urn:uuid:b5c81dab-62d1-4de3-9a46-1933df94565d">
+  <cim:PowerSystemResource.Location rdf:resource="urn:uuid:a16a42b8-e0af-4b32-976b-99f355d3bc2d"/>
+  <cim:IdentifiedObject.name>hvmv69s1s2-3</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>b5c81dab-62d1-4de3-9a46-1933df94565d</cim:Identity.identifier>
+</cim:ACLineSegment>
+<cim:ACLineSegment rdf:about="urn:uuid:bf501c26-edcd-4379-bb3b-ca97e14615a5">
+  <cim:PowerSystemResource.Location rdf:resource="urn:uuid:4b0bb44c-f411-4a73-bc36-4d5df2b54320"/>
+  <cim:IdentifiedObject.name>hvmv69s1s2-4</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>bf501c26-edcd-4379-bb3b-ca97e14615a5</cim:Identity.identifier>
+</cim:ACLineSegment>
+<cim:ACLineSegment rdf:about="urn:uuid:cfd520f9-9678-48f0-99d4-7a85b66f93e4">
+  <cim:PowerSystemResource.Location rdf:resource="urn:uuid:b612c461-3ea8-40ae-be25-0a65fbb11c41"/>
+  <cim:IdentifiedObject.name>hvmv69s1s2-6</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>cfd520f9-9678-48f0-99d4-7a85b66f93e4</cim:Identity.identifier>
+</cim:ACLineSegment>
+<cim:Breaker rdf:about="urn:uuid:0d07d8b9-e36a-4b25-80b9-b4e838033f90">
+  <cim:PowerSystemResource.Location rdf:resource="urn:uuid:0e881bf8-e4c5-49c6-9160-cb3f16fa0c80"/>
+  <cim:IdentifiedObject.name>hvmv69s2b3_sw</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>0d07d8b9-e36a-4b25-80b9-b4e838033f90</cim:Identity.identifier>
+</cim:Breaker>
+<cim:Breaker rdf:about="urn:uuid:4b865a2e-2163-42d7-a29b-2baf018c2c2c">
+  <cim:PowerSystemResource.Location rdf:resource="urn:uuid:958d2a34-0b55-4809-b6d4-7655971645f2"/>
+  <cim:IdentifiedObject.name>hvmv69s1b1_sw</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>4b865a2e-2163-42d7-a29b-2baf018c2c2c</cim:Identity.identifier>
+</cim:Breaker>
+<cim:Breaker rdf:about="urn:uuid:892c7482-8baf-4bde-868e-8f9019ff1c7c">
+  <cim:PowerSystemResource.Location rdf:resource="urn:uuid:e89458df-5d1a-4fc4-b8bd-4a46760f0123"/>
+  <cim:IdentifiedObject.name>hvmv115s1b1_sw</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>892c7482-8baf-4bde-868e-8f9019ff1c7c</cim:Identity.identifier>
+</cim:Breaker>
+<cim:Breaker rdf:about="urn:uuid:89f95de1-c525-4eab-82e5-73abbacbf4d2">
+  <cim:PowerSystemResource.Location rdf:resource="urn:uuid:22175c54-1a92-4c0c-b954-ff0e02a63ba7"/>
+  <cim:IdentifiedObject.name>hvmv69s2b4_sw</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>89f95de1-c525-4eab-82e5-73abbacbf4d2</cim:Identity.identifier>
+</cim:Breaker>
+<cim:Breaker rdf:about="urn:uuid:b775a18b-5b6a-4642-942d-5521bd4f52d4">
+  <cim:PowerSystemResource.Location rdf:resource="urn:uuid:07792259-03cb-4594-b154-a8e90d3a6468"/>
+  <cim:IdentifiedObject.name>hvmv69s1b3_sw</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>b775a18b-5b6a-4642-942d-5521bd4f52d4</cim:Identity.identifier>
+</cim:Breaker>
+<cim:Breaker rdf:about="urn:uuid:b97ee681-835a-419e-992f-dea51371da49">
+  <cim:PowerSystemResource.Location rdf:resource="urn:uuid:1a2a1430-d2c1-4720-9ff5-3087615e63ca"/>
+  <cim:IdentifiedObject.name>hvmv69s3b1_sw</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>b97ee681-835a-419e-992f-dea51371da49</cim:Identity.identifier>
+</cim:Breaker>
+<cim:Breaker rdf:about="urn:uuid:c2694b62-24d1-4b47-81b9-3c2e3d7267b6">
+  <cim:PowerSystemResource.Location rdf:resource="urn:uuid:9ff86010-5c5a-4ccc-93c7-e544594efbd8"/>
+  <cim:IdentifiedObject.name>hvmv11s1b2_sw</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>c2694b62-24d1-4b47-81b9-3c2e3d7267b6</cim:Identity.identifier>
+</cim:Breaker>
+<cim:Breaker rdf:about="urn:uuid:c8cb060c-7fc8-43b1-8f88-0790dbc4f032">
+  <cim:PowerSystemResource.Location rdf:resource="urn:uuid:451bb9b3-39b7-4dc2-8c7d-5a7599dd0639"/>
+  <cim:IdentifiedObject.name>hvmv11s2b2_sw</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>c8cb060c-7fc8-43b1-8f88-0790dbc4f032</cim:Identity.identifier>
+</cim:Breaker>
+<cim:Breaker rdf:about="urn:uuid:e0ad1a26-271b-45fa-8cc2-e576419cec43">
+  <cim:PowerSystemResource.Location rdf:resource="urn:uuid:76b7ffa1-b1dd-4563-91f2-aa6305d836a2"/>
+  <cim:IdentifiedObject.name>hvmv69s1b4_sw</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>e0ad1a26-271b-45fa-8cc2-e576419cec43</cim:Identity.identifier>
+</cim:Breaker>
+<cim:Breaker rdf:about="urn:uuid:e742f3b2-b8b7-4e6e-8ddb-dcef2f1797e5">
+  <cim:PowerSystemResource.Location rdf:resource="urn:uuid:fbd2b11e-9222-4533-8bfc-70e08781d74f"/>
+  <cim:IdentifiedObject.name>hvmv69s2b1_sw</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>e742f3b2-b8b7-4e6e-8ddb-dcef2f1797e5</cim:Identity.identifier>
+</cim:Breaker>
+<cim:Breaker rdf:about="urn:uuid:ee235f9e-369b-40f1-9977-8dec37d7ec8f">
+  <cim:PowerSystemResource.Location rdf:resource="urn:uuid:72afe02f-0053-46c8-8732-f5ba70df6434"/>
+  <cim:IdentifiedObject.name>hvmv11s3b2_sw</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>ee235f9e-369b-40f1-9977-8dec37d7ec8f</cim:Identity.identifier>
+</cim:Breaker>
+<cim:CoordinateSystem rdf:about="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf">
+  <cim:CoordinateSystem.crsUrn>urn:ogc:def:crs:EPSG::4326</cim:CoordinateSystem.crsUrn>
+  <cim:IdentifiedObject.name>final9500node_CrsUrn</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>428df686-3924-4ab9-ac68-eb720e38eabf</cim:Identity.identifier>
+</cim:CoordinateSystem>
+<cim:EnergySource rdf:about="urn:uuid:ce804296-d1b8-4108-928b-e8227d2501fb">
+  <cim:PowerSystemResource.Location rdf:resource="urn:uuid:8d830b67-72a4-4528-874e-99a403f129ac"/>
+  <cim:IdentifiedObject.name>source</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>ce804296-d1b8-4108-928b-e8227d2501fb</cim:Identity.identifier>
+</cim:EnergySource>
+<cim:LoadBreakSwitch rdf:about="urn:uuid:84e58b61-3e27-4903-bb61-13a9d8b7a8cc">
+  <cim:PowerSystemResource.Location rdf:resource="urn:uuid:328d2468-f874-43f9-bec9-0b948029ac1e"/>
+  <cim:IdentifiedObject.name>hvmv_sub_connector</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>84e58b61-3e27-4903-bb61-13a9d8b7a8cc</cim:Identity.identifier>
+</cim:LoadBreakSwitch>
+<cim:Location rdf:about="urn:uuid:01bb0843-2b31-4ea8-b860-b372688114dc">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>hvmv69s1s2-8_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>01bb0843-2b31-4ea8-b860-b372688114dc</cim:Identity.identifier>
+</cim:Location>
+<cim:Location rdf:about="urn:uuid:07792259-03cb-4594-b154-a8e90d3a6468">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>hvmv69s1b3_sw_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>07792259-03cb-4594-b154-a8e90d3a6468</cim:Identity.identifier>
+</cim:Location>
+<cim:Location rdf:about="urn:uuid:0aa928cc-6653-434a-bd1f-688f23b88202">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>hvmv69s1s2-2_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>0aa928cc-6653-434a-bd1f-688f23b88202</cim:Identity.identifier>
+</cim:Location>
+<cim:Location rdf:about="urn:uuid:0e881bf8-e4c5-49c6-9160-cb3f16fa0c80">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>hvmv69s2b3_sw_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>0e881bf8-e4c5-49c6-9160-cb3f16fa0c80</cim:Identity.identifier>
+</cim:Location>
+<cim:Location rdf:about="urn:uuid:0faa47d9-43f2-415e-a34a-bcad025e6082">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>feeder_reg3b_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>0faa47d9-43f2-415e-a34a-bcad025e6082</cim:Identity.identifier>
+</cim:Location>
+<cim:Location rdf:about="urn:uuid:1a2a1430-d2c1-4720-9ff5-3087615e63ca">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>hvmv69s3b1_sw_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>1a2a1430-d2c1-4720-9ff5-3087615e63ca</cim:Identity.identifier>
+</cim:Location>
+<cim:Location rdf:about="urn:uuid:1acc83dd-3037-460d-9ea9-29e31542600d">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>feeder_reg2a_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>1acc83dd-3037-460d-9ea9-29e31542600d</cim:Identity.identifier>
+</cim:Location>
+<cim:Location rdf:about="urn:uuid:22175c54-1a92-4c0c-b954-ff0e02a63ba7">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>hvmv69s2b4_sw_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>22175c54-1a92-4c0c-b954-ff0e02a63ba7</cim:Identity.identifier>
+</cim:Location>
+<cim:Location rdf:about="urn:uuid:2f245ed5-0e3d-42b5-9f96-ebd095f8c36e">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>hvmv69s1s2-9_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>2f245ed5-0e3d-42b5-9f96-ebd095f8c36e</cim:Identity.identifier>
+</cim:Location>
+<cim:Location rdf:about="urn:uuid:328d2468-f874-43f9-bec9-0b948029ac1e">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>hvmv_sub_connector_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>328d2468-f874-43f9-bec9-0b948029ac1e</cim:Identity.identifier>
+</cim:Location>
+<cim:Location rdf:about="urn:uuid:451bb9b3-39b7-4dc2-8c7d-5a7599dd0639">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>hvmv11s2b2_sw_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>451bb9b3-39b7-4dc2-8c7d-5a7599dd0639</cim:Identity.identifier>
+</cim:Location>
+<cim:Location rdf:about="urn:uuid:480e07bb-21ad-408f-83bd-e74d6caa3d2d">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>feeder_reg2c_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>480e07bb-21ad-408f-83bd-e74d6caa3d2d</cim:Identity.identifier>
+</cim:Location>
+<cim:Location rdf:about="urn:uuid:4b0bb44c-f411-4a73-bc36-4d5df2b54320">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>hvmv69s1s2-4_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>4b0bb44c-f411-4a73-bc36-4d5df2b54320</cim:Identity.identifier>
+</cim:Location>
+<cim:Location rdf:about="urn:uuid:6ddd5a42-e431-4052-acf0-b98d40eb6019">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>hvmv69_11s1_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>6ddd5a42-e431-4052-acf0-b98d40eb6019</cim:Identity.identifier>
+</cim:Location>
+<cim:Location rdf:about="urn:uuid:72afe02f-0053-46c8-8732-f5ba70df6434">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>hvmv11s3b2_sw_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>72afe02f-0053-46c8-8732-f5ba70df6434</cim:Identity.identifier>
+</cim:Location>
+<cim:Location rdf:about="urn:uuid:76b7ffa1-b1dd-4563-91f2-aa6305d836a2">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>hvmv69s1b4_sw_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>76b7ffa1-b1dd-4563-91f2-aa6305d836a2</cim:Identity.identifier>
+</cim:Location>
+<cim:Location rdf:about="urn:uuid:806c29ec-03e3-4bb7-bbae-9caa27c58198">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>hvmv69s2s3-1_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>806c29ec-03e3-4bb7-bbae-9caa27c58198</cim:Identity.identifier>
+</cim:Location>
+<cim:Location rdf:about="urn:uuid:8b3f3f7c-8377-44f7-bedc-348167e34fa6">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>feeder_reg3c_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>8b3f3f7c-8377-44f7-bedc-348167e34fa6</cim:Identity.identifier>
+</cim:Location>
+<cim:Location rdf:about="urn:uuid:8bf35909-a20c-4bd5-ac9d-dd4c7220b8c6">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>hvmv69s1s2-7_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>8bf35909-a20c-4bd5-ac9d-dd4c7220b8c6</cim:Identity.identifier>
+</cim:Location>
+<cim:Location rdf:about="urn:uuid:8d830b67-72a4-4528-874e-99a403f129ac">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>source_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>8d830b67-72a4-4528-874e-99a403f129ac</cim:Identity.identifier>
+</cim:Location>
+<cim:Location rdf:about="urn:uuid:92105ef6-a970-401d-99aa-a784e4008e94">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>feeder_reg1a_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>92105ef6-a970-401d-99aa-a784e4008e94</cim:Identity.identifier>
+</cim:Location>
+<cim:Location rdf:about="urn:uuid:958d2a34-0b55-4809-b6d4-7655971645f2">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>hvmv69s1b1_sw_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>958d2a34-0b55-4809-b6d4-7655971645f2</cim:Identity.identifier>
+</cim:Location>
+<cim:Location rdf:about="urn:uuid:9ff86010-5c5a-4ccc-93c7-e544594efbd8">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>hvmv11s1b2_sw_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>9ff86010-5c5a-4ccc-93c7-e544594efbd8</cim:Identity.identifier>
+</cim:Location>
+<cim:Location rdf:about="urn:uuid:a16a42b8-e0af-4b32-976b-99f355d3bc2d">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>hvmv69s1s2-3_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>a16a42b8-e0af-4b32-976b-99f355d3bc2d</cim:Identity.identifier>
+</cim:Location>
+<cim:Location rdf:about="urn:uuid:a88fc616-69d6-4f01-ac60-257397f9e973">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>feeder_reg2b_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>a88fc616-69d6-4f01-ac60-257397f9e973</cim:Identity.identifier>
+</cim:Location>
+<cim:Location rdf:about="urn:uuid:b33e9986-d0ea-415f-b6b3-413d54cde7ad">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>hvmv69_11s3_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>b33e9986-d0ea-415f-b6b3-413d54cde7ad</cim:Identity.identifier>
+</cim:Location>
+<cim:Location rdf:about="urn:uuid:b612c461-3ea8-40ae-be25-0a65fbb11c41">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>hvmv69s1s2-6_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>b612c461-3ea8-40ae-be25-0a65fbb11c41</cim:Identity.identifier>
+</cim:Location>
+<cim:Location rdf:about="urn:uuid:b7ca504f-bb39-4638-abcb-3952be54b48e">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>hvmv69s1s2-1_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>b7ca504f-bb39-4638-abcb-3952be54b48e</cim:Identity.identifier>
+</cim:Location>
+<cim:Location rdf:about="urn:uuid:c2e051ea-4187-4d76-aaf5-f4ec926d26e8">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>hvmv_sub_hsb_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>c2e051ea-4187-4d76-aaf5-f4ec926d26e8</cim:Identity.identifier>
+</cim:Location>
+<cim:Location rdf:about="urn:uuid:c7d4fbd9-1d64-4bf5-9cc3-3f47fc604737">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>hvmv69s1s2-5_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>c7d4fbd9-1d64-4bf5-9cc3-3f47fc604737</cim:Identity.identifier>
+</cim:Location>
+<cim:Location rdf:about="urn:uuid:cc4e2d70-2bfc-4c45-86c4-6d173b7d7314">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>hvmv69_11s2_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>cc4e2d70-2bfc-4c45-86c4-6d173b7d7314</cim:Identity.identifier>
+</cim:Location>
+<cim:Location rdf:about="urn:uuid:e53c48b9-178f-4c02-ab42-1e2e1223dd6b">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>feeder_reg3a_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>e53c48b9-178f-4c02-ab42-1e2e1223dd6b</cim:Identity.identifier>
+</cim:Location>
+<cim:Location rdf:about="urn:uuid:e89458df-5d1a-4fc4-b8bd-4a46760f0123">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>hvmv115s1b1_sw_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>e89458df-5d1a-4fc4-b8bd-4a46760f0123</cim:Identity.identifier>
+</cim:Location>
+<cim:Location rdf:about="urn:uuid:f5300951-c35b-462c-b2fd-0e81562c6d1f">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>hvmv115s1_69sub_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>f5300951-c35b-462c-b2fd-0e81562c6d1f</cim:Identity.identifier>
+</cim:Location>
+<cim:Location rdf:about="urn:uuid:fa0ce01e-4d07-4c00-9e4e-71b33a4f66b9">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>feeder_reg1c_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>fa0ce01e-4d07-4c00-9e4e-71b33a4f66b9</cim:Identity.identifier>
+</cim:Location>
+<cim:Location rdf:about="urn:uuid:fbd2b11e-9222-4533-8bfc-70e08781d74f">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>hvmv69s2b1_sw_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>fbd2b11e-9222-4533-8bfc-70e08781d74f</cim:Identity.identifier>
+</cim:Location>
+<cim:Location rdf:about="urn:uuid:fd01287f-f80b-4cab-8d00-0f76d2399602">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>feeder_reg1b_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>fd01287f-f80b-4cab-8d00-0f76d2399602</cim:Identity.identifier>
+</cim:Location>
+<cim:PositionPoint rdf:about="urn:uuid:032d995b-7f09-41bd-a4bb-fed3919e0fe3">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.0727987</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.69391722</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:6ddd5a42-e431-4052-acf0-b98d40eb6019"/>
+  <cim:Identity.identifier>032d995b-7f09-41bd-a4bb-fed3919e0fe3</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:07ba4bbb-35ed-489c-9676-9bd34edad333">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.1333719</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.65427812</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:c7d4fbd9-1d64-4bf5-9cc3-3f47fc604737"/>
+  <cim:Identity.identifier>07ba4bbb-35ed-489c-9676-9bd34edad333</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:0e61c3b3-d0c0-4985-bca7-133a2d8d84ee">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.2047543</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.6233509</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:451bb9b3-39b7-4dc2-8c7d-5a7599dd0639"/>
+  <cim:Identity.identifier>0e61c3b3-d0c0-4985-bca7-133a2d8d84ee</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:16fc5978-f939-432c-a3cc-e13a817845ed">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.0691435</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.6804138</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:b7ca504f-bb39-4638-abcb-3952be54b48e"/>
+  <cim:Identity.identifier>16fc5978-f939-432c-a3cc-e13a817845ed</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:17c7bcdf-5561-4cff-b90c-13d81fcc1dbe">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.0733209</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.69348162</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:6ddd5a42-e431-4052-acf0-b98d40eb6019"/>
+  <cim:Identity.identifier>17c7bcdf-5561-4cff-b90c-13d81fcc1dbe</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:1d035835-a427-441c-b0f2-44d3cc60b9a8">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.0738431</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.69304604</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:92105ef6-a970-401d-99aa-a784e4008e94"/>
+  <cim:Identity.identifier>1d035835-a427-441c-b0f2-44d3cc60b9a8</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:1f717bac-4c1d-4f3f-bad3-faf485f3563a">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.1333719</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.65427812</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:b612c461-3ea8-40ae-be25-0a65fbb11c41"/>
+  <cim:Identity.identifier>1f717bac-4c1d-4f3f-bad3-faf485f3563a</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:2002cd3e-05e2-40b6-8057-92b10c524286">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.2047543</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.6233509</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:480e07bb-21ad-408f-83bd-e74d6caa3d2d"/>
+  <cim:Identity.identifier>2002cd3e-05e2-40b6-8057-92b10c524286</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:2025f0a7-b714-4c13-97be-a6d6d338618f">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.0748875</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.69217484</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:328d2468-f874-43f9-bec9-0b948029ac1e"/>
+  <cim:Identity.identifier>2025f0a7-b714-4c13-97be-a6d6d338618f</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:21920aa5-aed6-4ff2-90bf-e553f9cbabec">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.0811537</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.66734596</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:4b0bb44c-f411-4a73-bc36-4d5df2b54320"/>
+  <cim:Identity.identifier>21920aa5-aed6-4ff2-90bf-e553f9cbabec</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:247ba835-a810-4487-bde8-8f8bd3831ef6">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.2047543</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.62073734</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:0e881bf8-e4c5-49c6-9160-cb3f16fa0c80"/>
+  <cim:Identity.identifier>247ba835-a810-4487-bde8-8f8bd3831ef6</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:28de130e-5bf8-4f83-a02d-0cc237f59a82">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.0717544</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.69478842</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:958d2a34-0b55-4809-b6d4-7655971645f2"/>
+  <cim:Identity.identifier>28de130e-5bf8-4f83-a02d-0cc237f59a82</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:292d21ee-5e4e-4a58-b4f7-2f3292a48a22">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.1594811</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.64338826</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:b612c461-3ea8-40ae-be25-0a65fbb11c41"/>
+  <cim:Identity.identifier>292d21ee-5e4e-4a58-b4f7-2f3292a48a22</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:2e86aeb4-41b2-46d6-a469-af56bd00602f">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.190812</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.62901364</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:2f245ed5-0e3d-42b5-9f96-ebd095f8c36e"/>
+  <cim:Identity.identifier>2e86aeb4-41b2-46d6-a469-af56bd00602f</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:32121b09-f6cf-4050-9780-e681e201642a">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.2401583</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.679107</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:1a2a1430-d2c1-4720-9ff5-3087615e63ca"/>
+  <cim:Identity.identifier>32121b09-f6cf-4050-9780-e681e201642a</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:3c5c3a47-3ff2-4073-b4fe-dda776fc5c6e">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.1072628</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.66734596</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:4b0bb44c-f411-4a73-bc36-4d5df2b54320"/>
+  <cim:Identity.identifier>3c5c3a47-3ff2-4073-b4fe-dda776fc5c6e</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:3e976be4-f6ae-44e1-857e-62a5f42fc287">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.2406805</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.68084938</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:e53c48b9-178f-4c02-ab42-1e2e1223dd6b"/>
+  <cim:Identity.identifier>3e976be4-f6ae-44e1-857e-62a5f42fc287</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:410bb159-a1c3-4da3-972c-7dbb0154555d">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.0738431</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.69304604</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:328d2468-f874-43f9-bec9-0b948029ac1e"/>
+  <cim:Identity.identifier>410bb159-a1c3-4da3-972c-7dbb0154555d</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:44f68395-59c2-492f-876f-5a0284493d11">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.2047467</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.6240377</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:451bb9b3-39b7-4dc2-8c7d-5a7599dd0639"/>
+  <cim:Identity.identifier>44f68395-59c2-492f-876f-5a0284493d11</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:46f8be86-9660-46b6-bf5f-cae401db5489">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.2047543</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.62073734</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:fbd2b11e-9222-4533-8bfc-70e08781d74f"/>
+  <cim:Identity.identifier>46f8be86-9660-46b6-bf5f-cae401db5489</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:4b94b462-358d-44a4-b9a1-a0070420d1f5">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.2047543</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.62247972</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:a88fc616-69d6-4f01-ac60-257397f9e973"/>
+  <cim:Identity.identifier>4b94b462-358d-44a4-b9a1-a0070420d1f5</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:4c5be3d1-8e87-4294-a35c-377072ff1b13">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.0738431</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.69304604</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:fa0ce01e-4d07-4c00-9e4e-71b33a4f66b9"/>
+  <cim:Identity.identifier>4c5be3d1-8e87-4294-a35c-377072ff1b13</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:4e79c391-9884-4074-ba7e-aad098e96948">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.2409416</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.68172058</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:8b3f3f7c-8377-44f7-bedc-348167e34fa6"/>
+  <cim:Identity.identifier>4e79c391-9884-4074-ba7e-aad098e96948</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:55c80100-91c5-4c30-a49d-daee918af720">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.2033444</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.62073734</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:2f245ed5-0e3d-42b5-9f96-ebd095f8c36e"/>
+  <cim:Identity.identifier>55c80100-91c5-4c30-a49d-daee918af720</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:5f88a6d6-551f-4618-9eb9-f94c082e3df1">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.0727987</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.69391722</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:958d2a34-0b55-4809-b6d4-7655971645f2"/>
+  <cim:Identity.identifier>5f88a6d6-551f-4618-9eb9-f94c082e3df1</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:5f94c9b0-4568-4730-8ff9-e25adac1db17">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.07071</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.6956596</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:f5300951-c35b-462c-b2fd-0e81562c6d1f"/>
+  <cim:Identity.identifier>5f94c9b0-4568-4730-8ff9-e25adac1db17</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:5fe33f0f-a6a3-4ab6-bf2f-53e4e7585856">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.0748875</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.69217484</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:9ff86010-5c5a-4ccc-93c7-e544594efbd8"/>
+  <cim:Identity.identifier>5fe33f0f-a6a3-4ab6-bf2f-53e4e7585856</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:60c1c39c-bfd1-49f7-8a8f-a666ef803805">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.2406805</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.68084938</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:0faa47d9-43f2-415e-a34a-bcad025e6082"/>
+  <cim:Identity.identifier>60c1c39c-bfd1-49f7-8a8f-a666ef803805</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:61e8d5df-9b6f-48fa-b3aa-858c067d1588">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.0733209</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.69348162</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:fa0ce01e-4d07-4c00-9e4e-71b33a4f66b9"/>
+  <cim:Identity.identifier>61e8d5df-9b6f-48fa-b3aa-858c067d1588</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:652ef04a-9d65-4e1a-902f-10041335724f">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.2047543</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.62247972</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:cc4e2d70-2bfc-4c45-86c4-6d173b7d7314"/>
+  <cim:Identity.identifier>652ef04a-9d65-4e1a-902f-10041335724f</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:6634a836-a6e8-4b4e-be5b-06248e31b09f">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.0811537</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.66734596</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:a16a42b8-e0af-4b32-976b-99f355d3bc2d"/>
+  <cim:Identity.identifier>6634a836-a6e8-4b4e-be5b-06248e31b09f</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:681d7e14-a67c-476c-9c5c-86441437bd02">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.2409416</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.68172058</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:e53c48b9-178f-4c02-ab42-1e2e1223dd6b"/>
+  <cim:Identity.identifier>681d7e14-a67c-476c-9c5c-86441437bd02</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:6ba72115-89e6-4b12-ac4a-32e0e5749194">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.0696656</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.6717019</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:0aa928cc-6653-434a-bd1f-688f23b88202"/>
+  <cim:Identity.identifier>6ba72115-89e6-4b12-ac4a-32e0e5749194</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:6c3d1794-96fd-446b-8f62-ae2fb71652fa">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.2404194</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.6799782</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:1a2a1430-d2c1-4720-9ff5-3087615e63ca"/>
+  <cim:Identity.identifier>6c3d1794-96fd-446b-8f62-ae2fb71652fa</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:6c84a6d6-232d-490f-8b26-0c7ad70691d3">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.0738431</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.69304604</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:fd01287f-f80b-4cab-8d00-0f76d2399602"/>
+  <cim:Identity.identifier>6c84a6d6-232d-490f-8b26-0c7ad70691d3</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:7cdb2288-3b75-493a-9086-3a6b41e15c07">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.0717544</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.69478842</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:76b7ffa1-b1dd-4563-91f2-aa6305d836a2"/>
+  <cim:Identity.identifier>7cdb2288-3b75-493a-9086-3a6b41e15c07</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:7cf18e0a-0b90-4a25-9eb4-bb1e12292bea">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.0696656</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.6965308</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:8d830b67-72a4-4528-874e-99a403f129ac"/>
+  <cim:Identity.identifier>7cf18e0a-0b90-4a25-9eb4-bb1e12292bea</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:7d79dfc7-f1db-4a5b-8292-f6b7842f97ed">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.0696656</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.6717019</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:a16a42b8-e0af-4b32-976b-99f355d3bc2d"/>
+  <cim:Identity.identifier>7d79dfc7-f1db-4a5b-8292-f6b7842f97ed</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:7d7f6c43-0b79-4625-8919-0426f9240d82">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.1072628</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.66734596</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:c7d4fbd9-1d64-4bf5-9cc3-3f47fc604737"/>
+  <cim:Identity.identifier>7d7f6c43-0b79-4625-8919-0426f9240d82</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:7e80772a-96d7-44ed-b8e6-24ba6dde2e83">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.2047543</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.6233509</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:1acc83dd-3037-460d-9ea9-29e31542600d"/>
+  <cim:Identity.identifier>7e80772a-96d7-44ed-b8e6-24ba6dde2e83</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:7ea20161-7842-4142-b151-da3dadf9d186">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.07071</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.69391722</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:07792259-03cb-4594-b154-a8e90d3a6468"/>
+  <cim:Identity.identifier>7ea20161-7842-4142-b151-da3dadf9d186</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:85415037-5caa-42b8-8f30-98e36d0c8221">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.2059553</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.62073734</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:806c29ec-03e3-4bb7-bbae-9caa27c58198"/>
+  <cim:Identity.identifier>85415037-5caa-42b8-8f30-98e36d0c8221</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:85a6bf58-e7e5-472b-8b1d-2cd685e33f6c">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.2033444</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.62073734</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:0e881bf8-e4c5-49c6-9160-cb3f16fa0c80"/>
+  <cim:Identity.identifier>85a6bf58-e7e5-472b-8b1d-2cd685e33f6c</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:86157a38-49f8-4695-9ef2-5d944f9a023f">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.0712322</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.695224</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:f5300951-c35b-462c-b2fd-0e81562c6d1f"/>
+  <cim:Identity.identifier>86157a38-49f8-4695-9ef2-5d944f9a023f</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:870b6419-b5ed-41f9-b195-1fb7133eb36c">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.0696656</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.6965308</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:c2e051ea-4187-4d76-aaf5-f4ec926d26e8"/>
+  <cim:Identity.identifier>870b6419-b5ed-41f9-b195-1fb7133eb36c</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:8741c977-d390-4738-b0e5-b726d53cb609">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.2409416</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.68172058</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:0faa47d9-43f2-415e-a34a-bcad025e6082"/>
+  <cim:Identity.identifier>8741c977-d390-4738-b0e5-b726d53cb609</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:89d9dae7-5ef4-4c13-ab83-941e8d467fd7">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.2047543</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.62247972</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:480e07bb-21ad-408f-83bd-e74d6caa3d2d"/>
+  <cim:Identity.identifier>89d9dae7-5ef4-4c13-ab83-941e8d467fd7</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:8d877c7b-ff58-4cbf-81f4-a5ee88619950">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.0754097</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.69173926</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:9ff86010-5c5a-4ccc-93c7-e544594efbd8"/>
+  <cim:Identity.identifier>8d877c7b-ff58-4cbf-81f4-a5ee88619950</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:a4007553-113d-457b-9e33-7b4764f18b3d">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.2409416</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.68172058</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:72afe02f-0053-46c8-8732-f5ba70df6434"/>
+  <cim:Identity.identifier>a4007553-113d-457b-9e33-7b4764f18b3d</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:a44e1b58-442a-46b0-a372-27fb415c09ec">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.2047543</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.62073734</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:22175c54-1a92-4c0c-b954-ff0e02a63ba7"/>
+  <cim:Identity.identifier>a44e1b58-442a-46b0-a372-27fb415c09ec</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:a8954c00-1d79-4757-9102-9a32fa34d532">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.0701878</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.6960952</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:e89458df-5d1a-4fc4-b8bd-4a46760f0123"/>
+  <cim:Identity.identifier>a8954c00-1d79-4757-9102-9a32fa34d532</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:a9caa6be-6e71-489b-b193-837a77711e88">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.0701878</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.6960952</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:c2e051ea-4187-4d76-aaf5-f4ec926d26e8"/>
+  <cim:Identity.identifier>a9caa6be-6e71-489b-b193-837a77711e88</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:abb6d1ee-5d39-4e08-8597-d7ea5d8eacb9">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.190812</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.62901364</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:01bb0843-2b31-4ea8-b860-b372688114dc"/>
+  <cim:Identity.identifier>abb6d1ee-5d39-4e08-8597-d7ea5d8eacb9</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:b149a9f1-6465-403a-8e25-be55b3ec2b56">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.1594811</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.64338826</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:8bf35909-a20c-4bd5-ac9d-dd4c7220b8c6"/>
+  <cim:Identity.identifier>b149a9f1-6465-403a-8e25-be55b3ec2b56</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:b4dc4df7-6798-4278-8366-f7cb911ffd0f">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.2047543</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.62160852</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:cc4e2d70-2bfc-4c45-86c4-6d173b7d7314"/>
+  <cim:Identity.identifier>b4dc4df7-6798-4278-8366-f7cb911ffd0f</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:c3180451-4b54-4c9f-9d16-2bf7ff9e8e42">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.2404194</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.6799782</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:b33e9986-d0ea-415f-b6b3-413d54cde7ad"/>
+  <cim:Identity.identifier>c3180451-4b54-4c9f-9d16-2bf7ff9e8e42</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:c34a7b94-1ca7-468d-a392-83e763975167">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.1751466</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.63685434</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:8bf35909-a20c-4bd5-ac9d-dd4c7220b8c6"/>
+  <cim:Identity.identifier>c34a7b94-1ca7-468d-a392-83e763975167</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:c5f77e53-3146-4bef-9b4e-b0341ee13ebd">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.2406805</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.68084938</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:b33e9986-d0ea-415f-b6b3-413d54cde7ad"/>
+  <cim:Identity.identifier>c5f77e53-3146-4bef-9b4e-b0341ee13ebd</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:c7531b26-f578-4db0-bb1d-bebbe924c861">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.2047543</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.62247972</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:1acc83dd-3037-460d-9ea9-29e31542600d"/>
+  <cim:Identity.identifier>c7531b26-f578-4db0-bb1d-bebbe924c861</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:d1391fac-667a-4ee3-ad66-9bb82e58af90">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.07071</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.69391722</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:b7ca504f-bb39-4638-abcb-3952be54b48e"/>
+  <cim:Identity.identifier>d1391fac-667a-4ee3-ad66-9bb82e58af90</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:d80888b5-c129-4786-873d-a086be8b0405">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.0691435</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.6804138</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:0aa928cc-6653-434a-bd1f-688f23b88202"/>
+  <cim:Identity.identifier>d80888b5-c129-4786-873d-a086be8b0405</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:e2a0f56a-5bc4-47da-8e66-66bcea115615">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.2412838</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.68271272</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:72afe02f-0053-46c8-8732-f5ba70df6434"/>
+  <cim:Identity.identifier>e2a0f56a-5bc4-47da-8e66-66bcea115615</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:e3ddc5e8-33b2-47ed-8c83-96cee2530219">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.2401583</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.679107</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:806c29ec-03e3-4bb7-bbae-9caa27c58198"/>
+  <cim:Identity.identifier>e3ddc5e8-33b2-47ed-8c83-96cee2530219</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:e78d1242-f7fd-4b38-9693-66269ee64e15">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.1751466</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.63685434</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:01bb0843-2b31-4ea8-b860-b372688114dc"/>
+  <cim:Identity.identifier>e78d1242-f7fd-4b38-9693-66269ee64e15</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:e84dc2d1-e552-44cc-9854-f19a2f2445f0">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.2047543</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.62160852</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:fbd2b11e-9222-4533-8bfc-70e08781d74f"/>
+  <cim:Identity.identifier>e84dc2d1-e552-44cc-9854-f19a2f2445f0</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:e8ca5a96-579b-486c-ae8a-7abf91e53285">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.07071</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.6956596</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:e89458df-5d1a-4fc4-b8bd-4a46760f0123"/>
+  <cim:Identity.identifier>e8ca5a96-579b-486c-ae8a-7abf91e53285</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:eb946c50-1a0c-4e11-b397-2b96be7c5da2">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.0712322</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.695224</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:76b7ffa1-b1dd-4563-91f2-aa6305d836a2"/>
+  <cim:Identity.identifier>eb946c50-1a0c-4e11-b397-2b96be7c5da2</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:ec3c5a50-1521-4c2b-ad8c-f9cb3c2ff538">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.2059553</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.62073734</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:22175c54-1a92-4c0c-b954-ff0e02a63ba7"/>
+  <cim:Identity.identifier>ec3c5a50-1521-4c2b-ad8c-f9cb3c2ff538</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:eece84ee-981c-4965-8e03-ba544b73625e">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.2406805</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.68084938</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:8b3f3f7c-8377-44f7-bedc-348167e34fa6"/>
+  <cim:Identity.identifier>eece84ee-981c-4965-8e03-ba544b73625e</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:ef51eefc-6415-405c-a3c9-1500c32bdc8c">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.2047543</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.6233509</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:a88fc616-69d6-4f01-ac60-257397f9e973"/>
+  <cim:Identity.identifier>ef51eefc-6415-405c-a3c9-1500c32bdc8c</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:f390377f-4889-4be7-b1d5-2de0cce63982">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.0733209</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.69348162</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:92105ef6-a970-401d-99aa-a784e4008e94"/>
+  <cim:Identity.identifier>f390377f-4889-4be7-b1d5-2de0cce63982</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:f870c0a2-9495-415b-8f14-b479f66f9a47">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.0717544</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.69478842</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:07792259-03cb-4594-b154-a8e90d3a6468"/>
+  <cim:Identity.identifier>f870c0a2-9495-415b-8f14-b479f66f9a47</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:fdc28e77-10d7-49c3-87e9-8d1ba42699a8">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.0733209</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.69348162</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:fd01287f-f80b-4cab-8d00-0f76d2399602"/>
+  <cim:Identity.identifier>fdc28e77-10d7-49c3-87e9-8d1ba42699a8</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PowerTransformer rdf:about="urn:uuid:12ecde7e-029b-466b-b10f-4289600824de">
+  <cim:PowerSystemResource.Location rdf:resource="urn:uuid:b33e9986-d0ea-415f-b6b3-413d54cde7ad"/>
+  <cim:IdentifiedObject.name>hvmv69_11s3</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>12ecde7e-029b-466b-b10f-4289600824de</cim:Identity.identifier>
+</cim:PowerTransformer>
+<cim:PowerTransformer rdf:about="urn:uuid:4073e035-c254-431d-ae34-399f37319d5a">
+  <cim:PowerSystemResource.Location rdf:resource="urn:uuid:480e07bb-21ad-408f-83bd-e74d6caa3d2d"/>
+  <cim:IdentifiedObject.name>FEEDER2_REG2</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>4073e035-c254-431d-ae34-399f37319d5a</cim:Identity.identifier>
+</cim:PowerTransformer>
+<cim:PowerTransformer rdf:about="urn:uuid:c4c8b83e-0669-45e8-ad6f-f40c5a773a53">
+  <cim:PowerSystemResource.Location rdf:resource="urn:uuid:cc4e2d70-2bfc-4c45-86c4-6d173b7d7314"/>
+  <cim:IdentifiedObject.name>hvmv69_11s2</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>c4c8b83e-0669-45e8-ad6f-f40c5a773a53</cim:Identity.identifier>
+</cim:PowerTransformer>
+<cim:PowerTransformer rdf:about="urn:uuid:cc79ae17-fba5-4228-af78-dca493ee7383">
+  <cim:PowerSystemResource.Location rdf:resource="urn:uuid:8b3f3f7c-8377-44f7-bedc-348167e34fa6"/>
+  <cim:IdentifiedObject.name>FEEDER3_REG3</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>cc79ae17-fba5-4228-af78-dca493ee7383</cim:Identity.identifier>
+</cim:PowerTransformer>
+<cim:PowerTransformer rdf:about="urn:uuid:cec3d5eb-a01d-4215-bdd7-cacf9e004820">
+  <cim:PowerSystemResource.Location rdf:resource="urn:uuid:fa0ce01e-4d07-4c00-9e4e-71b33a4f66b9"/>
+  <cim:IdentifiedObject.name>FEEDER1_REG1</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>cec3d5eb-a01d-4215-bdd7-cacf9e004820</cim:Identity.identifier>
+</cim:PowerTransformer>
+<cim:PowerTransformer rdf:about="urn:uuid:cf985369-c99e-4ee7-a87c-bdbd1fe4d9f8">
+  <cim:PowerSystemResource.Location rdf:resource="urn:uuid:f5300951-c35b-462c-b2fd-0e81562c6d1f"/>
+  <cim:IdentifiedObject.name>hvmv115s1_69sub</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>cf985369-c99e-4ee7-a87c-bdbd1fe4d9f8</cim:Identity.identifier>
+</cim:PowerTransformer>
+<cim:PowerTransformer rdf:about="urn:uuid:e1eaaf53-aab6-4039-b545-ac3506f33fb0">
+  <cim:PowerSystemResource.Location rdf:resource="urn:uuid:6ddd5a42-e431-4052-acf0-b98d40eb6019"/>
+  <cim:IdentifiedObject.name>hvmv69_11s1</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>e1eaaf53-aab6-4039-b545-ac3506f33fb0</cim:Identity.identifier>
+</cim:PowerTransformer>
+<cim:SeriesCompensator rdf:about="urn:uuid:2001fcf4-f122-4792-b3e8-e8b35479c492">
+  <cim:PowerSystemResource.Location rdf:resource="urn:uuid:c2e051ea-4187-4d76-aaf5-f4ec926d26e8"/>
+  <cim:IdentifiedObject.name>hvmv_sub_hsb</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>2001fcf4-f122-4792-b3e8-e8b35479c492</cim:Identity.identifier>
+</cim:SeriesCompensator>
+</rdf:RDF>

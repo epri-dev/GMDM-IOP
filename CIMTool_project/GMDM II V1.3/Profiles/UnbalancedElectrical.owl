@@ -27,27 +27,6 @@
     xmlns="http://www.ucaiug.org/gmdm/electrical/unbalanced#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
   xml:base="http://www.ucaiug.org/gmdm/electrical/unbalanced" > 
-  <rdf:Description rdf:nodeID="X33X0d7dabfXa3X19a3009c994Xa3X-7ffc">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
-    <owl:onProperty rdf:resource="http://cim.ucaiug.io/CIM101/draft#FossilFuel.ThermalGeneratingUnit"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="X33X0d7dabfXa3X19a3009c994Xa3X-7ffd">
-    <rdf:first rdf:resource="#ThermalGeneratingUnit"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="X33X0d7dabfXa3X19a3009c994Xa3X-7ffe">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:allValuesFrom rdf:nodeID="X33X0d7dabfXa3X19a3009c994Xa3X-7fff"/>
-    <owl:onProperty rdf:resource="http://cim.ucaiug.io/CIM101/draft#FossilFuel.ThermalGeneratingUnit"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="X33X0d7dabfXa3X19a3009c994Xa3X-7fff">
-    <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#byreference"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>ThermalGeneratingUnit</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/CIM101/draft#ThermalGeneratingUnit"/>
-    <owl:unionOf rdf:nodeID="X33X0d7dabfXa3X19a3009c994Xa3X-7ffd"/>
-  </rdf:Description>
   <rdf:Description rdf:nodeID="X13Xbfa537bXa3X197ec86a7f3Xa3X-34f">
     <rdf:first rdf:resource="#FossilFuel"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -215,6 +194,27 @@
   <rdf:Description rdf:nodeID="X13Xbfa537bXa3X197ec86a7f3Xa3X-6fb0">
     <rdf:first rdf:resource="http://cim.ucaiug.io/CIM101/draft#PhaseCode.s2N"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X33X0d7dabfXa3X19a3009c994Xa3X-7ffc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/CIM101/draft#FossilFuel.ThermalGeneratingUnit"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X33X0d7dabfXa3X19a3009c994Xa3X-7ffd">
+    <rdf:first rdf:resource="#ThermalGeneratingUnit"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X33X0d7dabfXa3X19a3009c994Xa3X-7ffe">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X33X0d7dabfXa3X19a3009c994Xa3X-7fff"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/CIM101/draft#FossilFuel.ThermalGeneratingUnit"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X33X0d7dabfXa3X19a3009c994Xa3X-7fff">
+    <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#byreference"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>ThermalGeneratingUnit</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/CIM101/draft#ThermalGeneratingUnit"/>
+    <owl:unionOf rdf:nodeID="X33X0d7dabfXa3X19a3009c994Xa3X-7ffd"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="X33Xb1b31b9Xa3X197ec6d444bXa3X-7fff">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -1711,10 +1711,6 @@
     <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/CIM101/draft#PowerElectronicsConnection"/>
     <owl:unionOf rdf:nodeID="Xd2X2e641da2Xa3X199eeb6fa97Xa3X-7fa1"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Xd2X3018d731Xa3X1988a74d206Xa3X-665b">
-    <rdf:first rdf:resource="http://epri.com/gmdm#FuelType.diesel"/>
-    <rdf:rest rdf:nodeID="X63X17c1402Xa3X19842624d4fXa3X-7f33"/>
-  </rdf:Description>
   <rdf:Description rdf:nodeID="Xd2X320f407eXa3X199ef2dfe20Xa3X-7fdb">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:allValuesFrom rdf:nodeID="Xd2X320f407eXa3X199ef2dfe20Xa3X-7fdc"/>
@@ -1757,6 +1753,20 @@
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
     <rdfs:label>ratedGrossMaxP</rdfs:label>
     <owl:equivalentClass rdf:resource="http://cim.ucaiug.io/CIM101/draft#ActivePower"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X493141beXa3X19a31a59328Xa3X-7feb">
+    <rdf:first rdf:resource="http://epri.com/gmdm/2025#FuelType.diesel"/>
+    <rdf:rest rdf:nodeID="X63X17c1402Xa3X19842624d4fXa3X-7f33"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X493141beXa3X19a31a59328Xa3X-7fec">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X493141beXa3X19a31a59328Xa3X-7fed"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/CIM101/draft#FossilFuel.fossilFuelType"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X493141beXa3X19a31a59328Xa3X-7fed">
+    <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#enumeration"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>fossilFuelType</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Xd2Xe7c6ab8Xa3X19a11a391c9Xa3X-7ffa">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
@@ -2131,6 +2141,7 @@
     <rdfs:subClassOf rdf:nodeID="X33X0d7dabfXa3X19a3009c994Xa3X-7ffc"/>
     <rdfs:subClassOf rdf:nodeID="X33X0d7dabfXa3X19a3009c994Xa3X-7ffe"/>
     <rdfs:subClassOf rdf:nodeID="X63X17c1402Xa3X19842624d4fXa3X-7f23"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X493141beXa3X19a31a59328Xa3X-7fec"/>
     <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/CIM101/draft#FossilFuel"/>
     <rdfs:subClassOf rdf:resource="#IdentifiedObject"/>
   </rdf:Description>
@@ -2141,8 +2152,8 @@
     <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#shadowextension"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:label>FuelType</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://epri.com/gmdm/2025#FuelType"/>
-    <owl:oneOf rdf:nodeID="Xd2X3018d731Xa3X1988a74d206Xa3X-665b"/>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/CIM101/draft#FuelType"/>
+    <owl:oneOf rdf:nodeID="Xd2X493141beXa3X19a31a59328Xa3X-7feb"/>
   </rdf:Description>
   <rdf:Description rdf:about="#Fuse">
     <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#concrete"/>

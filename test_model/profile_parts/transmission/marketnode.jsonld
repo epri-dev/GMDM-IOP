@@ -1,0 +1,152 @@
+{
+    "@context": {
+        "cim": "http://cim.ucaiug.io/CIM101/draft#",
+        "eu": "http://iec.ch/TC57/CIM100-European#",
+        "nc": "http://entsoe.eu/ns/nc#",
+        "gb": "http://GB/placeholder/ext#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "gmdm": "http://epri.com/gmdm/2025#"
+    },
+    "@graph": [
+        {
+            "@id": "urn:uuid:02b19842-93da-4323-b06c-5144eb98523b",
+            "@type": "cim:ConnectivityNode",
+            "cim:IdentifiedObject.name": "regxfmr_hvmv69s1_lsb1"
+        },
+        {
+            "@id": "urn:uuid:15816cf9-d1a1-4ade-9920-5d4f059558a6",
+            "@type": "cim:ConnectivityNode",
+            "cim:IdentifiedObject.name": "hvmv11s3_lsb"
+        },
+        {
+            "@id": "urn:uuid:202035fd-cbea-4a6a-8b1a-9bc57f665671",
+            "@type": "cim:ConnectivityNode",
+            "cim:IdentifiedObject.name": "hvmv11s1_lsb"
+        },
+        {
+            "@id": "urn:uuid:24763057-11ee-4ee2-8c9c-f55e99a440c6",
+            "@type": "cim:ConnectivityNode",
+            "cim:IdentifiedObject.name": "regxfmr_hvmv11s1_lsb"
+        },
+        {
+            "@id": "urn:uuid:2d80b3bb-3f00-4f18-979e-1e01376ac67c",
+            "@type": "cim:ConnectivityNode",
+            "cim:IdentifiedObject.name": "hvmv69s1s2_8"
+        },
+        {
+            "@id": "urn:uuid:2d9dfa68-5d6d-4a8d-8f52-c05a321b6bd5",
+            "@type": "cim:ConnectivityNode",
+            "cim:IdentifiedObject.name": "hvmv115s1_hsb1"
+        },
+        {
+            "@id": "urn:uuid:354fd89e-997a-414c-a159-c2b3e4d77523",
+            "@type": "cim:ConnectivityNode",
+            "cim:IdentifiedObject.name": "regxfmr_hvmv11s3_lsb"
+        },
+        {
+            "@id": "urn:uuid:3d69e265-dad3-4e75-aad7-16a33b8f7243",
+            "@type": "cim:ConnectivityNode",
+            "cim:IdentifiedObject.name": "hvmv69s1s2_10"
+        },
+        {
+            "@id": "urn:uuid:3e3cf4cb-c66b-4be0-b621-b2c7e90bb0f2",
+            "@type": "cim:ConnectivityNode",
+            "cim:IdentifiedObject.name": "hvmv69s3_hsb"
+        },
+        {
+            "@id": "urn:uuid:40043952-5fc1-4eaf-8ced-c0df6ea31fa8",
+            "@type": "cim:ConnectivityNode",
+            "cim:IdentifiedObject.name": "hvmv11s2_lsb"
+        },
+        {
+            "@id": "urn:uuid:4a79b6a6-b655-4eaf-a4fa-b345f98d4108",
+            "@type": "cim:ConnectivityNode",
+            "cim:IdentifiedObject.name": "hvmv69s1s2_3"
+        },
+        {
+            "@id": "urn:uuid:4ff8c8b9-de7b-4833-9f2a-df03644a556a",
+            "@type": "cim:ConnectivityNode",
+            "cim:IdentifiedObject.name": "hvmv69s1s2_1"
+        },
+        {
+            "@id": "urn:uuid:50304bf5-ecf1-42c1-abaa-401d60af08b1",
+            "@type": "cim:ConnectivityNode",
+            "cim:IdentifiedObject.name": "hvmv69s2s3_2"
+        },
+        {
+            "@id": "urn:uuid:58940511-f2b7-426b-b2bb-b33f987d503c",
+            "@type": "cim:ConnectivityNode",
+            "cim:IdentifiedObject.name": "hvmv69s1s2_2"
+        },
+        {
+            "@id": "urn:uuid:86849d9c-e903-4799-9d7e-4b53155ac393",
+            "@type": "cim:ConnectivityNode",
+            "cim:IdentifiedObject.name": "hvmv69s2_hsb"
+        },
+        {
+            "@id": "urn:uuid:9039a782-7ae1-46fc-93d6-f0ee449c48ab",
+            "@type": "cim:ConnectivityNode",
+            "cim:IdentifiedObject.name": "hvmv69s2s3_1"
+        },
+        {
+            "@id": "urn:uuid:9cd9a7a0-5b77-4d55-b183-50cdc9947995",
+            "@type": "cim:ConnectivityNode",
+            "cim:IdentifiedObject.name": "d5710794-3_int"
+        },
+        {
+            "@id": "urn:uuid:a024c1e7-e11d-4301-b9b5-dc999cc223a1",
+            "@type": "cim:ConnectivityNode",
+            "cim:IdentifiedObject.name": "hvmv69s1s2_4"
+        },
+        {
+            "@id": "urn:uuid:ad63c5d3-5143-4f4f-9e4f-13ac73c99fb4",
+            "@type": "cim:ConnectivityNode",
+            "cim:IdentifiedObject.name": "hvmv69s1s2_7"
+        },
+        {
+            "@id": "urn:uuid:b1c4748b-9559-483e-8526-6e7617aa1203",
+            "@type": "cim:ConnectivityNode",
+            "cim:IdentifiedObject.name": "hvmv69s2_lnb"
+        },
+        {
+            "@id": "urn:uuid:c58d9941-6286-449e-8d7c-d7ff67480eb4",
+            "@type": "cim:ConnectivityNode",
+            "cim:IdentifiedObject.name": "hvmv69s1_hsb"
+        },
+        {
+            "@id": "urn:uuid:c5f6b7ab-ffee-4d3f-838f-e81ab3f02d54",
+            "@type": "cim:ConnectivityNode",
+            "cim:IdentifiedObject.name": "hvmv69s1s2_5"
+        },
+        {
+            "@id": "urn:uuid:c7c18436-3026-4d19-8f4c-d9f37e2b8696",
+            "@type": "cim:ConnectivityNode",
+            "cim:IdentifiedObject.name": "hvmv69s1_lsb2"
+        },
+        {
+            "@id": "urn:uuid:cf15a1f0-833a-49d7-8673-d38aed8ca43b",
+            "@type": "cim:ConnectivityNode",
+            "cim:IdentifiedObject.name": "hvmv69s1s2_9"
+        },
+        {
+            "@id": "urn:uuid:cf8a099d-25f4-4610-bbcc-1e08dfdabd16",
+            "@type": "cim:ConnectivityNode",
+            "cim:IdentifiedObject.name": "hvmv115s1_hsb2"
+        },
+        {
+            "@id": "urn:uuid:dca47906-8e79-4021-a163-e8c28549aca4",
+            "@type": "cim:ConnectivityNode",
+            "cim:IdentifiedObject.name": "sourcebus"
+        },
+        {
+            "@id": "urn:uuid:e248602f-d454-45dc-b9ac-e902b0e0314d",
+            "@type": "cim:ConnectivityNode",
+            "cim:IdentifiedObject.name": "regxfmr_hvmv11s2_lsb"
+        },
+        {
+            "@id": "urn:uuid:f7bf72d3-c42f-4811-94c3-beb6c8098849",
+            "@type": "cim:ConnectivityNode",
+            "cim:IdentifiedObject.name": "hvmv69s1s2_6"
+        }
+    ]
+}

@@ -201,7 +201,7 @@
          <xs:extension base="m:IdentifiedObject">
             <xs:sequence>
                <xs:element name="crsUrn"
-                           minOccurs="0"
+                           minOccurs="1"
                            maxOccurs="1"
                            type="xs:string"
                            sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#CoordinateSystem.crsUrn">

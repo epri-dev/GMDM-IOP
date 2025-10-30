@@ -1,0 +1,209 @@
+//==================================================================
+// Following is the "header" attributes defined for this asciidoc
+//==================================================================
+:stem: latexmath
+//
+//============ General document settings ============
+//
+:doctype: article
+:reproducible:
+:icons: font
+:sectnums:
+:sectnumlevels: 4
+:xrefstyle: short
+:table-stripes: even
+//==================================================================
+//
+
+= MarketNode Profile Specification
+
+
+// TOC must appear after the title of the doc (above)
+:toc-placement: preamble
+:toc-title: Table of Contents
+:toc:
+:toclevels: 6
+
+== Overview
+
+Profile namespace: http://www.ucaiug.org/gmdm/marketnode#
+
+.MarketNode Profile
+plantuml::./Profiles/MarketNode.rdfs-t2b.puml[format=svg, align=center]
+
+== Profile Specification
+
+
+=== Abstract Classes
+
+[[MarketNode-ConnectivityNode]]
+==== ConnectivityNode
+
+Inheritance path = <<MarketNode-IdentifiedObject,IdentifiedObject>> => <<MarketNode-Identity,Identity>>
+
+:ConnectivityNode:
+Connectivity nodes are points where terminals of AC conducting equipment are connected together with zero impedance.
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|description
+|0..1
+|<<MarketNode-String,String>>
+|see <<MarketNode-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<MarketNode-String,String>>
+|see <<MarketNode-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<MarketNode-String,String>>
+|see <<MarketNode-Identity,Identity>>
+|===
+:!ConnectivityNode:
+
+[[MarketNode-IdentifiedObject]]
+==== IdentifiedObject
+
+Inheritance path = <<MarketNode-Identity,Identity>>
+
+:IdentifiedObject:
+This is a class that provides common identification for all classes needing identification and naming attributes.
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|description
+|0..1
+|<<MarketNode-String,String>>
+|
+The description is a free human readable text describing or naming the object. It may be non unique and may not correlate to a naming hierarchy.
+
+|name
+|0..1
+|<<MarketNode-String,String>>
+|
+The name is any free human readable and possibly non unique text naming the object.
+
+|===
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|identifier
+|1..1
+|<<MarketNode-String,String>>
+|see <<MarketNode-Identity,Identity>>
+|===
+:!IdentifiedObject:
+
+[[MarketNode-Identity]]
+==== Identity
+
+
+:Identity:
+This is a root class to provide common identification for all classes. IdentifiedObject and any class to be exchanged with RDF XML now inherits from Identity. mRID is superseded by Identity.identifier, which is typed to be a UUID.
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|identifier
+|1..1
+|<<MarketNode-String,String>>
+|
+A universally unique object identifier. Used to uniquely identify persistent objects between CIM messages.
+
+|===
+:!Identity:
+
+[[MarketNode-IndividualPnode]]
+==== IndividualPnode
+
+Inheritance path = <<MarketNode-Pnode,Pnode>> => <<MarketNode-IdentifiedObject,IdentifiedObject>> => <<MarketNode-Identity,Identity>>
+
+:IndividualPnode:
+Individual pricing node based on Pnode.
+
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|ConnectivityNode
+|1..1
+|<<MarketNode-ConnectivityNode,ConnectivityNode>>
+|
+|===
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|description
+|0..1
+|<<MarketNode-String,String>>
+|see <<MarketNode-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<MarketNode-String,String>>
+|see <<MarketNode-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<MarketNode-String,String>>
+|see <<MarketNode-Identity,Identity>>
+|===
+:!IndividualPnode:
+
+[[MarketNode-Pnode]]
+==== Pnode
+
+Inheritance path = <<MarketNode-IdentifiedObject,IdentifiedObject>> => <<MarketNode-Identity,Identity>>
+
+:Pnode:
+A pricing node is directly associated with a connectivity node. It is a pricing location for which market participants submit their bids, offers, buy/sell CRRs, and settle.
+
+
+*Inherited Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|description
+|0..1
+|<<MarketNode-String,String>>
+|see <<MarketNode-IdentifiedObject,IdentifiedObject>>
+|name
+|0..1
+|<<MarketNode-String,String>>
+|see <<MarketNode-IdentifiedObject,IdentifiedObject>>
+|identifier
+|1..1
+|<<MarketNode-String,String>>
+|see <<MarketNode-Identity,Identity>>
+|===
+:!Pnode:
+
+
+=== Primitive Types
+
+[[MarketNode-String]]
+==== String
+
+A string consisting of a sequence of characters. The character encoding is UTF-8. The string length is unspecified and unlimited.http://langdale.com.au/2005/UML#primitive
+
+XSD type: string
+
+
