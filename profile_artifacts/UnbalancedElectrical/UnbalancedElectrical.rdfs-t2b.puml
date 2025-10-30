@@ -201,7 +201,7 @@ class FossilFuel   {
 }
 
 IdentifiedObject <|-- FossilFuel
-FossilFuel "+FossilFuels 0..*" --> "+ThermalGeneratingUnit 1" ThermalGeneratingUnit
+FossilFuel "+FossilFuels 0..*" --> "+ThermalGeneratingUnit 0..1" ThermalGeneratingUnit
 
 ' Enumeration FuelType
 enum FuelType <<ShadowExtension>><<gmdm>><<enumeration>><<Attribute>>  {
@@ -230,7 +230,6 @@ abstract class GeneratingUnit  <<abstract>> {
 }
 
 Equipment <|-- GeneratingUnit
-GeneratingUnit "+GeneratingUnit 0..1" --> "+RotatingMachine 0..1" RotatingMachine
 
 ' IdentifiedObject inherits from Identity
 abstract class IdentifiedObject  <<abstract>> {
@@ -363,7 +362,7 @@ class PowerElectronicsThermalUnit <<gmdm>>  {
 }
 
 PowerElectronicsUnit <|-- PowerElectronicsThermalUnit
-PowerElectronicsThermalUnit "+PowerElectronicsThermalUnit 0..*" --> "+FossilFuels 0..1" FossilFuel
+PowerElectronicsThermalUnit "+PowerElectronicsThermalUnit 0..*" --> "+FossilFuels 1" FossilFuel
 
 ' PowerElectronicsUnit inherits from Equipment
 abstract class PowerElectronicsUnit  <<abstract>> {
@@ -465,6 +464,7 @@ abstract class RotatingMachine  <<abstract>> {
 }
 
 RegulatingCondEq <|-- RotatingMachine
+RotatingMachine "+RotatingMachine 1..*" --> "+GeneratingUnit 0..1" GeneratingUnit
 
 ' Sectionaliser inherits from Switch
 class Sectionaliser <<Description>>  {
@@ -559,7 +559,6 @@ class ThermalGeneratingUnit   {
 }
 
 GeneratingUnit <|-- ThermalGeneratingUnit
-ThermalGeneratingUnit "+ThermalGeneratingUnit 0..1" --> "+FossilFuels 0..*" FossilFuel
 
 ' TransformerCoreAdmittance inherits from IdentifiedObject
 class TransformerCoreAdmittance   {

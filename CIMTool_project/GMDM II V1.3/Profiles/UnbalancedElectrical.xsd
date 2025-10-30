@@ -434,7 +434,7 @@
          <xs:extension base="m:IdentifiedObject">
             <xs:sequence>
                <xs:element name="ThermalGeneratingUnit"
-                           minOccurs="1"
+                           minOccurs="0"
                            maxOccurs="1"
                            sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#FossilFuel.ThermalGeneratingUnit">
                   <xs:annotation>
@@ -535,15 +535,6 @@
                   <xs:annotation>
                      <xs:documentation>The unit's gross rated maximum capacity (book value).</xs:documentation>
                      <xs:documentation>The attribute shall be a positive value.</xs:documentation>
-                  </xs:annotation>
-               </xs:element>
-               <xs:element name="RotatingMachine"
-                           minOccurs="0"
-                           maxOccurs="1"
-                           type="m:RotatingMachine"
-                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#GeneratingUnit.RotatingMachine">
-                  <xs:annotation>
-                     <xs:documentation>A synchronous machine may operate as a generator and as such becomes a member of a generating unit.</xs:documentation>
                   </xs:annotation>
                </xs:element>
             </xs:sequence>
@@ -1141,7 +1132,7 @@
          <xs:extension base="m:PowerElectronicsUnit">
             <xs:sequence>
                <xs:element name="FossilFuels"
-                           minOccurs="0"
+                           minOccurs="1"
                            maxOccurs="1"
                            sawsdl:modelReference="http://epri.com/gmdm/2025#PowerElectronicsThermalUnit.FossilFuels">
                   <xs:annotation/>
@@ -1568,6 +1559,15 @@
                      <xs:documentation>The attribute shall be a positive value.</xs:documentation>
                   </xs:annotation>
                </xs:element>
+               <xs:element name="GeneratingUnit"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           type="m:GeneratingUnit"
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#RotatingMachine.GeneratingUnit">
+                  <xs:annotation>
+                     <xs:documentation>A synchronous machine may operate as a generator and as such becomes a member of a generating unit.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
             </xs:sequence>
          </xs:extension>
       </xs:complexContent>
@@ -1981,17 +1981,7 @@
       </xs:annotation>
       <xs:complexContent>
          <xs:extension base="m:GeneratingUnit">
-            <xs:sequence>
-               <xs:element name="FossilFuels"
-                           minOccurs="0"
-                           maxOccurs="unbounded"
-                           type="m:FossilFuel"
-                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ThermalGeneratingUnit.FossilFuels">
-                  <xs:annotation>
-                     <xs:documentation>A thermal generating unit may have one or more fossil fuels.</xs:documentation>
-                  </xs:annotation>
-               </xs:element>
-            </xs:sequence>
+            <xs:sequence/>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>

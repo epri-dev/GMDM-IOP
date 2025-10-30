@@ -402,16 +402,6 @@ EnergyConsumer.pfixed, .qfixed, .pfixedPct and .qfixedPct have meaning only if t
    <rdf:Description rdf:about="#FossilFuel.ThermalGeneratingUnit">
       <cims:AssociationUsed>Yes</cims:AssociationUsed>
       <cims:inverseRoleName rdf:resource="#ThermalGeneratingUnit.FossilFuels"/>
-      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..1"/>
-      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A thermal generating unit may have one or more fossil fuels.</rdfs:comment>
-      <rdfs:domain rdf:resource="#FossilFuel"/>
-      <rdfs:label xml:lang="en">ThermalGeneratingUnit</rdfs:label>
-      <rdfs:range rdf:resource="#ThermalGeneratingUnit"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="#FossilFuel.ThermalGeneratingUnit">
-      <cims:AssociationUsed>No</cims:AssociationUsed>
-      <cims:inverseRoleName rdf:resource="#ThermalGeneratingUnit.FossilFuels"/>
       <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A thermal generating unit may have one or more fossil fuels.</rdfs:comment>
@@ -496,9 +486,9 @@ EnergyConsumer.pfixed, .qfixed, .pfixedPct and .qfixedPct have meaning only if t
       <rdfs:subClassOf rdf:resource="#Equipment"/>
    </rdf:Description>
    <rdf:Description rdf:about="#GeneratingUnit.RotatingMachine">
-      <cims:AssociationUsed>Yes</cims:AssociationUsed>
+      <cims:AssociationUsed>No</cims:AssociationUsed>
       <cims:inverseRoleName rdf:resource="#RotatingMachine.GeneratingUnit"/>
-      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..n"/>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A synchronous machine may operate as a generator and as such becomes a member of a generating unit.</rdfs:comment>
       <rdfs:domain rdf:resource="#GeneratingUnit"/>
@@ -1855,7 +1845,7 @@ If used for a TapChangerControl and if TapChanger.ctRatio or TapChanger.ptRatio 
       <rdfs:subClassOf rdf:resource="#RegulatingCondEq"/>
    </rdf:Description>
    <rdf:Description rdf:about="#RotatingMachine.GeneratingUnit">
-      <cims:AssociationUsed>No</cims:AssociationUsed>
+      <cims:AssociationUsed>Yes</cims:AssociationUsed>
       <cims:inverseRoleName rdf:resource="#GeneratingUnit.RotatingMachine"/>
       <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -2357,16 +2347,6 @@ This attribute is not relevant for PhaseTapChangerAsymmetrical, PhaseTapChangerS
       <rdfs:label xml:lang="en">FossilFuels</rdfs:label>
       <rdfs:range rdf:resource="#FossilFuel"/>
    </rdf:Description>
-   <rdf:Description rdf:about="#ThermalGeneratingUnit.FossilFuels">
-      <cims:AssociationUsed>Yes</cims:AssociationUsed>
-      <cims:inverseRoleName rdf:resource="#FossilFuel.ThermalGeneratingUnit"/>
-      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..n"/>
-      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A thermal generating unit may have one or more fossil fuels.</rdfs:comment>
-      <rdfs:domain rdf:resource="#ThermalGeneratingUnit"/>
-      <rdfs:label xml:lang="en">FossilFuels</rdfs:label>
-      <rdfs:range rdf:resource="#FossilFuel"/>
-   </rdf:Description>
    <rdf:Description rdf:about="#TransformerCoreAdmittance">
       <cims:belongsToCategory rdf:resource="#Package_Wires"/>
       <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#concrete"/>
@@ -2661,7 +2641,7 @@ The typical case is that this class describes the impedance between two transfor
    <rdf:Description rdf:about="http://epri.com/gmdm/2025#PowerElectronicsThermalUnit.FossilFuels">
       <cims:AssociationUsed>Yes</cims:AssociationUsed>
       <cims:inverseRoleName rdf:resource="#FossilFuel.PowerElectronicsThermalUnit"/>
-      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..1"/>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
       <rdfs:domain rdf:resource="http://epri.com/gmdm/2025#PowerElectronicsThermalUnit"/>
       <rdfs:label xml:lang="en">FossilFuels</rdfs:label>

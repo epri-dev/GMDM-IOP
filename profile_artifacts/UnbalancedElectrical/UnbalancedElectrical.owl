@@ -27,21 +27,6 @@
     xmlns="http://www.ucaiug.org/gmdm/electrical/unbalanced#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
   xml:base="http://www.ucaiug.org/gmdm/electrical/unbalanced" > 
-  <rdf:Description rdf:nodeID="X13Xbfa537bXa3X197ec86a7f3Xa3X-34f">
-    <rdf:first rdf:resource="#FossilFuel"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="X13Xbfa537bXa3X197ec86a7f3Xa3X-350">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:allValuesFrom rdf:nodeID="X13Xbfa537bXa3X197ec86a7f3Xa3X-351"/>
-    <owl:onProperty rdf:resource="http://cim.ucaiug.io/CIM101/draft#ThermalGeneratingUnit.FossilFuels"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="X13Xbfa537bXa3X197ec86a7f3Xa3X-351">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>FossilFuels</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/CIM101/draft#FossilFuel"/>
-    <owl:unionOf rdf:nodeID="X13Xbfa537bXa3X197ec86a7f3Xa3X-34f"/>
-  </rdf:Description>
   <rdf:Description rdf:nodeID="X13Xbfa537bXa3X197ec86a7f3Xa3X-352">
     <rdf:first rdf:resource="#WindGenUnitKind"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -195,11 +180,6 @@
     <rdf:first rdf:resource="http://cim.ucaiug.io/CIM101/draft#PhaseCode.s2N"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="X33X0d7dabfXa3X19a3009c994Xa3X-7ffc">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
-    <owl:onProperty rdf:resource="http://cim.ucaiug.io/CIM101/draft#FossilFuel.ThermalGeneratingUnit"/>
-  </rdf:Description>
   <rdf:Description rdf:nodeID="X33X0d7dabfXa3X19a3009c994Xa3X-7ffd">
     <rdf:first rdf:resource="#ThermalGeneratingUnit"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -320,26 +300,6 @@
   </rdf:Description>
   <rdf:Description rdf:nodeID="X63X17c1402Xa3X19842624d4fXa3X-7f1b">
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="X63X17c1402Xa3X19842624d4fXa3X-7f1e">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
-    <owl:onProperty rdf:resource="http://cim.ucaiug.io/CIM101/draft#GeneratingUnit.RotatingMachine"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="X63X17c1402Xa3X19842624d4fXa3X-7f20">
-    <rdf:first rdf:resource="#RotatingMachine"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="X63X17c1402Xa3X19842624d4fXa3X-7f21">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:allValuesFrom rdf:nodeID="X63X17c1402Xa3X19842624d4fXa3X-7f22"/>
-    <owl:onProperty rdf:resource="http://cim.ucaiug.io/CIM101/draft#GeneratingUnit.RotatingMachine"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="X63X17c1402Xa3X19842624d4fXa3X-7f22">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>RotatingMachine</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/CIM101/draft#RotatingMachine"/>
-    <owl:unionOf rdf:nodeID="X63X17c1402Xa3X19842624d4fXa3X-7f20"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="X63X17c1402Xa3X19842624d4fXa3X-7f23">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
@@ -1753,6 +1713,32 @@
     <rdfs:label>ratedGrossMaxP</rdfs:label>
     <owl:equivalentClass rdf:resource="http://cim.ucaiug.io/CIM101/draft#ActivePower"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X5a07fd62Xa3X19a34f22bb5Xa3X-7ff6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://epri.com/gmdm/2025#PowerElectronicsThermalUnit.FossilFuels"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X5a07fd62Xa3X19a34f22bb5Xa3X-7ff7">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/CIM101/draft#GeneratingUnit.RotatingMachine"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X5a07fd62Xa3X19a34f22bb5Xa3X-7ff8">
+    <rdf:first rdf:resource="#GeneratingUnit"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X5a07fd62Xa3X19a34f22bb5Xa3X-7ffa">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X5a07fd62Xa3X19a34f22bb5Xa3X-7ffb"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/CIM101/draft#RotatingMachine.GeneratingUnit"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X5a07fd62Xa3X19a34f22bb5Xa3X-7ffb">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>GeneratingUnit</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="Xd2X5a07fd62Xa3X19a34f22bb5Xa3X-7ff7"/>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/CIM101/draft#GeneratingUnit"/>
+    <owl:unionOf rdf:nodeID="Xd2X5a07fd62Xa3X19a34f22bb5Xa3X-7ff8"/>
+  </rdf:Description>
   <rdf:Description rdf:nodeID="Xd2Xe7c6ab8Xa3X19a11a391c9Xa3X-7ffa">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
@@ -2123,7 +2109,6 @@
     <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#concrete"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:label>FossilFuel</rdfs:label>
-    <rdfs:subClassOf rdf:nodeID="X33X0d7dabfXa3X19a3009c994Xa3X-7ffc"/>
     <rdfs:subClassOf rdf:nodeID="X33X0d7dabfXa3X19a3009c994Xa3X-7ffe"/>
     <rdfs:subClassOf rdf:nodeID="X63X17c1402Xa3X19842624d4fXa3X-7f23"/>
     <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/CIM101/draft#FossilFuel"/>
@@ -2149,8 +2134,6 @@
   </rdf:Description>
   <rdf:Description rdf:about="#GeneratingUnit">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:nodeID="X63X17c1402Xa3X19842624d4fXa3X-7f1e"/>
-    <rdfs:subClassOf rdf:nodeID="X63X17c1402Xa3X19842624d4fXa3X-7f21"/>
     <rdfs:subClassOf rdf:nodeID="Xd2X3dceeeaeXa3X197ecdf9f18Xa3X-6cc4"/>
     <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/CIM101/draft#GeneratingUnit"/>
     <rdfs:subClassOf rdf:resource="#Equipment"/>
@@ -2358,6 +2341,7 @@
     <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#gmdm"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:subClassOf rdf:nodeID="X93X4a80ceXa3X199ed375c17Xa3X-7509"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X5a07fd62Xa3X19a34f22bb5Xa3X-7ff6"/>
     <rdfs:subClassOf rdf:resource="http://epri.com/gmdm/2025#PowerElectronicsThermalUnit"/>
     <rdfs:subClassOf rdf:resource="#PowerElectronicsUnit"/>
   </rdf:Description>
@@ -2492,6 +2476,7 @@
     <rdfs:subClassOf rdf:nodeID="Xd2X153a73e1Xa3X197ebf26cdbXa3X-48aa"/>
     <rdfs:subClassOf rdf:nodeID="Xd2X153a73e1Xa3X197ebf26cdbXa3X-4923"/>
     <rdfs:subClassOf rdf:nodeID="Xd2X153a73e1Xa3X197ebf26cdbXa3X-4956"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X5a07fd62Xa3X19a34f22bb5Xa3X-7ffa"/>
     <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/CIM101/draft#RotatingMachine"/>
     <rdfs:subClassOf rdf:resource="#RegulatingCondEq"/>
   </rdf:Description>
@@ -2616,7 +2601,6 @@
     <uml:hasMaxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</uml:hasMaxCardinality>
     <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#concrete"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:nodeID="X13Xbfa537bXa3X197ec86a7f3Xa3X-350"/>
     <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/CIM101/draft#ThermalGeneratingUnit"/>
     <rdfs:subClassOf rdf:resource="#GeneratingUnit"/>
   </rdf:Description>

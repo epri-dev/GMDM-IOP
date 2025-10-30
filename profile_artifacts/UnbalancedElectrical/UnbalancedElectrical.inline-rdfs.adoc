@@ -167,6 +167,10 @@ A rotating machine whose shaft rotates asynchronously with the electrical field.
 |1..1
 |<<UnbalancedElectrical-Voltage,Voltage>>
 |see <<UnbalancedElectrical-RotatingMachine,RotatingMachine>>
+|GeneratingUnit
+|0..1
+|<<UnbalancedElectrical-GeneratingUnit,GeneratingUnit>>
+|see <<UnbalancedElectrical-RotatingMachine,RotatingMachine>>
 |RegulatingControl
 |0..1
 |<<UnbalancedElectrical-RegulatingControl,RegulatingControl>>
@@ -441,7 +445,7 @@ The fossil fuel consumed by the non-nuclear thermal generating unit. For example
 |===
 |name |mult |type |description
 |ThermalGeneratingUnit
-|1..1
+|0..1
 |<<UnbalancedElectrical-ThermalGeneratingUnit,ThermalGeneratingUnit>>
 |
 A thermal generating unit may have one or more fossil fuels.
@@ -1086,7 +1090,7 @@ A thermal unit that is connected via an inverter such as through a back-to-back 
 |===
 |name |mult |type |description
 |[extension]#FossilFuels#
-|0..1
+|1..1
 |<<UnbalancedElectrical-FossilFuel,FossilFuel>>
 |
 |===
@@ -1577,6 +1581,10 @@ An electromechanical device that operates with shaft rotating synchronously with
 |1..1
 |<<UnbalancedElectrical-Voltage,Voltage>>
 |see <<UnbalancedElectrical-RotatingMachine,RotatingMachine>>
+|GeneratingUnit
+|0..1
+|<<UnbalancedElectrical-GeneratingUnit,GeneratingUnit>>
+|see <<UnbalancedElectrical-RotatingMachine,RotatingMachine>>
 |RegulatingControl
 |0..1
 |<<UnbalancedElectrical-RegulatingControl,RegulatingControl>>
@@ -1768,19 +1776,6 @@ Inheritance path = <<UnbalancedElectrical-GeneratingUnit,GeneratingUnit>> => <<U
 A generating unit whose prime mover could be a steam turbine, combustion turbine, or diesel engine.
 
 
-*Native Members*
-
-[%header,width="100%",cols="25%,^10%,20%,45%a"]
-|===
-|name |mult |type |description
-|FossilFuels
-|0..*
-|<<UnbalancedElectrical-FossilFuel,FossilFuel>>
-|
-A thermal generating unit may have one or more fossil fuels.
-
-|===
-
 *Inherited Members*
 
 [%header,width="100%",cols="25%,^10%,20%,45%a"]
@@ -1789,10 +1784,6 @@ A thermal generating unit may have one or more fossil fuels.
 |ratedGrossMaxP
 |0..1
 |<<UnbalancedElectrical-ActivePower,ActivePower>>
-|see <<UnbalancedElectrical-GeneratingUnit,GeneratingUnit>>
-|RotatingMachine
-|0..1
-|<<UnbalancedElectrical-RotatingMachine,RotatingMachine>>
 |see <<UnbalancedElectrical-GeneratingUnit,GeneratingUnit>>
 |description
 |0..1
@@ -1998,10 +1989,6 @@ The kind of wind generating unit.
 |ratedGrossMaxP
 |0..1
 |<<UnbalancedElectrical-ActivePower,ActivePower>>
-|see <<UnbalancedElectrical-GeneratingUnit,GeneratingUnit>>
-|RotatingMachine
-|0..1
-|<<UnbalancedElectrical-RotatingMachine,RotatingMachine>>
 |see <<UnbalancedElectrical-GeneratingUnit,GeneratingUnit>>
 |description
 |0..1
@@ -2229,12 +2216,6 @@ A single or set of synchronous machines for converting mechanical power into alt
 The unit's gross rated maximum capacity (book value).
 
 The attribute shall be a positive value.
-
-|RotatingMachine
-|0..1
-|<<UnbalancedElectrical-RotatingMachine,RotatingMachine>>
-|
-A synchronous machine may operate as a generator and as such becomes a member of a generating unit.
 
 |===
 
@@ -2674,6 +2655,12 @@ The attribute shall have a positive value.
 Rated voltage (nameplate data, Ur in IEC 60909-0). It is primarily used for short circuit data exchange according to IEC 60909.
 
 The attribute shall be a positive value.
+
+|GeneratingUnit
+|0..1
+|<<UnbalancedElectrical-GeneratingUnit,GeneratingUnit>>
+|
+A synchronous machine may operate as a generator and as such becomes a member of a generating unit.
 
 |===
 
