@@ -188,7 +188,7 @@ Voltage measurements are typically obtained from voltage transformers that are c
    <rdf:Description rdf:about="#ConductingEquipment.BaseVoltage">
       <cims:AssociationUsed>Yes</cims:AssociationUsed>
       <cims:inverseRoleName rdf:resource="#BaseVoltage.ConductingEquipment"/>
-      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..1"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Base voltage of this conducting equipment.  Use only when there is no voltage level container used and only one base voltage applies.  For example, not used for transformers.</rdfs:comment>
       <rdfs:domain rdf:resource="#ConductingEquipment"/>
@@ -381,7 +381,7 @@ EnergyConsumer.pfixed, .qfixed, .pfixedPct and .qfixedPct have meaning only if t
    <rdf:Description rdf:about="#Equipment.EquipmentContainer">
       <cims:AssociationUsed>Yes</cims:AssociationUsed>
       <cims:inverseRoleName rdf:resource="#EquipmentContainer.Equipments"/>
-      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..1"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Container of this equipment.</rdfs:comment>
       <rdfs:domain rdf:resource="#Equipment"/>

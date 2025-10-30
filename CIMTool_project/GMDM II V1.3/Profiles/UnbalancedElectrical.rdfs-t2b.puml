@@ -201,15 +201,14 @@ class FossilFuel   {
 }
 
 IdentifiedObject <|-- FossilFuel
-FossilFuel " " --> "+fossilFuelType 1" FuelType#red
 FossilFuel "+FossilFuels 0..*" --> "+ThermalGeneratingUnit 1" ThermalGeneratingUnit
 
 ' Enumeration FuelType
 enum FuelType <<ShadowExtension>><<gmdm>><<enumeration>><<Attribute>>  {
+   diesel
    brownCoalLignite
    coal
    coalDerivedGas
-   diesel
    gas
    hardCoal
    lignite
@@ -231,7 +230,7 @@ abstract class GeneratingUnit  <<abstract>> {
 }
 
 Equipment <|-- GeneratingUnit
-GeneratingUnit "+GeneratingUnit 0..1" --> "+RotatingMachine 1" RotatingMachine
+GeneratingUnit "+GeneratingUnit 0..1" --> "+RotatingMachine 0..1" RotatingMachine
 
 ' IdentifiedObject inherits from Identity
 abstract class IdentifiedObject  <<abstract>> {

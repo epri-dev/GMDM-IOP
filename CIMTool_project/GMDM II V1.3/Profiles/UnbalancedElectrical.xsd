@@ -433,18 +433,6 @@
       <xs:complexContent>
          <xs:extension base="m:IdentifiedObject">
             <xs:sequence>
-               <xs:element name="fossilFuelType"
-                           minOccurs="1"
-                           maxOccurs="1"
-                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#FossilFuel.fossilFuelType">
-                  <xs:annotation>
-                     <xs:documentation>The type of fossil fuel, such as coal, oil, or gas.</xs:documentation>
-                  </xs:annotation>
-                  <xs:complexType sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#FuelType">
-                     <xs:attribute name="ref" type="xs:string" use="required"/>
-                     <xs:attribute name="referenceType" type="xs:string" use="optional"/>
-                  </xs:complexType>
-               </xs:element>
                <xs:element name="ThermalGeneratingUnit"
                            minOccurs="1"
                            maxOccurs="1"
@@ -462,11 +450,12 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:simpleType name="FuelType"
-                  sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#FuelType">
-      <xs:annotation>
-         <xs:documentation>Type of fuel.</xs:documentation>
-      </xs:annotation>
+                  sawsdl:modelReference="http://epri.com/gmdm/2025#FuelType">
+      <xs:annotation/>
       <xs:restriction base="xs:string">
+         <xs:enumeration value="FuelType.diesel">
+            <xs:annotation/>
+         </xs:enumeration>
          <xs:enumeration value="brownCoalLignite">
             <xs:annotation>
                <xs:documentation>Brown coal lignite.</xs:documentation>
@@ -480,11 +469,6 @@
          <xs:enumeration value="coalDerivedGas">
             <xs:annotation>
                <xs:documentation>Coal derived gas.</xs:documentation>
-            </xs:annotation>
-         </xs:enumeration>
-         <xs:enumeration value="diesel">
-            <xs:annotation>
-               <xs:documentation>Diesel</xs:documentation>
             </xs:annotation>
          </xs:enumeration>
          <xs:enumeration value="gas">
@@ -554,7 +538,7 @@
                   </xs:annotation>
                </xs:element>
                <xs:element name="RotatingMachine"
-                           minOccurs="1"
+                           minOccurs="0"
                            maxOccurs="1"
                            type="m:RotatingMachine"
                            sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#GeneratingUnit.RotatingMachine">

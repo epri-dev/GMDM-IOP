@@ -538,7 +538,7 @@
                   </xs:annotation>
                </xs:element>
                <xs:element name="RotatingMachine"
-                           minOccurs="1"
+                           minOccurs="0"
                            maxOccurs="1"
                            type="m:RotatingMachine"
                            sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#GeneratingUnit.RotatingMachine">

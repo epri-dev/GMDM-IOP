@@ -498,7 +498,7 @@ EnergyConsumer.pfixed, .qfixed, .pfixedPct and .qfixedPct have meaning only if t
    <rdf:Description rdf:about="#GeneratingUnit.RotatingMachine">
       <cims:AssociationUsed>Yes</cims:AssociationUsed>
       <cims:inverseRoleName rdf:resource="#RotatingMachine.GeneratingUnit"/>
-      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1..1"/>
+      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A synchronous machine may operate as a generator and as such becomes a member of a generating unit.</rdfs:comment>
       <rdfs:domain rdf:resource="#GeneratingUnit"/>

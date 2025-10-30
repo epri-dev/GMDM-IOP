@@ -56,7 +56,7 @@ There are three approaches to providing line detail and all use WireAssembly to 
 |===
 |name |mult |type |description
 |BaseVoltage
-|1..1
+|0..1
 |<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
 |see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
 |aggregate
@@ -72,7 +72,7 @@ There are three approaches to providing line detail and all use WireAssembly to 
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |EquipmentContainer
-|1..1
+|0..1
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |description
@@ -155,7 +155,7 @@ A rotating machine whose shaft rotates asynchronously with the electrical field.
 |===
 |name |mult |type |description
 |BaseVoltage
-|1..1
+|0..1
 |<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
 |see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
 |aggregate
@@ -171,7 +171,7 @@ A rotating machine whose shaft rotates asynchronously with the electrical field.
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |EquipmentContainer
-|1..1
+|0..1
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |description
@@ -254,7 +254,7 @@ A mechanical switching device capable of making, carrying, and breaking currents
 |<<UnbalancedConnectivity-Boolean,Boolean>>
 |see <<UnbalancedConnectivity-Switch,Switch>>
 |BaseVoltage
-|1..1
+|0..1
 |<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
 |see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
 |aggregate
@@ -270,7 +270,7 @@ A mechanical switching device capable of making, carrying, and breaking currents
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |EquipmentContainer
-|1..1
+|0..1
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |description
@@ -305,7 +305,7 @@ Voltage measurements are typically obtained from voltage transformers that are c
 |===
 |name |mult |type |description
 |BaseVoltage
-|1..1
+|0..1
 |<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
 |see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
 |aggregate
@@ -321,7 +321,7 @@ Voltage measurements are typically obtained from voltage transformers that are c
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |EquipmentContainer
-|1..1
+|0..1
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |description
@@ -406,7 +406,7 @@ A disconnector is capable of opening and closing a circuit when either negligibl
 |<<UnbalancedConnectivity-Boolean,Boolean>>
 |see <<UnbalancedConnectivity-Switch,Switch>>
 |BaseVoltage
-|1..1
+|0..1
 |<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
 |see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
 |aggregate
@@ -422,7 +422,7 @@ A disconnector is capable of opening and closing a circuit when either negligibl
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |EquipmentContainer
-|1..1
+|0..1
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |description
@@ -482,7 +482,7 @@ The type of phase connection, such as wye or delta.
 |===
 |name |mult |type |description
 |BaseVoltage
-|1..1
+|0..1
 |<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
 |see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
 |aggregate
@@ -498,7 +498,7 @@ The type of phase connection, such as wye or delta.
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |EquipmentContainer
-|1..1
+|0..1
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |description
@@ -579,7 +579,7 @@ A generic equivalent for an energy supplier on a transmission or distribution vo
 |===
 |name |mult |type |description
 |BaseVoltage
-|1..1
+|0..1
 |<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
 |see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
 |aggregate
@@ -595,7 +595,7 @@ A generic equivalent for an energy supplier on a transmission or distribution vo
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |EquipmentContainer
-|1..1
+|0..1
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |description
@@ -680,7 +680,7 @@ An overcurrent protective device with a circuit opening fusible part that is hea
 |<<UnbalancedConnectivity-Boolean,Boolean>>
 |see <<UnbalancedConnectivity-Switch,Switch>>
 |BaseVoltage
-|1..1
+|0..1
 |<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
 |see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
 |aggregate
@@ -696,7 +696,7 @@ An overcurrent protective device with a circuit opening fusible part that is hea
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |EquipmentContainer
-|1..1
+|0..1
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |description
@@ -766,7 +766,7 @@ A linear shunt compensator has banks or sections with equal admittance values.
 |<<UnbalancedConnectivity-PhaseShuntConnectionKind,PhaseShuntConnectionKind>>
 |see <<UnbalancedConnectivity-ShuntCompensator,ShuntCompensator>>
 |BaseVoltage
-|1..1
+|0..1
 |<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
 |see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
 |aggregate
@@ -782,7 +782,7 @@ A linear shunt compensator has banks or sections with equal admittance values.
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |EquipmentContainer
-|1..1
+|0..1
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |description
@@ -860,7 +860,7 @@ A mechanical switching device capable of making, carrying, and breaking currents
 |<<UnbalancedConnectivity-Boolean,Boolean>>
 |see <<UnbalancedConnectivity-Switch,Switch>>
 |BaseVoltage
-|1..1
+|0..1
 |<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
 |see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
 |aggregate
@@ -876,7 +876,7 @@ A mechanical switching device capable of making, carrying, and breaking currents
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |EquipmentContainer
-|1..1
+|0..1
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |description
@@ -909,7 +909,7 @@ A connection to the AC network for energy production or consumption that uses po
 |===
 |name |mult |type |description
 |BaseVoltage
-|1..1
+|0..1
 |<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
 |see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
 |aggregate
@@ -925,7 +925,7 @@ A connection to the AC network for energy production or consumption that uses po
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |EquipmentContainer
-|1..1
+|0..1
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |description
@@ -1031,7 +1031,7 @@ Phase displacement is defined as the angular difference between the phasors repr
 |===
 |name |mult |type |description
 |BaseVoltage
-|1..1
+|0..1
 |<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
 |see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
 |aggregate
@@ -1047,7 +1047,7 @@ Phase displacement is defined as the angular difference between the phasors repr
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |EquipmentContainer
-|1..1
+|0..1
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |description
@@ -1161,7 +1161,7 @@ Pole-mounted fault interrupter with built-in phase and ground relays, current tr
 |<<UnbalancedConnectivity-Boolean,Boolean>>
 |see <<UnbalancedConnectivity-Switch,Switch>>
 |BaseVoltage
-|1..1
+|0..1
 |<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
 |see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
 |aggregate
@@ -1177,7 +1177,7 @@ Pole-mounted fault interrupter with built-in phase and ground relays, current tr
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |EquipmentContainer
-|1..1
+|0..1
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |description
@@ -1218,7 +1218,7 @@ Automatic switch that will lock open to isolate a faulted section. It may, or ma
 |<<UnbalancedConnectivity-Boolean,Boolean>>
 |see <<UnbalancedConnectivity-Switch,Switch>>
 |BaseVoltage
-|1..1
+|0..1
 |<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
 |see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
 |aggregate
@@ -1234,7 +1234,7 @@ Automatic switch that will lock open to isolate a faulted section. It may, or ma
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |EquipmentContainer
-|1..1
+|0..1
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |description
@@ -1267,7 +1267,7 @@ A Series Compensator is a series capacitor or reactor or an AC transmission line
 |===
 |name |mult |type |description
 |BaseVoltage
-|1..1
+|0..1
 |<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
 |see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
 |aggregate
@@ -1283,7 +1283,7 @@ A Series Compensator is a series capacitor or reactor or an AC transmission line
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |EquipmentContainer
-|1..1
+|0..1
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |description
@@ -1405,7 +1405,7 @@ An electromechanical device that operates with shaft rotating synchronously with
 |===
 |name |mult |type |description
 |BaseVoltage
-|1..1
+|0..1
 |<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
 |see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
 |aggregate
@@ -1421,7 +1421,7 @@ An electromechanical device that operates with shaft rotating synchronously with
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |EquipmentContainer
-|1..1
+|0..1
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |description
@@ -1537,7 +1537,7 @@ Bank this transformer belongs to.
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |EquipmentContainer
-|1..1
+|0..1
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |description
@@ -1767,7 +1767,7 @@ The parts of the AC power system that are designed to carry current or that are 
 |===
 |name |mult |type |description
 |BaseVoltage
-|1..1
+|0..1
 |<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
 |
 Base voltage of this conducting equipment. Use only when there is no voltage level container used and only one base voltage applies. For example, not used for transformers.
@@ -1792,7 +1792,7 @@ Base voltage of this conducting equipment. Use only when there is no voltage lev
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |EquipmentContainer
-|1..1
+|0..1
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |description
@@ -1825,7 +1825,7 @@ Combination of conducting material with consistent electrical characteristics, b
 |===
 |name |mult |type |description
 |BaseVoltage
-|1..1
+|0..1
 |<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
 |see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
 |aggregate
@@ -1841,7 +1841,7 @@ Combination of conducting material with consistent electrical characteristics, b
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |EquipmentContainer
-|1..1
+|0..1
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |description
@@ -1903,7 +1903,7 @@ A conductor, or group of conductors, with negligible impedance, that serve to co
 |===
 |name |mult |type |description
 |BaseVoltage
-|1..1
+|0..1
 |<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
 |see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
 |aggregate
@@ -1919,7 +1919,7 @@ A conductor, or group of conductors, with negligible impedance, that serve to co
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |EquipmentContainer
-|1..1
+|0..1
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |description
@@ -1952,7 +1952,7 @@ A connection of energy generation or consumption on the power system model.
 |===
 |name |mult |type |description
 |BaseVoltage
-|1..1
+|0..1
 |<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
 |see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
 |aggregate
@@ -1968,7 +1968,7 @@ A connection of energy generation or consumption on the power system model.
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |EquipmentContainer
-|1..1
+|0..1
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |description
@@ -2021,7 +2021,7 @@ Specifies the availability of the equipment under normal operating conditions. T
 Additional equipment container beyond the primary equipment container. The equipment is contained in another equipment container, but also grouped with this equipment container.
 
 |EquipmentContainer
-|1..1
+|0..1
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |
 Container of this equipment.
@@ -2191,7 +2191,7 @@ A ProtectedSwitch is a switching device that can be operated by ProtectionEquipm
 |<<UnbalancedConnectivity-Boolean,Boolean>>
 |see <<UnbalancedConnectivity-Switch,Switch>>
 |BaseVoltage
-|1..1
+|0..1
 |<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
 |see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
 |aggregate
@@ -2207,7 +2207,7 @@ A ProtectedSwitch is a switching device that can be operated by ProtectionEquipm
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |EquipmentContainer
-|1..1
+|0..1
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |description
@@ -2240,7 +2240,7 @@ A type of conducting equipment that can regulate a quantity (i.e. voltage or flo
 |===
 |name |mult |type |description
 |BaseVoltage
-|1..1
+|0..1
 |<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
 |see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
 |aggregate
@@ -2256,7 +2256,7 @@ A type of conducting equipment that can regulate a quantity (i.e. voltage or flo
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |EquipmentContainer
-|1..1
+|0..1
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |description
@@ -2289,7 +2289,7 @@ A rotating machine which may be used as a generator or motor.
 |===
 |name |mult |type |description
 |BaseVoltage
-|1..1
+|0..1
 |<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
 |see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
 |aggregate
@@ -2305,7 +2305,7 @@ A rotating machine which may be used as a generator or motor.
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |EquipmentContainer
-|1..1
+|0..1
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |description
@@ -2357,7 +2357,7 @@ The type of phase connection, such as wye or delta.
 |===
 |name |mult |type |description
 |BaseVoltage
-|1..1
+|0..1
 |<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
 |see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
 |aggregate
@@ -2373,7 +2373,7 @@ The type of phase connection, such as wye or delta.
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |EquipmentContainer
-|1..1
+|0..1
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |description
@@ -2483,7 +2483,7 @@ The attribute is used in cases when no Measurement for the status value is prese
 |===
 |name |mult |type |description
 |BaseVoltage
-|1..1
+|0..1
 |<<UnbalancedConnectivity-BaseVoltage,BaseVoltage>>
 |see <<UnbalancedConnectivity-ConductingEquipment,ConductingEquipment>>
 |aggregate
@@ -2499,7 +2499,7 @@ The attribute is used in cases when no Measurement for the status value is prese
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |EquipmentContainer
-|1..1
+|0..1
 |<<UnbalancedConnectivity-EquipmentContainer,EquipmentContainer>>
 |see <<UnbalancedConnectivity-Equipment,Equipment>>
 |description

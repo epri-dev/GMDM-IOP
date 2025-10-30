@@ -148,7 +148,7 @@ abstract class ConductingEquipment  <<abstract>> {
 }
 
 Equipment <|-- ConductingEquipment
-ConductingEquipment "+ConductingEquipment 0..*" --> "+BaseVoltage 1" BaseVoltage
+ConductingEquipment "+ConductingEquipment 0..*" --> "+BaseVoltage 0..1" BaseVoltage
 
 ' Conductor inherits from ConductingEquipment
 abstract class Conductor  <<abstract>> {
@@ -218,7 +218,7 @@ abstract class Equipment  <<abstract>> {
 
 PowerSystemResource <|-- Equipment
 Equipment "+AdditionalGroupedEquipment 0..*" --> "+AdditionalEquipmentContainer 0..1" EquipmentContainer
-Equipment "+Equipments 0..*" --> "+EquipmentContainer 1" EquipmentContainer
+Equipment "+Equipments 0..*" --> "+EquipmentContainer 0..1" EquipmentContainer
 
 ' EquipmentContainer inherits from ConnectivityNodeContainer
 abstract class EquipmentContainer  <<abstract>> {

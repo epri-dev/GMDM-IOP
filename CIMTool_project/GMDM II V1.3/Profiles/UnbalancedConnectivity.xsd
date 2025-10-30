@@ -290,7 +290,7 @@
          <xs:extension base="m:Equipment">
             <xs:sequence>
                <xs:element name="BaseVoltage"
-                           minOccurs="1"
+                           minOccurs="0"
                            maxOccurs="1"
                            sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ConductingEquipment.BaseVoltage">
                   <xs:annotation>
@@ -503,7 +503,7 @@
                   </xs:annotation>
                </xs:element>
                <xs:element name="EquipmentContainer"
-                           minOccurs="1"
+                           minOccurs="0"
                            maxOccurs="1"
                            sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Equipment.EquipmentContainer">
                   <xs:annotation>

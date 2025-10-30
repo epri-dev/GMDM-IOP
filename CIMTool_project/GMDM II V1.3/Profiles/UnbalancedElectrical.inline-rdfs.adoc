@@ -440,12 +440,6 @@ The fossil fuel consumed by the non-nuclear thermal generating unit. For example
 [%header,width="100%",cols="25%,^10%,20%,45%a"]
 |===
 |name |mult |type |description
-|fossilFuelType (enumeration)
-|1..1
-|<<UnbalancedElectrical-FuelType,FuelType>>
-|
-The type of fossil fuel, such as coal, oil, or gas.
-
 |ThermalGeneratingUnit
 |1..1
 |<<UnbalancedElectrical-ThermalGeneratingUnit,ThermalGeneratingUnit>>
@@ -1797,7 +1791,7 @@ A thermal generating unit may have one or more fossil fuels.
 |<<UnbalancedElectrical-ActivePower,ActivePower>>
 |see <<UnbalancedElectrical-GeneratingUnit,GeneratingUnit>>
 |RotatingMachine
-|1..1
+|0..1
 |<<UnbalancedElectrical-RotatingMachine,RotatingMachine>>
 |see <<UnbalancedElectrical-GeneratingUnit,GeneratingUnit>>
 |description
@@ -2006,7 +2000,7 @@ The kind of wind generating unit.
 |<<UnbalancedElectrical-ActivePower,ActivePower>>
 |see <<UnbalancedElectrical-GeneratingUnit,GeneratingUnit>>
 |RotatingMachine
-|1..1
+|0..1
 |<<UnbalancedElectrical-RotatingMachine,RotatingMachine>>
 |see <<UnbalancedElectrical-GeneratingUnit,GeneratingUnit>>
 |description
@@ -2237,7 +2231,7 @@ The unit's gross rated maximum capacity (book value).
 The attribute shall be a positive value.
 
 |RotatingMachine
-|1..1
+|0..1
 |<<UnbalancedElectrical-RotatingMachine,RotatingMachine>>
 |
 A synchronous machine may operate as a generator and as such becomes a member of a generating unit.
@@ -3060,12 +3054,13 @@ Core admittance of this transformer end, representing magnetising current and co
 [[UnbalancedElectrical-FuelType]]
 ==== FuelType
 
-Type of fuel.
-
 
 [%header,width="100%",cols="25%,75%a"]
 |===
 |name |description
+
+|FuelType.diesel
+|
 
 |brownCoalLignite
 |
@@ -3080,11 +3075,6 @@ Generic coal, not including lignite type.
 |coalDerivedGas
 |
 Coal derived gas.
-
-
-|diesel
-|
-Diesel
 
 
 |gas

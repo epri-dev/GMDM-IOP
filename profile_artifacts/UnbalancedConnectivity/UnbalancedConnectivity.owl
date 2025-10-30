@@ -113,11 +113,6 @@
     <rdfs:label>name</rdfs:label>
     <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="X93X4a80ceXa3X199ed375c17Xa3X-7569">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
-    <owl:onProperty rdf:resource="http://cim.ucaiug.io/CIM101/draft#Equipment.EquipmentContainer"/>
-  </rdf:Description>
   <rdf:Description rdf:nodeID="X93X4a80ceXa3X199ed375c17Xa3X-756a">
     <rdf:first rdf:resource="#EquipmentContainer"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -137,11 +132,6 @@
   <rdf:Description rdf:nodeID="X93X4a80ceXa3X199ed375c17Xa3X-756d">
     <rdf:first rdf:resource="#BaseVoltage"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="X93X4a80ceXa3X199ed375c17Xa3X-756e">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
-    <owl:onProperty rdf:resource="http://cim.ucaiug.io/CIM101/draft#ConductingEquipment.BaseVoltage"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="X93X4a80ceXa3X199ed375c17Xa3X-756f">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
@@ -1459,7 +1449,6 @@
   <rdf:Description rdf:about="#ConductingEquipment">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:label>ConductingEquipment</rdfs:label>
-    <rdfs:subClassOf rdf:nodeID="X93X4a80ceXa3X199ed375c17Xa3X-756e"/>
     <rdfs:subClassOf rdf:nodeID="X93X4a80ceXa3X199ed375c17Xa3X-756f"/>
     <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/CIM101/draft#ConductingEquipment"/>
     <rdfs:subClassOf rdf:resource="#Equipment"/>
@@ -1538,7 +1527,6 @@
   <rdf:Description rdf:about="#Equipment">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:label>Equipment</rdfs:label>
-    <rdfs:subClassOf rdf:nodeID="X93X4a80ceXa3X199ed375c17Xa3X-7569"/>
     <rdfs:subClassOf rdf:nodeID="X93X4a80ceXa3X199ed375c17Xa3X-756b"/>
     <rdfs:subClassOf rdf:nodeID="Xd2X16346425Xa3X198ec34a251Xa3X-7e4f"/>
     <rdfs:subClassOf rdf:nodeID="Xd2X16346425Xa3X198ec34a251Xa3X-7e51"/>

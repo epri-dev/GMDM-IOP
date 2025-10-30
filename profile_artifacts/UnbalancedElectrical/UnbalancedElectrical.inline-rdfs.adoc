@@ -1791,7 +1791,7 @@ A thermal generating unit may have one or more fossil fuels.
 |<<UnbalancedElectrical-ActivePower,ActivePower>>
 |see <<UnbalancedElectrical-GeneratingUnit,GeneratingUnit>>
 |RotatingMachine
-|1..1
+|0..1
 |<<UnbalancedElectrical-RotatingMachine,RotatingMachine>>
 |see <<UnbalancedElectrical-GeneratingUnit,GeneratingUnit>>
 |description
@@ -2000,7 +2000,7 @@ The kind of wind generating unit.
 |<<UnbalancedElectrical-ActivePower,ActivePower>>
 |see <<UnbalancedElectrical-GeneratingUnit,GeneratingUnit>>
 |RotatingMachine
-|1..1
+|0..1
 |<<UnbalancedElectrical-RotatingMachine,RotatingMachine>>
 |see <<UnbalancedElectrical-GeneratingUnit,GeneratingUnit>>
 |description
@@ -2231,7 +2231,7 @@ The unit's gross rated maximum capacity (book value).
 The attribute shall be a positive value.
 
 |RotatingMachine
-|1..1
+|0..1
 |<<UnbalancedElectrical-RotatingMachine,RotatingMachine>>
 |
 A synchronous machine may operate as a generator and as such becomes a member of a generating unit.
