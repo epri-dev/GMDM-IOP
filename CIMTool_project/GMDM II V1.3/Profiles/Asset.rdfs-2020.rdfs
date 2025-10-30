@@ -70,31 +70,12 @@
       <rdfs:label xml:lang="en">AssetInfo</rdfs:label>
       <rdfs:subClassOf rdf:resource="#IdentifiedObject"/>
    </rdf:Description>
-   <rdf:Description rdf:about="#AssetInfo.PowerSystemResources">
-      <cims:AssociationUsed>No</cims:AssociationUsed>
-      <cims:inverseRoleName rdf:resource="#PowerSystemResource.AssetDatasheet"/>
-      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..n"/>
-      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">All power system resources with this datasheet information.</rdfs:comment>
-      <rdfs:domain rdf:resource="#AssetInfo"/>
-      <rdfs:label xml:lang="en">PowerSystemResources</rdfs:label>
-      <rdfs:range rdf:resource="#PowerSystemResource"/>
-   </rdf:Description>
    <rdf:Description rdf:about="#ConductingAssetInfo">
       <cims:belongsToCategory rdf:resource="#Package_AssetInfo"/>
       <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Generic information for conducting asset</rdfs:comment>
       <rdfs:label xml:lang="en">ConductingAssetInfo</rdfs:label>
       <rdfs:subClassOf rdf:resource="#AssetInfo"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="#ConductingAssetInfo.ratedCurrent">
-      <cims:dataType rdf:resource="#CurrentFlow"/>
-      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
-      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
-      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rated current.</rdfs:comment>
-      <rdfs:domain rdf:resource="#ConductingAssetInfo"/>
-      <rdfs:label xml:lang="en">ratedCurrent</rdfs:label>
    </rdf:Description>
    <rdf:Description rdf:about="#ConductingAssetInfo.ratedVoltage">
       <cims:dataType rdf:resource="#Voltage"/>
@@ -104,41 +85,6 @@
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rated voltage.</rdfs:comment>
       <rdfs:domain rdf:resource="#ConductingAssetInfo"/>
       <rdfs:label xml:lang="en">ratedVoltage</rdfs:label>
-   </rdf:Description>
-   <rdf:Description rdf:about="#CurrentFlow">
-      <cims:belongsToCategory rdf:resource="#Package_Domain"/>
-      <cims:stereotype>CIMDatatype</cims:stereotype>
-      <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electrical current with sign convention: positive flow is out of the conducting equipment into the connectivity node. Can be both AC and DC.</rdfs:comment>
-      <rdfs:label xml:lang="en">CurrentFlow</rdfs:label>
-   </rdf:Description>
-   <rdf:Description rdf:about="#CurrentFlow.multiplier">
-      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
-      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
-      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
-      <rdfs:domain rdf:resource="#CurrentFlow"/>
-      <rdfs:label xml:lang="en">multiplier</rdfs:label>
-      <rdfs:range rdf:resource="http://iec.ch/TC57/CIM100#UnitMultiplier"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="#CurrentFlow.unit">
-      <cims:isFixed rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A</cims:isFixed>
-      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
-      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
-      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
-      <rdfs:domain rdf:resource="#CurrentFlow"/>
-      <rdfs:label xml:lang="en">unit</rdfs:label>
-      <rdfs:range rdf:resource="http://iec.ch/TC57/CIM100#UnitSymbol"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="#CurrentFlow.value">
-      <cims:dataType rdf:resource="http://iec.ch/TC57/CIM100#Float"/>
-      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
-      <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
-      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
-      <rdfs:domain rdf:resource="#CurrentFlow"/>
-      <rdfs:label xml:lang="en">value</rdfs:label>
    </rdf:Description>
    <rdf:Description rdf:about="#Equipment">
       <cims:belongsToCategory rdf:resource="#Package_Core"/>
@@ -454,16 +400,6 @@ Currently, normative parts of the model support the needs of information exchang
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A power system resource (PSR) can be an item of equipment such as a switch, an equipment container containing many individual items of equipment such as a substation, or an organisational entity such as sub-control area. Power system resources can have measurements associated.</rdfs:comment>
       <rdfs:label xml:lang="en">PowerSystemResource</rdfs:label>
       <rdfs:subClassOf rdf:resource="#IdentifiedObject"/>
-   </rdf:Description>
-   <rdf:Description rdf:about="#PowerSystemResource.AssetDatasheet">
-      <cims:AssociationUsed>Yes</cims:AssociationUsed>
-      <cims:inverseRoleName rdf:resource="#AssetInfo.PowerSystemResources"/>
-      <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
-      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Datasheet information for this power system resource.</rdfs:comment>
-      <rdfs:domain rdf:resource="#PowerSystemResource"/>
-      <rdfs:label xml:lang="en">AssetDatasheet</rdfs:label>
-      <rdfs:range rdf:resource="#AssetInfo"/>
    </rdf:Description>
    <rdf:Description rdf:about="#PowerTransformerInfo">
       <cims:belongsToCategory rdf:resource="#Package_AssetInfo"/>
@@ -927,8 +863,8 @@ Currently, normative parts of the model support the needs of information exchang
       <cims:inverseRoleName rdf:resource="http://epri.com/gmdm/2025#TransformerTank.TransformerTankInfo"/>
       <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..n"/>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-      <rdfs:domain rdf:resource="#TransformerTankInfo"/>
+      <rdfs:domain rdf:resource="http://epri.com/gmdm/2025#TransformerTankInfo"/>
       <rdfs:label xml:lang="en">TransformerTanks</rdfs:label>
-      <rdfs:range rdf:resource="#TransformerTank"/>
+      <rdfs:range rdf:resource="http://epri.com/gmdm/2025#TransformerTank"/>
    </rdf:Description>
 </rdf:RDF>

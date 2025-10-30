@@ -105,7 +105,6 @@ IdentifiedObject <|-- AssetInfo
 
 ' ConductingAssetInfo inherits from AssetInfo
 abstract class ConductingAssetInfo  <<abstract>> {
-   +ratedCurrent : CurrentFlow [0..1]
    +ratedVoltage : Voltage [0..1]
 }
 
@@ -155,7 +154,6 @@ abstract class PowerSystemResource  <<abstract>> {
 }
 
 IdentifiedObject <|-- PowerSystemResource
-PowerSystemResource "+PowerSystemResources 0..*" --> "+AssetDatasheet 0..1" AssetInfo
 
 ' PowerTransformerInfo inherits from AssetInfo
 class PowerTransformerInfo   {

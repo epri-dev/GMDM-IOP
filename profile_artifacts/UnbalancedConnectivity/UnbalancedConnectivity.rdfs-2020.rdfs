@@ -25,6 +25,10 @@
          xmlns:uml="http://iec.ch/TC57/NonStandard/UML#"
          xmlns:xsd="http://www.w3.org/2001/XMLSchema"
          xml:base="http://cim.ucaiug.io/CIM101/draft">
+   <rdf:Description rdf:about="http://epri.com/GMDM/UnbalancedConnectivity#Ontology">
+      <owl:versionIRI rdf:resource="http://epri.com/GMDM_UnbalancedConnectivity/1.0"/>
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+   </rdf:Description>
    <rdf:Description rdf:about="#ACDCTerminal">
       <cims:belongsToCategory rdf:resource="#Package_Core"/>
       <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
