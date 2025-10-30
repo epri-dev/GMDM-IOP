@@ -27,6 +27,9 @@
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
   xml:base="http://www.ucaiug.org/gmdm/geographical_location" > 
+  <rdf:Description rdf:nodeID="X23X209dff8Xa3X198141650daXa3X-7fa6">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
   <rdf:Description rdf:nodeID="Xd2X287af08cXa3X19a135de5b7Xa3X-7ffc">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
@@ -49,9 +52,6 @@
     <rdfs:label>Location</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://epri.com/gmdm/2025#Location"/>
     <owl:unionOf rdf:nodeID="Xd2X287af08cXa3X19a135de5b7Xa3X-7ffd"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="X23X209dff8Xa3X198141650daXa3X-7fa6">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="Xd2X2b3d9349Xa3X19a0d4f1cf7Xa3X-6d5e">
     <rdf:first rdf:resource="#Location"/>

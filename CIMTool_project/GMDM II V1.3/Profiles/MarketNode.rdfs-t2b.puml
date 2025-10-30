@@ -1,0 +1,133 @@
+@startuml
+top to bottom direction
+hide empty methods
+
+' Here we adjust the horizontal spacing for better spatial rendering (the PlantUML default is ~20)
+skinparam nodesep 20
+' Here we adjust the vertical spacing for better spatial rendering (the PlantUML default is ~30)
+skinparam ranksep 30
+
+skinparam BackgroundColor #FFFFFF
+skinparam shadowing false
+skinparam RoundCorner 5
+skinparam BorderColor #454645
+skinparam ArrowColor #454645
+skinparam FontColor #000000
+
+skinparam class {
+  ' Concrete classes style definition
+  BackgroundColor #FFFFE0
+  FontColor #000000
+  AttributeFontColor #000000
+  StereotypeFontColor #000000
+  HeaderFontColor #000000
+  BorderColor #454645
+  BorderThickness 1
+  
+  ' Abstract classes style definition
+  BackgroundColor<<abstract>> #D3D3D3
+  FontColor<<abstract>> #000000
+  AttributeFontColor<<abstract>> #000000
+  StereotypeFontColor<<abstract>> #000000
+  HeaderFontColor<<abstract>> #000000
+  BorderColor<<abstract>> #454645
+  BorderThickness<<abstract>> 1
+  
+  ' Enumerations style definition
+  BackgroundColor<<enumeration>> #90EE90
+  FontColor<<enumeration>> #000000
+  AttributeFontColor<<enumeration>> #000000
+  StereotypeFontColor<<enumeration>> #000000
+  HeaderFontColor <<enumeration>> #000000
+  BorderColor<<enumeration>> #454645
+  BorderThickness<<enumeration>> 1
+  
+  ' CIMDatatypes style definition
+  BackgroundColor<<CIMDatatype>> #FFEBCD
+  FontColor<<CIMDatatype>> #000000
+  AttributeFontColor<<CIMDatatype>> #000000
+  StereotypeFontColor<<CIMDatatype>> #000000
+  HeaderFontColor<<CIMDatatype>> #000000
+  BorderColor<<CIMDatatype>> #454645
+  BorderThickness<<CIMDatatype>> 1
+  
+  ' Compound classes style definition
+  BackgroundColor<<Compound>> #FFEBCD
+  FontColor<<Compound>> #000000
+  AttributeFontColor<<Compound>> #000000
+  StereotypeFontColor<<Compound>> #000000
+  HeaderFontColor<<Compound>> #000000
+  BorderColor<<Compound>> #454645
+  BorderThickness<<Compound>> 1
+  
+  ' Primitive classes style definition
+  BackgroundColor<<Primitive>> #E6E6FF
+  FontColor<<Primitive>> #000000
+  AttributeFontColor<<Primitive>> #000000
+  StereotypeFontColor<<Primitive>> #000000
+  HeaderFontColor<<Primitive>> #000000
+  BorderColor<<Primitive>> #454645
+  BorderThickness<<Primitive>> 1
+  
+  ' Errors classes style definition
+  BackgroundColor<<error>> #FFC0CB
+  FontColor<<error>> #000000
+  AttributeFontColor<<error>> #000000
+  StereotypeFontColor<<error>> #000000
+  HeaderFontColor<<error>> #000000
+  BorderColor<<error>> #454645
+  BorderThickness<<error>> 1
+}
+skinparam shadowing true
+
+hide <<abstract>> stereotype
+hide <<error>> stereotype
+
+
+skinparam note {
+  BorderColor #454645
+  BorderThickness 1.5
+  FontSize 14
+  Font Bold
+  FontColor #000000
+}
+' Add a note towards the upper left corner of the diagram
+note as MarketNodeNote #lightyellow
+   Profile: MarketNode
+   Namespace: http://www.ucaiug.org/gmdm/marketnode#
+end note
+
+' ConnectivityNode inherits from IdentifiedObject
+abstract class ConnectivityNode  <<abstract>> {
+}
+
+IdentifiedObject <|-- ConnectivityNode
+
+' IdentifiedObject inherits from Identity
+abstract class IdentifiedObject  <<abstract>> {
+   +description : string [0..1]
+   +name : string [0..1]
+}
+
+Identity <|-- IdentifiedObject
+
+' Identity
+abstract class Identity  <<abstract>> {
+   +identifier : string [1]
+}
+
+
+' IndividualPnode inherits from Pnode
+abstract class IndividualPnode  <<abstract>> {
+}
+
+Pnode <|-- IndividualPnode
+IndividualPnode "+IndividualPnode 0..1" --> "+ConnectivityNode 1" ConnectivityNode
+
+' Pnode inherits from IdentifiedObject
+abstract class Pnode  <<abstract>> {
+}
+
+IdentifiedObject <|-- Pnode
+
+@enduml

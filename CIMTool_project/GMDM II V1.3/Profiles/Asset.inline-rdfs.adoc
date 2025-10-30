@@ -293,6 +293,10 @@ Transformer tank data that this end description is part of.
 [%header,width="100%",cols="25%,^10%,20%,45%a"]
 |===
 |name |mult |type |description
+|ratedCurrent
+|0..1
+|<<Asset-CurrentFlow,CurrentFlow>>
+|see <<Asset-ConductingAssetInfo,ConductingAssetInfo>>
 |ratedVoltage
 |0..1
 |<<Asset-Voltage,Voltage>>
@@ -341,6 +345,10 @@ An assembly of two or more coupled windings that transform electrical power betw
 [%header,width="100%",cols="25%,^10%,20%,45%a"]
 |===
 |name |mult |type |description
+|AssetDatasheet
+|0..1
+|<<Asset-AssetInfo,AssetInfo>>
+|see <<Asset-PowerSystemResource,PowerSystemResource>>
 |description
 |0..1
 |<<Asset-String,String>>
@@ -450,6 +458,12 @@ Generic information for conducting asset
 [%header,width="100%",cols="25%,^10%,20%,45%a"]
 |===
 |name |mult |type |description
+|ratedCurrent
+|0..1
+|<<Asset-CurrentFlow,CurrentFlow>>
+|
+Rated current.
+
 |ratedVoltage
 |0..1
 |<<Asset-Voltage,Voltage>>
@@ -492,6 +506,10 @@ The parts of a power system that are physical devices, electronic or mechanical.
 [%header,width="100%",cols="25%,^10%,20%,45%a"]
 |===
 |name |mult |type |description
+|AssetDatasheet
+|0..1
+|<<Asset-AssetInfo,AssetInfo>>
+|see <<Asset-PowerSystemResource,PowerSystemResource>>
 |description
 |0..1
 |<<Asset-String,String>>
@@ -577,6 +595,19 @@ Inheritance path = <<Asset-IdentifiedObject,IdentifiedObject>> => <<Asset-Identi
 :PowerSystemResource:
 A power system resource (PSR) can be an item of equipment such as a switch, an equipment container containing many individual items of equipment such as a substation, or an organisational entity such as sub-control area. Power system resources can have measurements associated.
 
+
+*Native Members*
+
+[%header,width="100%",cols="25%,^10%,20%,45%a"]
+|===
+|name |mult |type |description
+|AssetDatasheet
+|0..1
+|<<Asset-AssetInfo,AssetInfo>>
+|
+Datasheet information for this power system resource.
+
+|===
 
 *Inherited Members*
 
@@ -726,6 +757,14 @@ ZigZag, with neutral brought out for grounding.
 ==== ApparentPower
 
 Product of the RMS value of the voltage and the RMS value of the current.
+
+
+XSD type: float
+
+[[Asset-CurrentFlow]]
+==== CurrentFlow
+
+Electrical current with sign convention: positive flow is out of the conducting equipment into the connectivity node. Can be both AC and DC.
 
 
 XSD type: float

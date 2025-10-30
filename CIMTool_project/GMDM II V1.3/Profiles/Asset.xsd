@@ -75,6 +75,15 @@
       <xs:complexContent>
          <xs:extension base="m:AssetInfo">
             <xs:sequence>
+               <xs:element name="ratedCurrent"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           type="m:CurrentFlow"
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ConductingAssetInfo.ratedCurrent">
+                  <xs:annotation>
+                     <xs:documentation>Rated current.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
                <xs:element name="ratedVoltage"
                            minOccurs="0"
                            maxOccurs="1"
@@ -245,7 +254,17 @@
       </xs:annotation>
       <xs:complexContent>
          <xs:extension base="m:IdentifiedObject">
-            <xs:sequence/>
+            <xs:sequence>
+               <xs:element name="AssetDatasheet"
+                           minOccurs="0"
+                           maxOccurs="1"
+                           type="m:AssetInfo"
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PowerSystemResource.AssetDatasheet">
+                  <xs:annotation>
+                     <xs:documentation>Datasheet information for this power system resource.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
@@ -569,6 +588,13 @@
                   sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#ApparentPower">
       <xs:annotation>
          <xs:documentation>Product of the RMS value of the voltage and the RMS value of the current.</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:float"/>
+   </xs:simpleType>
+   <xs:simpleType name="CurrentFlow"
+                  sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#CurrentFlow">
+      <xs:annotation>
+         <xs:documentation>Electrical current with sign convention: positive flow is out of the conducting equipment into the connectivity node. Can be both AC and DC.</xs:documentation>
       </xs:annotation>
       <xs:restriction base="xs:float"/>
    </xs:simpleType>

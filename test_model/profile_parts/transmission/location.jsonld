@@ -1,0 +1,1432 @@
+{
+    "@context": {
+        "cim": "http://cim.ucaiug.io/CIM101/draft#",
+        "eu": "http://iec.ch/TC57/CIM100-European#",
+        "nc": "http://entsoe.eu/ns/nc#",
+        "gb": "http://GB/placeholder/ext#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "gmdm": "http://epri.com/gmdm/2025#"
+    },
+    "@graph": [
+        {
+            "@id": "urn:uuid:03e05d5f-6a5c-4a76-b403-32bfcda2ee75",
+            "@type": "cim:ACLineSegment",
+            "cim:PowerSystemResource.Location": {
+                "@id": "0aa928cc-6653-434a-bd1f-688f23b88202",
+                "@type": "Location"
+            },
+            "cim:IdentifiedObject.name": "hvmv69s1s2-2"
+        },
+        {
+            "@id": "urn:uuid:37c4ff07-f38a-4394-b528-510393cafa05",
+            "@type": "cim:ACLineSegment",
+            "cim:PowerSystemResource.Location": {
+                "@id": "8bf35909-a20c-4bd5-ac9d-dd4c7220b8c6",
+                "@type": "Location"
+            },
+            "cim:IdentifiedObject.name": "hvmv69s1s2-7"
+        },
+        {
+            "@id": "urn:uuid:54e3f087-2e1a-4726-9731-276692993540",
+            "@type": "cim:ACLineSegment",
+            "cim:PowerSystemResource.Location": {
+                "@id": "01bb0843-2b31-4ea8-b860-b372688114dc",
+                "@type": "Location"
+            },
+            "cim:IdentifiedObject.name": "hvmv69s1s2-8"
+        },
+        {
+            "@id": "urn:uuid:5ad64201-2649-4ce3-918a-fff933e6a1ff",
+            "@type": "cim:ACLineSegment",
+            "cim:PowerSystemResource.Location": {
+                "@id": "806c29ec-03e3-4bb7-bbae-9caa27c58198",
+                "@type": "Location"
+            },
+            "cim:IdentifiedObject.name": "hvmv69s2s3-1"
+        },
+        {
+            "@id": "urn:uuid:5f970234-4d34-4056-84e0-f0120716b30c",
+            "@type": "cim:ACLineSegment",
+            "cim:PowerSystemResource.Location": {
+                "@id": "b7ca504f-bb39-4638-abcb-3952be54b48e",
+                "@type": "Location"
+            },
+            "cim:IdentifiedObject.name": "hvmv69s1s2-1"
+        },
+        {
+            "@id": "urn:uuid:679e1e4e-6d31-40be-b0af-17ce66fc6a03",
+            "@type": "cim:ACLineSegment",
+            "cim:PowerSystemResource.Location": {
+                "@id": "c7d4fbd9-1d64-4bf5-9cc3-3f47fc604737",
+                "@type": "Location"
+            },
+            "cim:IdentifiedObject.name": "hvmv69s1s2-5"
+        },
+        {
+            "@id": "urn:uuid:98bd0731-b982-40b4-9f44-3c6f2c950b5f",
+            "@type": "cim:ACLineSegment",
+            "cim:PowerSystemResource.Location": {
+                "@id": "2f245ed5-0e3d-42b5-9f96-ebd095f8c36e",
+                "@type": "Location"
+            },
+            "cim:IdentifiedObject.name": "hvmv69s1s2-9"
+        },
+        {
+            "@id": "urn:uuid:b5c81dab-62d1-4de3-9a46-1933df94565d",
+            "@type": "cim:ACLineSegment",
+            "cim:PowerSystemResource.Location": {
+                "@id": "a16a42b8-e0af-4b32-976b-99f355d3bc2d",
+                "@type": "Location"
+            },
+            "cim:IdentifiedObject.name": "hvmv69s1s2-3"
+        },
+        {
+            "@id": "urn:uuid:bf501c26-edcd-4379-bb3b-ca97e14615a5",
+            "@type": "cim:ACLineSegment",
+            "cim:PowerSystemResource.Location": {
+                "@id": "4b0bb44c-f411-4a73-bc36-4d5df2b54320",
+                "@type": "Location"
+            },
+            "cim:IdentifiedObject.name": "hvmv69s1s2-4"
+        },
+        {
+            "@id": "urn:uuid:cfd520f9-9678-48f0-99d4-7a85b66f93e4",
+            "@type": "cim:ACLineSegment",
+            "cim:PowerSystemResource.Location": {
+                "@id": "b612c461-3ea8-40ae-be25-0a65fbb11c41",
+                "@type": "Location"
+            },
+            "cim:IdentifiedObject.name": "hvmv69s1s2-6"
+        },
+        {
+            "@id": "urn:uuid:0d07d8b9-e36a-4b25-80b9-b4e838033f90",
+            "@type": "cim:Breaker",
+            "cim:PowerSystemResource.Location": {
+                "@id": "0e881bf8-e4c5-49c6-9160-cb3f16fa0c80",
+                "@type": "Location"
+            },
+            "cim:IdentifiedObject.name": "hvmv69s2b3_sw"
+        },
+        {
+            "@id": "urn:uuid:4b865a2e-2163-42d7-a29b-2baf018c2c2c",
+            "@type": "cim:Breaker",
+            "cim:PowerSystemResource.Location": {
+                "@id": "958d2a34-0b55-4809-b6d4-7655971645f2",
+                "@type": "Location"
+            },
+            "cim:IdentifiedObject.name": "hvmv69s1b1_sw"
+        },
+        {
+            "@id": "urn:uuid:892c7482-8baf-4bde-868e-8f9019ff1c7c",
+            "@type": "cim:Breaker",
+            "cim:PowerSystemResource.Location": {
+                "@id": "e89458df-5d1a-4fc4-b8bd-4a46760f0123",
+                "@type": "Location"
+            },
+            "cim:IdentifiedObject.name": "hvmv115s1b1_sw"
+        },
+        {
+            "@id": "urn:uuid:89f95de1-c525-4eab-82e5-73abbacbf4d2",
+            "@type": "cim:Breaker",
+            "cim:PowerSystemResource.Location": {
+                "@id": "22175c54-1a92-4c0c-b954-ff0e02a63ba7",
+                "@type": "Location"
+            },
+            "cim:IdentifiedObject.name": "hvmv69s2b4_sw"
+        },
+        {
+            "@id": "urn:uuid:b775a18b-5b6a-4642-942d-5521bd4f52d4",
+            "@type": "cim:Breaker",
+            "cim:PowerSystemResource.Location": {
+                "@id": "07792259-03cb-4594-b154-a8e90d3a6468",
+                "@type": "Location"
+            },
+            "cim:IdentifiedObject.name": "hvmv69s1b3_sw"
+        },
+        {
+            "@id": "urn:uuid:b97ee681-835a-419e-992f-dea51371da49",
+            "@type": "cim:Breaker",
+            "cim:PowerSystemResource.Location": {
+                "@id": "1a2a1430-d2c1-4720-9ff5-3087615e63ca",
+                "@type": "Location"
+            },
+            "cim:IdentifiedObject.name": "hvmv69s3b1_sw"
+        },
+        {
+            "@id": "urn:uuid:c2694b62-24d1-4b47-81b9-3c2e3d7267b6",
+            "@type": "cim:Breaker",
+            "cim:PowerSystemResource.Location": {
+                "@id": "9ff86010-5c5a-4ccc-93c7-e544594efbd8",
+                "@type": "Location"
+            },
+            "cim:IdentifiedObject.name": "hvmv11s1b2_sw"
+        },
+        {
+            "@id": "urn:uuid:c8cb060c-7fc8-43b1-8f88-0790dbc4f032",
+            "@type": "cim:Breaker",
+            "cim:PowerSystemResource.Location": {
+                "@id": "451bb9b3-39b7-4dc2-8c7d-5a7599dd0639",
+                "@type": "Location"
+            },
+            "cim:IdentifiedObject.name": "hvmv11s2b2_sw"
+        },
+        {
+            "@id": "urn:uuid:e0ad1a26-271b-45fa-8cc2-e576419cec43",
+            "@type": "cim:Breaker",
+            "cim:PowerSystemResource.Location": {
+                "@id": "76b7ffa1-b1dd-4563-91f2-aa6305d836a2",
+                "@type": "Location"
+            },
+            "cim:IdentifiedObject.name": "hvmv69s1b4_sw"
+        },
+        {
+            "@id": "urn:uuid:e742f3b2-b8b7-4e6e-8ddb-dcef2f1797e5",
+            "@type": "cim:Breaker",
+            "cim:PowerSystemResource.Location": {
+                "@id": "fbd2b11e-9222-4533-8bfc-70e08781d74f",
+                "@type": "Location"
+            },
+            "cim:IdentifiedObject.name": "hvmv69s2b1_sw"
+        },
+        {
+            "@id": "urn:uuid:ee235f9e-369b-40f1-9977-8dec37d7ec8f",
+            "@type": "cim:Breaker",
+            "cim:PowerSystemResource.Location": {
+                "@id": "72afe02f-0053-46c8-8732-f5ba70df6434",
+                "@type": "Location"
+            },
+            "cim:IdentifiedObject.name": "hvmv11s3b2_sw"
+        },
+        {
+            "@id": "urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf",
+            "@type": "cim:CoordinateSystem",
+            "cim:IdentifiedObject.name": "final9500node_CrsUrn"
+        },
+        {
+            "@id": "urn:uuid:ce804296-d1b8-4108-928b-e8227d2501fb",
+            "@type": "cim:EnergySource",
+            "cim:PowerSystemResource.Location": {
+                "@id": "8d830b67-72a4-4528-874e-99a403f129ac",
+                "@type": "Location"
+            },
+            "cim:IdentifiedObject.name": "source"
+        },
+        {
+            "@id": "urn:uuid:84e58b61-3e27-4903-bb61-13a9d8b7a8cc",
+            "@type": "cim:LoadBreakSwitch",
+            "cim:PowerSystemResource.Location": {
+                "@id": "328d2468-f874-43f9-bec9-0b948029ac1e",
+                "@type": "Location"
+            },
+            "cim:IdentifiedObject.name": "hvmv_sub_connector"
+        },
+        {
+            "@id": "urn:uuid:01bb0843-2b31-4ea8-b860-b372688114dc",
+            "@type": "cim:Location",
+            "cim:Location.CoordinateSystem": {
+                "@id": "428df686-3924-4ab9-ac68-eb720e38eabf",
+                "@type": "CoordinateSystem"
+            },
+            "cim:IdentifiedObject.name": "hvmv69s1s2-8_Loc"
+        },
+        {
+            "@id": "urn:uuid:07792259-03cb-4594-b154-a8e90d3a6468",
+            "@type": "cim:Location",
+            "cim:Location.CoordinateSystem": {
+                "@id": "428df686-3924-4ab9-ac68-eb720e38eabf",
+                "@type": "CoordinateSystem"
+            },
+            "cim:IdentifiedObject.name": "hvmv69s1b3_sw_Loc"
+        },
+        {
+            "@id": "urn:uuid:0aa928cc-6653-434a-bd1f-688f23b88202",
+            "@type": "cim:Location",
+            "cim:Location.CoordinateSystem": {
+                "@id": "428df686-3924-4ab9-ac68-eb720e38eabf",
+                "@type": "CoordinateSystem"
+            },
+            "cim:IdentifiedObject.name": "hvmv69s1s2-2_Loc"
+        },
+        {
+            "@id": "urn:uuid:0e881bf8-e4c5-49c6-9160-cb3f16fa0c80",
+            "@type": "cim:Location",
+            "cim:Location.CoordinateSystem": {
+                "@id": "428df686-3924-4ab9-ac68-eb720e38eabf",
+                "@type": "CoordinateSystem"
+            },
+            "cim:IdentifiedObject.name": "hvmv69s2b3_sw_Loc"
+        },
+        {
+            "@id": "urn:uuid:0faa47d9-43f2-415e-a34a-bcad025e6082",
+            "@type": "cim:Location",
+            "cim:Location.CoordinateSystem": {
+                "@id": "428df686-3924-4ab9-ac68-eb720e38eabf",
+                "@type": "CoordinateSystem"
+            },
+            "cim:IdentifiedObject.name": "feeder_reg3b_Loc"
+        },
+        {
+            "@id": "urn:uuid:1a2a1430-d2c1-4720-9ff5-3087615e63ca",
+            "@type": "cim:Location",
+            "cim:Location.CoordinateSystem": {
+                "@id": "428df686-3924-4ab9-ac68-eb720e38eabf",
+                "@type": "CoordinateSystem"
+            },
+            "cim:IdentifiedObject.name": "hvmv69s3b1_sw_Loc"
+        },
+        {
+            "@id": "urn:uuid:1acc83dd-3037-460d-9ea9-29e31542600d",
+            "@type": "cim:Location",
+            "cim:Location.CoordinateSystem": {
+                "@id": "428df686-3924-4ab9-ac68-eb720e38eabf",
+                "@type": "CoordinateSystem"
+            },
+            "cim:IdentifiedObject.name": "feeder_reg2a_Loc"
+        },
+        {
+            "@id": "urn:uuid:22175c54-1a92-4c0c-b954-ff0e02a63ba7",
+            "@type": "cim:Location",
+            "cim:Location.CoordinateSystem": {
+                "@id": "428df686-3924-4ab9-ac68-eb720e38eabf",
+                "@type": "CoordinateSystem"
+            },
+            "cim:IdentifiedObject.name": "hvmv69s2b4_sw_Loc"
+        },
+        {
+            "@id": "urn:uuid:2f245ed5-0e3d-42b5-9f96-ebd095f8c36e",
+            "@type": "cim:Location",
+            "cim:Location.CoordinateSystem": {
+                "@id": "428df686-3924-4ab9-ac68-eb720e38eabf",
+                "@type": "CoordinateSystem"
+            },
+            "cim:IdentifiedObject.name": "hvmv69s1s2-9_Loc"
+        },
+        {
+            "@id": "urn:uuid:328d2468-f874-43f9-bec9-0b948029ac1e",
+            "@type": "cim:Location",
+            "cim:Location.CoordinateSystem": {
+                "@id": "428df686-3924-4ab9-ac68-eb720e38eabf",
+                "@type": "CoordinateSystem"
+            },
+            "cim:IdentifiedObject.name": "hvmv_sub_connector_Loc"
+        },
+        {
+            "@id": "urn:uuid:451bb9b3-39b7-4dc2-8c7d-5a7599dd0639",
+            "@type": "cim:Location",
+            "cim:Location.CoordinateSystem": {
+                "@id": "428df686-3924-4ab9-ac68-eb720e38eabf",
+                "@type": "CoordinateSystem"
+            },
+            "cim:IdentifiedObject.name": "hvmv11s2b2_sw_Loc"
+        },
+        {
+            "@id": "urn:uuid:480e07bb-21ad-408f-83bd-e74d6caa3d2d",
+            "@type": "cim:Location",
+            "cim:Location.CoordinateSystem": {
+                "@id": "428df686-3924-4ab9-ac68-eb720e38eabf",
+                "@type": "CoordinateSystem"
+            },
+            "cim:IdentifiedObject.name": "feeder_reg2c_Loc"
+        },
+        {
+            "@id": "urn:uuid:4b0bb44c-f411-4a73-bc36-4d5df2b54320",
+            "@type": "cim:Location",
+            "cim:Location.CoordinateSystem": {
+                "@id": "428df686-3924-4ab9-ac68-eb720e38eabf",
+                "@type": "CoordinateSystem"
+            },
+            "cim:IdentifiedObject.name": "hvmv69s1s2-4_Loc"
+        },
+        {
+            "@id": "urn:uuid:6ddd5a42-e431-4052-acf0-b98d40eb6019",
+            "@type": "cim:Location",
+            "cim:Location.CoordinateSystem": {
+                "@id": "428df686-3924-4ab9-ac68-eb720e38eabf",
+                "@type": "CoordinateSystem"
+            },
+            "cim:IdentifiedObject.name": "hvmv69_11s1_Loc"
+        },
+        {
+            "@id": "urn:uuid:72afe02f-0053-46c8-8732-f5ba70df6434",
+            "@type": "cim:Location",
+            "cim:Location.CoordinateSystem": {
+                "@id": "428df686-3924-4ab9-ac68-eb720e38eabf",
+                "@type": "CoordinateSystem"
+            },
+            "cim:IdentifiedObject.name": "hvmv11s3b2_sw_Loc"
+        },
+        {
+            "@id": "urn:uuid:76b7ffa1-b1dd-4563-91f2-aa6305d836a2",
+            "@type": "cim:Location",
+            "cim:Location.CoordinateSystem": {
+                "@id": "428df686-3924-4ab9-ac68-eb720e38eabf",
+                "@type": "CoordinateSystem"
+            },
+            "cim:IdentifiedObject.name": "hvmv69s1b4_sw_Loc"
+        },
+        {
+            "@id": "urn:uuid:806c29ec-03e3-4bb7-bbae-9caa27c58198",
+            "@type": "cim:Location",
+            "cim:Location.CoordinateSystem": {
+                "@id": "428df686-3924-4ab9-ac68-eb720e38eabf",
+                "@type": "CoordinateSystem"
+            },
+            "cim:IdentifiedObject.name": "hvmv69s2s3-1_Loc"
+        },
+        {
+            "@id": "urn:uuid:8b3f3f7c-8377-44f7-bedc-348167e34fa6",
+            "@type": "cim:Location",
+            "cim:Location.CoordinateSystem": {
+                "@id": "428df686-3924-4ab9-ac68-eb720e38eabf",
+                "@type": "CoordinateSystem"
+            },
+            "cim:IdentifiedObject.name": "feeder_reg3c_Loc"
+        },
+        {
+            "@id": "urn:uuid:8bf35909-a20c-4bd5-ac9d-dd4c7220b8c6",
+            "@type": "cim:Location",
+            "cim:Location.CoordinateSystem": {
+                "@id": "428df686-3924-4ab9-ac68-eb720e38eabf",
+                "@type": "CoordinateSystem"
+            },
+            "cim:IdentifiedObject.name": "hvmv69s1s2-7_Loc"
+        },
+        {
+            "@id": "urn:uuid:8d830b67-72a4-4528-874e-99a403f129ac",
+            "@type": "cim:Location",
+            "cim:Location.CoordinateSystem": {
+                "@id": "428df686-3924-4ab9-ac68-eb720e38eabf",
+                "@type": "CoordinateSystem"
+            },
+            "cim:IdentifiedObject.name": "source_Loc"
+        },
+        {
+            "@id": "urn:uuid:92105ef6-a970-401d-99aa-a784e4008e94",
+            "@type": "cim:Location",
+            "cim:Location.CoordinateSystem": {
+                "@id": "428df686-3924-4ab9-ac68-eb720e38eabf",
+                "@type": "CoordinateSystem"
+            },
+            "cim:IdentifiedObject.name": "feeder_reg1a_Loc"
+        },
+        {
+            "@id": "urn:uuid:958d2a34-0b55-4809-b6d4-7655971645f2",
+            "@type": "cim:Location",
+            "cim:Location.CoordinateSystem": {
+                "@id": "428df686-3924-4ab9-ac68-eb720e38eabf",
+                "@type": "CoordinateSystem"
+            },
+            "cim:IdentifiedObject.name": "hvmv69s1b1_sw_Loc"
+        },
+        {
+            "@id": "urn:uuid:9ff86010-5c5a-4ccc-93c7-e544594efbd8",
+            "@type": "cim:Location",
+            "cim:Location.CoordinateSystem": {
+                "@id": "428df686-3924-4ab9-ac68-eb720e38eabf",
+                "@type": "CoordinateSystem"
+            },
+            "cim:IdentifiedObject.name": "hvmv11s1b2_sw_Loc"
+        },
+        {
+            "@id": "urn:uuid:a16a42b8-e0af-4b32-976b-99f355d3bc2d",
+            "@type": "cim:Location",
+            "cim:Location.CoordinateSystem": {
+                "@id": "428df686-3924-4ab9-ac68-eb720e38eabf",
+                "@type": "CoordinateSystem"
+            },
+            "cim:IdentifiedObject.name": "hvmv69s1s2-3_Loc"
+        },
+        {
+            "@id": "urn:uuid:a88fc616-69d6-4f01-ac60-257397f9e973",
+            "@type": "cim:Location",
+            "cim:Location.CoordinateSystem": {
+                "@id": "428df686-3924-4ab9-ac68-eb720e38eabf",
+                "@type": "CoordinateSystem"
+            },
+            "cim:IdentifiedObject.name": "feeder_reg2b_Loc"
+        },
+        {
+            "@id": "urn:uuid:b33e9986-d0ea-415f-b6b3-413d54cde7ad",
+            "@type": "cim:Location",
+            "cim:Location.CoordinateSystem": {
+                "@id": "428df686-3924-4ab9-ac68-eb720e38eabf",
+                "@type": "CoordinateSystem"
+            },
+            "cim:IdentifiedObject.name": "hvmv69_11s3_Loc"
+        },
+        {
+            "@id": "urn:uuid:b612c461-3ea8-40ae-be25-0a65fbb11c41",
+            "@type": "cim:Location",
+            "cim:Location.CoordinateSystem": {
+                "@id": "428df686-3924-4ab9-ac68-eb720e38eabf",
+                "@type": "CoordinateSystem"
+            },
+            "cim:IdentifiedObject.name": "hvmv69s1s2-6_Loc"
+        },
+        {
+            "@id": "urn:uuid:b7ca504f-bb39-4638-abcb-3952be54b48e",
+            "@type": "cim:Location",
+            "cim:Location.CoordinateSystem": {
+                "@id": "428df686-3924-4ab9-ac68-eb720e38eabf",
+                "@type": "CoordinateSystem"
+            },
+            "cim:IdentifiedObject.name": "hvmv69s1s2-1_Loc"
+        },
+        {
+            "@id": "urn:uuid:c2e051ea-4187-4d76-aaf5-f4ec926d26e8",
+            "@type": "cim:Location",
+            "cim:Location.CoordinateSystem": {
+                "@id": "428df686-3924-4ab9-ac68-eb720e38eabf",
+                "@type": "CoordinateSystem"
+            },
+            "cim:IdentifiedObject.name": "hvmv_sub_hsb_Loc"
+        },
+        {
+            "@id": "urn:uuid:c7d4fbd9-1d64-4bf5-9cc3-3f47fc604737",
+            "@type": "cim:Location",
+            "cim:Location.CoordinateSystem": {
+                "@id": "428df686-3924-4ab9-ac68-eb720e38eabf",
+                "@type": "CoordinateSystem"
+            },
+            "cim:IdentifiedObject.name": "hvmv69s1s2-5_Loc"
+        },
+        {
+            "@id": "urn:uuid:cc4e2d70-2bfc-4c45-86c4-6d173b7d7314",
+            "@type": "cim:Location",
+            "cim:Location.CoordinateSystem": {
+                "@id": "428df686-3924-4ab9-ac68-eb720e38eabf",
+                "@type": "CoordinateSystem"
+            },
+            "cim:IdentifiedObject.name": "hvmv69_11s2_Loc"
+        },
+        {
+            "@id": "urn:uuid:e53c48b9-178f-4c02-ab42-1e2e1223dd6b",
+            "@type": "cim:Location",
+            "cim:Location.CoordinateSystem": {
+                "@id": "428df686-3924-4ab9-ac68-eb720e38eabf",
+                "@type": "CoordinateSystem"
+            },
+            "cim:IdentifiedObject.name": "feeder_reg3a_Loc"
+        },
+        {
+            "@id": "urn:uuid:e89458df-5d1a-4fc4-b8bd-4a46760f0123",
+            "@type": "cim:Location",
+            "cim:Location.CoordinateSystem": {
+                "@id": "428df686-3924-4ab9-ac68-eb720e38eabf",
+                "@type": "CoordinateSystem"
+            },
+            "cim:IdentifiedObject.name": "hvmv115s1b1_sw_Loc"
+        },
+        {
+            "@id": "urn:uuid:f5300951-c35b-462c-b2fd-0e81562c6d1f",
+            "@type": "cim:Location",
+            "cim:Location.CoordinateSystem": {
+                "@id": "428df686-3924-4ab9-ac68-eb720e38eabf",
+                "@type": "CoordinateSystem"
+            },
+            "cim:IdentifiedObject.name": "hvmv115s1_69sub_Loc"
+        },
+        {
+            "@id": "urn:uuid:fa0ce01e-4d07-4c00-9e4e-71b33a4f66b9",
+            "@type": "cim:Location",
+            "cim:Location.CoordinateSystem": {
+                "@id": "428df686-3924-4ab9-ac68-eb720e38eabf",
+                "@type": "CoordinateSystem"
+            },
+            "cim:IdentifiedObject.name": "feeder_reg1c_Loc"
+        },
+        {
+            "@id": "urn:uuid:fbd2b11e-9222-4533-8bfc-70e08781d74f",
+            "@type": "cim:Location",
+            "cim:Location.CoordinateSystem": {
+                "@id": "428df686-3924-4ab9-ac68-eb720e38eabf",
+                "@type": "CoordinateSystem"
+            },
+            "cim:IdentifiedObject.name": "hvmv69s2b1_sw_Loc"
+        },
+        {
+            "@id": "urn:uuid:fd01287f-f80b-4cab-8d00-0f76d2399602",
+            "@type": "cim:Location",
+            "cim:Location.CoordinateSystem": {
+                "@id": "428df686-3924-4ab9-ac68-eb720e38eabf",
+                "@type": "CoordinateSystem"
+            },
+            "cim:IdentifiedObject.name": "feeder_reg1b_Loc"
+        },
+        {
+            "@id": "urn:uuid:032d995b-7f09-41bd-a4bb-fed3919e0fe3",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "1",
+            "cim:PositionPoint.xPosition": "-119.0727987",
+            "cim:PositionPoint.yPosition": "46.69391722",
+            "gmdm:PositionPoint.Location": {
+                "@id": "6ddd5a42-e431-4052-acf0-b98d40eb6019",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:07ba4bbb-35ed-489c-9676-9bd34edad333",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "2",
+            "cim:PositionPoint.xPosition": "-119.1333719",
+            "cim:PositionPoint.yPosition": "46.65427812",
+            "gmdm:PositionPoint.Location": {
+                "@id": "c7d4fbd9-1d64-4bf5-9cc3-3f47fc604737",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:0e61c3b3-d0c0-4985-bca7-133a2d8d84ee",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "1",
+            "cim:PositionPoint.xPosition": "-119.2047543",
+            "cim:PositionPoint.yPosition": "46.6233509",
+            "gmdm:PositionPoint.Location": {
+                "@id": "451bb9b3-39b7-4dc2-8c7d-5a7599dd0639",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:16fc5978-f939-432c-a3cc-e13a817845ed",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "2",
+            "cim:PositionPoint.xPosition": "-119.0691435",
+            "cim:PositionPoint.yPosition": "46.6804138",
+            "gmdm:PositionPoint.Location": {
+                "@id": "b7ca504f-bb39-4638-abcb-3952be54b48e",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:17c7bcdf-5561-4cff-b90c-13d81fcc1dbe",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "2",
+            "cim:PositionPoint.xPosition": "-119.0733209",
+            "cim:PositionPoint.yPosition": "46.69348162",
+            "gmdm:PositionPoint.Location": {
+                "@id": "6ddd5a42-e431-4052-acf0-b98d40eb6019",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:1d035835-a427-441c-b0f2-44d3cc60b9a8",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "2",
+            "cim:PositionPoint.xPosition": "-119.0738431",
+            "cim:PositionPoint.yPosition": "46.69304604",
+            "gmdm:PositionPoint.Location": {
+                "@id": "92105ef6-a970-401d-99aa-a784e4008e94",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:1f717bac-4c1d-4f3f-bad3-faf485f3563a",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "1",
+            "cim:PositionPoint.xPosition": "-119.1333719",
+            "cim:PositionPoint.yPosition": "46.65427812",
+            "gmdm:PositionPoint.Location": {
+                "@id": "b612c461-3ea8-40ae-be25-0a65fbb11c41",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:2002cd3e-05e2-40b6-8057-92b10c524286",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "2",
+            "cim:PositionPoint.xPosition": "-119.2047543",
+            "cim:PositionPoint.yPosition": "46.6233509",
+            "gmdm:PositionPoint.Location": {
+                "@id": "480e07bb-21ad-408f-83bd-e74d6caa3d2d",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:2025f0a7-b714-4c13-97be-a6d6d338618f",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "2",
+            "cim:PositionPoint.xPosition": "-119.0748875",
+            "cim:PositionPoint.yPosition": "46.69217484",
+            "gmdm:PositionPoint.Location": {
+                "@id": "328d2468-f874-43f9-bec9-0b948029ac1e",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:21920aa5-aed6-4ff2-90bf-e553f9cbabec",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "1",
+            "cim:PositionPoint.xPosition": "-119.0811537",
+            "cim:PositionPoint.yPosition": "46.66734596",
+            "gmdm:PositionPoint.Location": {
+                "@id": "4b0bb44c-f411-4a73-bc36-4d5df2b54320",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:247ba835-a810-4487-bde8-8f8bd3831ef6",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "2",
+            "cim:PositionPoint.xPosition": "-119.2047543",
+            "cim:PositionPoint.yPosition": "46.62073734",
+            "gmdm:PositionPoint.Location": {
+                "@id": "0e881bf8-e4c5-49c6-9160-cb3f16fa0c80",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:28de130e-5bf8-4f83-a02d-0cc237f59a82",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "1",
+            "cim:PositionPoint.xPosition": "-119.0717544",
+            "cim:PositionPoint.yPosition": "46.69478842",
+            "gmdm:PositionPoint.Location": {
+                "@id": "958d2a34-0b55-4809-b6d4-7655971645f2",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:292d21ee-5e4e-4a58-b4f7-2f3292a48a22",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "2",
+            "cim:PositionPoint.xPosition": "-119.1594811",
+            "cim:PositionPoint.yPosition": "46.64338826",
+            "gmdm:PositionPoint.Location": {
+                "@id": "b612c461-3ea8-40ae-be25-0a65fbb11c41",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:2e86aeb4-41b2-46d6-a469-af56bd00602f",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "1",
+            "cim:PositionPoint.xPosition": "-119.190812",
+            "cim:PositionPoint.yPosition": "46.62901364",
+            "gmdm:PositionPoint.Location": {
+                "@id": "2f245ed5-0e3d-42b5-9f96-ebd095f8c36e",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:32121b09-f6cf-4050-9780-e681e201642a",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "1",
+            "cim:PositionPoint.xPosition": "-119.2401583",
+            "cim:PositionPoint.yPosition": "46.679107",
+            "gmdm:PositionPoint.Location": {
+                "@id": "1a2a1430-d2c1-4720-9ff5-3087615e63ca",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:3c5c3a47-3ff2-4073-b4fe-dda776fc5c6e",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "2",
+            "cim:PositionPoint.xPosition": "-119.1072628",
+            "cim:PositionPoint.yPosition": "46.66734596",
+            "gmdm:PositionPoint.Location": {
+                "@id": "4b0bb44c-f411-4a73-bc36-4d5df2b54320",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:3e976be4-f6ae-44e1-857e-62a5f42fc287",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "1",
+            "cim:PositionPoint.xPosition": "-119.2406805",
+            "cim:PositionPoint.yPosition": "46.68084938",
+            "gmdm:PositionPoint.Location": {
+                "@id": "e53c48b9-178f-4c02-ab42-1e2e1223dd6b",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:410bb159-a1c3-4da3-972c-7dbb0154555d",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "1",
+            "cim:PositionPoint.xPosition": "-119.0738431",
+            "cim:PositionPoint.yPosition": "46.69304604",
+            "gmdm:PositionPoint.Location": {
+                "@id": "328d2468-f874-43f9-bec9-0b948029ac1e",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:44f68395-59c2-492f-876f-5a0284493d11",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "2",
+            "cim:PositionPoint.xPosition": "-119.2047467",
+            "cim:PositionPoint.yPosition": "46.6240377",
+            "gmdm:PositionPoint.Location": {
+                "@id": "451bb9b3-39b7-4dc2-8c7d-5a7599dd0639",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:46f8be86-9660-46b6-bf5f-cae401db5489",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "1",
+            "cim:PositionPoint.xPosition": "-119.2047543",
+            "cim:PositionPoint.yPosition": "46.62073734",
+            "gmdm:PositionPoint.Location": {
+                "@id": "fbd2b11e-9222-4533-8bfc-70e08781d74f",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:4b94b462-358d-44a4-b9a1-a0070420d1f5",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "1",
+            "cim:PositionPoint.xPosition": "-119.2047543",
+            "cim:PositionPoint.yPosition": "46.62247972",
+            "gmdm:PositionPoint.Location": {
+                "@id": "a88fc616-69d6-4f01-ac60-257397f9e973",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:4c5be3d1-8e87-4294-a35c-377072ff1b13",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "2",
+            "cim:PositionPoint.xPosition": "-119.0738431",
+            "cim:PositionPoint.yPosition": "46.69304604",
+            "gmdm:PositionPoint.Location": {
+                "@id": "fa0ce01e-4d07-4c00-9e4e-71b33a4f66b9",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:4e79c391-9884-4074-ba7e-aad098e96948",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "2",
+            "cim:PositionPoint.xPosition": "-119.2409416",
+            "cim:PositionPoint.yPosition": "46.68172058",
+            "gmdm:PositionPoint.Location": {
+                "@id": "8b3f3f7c-8377-44f7-bedc-348167e34fa6",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:55c80100-91c5-4c30-a49d-daee918af720",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "2",
+            "cim:PositionPoint.xPosition": "-119.2033444",
+            "cim:PositionPoint.yPosition": "46.62073734",
+            "gmdm:PositionPoint.Location": {
+                "@id": "2f245ed5-0e3d-42b5-9f96-ebd095f8c36e",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:5f88a6d6-551f-4618-9eb9-f94c082e3df1",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "2",
+            "cim:PositionPoint.xPosition": "-119.0727987",
+            "cim:PositionPoint.yPosition": "46.69391722",
+            "gmdm:PositionPoint.Location": {
+                "@id": "958d2a34-0b55-4809-b6d4-7655971645f2",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:5f94c9b0-4568-4730-8ff9-e25adac1db17",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "1",
+            "cim:PositionPoint.xPosition": "-119.07071",
+            "cim:PositionPoint.yPosition": "46.6956596",
+            "gmdm:PositionPoint.Location": {
+                "@id": "f5300951-c35b-462c-b2fd-0e81562c6d1f",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:5fe33f0f-a6a3-4ab6-bf2f-53e4e7585856",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "1",
+            "cim:PositionPoint.xPosition": "-119.0748875",
+            "cim:PositionPoint.yPosition": "46.69217484",
+            "gmdm:PositionPoint.Location": {
+                "@id": "9ff86010-5c5a-4ccc-93c7-e544594efbd8",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:60c1c39c-bfd1-49f7-8a8f-a666ef803805",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "1",
+            "cim:PositionPoint.xPosition": "-119.2406805",
+            "cim:PositionPoint.yPosition": "46.68084938",
+            "gmdm:PositionPoint.Location": {
+                "@id": "0faa47d9-43f2-415e-a34a-bcad025e6082",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:61e8d5df-9b6f-48fa-b3aa-858c067d1588",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "1",
+            "cim:PositionPoint.xPosition": "-119.0733209",
+            "cim:PositionPoint.yPosition": "46.69348162",
+            "gmdm:PositionPoint.Location": {
+                "@id": "fa0ce01e-4d07-4c00-9e4e-71b33a4f66b9",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:652ef04a-9d65-4e1a-902f-10041335724f",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "2",
+            "cim:PositionPoint.xPosition": "-119.2047543",
+            "cim:PositionPoint.yPosition": "46.62247972",
+            "gmdm:PositionPoint.Location": {
+                "@id": "cc4e2d70-2bfc-4c45-86c4-6d173b7d7314",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:6634a836-a6e8-4b4e-be5b-06248e31b09f",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "2",
+            "cim:PositionPoint.xPosition": "-119.0811537",
+            "cim:PositionPoint.yPosition": "46.66734596",
+            "gmdm:PositionPoint.Location": {
+                "@id": "a16a42b8-e0af-4b32-976b-99f355d3bc2d",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:681d7e14-a67c-476c-9c5c-86441437bd02",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "2",
+            "cim:PositionPoint.xPosition": "-119.2409416",
+            "cim:PositionPoint.yPosition": "46.68172058",
+            "gmdm:PositionPoint.Location": {
+                "@id": "e53c48b9-178f-4c02-ab42-1e2e1223dd6b",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:6ba72115-89e6-4b12-ac4a-32e0e5749194",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "2",
+            "cim:PositionPoint.xPosition": "-119.0696656",
+            "cim:PositionPoint.yPosition": "46.6717019",
+            "gmdm:PositionPoint.Location": {
+                "@id": "0aa928cc-6653-434a-bd1f-688f23b88202",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:6c3d1794-96fd-446b-8f62-ae2fb71652fa",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "2",
+            "cim:PositionPoint.xPosition": "-119.2404194",
+            "cim:PositionPoint.yPosition": "46.6799782",
+            "gmdm:PositionPoint.Location": {
+                "@id": "1a2a1430-d2c1-4720-9ff5-3087615e63ca",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:6c84a6d6-232d-490f-8b26-0c7ad70691d3",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "2",
+            "cim:PositionPoint.xPosition": "-119.0738431",
+            "cim:PositionPoint.yPosition": "46.69304604",
+            "gmdm:PositionPoint.Location": {
+                "@id": "fd01287f-f80b-4cab-8d00-0f76d2399602",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:7cdb2288-3b75-493a-9086-3a6b41e15c07",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "2",
+            "cim:PositionPoint.xPosition": "-119.0717544",
+            "cim:PositionPoint.yPosition": "46.69478842",
+            "gmdm:PositionPoint.Location": {
+                "@id": "76b7ffa1-b1dd-4563-91f2-aa6305d836a2",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:7cf18e0a-0b90-4a25-9eb4-bb1e12292bea",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "1",
+            "cim:PositionPoint.xPosition": "-119.0696656",
+            "cim:PositionPoint.yPosition": "46.6965308",
+            "gmdm:PositionPoint.Location": {
+                "@id": "8d830b67-72a4-4528-874e-99a403f129ac",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:7d79dfc7-f1db-4a5b-8292-f6b7842f97ed",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "1",
+            "cim:PositionPoint.xPosition": "-119.0696656",
+            "cim:PositionPoint.yPosition": "46.6717019",
+            "gmdm:PositionPoint.Location": {
+                "@id": "a16a42b8-e0af-4b32-976b-99f355d3bc2d",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:7d7f6c43-0b79-4625-8919-0426f9240d82",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "1",
+            "cim:PositionPoint.xPosition": "-119.1072628",
+            "cim:PositionPoint.yPosition": "46.66734596",
+            "gmdm:PositionPoint.Location": {
+                "@id": "c7d4fbd9-1d64-4bf5-9cc3-3f47fc604737",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:7e80772a-96d7-44ed-b8e6-24ba6dde2e83",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "2",
+            "cim:PositionPoint.xPosition": "-119.2047543",
+            "cim:PositionPoint.yPosition": "46.6233509",
+            "gmdm:PositionPoint.Location": {
+                "@id": "1acc83dd-3037-460d-9ea9-29e31542600d",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:7ea20161-7842-4142-b151-da3dadf9d186",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "2",
+            "cim:PositionPoint.xPosition": "-119.07071",
+            "cim:PositionPoint.yPosition": "46.69391722",
+            "gmdm:PositionPoint.Location": {
+                "@id": "07792259-03cb-4594-b154-a8e90d3a6468",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:85415037-5caa-42b8-8f30-98e36d0c8221",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "1",
+            "cim:PositionPoint.xPosition": "-119.2059553",
+            "cim:PositionPoint.yPosition": "46.62073734",
+            "gmdm:PositionPoint.Location": {
+                "@id": "806c29ec-03e3-4bb7-bbae-9caa27c58198",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:85a6bf58-e7e5-472b-8b1d-2cd685e33f6c",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "1",
+            "cim:PositionPoint.xPosition": "-119.2033444",
+            "cim:PositionPoint.yPosition": "46.62073734",
+            "gmdm:PositionPoint.Location": {
+                "@id": "0e881bf8-e4c5-49c6-9160-cb3f16fa0c80",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:86157a38-49f8-4695-9ef2-5d944f9a023f",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "2",
+            "cim:PositionPoint.xPosition": "-119.0712322",
+            "cim:PositionPoint.yPosition": "46.695224",
+            "gmdm:PositionPoint.Location": {
+                "@id": "f5300951-c35b-462c-b2fd-0e81562c6d1f",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:870b6419-b5ed-41f9-b195-1fb7133eb36c",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "1",
+            "cim:PositionPoint.xPosition": "-119.0696656",
+            "cim:PositionPoint.yPosition": "46.6965308",
+            "gmdm:PositionPoint.Location": {
+                "@id": "c2e051ea-4187-4d76-aaf5-f4ec926d26e8",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:8741c977-d390-4738-b0e5-b726d53cb609",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "2",
+            "cim:PositionPoint.xPosition": "-119.2409416",
+            "cim:PositionPoint.yPosition": "46.68172058",
+            "gmdm:PositionPoint.Location": {
+                "@id": "0faa47d9-43f2-415e-a34a-bcad025e6082",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:89d9dae7-5ef4-4c13-ab83-941e8d467fd7",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "1",
+            "cim:PositionPoint.xPosition": "-119.2047543",
+            "cim:PositionPoint.yPosition": "46.62247972",
+            "gmdm:PositionPoint.Location": {
+                "@id": "480e07bb-21ad-408f-83bd-e74d6caa3d2d",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:8d877c7b-ff58-4cbf-81f4-a5ee88619950",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "2",
+            "cim:PositionPoint.xPosition": "-119.0754097",
+            "cim:PositionPoint.yPosition": "46.69173926",
+            "gmdm:PositionPoint.Location": {
+                "@id": "9ff86010-5c5a-4ccc-93c7-e544594efbd8",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:a4007553-113d-457b-9e33-7b4764f18b3d",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "1",
+            "cim:PositionPoint.xPosition": "-119.2409416",
+            "cim:PositionPoint.yPosition": "46.68172058",
+            "gmdm:PositionPoint.Location": {
+                "@id": "72afe02f-0053-46c8-8732-f5ba70df6434",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:a44e1b58-442a-46b0-a372-27fb415c09ec",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "1",
+            "cim:PositionPoint.xPosition": "-119.2047543",
+            "cim:PositionPoint.yPosition": "46.62073734",
+            "gmdm:PositionPoint.Location": {
+                "@id": "22175c54-1a92-4c0c-b954-ff0e02a63ba7",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:a8954c00-1d79-4757-9102-9a32fa34d532",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "1",
+            "cim:PositionPoint.xPosition": "-119.0701878",
+            "cim:PositionPoint.yPosition": "46.6960952",
+            "gmdm:PositionPoint.Location": {
+                "@id": "e89458df-5d1a-4fc4-b8bd-4a46760f0123",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:a9caa6be-6e71-489b-b193-837a77711e88",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "2",
+            "cim:PositionPoint.xPosition": "-119.0701878",
+            "cim:PositionPoint.yPosition": "46.6960952",
+            "gmdm:PositionPoint.Location": {
+                "@id": "c2e051ea-4187-4d76-aaf5-f4ec926d26e8",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:abb6d1ee-5d39-4e08-8597-d7ea5d8eacb9",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "2",
+            "cim:PositionPoint.xPosition": "-119.190812",
+            "cim:PositionPoint.yPosition": "46.62901364",
+            "gmdm:PositionPoint.Location": {
+                "@id": "01bb0843-2b31-4ea8-b860-b372688114dc",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:b149a9f1-6465-403a-8e25-be55b3ec2b56",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "1",
+            "cim:PositionPoint.xPosition": "-119.1594811",
+            "cim:PositionPoint.yPosition": "46.64338826",
+            "gmdm:PositionPoint.Location": {
+                "@id": "8bf35909-a20c-4bd5-ac9d-dd4c7220b8c6",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:b4dc4df7-6798-4278-8366-f7cb911ffd0f",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "1",
+            "cim:PositionPoint.xPosition": "-119.2047543",
+            "cim:PositionPoint.yPosition": "46.62160852",
+            "gmdm:PositionPoint.Location": {
+                "@id": "cc4e2d70-2bfc-4c45-86c4-6d173b7d7314",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:c3180451-4b54-4c9f-9d16-2bf7ff9e8e42",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "1",
+            "cim:PositionPoint.xPosition": "-119.2404194",
+            "cim:PositionPoint.yPosition": "46.6799782",
+            "gmdm:PositionPoint.Location": {
+                "@id": "b33e9986-d0ea-415f-b6b3-413d54cde7ad",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:c34a7b94-1ca7-468d-a392-83e763975167",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "2",
+            "cim:PositionPoint.xPosition": "-119.1751466",
+            "cim:PositionPoint.yPosition": "46.63685434",
+            "gmdm:PositionPoint.Location": {
+                "@id": "8bf35909-a20c-4bd5-ac9d-dd4c7220b8c6",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:c5f77e53-3146-4bef-9b4e-b0341ee13ebd",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "2",
+            "cim:PositionPoint.xPosition": "-119.2406805",
+            "cim:PositionPoint.yPosition": "46.68084938",
+            "gmdm:PositionPoint.Location": {
+                "@id": "b33e9986-d0ea-415f-b6b3-413d54cde7ad",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:c7531b26-f578-4db0-bb1d-bebbe924c861",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "1",
+            "cim:PositionPoint.xPosition": "-119.2047543",
+            "cim:PositionPoint.yPosition": "46.62247972",
+            "gmdm:PositionPoint.Location": {
+                "@id": "1acc83dd-3037-460d-9ea9-29e31542600d",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:d1391fac-667a-4ee3-ad66-9bb82e58af90",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "1",
+            "cim:PositionPoint.xPosition": "-119.07071",
+            "cim:PositionPoint.yPosition": "46.69391722",
+            "gmdm:PositionPoint.Location": {
+                "@id": "b7ca504f-bb39-4638-abcb-3952be54b48e",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:d80888b5-c129-4786-873d-a086be8b0405",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "1",
+            "cim:PositionPoint.xPosition": "-119.0691435",
+            "cim:PositionPoint.yPosition": "46.6804138",
+            "gmdm:PositionPoint.Location": {
+                "@id": "0aa928cc-6653-434a-bd1f-688f23b88202",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:e2a0f56a-5bc4-47da-8e66-66bcea115615",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "2",
+            "cim:PositionPoint.xPosition": "-119.2412838",
+            "cim:PositionPoint.yPosition": "46.68271272",
+            "gmdm:PositionPoint.Location": {
+                "@id": "72afe02f-0053-46c8-8732-f5ba70df6434",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:e3ddc5e8-33b2-47ed-8c83-96cee2530219",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "2",
+            "cim:PositionPoint.xPosition": "-119.2401583",
+            "cim:PositionPoint.yPosition": "46.679107",
+            "gmdm:PositionPoint.Location": {
+                "@id": "806c29ec-03e3-4bb7-bbae-9caa27c58198",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:e78d1242-f7fd-4b38-9693-66269ee64e15",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "1",
+            "cim:PositionPoint.xPosition": "-119.1751466",
+            "cim:PositionPoint.yPosition": "46.63685434",
+            "gmdm:PositionPoint.Location": {
+                "@id": "01bb0843-2b31-4ea8-b860-b372688114dc",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:e84dc2d1-e552-44cc-9854-f19a2f2445f0",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "2",
+            "cim:PositionPoint.xPosition": "-119.2047543",
+            "cim:PositionPoint.yPosition": "46.62160852",
+            "gmdm:PositionPoint.Location": {
+                "@id": "fbd2b11e-9222-4533-8bfc-70e08781d74f",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:e8ca5a96-579b-486c-ae8a-7abf91e53285",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "2",
+            "cim:PositionPoint.xPosition": "-119.07071",
+            "cim:PositionPoint.yPosition": "46.6956596",
+            "gmdm:PositionPoint.Location": {
+                "@id": "e89458df-5d1a-4fc4-b8bd-4a46760f0123",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:eb946c50-1a0c-4e11-b397-2b96be7c5da2",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "1",
+            "cim:PositionPoint.xPosition": "-119.0712322",
+            "cim:PositionPoint.yPosition": "46.695224",
+            "gmdm:PositionPoint.Location": {
+                "@id": "76b7ffa1-b1dd-4563-91f2-aa6305d836a2",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:ec3c5a50-1521-4c2b-ad8c-f9cb3c2ff538",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "2",
+            "cim:PositionPoint.xPosition": "-119.2059553",
+            "cim:PositionPoint.yPosition": "46.62073734",
+            "gmdm:PositionPoint.Location": {
+                "@id": "22175c54-1a92-4c0c-b954-ff0e02a63ba7",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:eece84ee-981c-4965-8e03-ba544b73625e",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "1",
+            "cim:PositionPoint.xPosition": "-119.2406805",
+            "cim:PositionPoint.yPosition": "46.68084938",
+            "gmdm:PositionPoint.Location": {
+                "@id": "8b3f3f7c-8377-44f7-bedc-348167e34fa6",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:ef51eefc-6415-405c-a3c9-1500c32bdc8c",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "2",
+            "cim:PositionPoint.xPosition": "-119.2047543",
+            "cim:PositionPoint.yPosition": "46.6233509",
+            "gmdm:PositionPoint.Location": {
+                "@id": "a88fc616-69d6-4f01-ac60-257397f9e973",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:f390377f-4889-4be7-b1d5-2de0cce63982",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "1",
+            "cim:PositionPoint.xPosition": "-119.0733209",
+            "cim:PositionPoint.yPosition": "46.69348162",
+            "gmdm:PositionPoint.Location": {
+                "@id": "92105ef6-a970-401d-99aa-a784e4008e94",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:f870c0a2-9495-415b-8f14-b479f66f9a47",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "1",
+            "cim:PositionPoint.xPosition": "-119.0717544",
+            "cim:PositionPoint.yPosition": "46.69478842",
+            "gmdm:PositionPoint.Location": {
+                "@id": "07792259-03cb-4594-b154-a8e90d3a6468",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:fdc28e77-10d7-49c3-87e9-8d1ba42699a8",
+            "@type": "cim:PositionPoint",
+            "gmdm:PositionPoint.sequenceNumber": "1",
+            "cim:PositionPoint.xPosition": "-119.0733209",
+            "cim:PositionPoint.yPosition": "46.69348162",
+            "gmdm:PositionPoint.Location": {
+                "@id": "fd01287f-f80b-4cab-8d00-0f76d2399602",
+                "@type": "Location"
+            }
+        },
+        {
+            "@id": "urn:uuid:12ecde7e-029b-466b-b10f-4289600824de",
+            "@type": "cim:PowerTransformer",
+            "cim:PowerSystemResource.Location": {
+                "@id": "b33e9986-d0ea-415f-b6b3-413d54cde7ad",
+                "@type": "Location"
+            },
+            "cim:IdentifiedObject.name": "hvmv69_11s3"
+        },
+        {
+            "@id": "urn:uuid:4073e035-c254-431d-ae34-399f37319d5a",
+            "@type": "cim:PowerTransformer",
+            "cim:PowerSystemResource.Location": {
+                "@id": "480e07bb-21ad-408f-83bd-e74d6caa3d2d",
+                "@type": "Location"
+            },
+            "cim:IdentifiedObject.name": "FEEDER2_REG2"
+        },
+        {
+            "@id": "urn:uuid:c4c8b83e-0669-45e8-ad6f-f40c5a773a53",
+            "@type": "cim:PowerTransformer",
+            "cim:PowerSystemResource.Location": {
+                "@id": "cc4e2d70-2bfc-4c45-86c4-6d173b7d7314",
+                "@type": "Location"
+            },
+            "cim:IdentifiedObject.name": "hvmv69_11s2"
+        },
+        {
+            "@id": "urn:uuid:cc79ae17-fba5-4228-af78-dca493ee7383",
+            "@type": "cim:PowerTransformer",
+            "cim:PowerSystemResource.Location": {
+                "@id": "8b3f3f7c-8377-44f7-bedc-348167e34fa6",
+                "@type": "Location"
+            },
+            "cim:IdentifiedObject.name": "FEEDER3_REG3"
+        },
+        {
+            "@id": "urn:uuid:cec3d5eb-a01d-4215-bdd7-cacf9e004820",
+            "@type": "cim:PowerTransformer",
+            "cim:PowerSystemResource.Location": {
+                "@id": "fa0ce01e-4d07-4c00-9e4e-71b33a4f66b9",
+                "@type": "Location"
+            },
+            "cim:IdentifiedObject.name": "FEEDER1_REG1"
+        },
+        {
+            "@id": "urn:uuid:cf985369-c99e-4ee7-a87c-bdbd1fe4d9f8",
+            "@type": "cim:PowerTransformer",
+            "cim:PowerSystemResource.Location": {
+                "@id": "f5300951-c35b-462c-b2fd-0e81562c6d1f",
+                "@type": "Location"
+            },
+            "cim:IdentifiedObject.name": "hvmv115s1_69sub"
+        },
+        {
+            "@id": "urn:uuid:e1eaaf53-aab6-4039-b545-ac3506f33fb0",
+            "@type": "cim:PowerTransformer",
+            "cim:PowerSystemResource.Location": {
+                "@id": "6ddd5a42-e431-4052-acf0-b98d40eb6019",
+                "@type": "Location"
+            },
+            "cim:IdentifiedObject.name": "hvmv69_11s1"
+        },
+        {
+            "@id": "urn:uuid:2001fcf4-f122-4792-b3e8-e8b35479c492",
+            "@type": "cim:SeriesCompensator",
+            "cim:PowerSystemResource.Location": {
+                "@id": "c2e051ea-4187-4d76-aaf5-f4ec926d26e8",
+                "@type": "Location"
+            },
+            "cim:IdentifiedObject.name": "hvmv_sub_hsb"
+        }
+    ]
+}

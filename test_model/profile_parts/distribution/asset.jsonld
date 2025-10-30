@@ -297,6 +297,96 @@
             "cim:IdentifiedObject.name": "ct37_1"
         },
         {
+            "@id": "urn:uuid:03c535b9-676f-4e93-a69e-8cb16a77f8b1",
+            "@type": "cim:PowerTransformerInfo",
+            "cim:IdentifiedObject.name": "cimxfmrcode_vreg2_c"
+        },
+        {
+            "@id": "urn:uuid:0a10afea-f06f-4f56-a38a-0d69caeade44",
+            "@type": "cim:PowerTransformerInfo",
+            "cim:IdentifiedObject.name": "ct10"
+        },
+        {
+            "@id": "urn:uuid:10a7918d-64b1-4fab-a271-48a0df470b6c",
+            "@type": "cim:PowerTransformerInfo",
+            "cim:IdentifiedObject.name": "cimxfmrcode_vreg3_b"
+        },
+        {
+            "@id": "urn:uuid:34f1253c-1d60-4505-abec-0cb911275856",
+            "@type": "cim:PowerTransformerInfo",
+            "cim:IdentifiedObject.name": "cimxfmrcode_vreg2_a"
+        },
+        {
+            "@id": "urn:uuid:3c967ac7-38d5-4911-b077-113cbdfb421f",
+            "@type": "cim:PowerTransformerInfo",
+            "cim:IdentifiedObject.name": "cimxfmrcode_vreg4_c"
+        },
+        {
+            "@id": "urn:uuid:49109df5-a4e9-44a0-9bf4-2023b16496fa",
+            "@type": "cim:PowerTransformerInfo",
+            "cim:IdentifiedObject.name": "ct15"
+        },
+        {
+            "@id": "urn:uuid:4b14b022-72f3-4509-bb24-b185b88d8c69",
+            "@type": "cim:PowerTransformerInfo",
+            "cim:IdentifiedObject.name": "cimxfmrcode_vreg2_b"
+        },
+        {
+            "@id": "urn:uuid:4c369ff0-8cdc-4e6c-b051-d163a7e1f881",
+            "@type": "cim:PowerTransformerInfo",
+            "cim:IdentifiedObject.name": "cimxfmrcode_vreg3_a"
+        },
+        {
+            "@id": "urn:uuid:5df5e087-1bd8-4137-8b65-1366c2f26fac",
+            "@type": "cim:PowerTransformerInfo",
+            "cim:IdentifiedObject.name": "cimxfmrcode_vreg3_c"
+        },
+        {
+            "@id": "urn:uuid:909ca97c-1a9e-4d90-a515-c08942358c23",
+            "@type": "cim:PowerTransformerInfo",
+            "cim:IdentifiedObject.name": "ct25"
+        },
+        {
+            "@id": "urn:uuid:996aba70-4573-4b67-80e8-97d57e96d038",
+            "@type": "cim:PowerTransformerInfo",
+            "cim:IdentifiedObject.name": "ct100"
+        },
+        {
+            "@id": "urn:uuid:a270103b-53e2-410c-9bf4-712781c92365",
+            "@type": "cim:PowerTransformerInfo",
+            "cim:IdentifiedObject.name": "ct50"
+        },
+        {
+            "@id": "urn:uuid:a9146f7c-1d85-4843-a522-22a8bd80c0bc",
+            "@type": "cim:PowerTransformerInfo",
+            "cim:IdentifiedObject.name": "ct75"
+        },
+        {
+            "@id": "urn:uuid:c13c0d70-2e20-41b3-a49e-fd1facab8979",
+            "@type": "cim:PowerTransformerInfo",
+            "cim:IdentifiedObject.name": "ct37"
+        },
+        {
+            "@id": "urn:uuid:c71825b2-d2d1-4ac3-9db1-128d35d5a326",
+            "@type": "cim:PowerTransformerInfo",
+            "cim:IdentifiedObject.name": "cimxfmrcode_vreg4_b"
+        },
+        {
+            "@id": "urn:uuid:ccddc369-99a9-4697-ba8d-87992c95d95b",
+            "@type": "cim:PowerTransformerInfo",
+            "cim:IdentifiedObject.name": "cimxfmrcode_vreg4_a"
+        },
+        {
+            "@id": "urn:uuid:cd14a081-fd51-4523-a3f6-89876dc3261e",
+            "@type": "cim:PowerTransformerInfo",
+            "cim:IdentifiedObject.name": "ct250"
+        },
+        {
+            "@id": "urn:uuid:eb292be0-6a7d-4903-92ad-3c89dfe0b885",
+            "@type": "cim:PowerTransformerInfo",
+            "cim:IdentifiedObject.name": "ct5"
+        },
+        {
             "@id": "urn:uuid:0188b2bc-584c-4f59-8f8e-f89802fc31ba",
             "@type": "cim:ShortCircuitTest",
             "cim:ShortCircuitTest.energisedEndStep": "16",
@@ -13421,91 +13511,163 @@
         {
             "@id": "urn:uuid:10d2f024-080a-490f-a9a8-572c0e12901f",
             "@type": "cim:TransformerTankInfo",
+            "cim:TransformerTankInfo.PowerTransformerInfo": {
+                "@id": "0a10afea-f06f-4f56-a38a-0d69caeade44",
+                "@type": "PowerTransformerInfo"
+            },
             "cim:IdentifiedObject.name": "ct10"
         },
         {
             "@id": "urn:uuid:13d908c5-371b-43bf-b715-d5e6c4c18e66",
             "@type": "cim:TransformerTankInfo",
+            "cim:TransformerTankInfo.PowerTransformerInfo": {
+                "@id": "ccddc369-99a9-4697-ba8d-87992c95d95b",
+                "@type": "PowerTransformerInfo"
+            },
             "cim:IdentifiedObject.name": "cimxfmrcode_vreg4_a"
         },
         {
             "@id": "urn:uuid:2ed9ffb7-c9cc-4512-9b72-8a84a91e74ec",
             "@type": "cim:TransformerTankInfo",
+            "cim:TransformerTankInfo.PowerTransformerInfo": {
+                "@id": "a270103b-53e2-410c-9bf4-712781c92365",
+                "@type": "PowerTransformerInfo"
+            },
             "cim:IdentifiedObject.name": "ct50"
         },
         {
             "@id": "urn:uuid:37575d94-902e-4fd1-91c7-fae9600a0362",
             "@type": "cim:TransformerTankInfo",
+            "cim:TransformerTankInfo.PowerTransformerInfo": {
+                "@id": "cd14a081-fd51-4523-a3f6-89876dc3261e",
+                "@type": "PowerTransformerInfo"
+            },
             "cim:IdentifiedObject.name": "ct250"
         },
         {
             "@id": "urn:uuid:38702957-887f-4b23-8fa4-f89c34fd53f3",
             "@type": "cim:TransformerTankInfo",
+            "cim:TransformerTankInfo.PowerTransformerInfo": {
+                "@id": "3c967ac7-38d5-4911-b077-113cbdfb421f",
+                "@type": "PowerTransformerInfo"
+            },
             "cim:IdentifiedObject.name": "cimxfmrcode_vreg4_c"
         },
         {
             "@id": "urn:uuid:5c73cd2b-b5b5-40be-b577-af25f87d3f66",
             "@type": "cim:TransformerTankInfo",
+            "cim:TransformerTankInfo.PowerTransformerInfo": {
+                "@id": "c13c0d70-2e20-41b3-a49e-fd1facab8979",
+                "@type": "PowerTransformerInfo"
+            },
             "cim:IdentifiedObject.name": "ct37"
         },
         {
             "@id": "urn:uuid:6c8c8ed7-142e-4a4d-bec5-d729237b2af7",
             "@type": "cim:TransformerTankInfo",
+            "cim:TransformerTankInfo.PowerTransformerInfo": {
+                "@id": "49109df5-a4e9-44a0-9bf4-2023b16496fa",
+                "@type": "PowerTransformerInfo"
+            },
             "cim:IdentifiedObject.name": "ct15"
         },
         {
             "@id": "urn:uuid:6f6e23e6-6a86-4745-8b95-e9365222498f",
             "@type": "cim:TransformerTankInfo",
+            "cim:TransformerTankInfo.PowerTransformerInfo": {
+                "@id": "03c535b9-676f-4e93-a69e-8cb16a77f8b1",
+                "@type": "PowerTransformerInfo"
+            },
             "cim:IdentifiedObject.name": "cimxfmrcode_vreg2_c"
         },
         {
             "@id": "urn:uuid:7ff0d07b-a187-420e-a999-4534c7235c3f",
             "@type": "cim:TransformerTankInfo",
+            "cim:TransformerTankInfo.PowerTransformerInfo": {
+                "@id": "10a7918d-64b1-4fab-a271-48a0df470b6c",
+                "@type": "PowerTransformerInfo"
+            },
             "cim:IdentifiedObject.name": "cimxfmrcode_vreg3_b"
         },
         {
             "@id": "urn:uuid:89813c1d-cc96-46ba-bf96-eac689bb1d81",
             "@type": "cim:TransformerTankInfo",
+            "cim:TransformerTankInfo.PowerTransformerInfo": {
+                "@id": "4c369ff0-8cdc-4e6c-b051-d163a7e1f881",
+                "@type": "PowerTransformerInfo"
+            },
             "cim:IdentifiedObject.name": "cimxfmrcode_vreg3_a"
         },
         {
             "@id": "urn:uuid:97f0efc3-840f-4721-b7fb-9f4619252422",
             "@type": "cim:TransformerTankInfo",
+            "cim:TransformerTankInfo.PowerTransformerInfo": {
+                "@id": "c71825b2-d2d1-4ac3-9db1-128d35d5a326",
+                "@type": "PowerTransformerInfo"
+            },
             "cim:IdentifiedObject.name": "cimxfmrcode_vreg4_b"
         },
         {
             "@id": "urn:uuid:a32a1d19-3b6f-43a7-a924-927afe3780ab",
             "@type": "cim:TransformerTankInfo",
+            "cim:TransformerTankInfo.PowerTransformerInfo": {
+                "@id": "34f1253c-1d60-4505-abec-0cb911275856",
+                "@type": "PowerTransformerInfo"
+            },
             "cim:IdentifiedObject.name": "cimxfmrcode_vreg2_a"
         },
         {
             "@id": "urn:uuid:cc5d98d4-ec04-435e-8ece-a7feedc5c26c",
             "@type": "cim:TransformerTankInfo",
+            "cim:TransformerTankInfo.PowerTransformerInfo": {
+                "@id": "909ca97c-1a9e-4d90-a515-c08942358c23",
+                "@type": "PowerTransformerInfo"
+            },
             "cim:IdentifiedObject.name": "ct25"
         },
         {
             "@id": "urn:uuid:ceff1871-3271-4745-980b-2ec2f8dbbf7b",
             "@type": "cim:TransformerTankInfo",
+            "cim:TransformerTankInfo.PowerTransformerInfo": {
+                "@id": "996aba70-4573-4b67-80e8-97d57e96d038",
+                "@type": "PowerTransformerInfo"
+            },
             "cim:IdentifiedObject.name": "ct100"
         },
         {
             "@id": "urn:uuid:ec9403da-f835-465f-883a-88b903f23c47",
             "@type": "cim:TransformerTankInfo",
+            "cim:TransformerTankInfo.PowerTransformerInfo": {
+                "@id": "a9146f7c-1d85-4843-a522-22a8bd80c0bc",
+                "@type": "PowerTransformerInfo"
+            },
             "cim:IdentifiedObject.name": "ct75"
         },
         {
             "@id": "urn:uuid:f95dc446-5465-4e95-a219-17232d6d0c45",
             "@type": "cim:TransformerTankInfo",
+            "cim:TransformerTankInfo.PowerTransformerInfo": {
+                "@id": "5df5e087-1bd8-4137-8b65-1366c2f26fac",
+                "@type": "PowerTransformerInfo"
+            },
             "cim:IdentifiedObject.name": "cimxfmrcode_vreg3_c"
         },
         {
             "@id": "urn:uuid:fba45fbc-8f91-4386-a40b-297f1ec5cdab",
             "@type": "cim:TransformerTankInfo",
+            "cim:TransformerTankInfo.PowerTransformerInfo": {
+                "@id": "eb292be0-6a7d-4903-92ad-3c89dfe0b885",
+                "@type": "PowerTransformerInfo"
+            },
             "cim:IdentifiedObject.name": "ct5"
         },
         {
             "@id": "urn:uuid:fd796cf0-fae3-48c4-a6c2-b13aabd06a5c",
             "@type": "cim:TransformerTankInfo",
+            "cim:TransformerTankInfo.PowerTransformerInfo": {
+                "@id": "4b14b022-72f3-4509-bb24-b185b88d8c69",
+                "@type": "PowerTransformerInfo"
+            },
             "cim:IdentifiedObject.name": "cimxfmrcode_vreg2_b"
         }
     ]

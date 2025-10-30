@@ -1,0 +1,180 @@
+{
+    "@context": {
+        "cim": "http://cim.ucaiug.io/CIM101/draft#",
+        "eu": "http://iec.ch/TC57/CIM100-European#",
+        "nc": "http://entsoe.eu/ns/nc#",
+        "gb": "http://GB/placeholder/ext#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "gmdm": "http://epri.com/gmdm/2025#"
+    },
+    "@graph": [
+        {
+            "@id": "urn:uuid:f641b544-87a4-4271-8ce2-2ba2e148fc33",
+            "@type": "cim:NoLoadTest",
+            "cim:NoLoadTest.energisedEndVoltage": "7200.0",
+            "cim:NoLoadTest.excitingCurrent": "0.0",
+            "cim:NoLoadTest.excitingCurrentZero": "0.0",
+            "cim:NoLoadTest.loss": "0.0",
+            "cim:NoLoadTest.lossZero": "0.0",
+            "cim:NoLoadTest.EnergisedEnd": {
+                "@id": "bf363cd2-c655-43d1-b4ca-f8e28ee51316",
+                "@type": "TransformerEndInfo"
+            },
+            "cim:TransformerTest.basePower": "7500000.0",
+            "cim:TransformerTest.temperature": "50.0",
+            "cim:IdentifiedObject.name": "feeder_reg_1"
+        },
+        {
+            "@id": "urn:uuid:6eb072d2-9d37-4108-b65b-c7ff32d2493f",
+            "@type": "cim:PowerTransformerInfo",
+            "cim:IdentifiedObject.name": "feeder_reg"
+        },
+        {
+            "@id": "urn:uuid:659beb81-dccd-4c34-8890-7696a53dd241",
+            "@type": "cim:ShortCircuitTest",
+            "cim:ShortCircuitTest.energisedEndStep": "16",
+            "cim:ShortCircuitTest.groundedEndStep": "16",
+            "cim:ShortCircuitTest.leakageImpedance": "0.006946474",
+            "cim:ShortCircuitTest.leakageImpedanceZero": "0.006946474",
+            "cim:ShortCircuitTest.loss": "0.75",
+            "cim:ShortCircuitTest.lossZero": "0.75",
+            "cim:ShortCircuitTest.EnergisedEnd": {
+                "@id": "bf363cd2-c655-43d1-b4ca-f8e28ee51316",
+                "@type": "TransformerEndInfo"
+            },
+            "cim:ShortCircuitTest.GroundedEnds": {
+                "@id": "349af2ce-1bc7-491c-aeab-582929f0a5dd",
+                "@type": "TransformerEndInfo"
+            },
+            "cim:TransformerTest.basePower": "7500000.0",
+            "cim:TransformerTest.temperature": "50.0",
+            "cim:IdentifiedObject.name": "feeder_reg_1"
+        },
+        {
+            "@id": "urn:uuid:349af2ce-1bc7-491c-aeab-582929f0a5dd",
+            "@type": "cim:TransformerEndInfo",
+            "cim:TransformerEndInfo.endNumber": "2",
+            "cim:TransformerEndInfo.phaseAngleClock": "0",
+            "cim:TransformerEndInfo.connectionKind": "http://cim.ucaiug.io/CIM101/draft#:WindingConnection.I",
+            "cim:TransformerEndInfo.emergencyS": "11250000.0",
+            "cim:TransformerEndInfo.insulationU": "0.0",
+            "cim:TransformerEndInfo.r": "0.0003456",
+            "cim:TransformerEndInfo.ratedS": "7500000.0",
+            "cim:TransformerEndInfo.shortTermS": "8250000.0",
+            "cim:TransformerEndInfo.TransformerTankInfo": {
+                "@id": "6b95b655-62df-42a2-9d02-090ac9eccfac",
+                "@type": "TransformerTankInfo"
+            },
+            "cim:ConductingAssetInfo.ratedVoltage": "7200.0",
+            "cim:IdentifiedObject.name": "feeder_reg_2"
+        },
+        {
+            "@id": "urn:uuid:bf363cd2-c655-43d1-b4ca-f8e28ee51316",
+            "@type": "cim:TransformerEndInfo",
+            "cim:TransformerEndInfo.endNumber": "1",
+            "cim:TransformerEndInfo.phaseAngleClock": "0",
+            "cim:TransformerEndInfo.connectionKind": "http://cim.ucaiug.io/CIM101/draft#:WindingConnection.I",
+            "cim:TransformerEndInfo.emergencyS": "11250000.0",
+            "cim:TransformerEndInfo.insulationU": "0.0",
+            "cim:TransformerEndInfo.r": "0.0003456",
+            "cim:TransformerEndInfo.ratedS": "7500000.0",
+            "cim:TransformerEndInfo.shortTermS": "8250000.0",
+            "cim:TransformerEndInfo.TransformerTankInfo": {
+                "@id": "6b95b655-62df-42a2-9d02-090ac9eccfac",
+                "@type": "TransformerTankInfo"
+            },
+            "cim:ConductingAssetInfo.ratedVoltage": "7200.0",
+            "cim:IdentifiedObject.name": "feeder_reg_1"
+        },
+        {
+            "@id": "urn:uuid:0b8853f5-f7b5-4a4e-b94b-f785d3b1f0cf",
+            "@type": "cim:TransformerTank",
+            "gmdm:TransformerTank.TransformerTankInfo": {
+                "@id": "6b95b655-62df-42a2-9d02-090ac9eccfac",
+                "@type": "TransformerTankInfo"
+            },
+            "cim:IdentifiedObject.name": "feeder_reg3b"
+        },
+        {
+            "@id": "urn:uuid:17685e45-9064-410d-ba9f-660ada115dfb",
+            "@type": "cim:TransformerTank",
+            "gmdm:TransformerTank.TransformerTankInfo": {
+                "@id": "6b95b655-62df-42a2-9d02-090ac9eccfac",
+                "@type": "TransformerTankInfo"
+            },
+            "cim:IdentifiedObject.name": "feeder_reg1b"
+        },
+        {
+            "@id": "urn:uuid:292ef6a2-8bdf-460f-a4c4-a00e3786a1d2",
+            "@type": "cim:TransformerTank",
+            "gmdm:TransformerTank.TransformerTankInfo": {
+                "@id": "6b95b655-62df-42a2-9d02-090ac9eccfac",
+                "@type": "TransformerTankInfo"
+            },
+            "cim:IdentifiedObject.name": "feeder_reg2c"
+        },
+        {
+            "@id": "urn:uuid:2c3b1a6f-fe59-48df-ba9f-60d51c547fb1",
+            "@type": "cim:TransformerTank",
+            "gmdm:TransformerTank.TransformerTankInfo": {
+                "@id": "6b95b655-62df-42a2-9d02-090ac9eccfac",
+                "@type": "TransformerTankInfo"
+            },
+            "cim:IdentifiedObject.name": "feeder_reg1c"
+        },
+        {
+            "@id": "urn:uuid:72121c6c-8f67-412b-972d-316bcb19bf28",
+            "@type": "cim:TransformerTank",
+            "gmdm:TransformerTank.TransformerTankInfo": {
+                "@id": "6b95b655-62df-42a2-9d02-090ac9eccfac",
+                "@type": "TransformerTankInfo"
+            },
+            "cim:IdentifiedObject.name": "feeder_reg3c"
+        },
+        {
+            "@id": "urn:uuid:a43410f7-db5b-4e49-8008-cb64b1e59fd2",
+            "@type": "cim:TransformerTank",
+            "gmdm:TransformerTank.TransformerTankInfo": {
+                "@id": "6b95b655-62df-42a2-9d02-090ac9eccfac",
+                "@type": "TransformerTankInfo"
+            },
+            "cim:IdentifiedObject.name": "feeder_reg2b"
+        },
+        {
+            "@id": "urn:uuid:a44d62b7-a2e7-4b32-8dd2-158a9f0e9b5f",
+            "@type": "cim:TransformerTank",
+            "gmdm:TransformerTank.TransformerTankInfo": {
+                "@id": "6b95b655-62df-42a2-9d02-090ac9eccfac",
+                "@type": "TransformerTankInfo"
+            },
+            "cim:IdentifiedObject.name": "feeder_reg3a"
+        },
+        {
+            "@id": "urn:uuid:b1871ffe-234d-4ab6-8914-ddc51ab98f6f",
+            "@type": "cim:TransformerTank",
+            "gmdm:TransformerTank.TransformerTankInfo": {
+                "@id": "6b95b655-62df-42a2-9d02-090ac9eccfac",
+                "@type": "TransformerTankInfo"
+            },
+            "cim:IdentifiedObject.name": "feeder_reg1a"
+        },
+        {
+            "@id": "urn:uuid:cf408eb0-3a1e-487a-a7f1-36ec9fb517d7",
+            "@type": "cim:TransformerTank",
+            "gmdm:TransformerTank.TransformerTankInfo": {
+                "@id": "6b95b655-62df-42a2-9d02-090ac9eccfac",
+                "@type": "TransformerTankInfo"
+            },
+            "cim:IdentifiedObject.name": "feeder_reg2a"
+        },
+        {
+            "@id": "urn:uuid:6b95b655-62df-42a2-9d02-090ac9eccfac",
+            "@type": "cim:TransformerTankInfo",
+            "cim:TransformerTankInfo.PowerTransformerInfo": {
+                "@id": "6eb072d2-9d37-4108-b65b-c7ff32d2493f",
+                "@type": "PowerTransformerInfo"
+            },
+            "cim:IdentifiedObject.name": "feeder_reg"
+        }
+    ]
+}
