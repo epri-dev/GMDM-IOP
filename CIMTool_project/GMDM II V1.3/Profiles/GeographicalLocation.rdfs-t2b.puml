@@ -141,6 +141,7 @@ ConductingEquipment <|-- Connector
 
 ' CoordinateSystem inherits from IdentifiedObject
 class CoordinateSystem   {
+   +crsUrn : string [1]
 }
 
 IdentifiedObject <|-- CoordinateSystem

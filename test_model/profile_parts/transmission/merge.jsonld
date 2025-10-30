@@ -3642,6 +3642,7 @@
         {
             "@id": "urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf",
             "@type": "cim:CoordinateSystem",
+            "cim:CoordinateSystem.crsUrn": "urn:ogc:def:crs:EPSG::4326",
             "cim:IdentifiedObject.mRID": "428df686-3924-4ab9-ac68-eb720e38eabf",
             "cim:IdentifiedObject.name": "final9500node_CrsUrn"
         },

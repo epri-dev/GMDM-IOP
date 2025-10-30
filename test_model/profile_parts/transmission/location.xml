@@ -110,6 +110,7 @@
   <cim:Identity.identifier>ee235f9e-369b-40f1-9977-8dec37d7ec8f</cim:Identity.identifier>
 </cim:Breaker>
 <cim:CoordinateSystem rdf:about="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf">
+  <cim:CoordinateSystem.crsUrn>urn:ogc:def:crs:EPSG::4326</cim:CoordinateSystem.crsUrn>
   <cim:IdentifiedObject.name>final9500node_CrsUrn</cim:IdentifiedObject.name>
   <cim:Identity.identifier>428df686-3924-4ab9-ac68-eb720e38eabf</cim:Identity.identifier>
 </cim:CoordinateSystem>

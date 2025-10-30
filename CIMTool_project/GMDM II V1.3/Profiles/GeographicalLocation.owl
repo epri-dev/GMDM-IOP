@@ -192,6 +192,22 @@
     <rdfs:label>name</rdfs:label>
     <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X5dfc1785Xa3X19a32fc6e88Xa3X-7fdb">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/CIM101/draft#CoordinateSystem.crsUrn"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X5dfc1785Xa3X19a32fc6e88Xa3X-7fdc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="Xd2X5dfc1785Xa3X19a32fc6e88Xa3X-7fdd"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/CIM101/draft#CoordinateSystem.crsUrn"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Xd2X5dfc1785Xa3X19a32fc6e88Xa3X-7fdd">
+    <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#attribute"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label>crsUrn</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://langdale.com.au/2007/Buildlet#inline-rdfs.adoc">
     <rdf:type rdf:resource="http://langdale.com.au/2005/Message#Flag"/>
   </rdf:Description>
@@ -263,6 +279,8 @@
     <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#concrete"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:label>CoordinateSystem</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="Xd2X5dfc1785Xa3X19a32fc6e88Xa3X-7fdb"/>
+    <rdfs:subClassOf rdf:nodeID="Xd2X5dfc1785Xa3X19a32fc6e88Xa3X-7fdc"/>
     <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/CIM101/draft#CoordinateSystem"/>
     <rdfs:subClassOf rdf:resource="#IdentifiedObject"/>
   </rdf:Description>
