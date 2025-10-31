@@ -821,6 +821,10 @@
   <cim:IdentifiedObject.name>hvmv69s1s2-4_T1</cim:IdentifiedObject.name>
   <cim:Identity.identifier>2a791534-35dc-4d07-ba57-7ef6c2dbefa2</cim:Identity.identifier>
 </cim:Terminal>
+<cim:Terminal rdf:about="urn:uuid:2c9aca5a-b819-45f5-8271-646c403a5bde">
+  <cim:IdentifiedObject.name>ln5815900-1_T1</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>2c9aca5a-b819-45f5-8271-646c403a5bde</cim:Identity.identifier>
+</cim:Terminal>
 <cim:Terminal rdf:about="urn:uuid:2ef9d098-d837-461a-b790-5d57cb93982e">
   <cim:IdentifiedObject.name>hvmv69_11s3_T2</cim:IdentifiedObject.name>
   <cim:Identity.identifier>2ef9d098-d837-461a-b790-5d57cb93982e</cim:Identity.identifier>
@@ -837,6 +841,10 @@
   <cim:IdentifiedObject.name>hvmv69_11s2_T2</cim:IdentifiedObject.name>
   <cim:Identity.identifier>4041c2bd-ecc4-4010-b58d-c8173f6e5613</cim:Identity.identifier>
 </cim:Terminal>
+<cim:Terminal rdf:about="urn:uuid:41735790-692a-42d2-84bf-911db4d7e8e5">
+  <cim:IdentifiedObject.name>ln_s2_conn_T1</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>41735790-692a-42d2-84bf-911db4d7e8e5</cim:Identity.identifier>
+</cim:Terminal>
 <cim:Terminal rdf:about="urn:uuid:45f52a35-f892-47ac-be15-c3e26746b19c">
   <cim:IdentifiedObject.name>hvmv69s1s2-7_T1</cim:IdentifiedObject.name>
   <cim:Identity.identifier>45f52a35-f892-47ac-be15-c3e26746b19c</cim:Identity.identifier>
@@ -844,6 +852,10 @@
 <cim:Terminal rdf:about="urn:uuid:466dc8cb-2af8-4914-abe0-cf9bc90a0f59">
   <cim:IdentifiedObject.name>hvmv69s1b4_sw_T2</cim:IdentifiedObject.name>
   <cim:Identity.identifier>466dc8cb-2af8-4914-abe0-cf9bc90a0f59</cim:Identity.identifier>
+</cim:Terminal>
+<cim:Terminal rdf:about="urn:uuid:48a6e0a2-b4dd-41ab-ace0-b1ad45443724">
+  <cim:IdentifiedObject.name>ln6044631-1_T1</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>48a6e0a2-b4dd-41ab-ace0-b1ad45443724</cim:Identity.identifier>
 </cim:Terminal>
 <cim:Terminal rdf:about="urn:uuid:4a01b3cb-f39b-4d60-8b24-9ec6356c2efb">
   <cim:IdentifiedObject.name>hvmv69s1s2-4_T2</cim:IdentifiedObject.name>

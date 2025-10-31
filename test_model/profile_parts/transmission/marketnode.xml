@@ -60,6 +60,14 @@
   <cim:IdentifiedObject.name>hvmv69s1s2_2</cim:IdentifiedObject.name>
   <cim:Identity.identifier>58940511-f2b7-426b-b2bb-b33f987d503c</cim:Identity.identifier>
 </cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:about="urn:uuid:6a2dc71c-14e1-498c-a2ab-e41cbf079a01">
+  <cim:IdentifiedObject.name>e192860</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>6a2dc71c-14e1-498c-a2ab-e41cbf079a01</cim:Identity.identifier>
+</cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:about="urn:uuid:84c7eb34-3d61-4705-9623-23d738ec57d0">
+  <cim:IdentifiedObject.name>e1047300</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>84c7eb34-3d61-4705-9623-23d738ec57d0</cim:Identity.identifier>
+</cim:ConnectivityNode>
 <cim:ConnectivityNode rdf:about="urn:uuid:86849d9c-e903-4799-9d7e-4b53155ac393">
   <cim:IdentifiedObject.name>hvmv69s2_hsb</cim:IdentifiedObject.name>
   <cim:Identity.identifier>86849d9c-e903-4799-9d7e-4b53155ac393</cim:Identity.identifier>
@@ -83,6 +91,10 @@
 <cim:ConnectivityNode rdf:about="urn:uuid:b1c4748b-9559-483e-8526-6e7617aa1203">
   <cim:IdentifiedObject.name>hvmv69s2_lnb</cim:IdentifiedObject.name>
   <cim:Identity.identifier>b1c4748b-9559-483e-8526-6e7617aa1203</cim:Identity.identifier>
+</cim:ConnectivityNode>
+<cim:ConnectivityNode rdf:about="urn:uuid:b9916e76-422a-4e80-ab82-72f53a300708">
+  <cim:IdentifiedObject.name>e203026</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>b9916e76-422a-4e80-ab82-72f53a300708</cim:Identity.identifier>
 </cim:ConnectivityNode>
 <cim:ConnectivityNode rdf:about="urn:uuid:c58d9941-6286-449e-8d7c-d7ff67480eb4">
   <cim:IdentifiedObject.name>hvmv69s1_hsb</cim:IdentifiedObject.name>
