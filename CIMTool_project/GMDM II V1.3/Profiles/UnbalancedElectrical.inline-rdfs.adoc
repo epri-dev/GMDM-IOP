@@ -444,6 +444,12 @@ The fossil fuel consumed by the non-nuclear thermal generating unit. For example
 [%header,width="100%",cols="25%,^10%,20%,45%a"]
 |===
 |name |mult |type |description
+|fossilFuelType (enumeration)
+|1..1
+|<<UnbalancedElectrical-FuelType,FuelType>>
+|
+The type of fossil fuel, such as coal, oil, or gas.
+
 |ThermalGeneratingUnit
 |0..1
 |<<UnbalancedElectrical-ThermalGeneratingUnit,ThermalGeneratingUnit>>
@@ -2284,7 +2290,7 @@ The name is any free human readable and possibly non unique text naming the obje
 
 
 :Identity:
-This is a root class to provide common identification for all classes. IdentifiedObject and any class to be exchanged with RDF XML now inherits from Identity. mRID is superseded by Identity.identifier, which is typed to be a UUID.
+,
 
 
 *Native Members*
@@ -3041,13 +3047,12 @@ Core admittance of this transformer end, representing magnetising current and co
 [[UnbalancedElectrical-FuelType]]
 ==== FuelType
 
+Type of fuel.
+
 
 [%header,width="100%",cols="25%,75%a"]
 |===
 |name |description
-
-|FuelType.diesel
-|
 
 |brownCoalLignite
 |
@@ -3062,6 +3067,11 @@ Generic coal, not including lignite type.
 |coalDerivedGas
 |
 Coal derived gas.
+
+
+|diesel
+|
+Diesel
 
 
 |gas

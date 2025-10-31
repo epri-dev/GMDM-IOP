@@ -433,6 +433,15 @@
       <xs:complexContent>
          <xs:extension base="m:IdentifiedObject">
             <xs:sequence>
+               <xs:element name="fossilFuelType"
+                           minOccurs="1"
+                           maxOccurs="1"
+                           type="m:FuelType"
+                           sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#FossilFuel.fossilFuelType">
+                  <xs:annotation>
+                     <xs:documentation>The type of fossil fuel, such as coal, oil, or gas.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
                <xs:element name="ThermalGeneratingUnit"
                            minOccurs="0"
                            maxOccurs="1"
@@ -450,12 +459,11 @@
       </xs:complexContent>
    </xs:complexType>
    <xs:simpleType name="FuelType"
-                  sawsdl:modelReference="http://epri.com/gmdm/2025#FuelType">
-      <xs:annotation/>
+                  sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#FuelType">
+      <xs:annotation>
+         <xs:documentation>Type of fuel.</xs:documentation>
+      </xs:annotation>
       <xs:restriction base="xs:string">
-         <xs:enumeration value="FuelType.diesel">
-            <xs:annotation/>
-         </xs:enumeration>
          <xs:enumeration value="brownCoalLignite">
             <xs:annotation>
                <xs:documentation>Brown coal lignite.</xs:documentation>
@@ -469,6 +477,11 @@
          <xs:enumeration value="coalDerivedGas">
             <xs:annotation>
                <xs:documentation>Coal derived gas.</xs:documentation>
+            </xs:annotation>
+         </xs:enumeration>
+         <xs:enumeration value="diesel">
+            <xs:annotation>
+               <xs:documentation>Diesel</xs:documentation>
             </xs:annotation>
          </xs:enumeration>
          <xs:enumeration value="gas">
@@ -574,7 +587,7 @@
    <xs:complexType name="Identity"
                    sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Identity">
       <xs:annotation>
-         <xs:documentation>This is a root class to provide common identification for all classes.  IdentifiedObject and any class to be exchanged with RDF XML now inherits from Identity.  mRID is superseded by Identity.identifier, which is typed to be a UUID.</xs:documentation>
+         <xs:documentation>,</xs:documentation>
       </xs:annotation>
       <xs:sequence>
          <xs:element name="identifier"
@@ -1043,11 +1056,14 @@
                <xs:element name="PhaseImpedance"
                            minOccurs="0"
                            maxOccurs="1"
-                           type="m:PerLengthPhaseImpedance"
                            sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PhaseImpedanceData.PhaseImpedance">
                   <xs:annotation>
                      <xs:documentation>Conductor phase impedance to which this data belongs.</xs:documentation>
                   </xs:annotation>
+                  <xs:complexType sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#PerLengthPhaseImpedance">
+                     <xs:attribute name="ref" type="xs:string" use="required"/>
+                     <xs:attribute name="referenceType" type="xs:string" use="optional"/>
+                  </xs:complexType>
                </xs:element>
             </xs:sequence>
          </xs:extension>

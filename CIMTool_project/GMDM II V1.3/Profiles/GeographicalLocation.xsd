@@ -353,7 +353,7 @@
    <xs:complexType name="Identity"
                    sawsdl:modelReference="http://cim.ucaiug.io/CIM101/draft#Identity">
       <xs:annotation>
-         <xs:documentation>This is a root class to provide common identification for all classes.  IdentifiedObject and any class to be exchanged with RDF XML now inherits from Identity.  mRID is superseded by Identity.identifier, which is typed to be a UUID.</xs:documentation>
+         <xs:documentation>,</xs:documentation>
       </xs:annotation>
       <xs:sequence>
          <xs:element name="identifier"

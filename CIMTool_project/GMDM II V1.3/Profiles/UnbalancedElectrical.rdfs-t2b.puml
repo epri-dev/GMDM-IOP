@@ -198,17 +198,18 @@ PowerSystemResource <|-- Equipment
 
 ' FossilFuel inherits from IdentifiedObject
 class FossilFuel   {
+   +fossilFuelType : FuelType [1]
 }
 
 IdentifiedObject <|-- FossilFuel
 FossilFuel "+FossilFuels 0..*" --> "+ThermalGeneratingUnit 0..1" ThermalGeneratingUnit
 
 ' Enumeration FuelType
-enum FuelType <<ShadowExtension>><<gmdm>><<enumeration>><<Attribute>>  {
-   diesel
+enum FuelType <<enumeration>>  {
    brownCoalLignite
    coal
    coalDerivedGas
+   diesel
    gas
    hardCoal
    lignite

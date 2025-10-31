@@ -25,7 +25,7 @@
          xmlns:uml="http://iec.ch/TC57/NonStandard/UML#"
          xmlns:xsd="http://www.w3.org/2001/XMLSchema"
          xml:base="http://cim.ucaiug.io/CIM101/draft">
-   <rdf:Description rdf:about="http://epri.com/GMDM/GeographicalLocation#Ontology">
+    <rdf:Description rdf:about="http://epri.com/GMDM/GeographicalLocation#Ontology">
       <owl:versionIRI rdf:resource="http://epri.com/GMDM_GeographicalLocation/1.0"/>
       <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
    </rdf:Description>
@@ -228,9 +228,9 @@ EnergyConsumer.pfixed, .qfixed, .pfixedPct and .qfixedPct have meaning only if t
       <rdfs:label xml:lang="en">name</rdfs:label>
    </rdf:Description>
    <rdf:Description rdf:about="#Identity">
-      <cims:belongsToCategory rdf:resource="#Package_Core"/>
+      <cims:belongsToCategory rdf:resource="#Package_Compatible_Unit"/>
       <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is a root class to provide common identification for all classes.  IdentifiedObject and any class to be exchanged with RDF XML now inherits from Identity.  mRID is superseded by Identity.identifier, which is typed to be a UUID.</rdfs:comment>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">,</rdfs:comment>
       <rdfs:label xml:lang="en">Identity</rdfs:label>
    </rdf:Description>
    <rdf:Description rdf:about="#Identity.identifier">
@@ -312,6 +312,11 @@ EnergyConsumer.pfixed, .qfixed, .pfixedPct and .qfixedPct have meaning only if t
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This package contains the information classes that support operations in general.</rdfs:comment>
       <rdfs:label xml:lang="en">Common</rdfs:label>
    </rdf:Description>
+   <rdf:Description rdf:about="#Package_Compatible_Unit">
+      <cims:belongsToCategory rdf:resource="#Package_InfDesign"/>
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:label xml:lang="en">Compatible Unit</rdfs:label>
+   </rdf:Description>
    <rdf:Description rdf:about="#Package_Core">
       <cims:belongsToCategory rdf:resource="#Package_Base"/>
       <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
@@ -341,6 +346,18 @@ Currently, normative parts of the model support the needs of information exchang
       <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
       <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This top package includes the CIM model related to the grid.</rdfs:comment>
       <rdfs:label xml:lang="en">Grid</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_InfDesign">
+      <cims:belongsToCategory rdf:resource="#Package_InfEnterprise"/>
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:label xml:lang="en">InfDesign</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Package_InfEnterprise">
+      <cims:belongsToCategory rdf:resource="#Package_Enterprise"/>
+      <rdf:type rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#ClassCategory"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This package and its subpackages contain informative (unstable) elements of the model, expected to evolve a lot or to be removed, and not published as IEC document yet. Some portions of it will be reworked and moved to normative packages as the need arises, and some portions may be removed.
+WG14 does not generate documentation for this informative portion of the model.</rdfs:comment>
+      <rdfs:label xml:lang="en">InfEnterprise</rdfs:label>
    </rdf:Description>
    <rdf:Description rdf:about="#Package_Wires">
       <cims:belongsToCategory rdf:resource="#Package_Base"/>
@@ -535,9 +552,9 @@ The inherited association ConductingEquipment.BaseVoltage should not be used. Th
       <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..n"/>
       <cims:stereotype>gmdm</cims:stereotype>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-      <rdfs:domain rdf:resource="http://epri.com/gmdm/2025#Location"/>
+      <rdfs:domain rdf:resource="#Location"/>
       <rdfs:label xml:lang="en">PositionPoints</rdfs:label>
-      <rdfs:range rdf:resource="http://epri.com/gmdm/2025#PositionPoint"/>
+      <rdfs:range rdf:resource="#PositionPoint"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://epri.com/gmdm/2025#PositionPoint.Location">
       <cims:AssociationUsed>Yes</cims:AssociationUsed>
@@ -556,7 +573,7 @@ The inherited association ConductingEquipment.BaseVoltage should not be used. Th
       <cims:stereotype rdf:resource="http://iec.ch/TC57/NonStandard/UML#attribute"/>
       <cims:stereotype>gmdm</cims:stereotype>
       <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-      <rdfs:domain rdf:resource="http://epri.com/gmdm/2025#PositionPoint"/>
+      <rdfs:domain rdf:resource="#PositionPoint"/>
       <rdfs:label xml:lang="en">sequenceNumber</rdfs:label>
    </rdf:Description>
 </rdf:RDF>

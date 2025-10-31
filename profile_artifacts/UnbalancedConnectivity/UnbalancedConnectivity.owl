@@ -27,6 +27,23 @@
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
   xml:base="http://www.ucaiug.org/gmdm/connectivity/unbalanced" > 
+  <rdf:Description rdf:nodeID="X23X7a51f27Xa3X19a3ac45493Xa3X-7fd3">
+    <rdf:first rdf:resource="#Substation"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X23X7a51f27Xa3X19a3ac45493Xa3X-7fd4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="X23X7a51f27Xa3X19a3ac45493Xa3X-7fd5"/>
+    <owl:onProperty rdf:resource="http://cim.ucaiug.io/CIM101/draft#VoltageLevel.Substation"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X23X7a51f27Xa3X19a3ac45493Xa3X-7fd5">
+    <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#byreference"/>
+    <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#ofAggregate"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Substation</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/CIM101/draft#Substation"/>
+    <owl:unionOf rdf:nodeID="X23X7a51f27Xa3X19a3ac45493Xa3X-7fd3"/>
+  </rdf:Description>
   <rdf:Description rdf:nodeID="X13Xbfa537bXa3X197ec86a7f3Xa3X-7995">
     <rdf:first rdf:resource="http://cim.ucaiug.io/CIM101/draft#WindingConnection.A"/>
     <rdf:rest rdf:nodeID="X13Xbfa537bXa3X197ec86a7f3Xa3X-7996"/>
@@ -166,23 +183,6 @@
     <rdfs:label>NormalEnergizingSubstation</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/CIM101/draft#Substation"/>
     <owl:unionOf rdf:nodeID="X93X4a80ceXa3X199ed375c17Xa3X-7572"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="X93X4a80ceXa3X199ed375c17Xa3X-7575">
-    <rdf:first rdf:resource="#Substation"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="X93X4a80ceXa3X199ed375c17Xa3X-7576">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:allValuesFrom rdf:nodeID="X93X4a80ceXa3X199ed375c17Xa3X-7577"/>
-    <owl:onProperty rdf:resource="http://cim.ucaiug.io/CIM101/draft#VoltageLevel.Substation"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="X93X4a80ceXa3X199ed375c17Xa3X-7577">
-    <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#byreference"/>
-    <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#ofAggregate"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>Substation</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/CIM101/draft#Substation"/>
-    <owl:unionOf rdf:nodeID="X93X4a80ceXa3X199ed375c17Xa3X-7575"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="X93X4a80ceXa3X199ed375c17Xa3X-7578">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
@@ -1863,7 +1863,7 @@
     <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#concrete"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:label>VoltageLevel</rdfs:label>
-    <rdfs:subClassOf rdf:nodeID="X93X4a80ceXa3X199ed375c17Xa3X-7576"/>
+    <rdfs:subClassOf rdf:nodeID="X23X7a51f27Xa3X19a3ac45493Xa3X-7fd4"/>
     <rdfs:subClassOf rdf:nodeID="X93X4a80ceXa3X199ed375c17Xa3X-7578"/>
     <rdfs:subClassOf rdf:nodeID="X93X4a80ceXa3X199ed375c17Xa3X-757a"/>
     <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/CIM101/draft#VoltageLevel"/>

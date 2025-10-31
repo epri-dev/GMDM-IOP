@@ -142,10 +142,7 @@ class Identity():
 @dataclass(repr=False)
 class Identity(Identity):
     '''
-    This is a root class to provide common identification for all classes.
-    IdentifiedObject and any class to be exchanged with RDF XML now inherits
-    from Identity. mRID is superseded by Identity.identifier, which is typed
-    to be a UUID.
+    ,
     '''
 
     identifier: Optional[ str ] = field(
