@@ -924,8 +924,8 @@
             "@id": "urn:uuid:3d69e265-dad3-4e75-aad7-16a33b8f7243",
             "@type": "cim:ConnectivityNode",
             "cim:ConnectivityNode.ConnectivityNodeContainer": {
-                "@id": "15839571-e4e1-47f9-94ac-5bbd2e746257",
-                "@type": "VoltageLevel"
+                "@id": "70d1618f-9809-4da5-8756-a9727668e23f",
+                "@type": "Line"
             },
             "cim:IdentifiedObject.mRID": "3d69e265-dad3-4e75-aad7-16a33b8f7243",
             "cim:IdentifiedObject.name": "hvmv69s1s2_10"
@@ -964,8 +964,8 @@
             "@id": "urn:uuid:4ff8c8b9-de7b-4833-9f2a-df03644a556a",
             "@type": "cim:ConnectivityNode",
             "cim:ConnectivityNode.ConnectivityNodeContainer": {
-                "@id": "f78158ac-32c9-4109-8e4c-710ee3ed3265",
-                "@type": "VoltageLevel"
+                "@id": "70d1618f-9809-4da5-8756-a9727668e23f",
+                "@type": "Line"
             },
             "cim:IdentifiedObject.mRID": "4ff8c8b9-de7b-4833-9f2a-df03644a556a",
             "cim:IdentifiedObject.name": "hvmv69s1s2_1"
@@ -974,8 +974,8 @@
             "@id": "urn:uuid:50304bf5-ecf1-42c1-abaa-401d60af08b1",
             "@type": "cim:ConnectivityNode",
             "cim:ConnectivityNode.ConnectivityNodeContainer": {
-                "@id": "d827d54e-e6d4-46fd-b935-db797d5853a0",
-                "@type": "VoltageLevel"
+                "@id": "f052ce8b-516b-48e3-bb7a-7627aa49d623",
+                "@type": "Line"
             },
             "cim:IdentifiedObject.mRID": "50304bf5-ecf1-42c1-abaa-401d60af08b1",
             "cim:IdentifiedObject.name": "hvmv69s2s3_2"
@@ -991,6 +991,26 @@
             "cim:IdentifiedObject.name": "hvmv69s1s2_2"
         },
         {
+            "@id": "urn:uuid:6a2dc71c-14e1-498c-a2ab-e41cbf079a01",
+            "@type": "cim:ConnectivityNode",
+            "cim:ConnectivityNode.ConnectivityNodeContainer": {
+                "@id": "94cee31d-5dd8-455c-842d-8055ace083a5",
+                "@type": "VoltageLevel"
+            },
+            "cim:IdentifiedObject.mRID": "6a2dc71c-14e1-498c-a2ab-e41cbf079a01",
+            "cim:IdentifiedObject.name": "e192860"
+        },
+        {
+            "@id": "urn:uuid:84c7eb34-3d61-4705-9623-23d738ec57d0",
+            "@type": "cim:ConnectivityNode",
+            "cim:ConnectivityNode.ConnectivityNodeContainer": {
+                "@id": "b29089f4-1564-4f28-9651-cfcf9211f9b4",
+                "@type": "VoltageLevel"
+            },
+            "cim:IdentifiedObject.mRID": "84c7eb34-3d61-4705-9623-23d738ec57d0",
+            "cim:IdentifiedObject.name": "e1047300"
+        },
+        {
             "@id": "urn:uuid:86849d9c-e903-4799-9d7e-4b53155ac393",
             "@type": "cim:ConnectivityNode",
             "cim:ConnectivityNode.ConnectivityNodeContainer": {
@@ -1004,8 +1024,8 @@
             "@id": "urn:uuid:9039a782-7ae1-46fc-93d6-f0ee449c48ab",
             "@type": "cim:ConnectivityNode",
             "cim:ConnectivityNode.ConnectivityNodeContainer": {
-                "@id": "15839571-e4e1-47f9-94ac-5bbd2e746257",
-                "@type": "VoltageLevel"
+                "@id": "f052ce8b-516b-48e3-bb7a-7627aa49d623",
+                "@type": "Line"
             },
             "cim:IdentifiedObject.mRID": "9039a782-7ae1-46fc-93d6-f0ee449c48ab",
             "cim:IdentifiedObject.name": "hvmv69s2s3_1"
@@ -1049,6 +1069,16 @@
             },
             "cim:IdentifiedObject.mRID": "b1c4748b-9559-483e-8526-6e7617aa1203",
             "cim:IdentifiedObject.name": "hvmv69s2_lnb"
+        },
+        {
+            "@id": "urn:uuid:b9916e76-422a-4e80-ab82-72f53a300708",
+            "@type": "cim:ConnectivityNode",
+            "cim:ConnectivityNode.ConnectivityNodeContainer": {
+                "@id": "b2852760-d92d-437d-b4f8-286e3a428d0a",
+                "@type": "VoltageLevel"
+            },
+            "cim:IdentifiedObject.mRID": "b9916e76-422a-4e80-ab82-72f53a300708",
+            "cim:IdentifiedObject.name": "e203026"
         },
         {
             "@id": "urn:uuid:c58d9941-6286-449e-8d7c-d7ff67480eb4",
@@ -1648,6 +1678,15 @@
             "cim:IdentifiedObject.name": "hvmv69s1s2-4_T1"
         },
         {
+            "@id": "urn:uuid:2c9aca5a-b819-45f5-8271-646c403a5bde",
+            "@type": "cim:Terminal",
+            "cim:Terminal.ConductingEquipment": "f8d670b5-5664-4699-b3e3-f7f5b018ddfa",
+            "cim:Terminal.ConnectivityNode": "6a2dc71c-14e1-498c-a2ab-e41cbf079a01",
+            "cim:ACDCTerminal.sequenceNumber": "1",
+            "cim:IdentifiedObject.mRID": "2c9aca5a-b819-45f5-8271-646c403a5bde",
+            "cim:IdentifiedObject.name": "ln5815900-1_T1"
+        },
+        {
             "@id": "urn:uuid:2ef9d098-d837-461a-b790-5d57cb93982e",
             "@type": "cim:Terminal",
             "cim:Terminal.ConductingEquipment": "12ecde7e-029b-466b-b10f-4289600824de",
@@ -1684,6 +1723,15 @@
             "cim:IdentifiedObject.name": "hvmv69_11s2_T2"
         },
         {
+            "@id": "urn:uuid:41735790-692a-42d2-84bf-911db4d7e8e5",
+            "@type": "cim:Terminal",
+            "cim:Terminal.ConductingEquipment": "e86b444e-8d1e-45c1-92fd-d467e580ca2e",
+            "cim:Terminal.ConnectivityNode": "84c7eb34-3d61-4705-9623-23d738ec57d0",
+            "cim:ACDCTerminal.sequenceNumber": "1",
+            "cim:IdentifiedObject.mRID": "41735790-692a-42d2-84bf-911db4d7e8e5",
+            "cim:IdentifiedObject.name": "ln_s2_conn_T1"
+        },
+        {
             "@id": "urn:uuid:45f52a35-f892-47ac-be15-c3e26746b19c",
             "@type": "cim:Terminal",
             "cim:Terminal.ConductingEquipment": "37c4ff07-f38a-4394-b528-510393cafa05",
@@ -1700,6 +1748,15 @@
             "cim:ACDCTerminal.sequenceNumber": "2",
             "cim:IdentifiedObject.mRID": "466dc8cb-2af8-4914-abe0-cf9bc90a0f59",
             "cim:IdentifiedObject.name": "hvmv69s1b4_sw_T2"
+        },
+        {
+            "@id": "urn:uuid:48a6e0a2-b4dd-41ab-ace0-b1ad45443724",
+            "@type": "cim:Terminal",
+            "cim:Terminal.ConductingEquipment": "10dbf518-dd03-446e-b325-a7daf286b82c",
+            "cim:Terminal.ConnectivityNode": "b9916e76-422a-4e80-ab82-72f53a300708",
+            "cim:ACDCTerminal.sequenceNumber": "1",
+            "cim:IdentifiedObject.mRID": "48a6e0a2-b4dd-41ab-ace0-b1ad45443724",
+            "cim:IdentifiedObject.name": "ln6044631-1_T1"
         },
         {
             "@id": "urn:uuid:4a01b3cb-f39b-4d60-8b24-9ec6356c2efb",
