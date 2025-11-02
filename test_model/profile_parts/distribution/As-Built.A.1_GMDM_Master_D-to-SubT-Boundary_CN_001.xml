@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:cim="http://cim.ucaiug.io/CIM101/draft#"  
+		xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+		xmlns:gmdm="http://epri.com/gmdm/2025#"  
+		xmlns:md="http://iec.ch/TC57/61970-552/ModelDescription/1#">
+
+<md:FullModel rdf:about="urn:uuid:db8fdcc8-6908-4ca2-acdf-dcc344f20985">   
+  <md:Model.created>2025-10-31T07:20:00.000-05:00</md:Model.created>   
+  <md:Model.scenarioTime>2025-11-04T00:00:00.000-05:00</md:Model.scenarioTime> 
+  <md:Model.description>Master</md:Model.description> 
+  <md:Model.modelingAuthoritySet>http://epri.com/GMDM/D-to-SubT-Boundary</md:Model.modelingAuthoritySet> 
+  <md:Model.version>001</md:Model.version>  
+  <md:Model.profile>http://epri.com/GMDM_Connectivity/1.0</md:Model.profile>  
+</md:FullModel>
+
+<!-- D side Boundary CNs  -->
+<!-- Industrial District  -->
+<cim:ConnectivityNode rdf:about="urn:uuid:6a2dc71c-14e1-498c-a2ab-e41cbf079a01">
+  <cim:ConnectivityNode.ConnectivityNodeContainer rdf:resource="urn:uuid:0e1e4c92-7c63-422d-8822-79a3797a7ffa"/>
+  <cim:IdentifiedObject.name>e192860</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>6a2dc71c-14e1-498c-a2ab-e41cbf079a01</cim:Identity.identifier>
+</cim:ConnectivityNode>
+<!-- New Neighborhood  -->
+<cim:ConnectivityNode rdf:about="urn:uuid:84c7eb34-3d61-4705-9623-23d738ec57d0">
+  <cim:ConnectivityNode.ConnectivityNodeContainer rdf:resource="urn:uuid:f856769a-363c-401e-a0cd-bd0a48b83ef0"/>
+  <cim:IdentifiedObject.name>e1047300</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>84c7eb34-3d61-4705-9623-23d738ec57d0</cim:Identity.identifier>
+</cim:ConnectivityNode>
+<!-- Old Towne  -->
+<cim:ConnectivityNode rdf:about="urn:uuid:b9916e76-422a-4e80-ab82-72f53a300708">
+  <cim:ConnectivityNode.ConnectivityNodeContainer rdf:resource="urn:uuid:8ef3f7b6-25be-476f-af48-2dcf85042b36"/>
+  <cim:IdentifiedObject.name>e203026</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>b9916e76-422a-4e80-ab82-72f53a300708</cim:Identity.identifier>
+</cim:ConnectivityNode>
+
+<!-- SubT side Boundary CNs  -->
+<!-- Substation S1 Industrial District  -->
+<cim:ConnectivityNode rdf:about="urn:uuid:c61f1cf5-c7eb-488c-b478-dccb503bcb70">
+  <cim:ConnectivityNode.ConnectivityNodeContainer rdf:resource="urn:uuid:0e1e4c92-7c63-422d-8822-79a3797a7ffa"/>
+  <cim:IdentifiedObject.name>bsubS1 CN</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>c61f1cf5-c7eb-488c-b478-dccb503bcb70</cim:Identity.identifier>
+</cim:ConnectivityNode>
+<!-- Substation S2 New Neighborhood  -->
+<cim:ConnectivityNode rdf:about="urn:uuid:61de2ddf-810c-4eeb-acec-d0251f319b2a">
+  <cim:ConnectivityNode.ConnectivityNodeContainer rdf:resource="urn:uuid:f856769a-363c-401e-a0cd-bd0a48b83ef0"/>
+  <cim:IdentifiedObject.name>bsubS2 CN</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>61de2ddf-810c-4eeb-acec-d0251f319b2a</cim:Identity.identifier>
+</cim:ConnectivityNode>
+<!-- Substation S3 Old Towne  -->
+<cim:ConnectivityNode rdf:about="urn:uuid:fe067907-757f-4ec1-bfab-97a94bbe88b9">
+  <cim:ConnectivityNode.ConnectivityNodeContainer rdf:resource="urn:uuid:8ef3f7b6-25be-476f-af48-2dcf85042b36"/>
+  <cim:IdentifiedObject.name>bsubS3 CN</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>fe067907-757f-4ec1-bfab-97a94bbe88b9</cim:Identity.identifier>
+</cim:ConnectivityNode>
+
+<!-- short 'cable/wire' ACLineSegments -->
+<!-- Industrial District  -->
+<cim:ACLineSegment rdf:about="urn:uuid:17db68b7-0b65-4bf9-b848-a42d8381eaed">
+  <cim:ConductingEquipment.BaseVoltage rdf:resource="urn:uuid:cb5284ac-42d5-47d2-8bd8-dfe510ec74a6"/>
+  <cim:Equipment.EquipmentContainer rdf:resource="urn:uuid:0e1e4c92-7c63-422d-8822-79a3797a7ffa"/>
+  <cim:IdentifiedObject.name>industrial_district_feeder_conductor</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>17db68b7-0b65-4bf9-b848-a42d8381eaed</cim:Identity.identifier>
+</cim:ACLineSegment>
+<cim:ACLineSegmentPhase rdf:about="urn:uuid:48080331-2e8d-4a3d-8aed-ec80504e4548">
+  <cim:ACLineSegmentPhase.phase rdf:resource="http://cim.ucaiug.io/CIM101/draft#SinglePhaseKind.A"/>
+  <cim:ACLineSegmentPhase.ACLineSegment rdf:resource="urn:uuid:17db68b7-0b65-4bf9-b848-a42d8381eaed"/>
+  <cim:IdentifiedObject.name>industrial_district_feeder_conductor_A</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>48080331-2e8d-4a3d-8aed-ec80504e4548</cim:Identity.identifier>
+</cim:ACLineSegmentPhase>
+<cim:ACLineSegmentPhase rdf:about="urn:uuid:ea235306-70e1-452a-aae0-a67052160baa">
+  <cim:ACLineSegmentPhase.phase rdf:resource="http://cim.ucaiug.io/CIM101/draft#SinglePhaseKind.B"/>
+  <cim:ACLineSegmentPhase.ACLineSegment rdf:resource="urn:uuid:17db68b7-0b65-4bf9-b848-a42d8381eaed"/>
+  <cim:IdentifiedObject.name>industrial_district_feeder_conductor_B</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>ea235306-70e1-452a-aae0-a67052160baa</cim:Identity.identifier>
+</cim:ACLineSegmentPhase>
+<cim:ACLineSegmentPhase rdf:about="urn:uuid:005f556d-4b7a-4f89-8460-70816cf9ea4b">
+  <cim:ACLineSegmentPhase.phase rdf:resource="http://cim.ucaiug.io/CIM101/draft#SinglePhaseKind.C"/>
+  <cim:ACLineSegmentPhase.ACLineSegment rdf:resource="urn:uuid:17db68b7-0b65-4bf9-b848-a42d8381eaed"/>
+  <cim:IdentifiedObject.name>industrial_district_feeder_conductor_C</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>005f556d-4b7a-4f89-8460-70816cf9ea4b</cim:Identity.identifier>
+</cim:ACLineSegmentPhase>
+<cim:Terminal rdf:about="urn:uuid:a91b78fc-b458-4eed-a291-293e4f761f79">
+  <cim:Terminal.ConductingEquipment rdf:resource="urn:uuid:17db68b7-0b65-4bf9-b848-a42d8381eaed"/>
+  <cim:Terminal.ConnectivityNode rdf:resource="urn:uuid:c61f1cf5-c7eb-488c-b478-dccb503bcb70"/>
+  <cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+  <cim:IdentifiedObject.name>industrial_district_feeder_conductor_T1</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>a91b78fc-b458-4eed-a291-293e4f761f79</cim:Identity.identifier>
+</cim:Terminal>
+<cim:Terminal rdf:about="urn:uuid:39631076-f8c4-4714-904a-9d64ddc6e0a9">
+  <cim:Terminal.ConductingEquipment rdf:resource="urn:uuid:17db68b7-0b65-4bf9-b848-a42d8381eaed"/>
+  <cim:Terminal.ConnectivityNode rdf:resource="urn:uuid:6a2dc71c-14e1-498c-a2ab-e41cbf079a01"/>
+  <cim:ACDCTerminal.sequenceNumber>2</cim:ACDCTerminal.sequenceNumber>
+  <cim:IdentifiedObject.name>industrial_district_feeder_conductor_T2</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>39631076-f8c4-4714-904a-9d64ddc6e0a9</cim:Identity.identifier>
+</cim:Terminal>
+
+<!-- New Neighborhood  -->
+<cim:ACLineSegment rdf:about="urn:uuid:2d50db35-8964-4ca0-8104-e5b84994b97c">
+  <cim:ConductingEquipment.BaseVoltage rdf:resource="urn:uuid:cb5284ac-42d5-47d2-8bd8-dfe510ec74a6"/>
+  <cim:Equipment.EquipmentContainer rdf:resource="urn:uuid:f856769a-363c-401e-a0cd-bd0a48b83ef0"/>
+  <cim:IdentifiedObject.name>new_neighborhood_feeder_conductor</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>2d50db35-8964-4ca0-8104-e5b84994b97c</cim:Identity.identifier>
+</cim:ACLineSegment>
+<cim:ACLineSegmentPhase rdf:about="urn:uuid:6b508123-5fc5-48d3-bd60-7e9730a13449">
+  <cim:ACLineSegmentPhase.phase rdf:resource="http://cim.ucaiug.io/CIM101/draft#SinglePhaseKind.A"/>
+  <cim:ACLineSegmentPhase.ACLineSegment rdf:resource="urn:uuid:2d50db35-8964-4ca0-8104-e5b84994b97c"/>
+  <cim:IdentifiedObject.name>new_neighborhood_feeder_conductor_A</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>6b508123-5fc5-48d3-bd60-7e9730a13449</cim:Identity.identifier>
+</cim:ACLineSegmentPhase>
+<cim:ACLineSegmentPhase rdf:about="urn:uuid:d4666b28-101c-4001-a52f-ab7d8dc4c472">
+  <cim:ACLineSegmentPhase.phase rdf:resource="http://cim.ucaiug.io/CIM101/draft#SinglePhaseKind.B"/>
+  <cim:ACLineSegmentPhase.ACLineSegment rdf:resource="urn:uuid:2d50db35-8964-4ca0-8104-e5b84994b97c"/>
+  <cim:IdentifiedObject.name>new_neighborhood_feeder_conductor_B</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>d4666b28-101c-4001-a52f-ab7d8dc4c472</cim:Identity.identifier>
+</cim:ACLineSegmentPhase>
+<cim:ACLineSegmentPhase rdf:about="urn:uuid:ae348438-4771-4cff-b5bb-3835ef49e8ef">
+  <cim:ACLineSegmentPhase.phase rdf:resource="http://cim.ucaiug.io/CIM101/draft#SinglePhaseKind.C"/>
+  <cim:ACLineSegmentPhase.ACLineSegment rdf:resource="urn:uuid:2d50db35-8964-4ca0-8104-e5b84994b97c"/>
+  <cim:IdentifiedObject.name>new_neighborhood_feeder_conductor_C</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>ae348438-4771-4cff-b5bb-3835ef49e8ef</cim:Identity.identifier>
+</cim:ACLineSegmentPhase>
+<cim:Terminal rdf:about="urn:uuid:b7c43212-627d-49cc-95e5-07e5a5dc56cb">
+  <cim:Terminal.ConductingEquipment rdf:resource="urn:uuid:2d50db35-8964-4ca0-8104-e5b84994b97c"/>
+  <cim:Terminal.ConnectivityNode rdf:resource="urn:uuid:61de2ddf-810c-4eeb-acec-d0251f319b2a"/>
+  <cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+  <cim:IdentifiedObject.name>new_neighborhood_feeder_conductor_T1</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>b7c43212-627d-49cc-95e5-07e5a5dc56cb</cim:Identity.identifier>
+</cim:Terminal>
+<cim:Terminal rdf:about="urn:uuid:fb92a090-1f92-4fb5-8a86-cbd80be0f5a9">
+  <cim:Terminal.ConductingEquipment rdf:resource="urn:uuid:2d50db35-8964-4ca0-8104-e5b84994b97c"/>
+  <cim:Terminal.ConnectivityNode rdf:resource="urn:uuid:84c7eb34-3d61-4705-9623-23d738ec57d0"/>
+  <cim:ACDCTerminal.sequenceNumber>2</cim:ACDCTerminal.sequenceNumber>
+  <cim:IdentifiedObject.name>new_neighborhood_feeder_conductor_T2</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>fb92a090-1f92-4fb5-8a86-cbd80be0f5a9</cim:Identity.identifier>
+</cim:Terminal>
+
+<!-- Old Towne  -->
+<cim:ACLineSegment rdf:about="urn:uuid:6b42a8f7-23e7-4aec-b534-3a97c541c94d">
+  <cim:ConductingEquipment.BaseVoltage rdf:resource="urn:uuid:cb5284ac-42d5-47d2-8bd8-dfe510ec74a6"/>
+  <cim:Equipment.EquipmentContainer rdf:resource="urn:uuid:8ef3f7b6-25be-476f-af48-2dcf85042b36"/>
+  <cim:IdentifiedObject.name>old_towne_feeder_conductor</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>6b42a8f7-23e7-4aec-b534-3a97c541c94d</cim:Identity.identifier>
+</cim:ACLineSegment>
+<cim:ACLineSegmentPhase rdf:about="urn:uuid:0fc4b02c-305c-4fd5-9d27-925d40db31b3">
+  <cim:ACLineSegmentPhase.phase rdf:resource="http://cim.ucaiug.io/CIM101/draft#SinglePhaseKind.A"/>
+  <cim:ACLineSegmentPhase.ACLineSegment rdf:resource="urn:uuid:6b42a8f7-23e7-4aec-b534-3a97c541c94d"/>
+  <cim:IdentifiedObject.name>old_towne_feeder_conductor_A</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>0fc4b02c-305c-4fd5-9d27-925d40db31b3</cim:Identity.identifier>
+</cim:ACLineSegmentPhase>
+<cim:ACLineSegmentPhase rdf:about="urn:uuid:ef72dd5e-da32-4f3c-adcc-1c2435fc0382">
+  <cim:ACLineSegmentPhase.phase rdf:resource="http://cim.ucaiug.io/CIM101/draft#SinglePhaseKind.B"/>
+  <cim:ACLineSegmentPhase.ACLineSegment rdf:resource="urn:uuid:6b42a8f7-23e7-4aec-b534-3a97c541c94d"/>
+  <cim:IdentifiedObject.name>old_towne_feeder_conductor_B</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>ef72dd5e-da32-4f3c-adcc-1c2435fc0382</cim:Identity.identifier>
+</cim:ACLineSegmentPhase>
+<cim:ACLineSegmentPhase rdf:about="urn:uuid:093fd864-4c37-48bd-a4df-86a6c25fe063">
+  <cim:ACLineSegmentPhase.phase rdf:resource="http://cim.ucaiug.io/CIM101/draft#SinglePhaseKind.C"/>
+  <cim:ACLineSegmentPhase.ACLineSegment rdf:resource="urn:uuid:6b42a8f7-23e7-4aec-b534-3a97c541c94d"/>
+  <cim:IdentifiedObject.name>old_towne_feeder_conductor_C</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>093fd864-4c37-48bd-a4df-86a6c25fe063</cim:Identity.identifier>
+</cim:ACLineSegmentPhase>
+<cim:Terminal rdf:about="urn:uuid:da3d65f5-b004-48c9-924b-5d6e843f5a96">
+  <cim:Terminal.ConductingEquipment rdf:resource="urn:uuid:6b42a8f7-23e7-4aec-b534-3a97c541c94d"/>
+  <cim:Terminal.ConnectivityNode rdf:resource="urn:uuid:fe067907-757f-4ec1-bfab-97a94bbe88b9"/>
+  <cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+  <cim:IdentifiedObject.name>old_towne_feeder_conductor_T1</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>da3d65f5-b004-48c9-924b-5d6e843f5a96</cim:Identity.identifier>
+</cim:Terminal>
+<cim:Terminal rdf:about="urn:uuid:422e5ecb-1fc2-49e6-bf9a-a435d3f1e24c">
+  <cim:Terminal.ConductingEquipment rdf:resource="urn:uuid:6b42a8f7-23e7-4aec-b534-3a97c541c94d"/>
+  <cim:Terminal.ConnectivityNode rdf:resource="urn:uuid:b9916e76-422a-4e80-ab82-72f53a300708"/>
+  <cim:ACDCTerminal.sequenceNumber>2</cim:ACDCTerminal.sequenceNumber>
+  <cim:IdentifiedObject.name>old_towne_feeder_conductor_T2</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>422e5ecb-1fc2-49e6-bf9a-a435d3f1e24c</cim:Identity.identifier>
+</cim:Terminal>
+
+<!-- Feeders  -->
+<cim:Feeder rdf:about="urn:uuid:0e1e4c92-7c63-422d-8822-79a3797a7ffa">
+  <cim:Feeder.NormalEnergizingSubstation rdf:resource="urn:uuid:f380ec3d-4071-4a67-8916-9411fb6cba93"/>
+  <cim:Feeder.NormalHeadTerminal rdf:resource="urn:uuid:a91b78fc-b458-4eed-a291-293e4f761f79"/>
+  <cim:IdentifiedObject.name>industrial_district_feeder</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>0e1e4c92-7c63-422d-8822-79a3797a7ffa</cim:Identity.identifier>
+</cim:Feeder>
+<cim:Feeder rdf:about="urn:uuid:f856769a-363c-401e-a0cd-bd0a48b83ef0">
+  <cim:Feeder.NormalEnergizingSubstation rdf:resource="urn:uuid:c6bcb4fe-5dd0-436e-ab5c-c71ffc6125c5"/>
+  <cim:Feeder.NormalHeadTerminal rdf:resource="urn:uuid:b7c43212-627d-49cc-95e5-07e5a5dc56cb"/>
+  <cim:IdentifiedObject.name>new_neighborhood-feeder</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>f856769a-363c-401e-a0cd-bd0a48b83ef0</cim:Identity.identifier>
+</cim:Feeder>
+<cim:Feeder rdf:about="urn:uuid:8ef3f7b6-25be-476f-af48-2dcf85042b36">
+  <cim:Feeder.NormalEnergizingSubstation rdf:resource="urn:uuid:df3451fc-a934-409d-b922-760220073fff"/>
+  <cim:Feeder.NormalHeadTerminal rdf:resource="urn:uuid:da3d65f5-b004-48c9-924b-5d6e843f5a96"/>
+  <cim:IdentifiedObject.name>old_towne_feeder</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>8ef3f7b6-25be-476f-af48-2dcf85042b36</cim:Identity.identifier>
+</cim:Feeder>
+
+<!-- Substations  -->
+<cim:Substation rdf:about="urn:uuid:f380ec3d-4071-4a67-8916-9411fb6cba93">
+  <cim:IdentifiedObject.name>substation_1_industrial_district</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>f380ec3d-4071-4a67-8916-9411fb6cba93</cim:Identity.identifier>
+</cim:Substation>
+<cim:Substation rdf:about="urn:uuid:c6bcb4fe-5dd0-436e-ab5c-c71ffc6125c5">
+  <cim:IdentifiedObject.name>substation_2_new_neighborhood</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>c6bcb4fe-5dd0-436e-ab5c-c71ffc6125c5</cim:Identity.identifier>
+</cim:Substation>
+<cim:Substation rdf:about="urn:uuid:df3451fc-a934-409d-b922-760220073fff">
+  <cim:IdentifiedObject.name>substation_3_old_towne</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>df3451fc-a934-409d-b922-760220073fff</cim:Identity.identifier>
+</cim:Substation>
+
+<!--  BaseVoltage  -->
+<cim:BaseVoltage rdf:about="urn:uuid:cb5284ac-42d5-47d2-8bd8-dfe510ec74a6">
+  <cim:BaseVoltage.nominalVoltage>12470.0</cim:BaseVoltage.nominalVoltage>
+  <cim:IdentifiedObject.name>BaseV_12.4700</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>cb5284ac-42d5-47d2-8bd8-dfe510ec74a6</cim:Identity.identifier>
+</cim:BaseVoltage>
+
+</rdf:RDF>

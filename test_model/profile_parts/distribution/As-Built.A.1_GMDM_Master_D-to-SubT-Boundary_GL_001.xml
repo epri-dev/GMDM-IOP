@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:cim="http://cim.ucaiug.io/CIM101/draft#"  
+		xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+		xmlns:gmdm="http://epri.com/gmdm/2025#"  
+		xmlns:md="http://iec.ch/TC57/61970-552/ModelDescription/1#">
+
+<md:FullModel rdf:about="urn:uuid:1f224617-f27a-427d-aa44-bf0c98db3694">   
+  <md:Model.created>2025-10-31T07:20:00.000-05:00</md:Model.created>   
+  <md:Model.scenarioTime>2025-11-04T00:00:00.000-05:00</md:Model.scenarioTime> 
+  <md:Model.description>Master</md:Model.description> 
+  <md:Model.modelingAuthoritySet>http://epri.com/GMDM/D-to-SubT-Boundary</md:Model.modelingAuthoritySet> 
+  <md:Model.version>001</md:Model.version>  
+  <md:Model.profile>http://epri.com/GMDM_GeographicalLocation/1.0</md:Model.profile>  
+</md:FullModel>
+
+<cim:CoordinateSystem rdf:about="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf">
+  <cim:CoordinateSystem.crsUrn>urn:ogc:def:crs:EPSG::4326</cim:CoordinateSystem.crsUrn>
+  <cim:IdentifiedObject.name>final9500node_CrsUrn</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>428df686-3924-4ab9-ac68-eb720e38eabf</cim:Identity.identifier>
+</cim:CoordinateSystem>
+
+<!-- ACLineSegment locations -->
+<!-- Industrial District  -->
+<cim:ACLineSegment rdf:about="urn:uuid:17db68b7-0b65-4bf9-b848-a42d8381eaed">
+  <cim:PowerSystemResource.Location rdf:resource="urn:uuid:399d2908-8b51-45de-83b2-b4275eb87781"/>
+  <cim:Identity.identifier>17db68b7-0b65-4bf9-b848-a42d8381eaed</cim:Identity.identifier>
+</cim:ACLineSegment>
+<cim:Location rdf:about="urn:uuid:399d2908-8b51-45de-83b2-b4275eb87781">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>industrial_district_feeder_conductor_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>399d2908-8b51-45de-83b2-b4275eb87781</cim:Identity.identifier>
+</cim:Location>
+<cim:PositionPoint rdf:about="urn:uuid:4a4cef82-0422-4423-a627-0d48178742d4">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.0748875</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.69217484</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:399d2908-8b51-45de-83b2-b4275eb87781"/>
+  <cim:Identity.identifier>4a4cef82-0422-4423-a627-0d48178742d4</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:1380093e-4968-40fb-aa69-6bf5db4220d9">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.0754097</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.69173926</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:399d2908-8b51-45de-83b2-b4275eb87781"/>
+  <cim:Identity.identifier>1380093e-4968-40fb-aa69-6bf5db4220d9</cim:Identity.identifier>
+</cim:PositionPoint>
+<!-- New Neighborhood  -->
+<cim:ACLineSegment rdf:about="urn:uuid:2d50db35-8964-4ca0-8104-e5b84994b97c">
+  <cim:PowerSystemResource.Location rdf:resource="urn:uuid:ab2b076c-d38e-487d-83c2-44b05747f9a9"/>
+  <cim:Identity.identifier>2d50db35-8964-4ca0-8104-e5b84994b97c</cim:Identity.identifier>
+</cim:ACLineSegment>
+<cim:Location rdf:about="urn:uuid:ab2b076c-d38e-487d-83c2-44b05747f9a9">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>new_neighborhood_feeder_conductor_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>ab2b076c-d38e-487d-83c2-44b05747f9a9</cim:Identity.identifier>
+</cim:Location>
+<cim:PositionPoint rdf:about="urn:uuid:e06cf2a7-ac70-4758-af94-682a02b0b0d2">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.2047543</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.6233509</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:ab2b076c-d38e-487d-83c2-44b05747f9a9"/>
+  <cim:Identity.identifier>e06cf2a7-ac70-4758-af94-682a02b0b0d2</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:1462c6bd-7785-4a48-9a95-43eb808ef421">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.2047467</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.6240377</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:ab2b076c-d38e-487d-83c2-44b05747f9a9"/>
+  <cim:Identity.identifier>1462c6bd-7785-4a48-9a95-43eb808ef421</cim:Identity.identifier>
+</cim:PositionPoint>
+<!-- Old Towne  -->
+<cim:ACLineSegment rdf:about="urn:uuid:6b42a8f7-23e7-4aec-b534-3a97c541c94d">
+  <cim:PowerSystemResource.Location rdf:resource="urn:uuid:85764fa5-0b7f-4be7-a7e8-b6f7cbaf687d"/>
+  <cim:Identity.identifier>6b42a8f7-23e7-4aec-b534-3a97c541c94d</cim:Identity.identifier>
+</cim:ACLineSegment>
+<cim:Location rdf:about="urn:uuid:040b9ac6-e705-45bd-b473-d8a98a8186ba">
+  <cim:Location.CoordinateSystem rdf:resource="urn:uuid:428df686-3924-4ab9-ac68-eb720e38eabf"/>
+  <cim:IdentifiedObject.name>old_towne_feeder_conductor_Loc</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>040b9ac6-e705-45bd-b473-d8a98a8186ba</cim:Identity.identifier>
+</cim:Location>
+<cim:PositionPoint rdf:about="urn:uuid:06678207-6f98-496c-991c-3c56549e9ba7">
+  <gmdm:PositionPoint.sequenceNumber>1</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.2409416</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.68172058</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:85764fa5-0b7f-4be7-a7e8-b6f7cbaf687d"/>
+  <cim:Identity.identifier>06678207-6f98-496c-991c-3c56549e9ba7</cim:Identity.identifier>
+</cim:PositionPoint>
+<cim:PositionPoint rdf:about="urn:uuid:e88fac99-1885-4b6a-b887-f9b6f45eb993">
+  <gmdm:PositionPoint.sequenceNumber>2</gmdm:PositionPoint.sequenceNumber>
+  <cim:PositionPoint.xPosition>-119.2412838</cim:PositionPoint.xPosition>
+  <cim:PositionPoint.yPosition>46.68271272</cim:PositionPoint.yPosition>
+  <gmdm:PositionPoint.Location rdf:resource="urn:uuid:85764fa5-0b7f-4be7-a7e8-b6f7cbaf687d"/>
+  <cim:Identity.identifier>e88fac99-1885-4b6a-b887-f9b6f45eb993</cim:Identity.identifier>
+</cim:PositionPoint>
+
+</rdf:RDF>
