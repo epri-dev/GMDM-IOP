@@ -365,19 +365,6 @@ Inheritance path = <<Asset-AssetInfo,AssetInfo>> => <<Asset-IdentifiedObject,Ide
 Set of transformer tank data, from an equipment library.
 
 
-*Native Members*
-
-[%header,width="100%",cols="25%,^10%,20%,45%a"]
-|===
-|name |mult |type |description
-|PowerTransformerInfo
-|1..1
-|<<Asset-PowerTransformerInfo,PowerTransformerInfo>>
-|
-Power transformer data that this tank description is part of.
-
-|===
-
 *Inherited Members*
 
 [%header,width="100%",cols="25%,^10%,20%,45%a"]

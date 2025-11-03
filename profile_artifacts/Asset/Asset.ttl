@@ -7,6 +7,10 @@
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dc:      <http://purl.org/dc/elements/1.1/> .
 
+[]    a       owl:Restriction ;
+      owl:minCardinality "1"^^xsd:int ;
+      owl:onProperty <http://cim.ucaiug.io/CIM101/draft#PowerTransformerInfo.TransformerTankInfos> .
+
 []    rdf:rest () .
 
 <http://cim.ucaiug.io/CIM101/draft#PhaseCountKind.other>
@@ -644,27 +648,6 @@
 :TransformerTankInfo
       a       owl:Class ;
       rdfs:subClassOf :AssetInfo , <http://cim.ucaiug.io/CIM101/draft#TransformerTankInfo> ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:minCardinality "1"^^xsd:int ;
-                owl:onProperty <http://cim.ucaiug.io/CIM101/draft#TransformerTankInfo.PowerTransformerInfo>
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom
-                        [ a       owl:Class ;
-                          rdfs:label "PowerTransformerInfo" ;
-                          rdfs:subClassOf <http://cim.ucaiug.io/CIM101/draft#PowerTransformerInfo> ;
-                          rdfs:subClassOf
-                                  [ a       owl:Restriction ;
-                                    owl:minCardinality "1"^^xsd:int ;
-                                    owl:onProperty <http://cim.ucaiug.io/CIM101/draft#PowerTransformerInfo.TransformerTankInfos>
-                                  ] ;
-                          uml:hasStereotype uml:byreference ;
-                          owl:unionOf (:PowerTransformerInfo)
-                        ] ;
-                owl:onProperty <http://cim.ucaiug.io/CIM101/draft#TransformerTankInfo.PowerTransformerInfo>
-              ] ;
       uml:hasStereotype uml:concrete .
 
 :TransformerTest

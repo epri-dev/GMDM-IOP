@@ -32,28 +32,6 @@
     <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
     <owl:onProperty rdf:resource="http://cim.ucaiug.io/CIM101/draft#PowerTransformerInfo.TransformerTankInfos"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="X33X0d7dabfXa3X19a3009c994Xa3X-7ff8">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
-    <owl:onProperty rdf:resource="http://cim.ucaiug.io/CIM101/draft#TransformerTankInfo.PowerTransformerInfo"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="X33X0d7dabfXa3X19a3009c994Xa3X-7ff9">
-    <rdf:first rdf:resource="#PowerTransformerInfo"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="X33X0d7dabfXa3X19a3009c994Xa3X-7ffa">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:allValuesFrom rdf:nodeID="X33X0d7dabfXa3X19a3009c994Xa3X-7ffb"/>
-    <owl:onProperty rdf:resource="http://cim.ucaiug.io/CIM101/draft#TransformerTankInfo.PowerTransformerInfo"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="X33X0d7dabfXa3X19a3009c994Xa3X-7ffb">
-    <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#byreference"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>PowerTransformerInfo</rdfs:label>
-    <rdfs:subClassOf rdf:nodeID="X33X0d7dabfXa3X19a3009c994Xa3X-7ff7"/>
-    <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/CIM101/draft#PowerTransformerInfo"/>
-    <owl:unionOf rdf:nodeID="X33X0d7dabfXa3X19a3009c994Xa3X-7ff9"/>
-  </rdf:Description>
   <rdf:Description rdf:nodeID="X63X17c1402Xa3X19842624d4fXa3X-6bcf">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:allValuesFrom rdf:nodeID="X63X17c1402Xa3X19842624d4fXa3X-6bd0"/>
@@ -863,8 +841,6 @@
   <rdf:Description rdf:about="#TransformerTankInfo">
     <uml:hasStereotype rdf:resource="http://langdale.com.au/2005/UML#concrete"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:nodeID="X33X0d7dabfXa3X19a3009c994Xa3X-7ff8"/>
-    <rdfs:subClassOf rdf:nodeID="X33X0d7dabfXa3X19a3009c994Xa3X-7ffa"/>
     <rdfs:subClassOf rdf:resource="http://cim.ucaiug.io/CIM101/draft#TransformerTankInfo"/>
     <rdfs:subClassOf rdf:resource="#AssetInfo"/>
   </rdf:Description>

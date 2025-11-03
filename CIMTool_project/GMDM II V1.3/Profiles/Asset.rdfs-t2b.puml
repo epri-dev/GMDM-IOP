@@ -202,7 +202,6 @@ class TransformerTankInfo   {
 }
 
 AssetInfo <|-- TransformerTankInfo
-TransformerTankInfo "+TransformerTankInfos 1..*" --> "+PowerTransformerInfo 1" PowerTransformerInfo
 
 ' TransformerTest inherits from IdentifiedObject
 abstract class TransformerTest  <<abstract>> {
