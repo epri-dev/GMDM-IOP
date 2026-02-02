@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:cim="http://cim.ucaiug.io/CIM101/draft#"  
+		xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+		xmlns:gmdm="http://epri.com/gmdm/2025#"  
+		xmlns:md="http://iec.ch/TC57/61970-552/ModelDescription/1#">
+
+<md:FullModel rdf:about="urn:uuid:272de3b1-2ff0-469d-b7c3-c3c4b8142ee3">   
+  <md:Model.created>2025-10-31T07:20:00.000-05:00</md:Model.created>   
+  <md:Model.scenarioTime>2025-11-04T00:00:00.000-05:00</md:Model.scenarioTime> 
+  <md:Model.description>Master</md:Model.description> 
+  <md:Model.modelingAuthoritySet>http://epri.com/GMDM/D-to-SubT-Boundary</md:Model.modelingAuthoritySet> 
+  <md:Model.version>001</md:Model.version>  
+  <md:Model.profile>http://epri.com/GMDM_Electrical/1.0</md:Model.profile>  
+</md:FullModel>
+
+<!-- short substation exit 'cable/wire' ACLineSegment electrical parameters -->
+<!-- Industrial District  -->
+<cim:ACLineSegment rdf:about="urn:uuid:17db68b7-0b65-4bf9-b848-a42d8381eaed">
+  <cim:ACLineSegment.PerLengthImpedance rdf:resource="urn:uuid:edc91a0f-6984-40d7-84ce-2b3fdf22e92b"/>
+  <cim:Conductor.length>10</cim:Conductor.length>
+  <cim:Identity.identifier>17db68b7-0b65-4bf9-b848-a42d8381eaed</cim:Identity.identifier>
+</cim:ACLineSegment>
+<cim:ACLineSegmentPhase rdf:about="urn:uuid:48080331-2e8d-4a3d-8aed-ec80504e4548">
+  <cim:ACLineSegmentPhase.sequenceNumber>1</cim:ACLineSegmentPhase.sequenceNumber>
+  <cim:Identity.identifier>48080331-2e8d-4a3d-8aed-ec80504e4548</cim:Identity.identifier>
+</cim:ACLineSegmentPhase>
+<cim:ACLineSegmentPhase rdf:about="urn:uuid:ea235306-70e1-452a-aae0-a67052160baa">
+  <cim:ACLineSegmentPhase.sequenceNumber>2</cim:ACLineSegmentPhase.sequenceNumber>
+  <cim:Identity.identifier>ea235306-70e1-452a-aae0-a67052160baa</cim:Identity.identifier>
+</cim:ACLineSegmentPhase>
+<cim:ACLineSegmentPhase rdf:about="urn:uuid:005f556d-4b7a-4f89-8460-70816cf9ea4b">
+  <cim:ACLineSegmentPhase.sequenceNumber>3</cim:ACLineSegmentPhase.sequenceNumber>
+  <cim:Identity.identifier>005f556d-4b7a-4f89-8460-70816cf9ea4b</cim:Identity.identifier>
+</cim:ACLineSegmentPhase>
+<!-- New Neighborhood  -->
+<cim:ACLineSegment rdf:about="urn:uuid:2d50db35-8964-4ca0-8104-e5b84994b97c">
+  <cim:ACLineSegment.PerLengthImpedance rdf:resource="urn:uuid:edc91a0f-6984-40d7-84ce-2b3fdf22e92b"/>
+  <cim:Conductor.length>10</cim:Conductor.length>
+  <cim:Identity.identifier>2d50db35-8964-4ca0-8104-e5b84994b97c</cim:Identity.identifier>
+</cim:ACLineSegment>
+<cim:ACLineSegmentPhase rdf:about="urn:uuid:6b508123-5fc5-48d3-bd60-7e9730a13449">
+  <cim:ACLineSegmentPhase.sequenceNumber>1</cim:ACLineSegmentPhase.sequenceNumber>
+  <cim:Identity.identifier>6b508123-5fc5-48d3-bd60-7e9730a13449</cim:Identity.identifier>
+</cim:ACLineSegmentPhase>
+<cim:ACLineSegmentPhase rdf:about="urn:uuid:d4666b28-101c-4001-a52f-ab7d8dc4c472">
+  <cim:ACLineSegmentPhase.sequenceNumber>2</cim:ACLineSegmentPhase.sequenceNumber>
+  <cim:Identity.identifier>d4666b28-101c-4001-a52f-ab7d8dc4c472</cim:Identity.identifier>
+</cim:ACLineSegmentPhase>
+<cim:ACLineSegmentPhase rdf:about="urn:uuid:ae348438-4771-4cff-b5bb-3835ef49e8ef">
+  <cim:ACLineSegmentPhase.sequenceNumber>3</cim:ACLineSegmentPhase.sequenceNumber>
+  <cim:Identity.identifier>ae348438-4771-4cff-b5bb-3835ef49e8ef</cim:Identity.identifier>
+</cim:ACLineSegmentPhase>
+<!-- Old Towne  -->
+<cim:ACLineSegment rdf:about="urn:uuid:6b42a8f7-23e7-4aec-b534-3a97c541c94d">
+  <cim:ACLineSegment.PerLengthImpedance rdf:resource="urn:uuid:edc91a0f-6984-40d7-84ce-2b3fdf22e92b"/>
+  <cim:Conductor.length>10</cim:Conductor.length>
+  <cim:Identity.identifier>6b42a8f7-23e7-4aec-b534-3a97c541c94d</cim:Identity.identifier>
+</cim:ACLineSegment>
+<cim:ACLineSegmentPhase rdf:about="urn:uuid:0fc4b02c-305c-4fd5-9d27-925d40db31b3">
+  <cim:ACLineSegmentPhase.sequenceNumber>1</cim:ACLineSegmentPhase.sequenceNumber>
+  <cim:Identity.identifier>0fc4b02c-305c-4fd5-9d27-925d40db31b3</cim:Identity.identifier>
+</cim:ACLineSegmentPhase>
+<cim:ACLineSegmentPhase rdf:about="urn:uuid:ef72dd5e-da32-4f3c-adcc-1c2435fc0382">
+  <cim:ACLineSegmentPhase.sequenceNumber>2</cim:ACLineSegmentPhase.sequenceNumber>
+  <cim:Identity.identifier>ef72dd5e-da32-4f3c-adcc-1c2435fc0382</cim:Identity.identifier>
+</cim:ACLineSegmentPhase>
+<cim:ACLineSegmentPhase rdf:about="urn:uuid:093fd864-4c37-48bd-a4df-86a6c25fe063">
+  <cim:ACLineSegmentPhase.sequenceNumber>3</cim:ACLineSegmentPhase.sequenceNumber>
+  <cim:Identity.identifier>093fd864-4c37-48bd-a4df-86a6c25fe063</cim:Identity.identifier>
+</cim:ACLineSegmentPhase>
+
+<cim:PerLengthPhaseImpedance rdf:about="urn:uuid:edc91a0f-6984-40d7-84ce-2b3fdf22e92b">
+  <cim:PerLengthPhaseImpedance.conductorCount>3</cim:PerLengthPhaseImpedance.conductorCount>
+  <cim:IdentifiedObject.name>3ph_h-397_acsr397_acsr397_acsr397_acsr substation exit</cim:IdentifiedObject.name>
+  <cim:Identity.identifier>edc91a0f-6984-40d7-84ce-2b3fdf22e92b</cim:Identity.identifier>
+</cim:PerLengthPhaseImpedance>
+<cim:PhaseImpedanceData rdf:about="urn:uuid:28811d3a-d131-4677-9ef3-dc81a2b18f76">
+  <cim:PhaseImpedanceData.column>3</cim:PhaseImpedanceData.column>
+  <cim:PhaseImpedanceData.row>3</cim:PhaseImpedanceData.row>
+  <cim:PhaseImpedanceData.b>3.6843078e-09</cim:PhaseImpedanceData.b>
+  <cim:PhaseImpedanceData.r>0.000214801</cim:PhaseImpedanceData.r>
+  <cim:PhaseImpedanceData.x>0.000629544</cim:PhaseImpedanceData.x>
+  <cim:PhaseImpedanceData.PhaseImpedance rdf:resource="urn:uuid:edc91a0f-6984-40d7-84ce-2b3fdf22e92b"/>
+  <cim:Identity.identifier>28811d3a-d131-4677-9ef3-dc81a2b18f76</cim:Identity.identifier>
+</cim:PhaseImpedanceData>
+<cim:PhaseImpedanceData rdf:about="urn:uuid:1f426e67-d5d9-4f53-8952-254a695aed00">
+  <cim:PhaseImpedanceData.column>2</cim:PhaseImpedanceData.column>
+  <cim:PhaseImpedanceData.row>3</cim:PhaseImpedanceData.row>
+  <cim:PhaseImpedanceData.b>-1.108893e-09</cim:PhaseImpedanceData.b>
+  <cim:PhaseImpedanceData.r>5.60892e-05</cim:PhaseImpedanceData.r>
+  <cim:PhaseImpedanceData.x>0.00029092</cim:PhaseImpedanceData.x>
+  <cim:PhaseImpedanceData.PhaseImpedance rdf:resource="urn:uuid:edc91a0f-6984-40d7-84ce-2b3fdf22e92b"/>
+  <cim:Identity.identifier>1f426e67-d5d9-4f53-8952-254a695aed00</cim:Identity.identifier>
+</cim:PhaseImpedanceData>
+<cim:PhaseImpedanceData rdf:about="urn:uuid:ec8f46b3-8711-41f0-b35c-94a4390dd1d6">
+  <cim:PhaseImpedanceData.column>2</cim:PhaseImpedanceData.column>
+  <cim:PhaseImpedanceData.row>2</cim:PhaseImpedanceData.row>
+  <cim:PhaseImpedanceData.b>3.678717e-09</cim:PhaseImpedanceData.b>
+  <cim:PhaseImpedanceData.r>0.000212131</cim:PhaseImpedanceData.r>
+  <cim:PhaseImpedanceData.x>0.000652375</cim:PhaseImpedanceData.x>
+  <cim:PhaseImpedanceData.PhaseImpedance rdf:resource="urn:uuid:edc91a0f-6984-40d7-84ce-2b3fdf22e92b"/>
+  <cim:Identity.identifier>ec8f46b3-8711-41f0-b35c-94a4390dd1d6</cim:Identity.identifier>
+</cim:PhaseImpedanceData>
+<cim:PhaseImpedanceData rdf:about="urn:uuid:d7d56407-fd92-47a2-a7ce-b750e220721d">
+  <cim:PhaseImpedanceData.column>1</cim:PhaseImpedanceData.column>
+  <cim:PhaseImpedanceData.row>3</cim:PhaseImpedanceData.row>
+  <cim:PhaseImpedanceData.b>-6.970038e-10</cim:PhaseImpedanceData.b>
+  <cim:PhaseImpedanceData.r>5.71636e-05</cim:PhaseImpedanceData.r>
+  <cim:PhaseImpedanceData.x>0.000246528</cim:PhaseImpedanceData.x>
+  <cim:PhaseImpedanceData.PhaseImpedance rdf:resource="urn:uuid:edc91a0f-6984-40d7-84ce-2b3fdf22e92b"/>
+  <cim:Identity.identifier>d7d56407-fd92-47a2-a7ce-b750e220721d</cim:Identity.identifier>
+</cim:PhaseImpedanceData>
+<cim:PhaseImpedanceData rdf:about="urn:uuid:d04c1990-95e0-448b-ae7e-27f83afbb31d">
+  <cim:PhaseImpedanceData.column>1</cim:PhaseImpedanceData.column>
+  <cim:PhaseImpedanceData.row>1</cim:PhaseImpedanceData.row>
+  <cim:PhaseImpedanceData.b>3.5628752e-09</cim:PhaseImpedanceData.b>
+  <cim:PhaseImpedanceData.r>0.000214162</cim:PhaseImpedanceData.r>
+  <cim:PhaseImpedanceData.x>0.000634957</cim:PhaseImpedanceData.x>
+  <cim:PhaseImpedanceData.PhaseImpedance rdf:resource="urn:uuid:edc91a0f-6984-40d7-84ce-2b3fdf22e92b"/>
+  <cim:Identity.identifier>d04c1990-95e0-448b-ae7e-27f83afbb31d</cim:Identity.identifier>
+</cim:PhaseImpedanceData>
+<cim:PhaseImpedanceData rdf:about="urn:uuid:f1e20aa0-612d-4580-b0a1-39604f73af47">
+  <cim:PhaseImpedanceData.column>1</cim:PhaseImpedanceData.column>
+  <cim:PhaseImpedanceData.row>2</cim:PhaseImpedanceData.row>
+  <cim:PhaseImpedanceData.b>-9.2777514e-10</cim:PhaseImpedanceData.b>
+  <cim:PhaseImpedanceData.r>5.57957e-05</cim:PhaseImpedanceData.r>
+  <cim:PhaseImpedanceData.x>0.00027487</cim:PhaseImpedanceData.x>
+  <cim:PhaseImpedanceData.PhaseImpedance rdf:resource="urn:uuid:edc91a0f-6984-40d7-84ce-2b3fdf22e92b"/>
+  <cim:Identity.identifier>f1e20aa0-612d-4580-b0a1-39604f73af47</cim:Identity.identifier>
+</cim:PhaseImpedanceData>
+
+</rdf:RDF>
